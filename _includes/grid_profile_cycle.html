@@ -1,16 +1,13 @@
-  <figure class="snip0056">
-    <figcaption>
-      <h2>Stuart <span>White</span></h2>
-      <p>I suppose if we couldn't laugh at things that don't make sense, we couldn't react to a lot of life.</p>
-      <div class="icons"><a href="#"><i class="ion-ios-home"></i></a><a href="#"><i class="ion-ios-email"></i></a><a href="#"><i class="ion-ios-telephone"></i></a></div>
-    </figcaption><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sq-sample8.jpg" alt="sample8" />
-    <div class="position">Web Designer</div>
-  </figure>
   <figure class="snip0056 yellow">
     <figcaption>
-      <h2>Diana <span>Reed</span></h2>
-      <p>The only skills I have patience to learn are those that have no real application in life.</p>
-      <div class="icons"><a href="#"><i class="ion-ios-home"></i></a><a href="#"><i class="ion-ios-email"></i></a><a href="#"><i class="ion-ios-telephone"></i></a></div>
-    </figcaption><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sq-sample9.jpg" alt="sample9" />
-    <div class="position">Sales Manager</div>
+      <h2>{{ include.title }}</h2>
+      <!--<h2>Diana <span>Reed</span></h2>-->
+      <p>{{ include.desc }}</p>
+      <div class="icons">
+        {% if include.url.size > 0 %}<a href="{{ include.url }}"><i class="ion-ios-home"></i></a>{% endif %}
+        {% if include.email.size > 0 %}<a href="{{ include.email }}"><i class="ion-ios-email"></i></a>{% endif %}
+        {% if include.phone.size > 0 %}<a href="{{ include.phone }}"><i class="ion-ios-telephone"></i></a>{% endif %}
+      </div>
+    </figcaption><img src="{{ include.image }}" />
+    <div class="position">{{ include.caption }}</div>
   </figure>

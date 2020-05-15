@@ -308,7 +308,7 @@ class Untitled {
 
 ### Modern Overlay Image
 
-<blockquote>{% include image_overlay_box.html %}</blockquote>
+<blockquote>{% include image_overlay_box.html title="Sadness" subtitle="is killing me" desc="Still be suffering is stupid." image="/assets/images/hero/high/HERO_SADNESS_H_0005.jpg"%}</blockquote>
 
 # Music
 
@@ -408,6 +408,6 @@ int main(int argc, char *argv[]) {
 
 # Profile
 
-<blockquote>{% include grid_profile_cycle.html %}</blockquote>
+<blockquote>{% include grid_profile_cycle.html title="the <span>Senorita</span>" caption="Designer" desc=site.description image="/assets/images/avatar.jpg" %}</blockquote>
 
-<blockquote>{% include grid_profile_net.html %}</blockquote>
+<blockquote>{% include grid_profile_net.html title="Senorita" subtitle="Just A Designer" desc=site.description image="/assets/images/avatar.jpg" %}</blockquote>
