@@ -33,7 +33,7 @@ button.animated-button .circle {
   margin: 0;
   width: 3rem;
   height: 3rem;
-  background: #282936;
+  background: #fff;
   border-radius: 1.625rem;
 }
 
@@ -44,7 +44,7 @@ button.animated-button .circle .icon {
   top: 0;
   bottom: 0;
   margin: auto;
-  background: #fff;
+  background: #282936;
 }
 
 button.animated-button .circle .icon.arrow {
@@ -63,8 +63,8 @@ button.animated-button .circle .icon.arrow::before {
   right: 0.0625rem;
   width: 0.625rem;
   height: 0.625rem;
-  border-top: 0.125rem solid #fff;
-  border-right: 0.125rem solid #fff;
+  border-top: 0.125rem solid #282936;
+  border-right: 0.125rem solid #282936;
   -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
 }
@@ -79,7 +79,7 @@ button.animated-button .button-text {
   bottom: 0;
   padding: 0.75rem 0;
   margin: 0 0 0 1.85rem;
-  color: #282936;
+  color: #fff;
   font-weight: 700;
   line-height: 1.6;
   text-align: center;
@@ -91,13 +91,13 @@ button.animated-button:hover .circle {
 }
 
 button.animated-button:hover .circle .icon.arrow {
-  background: #fff;
+  background: #282936;
   -webkit-transform: translate(1rem, 0);
   transform: translate(1rem, 0);
 }
 
 button.animated-button:hover .button-text {
-  color: #fff;
+  color: #282936;
 }
 
 /* @supports (display: grid) {
