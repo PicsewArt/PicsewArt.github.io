@@ -91,10 +91,10 @@ button.animated-button .button-text a {
   border: none;
 }
 
-button.animated-button .button-text a:hover {
+/* button.animated-button .button-text a:hover {
   background: none;
   color: #282936;
-}
+} */
 
 button.animated-button:hover .circle {
   width: 100%;
