@@ -5,7 +5,7 @@ tags: ["Sadness", "Sad Song"]
 date: 20200515T201100+08:00
 hero:
   format: 'jpeg'
-  url: 'HERO_SADNESS_H_0015.jpg'
+  url: 'HERO_SCENERY_H_0001.jpg'
 ---
 {% include music_player.html playerid='song1' title='可不可以' artist='刘伟锋' music='/assets/music/liuweifen_kebukeyi.mp3' cover='/assets/music/liuweifen_kebukeyi.jpg' %}
 
