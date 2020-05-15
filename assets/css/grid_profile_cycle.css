@@ -1,5 +1,21 @@
 @import url(https://fonts.googleapis.com/css?family=Raleway:400,200,300,800);
 @import url(https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css);
+
+figure[class^="snip"] h1:before,
+figure[class^="snip"] h2:before,
+figure[class^="snip"] h3:before,
+figure[class^="snip"] h4:before,
+figure[class^="snip"] h5:before,
+figure[class^="snip"] h6:before,
+figure[class^="snip"] h1:after,
+figure[class^="snip"] h2:after,
+figure[class^="snip"] h3:after,
+figure[class^="snip"] h4:after,
+figure[class^="snip"] h5:after,
+figure[class^="snip"] h6:after {
+  content; '';
+}
+
 figure.snip0056 {
   font-family: 'Raleway', Arial, sans-serif;
   position: relative;
