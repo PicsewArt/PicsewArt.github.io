@@ -44,6 +44,9 @@ collections:
   creative:
     output: true
     sort_by: title
+  music:
+    output: true
+    sort_by: title
 
 defaults:
   - scope:
@@ -79,6 +82,12 @@ defaults:
     values:
       # layout: ""
       active_title: "Creative"
+  - scope:
+      path: ""
+      type: music
+    values:
+      layout: "music"
+      active_title: "Music"
 
 path:
   assets: "/assets"
