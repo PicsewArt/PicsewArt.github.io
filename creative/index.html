@@ -1,0 +1,19 @@
+---
+layout: default
+title: "Creative"
+description: "Build, Test, Discover and Create the New World."
+---
+{% assign all_creative = '' | split: '/' %}
+{% for create in site.creative %}
+	{% assign a_creative = '' | split: '/' %}
+	{% assign a_creative = a_creative | push: create.url %}
+	{% assign a_creative = a_creative | push: create.title %}
+	{% assign a_creative = a_creative | push: '' %}
+	{% assign the_creative_img = site.url | append: site.path.images | append: '/creative/' | append: create.cover.url %}
+	{% assign a_creative = a_creative | push: the_creative_img %}
+	{% assign a_creative = a_creative | push: create.cover.format %}
+	{% assign all_creative = all_creative | push: a_creative %}
+{% endfor %}
+{% assign all_creative_container = '' | split: '/' %}
+{% assign all_creative_container = all_creative_container | push: all_creative %}
+{% include grid_list.html desc=" " list=all_creative_container cols=3 target='_blank' %}
