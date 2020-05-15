@@ -306,6 +306,10 @@ class Untitled {
 
 <blockquote>{% include image_overlay.html unsplash='ydU5iN4mWek' title='Unsplash' desc='Woods in Wassergspreng, Austria.' fadein='bottom' maxwidth="100%" %}</blockquote>
 
+### Modern Overlay Image
+
+<blockquote>{% include image_overlay_box.html %}</blockquote>
+
 # Music
 
 <blockquote>{% include music_player.html playerid='sample' title='Rivellon' artist='Divinity: Original Sin 2' music='/assets/music/Rivellon.mp3' cover='https://cdn-prod.scalefast.com/public/assets/user/6562614/image/fc0fea76b4a2f75dc282d0dba05a31a1.jpg' %}</blockquote>
@@ -401,3 +405,9 @@ int main(int argc, char *argv[]) {
 <blockquote class="layer-bright">{% include window_old_mac_start.html title='Photography' %}
 {% include image_frame.html image='/assets/images/hero/high/HERO_PAINTINGS_V_0005.jpg' maxwidth="60%" %}
 {% include window_old_mac_end.html btn="View More" href='/gallery/index.html' %}</blockquote>
+
+# Profile
+
+<blockquote>{% include grid_profile_cycle.html %}</blockquote>
+
+<blockquote>{% include grid_profile_net.html %}</blockquote>
