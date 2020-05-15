@@ -3,9 +3,6 @@ title: "可不可以"
 cover: 'zhangzihao_kebukeyi.mp3.jpg'
 music:
   - title: "可不可以"
-    artist: "刘伟锋"
-    url: "liuweifen_kebukeyi.mp3"
-  - title: "可不可以"
     artist: '张紫豪'
     url: 'zhangzihao_kebukeyi.mp3'
 ---
