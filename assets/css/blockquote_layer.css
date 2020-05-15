@@ -1,0 +1,11 @@
+blockquote.layer {
+  background-color: #272822 !important;
+}
+
+blockquote.layer-bright {
+  background-color: #888 !important;
+}
+
+blockquote.layer-bright::before {
+  color: #000 !important;
+}

@@ -1,0 +1,16 @@
+.blueimp-gallery h3.title::before {
+  content: '' !important;
+}
+
+.blueimp-gallery a.close,
+.blueimp-gallery a.play-pause,
+.blueimp-gallery .video-content a {
+  text-decoration: none !important;
+  border: none !important;
+}
+
+.blueimp-gallery a.close:hover {
+  text-decoration: none !important;
+  border: none !important;
+  background: none !important;
+}

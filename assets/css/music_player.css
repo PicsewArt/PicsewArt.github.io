@@ -1,0 +1,153 @@
+@import 'https://fonts.googleapis.com/css?family=Reem+Kufi';
+
+@-webkit-keyframes wave {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+
+@keyframes wave {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+.music-player {
+  margin: 5px auto;
+}
+
+.music-player .music-card {
+  margin: 0 auto;
+  background: #fff;
+  box-shadow: 0px 8px 28px -9px rgba(0, 0, 0, 0.45);
+  overflow: hidden;
+  position: relative;
+  width: 300px;
+  height: 500px;
+  border-radius: 6px;
+}
+
+.music-player .image {
+  /* background: url('https://cdn-prod.scalefast.com/public/assets/user/6562614/image/fc0fea76b4a2f75dc282d0dba05a31a1.jpg') no-repeat 75%; */
+  background-size: cover;
+  position: absolute;
+  z-index: 1;
+  opacity: 0.7;
+  height: 300px;
+  width: 300px;
+}
+
+.music-player .image:after {
+  height: 100px;
+  content: '';
+  top: 200px;
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(9, 2, 4, 0)), to(#444));
+  /* background: linear-gradient(rgba(9, 2, 4, 0), #444); */
+  background: linear-gradient(rgba(9, 2, 4, 0), rgba(68, 68, 68, 0.75), rgb(68, 68, 68));
+}
+
+.music-player .wave {
+  position: absolute;
+  height: 750px;
+  width: 750px;
+  opacity: 0.6;
+  left: 0;
+  top: 0;
+  margin-left: -70%;
+  margin-top: -130%;
+  background: radial-gradient(#353535, #383737);
+}
+
+.music-player .wave:nth-child(2),
+.music-player .wave:nth-child(3) {
+  top: 10px;
+}
+
+.music-player .playing .wave {
+  border-radius: 40%;
+  -webkit-animation: wave 3000ms infinite linear;
+  animation: wave 3000ms infinite linear;
+}
+
+/* when stop */
+.music-player .wave {
+  border-radius: 40%;
+  -webkit-animation: wave 55s infinite linear;
+  animation: wave 55s infinite linear;
+}
+
+.music-player .playing .wave:nth-child(2) {
+  -webkit-animation-duration: 4000ms;
+  animation-duration: 4000ms;
+}
+
+/* when stop */
+.music-player .wave:nth-child(2) {
+  -webkit-animation-duration: 50s;
+  animation-duration: 50s;
+}
+
+.music-player .playing .wave:nth-child(3) {
+  -webkit-animation-duration: 5000ms;
+  animation-duration: 5000ms;
+}
+
+/* when stop */
+.music-player .wave:nth-child(3) {
+  -webkit-animation-duration: 45s;
+  animation-duration: 45s;
+}
+
+.music-player .info {
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+
+.music-player .title {
+  font-size: 1.4em;
+  font-weight: 400;
+  color: #333;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  font-family: 'Reem Kufi', sans-serif;
+}
+
+.music-player .artist {
+  color: #cfcfcf;
+  font-size: 1.2em;
+  letter-spacing: 0.08em;
+  font-family: 'Reem Kufi', sans-serif;
+  margin-top: -10px;
+}
+
+.music-player .fa {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  font-size: 18px;
+  cursor: pointer;
+  color: #555;
+}
+
+.music-player .fa-play {
+  display: none;
+}

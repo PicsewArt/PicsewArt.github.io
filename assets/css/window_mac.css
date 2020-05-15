@@ -1,0 +1,70 @@
+@charset "UTF-8";
+
+div.window-wrapper-container {
+  /* border-radius: 6px; */
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  border: 1px solid var(--charcoal-gray);
+  /* background-image: url("{{ site.url }}{{ site.path.hero.low }}/HERO_TECH_V_0004.jpg"); */
+  /* background-repeat: no-repeat; */
+  /* background-size: 100% auto; */
+  -moz-background-size: 100% auto;
+  color: #fff;
+  overflow: hidden;
+  position: relative;
+  margin: 0 auto 1rem auto;
+  /* width: 70%; */
+}
+
+div.window-wrapper-container:before {
+  content: attr(data-title);
+  text-align: center;
+  color: black;
+  font-size: 0.75rem;
+  line-height: 2rem;
+  display: block;
+  height: 30px;
+  background: linear-gradient(#f6f6f6, #d3d3d3 30px, #7e7e7e 30px, #7e7e7e 30px, #393456 30px);
+}
+
+div.window-wrapper-container:after {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  background-color: #f55551;
+  content: ' ';
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+}
+
+div.window-wrapper-container div.window-wrapper-content::after {
+  background: #32c146;
+  content: " ";
+  position: absolute;
+  top: 10px;
+  /* left: 50px; */
+  left: 40px;
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+}
+
+div.window-wrapper-container div.window-wrapper-content::before {
+  background: #f6b73e;
+  content: " ";
+  position: absolute;
+  top: 10px;
+  /* left: 30px; */
+  left: 25px;
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+}
+
+div.window-wrapper {
+  position: relative;
+  /* background-color: var(--charcoal-gray); */
+  border-radius: 5px
+  /* border: 1px solid var(--charcoal-gray); */
+}

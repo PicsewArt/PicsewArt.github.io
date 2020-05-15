@@ -1,0 +1,186 @@
+.hack header:first-of-type h1 {}
+
+.hack>header nav {}
+
+.hack>header {
+  display: grid;
+  grid-template: 1fr minmax(min-content, auto) / 4fr 3fr;
+  row-gap: 1vmin;
+  column-gap: 20px;
+  grid-template-areas: "search search""nav nav";
+  margin-bottom: 1rem;
+}
+
+.hack>header nav:last-of-type {
+  text-align: right;
+}
+
+@media screen and (max-width: 30em) {
+  .hack>header a[itemprop="url"] {
+    display: block;
+  }
+
+  .form[role="search"] {
+    margin-bottom: 10px;
+  }
+}
+
+.hack>header .form[role="search"] {
+  width: unset;
+  text-align: right;
+  position: relative;
+  /* z-index: 20; */
+  grid-column: search;
+  grid-row: search;
+  margin-top: -20px;
+}
+
+.form[role="search"] fieldset {
+  padding: 6px;
+}
+
+.form[role="search"] legend {
+  display: contents;
+}
+
+.form[role="search"] label,
+.form[role="search"] .form-control {
+  padding: 6px 14px 0 6px;
+}
+
+.form[role="search"] label {
+  margin-right: -8px;
+  text-transform: lowercase;
+  color: var(--trim-color);
+}
+
+.form[role="search"] label:before {
+  content: "Search input ";
+}
+
+.form[role="search"] .form-control {
+  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
+  color: var(--link-color--active);
+  height: unset;
+  border-bottom: unset;
+  width: 28px;
+  padding-top: 20px;
+  margin-right: -28px;
+  transition: all 180ms ease-in-out;
+}
+
+.form[role="search"] .form-control:focus,
+.form[role="search"] .form-control:hover,
+.form[role="search"] .form-control:target {
+  color: var(--link-color--active);
+  width: 14rem;
+  transition: width 180ms ease-in-out;
+}
+
+.form[role="search"] .form-control:not(:placeholder-shown) {
+  width: 14rem;
+}
+
+.form[role="search"] .form-control::placeholder {
+  color: var(--text-color);
+  opacity: 0;
+  transition: opacity 180ms ease;
+}
+
+.form[role="search"] .form-control:focus::placeholder,
+.form[role="search"] .form-control:hover::placeholder,
+.form[role="search"] .form-control:target::placeholder {
+  color: var(--link-color-active);
+  opacity: .5;
+  transition: opacity 180ms 300ms ease-out;
+}
+
+.form[role="search"] .form-control:not(:focus):not(:hover):placeholder-shown {}
+
+.form[role="search"] .form-control:not(:focus):not(:hover):not(:placeholder-shown)+svg {
+  visibility: visible;
+}
+
+.form[role="search"] .form-control+svg {
+  visibility: hidden;
+}
+
+.form[role="search"] .form-control:placeholder-shown+svg {
+  visibility: visible;
+}
+
+.form[role="search"] .form-control+svg {
+  pointer-events: none;
+  margin-bottom: -2px;
+}
+
+/*!* Copyright (C) 2019 Josh Habdas <jhabdas@protonmail.com>
+*
+* This file is part of After Dark.
+*
+* After Dark is free software: you can redistribute it and/or modify
+* it under the terms of the GNU Affero General Public License as published
+* by the Free Software Foundation, either version 3 of the License, or
+* (at your option) any later version.
+*
+* After Dark is distributed in the hope that it will be useful,
+* but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+* GNU Affero General Public License for more details.
+*
+* You should have received a copy of the GNU Affero General Public License
+* along with this program. If not, see <https://www.gnu.org/licenses/>.*/
+ul.thumbnail.grid {
+  margin: 10px -10px
+}
+
+ul.thumbnail.grid li {
+  padding: 10px;
+  margin-bottom: 10px
+}
+
+ul.thumbnail.grid li h2 {
+  margin-bottom: 1rem
+}
+
+ul.thumbnail.grid li a:hover figure {
+  filter: brightness(1.1)
+}
+
+ul.thumbnail.grid li a figure>img {
+  border-radius: 2px
+}
+
+.hack ul.thumbnail.grid li h2::before {
+  content: initial
+}
+
+.hack ul.thumbnail.grid li::after {
+  content: initial
+}
+
+.standard ul.thumbnail.grid {
+  padding-left: 0;
+  list-style-type: none;
+  display: flex
+}
+
+ul.thumbnail.grid li a:hover figure {
+  filter: initial
+}
+
+ul.thumbnail.grid li a figure {
+  position: relative;
+  line-height: 0;
+  margin-bottom: 8px
+}
+
+ul.thumbnail.grid li a:hover figure::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, rgba(0, 0, 0, 0.1) 0, rgba(0, 0, 0, 0.3) 100%)
+}
