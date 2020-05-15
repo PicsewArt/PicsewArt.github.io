@@ -86,6 +86,16 @@ button.animated-button .button-text {
   text-transform: uppercase;
 }
 
+button.animated-button .button-text a {
+  color: #fff;
+  border: none;
+}
+
+button.animated-button .button-text a:hover {
+  background: none;
+  color: #bbb;
+}
+
 button.animated-button:hover .circle {
   width: 100%;
 }
