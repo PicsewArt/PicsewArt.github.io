@@ -86,21 +86,21 @@ button.animated-button .button-text {
   text-transform: uppercase;
 }
 
-button:hover .circle {
+button.animated-button:hover .circle {
   width: 100%;
 }
 
-button:hover .circle .icon.arrow {
+button.animated-button:hover .circle .icon.arrow {
   background: #fff;
   -webkit-transform: translate(1rem, 0);
   transform: translate(1rem, 0);
 }
 
-button:hover .button-text {
+button.animated-button:hover .button-text {
   color: #fff;
 }
 
-@supports (display: grid) {
+/* @supports (display: grid) {
   body {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -113,4 +113,4 @@ button:hover .button-text {
     align-self: center;
     justify-self: center;
   }
-}
+} */
