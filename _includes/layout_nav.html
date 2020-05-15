@@ -1,0 +1,35 @@
+<!-- BEGIN NAVIGATION -->
+<header>
+	<style media="screen">
+	  svg.i-holdcat {
+	    height: 14px;
+	    width: auto;
+			fill: #fff;
+			padding: 0;
+			margin: 0;
+	  }
+		.site-navigation-svg-span-left {
+			margin-right: 5px;
+		}
+		.site-navigation-svg-span-right {
+			margin-left: 5px;
+		}
+	</style>
+	<nav class="site-navigation" itemscope itemtype="https://schema.org/SiteNavigationElement">
+		<meta itemprop="name" content="Main Menu">
+		{% for item in site.data.navbar.left %}
+		<a itemprop="url"{% if page.title == item.title or page.active_title == item.title %} class="active"{% endif %} href="{{ site.url }}{{ item.url }}">{% if item.svg.size > 0 %}<span class="site-navigation-svg-span-left">{{ item.svg }}</span>{% endif %}{% if item.title == 'Home' %}{{ site.name }}{% else %}{{ item.title }}{% endif %}</a>
+		{% endfor %}
+	</nav>
+
+	<nav class="site-navigation" itemscope itemtype="https://schema.org/SiteNavigationElement">
+		<meta itemprop="name" content="Utility Menu">
+		{% for item in site.data.navbar.right %}
+		<a itemprop="url"{% if page.title == item.title or page.active_title == item.title %} class="active"{% endif %} href="{{ site.url }}{{ item.url }}">{{ item.title }}{% if item.svg.size > 0 %}<span class="site-navigation-svg-span-right">{{ item.svg }}</span>{% endif %}</a>
+		{% endfor %}
+	</nav>
+
+	{% include layout_search.html %}
+
+</header>
+<!-- END NAVIGATION -->

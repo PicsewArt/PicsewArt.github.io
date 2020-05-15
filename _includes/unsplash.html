@@ -1,0 +1,8 @@
+{% capture unsplash_id %}{{ include.id }}{% endcapture %}
+<div class="alert">
+  <details>
+    <summary><strong>Unsplash:</strong>&nbsp;<a target="_blank" rel="external noopener" href="https://unsplash.com/photos/{{ unsplash_id }}">https://unsplash.com/photos/{{ unsplash_id }}</a></summary>
+    <br />
+    <figure><img src="https://source.unsplash.com/{{ unsplash_id }}" style="background-color: #36454f; border-radius: 3px;"></figure>
+  </details>
+</div>

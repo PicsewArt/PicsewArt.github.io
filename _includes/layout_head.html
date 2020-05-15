@@ -1,0 +1,43 @@
+<meta http-equiv="Content-Security-Policy" content="default-src 'self' https: 'unsafe-inline' 'unsafe-eval'; worker-src 'self' blob:; connect-src 'self' wss: data:; font-src 'self' https: data:; img-src 'self' https: data:; object-src 'none'">
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{{ site.name }}{% if page.title.size > 0 %} | {{ page.title }}{% endif %}</title>
+<meta name="description" content="{{ site.description }}">
+<meta name="keywords" content="app, art, blogging, debugging, entrepreneurship, finance, framework, hacking, investing, library, opinion, plugin, politics, privacy, programming, reference, reflection, relationships, security, technology, tool, tooling, travel, tutorial, tutorials, ">
+
+{% assign icons_folder = site.url | append: site.path.images | append: '/icons' %}
+{% assign favicon_png = icons_folder | append: '/favicon.png' %}
+<meta property="og:title" content="{{ page.title }}" />
+<meta property="og:description" content="{{ site.description }}" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="{{ site.url }}" />
+<meta property="og:image" content="{{ favicon_png }}" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="{{ favicon_png }}" />
+<meta name="twitter:title" content="{{ page.title }}" />
+<meta name="twitter:description" content="{{ site.description }}" />
+<meta property="og:image" content="{{ favicon_png }}">
+<meta name="referrer" content="same-origin">
+
+<meta title="mod:fractal-forest" content="status:enabled">
+<link rel="alternate" type="application/rss+xml" href="feed.xml" title="{{ site.name }}">
+<link rel="canonical" href="index.html">
+<meta name="theme-color" content=fuchsia>
+
+<!-- BEGIN ICONS -->
+<link rel="icon" sizes="128x128" href="{{ icons_folder }}/favicon.ico">
+<!-- Android Chrome -->
+<link rel="icon" type="image/png" sizes="192x192" href="{{ icons_folder }}/android-icon-192x192.png">
+<link rel="manifest" href="{{ icons_folder }}/manifest.json">
+<!-- Apple iDevices -->
+<link rel="apple-touch-icon" sizes="57x57" href="{{ icons_folder }}/apple-touch-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="72x72" href="{{ icons_folder }}/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="{{ icons_folder }}/apple-touch-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="{{ icons_folder }}/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="{{ icons_folder }}/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="{{ icons_folder }}/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="{{ icons_folder }}/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="{{ icons_folder }}/apple-touch-icon-180x180.png">
+<link rel="apple-touch-icon" sizes="167x167" href="{{ icons_folder }}/apple-touch-icon-167x167.png">
+<!-- END ICONS -->

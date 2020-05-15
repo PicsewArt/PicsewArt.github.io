@@ -1,0 +1,43 @@
+<div class="music-player music-player-{{ include.playerid }}">
+  <div class="music-card playing music-card-{{ include.playerid }}">
+    <div class="image" style="background: url('{{ include.cover }}') no-repeat 75% !important; background-size: cover !important;"></div>
+    <div class="wave"></div>
+    <div class="wave"></div>
+    <div class="wave"></div>
+    <div class="info">
+      <div class="title">{{ include.title }}</div>
+      <div class="artist">{{ include.artist }}</div>
+    </div>
+    <i class="fa fa-pause trigger-{{ include.playerid }} pause-{{ include.playerid }}" aria-hidden="true" style="display: none;"></i>
+    <i class="fa fa-play trigger-{{ include.playerid }} play-{{ include.playerid }}" aria-hidden="true" style="display: block;"></i>
+  </div>
+  <script id="rendered-js-mp-{{ include.playerid }}">
+    var audio{{ include.playerid }} = new Audio('{{ include.music }}');
+    // audio{{ include.playerid }}.volume = 0.1;
+    // audio{{ include.playerid }}.autoplay = true;
+
+    $('.trigger-{{ include.playerid }}').click(function() {
+      if (audio{{ include.playerid }}.paused == false) {
+        audio{{ include.playerid }}.pause();
+        $('.play-{{ include.playerid }}').show();
+        $('.pause-{{ include.playerid }}').hide();
+        $('.music-card-{{ include.playerid }}').removeClass('playing');
+      } else {
+        audio{{ include.playerid }}.play();
+        $('.pause-{{ include.playerid }}').show();
+        $('.play-{{ include.playerid }}').hide();
+        $('.music-card-{{ include.playerid }}').addClass('playing');
+      }
+    });
+
+    audio{{ include.playerid }}.addEventListener("ended", function(e){
+      $('.play-{{ include.playerid }}').show();
+      $('.pause-{{ include.playerid }}').hide();
+      $('.music-card-{{ include.playerid }}').removeClass('playing');
+      audio{{ include.playerid }}.play();
+      $('.pause-{{ include.playerid }}').show();
+      $('.play-{{ include.playerid }}').hide();
+      $('.music-card-{{ include.playerid }}').addClass('playing');
+    }, false);
+  </script>
+</div>

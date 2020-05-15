@@ -1,0 +1,2 @@
+{% capture framed_image %}{{ include.image }}{% endcapture %}{% capture framed_image_maxwidth %}{{ include.maxwidth }}{% endcapture %}
+<img class="framed_img" src="{{ framed_image }}" alt="FRAMED_IAMGES" style="max-width: {% if framed_image_maxwidth.size > 0 %}{{ framed_image_maxwidth }}{% else %}100%{% endif %};">

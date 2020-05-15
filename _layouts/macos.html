@@ -1,0 +1,326 @@
+---
+layout: null
+---
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>{{ page.title }}</title>
+	<style type="text/css">
+		html,
+		body {
+			height: 100%
+		}
+
+		body {
+			margin: 0 auto;
+			/* background: url("{{ site.url }}{{ site.path.images }}/pages/macos/wallpaper.jpg"); */
+			overflow: hidden;
+			background-size: cover;
+			background-position: center;
+		}
+
+		.app_container {
+			position: relative;
+			margin: auto;
+			padding-top: 2rem;
+		}
+
+		.window {
+			font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
+			border-top-left-radius: 6px;
+			border-top-right-radius: 6px;
+			border: 1px solid #adadad;
+			max-width: 90%;
+			box-shadow: 0 20px 70px rgba(0, 0, 0, 0.55);
+			margin: auto;
+		}
+
+		.window__bar {
+			border: 1px solid white;
+			border-left-color: #f3f3f3;
+			border-right-color: #f3f3f3;
+			border-bottom-color: #bdbdbd;
+			border-top-left-radius: 6px;
+			border-top-right-radius: 6px;
+			height: 20px;
+			text-align: center;
+			color: #505151;
+			font-size: 12px;
+			font-weight: bold;
+			line-height: 20px;
+			vertical-align: middle;
+			background: radial-gradient(7px at 14px 50%, #ff5e57 0px, #ff635a 5px, #fd5249 6px, rgba(255, 255, 255, 0) 7px), radial-gradient(7px at 34px 50%, #ffbd2e 0px, #ffc42f 5px, #fcb91b 6px, rgba(255, 255, 255, 0) 7px), radial-gradient(7px at 54px 50%, #cfcfcf 0px, #d3d3d3 5px, #c6c6c6 6px, rgba(255, 255, 255, 0) 7px), linear-gradient(to top, #cccccc 0%, #d6d6d6 1px, #ebebeb 100%);
+			text-shadow: 0 1px 0 rgba(255, 255, 255, 0.7);
+		}
+
+		.window__content-frame {
+			display: block;
+			background: #cccccc;
+			width: 100%;
+			/*   height: calc(100% - 20px); */
+			/*   height: 80%; */
+			position: relative;
+		}
+
+		.window__content-frame:before {
+			content: '';
+			display: block;
+			/*   padding-top: calc(100% - 20px); */
+			padding-top: calc(100vh - 2rem - 53px - 3rem);
+		}
+
+		.window__content {
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			overflow: hidden;
+		}
+
+		.window__content iframe {
+			position: absolute;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			right: 0;
+			width: 100%;
+			height: 100%;
+		}
+
+		nav {
+			position: absolute;
+			bottom: 0;
+			left: 50%;
+			height: 53px;
+			width: 420px;
+			box-sizing: border-box;
+			padding: 4px;
+			background: #53706D;
+			transform: translateX(-50%);
+			border-radius: 5px 5px 0 0;
+		}
+
+		nav hr {
+			display: inline-block;
+			width: 1px;
+			background: #274846;
+			height: 85%;
+			vertical-align: top;
+			margin-top: 3px;
+			border: none;
+			margin-left: 5px;
+			margin-right: 5px;
+		}
+
+		nav .icon {
+			position: relative;
+			display: inline-block;
+			width: 40px;
+			height: 40px;
+			border: none;
+			transition: 0.5s;
+		}
+
+		nav img {
+			width: 40px;
+			height: 40px;
+			transition: 0.5s;
+		}
+
+		label {
+			position: absolute;
+			margin-top: -50px;
+			color: #050505;
+			font-family: Helvetica, calibri, sans-serif;
+			font-weight: 100;
+			font-size: 14px;
+			background: #F6F6F6;
+			padding: 5px 15px;
+			border-radius: 5px;
+			box-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
+			left: 50%;
+			transform: translateX(-50%);
+			opacity: 0;
+			z-index: 100;
+			display: none;
+		}
+
+		label::before,
+		label::after {
+			content: "";
+			position: absolute;
+			left: 50%;
+			width: 15px;
+			height: 15px;
+			border-radius: 1px;
+			background: #F6F6F6;
+			z-index: -1;
+		}
+
+		label::before {
+			bottom: -5px;
+			transform: translateX(-50%) rotateZ(45deg);
+			box-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
+		}
+
+		label::after {
+			transform: translateX(-50%);
+			bottom: 0;
+			width: 40px;
+			height: 20px;
+		}
+
+		nav .icon:hover>label {
+			display: block;
+			opacity: 0.75;
+		}
+
+		nav .icon:focus {
+			outline: none;
+			-webkit-animation: translate-animation 2.5s linear;
+			-moz-animation: translate-animation 2.5s linear;
+			animation: translate-animation 2.5s linear;
+		}
+
+		nav .icon:focus .dot {
+			transform: translate(0, 0);
+			-webkit-animation: translate-animation-reverse 2.5s linear;
+			-moz-animation: translate-animation-reverse 2.5s linear;
+			animation: translate-animation-reverse 2.5s linear;
+		}
+
+		nav .icon:focus .dot::before {
+			content: "";
+			position: fixed;
+			border-radius: 50%;
+			width: 4px;
+			height: 4px;
+			bottom: -2px;
+			left: 50%;
+			transform: translateX(-50%);
+			background: black;
+		}
+
+		@keyframes translate-animation {
+			0% {
+				transform: translate(0, 0);
+			}
+
+			20% {
+				transform: translate(0, -15px);
+			}
+
+			40% {
+				transform: translate(0, 0);
+			}
+
+			60% {
+				transform: translate(0, -15px);
+			}
+
+			80% {
+				transform: translate(0, 0);
+			}
+		}
+
+		@keyframes translate-animation-reverse {
+			0% {
+				transform: translate(0, 0);
+			}
+
+			20% {
+				transform: translate(0, 15px);
+			}
+
+			40% {
+				transform: translate(0, 0);
+			}
+
+			60% {
+				transform: translate(0, 15px);
+			}
+
+			80% {
+				transform: translate(0, 0);
+			}
+		}
+
+		@supports ((-webkit-backdrop-filter: blur(20px)) or (backdrop-filter: blur(20px))) {
+			nav {
+				background: none;
+				-webkit-backdrop-filter: saturate(50%) blur(20px) brightness(200%);
+				backdrop-filter: saturate(50%) blur(20px) brightness(200%)
+			}
+		}
+	</style>
+</head>
+
+<body style="background: url('{{ page.wallpaper }}');">
+	<!-- BEGIN WINDOW -->
+	<div class="app_container">
+		<div class="window">
+			<div class="window__bar">{{ page.window_title }}</div>
+			<div class="window__content-frame">
+				<div class="window__content">
+					{{ content }}
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- END WINDOW -->
+	<!-- BEGIN DOCK -->
+	<nav>
+		<div class="icon" tabindex="0">
+			<label>Finder</label>
+			<img src="{{ site.url }}{{ site.path.images }}/creative/macos/finder.png" />
+			<div class="dot"></div>
+		</div>
+		<div class="icon" tabindex="0">
+			<label>LaunchPad</label>
+			<img src="{{ site.url }}{{ site.path.images }}/creative/macos/launchpad.png" />
+			<div class="dot"></div>
+		</div>
+		<div class="icon" tabindex="0">
+			<label>Safari</label>
+			<img src="{{ site.url }}{{ site.path.images }}/creative/macos/safari.png" />
+			<div class="dot"></div>
+		</div>
+		<div class="icon" tabindex="0">
+			<label>System&nbsp;Preferences</label>
+			<img src="{{ site.url }}{{ site.path.images }}/creative/macos/system-preferences.png" />
+			<div class="dot"></div>
+		</div>
+		<div class="icon" tabindex="0">
+			<label>Mail</label>
+			<img src="{{ site.url }}{{ site.path.images }}/creative/macos/mail.png" />
+			<div class="dot"></div>
+		</div>
+		<div class="icon" tabindex="0">
+			<label>Calendar</label>
+			<img src="{{ site.url }}{{ site.path.images }}/creative/macos/calendar.png" />
+			<div class="dot"></div>
+		</div>
+		<div class="icon" tabindex="0">
+			<label>iBooks</label>
+			<img src="{{ site.url }}{{ site.path.images }}/creative/macos/ibooks.png" />
+			<div class="dot"></div>
+		</div>
+		<div class="icon" tabindex="0">
+			<label>AppStore</label>
+			<img src="{{ site.url }}{{ site.path.images }}/creative/macos/appstore.png" />
+			<div class="dot"></div>
+		</div>
+		<hr />
+		<div class="icon" tabindex="0">
+			<label>Trash</label>
+			<img src="{{ site.url }}{{ site.path.images }}/creative/macos/trash.png" />
+			<div class="dot"></div>
+		</div>
+	</nav>
+	<!-- END DOCK -->
+</body>
+
+</html>

@@ -1,0 +1,136 @@
+---
+layout: default
+title: 'Search'
+search_category: false
+search_tags: false
+---
+    <section id="search-results">
+
+    </section>
+
+    <!-- <script src="https://unpkg.com/lunr/lunr.js"></script> -->
+
+    <script>
+      var postsData = {
+        {% for post in site.posts %}
+        "{{ post.url | slugify }}": {
+          "title": "{{ post.title | xml_escape }}",
+          "author": "{{ site.author | xml_escape }}",
+          "category": "{{ post.category | xml_escape }}",
+          "tags": "{% for tag in post.tags %}{{ tag }} {% endfor %}",
+          "date": "{{ post.date | date: "%b %d, %Y" }}",
+          "hero": "{{ post.hero.url }}",
+          "heroformat": "{{ post.hero.format }}",
+          "content": {{ post.content | strip_html | xml_escape | strip_newlines | jsonify }},
+          "excerpt": {{ post.excerpt | strip_html | xml_escape | strip_newlines | jsonify }},
+          "url": "{{ site.url }}{{ post.url }}"
+        }{% unless forloop.last %},{% endunless %}
+        {% endfor %}
+      };
+
+      var searchDocuments = [];
+
+      for (var key in postsData) {
+        var dict = postsData[key];
+        dict['id'] = key;
+        searchDocuments.push(dict);
+      }
+
+      // var idx = lunr(function () {
+      //   this.field('id');
+      //   this.field('title');
+      //   this.field('author');
+      //   this.field('category');
+      //   this.field('tags');
+      //   this.field('date');
+      //   this.field('hero');
+      //   this.field('heroformat');
+      //   this.field('content');
+      //   this.field('url');
+      //
+      //   searchDocuments.forEach(function (doc) {
+      //     this.add(doc)
+      //   }, this)
+      // });
+
+      function displaySearchResults(results,keyword) {
+        var searchResults = document.getElementById('search-results');
+
+        if (results.length) { // Are there any results?
+          var appendString = '';
+
+          var resultsDisplaySplitTerm = 3;
+
+          var originalData = [];
+
+          for (var i = 0; i < results.length; i++) {  // Iterate over the results
+            var resultRef = results[i].ref;
+            var item = postsData[resultRef];
+            originalData.push(item);
+          }
+
+          appendString += '<header>';
+    			appendString += '<h1 itemprop="name"><a href="#">' + originalData.length + ' result';
+          if (originalData.length > 1) {
+            appendString += 's';
+          }
+          appendString += ' for "' + keyword + '"</a></h1>';
+          appendString += '<header>';
+          appendString += '<div class="grid" id="grid-list-s-g1" itemscope itemtype="https://schema.org/ItemList">';
+          appendString += '<meta itemprop="itemListOrder" content="Unordered">';
+          appendString += '<meta itemprop="name" content="Search">';
+          appendString += '<meta itemprop="numberOfItems" content="' + resultsDisplaySplitTerm + '">';
+          for (var i = 0; i < originalData.length; i++) {
+            var item = originalData[i];
+            appendString += '<div class="cell" id="grid-list-s{{ include.sectionid }}-g1-i' + i + '" style="-ms-flex: 0 0 33.333%; flex: 0 0 33.333%; padding: 3px;" itemprop="itemListElement" itemscope itemtype="https://schema.org/SoftwareApplication">';
+            appendString += '<a itemprop="url" href="' + item.url + '">';
+            appendString += '<figure aria-hidden="true" itemscope itemtype="https://schema.org/ImageObject">';
+            appendString += '<link itemprop="contentUrl" href="{{ site.url }}{{ site.path.hero.low }}/' + item.hero + '">';
+            appendString += '<meta itemprop="encodingFormat" content="image/' + item.heroformat + '">';
+            appendString += '<meta itemprop="name" content="thumbnail">';
+            appendString += '<meta itemprop="headline" content="{{ site.url }}{{ site.path.hero.low }}/' + item.hero + '">';
+            appendString += '<img itemprop="thumbnailUrl" alt="THUMBNAIL" src="{{ site.url }}{{ site.path.hero.low }}/' + item.hero + '" data-src="{{ site.url }}{{ site.path.hero.low }}/' + item.hero + '">';
+            appendString += '</figure>';
+            appendString += '<p itemprop="name">' + item.title + '</p>';
+            appendString += '</a>';
+            appendString += '<small itemprop="description"><p>' + item.content.substring(1, item.content.length - 1).substring(0, 150) + '...</p></small>';
+            appendString += '</div>';
+          }
+          appendString += '</div>';
+
+          searchResults.innerHTML = appendString;
+        } else {
+          searchResults.innerHTML = '<p>Oops, no results found.</p>';
+        }
+      }
+
+      function searchNow() {
+        var searchTerm = getQueryVariable('query');
+
+        if (searchTerm) {
+          document.getElementById('search-box').setAttribute("value", searchTerm);
+
+          var results = [];
+          var searchTermLowercase = searchTerm.toLowerCase();
+          for (var i = 0; i < searchDocuments.length; i++) {
+            var postDict = searchDocuments[i];
+            if (postDict.title.toLowerCase().includes(searchTermLowercase) ||
+              postDict.content.toLowerCase().includes(searchTermLowercase) ||
+              postDict.excerpt.toLowerCase().includes(searchTermLowercase){% if page.search_category %} ||
+              postDict.category.toLowerCase().includes(searchTermLowercase){% endif %}{% if page.search_tags %} ||
+              postDict.tags.toLowerCase().includes(searchTermLowercase){% endif %} ||
+              postDict.date.toLowerCase().includes(searchTermLowercase) ||
+              postDict.author.toLowerCase().includes(searchTermLowercase)) {
+              postDict['ref'] = postDict['id'];
+              results.push(postDict);
+            }
+          }
+          // var results = idx.search(searchTerm); // Get lunr to perform a search
+          displaySearchResults(results, searchTerm); // We'll write this in the next section
+
+        } else {
+          alert('Could not find anything.');
+        }
+      }
+      searchNow();
+    </script>

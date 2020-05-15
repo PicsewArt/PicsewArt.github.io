@@ -1,0 +1,16 @@
+---
+layout: default
+title: "Categories"
+active_title: "Posts"
+---
+<table style="text-align: center;">
+  <tr><th>Category</th><th>Contains</th></tr>
+  {% for cat in site.categories %}<tr><td><a href="#{{ cat[0] | replace: ' ', '_' }}">{{ cat[0] | replace: '__', '\_\_' }}</a></td><td>{{ cat[1].size }} post{% if cat[1].size > 1 %}s{% endif %}</td></tr>{% endfor %}
+</table>
+<br />
+<hr>
+<br />
+{% for cat in site.categories %}
+  {% assign cat_posts = cat[1] %}
+  {% include grid_posts_list.html title=cat.first desc=" " list=cat_posts cols=3 readmore_title='Archive' readmore='/posts/archive/index.html' %}
+{% endfor %}

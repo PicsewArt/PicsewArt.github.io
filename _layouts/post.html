@@ -1,0 +1,117 @@
+---
+layout: default
+---
+<link rel="stylesheet" href="{{ site.url }}/assets/css/post.css">
+
+<article itemscope itemtype="https://schema.org/BlogPosting">
+	<meta itemprop="name" content="{{ page.title }}">
+	<meta itemprop="description" content="{{ page.description }}">
+	<meta itemprop="wordCount" content="{{ content | strip_html | strip_newlines | number_of_words }}">
+	<meta itemprop="image" content="{{ site.url | append: site.path.hero.high | append: '/' | append: page.hero.url }}" />
+	<meta itemprop="keywords" content="{% for tag in page.tags %}{{ tag | replace: ' ', '_' }}{% unless forloop.last %},{% endunless %}{% endfor %}" />
+	{% if page.has_front_matters_header or page.show_hero %}
+	<!-- BEGIN POST HEADER -->
+	<header>
+		{% if page.has_front_matters_header %}
+		<!-- BEGIN FRONT MATTERS HEADER -->
+		<!-- <h1 itemprop="headline name">{{ page.title }}</h1> -->
+		<p class="muted">
+			<svg aria-hidden="true" class="i-bookmark" viewBox="0 0 32 32" width="16" height="16" fill="none" stroke="var(--accent-color)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M6 2 L26 2 26 30 16 20 6 30 Z" /></svg>
+			<a itemprop="url" rel="bookmark" href="{{ site.url }}{{ page.url }}index.html">Permalink</a>
+			<svg aria-hidden="true" style="margin-bottom:-3px" class="i-clock" viewBox="0 0 32 32" width="16" height="16" fill="none" stroke="var(--accent-color)" stroke-linecap="round" stroke-linejoin="round" stroke-width="6.25%"><circle cx="16" cy="16" r="14" /><path d="M16 8 L16 16 20 20" /></svg>
+			<a href="index.html">{% include reading_time.html html=content %} read</a>
+			<svg aria-hidden="true" style="margin-bottom: -3px" class="i-edit" viewBox="0 0 32 32" width="16" height="16" fill="none" stroke="var(--accent-color)" stroke-linecap="round" stroke-linejoin="round" stroke-width="6.25%"><path d="M30 7 L25 2 5 22 3 29 10 27 Z M21 6 L26 11 Z M5 22 L10 27 Z" /></svg>
+			<!-- <time datetime="2009-07-22T00:00:00&#43;00:00"> --><a href="{{ site.url }}/posts/archive/index.html">{% if page.show_time %}{{ page.date | date: "%b %d, %Y %X" }}{% else %}{{ page.date | date: "%b %d, %Y" }}{% endif %}</a><!-- </time> -->&nbsp;Published
+			<output class="js-copied" hidden>Copied to Clipboard</output>
+			<script>
+				((window, document, undefined) => {
+					'use strict';
+					const permalinks = document.querySelectorAll('[rel="bookmark"]');
+					permalinks.forEach(permalink => {
+						const article = permalink.closest('article');
+						permalink.onclick = evt => {
+							evt.preventDefault();
+							document.location.hash = article.id;
+							const output = article.querySelector('output');
+							window.navigator.clipboard.writeText(
+								permalink.href
+							).then(() => {
+								setTimeout(() => {
+									output.hidden = true;
+								}, 2000);
+								output.hidden = false;
+							}, () => {
+								const selection = window.getSelection();
+								const range = document.createRange();
+								output.textContent = permalink.href;
+								permalink.parentElement.appendChild(output);
+								range.selectNodeContents(output);
+								selection.removeAllRanges();
+								selection.addRange(range);
+								output.hidden = false;
+							});
+						};
+					});
+				})(window, document);
+			</script>
+			<style>
+				article[itemscope] output {
+					max-width: 10em;
+					overflow: scroll;
+					color: var(--link-color--active);
+				}
+			</style>
+
+		</p>
+		<!-- END FRONT MATTERS HEADER -->
+		{% endif %}
+
+		{% if page.show_hero and page.hero.url.size > 0 %}
+		<!-- BEGIN PAGE HERO -->
+		<figure class="ratio-container" aria-hidden="true" itemscope itemtype="https://schema.org/ImageObject">
+			<link itemprop="contentUrl" href="{{ site.url | append: site.path.hero.high | append: '/' | append: page.hero.url }}">
+			<meta itemprop="encodingFormat" content="image/{{ page.hero.format }}">
+			<meta itemprop="name" content="header">
+			<meta itemprop="keywords" content="{{ page.hero.url }}">
+			<meta itemprop="contentLocation" content="Shenzhen, China">
+			<meta itemprop="description" content="{{ page.title }}">
+			{% capture page_hero %}{% include post_hero_url.html image=page.hero.url res='high' %}{% endcapture %}
+			<!-- page.hero.url: {{ page.hero.url }} -->
+			<!-- <img itemprop="thumbnailUrl" alt="{{ page.title }}" class="lazyload blur-up" src="{{ page_hero }}" srcset="{{ page_hero }}" data-srcset="{{ page_hero }}" data-sizes="auto"> -->
+			<img itemprop="thumbnailUrl" alt="HERO | {{ page.title }}" src="{{ page_hero }}">
+			{% if page.hero.name.size > 0 %}
+			<figcaption itemprop="caption"><span>{{ page.hero.name }}</span>. Photo by <span>{{ page.hero.author }}</span> on {{ page.hero.site }}.</figcaption>
+			{% endif %}
+		</figure>
+		<!-- END PAGE HERO -->
+		{% endif %}
+
+	</header>
+	<!-- END POST HEADER -->
+	{% endif %}
+
+	<div itemprop="articleBody">
+		{% if page.has_front_matters_header == false and page.show_hero == false %}
+		<br />
+		{% endif %}
+		<div class="post_content">
+			<!-- BEGIN PAGE CONTENT [POST] -->
+			{% include toc.html html=content %}
+	    		{{ content }}
+			<!-- END PAGE CONTENT [POST] -->
+		</div>
+		<br />
+		{% include signature.html %}
+	</div>
+	{% if page.has_action %}
+	<div class="page_actions"><center>
+	<!-- <a onclick="history.back(-1)" class="btn">&lt; Back</a> -->{% if page.next %}<a class="btn" href="{{ site.url }}{{ page.next.url }}index.html">«&nbsp;Newer:&nbsp;{{ page.next.title }}</a>&nbsp;{% endif %}{% if page.next and page.previous%}&nbsp;|&nbsp;{% endif %}{% if page.previous %}<a class="btn" href="{{ site.url }}{{ page.previous.url }}index.html">Older:&nbsp;{{ page.previous.title }}&nbsp;»</a>{% endif %}
+	</center></div>
+	{% endif %}
+
+	{% if page.has_info %}
+	<div class="post_info">
+		<hr>
+		<p>Published by <span itemprop="author"><a href="{{ site.url }}/about/index.html">@{{ site.author }}</a></span> (<time itemprop="datePublished">{{ page.date | date: "%b %d, %Y" }}</time>) in <span itemprop="articleSection"><a href="{{ site.url }}/posts/categories/index.html#{{ page.category | replace: ' ', '_' }}">{{ page.category }}</a></span> and tagged{% for tag in page.tags %} <a href="{{ site.url }}/posts/tags/#{{ tag | replace: ' ', '_' }}">#{{ tag }}</a>{% endfor %}.</p>
+	</div>
+	{% endif %}

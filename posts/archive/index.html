@@ -1,0 +1,65 @@
+---
+layout: default
+title: "Archive"
+active_title: "Posts"
+---
+<p>I've written {{ site.posts.size }} post{% if site.posts.size > 1 %}s{% endif %} since {{ site.posts.last.date | date: "%b %d, %Y" }}.</p>
+
+{% assign the_group_year = site.posts.first.date | date: "%Y" %}<!-- "1970" -->
+{% assign the_groups = '' | split: '/' %}<!-- [ ["1970", [post, post, post]], ["2020", [post, post, post]] ] -->
+{% assign the_group_year_posts = '' | split: '/' %}<!-- ["1970", [post, post, post]] -->
+{% assign the_group_posts = '' | split: '/' %}<!-- [post, post, post] -->
+
+{% for post in site.posts %}
+  {% assign this_post_year = post.date | date: "%Y" %}
+
+  {% if this_post_year != the_group_year %}
+    {% assign the_group_year_posts = the_group_year_posts | push: the_group_year %}
+    {% assign the_group_year_posts = the_group_year_posts | push: the_group_posts %}
+    {% assign the_groups = the_groups | push: the_group_year_posts %}
+
+    {% assign the_group_year = this_post_year %}
+    {% assign the_group_posts = '' | split: '/' %}
+    {% assign the_group_year_posts = '' | split: '/' %}
+  {% endif %}
+
+  {% comment %}
+  <!-- element[0]: url --><!-- if include.gallery: url => original media -->
+  <!-- element[1]: title --><!-- if include.gallery: '' -->
+  <!-- element[2]: desc --><!-- if include.gallery: '' -->
+  <!-- element[3]: img --><!-- if include.gallery: img => thumbnail image -->
+  <!-- element[4]: format --><!-- if include.gallery: format => media format -->
+  <!-- element[5]: type --><!-- if include.gallery: type => media type | else : nil -->
+  {% endcomment %}
+  {% assign the_post = '' | split: '/' %}
+  {% assign the_post = the_post | push: post.url %}
+  {% assign the_post = the_post | push: post.title %}
+  {% capture the_post_desc %}{% include post_preview.html html=post.excerpt limit=120 %}{% endcapture %}
+	{% assign the_post = the_post | push: the_post_desc %}
+	{% capture the_post_img %}{% include post_hero_url.html image=post.hero.url res='low' %}{% endcapture %}
+  {% assign the_post = the_post | push: the_post_img %}
+  {% assign the_post = the_post | push: post.hero.format %}
+
+  {% assign the_group_posts = the_group_posts | push: the_post %}
+
+  {% if forloop.last %}
+    {% assign the_group_year_posts = the_group_year_posts | push: the_group_year %}
+    {% assign the_group_year_posts = the_group_year_posts | push: the_group_posts %}
+    {% assign the_groups = the_groups | push: the_group_year_posts %}
+  {% endif %}
+{% endfor %}
+
+<table style="text-align: center;">
+  <tr><th>Year</th><th>Contains</th></tr>
+  {% for group in the_groups %}<tr><td><a href="#{{ group.first | replace: ' ', '_' }}">{{ group.first | replace: '__', '\_\_' }}</a></td><td>{{ group.last.size }} post{% if group.last.size > 1 %}s{% endif %}</td></tr>{% endfor %}
+  <tr><td>{{ site.posts.last.date | date: "%Y" }}~{{ site.posts.first.date | date: "%Y" }}</td><td>{{ site.posts.size }} post{% if site.posts.size > 1 %}s{% endif %}</td></tr>
+</table>
+<br />
+<hr>
+<br />
+
+{% for group in the_groups %}
+  {% assign the_group_grid = '' | split: '/' %}
+  {% assign the_group_grid = the_group_grid | push: group.last %}
+  {% include grid_list.html title=group.first desc=" " list=the_group_grid cols=3 %}
+{% endfor %}

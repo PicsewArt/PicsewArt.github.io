@@ -1,0 +1,6 @@
+{% capture window_title %}{{ include.title }}{% endcapture %}
+{% capture window_height %}{{ include.height }}{% endcapture %}
+{% capture window_aspect %}{{ include.aspect }}{% endcapture %}
+<div class="window-wrapper-container"{% if window_title.size > 0 %} data-title="{{ window_title }}"{% endif %}>
+  <div class="window-wrapper-content">
+    <div class="window-wrapper" style="{% if window_height.size > 0 %}height: {{ window_height }};{% endif %}{% if window_aspect.size > 0 %}padding-top: {{ window_aspect }};{% endif %}">

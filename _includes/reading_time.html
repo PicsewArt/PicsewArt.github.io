@@ -1,0 +1,1 @@
+{% capture post_html %}{{ include.html }}{% endcapture %}{% assign post_words_count = post_html | strip_html | strip_newlines | number_of_words %}{% if post_words_count < 360 %}1 min{% else %}{{ post_words_count | divided_by: 180 }} mins{% endif %}

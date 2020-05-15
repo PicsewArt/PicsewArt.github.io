@@ -1,0 +1,16 @@
+	{% if site.show_search %}
+	<!-- <form role="search" name="search" autocomplete="on" class="form" action="https://google.com/search" method="get">
+		<label class="help-block">
+			<input type="hidden" name="sitesearch" value="{{ site.url }}" />
+			<input id="query" maxlength="32" autocomplete="on" placeholder="digital nomad bali" class="form-control" type="text" name="q" />
+			<svg role="presentation"class="i-search"viewBox="0 0 32 32"width="14"height="14"fill="none"stroke="var(--accent-color)"stroke-linecap="round"stroke-linejoin="round"stroke-width="3"><circle cx="14"cy="14"r="12"/><path d="M23 23 L30 30"/></svg>
+		</label>
+	</form> -->
+
+	<form role="search" name="search" autocomplete="on" class="form" action="{{ site.url }}/search/index.html" method="get">
+		<label class="help-block">
+			<input id="search-box" maxlength="32" autocomplete="on" placeholder="digital nomad bali" class="form-control" type="text" name="query" />
+			<svg role="presentation"class="i-search"viewBox="0 0 32 32"width="14"height="14"fill="none"stroke="var(--accent-color)"stroke-linecap="round"stroke-linejoin="round"stroke-width="3"><circle cx="14"cy="14"r="12"/><path d="M23 23 L30 30"/></svg>
+		</label>
+	</form>
+	{% endif %}

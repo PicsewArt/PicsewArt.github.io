@@ -1,0 +1,1 @@
+<a class="round-button round-button-inline-block" {% if include.href.size > 0 %} href="{{ include.href }}"{% endif %}{% if include.onclick.size > 0 %} onclick="{{ include.onclick }}"{% endif %} target="{{ include.target | default: '_blank' }}">{% if include.svg.size > 0 %}<span aria-hidden="true">{{ include.svg }}</span>&nbsp;{% endif %}{{ include.title }}</a>

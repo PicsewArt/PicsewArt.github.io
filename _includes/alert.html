@@ -1,0 +1,77 @@
+{% capture alert_type %}{{ include.type }}{% endcapture %}
+{% capture alert_title %}{{ include.title }}{% endcapture %}{% capture alert_msg %}{{ include.msg }}{% endcapture %}
+
+{% capture alert_image %}{{ include.image }}{% endcapture %}
+{% capture alert_image_title %}{{ include.image_title }}{% endcapture %}{% capture alert_image_desc %}{{ include.image_desc }}{% endcapture %}{% capture alert_image_link %}{{ include.image_link }}{% endcapture %}
+{% capture alert_p %}{{ include.p }}{% endcapture %}{% capture alert_p_readmore %}{{ include.p_readmore }}{% endcapture %}
+{% assign alert_post = include.post %}
+{% capture alert_post_on_title %}{{ include.post_title }}{% endcapture %}
+{% capture alert_iframe_code %}{{ include.iframe_code }}{% endcapture %}
+{% capture alert_iframe %}{{ include.iframe }}{% endcapture %}
+{% capture alert_video %}{{ include.video }}{% endcapture %}{% capture alert_video_poster %}{{ include.poster }}{% endcapture %}
+
+{% if alert_image.size > 0 or alert_p.size > 0 or alert_iframe.size > 0 or alert_video.size > 0 or alert_post.title.size > 0 or alert_post_on_title.size > 0%}
+
+  {% include alert_detail_start.html type=alert_type title=alert_title msg=alert_msg %}
+
+  {% if alert_image.size > 0 %}
+
+    {% if alert_image_title.size > 0 or alert_image_desc.size > 0 %}
+      {% include image_overlay.html image=alert_image title=alert_image_title desc=alert_image_desc link=alert_image_link maxwidth="100%" %}
+    {% else %}
+      <div style="position: relative;">
+        <img itemprop="image" src="{{ alert_image }}" data-src="{{ alert_image }}" alt="{{ alert_title }}" style="background-color: #36454f; border-radius: 3px; margin: auto; display: block;">
+      </div>
+    {% endif %}
+
+  {% elsif alert_p.size > 0 %}
+
+      <div class="alert_post_content" style="color: var(--hackcss-dark--text-color);">
+        <article>{% include toc_skip_generator.html html=alert_p %}</article>
+        {% if alert_p_readmore.size > 0 %}{% include button.html href=alert_p_readmore title='Read More' %}{% endif %}
+      </div>
+
+  {% elsif alert_post.title.size > 0 %}
+
+      <div class="alert_post_content" style="color: var(--hackcss-dark--text-color);">
+        <h1 toc-skip="true" id="{{ alert_post.title | replace: ' ', '_' }}">{{ alert_post.title }}</h1>
+        <article>{% include toc_skip_generator.html html=alert_post.content %}</article>
+        {% include button.html href=alert_post.url title='Read More' %}
+      </div>
+
+  {% elsif alert_post_on_title.size > 0 %}
+
+      <div class="alert_post_content" style="color: var(--hackcss-dark--text-color);">
+        <h1 toc-skip="true" id="{{ alert_post_on_title | replace: ' ', '_' }}">{{ alert_post_on_title }}</h1>
+        {% assign alert_found_posts = site.posts | where: "title", alert_post_on_title %}
+        {% include toc_skip_generator.html html=alert_found_posts.first.content %}
+    		{% include button.html href=alert_found_posts.first.url title='Read More' %}
+      </div>
+
+  {% elsif alert_iframe_code.size > 0 %}
+
+      <div style="padding-top: 56.25%; position: relative;">
+        <iframe srcdoc="{{ alert_iframe_code }}" width="100%" height="100%" style="background-color: #36454f; position: absolute; top: 0; bottom: 0; left: 0; right: 0; border-radius: 3px;"></iframe>
+      </div>
+
+  {% elsif alert_iframe.size > 0 %}
+
+      <div style="padding-top: 56.25%; position: relative;">
+        <iframe src="{{ alert_iframe }}" width="100%" height="100%" style="background-color: #36454f; position: absolute; top: 0; bottom: 0; left: 0; right: 0; border-radius: 3px;"></iframe>
+      </div>
+
+  {% elsif alert_video.size > 0 %}
+
+      {% include video.html src=alert_video poster=alert_video_poster no_window=include.no_window aspect=include.aspect %}
+
+  {% else %}
+      <p>Something went wrong.</p>
+  {% endif %}
+
+  {% include alert_detail_end.html %}
+
+{% else %}
+<div class="alert{% if alert_type.size > 0 %} alert-{{ alert_type }}{% endif %}">
+  <summary>{% if alert_title.size > 0 %}<strong>{{ alert_title }}:</strong>&nbsp;{% endif %}{{ alert_msg }}</summary>
+</div>
+{% endif %}

@@ -1,0 +1,22 @@
+---
+layout: default
+title: "Gallery"
+active_title: 'Gallery'
+---
+	{% assign all_albums = '' | split: '/' %}
+	{% for album in site.gallery %}
+		{% if album.published %}
+			{% assign this_album = '' | split: '/' %}
+			{% assign this_album = this_album | push: album.url %}
+			{% assign this_album = this_album | push: album.title %}
+			{% assign this_album = this_album | push: album.desc %}
+			{% assign this_album_cover_url = site.path.gallery.photography.low | append: '/' | append: album.cover.url %}
+			{% assign this_album = this_album | push: this_album_cover_url %}
+			{% assign this_album = this_album | push: album.cover.format %}
+
+			{% assign all_albums = all_albums | push: this_album %}
+		{% endif %}
+	{% endfor %}
+	{% assign all_albums_container = '' | split: '/' %}
+	{% assign all_albums_container = all_albums_container | push: all_albums %}
+	{% include grid_list.html desc=" " list=all_albums_container cols=3 readmore='/gallery/archive/index.html' readmore_title='Archive' %}

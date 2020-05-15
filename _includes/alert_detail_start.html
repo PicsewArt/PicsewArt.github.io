@@ -1,0 +1,7 @@
+{% capture alert_type %}{{ include.type }}{% endcapture %}
+{% capture alert_title %}{{ include.title }}{% endcapture %}
+{% capture alert_msg %}{{ include.msg }}{% endcapture %}
+<div class="alert{% if alert_type.size > 0 %} alert-{{ alert_type }}{% endif %}">
+  <details>
+    <summary>{% if alert_title.size > 0 %}<strong>{{ alert_title }}:</strong>&nbsp;{% endif %}{{ alert_msg }}</summary>
+    <figure style="padding-top: 1rem;">

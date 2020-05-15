@@ -1,0 +1,60 @@
+<!-- BEGIN A GRID GROUP SECTION -->
+<section id="grouped-list-section-s{{ include.sectionid }}" style="word-break: break-all;">
+	{% if include.title.size > 0 or include.desc.size > 0 %}
+	<header>
+		{% if include.title.size > 0 %}<h1 itemprop="name" id="{{ include.title | replace: ' ', '_' }}">{% if include.title_url.size > 0 %}<a href="{{ include.title_url }}">{{ include.title }}</a>{% else %}{{ include.title }}{% endif %}</h1>{% endif %}
+		{% if include.desc.size > 0 %}<p itemprop="description">{{ include.desc }}</p>{% endif %}
+	</header>
+	{% endif %}
+
+	{% for group in include.list %}
+	{% assign group_index = forloop.index %}
+	<!-- BEGIN A GRID GROUP -->
+	<div class="grid" id="grid-list-s{{ include.sectionid }}-g{{ group_index }}">
+		{% for element in group %}
+			{% assign element_index = forloop.index %}
+			{% comment %}
+			<!-- element[0]: url --><!-- if include.gallery: url => original media -->
+			<!-- element[1]: title --><!-- if include.gallery: '' -->
+			<!-- element[2]: desc --><!-- if include.gallery: '' -->
+			<!-- element[3]: img --><!-- if include.gallery: img => thumbnail image -->
+			<!-- element[4]: format --><!-- if include.gallery: format => media format -->
+			<!-- element[5]: type --><!-- if include.gallery: type => media type | else : nil -->
+			{% endcomment %}
+			{% assign element_url = element[0] %}
+			{% assign element_title = element[1] %}
+			{% assign element_desc = element[2] %}
+			{% assign element_img = element[3] %}
+			{% assign element_format = element[4] %}
+			{% assign element_media_type = element[5] | default: 'image' %}
+		<!-- BEGIN A GRID CELL -->
+	  <div class="cell" id="grid-list-s{{ include.sectionid }}-g{{ group_index }}-i{{ element_index }}" style="{% include grid_cols_to_style.html cols=include.cols %} padding: 3px;">
+			{% capture element_media_mix %} type="{{ element_media_type }}/{{ element_format }}"{% if element_media_type == 'video'%} data-poster="{{ element_img }}" data-sources='[{ "href": "{{ element_url }}", "type": "{{ element_media_type }}/{{ element_format }}"}]'{% endif %}{% endcapture %}
+			<a href="{{ element_url }}" target="{{ include.target | default: '_self' }}"{{ element_media_mix }}>
+				<figure aria-hidden="true" itemscope itemtype="https://schema.org/ImageObject" {{ element_media_mix }}>
+						<link itemprop="contentUrl" href="{{ element_img }}">
+						<meta itemprop="encodingFormat" content="{{ element_media_type }}/{{ element_format }}">
+						<meta itemprop="name" content="thumbnail">
+						<meta itemprop="headline" content="{{ element_img }}">
+						<img itemprop="thumbnailUrl" alt="THUMBNAIL" src="{{ element_img }}" style="border-radius: 3px;"/>
+	      </figure>
+				{% if element_title.size > 0 %}
+					{% if include.external %}
+						{% include link.html href=element_url title=element_title %}
+					{% else %}
+						<p itemprop="name">{{ element_title }}</p>
+					{% endif %}
+				{% endif %}
+	    </a>
+			{% if element_desc.size > 0 %}<small itemprop="description"><p>{{ element_desc }}</p></small>{% endif %}
+	  </div>
+		<!-- END A GRID CELL -->
+		{% endfor %}
+	</div>
+	<!-- BEGIN A GRID GRUOP -->
+	{% endfor %}
+	{% if include.readmore.size > 0 %}
+	<nav class="readmore"><a itemprop="url" href="{{ include.readmore }}">{% if include.readmore_title.size > 0 %}{{ include.readmore_title }}{% else %}View more{% endif %}</a></nav>
+	{% endif %}
+</section>
+<!-- END A GRID GROUP SECTION -->

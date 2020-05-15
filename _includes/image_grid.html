@@ -1,0 +1,7 @@
+{% capture grid_list_str %}{{ include.images }}{% endcapture %}
+{% assign grid_list = grid_list_str | split: ',' %}
+<div class="grid">
+	{% for img in grid_list %}
+	<div class="cell" style="{% include grid_cols_to_style.html cols=include.cols %}"><img src="{{ img }}" style="background-color: #36454f; border-radius: 3px;"></div>
+	{% endfor %}
+</div>

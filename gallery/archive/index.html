@@ -1,0 +1,50 @@
+---
+layout: default
+title: "Gallery Archive"
+active_title: "Gallery"
+has_about: false
+prelink_js: []
+prelink_css: ['/assets/gallery/sourcecode/css/blueimp-gallery.min.css', '/assets/gallery/sourcecode/css/blueimp-exception.css']
+afterlink_js: ['/assets/gallery/sourcecode/js/blueimp-gallery.min.js', '/assets/gallery/sourcecode/js/blueimp-binding.js']
+afterlink_css: []
+preload_js: []
+preload_css: []
+afterload_js: ['bindGalleryEventById("grouped-list-section-s");']
+afterload_css: []
+on_load:
+  call: ""
+  def: ''
+---
+{% assign all_media = '' | split: '/' %}
+{% for album in site.gallery %}
+  {% if album.published %}
+    {% for item in album.media %}
+
+      {% assign this_item = '' | split: '/' %}
+
+    	{% comment %}{% assign media_url = site.url | append: '/gallery/detail/?album=' | append: page.unique | append: '&idx=' | append: forloop.index | append: "&type=" | append: item.type %}{% endcomment %}
+
+    	{% capture media_url %}{% include gallery_media_url.html item=item %}{% endcapture %}
+      {% capture thumbnail_url %}{% include gallery_media_thumbnail_url.html item=item %}{% endcapture %}
+
+    	{% assign this_item = this_item | push: media_url %}
+    	{% assign this_item = this_item | push: '' %}
+      {% assign media_desc = album.title | append: " | " | append: item.url %}
+    	{% assign this_item = this_item | push: media_desc %}
+    	{% assign this_item = this_item | push: thumbnail_url %}
+    	{% assign this_item = this_item | push: item.format %}
+    	{% assign this_item = this_item | push: item.type %}
+
+      {% assign all_media = all_media | push: this_item %}
+
+    {% endfor %}
+  {% endif %}
+{% endfor %}
+
+{% assign all_media_container = '' | split: '/' %}
+{% assign all_media_container = all_media_container | push: all_media %}
+{% include grid_list.html desc=" " list=all_media_container cols=3 gallery=true %}
+<br />
+{% include button_back.html %}
+
+{% include gallery_lightbox.html %}

@@ -1,0 +1,82 @@
+{% assign original_array = include.list %}
+
+{% if include.cols < 1 %}
+	{% assign split_term = 3 %}
+{% else %}
+	{% assign split_term = include.cols %}
+{% endif %}
+
+{% assign splited_array = "" | split: "/" %}
+
+{% for element in original_array %}
+	{% assign split_reminder = forloop.index | modulo: split_term %}
+
+	{% if split_reminder == 1 %}
+		{% assign split_subArray = "" | split: "/" %}
+	{% endif %}
+
+	{% assign split_subArray = split_subArray | push: element %}
+
+	{% if split_subArray.size == split_term or forloop.last %}
+		{% assign splited_array = splited_array | push: split_subArray %}
+	{% endif %}
+{% endfor %}
+
+<section id="grouped-list-section-s{{ include.sectionid }}">
+		{% if include.title.size > 0 or include.desc.size > 0 %}
+		<header>
+			{% if include.title.size > 0 %}<h1 itemprop="name"><a href="{{ include.titleurl }}">{{ include.title }}</a></h1>{% endif %}
+			{% if include.desc.size > 0 %}<p itemprop="description">{{ include.desc }}</p>{% endif %}
+		</header>
+		{% endif %}
+
+		{% for split_group in splited_array %}
+			{% assign row_index = forloop.index %}
+		<ul id="grouped-list-s{{ include.sectionid }}-r{{ row_index }}" class="thumbnail grid"{% unless include.gallery %} itemscope itemtype="https://schema.org/ItemList"{% endunless %}>
+			{% unless include.gallery %}
+			<meta itemprop="itemListOrder" content="Unordered">
+			<meta itemprop="name" content="{{ include.title }}">
+			<meta itemprop="numberOfItems" content="{{ split_term }}">
+			{% endunless %}
+
+			{% for element in split_group %}
+				{% assign col_index = forloop.index %}
+
+				{% comment %}
+				<!-- element[0]: url --><!-- if include.gallery: url => original media -->
+				<!-- element[1]: title --><!-- if include.gallery: '' -->
+				<!-- element[2]: desc --><!-- if include.gallery: '' -->
+				<!-- element[3]: img --><!-- if include.gallery: img => thumbnail image -->
+				<!-- element[4]: format --><!-- if include.gallery: format => media format -->
+				<!-- element[5]: type --><!-- if include.gallery: type => media type | else : nil -->
+				{% endcomment %}
+
+				{% assign element_url = element[0] %}
+				{% assign element_title = element[1] %}
+				{% assign element_desc = element[2] %}
+				{% assign element_img = element[3] %}
+				{% assign element_format = element[4] %}
+				{% assign element_media_type = element[5] | default: 'image' %}
+
+			<li id="grouped-list-s{{ include.sectionid }}-r{{ row_index }}-c{{ col_index }}" class="cell"{% if include.equal %} style="max-width: {{ 100 | divided_by: split_term }}%"{% endif %} itemprop="itemListElement" itemscope itemtype="https://schema.org/SoftwareApplication">
+				{% capture element_media_mix %} type="{{ element_media_type }}/{{ element_format }}"{% if element_media_type == 'video'%} data-poster="{{ element_img }}" data-sources='[{ "href": "{{ element_url }}", "type": "{{ element_media_type }}/{{ element_format }}"}]'{% endif %}{% endcapture %}
+				<a href="{{ element_url }}"{{ element_media_mix }}>
+					<figure aria-hidden="true" itemscope itemtype="https://schema.org/ImageObject" {{ element_media_mix }}>
+						<link itemprop="contentUrl" href="{{ element_img }}">
+						<meta itemprop="encodingFormat" content="{{ element_media_type }}/{{ element_format }}">
+						<meta itemprop="name" content="thumbnail">
+						<meta itemprop="headline" content="{{ element_img }}">
+						<img itemprop="thumbnailUrl" alt="THUMBNAIL" src="{{ element_img }}"/>
+					</figure>
+					{% if include.external %}{% include link.html href=element_url title=element_title %}{% elsif element_title.size > 0 %}<p itemprop="name">{{ element_title }}</p>{% endif %}
+				</a>
+				{% if element_desc.size > 0 %}<small itemprop="description"><p>{{ element_desc }}</p></small>{% endif %}
+			</li>
+			{% endfor %}
+		</ul>
+		{% endfor %}
+		{% if include.readmore.size > 0 %}
+		<nav class="readmore"><a itemprop="url" href="{{ include.readmore }}">{% if include.readmore_title.size > 0 %}{{ include.readmore_title }}{% else %}View more{% endif %}</a></nav>
+		{% endif %}
+
+	</section>

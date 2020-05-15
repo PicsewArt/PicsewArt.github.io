@@ -1,0 +1,68 @@
+---
+layout: default
+title: "Gallery Detail"
+active_title: "Gallery"
+---
+<br />
+{% include window_mac_start.html title="Photo"%}
+<img id="img_detailed" src="" alt="Photo"/>
+<video id="video_detailed" src="" controls poster=""></video>
+{% include window_mac_end.html %}
+<br />
+{% include button_back.html %}
+<script>
+  var allmedia = [
+     {% assign albums_last_idx = site.gallery.length | minus: 1 %}
+     {% for album in site.albums %}
+        {% assign outer_index = forloop.index %}
+          {% for item in album.media %}
+          {% assign inner_index = forloop.index %}
+          {
+            'idx': '{{ forloop.index }}',
+            'url': '{{ item.url }}',
+            'album': '{{ album.unique }}',
+            'external': {% if item.external == 'true' %}true{% else %}false{% endif %},
+            'format': '{{ item.format }}',
+            'type': '{{ item.type }}'
+          }{% unless outer_index == albums_last_idx %},{% endunless %}
+          {% endfor %}
+      {% endfor %}
+  ];
+
+  var albumid = getQueryVariable('album');
+  var mediaindex = getQueryVariable('idx');
+  var mediatype = getQueryVariable('type');
+
+  var img_detailed = ocument.getElementById('img_detailed');
+  var video_detailed = document.getElementById('video_detailed');
+  var mediadetailed = mediatype == 'image' ? img_detailed : video_detailed;
+
+  if (mediatype == 'image') {
+    img_detailed.style.display = 'block';
+    video_detailed.style.display = 'none';
+  } else {
+    video_detailed.style.display = 'block';
+    img_detailed.style.display = 'none';
+  }
+
+  var foundcount = 0;
+  for (var i = 0; i < allmedia.length; i++) {
+      var mediadata = allmedia[i];
+      if (mediadata.idx == mediaindex && mediadata.album == albumid) {
+          if (mediadata.external) {
+              mediadetailed.src = mediadata.url;
+          } else {
+              if (mediatype == 'image') {
+                mediadetailed.src = "{{ site.url }}{{ site.path.gallery.photography.high }}/" + mediadata.url;
+              } else {
+                mediadetailed.src = "{{ site.url }}{{ site.path.gallery.videos }}/" + mediadata.url + '.jpg';
+              }
+          }
+          foundcount++;
+          break;
+      }
+  }
+  if (foundcount <= 0) {
+    alert('ERROR');
+  }
+</script>

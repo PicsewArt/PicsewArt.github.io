@@ -1,0 +1,103 @@
+name: "Señorita"
+alias: "Cat Complains"
+author: "Chiu"
+avatar: "/assets/images/avatar_round.png"
+description: "The name is Chiu and this is my personal web site. I see myself as a relentless problem-solver, and I’m always looking for a new challenge."
+url: "https://lasenhorita.github.io"
+# url: '/Volumes/Shared/Common/Git/LaSenhorita/_site'
+email: "senhorita@163.com"
+timezone: Asia/Shanghai
+range:
+  start: 2020
+  end: 2020
+
+hero:
+  url: 'HERO_SADNESS_H_0009.jpg'
+  format: 'jpeg'
+  author: "Chiu"
+  name: 'Señorita'
+  site: 'Señorita'
+  path: '/assets/images/hero'
+
+highlighter: rouge
+markdown: kramdown
+kramdown:
+  syntax_highlighter: rouge
+
+permalink: /posts/post_:title/
+
+sass:
+  sass_dir: "/assets/sass/"
+  style: compressed
+
+# Plugins
+plugins: [jekyll-paginate,liquid] #jekyll-toc,jekyll-asciidoc]
+paginate: 6
+paginate_path: "/posts/page/:num"
+
+collections:
+  gallery:
+    output: true
+    sort_by: title
+  posts:
+    output: true
+  creative:
+    output: true
+    sort_by: title
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: "post"
+      active_title: "Posts"
+      has_action: true
+      has_info: true
+      has_front_matters_header: true
+      show_time: false
+      show_hero: true
+  - scope:
+      path: ""
+      type: gallery
+    values:
+      layout: "album"
+      active_title: "Gallery"
+      prelink_css: ['/assets/gallery/sourcecode/css/blueimp-gallery.min.css', '/assets/gallery/sourcecode/css/blueimp-exception.css']
+      afterlink_js: ['/assets/gallery/sourcecode/js/blueimp-gallery.min.js', '/assets/gallery/sourcecode/js/blueimp-binding.js']
+      afterlink_css: []
+      preload_js: []
+      preload_css: []
+      afterload_js: ['bindGalleryEventById("grouped-list-section-s");']
+      afterload_css: []
+      on_load:
+        call: ""
+        def: ""
+  - scope:
+      path: ""
+      type: creative
+    values:
+      # layout: ""
+      active_title: "Creative"
+
+path:
+  assets: "/assets"
+  images: "/assets/images"
+  hero:
+    high: "/assets/images/hero/high"
+    low: "/assets/images/hero/low"
+  gallery:
+    photography:
+      high: "/assets/gallery/photography/high"
+      low: "/assets/gallery/photography/low"
+    videos: "/assets/gallery/videos"
+  videos: "/assets/videos"
+  css: "/assets/css"
+  js: "/assets/js"
+
+# show_search: false
+show_search: true
+
+# posts_list_style: 'simple'
+# posts_list_style: 'normal'
+posts_list_style: 'group'

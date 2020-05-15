@@ -1,0 +1,47 @@
+---
+layout: default
+active_title: 'Home'
+has_about: false
+prelink_js: []
+prelink_css: ['/assets/gallery/sourcecode/css/blueimp-gallery.min.css', '/assets/gallery/sourcecode/css/blueimp-exception.css']
+afterlink_js: ['/assets/gallery/sourcecode/js/blueimp-gallery.min.js', '/assets/gallery/sourcecode/js/blueimp-binding.js']
+afterlink_css: []
+preload_js: []
+preload_css: []
+afterload_js: ['bindGalleryEventById("grid-list-srecent-meida-g1");']
+afterload_css: []
+on_load:
+  call: ""
+  def: ''
+---
+	{% assign recent_posts = '' | split: '/' %}
+	{% for post in site.posts limit: 3 %}
+		{% assign recent_posts = recent_posts | push: post %}
+	{% endfor %}
+	{% include grid_posts_list.html sectionid="recent-posts" list=recent_posts cols=3 title='Recent Posts' title_url="/posts/index.html" desc='Writing on various topics including travel, finance and technology.' readmore_title="Read More" readmore='/posts/index.html' %}
+
+	<!-- SEPARATOR -->
+
+	{% assign recent_media = '' | split: '/' %}
+	{% for album in site.gallery limit: 3 %}
+		{% assign this_item = '' | split: '/' %}
+
+		{% comment %}{% assign media_url = site.url | append: '/gallery/detail/?album=' | append: page.unique | append: '&idx=' | append: forloop.index | append: "&type=" | append: item.type %}{% endcomment %}
+
+		{% capture this_media_url %}{% include gallery_media_url.html item=album.media.first %}{% endcapture %}
+		{% capture this_thumbnail_url %}{% include gallery_media_thumbnail_url.html item=album.media.first %}{% endcapture %}
+
+		{% assign this_item = this_item | push: this_media_url %}
+		{% assign this_item = this_item | push: '' %}
+		{% assign this_media_desc = album.title | append: " | " | append: album.media.first.url %}
+		{% assign this_item = this_item | push: this_media_desc %}
+		{% assign this_item = this_item | push: this_thumbnail_url %}
+		{% assign this_item = this_item | push: album.media.first.format %}
+		{% assign this_item = this_item | push: album.media.first.type %}
+
+		{% assign recent_media = recent_media | push: this_item %}
+	{% endfor %}
+	{% assign recent_media_container = '' | split: '/' %}
+	{% assign recent_media_container = recent_media_container | push: recent_media %}
+	{% include grid_list.html sectionid="recent-meida" list=recent_media_container cols=3 title='Recent Media' title_url="/gallery/index.html" desc='Passionate about photography and enjoy taking pictures all around the world.' readmore_title="View More" readmore='/gallery/index.html' gallery=true %}
+	{% include gallery_lightbox.html %}
