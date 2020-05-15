@@ -9,7 +9,7 @@ active_title: 'Music'
 			{% assign this_list = this_list | push: list.url %}
 			{% assign this_list = this_list | push: list.title %}
 			{% assign this_list = this_list | push: '' %}
-			{% assign this_list_cover = site.path.music | append: list.cover %}
+			{% assign this_list_cover = site.path.music | append: '/' | append: list.cover %}
 			{% assign this_list = this_list | push: this_list_cover %}
 			{% assign this_list = this_list | push: 'jpeg' %}
 
