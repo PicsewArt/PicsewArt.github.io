@@ -30,7 +30,7 @@
 		<!-- BEGIN A GRID CELL -->
 	  <div class="cell" id="grid-list-s{{ include.sectionid }}-g{{ group_index }}-i{{ element_index }}" style="{% include grid_cols_to_style.html cols=include.cols %} padding: 3px;">
 			{% capture element_media_mix %} type="{{ element_media_type }}/{{ element_format }}"{% if element_media_type == 'video'%} data-poster="{{ element_img }}" data-sources='[{ "href": "{{ element_url }}", "type": "{{ element_media_type }}/{{ element_format }}"}]'{% endif %}{% endcapture %}
-			<a href="{{ element_url }}" target="{{ include.target | default: '_self' }}"{{ element_media_mix }}>
+			<a href="{{ element_url }}" target="{{ include.target | default: '_self' }}"{% if include.gallery %}{{ element_media_mix }}{% endif %}>
 				<figure aria-hidden="true" itemscope itemtype="https://schema.org/ImageObject" {{ element_media_mix }}>
 						<link itemprop="contentUrl" href="{{ element_img }}">
 						<meta itemprop="encodingFormat" content="{{ element_media_type }}/{{ element_format }}">
