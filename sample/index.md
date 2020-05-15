@@ -68,6 +68,10 @@ And this is a {% include button_round.html title='Download' href=site.url svg=si
 
 <blockquote>{% assign buttons_svgs = site.data.svgs.github | append: ',' | append: site.data.svgs.search | append: ',' | append: site.data.svgs.search %}{% include button_round_row.html titles='Github Button,Google Button,Yandex Button' hrefs='https://github.com/,https://google.com/,https://yandex.com/' svgs=buttons_svgs %}</blockquote>
 
+### Animated Buttons
+
+<blockquote>{% include button_animated.html title='Learn More' href=site.url %}</blockquote>
+
 # Keyboard
 
 > <kbd>Keyboard</kbd>
