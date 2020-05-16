@@ -8,8 +8,8 @@
   overflow: hidden;
   margin: 10px auto !important;
   min-width: 250px;
-  max-width: 310px;
-  width: 100%;
+  /* max-width: 310px; */
+  /* width: 100%; */
   background-color: #000000;
   color: #ffffff;
   text-align: left;
