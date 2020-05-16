@@ -77,7 +77,7 @@
   left: 0;
   right: 0;
   border: none;
-  background: : none;
+  background: none !important;
 }
 
 .overlay-image-fashion-a:hover {
