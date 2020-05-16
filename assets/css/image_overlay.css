@@ -15,6 +15,7 @@ div.overlay_container {
   max-width: 70%; */
   max-width: 310px;
   overflow: hidden;
+  margin: 0 auto;
 }
 
 div.overlay_contents a.overlay_a {
