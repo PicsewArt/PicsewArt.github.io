@@ -12,7 +12,8 @@
 	{% assign tempTags_final = '#' | append: tempTags %}
 	{% assign tempSubArray = tempSubArray | push: tempTags_final %}
 	{% capture post_img %}{% include post_hero_url.html image=post.hero.url res='low' %}{% endcapture %}
-	{% assign tempSubArray = tempSubArray | push: post_img %}
+	{% assign post_img_hv = post_img | replace: '_H_', '_HV_' | replace: '_VH_', '_VH_' %}
+	{% assign tempSubArray = tempSubArray | push: post_img_hv %}
 	{% assign tempSubArray = tempSubArray | push: post.url %}
 
 	{% assign converted_list = converted_list | push: tempSubArray %}
