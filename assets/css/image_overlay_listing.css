@@ -59,9 +59,9 @@ figure.overlay-image-listing .links {
 
 figure.overlay-image-listing h3,
 figure.overlay-image-listing h3 a {
-  line-height: 1.3em;
+  line-height: 24px;
   font-weight: 900;
-  font-size: 1.3em;
+  font-size: 24px;
 }
 
 figure.overlay-image-listing h3::before,
