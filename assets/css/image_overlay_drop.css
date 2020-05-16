@@ -37,7 +37,7 @@ figure.overlay-image-drop img:first-of-type {
 
 figure.overlay-image-drop img:nth-of-type(2) {
   position: absolute;
-  bottom: calc(100% - 25px);
+  bottom: calc(100% - 10px);
   left: 0;
   z-index: 1;
 }
