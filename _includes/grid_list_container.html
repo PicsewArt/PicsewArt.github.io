@@ -8,7 +8,7 @@
 	{% endif %}
 
 	{% for group in include.list %}
-	{% assign group_index = forloop.index %}
+		{% assign group_index = forloop.index %}
 	<!-- BEGIN A GRID GROUP -->
 	<div class="grid" id="grid-list-s{{ include.sectionid }}-g{{ group_index }}">
 		{% for element in group %}
@@ -24,6 +24,7 @@
 	</div>
 	<!-- BEGIN A GRID GRUOP -->
 	{% endfor %}
+
 	{% if include.readmore.size > 0 %}
 	<nav class="readmore"><a itemprop="url" href="{{ include.readmore }}">{% if include.readmore_title.size > 0 %}{{ include.readmore_title }}{% else %}View more{% endif %}</a></nav>
 	{% endif %}

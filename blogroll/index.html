@@ -15,8 +15,8 @@ on_load:
   def: ''
 ---
 {% assign grid_list_array = ''| split: '/' %}
+{% assign grid_list_gourp_array = ''| split: '/' %}
 {% for link in site.data.blogroll %}
-  {% assign grid_list_gourp_array = ''| split: '/' %}
   {% assign grid_list_element_array = ''| split: '/' %}
   <!-- element[0]: title -->
   <!-- element[1]: subtitle -->
