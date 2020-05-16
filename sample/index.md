@@ -314,6 +314,10 @@ class Untitled {
 
 <blockquote>{% include image_overlay_fashion.html title="The" subtitle="Sadness" desc="is killing me." image="/assets/images/hero/low/HERO_PAINTINGS_V_0001.jpg" href=site.url %}</blockquote>
 
+### Black-White Rectangle Overlay Image
+
+<blockquote>{% include image_overlay_bw_rect.html title="The Sadness is killing me." image="/assets/images/hero/low/HERO_PAINTINGS_H_0001.jpg" href=site.url %}</blockquote>
+
 # Music
 
 <blockquote>{% include music_player.html playerid='sample' title='Rivellon' artist='Divinity: Original Sin 2' music='/assets/music/Rivellon.mp3' cover='https://cdn-prod.scalefast.com/public/assets/user/6562614/image/fc0fea76b4a2f75dc282d0dba05a31a1.jpg' %}</blockquote>
