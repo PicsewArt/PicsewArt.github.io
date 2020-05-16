@@ -2,8 +2,8 @@
 layout: default
 title: "Creative"
 description: "Build, Test, Discover and Create the New World."
-style: 'fashion'
-#style: 'box'
+style: 'overlay_fashion'
+#style: 'overlay_box'
 cols: 2
 ---
 {% assign converted_list = '' | split: '/' %}
@@ -11,7 +11,7 @@ cols: 2
 	{% assign tempSubArray = '' | split: '/' %}
 	{% assign the_creative_img = site.url | append: site.path.images | append: '/creative/' | append: create.cover.url %}
 
-	{% if page.style == 'fashion' %}
+	{% if page.style == 'overlay_fashion' %}
 
 		<!-- element[0]: title.first-word -->
 		<!-- element[1]: title.other-word -->
@@ -24,7 +24,7 @@ cols: 2
 		{% assign tempSubArray = tempSubArray | push: the_creative_img %}
 		{% assign tempSubArray = tempSubArray | push: create.url %}
 
-	{% elsif page.style == 'box' %}
+	{% elsif page.style == 'overlay_box' %}
 
 		<!-- element[0]: title.first-word -->
 		<!-- element[1]: title.other-word -->
@@ -45,8 +45,8 @@ cols: 2
 {% assign outer_list = '' | split: '/' %}
 {% assign outer_list = outer_list | push: converted_list %}
 
-{% if page.style == 'fashion' %}
+{% if page.style == 'overlay_fashion' %}
 	{% include grid_image_overlay_fashion_list.html list=outer_list desc=" " cols=page.cols %}
-{% elsif page.style == 'box' %}
+{% elsif page.style == 'overlay_box' %}
 	{% include grid_image_overlay_box_list.html list=outer_list desc=" " cols=page.cols %}
 {% endif %}
