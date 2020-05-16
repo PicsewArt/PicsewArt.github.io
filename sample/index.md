@@ -344,7 +344,7 @@ class Untitled {
 
 ## Dropping Overlay Image
 
-<blockquote>{% include image_overlay_drop.html title=site.alias desc=site.description image="/assets/images/hero/low/HERO_SADNESS_H_0010.jpg" href=site.url %}</blockquote>
+<blockquote>{% include image_overlay_drop.html color="orange" title=site.alias desc=site.description image="/assets/images/hero/low/HERO_SADNESS_H_0010.jpg" href=site.url %}</blockquote>
 
 # Music
 
