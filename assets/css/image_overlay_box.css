@@ -51,6 +51,12 @@
   color: #bbb;
   letter-spacing: 1px;
 }
+.overlay-image-box h3::before,
+.overlay-image-box h5::before,
+.overlay-image-box h3::after,
+.overlay-image-box h5::after {
+  display: none;
+}
 .overlay-image-box blockquote {
   padding: 0;
   margin: 0;
