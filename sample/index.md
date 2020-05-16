@@ -300,11 +300,11 @@ class Untitled {
 
 ### Overlay Normal Image
 
-<blockquote>{% include image_overlay.html image='/assets/images/hero/low/HERO_PAINTINGS_V_0000.jpg' title=site.name desc=site.description link=site.url %}</blockquote>
+<blockquote>{% include image_overlay.html image='/assets/images/hero/low/HERO_PAINTINGS_V_0000.jpg' title=site.name desc=site.description link=site.url maxwidth="200px" %}</blockquote>
 
 ### Overlay Unsplash Image
 
-<blockquote>{% include image_overlay.html unsplash='ydU5iN4mWek' title='Unsplash' desc='Woods in Wassergspreng, Austria.' fadein='bottom' maxwidth="100%" %}</blockquote>
+<blockquote>{% include image_overlay.html unsplash='ydU5iN4mWek' title='Unsplash' desc='Woods in Wassergspreng, Austria.' fadein='bottom' maxwidth="300px" %}</blockquote>
 
 ### Boxed Overlay Image
 
