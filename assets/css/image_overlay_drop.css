@@ -43,13 +43,34 @@ figure.overlay-image-drop img:nth-of-type(2) {
 }
 
 figure.overlay-image-drop figcaption {
-  background-color: rgba(0, 0, 0, 0.5);
+  /* background-color: rgba(0, 0, 0, 0.5); */
   position: absolute;
   bottom: 0;
   left: 0;
   width: 100%;
   padding: 15px 20px;
 }
+
+figure.overlay-image-drop figcaption.dark {
+  background-color: RGBA(32,99,143,0.5);
+}
+
+figure.overlay-image-drop figcaption.dark {
+  background-color: RGBA(50,193,70,0.5);
+}
+
+figure.overlay-image-drop figcaption.dark {
+  background-color: RGBA(252,98,93,0.5);
+}
+
+figure.overlay-image-drop figcaption.dark {
+  background-color: RGBA(255,212,59,0.5);
+}
+
+figure.overlay-image-drop figcaption.dark {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
 
 figure.overlay-image-drop figcaption h3,
 figure.overlay-image-drop figcaption p {
