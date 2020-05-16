@@ -7,5 +7,5 @@
     <h3>{{ include.title }}</h3>
     <p>{{ include.desc }}</p>
   </figcaption>
-  <span class="read-more"><a href=" {{ include.href }}">{{ include.readmore | default: "View More" }}</a>&nbsp;<i class="fa fa-arrow-right"></i></span>
+  <a href=" {{ include.href }}"><span class="read-more">{{ include.readmore | default: "View More" }}&nbsp;<i class="fa fa-arrow-right"></i></span></a>
 </figure>
