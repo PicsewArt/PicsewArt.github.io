@@ -75,7 +75,7 @@
   max-height: 25;
 }
 
-.overlay-image-fashion-a {
+.overlay-image-fashion a {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -85,7 +85,7 @@
   background: none !important;
 }
 
-.overlay-image-fashion-a:hover {
+.overlay-image-fashion a:hover {
   background: none !important;
 }
 
