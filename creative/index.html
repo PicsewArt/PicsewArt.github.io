@@ -13,7 +13,7 @@ description: "Build, Test, Discover and Create the New World."
 	<!-- element[4]: url -->
 	{% assign tempSubArray = tempSubArray | push: 'The' %}
 	{% assign tempSubArray = tempSubArray | push: create.title %}
-	{% assign tempSubArray = tempSubArray | push: 'Creative is Timeless' %}
+	{% assign tempSubArray = tempSubArray | push: 'is timeless.' %}
 	{% assign the_creative_img = site.url | append: site.path.images | append: '/creative/' | append: create.cover.url %}
 	{% assign tempSubArray = tempSubArray | push: the_creative_img %}
 	{% assign tempSubArray = tempSubArray | push: create.url %}
