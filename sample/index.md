@@ -316,7 +316,7 @@ class Untitled {
 
 ### Black-White Rectangle Overlay Image
 
-<blockquote>{% include image_overlay_bw_rect.html title="The Sadness is killing me." image="/assets/images/hero/low/HERO_PAINTINGS_H_0001.jpg" href=site.url %}</blockquote>
+<blockquote>{% include image_overlay_bw_rect.html title="The<br/>Sadness" hover="Read More" image="/assets/images/hero/low/HERO_PAINTINGS_H_0001.jpg" href=site.url %}</blockquote>
 
 # Music
 
