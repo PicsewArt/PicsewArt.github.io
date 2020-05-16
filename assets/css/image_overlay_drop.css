@@ -120,4 +120,8 @@ figure.overlay-image-drop.hover img {
   transform: translateY(calc(100% - 10px));
 }
 
-figure.overlay-image-drop:hover
+figure.overlay-image-drop:hover figcaption,
+figure.overlay-image-drop.hover figcaption {
+  -webkit-transform: translateY(calc(100% - 10px));
+  transform: translateY(calc(100% - 10px));
+}
