@@ -5,7 +5,7 @@ figure.overlay-image-listing {
   position: relative;
   float: left;
   overflow: hidden;
-  margin: 10px 1%;
+  margin: 10px auto !important;
   min-width: 230px;
   max-width: 315px;
   max-height: 230px;
