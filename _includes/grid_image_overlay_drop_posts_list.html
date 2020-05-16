@@ -6,7 +6,7 @@
 	<!-- element[2]: image -->
 	<!-- element[3]: url -->
 	{% assign tempSubArray = tempSubArray | push: post.title %}
-	{% capture post_desc %}{% include post_preview.html html=post.excerpt limit=120 %}{% endcapture %}
+	{% capture post_desc %}{% include post_preview.html html=post.excerpt limit=site.excerpt_limit %}{% endcapture %}
 	{% assign tempSubArray = tempSubArray | push: post_desc %}
 	{% capture post_img %}{% include post_hero_url.html image=post.hero.url res='low' %}{% endcapture %}
 	{% assign tempSubArray = tempSubArray | push: post_img %}

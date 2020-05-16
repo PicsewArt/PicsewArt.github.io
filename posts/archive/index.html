@@ -34,7 +34,7 @@ active_title: "Posts"
   {% assign the_post = '' | split: '/' %}
   {% assign the_post = the_post | push: post.url %}
   {% assign the_post = the_post | push: post.title %}
-  {% capture the_post_desc %}{% include post_preview.html html=post.excerpt limit=120 %}{% endcapture %}
+  {% capture the_post_desc %}{% include post_preview.html html=post.excerpt limit=site.excerpt_limit %}{% endcapture %}
 	{% assign the_post = the_post | push: the_post_desc %}
 	{% capture the_post_img %}{% include post_hero_url.html image=post.hero.url res='low' %}{% endcapture %}
   {% assign the_post = the_post | push: the_post_img %}
