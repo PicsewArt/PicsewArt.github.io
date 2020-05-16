@@ -9,10 +9,10 @@
       </div>
 
       <div class="footer-panel-list">
-        <h6 class="footer-h6">Categories</h6>
+        <h6 class="footer-h6">Post Tags</h6>
         <ul class="footer-links-list">
-          {% for cat in site.categories limit: 4 %}
-          <li class="footer-li"><a class="footer-a" href="{{ site.url }}/posts/categories/index.html#{{ cat[0] | replace: ' ', '_' }}">{{ cat[0] | replace: ' ', '_' }}</a></li>
+          {% for tag in site.tags limit: site.data.footer.quicklinks.size %}
+          <li class="footer-li"><a class="footer-a" href="{{ site.url }}/posts/tags/index.html#{{ tag[0] | replace: ' ', '_' }}">{{ tag[0] | replace: ' ', '_' }}</a></li>
           {% endfor %}
           <!-- <li class="footer-li"><a class="footer-a" href="{{ site.url }}/sample/index.html">Sample Doc</a></li> -->
         </ul>
