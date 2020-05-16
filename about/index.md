@@ -1,5 +1,5 @@
 ---
-layout: about
+layout: default
 title: "About"
 active_title: "About"
 #date: "2020-05-06"
@@ -8,3 +8,7 @@ hero:
   url: 'HERO_PAINTINGS_V_0000.jpg'
 #post_has_front_header: true
 ---
+<br />
+{% include card_profile_bubble.html title=site.name subtitle=site.alias desc=site.description url=site.url github="https://github.com/LaSenhorita/LaSenhorita.github.io/" email=site.email image="/assets/images/avatar_painting.jpg" maxwidth="100%" %}
+<br />
+{% include signature.html %}
