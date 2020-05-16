@@ -346,6 +346,10 @@ class Untitled {
 
 <blockquote>{% include image_overlay_drop.html color="orange" title=site.alias desc=site.description image="/assets/images/hero/low/HERO_SADNESS_H_0010.jpg" href=site.url %}</blockquote>
 
+## Fade Detailed Overlay Image
+
+<blockquote>{% include image_overlay_fade_detailed.html title=site.alias desc=site.description image="/assets/images/hero/low/HERO_SADNESS_H_0011.jpg" href=site.url %}</blockquote>
+
 # Music
 
 <blockquote>{% include music_player.html playerid='sample' title='Rivellon' artist='Divinity: Original Sin 2' music='/assets/music/Rivellon.mp3' cover='https://cdn-prod.scalefast.com/public/assets/user/6562614/image/fc0fea76b4a2f75dc282d0dba05a31a1.jpg' %}</blockquote>
@@ -442,8 +446,32 @@ int main(int argc, char *argv[]) {
 {% include image_frame.html image='/assets/images/hero/high/HERO_PAINTINGS_V_0005.jpg' maxwidth="60%" %}
 {% include window_old_mac_end.html btn="View More" href='/gallery/index.html' %}</blockquote>
 
-# Profile Card
+# Cards
+
+## Normal Profile Card
+
+<blockquote>{% include card_profile.html title=site.name desc=site.description image="/assets/images/avatar.jpg" url=site.url email=site.email %}</blockquote>
+
+## Cycled Profile Card
 
 <blockquote>{% include card_profile_cycled.html title="the <span>Senorita</span>" caption=site.alias desc=site.description image="/assets/images/avatar.jpg" url=site.url email=site.email %}</blockquote>
 
-<blockquote>{% include card_profile_bordered.html title="Senorita" subtitle=site.alias desc=site.description image="/assets/images/avatar.jpg" url=site.url email=site.email %}</blockquote>
+## Bordered Profile Card
+
+<blockquote>{% include card_profile_bordered.html title=site.name subtitle=site.alias desc=site.description image="/assets/images/avatar.jpg" url=site.url email=site.email %}</blockquote>
+
+## Bubble Profile Card
+
+<blockquote>{% include card_profile_bubble.html title=site.name subtitle=site.alias desc=site.description image="/assets/images/avatar.jpg" url=site.url email=site.email %}</blockquote>
+
+## Drop Icons Profile Card
+
+<blockquote>{% include card_profile_bubble.html title=site.name image="/assets/images/avatar.jpg" url=site.url github=site.github_url email=site.email %}</blockquote>
+
+## Quotes Profile Card
+
+<blockquote>{% include card_profile_quotes.html title=site.name subtitle=site.alias desc=site.description image="/assets/images/avatar.jpg" %}</blockquote>
+
+## Post Card
+
+<blockquote>{% include card_post.html title=site.name desc=site.description image="/assets/images/hero/low/HERO_SADNESS_H_0011.jpg" day='01' month='May' year='2020' %}</blockquote>
