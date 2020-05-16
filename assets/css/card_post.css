@@ -1,0 +1,128 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,600,700);
+@import url(https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css);
+
+figure.card-post {
+  font-family: 'Raleway', Arial, sans-serif;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+  margin: 10px auto;
+  min-width: 250px;
+  max-width: 310px;
+  width: 100%;
+  background-color: #ffffff;
+  color: #000000;
+  text-align: left;
+  font-size: 16px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+}
+
+figure.card-post * {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+figure.card-post .image {
+  max-height: 220px;
+  overflow: hidden;
+}
+
+figure.card-post img {
+  max-width: 100%;
+  vertical-align: top;
+  position: relative;
+}
+
+figure.card-post figcaption {
+  margin: -40px 15px 0;
+  padding: 15px;
+  position: relative;
+  background-color: #ffffff;
+}
+
+figure.card-post .date {
+  background-color: #ffd43b;
+  top: 15px;
+  color: #333;
+  left: 15px;
+  min-height: 48px;
+  min-width: 48px;
+  position: absolute;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+figure.card-post .date span {
+  display: block;
+  line-height: 24px;
+}
+
+figure.card-post .date .month {
+  font-size: 14px;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+figure.card-post h3,
+figure.card-post p {
+  margin: 0;
+  padding: 0;
+}
+
+figure.card-post h3 {
+  min-height: 50px;
+  margin-bottom: 10px;
+  margin-left: 60px;
+  display: inline-block;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+figure.card-post h3::before,
+figure.card-post h3::after {
+  display: none !important;
+}
+
+figure.card-post p {
+  font-size: 0.8em;
+  margin-bottom: 20px;
+  line-height: 1.6em;
+}
+
+figure.card-post .bottom-footer {
+  padding: 0 25px;
+  background-color: #ffd43b;
+  color: #333;
+  font-size: 0.8em;
+  line-height: 30px;
+  text-align: right;
+  min-height: 30px;
+}
+
+figure.card-post .bottom-footer>div {
+  display: inline-block;
+  margin-left: 10px;
+}
+
+figure.card-post a {
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  position: absolute;
+  z-index: 1;
+  border: none !important;
+}
+
+figure.card-post a:hover {
+  background: none !important;
+}
+
+figure.card-post:hover img,
+figure.card-post.hover img {
+  -webkit-transform: scale(1.15);
+  transform: scale(1.15);
+}

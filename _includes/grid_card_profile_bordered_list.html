@@ -28,9 +28,9 @@
 		{% assign element_phone = element[7] %}
 
 		{% capture element_html %}
-    <!-- BEGIN CARD PROFILE (BORDERD) -->
+    <!-- BEGIN CARD ITEM -->
     {% include card_profile_bordered.html title=element_title subtitle=element_subtitle desc=element_desc image=element_image url=element_url github=element_github email=element_email phone=element_phone %}
-    <!-- END CARD PROFILE (BORDERD) -->
+    <!-- END CARD ITEM -->
     {% endcapture %}
     {% assign grid_list_gourp_array = grid_list_gourp_array | push: element_html %}
 

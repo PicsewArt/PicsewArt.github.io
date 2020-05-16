@@ -10,28 +10,25 @@
 
     {% comment %}
 		<!-- element[0]: title -->
-		<!-- element[1]: caption -->
-		<!-- element[2]: desc -->
-    <!-- element[3]: image -->
-		<!-- element[4]: url -->
-		<!-- element[5]: github -->
-	  <!-- element[6]: email -->
-	  <!-- element[7]: phone -->
+		<!-- element[1]: desc -->
+    <!-- element[2]: image -->
+		<!-- element[3]: url -->
+		<!-- element[4]: day -->
+	  <!-- element[5]: month -->
+		<!-- element[6]: year -->
 		{% endcomment %}
 		{% assign element_title = element[0] %}
-		{% assign element_caption = element[1] %}
-		{% assign element_desc = element[2] %}
-    {% assign element_image = element[3] %}
-		{% assign element_url = element[4] %}
-		{% assign element_github = element[5] %}
-		{% assign element_email = element[6] %}
-		{% assign element_phone = element[7] %}
+		{% assign element_desc = element[1] %}
+    {% assign element_image = element[2] %}
+		{% assign element_url = element[3] %}
+		{% assign element_day = element[4] %}
+		{% assign element_month = element[5] %}
+		{% assign element_year = element[6] %}
 
 		{% capture element_html %}
     <!-- BEGIN CARD ITEM -->
-    {% include card_profile_cycled.html title=element_title caption=element_caption desc=element_desc image=element_image url=element_url github=element_github email=element_email phone=element_phone %}
+    {% include card_post.html title=element_title desc=element_desc image=element_image href=element_url day=element_day month=element_month year=element_year %}
     <!-- END CARD ITEM -->
-
     {% endcapture %}
     {% assign grid_list_gourp_array = grid_list_gourp_array | push: element_html %}
 
