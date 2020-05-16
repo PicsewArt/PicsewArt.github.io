@@ -27,7 +27,7 @@ figure.bordered-profile-card h3:after,
 figure.bordered-profile-card h4:after,
 figure.bordered-profile-card h5:after,
 figure.bordered-profile-card h6:after {
-  content; none !important;
+  content; '' !important;
 }
 
 .bordered-profile-card * {
@@ -67,6 +67,7 @@ figure.bordered-profile-card h6:after {
 
 p.bordered-profile-card-p {
   height: 140px;
+  overflow: hidden;
 }
 
 .bordered-profile-card h3 {
