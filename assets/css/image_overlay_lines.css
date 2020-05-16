@@ -92,7 +92,7 @@ figure.overlay-image-lines h4 {
 
 figure.overlay-image-lines h2 {
   font-weight: 400;
-  max-height: 30px;
+  font-size: 1.5em;
 }
 
 figure.overlay-image-lines h4 {
@@ -101,7 +101,7 @@ figure.overlay-image-lines h4 {
   background-color: #ffffff;
   padding: 5px 10px;
   color: #000000;
-  max-height: 20px;
+  font-size: 1em
 }
 
 figure.overlay-image-lines h2::before,
