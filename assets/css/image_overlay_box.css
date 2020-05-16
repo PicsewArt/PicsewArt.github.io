@@ -1,6 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Lato);
 @import url(https://fonts.googleapis.com/css?family=Oswald);
 @import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css);
+
 .overlay-image-box {
   font-family: 'Lato', Arial, sans-serif;
   position: relative;
@@ -16,16 +17,19 @@
   font-size: 16px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
 }
+
 .overlay-image-box * {
   -webkit-transition: all 0.35s;
   transition: all 0.35s;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
+
 .overlay-image-box img {
   max-width: 100%;
   vertical-align: top;
 }
+
 .overlay-image-box figcaption {
   position: absolute;
   height: 75px;
@@ -36,6 +40,7 @@
   padding: 15px;
   background-color: rgba(0, 0, 0, 0.75);
 }
+
 .overlay-image-box h3 {
   font-family: 'Oswald';
   text-transform: uppercase;
@@ -46,6 +51,7 @@
   max-height: 24px;
   overflow: hidden;
 }
+
 .overlay-image-box h5 {
   font-weight: 400;
   margin: 0;
@@ -56,12 +62,14 @@
   overflow: hidden;
   font-size: 16px;
 }
+
 .overlay-image-box h3::before,
 .overlay-image-box h5::before,
 .overlay-image-box h3::after,
 .overlay-image-box h5::after {
   display: none;
 }
+
 .overlay-image-box p {
   padding: 0;
   margin: 5px 0 0 0;
@@ -71,6 +79,7 @@
   overflow: hidden;
   max-height: 98px;
 }
+
 .overlay-image-box a {
   position: absolute;
   top: 0;
@@ -79,9 +88,11 @@
   right: 0;
   border: none;
 }
+
 .overlay-image-box a:hover {
   background: none;
 }
+
 .overlay-image-box:hover figcaption,
 .overlay-image-box.hover figcaption {
   height: calc(85%);
