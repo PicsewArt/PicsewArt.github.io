@@ -45,7 +45,7 @@
 .overlay-image-half-panel .image {
   position: absolute;
   top: 0;
-  bottom: calc(48px + 20px + 25px);
+  bottom: 125px;
   right: 0;
   left: 0;
   overflow: hidden;
