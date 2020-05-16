@@ -5,5 +5,5 @@
     <h3 class="title2">{{ include.subtitle }}</h3>
     <h3 class="title3">{{ include.desc }}</h3>
   </figcaption>
-  <a class="overlay-image-fashion-a" href="{{ include.href }}"></a>
+  {% if include.href.size > 0 %}<a class="overlay-image-fashion-a" href="{{ include.href }}"></a>{% endif %}
 </figure>

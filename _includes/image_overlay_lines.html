@@ -1,0 +1,13 @@
+<figure class="overlay-image-lines" style="{% if include.maxwidth.size > 0 %}max-width: {{ include.maxwidth }} !important;{% endif %}">
+  <img src="{{ include.image }}" />
+  <div class="title">
+    <div>
+      <h2>{{ include.title }}</h2>
+      <h4>{{ include.subtitle}}</h4>
+    </div>
+  </div>
+  <figcaption>
+    <p>{{ include.desc }}</p>
+  </figcaption>
+  {% if include.href.size > 0 %}<a href="{{ include.href }}"></a>{% endif %}
+</figure>

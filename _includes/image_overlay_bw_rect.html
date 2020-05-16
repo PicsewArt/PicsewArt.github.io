@@ -4,5 +4,5 @@
     <h3 class="title">{{ include.title }}</h3>
     <h3 class="hover">{{ include.hover }}</h3>
   </figcaption>
-  <a href="{{ include.href }}"></a>
+  {% if include.href.size > 0 %}<a href="{{ include.href }}"></a>{% endif %}
 </figure>

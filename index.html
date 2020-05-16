@@ -19,7 +19,6 @@ on_load:
 		{% assign recent_posts = recent_posts | push: post %}
 	{% endfor %}
   {% include grid_image_overlay_bw_rect_posts_list.html sectionid="recent-posts" list=recent_posts cols=3 title='Recent Posts' title_url="/posts/index.html" desc='Writing on various topics including travel, finance and technology.' readmore_title="Read More" readmore='/posts/index.html' %}
-	<!-- {% include grid_posts_list.html sectionid="recent-posts" list=recent_posts cols=3 title='Recent Posts' title_url="/posts/index.html" desc='Writing on various topics including travel, finance and technology.' readmore_title="Read More" readmore='/posts/index.html' %} -->
 
 	<!-- SEPARATOR -->
 
