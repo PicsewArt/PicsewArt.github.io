@@ -312,7 +312,7 @@ class Untitled {
 
 ### Fashion Overlay Image
 
-<blockquote>{% include image_overlay_fashion.html title="The" subtitle="Sadness" desc="is killing me." image="/assets/images/hero/low/HERO_SADNESS_H_0006.jpg" href=site.url %}</blockquote>
+<blockquote>{% include image_overlay_fashion.html title="The" subtitle="Sadness" desc="is killing me." image="/assets/images/hero/low/HERO_PAINTINGS_V_0001.jpg" href=site.url %}</blockquote>
 
 # Music
 
