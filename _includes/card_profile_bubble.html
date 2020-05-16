@@ -1,0 +1,15 @@
+<figure class="card-profile-bubble">
+  <div class="profile-image"><img src="{{ include.image }}" />
+    <div class="icons">
+      {% if include.url.size > 0 %}<a href="{{ include.url }}" target="_blank"><i class="ion-ios-home"></i></a>{% endif %}
+      {% if include.github.size > 0 %}<a href="{{ include.github }}" target="_blank"><i class="ion-ios-github"></i></a>{% endif %}
+      {% if include.email.size > 0 %}<a href="mailto:{{ include.email }}"><i class="ion-ios-email"></i></a>{% endif %}
+      {% if include.phone.size > 0 %}<a href="tel:{{ include.phone }}"><i class="ion-ios-telephone"></i></a>{% endif %}
+    </div>
+  </div>
+  <figcaption>
+    <h3>{{ include.title }}</h3>
+    <h4>{{ include.subtitle }}</h4>
+    <p>{{ include.desc }}</p>
+  </figcaption>
+</figure>

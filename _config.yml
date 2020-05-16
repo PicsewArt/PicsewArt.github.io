@@ -57,7 +57,7 @@ defaults:
       active_title: "Posts"
       has_action: true
       has_info: true
-      has_front_matters_header: true
+      post_has_front_header: true
       show_time: false
       show_hero: true
   - scope:

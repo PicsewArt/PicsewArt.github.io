@@ -7,7 +7,7 @@ hero:
   url: 'HERO_TECH_H_0004.jpg'
 has_about: true
 show_hero: true
-has_front_matters_header: true
+post_has_front_header: true
 ---
 # Titles
 
