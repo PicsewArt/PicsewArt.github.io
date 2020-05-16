@@ -3,7 +3,7 @@
 figure.overlay-image-listing {
   font-family: 'Raleway', Arial, sans-serif;
   position: relative;
-  float: left;
+  /* float: left; */
   overflow: hidden;
   display: block;
   margin: 10px auto !important;
