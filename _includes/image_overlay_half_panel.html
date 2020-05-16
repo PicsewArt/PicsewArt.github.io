@@ -1,11 +1,1 @@
-<figure class="overlay-image-half-panel overlay-image-half-panel-{{ include.color | default: 'blue' }}" style="{% if include.maxwidth.size > 0 %}max-width: {{ include.maxwidth }} !important;{% endif %}">
-  <img src="{{ include.image }}" />
-  <div class="image">
-    <img src="{{ include.image }}" />
-  </div>
-  <figcaption>
-    <h3>{{ include.title }}</h3>
-    <p>{{ include.desc }}</p>
-  </figcaption>
-  <a href=" {{ include.href }}"><span class="read-more">{{ include.readmore | default: "View More" }}&nbsp;<i class="fa fa-arrow-right"></i></span></a>
-</figure>
+{% include image_overlay_panel panelsize="half" color=include.color title=include.title desc=include.desc image=include.image href=include.href readmore=include.readmore %}

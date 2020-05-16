@@ -1,0 +1,137 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway:500,700);
+
+.overlay-image-full-panel {
+  font-family: 'Raleway', Arial, sans-serif;
+  position: relative;
+  overflow: hidden;
+  margin: 10px auto !important;
+  min-width: 230px;
+  max-width: 315px;
+  width: 100%;
+  background: #2980b9;
+  text-align: left;
+  color: #ffffff;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+  font-size: 16px;
+}
+
+.overlay-image-full-panel * {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+.overlay-image-full-panel>img,
+.overlay-image-full-panel .image img {
+  -webkit-transform: scale(1.05);
+  transform: scale(1.05);
+  max-width: 100%;
+}
+
+.overlay-image-full-panel>img {
+  vertical-align: top;
+  position: relative;
+  -webkit-filter: blur(5px);
+  filter: blur(5px);
+  opacity: 0.7;
+}
+
+.overlay-image-full-panel .image {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  overflow: hidden;
+  -webkit-transition-delay: 0.2s;
+  transition-delay: 0.2s;
+}
+
+.overlay-image-full-panel .image img {
+  position: absolute;
+  top: 0;
+}
+
+.overlay-image-full-panel figcaption {
+  opacity: 0;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  right: 20px;
+  border-bottom: 2px solid #ffffff;
+  padding-bottom: 15px;
+  z-index: 1;
+}
+
+.overlay-image-full-panel h3,
+.overlay-image-full-panel p {
+  margin: 0;
+}
+
+.overlay-image-full-panel h3 {
+  font-weight: 700;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+}
+
+.overlay-image-full-panel h3::before,
+.overlay-image-full-panel h3::after {
+  display: none !important;
+}
+
+.overlay-image-full-panel p {
+  font-size: 0.9em;
+  letter-spacing: 1px;
+  font-weight: 400;
+}
+
+.overlay-image-full-panel .read-more {
+  display: block;
+  opacity: 0;
+  -webkit-transform: translateX(-20px);
+  transform: translateX(-20px);
+  line-height: 48px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 0 20px;
+  color: #ffffff;
+  right: 0;
+  bottom: 0;
+  font-weight: 500;
+  position: absolute;
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
+
+.overlay-image-full-panel a {
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  position: absolute;
+  z-index: 1;
+  border: none !important;
+}
+
+.overlay-image-full-panel a {
+  background: none !important;
+}
+
+.overlay-image-full-panel:hover .read-more,
+.overlay-image-full-panel.hover .read-more,
+.overlay-image-full-panel:hover figcaption,
+.overlay-image-full-panel.hover figcaption {
+  opacity: 1;
+  -webkit-transform: translateX(0px);
+  transform: translateX(0px);
+  -webkit-transition-delay: 0.2s;
+  transition-delay: 0.2s;
+}
+
+.overlay-image-full-panel:hover .image,
+.overlay-image-full-panel.hover .image {
+  bottom: 100%;
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}

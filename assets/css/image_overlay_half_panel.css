@@ -1,4 +1,3 @@
-@import url(https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css);
 @import url(https://fonts.googleapis.com/css?family=Raleway:400,500,700);
 
 .overlay-image-half-panel {
@@ -13,26 +12,6 @@
   color: #ffffff;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
   font-size: 16px;
-}
-
-.overlay-image-half-panel-blue {
-  background: #20638f;
-}
-
-.overlay-image-half-panel-green {
-  background: #32C146;
-}
-
-.overlay-image-half-panel-red {
-  background: #FC625D;
-}
-
-.overlay-image-half-panel-orange {
-  background: #ffd43b;
-}
-
-.overlay-image-half-panel-dark {
-  background: #444;
 }
 
 .overlay-image-half-panel * {

@@ -1,0 +1,24 @@
+.overlay-image-half-panel-blue,
+.overlay-image-full-panel-blue {
+  background: #20638f;
+}
+
+.overlay-image-half-panel-green,
+.overlay-image-full-panel-green {
+  background: #32C146;
+}
+
+.overlay-image-half-panel-red,
+.overlay-image-full-panel-red {
+  background: #FC625D;
+}
+
+.overlay-image-half-panel-orange,
+.overlay-image-full-panel-orange {
+  background: #ffd43b;
+}
+
+.overlay-image-half-panel-dark,
+.overlay-image-full-panel-dark {
+  background: #444;
+}
