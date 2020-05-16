@@ -1,0 +1,13 @@
+<figure class="cycled-profile-card yellow">
+  <figcaption>
+    <h2>{{ include.title }}</h2>
+    <!--<h2>Diana <span>Reed</span></h2>-->
+    <p>{{ include.desc }}</p>
+    <div class="icons">
+      {% if include.url.size > 0 %}<a href="{{ include.url }}" target="_blank"><i class="ion-ios-home"></i></a>{% endif %}
+      {% if include.email.size > 0 %}<a href="mailto:{{ include.email }}"><i class="ion-ios-email"></i></a>{% endif %}
+      {% if include.phone.size > 0 %}<a href="tel:{{ include.phone }}"><i class="ion-ios-telephone"></i></a>{% endif %}
+    </div>
+  </figcaption><img src="{{ include.image }}" />
+  <div class="position">{{ include.caption }}</div>
+</figure>

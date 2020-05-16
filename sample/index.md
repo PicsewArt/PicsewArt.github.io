@@ -406,8 +406,8 @@ int main(int argc, char *argv[]) {
 {% include image_frame.html image='/assets/images/hero/high/HERO_PAINTINGS_V_0005.jpg' maxwidth="60%" %}
 {% include window_old_mac_end.html btn="View More" href='/gallery/index.html' %}</blockquote>
 
-# Profile
+# Profile Card
 
-<blockquote>{% include grid_profile_cycle.html title="the <span>Senorita</span>" caption="Designer" desc=site.description image="/assets/images/avatar.jpg" %}</blockquote>
+<blockquote>{% include card_profile_cycled.html title="the <span>Senorita</span>" caption="Designer" desc=site.description image="/assets/images/avatar.jpg" url=site.url emial=site.email %}</blockquote>
 
-<blockquote>{% include grid_profile_net.html title="Senorita" subtitle="Just A Designer" desc=site.description image="/assets/images/avatar.jpg" %}</blockquote>
+<blockquote>{% include card_profile_bordered.html title="Senorita" subtitle="Just A Designer" desc=site.description image="/assets/images/avatar.jpg" url=site.url emial=site.email %}</blockquote>

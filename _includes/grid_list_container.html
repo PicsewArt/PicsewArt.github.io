@@ -1,0 +1,31 @@
+<!-- BEGIN A GRID GROUP SECTION -->
+<section id="grouped-list-section-s{{ include.sectionid }}" style="word-break: break-all;">
+	{% if include.title.size > 0 or include.desc.size > 0 %}
+	<header>
+		{% if include.title.size > 0 %}<h1 itemprop="name" id="{{ include.title | replace: ' ', '_' }}">{% if include.title_url.size > 0 %}<a href="{{ include.title_url }}">{{ include.title }}</a>{% else %}{{ include.title }}{% endif %}</h1>{% endif %}
+		{% if include.desc.size > 0 %}<p itemprop="description">{{ include.desc }}</p>{% endif %}
+	</header>
+	{% endif %}
+
+	{% for group in include.list %}
+	{% assign group_index = forloop.index %}
+	<!-- BEGIN A GRID GROUP -->
+	<div class="grid" id="grid-list-s{{ include.sectionid }}-g{{ group_index }}">
+		{% for element in group %}
+			{% assign element_index = forloop.index %}
+		<!-- BEGIN A GRID CELL -->
+	  <div class="cell" id="grid-list-s{{ include.sectionid }}-g{{ group_index }}-i{{ element_index }}" style="{% include grid_cols_to_style.html cols=include.cols %} padding: 3px;">
+			<!-- BEGIN GRID CELL CONTENT -->
+			{{ element }}
+			<!-- BEGIN GRID CELL CONTENT -->
+	  </div>
+		<!-- END A GRID CELL -->
+		{% endfor %}
+	</div>
+	<!-- BEGIN A GRID GRUOP -->
+	{% endfor %}
+	{% if include.readmore.size > 0 %}
+	<nav class="readmore"><a itemprop="url" href="{{ include.readmore }}">{% if include.readmore_title.size > 0 %}{{ include.readmore_title }}{% else %}View more{% endif %}</a></nav>
+	{% endif %}
+</section>
+<!-- END A GRID GROUP SECTION -->

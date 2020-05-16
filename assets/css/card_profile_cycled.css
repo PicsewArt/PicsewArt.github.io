@@ -1,22 +1,22 @@
 @import url(https://fonts.googleapis.com/css?family=Raleway:400,200,300,800);
 @import url(https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css);
 
-figure[class^="snip"] h1:before,
-figure[class^="snip"] h2:before,
-figure[class^="snip"] h3:before,
-figure[class^="snip"] h4:before,
-figure[class^="snip"] h5:before,
-figure[class^="snip"] h6:before,
-figure[class^="snip"] h1:after,
-figure[class^="snip"] h2:after,
-figure[class^="snip"] h3:after,
-figure[class^="snip"] h4:after,
-figure[class^="snip"] h5:after,
-figure[class^="snip"] h6:after {
-  content; '';
+figure.cycled-profile-card h1:before,
+figure.cycled-profile-card h2:before,
+figure.cycled-profile-card h3:before,
+figure.cycled-profile-card h4:before,
+figure.cycled-profile-card h5:before,
+figure.cycled-profile-card h6:before,
+figure.cycled-profile-card h1:after,
+figure.cycled-profile-card h2:after,
+figure.cycled-profile-card h3:after,
+figure.cycled-profile-card h4:after,
+figure.cycled-profile-card h5:after,
+figure.cycled-profile-card h6:after {
+  content; none;
 }
 
-figure.snip0056 {
+figure.cycled-profile-card {
   font-family: 'Raleway', Arial, sans-serif;
   position: relative;
   overflow: hidden;
@@ -27,11 +27,11 @@ figure.snip0056 {
   background: #ffffff;
   color: #000000;
 }
-figure.snip0056 * {
+figure.cycled-profile-card * {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
-figure.snip0056 > img {
+figure.cycled-profile-card > img {
   width: 50%;
   border-radius: 50%;
   border: 4px solid #ffffff;
@@ -44,51 +44,51 @@ figure.snip0056 > img {
   right: -15%;
   z-index: 1;
 }
-figure.snip0056 figcaption {
+figure.cycled-profile-card figcaption {
   padding: 20px 30px 20px 20px;
   position: absolute;
   left: 0;
   width: 50%;
 }
-figure.snip0056 figcaption h2,
-figure.snip0056 figcaption p {
+figure.cycled-profile-card figcaption h2,
+figure.cycled-profile-card figcaption p {
   margin: 0;
   text-align: left;
   padding: 10px 0;
   width: 100%;
 }
-figure.snip0056 figcaption h2 {
+figure.cycled-profile-card figcaption h2 {
   font-size: 1.3em;
   font-weight: 300;
   text-transform: uppercase;
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 }
-figure.snip0056 figcaption h2 span {
+figure.cycled-profile-card figcaption h2 span {
   font-weight: 800;
 }
-figure.snip0056 figcaption p {
+figure.cycled-profile-card figcaption p {
   font-size: 0.9em;
   opacity: 0.8;
 }
-figure.snip0056 figcaption .icons {
+figure.cycled-profile-card figcaption .icons {
   width: 100%;
   text-align: left;
 }
-figure.snip0056 figcaption .icons i {
+figure.cycled-profile-card figcaption .icons i {
   font-size: 26px;
   padding: 5px;
   top: 50%;
   color: #000000;
 }
-figure.snip0056 figcaption a {
+figure.cycled-profile-card figcaption a {
   opacity: 0.3;
   -webkit-transition: opacity 0.35s;
   transition: opacity 0.35s;
 }
-figure.snip0056 figcaption a:hover {
+figure.cycled-profile-card figcaption a:hover {
   opacity: 0.8;
 }
-figure.snip0056 .position {
+figure.cycled-profile-card .position {
   width: 100%;
   text-align: left;
   padding: 15px 30px;
@@ -99,16 +99,16 @@ figure.snip0056 .position {
   background: #000000;
   clear: both;
 }
-figure.snip0056.blue .position {
+figure.cycled-profile-card.blue .position {
   background: #20638f;
 }
-figure.snip0056.red .position {
+figure.cycled-profile-card.red .position {
   background: #962d22;
 }
-figure.snip0056.yellow .position {
+figure.cycled-profile-card.yellow .position {
   background: #bf6516;
 }
-figure.snip0056:hover > img,
-figure.snip0056.hover > img {
+figure.cycled-profile-card:hover > img,
+figure.cycled-profile-card.hover > img {
   right: -12%;
 }

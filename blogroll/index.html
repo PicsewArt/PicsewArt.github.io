@@ -14,6 +14,27 @@ on_load:
   call: ""
   def: ''
 ---
-{% include grid_profile_cycle.html title="the <span>Senorita</span>" caption="Designer" desc=site.description image="/assets/images/avatar.jpg" %}
+{% assign grid_list_array = ''| split: '/' %}
+{% for link in site.data.blogroll %}
+  {% assign grid_list_gourp_array = ''| split: '/' %}
+  {% assign grid_list_element_array = ''| split: '/' %}
+  <!-- element[0]: title -->
+  <!-- element[1]: subtitle -->
+  <!-- element[2]: desc -->
+  <!-- element[3]: image -->
+  <!-- element[4]: url -->
+  <!-- element[5]: email -->
+  <!-- element[6]: phone -->
+  {% assign grid_list_element_array = grid_list_element_array | push: link.title %}
+  {% assign grid_list_element_array = grid_list_element_array | push: link.subtitle %}
+  {% assign grid_list_element_array = grid_list_element_array | push: link.desc %}
+  {% assign grid_list_element_array = grid_list_element_array | push: link.image %}
+  {% assign grid_list_element_array = grid_list_element_array | push: link.url %}
+  {% assign grid_list_element_array = grid_list_element_array | push: link.emial %}
+  {% assign grid_list_element_array = grid_list_element_array | push: link.phone %}
 
-{% include grid_profile_net.html title="Senorita" subtitle="Just A Designer" desc=site.description image="/assets/images/avatar.jpg" %}
+  {% assign grid_list_gourp_array = grid_list_gourp_array | push: grid_list_element_array %}
+{% endfor %}
+{% assign grid_list_array = grid_list_array | push: grid_list_gourp_array %}
+
+{% include grid_card_profile_bordered_list.html list=grid_list_array desc=" " cols=2 %}
