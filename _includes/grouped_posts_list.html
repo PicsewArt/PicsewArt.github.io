@@ -8,7 +8,7 @@
 	<!-- element[4]: format -->
 	{% assign tempSubArray = tempSubArray | push: post.url %}
 	{% assign tempSubArray = tempSubArray | push: post.title %}
-	{% capture post_desc %}{% include post_preview.html html=post.excerpt limit=site.excerpt_limit %}{% endcapture %}
+	{% capture post_desc %}{% include post_preview.html html=post.content limit=site.excerpt_limit %}{% endcapture %}
 	{% assign tempSubArray = tempSubArray | push: post_desc %}
 	{% capture post_img %}{% include post_hero_url.html image=post.hero.url res='low' %}{% endcapture %}
 	{% assign tempSubArray = tempSubArray | push: post_img %}
