@@ -84,7 +84,8 @@ figure.overlay-image-listing .links li {
   list-style: none;
 }
 
-figure.overlay-image-listing .links li::before {
+figure.overlay-image-listing .links li::before,
+figure.overlay-image-listing .links li::after {
   display: none !important;
 }
 
