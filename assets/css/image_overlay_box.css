@@ -28,6 +28,7 @@
 .overlay-image-box img {
   max-width: 100%;
   vertical-align: top;
+  border-radius: 3px;
 }
 
 .overlay-image-box figcaption {
