@@ -1,0 +1,20 @@
+{% assign converted_list = '' | split: '/' %}
+{% for post in include.list %}
+	{% assign tempSubArray = '' | split: '/' %}
+	<!-- element[0]: title -->
+	<!-- element[1]: desc -->
+	<!-- element[2]: image -->
+	<!-- element[3]: url -->
+	{% assign tempSubArray = tempSubArray | push: post.title %}
+	{% capture post_desc %}{% include post_preview.html html=post.excerpt limit=120 %}{% endcapture %}
+	{% assign tempSubArray = tempSubArray | push: post_desc %}
+	{% capture post_img %}{% include post_hero_url.html image=post.hero.url res='low' %}{% endcapture %}
+	{% assign tempSubArray = tempSubArray | push: post_img %}
+	{% assign tempSubArray = tempSubArray | push: post.url %}
+
+	{% assign converted_list = converted_list | push: tempSubArray %}
+{% endfor %}
+
+{% assign outer_list = '' | split: '/' %}
+{% assign outer_list = outer_list | push: converted_list %}
+{% include grid_image_overlay_drop_list.html sectionid=include.sectionid list=outer_list title=include.title title_url=include.title_url desc=include.desc readmore=include.readmore readmore_title=include.readmore_title cols=include.cols %}
