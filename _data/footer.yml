@@ -1,0 +1,13 @@
+quicklinks:
+  - url: "/posts/index.html"
+    title: "Blog Postings"
+  - url: "/creative/index.html"
+    title: "Creative"
+  - url: "/gallery/index.html"
+    title: "Gallery"
+  - url: "/music/index.html"
+    title: "Music"
+  - url: "/blogroll/index.html"
+    title: "Blogroll"
+  # - url: "/sample/index.html"
+  #   title: "Sample Doc"

@@ -14,17 +14,16 @@
           {% for cat in site.categories limit: 4 %}
           <li class="footer-li"><a class="footer-a" href="{{ site.url }}/posts/categories/index.html#{{ cat[0] | replace: ' ', '_' }}">{{ cat[0] | replace: ' ', '_' }}</a></li>
           {% endfor %}
+          <li class="footer-li"><a class="footer-a" href="{{ site.url }}/sample/index.html">Sample Doc</a></li>
         </ul>
       </div>
 
       <div class="footer-panel-list">
         <h6 class="footer-h6">Quick Links</h6>
         <ul class="footer-links-list">
-          <li class="footer-li"><a class="footer-a" href="{{ site.url }}/posts/index.html">Blog Postings</a></li>
-          <li class="footer-li"><a class="footer-a" href="{{ site.url }}/creative/index.html">Creative</a></li>
-          <li class="footer-li"><a class="footer-a" href="{{ site.url }}/gallery/index.html">Gallery</a></li>
-          <li class="footer-li"><a class="footer-a" href="{{ site.url }}/music/index.html">Music</a></li>
-          <li class="footer-li"><a class="footer-a" href="{{ site.url }}/sample/index.html">Sample Doc</a></li>
+          {% for link in site.data.footer.quicklinks %}
+          <li class="footer-li"><a class="footer-a" href="{{ link.url }}">{{ link.title }}</a></li>
+          {% endfor %}
         </ul>
       </div>
     </div>
