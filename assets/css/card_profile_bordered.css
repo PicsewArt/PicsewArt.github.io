@@ -4,7 +4,7 @@
 .bordered-profile-card {
   font-family: 'Open Sans', Arial, sans-serif;
   position: relative;
-  margin: 10px;
+  margin: 10px auto !important;
   min-width: 230px;
   max-width: 315px;
   width: 100%;
@@ -63,6 +63,10 @@ figure.bordered-profile-card h6:after {
 .bordered-profile-card h4,
 .bordered-profile-card p {
   margin: 0 0 5px;
+}
+
+p.bordered-profile-card-p {
+  height: 140px;
 }
 
 .bordered-profile-card h3 {

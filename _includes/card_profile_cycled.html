@@ -2,7 +2,7 @@
   <figcaption>
     <h2>{{ include.title }}</h2>
     <!--<h2>Diana <span>Reed</span></h2>-->
-    <p>{{ include.desc }}</p>
+    <p class="cycled-profile-card-p">{{ include.desc }}</p>
     <div class="icons">
       {% if include.url.size > 0 %}<a href="{{ include.url }}" target="_blank"><i class="ion-ios-home"></i></a>{% endif %}
       {% if include.email.size > 0 %}<a href="mailto:{{ include.email }}"><i class="ion-ios-email"></i></a>{% endif %}
