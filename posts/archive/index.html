@@ -61,5 +61,5 @@ active_title: "Posts"
 {% for group in the_groups %}
   {% assign the_group_grid = '' | split: '/' %}
   {% assign the_group_grid = the_group_grid | push: group.last %}
-  {% include grid_list.html title=group.first desc=" " list=the_group_grid cols=3 %}
+  {% include grid_image_overlay_fade_detailed_posts_list.html title=group.first desc=" " list=the_group_grid cols=3 %}
 {% endfor %}

@@ -19,7 +19,7 @@ cols: 3
 	{% for post in site.posts limit: page.cols %}
 		{% assign recent_posts = recent_posts | push: post %}
 	{% endfor %}
-  {% include grid_card_post_posts_list.html color="dark" sectionid="recent-posts" list=recent_posts cols=page.cols title='Recent Posts' title_url="/posts/index.html" desc='Writing on various topics including travel, finance and technology.' readmore_title="Read More" readmore='/posts/index.html' %}
+  {% include grid_image_overlay_fade_detailed_posts_list.html sectionid="recent-posts" list=recent_posts cols=page.cols title='Recent Posts' title_url="/posts/index.html" desc='Writing on various topics including travel, finance and technology.' readmore_title="Read More" readmore='/posts/index.html' %}
 
 	<!-- SEPARATOR -->
 
