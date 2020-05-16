@@ -1,4 +1,4 @@
-<figure class="overlay-image-faded-framed">
+<figure class="overlay-image-fade-framed" style="{% if include.maxwidth.size > 0 %}max-width: {{ include.maxwidth }} !important;{% endif %}">
   <img src="{{ include.image }}"/>
   <div class="inside">
     <figcaption>

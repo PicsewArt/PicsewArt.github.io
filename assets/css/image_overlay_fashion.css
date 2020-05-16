@@ -55,7 +55,7 @@
 
 .overlay-image-fashion h3::before,
 .overlay-image-fashion h3::after {
-  display: none;
+  display: none !important;
 }
 
 .overlay-image-fashion .title1 {

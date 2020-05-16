@@ -328,7 +328,7 @@ class Untitled {
 
 <blockquote>{% include image_overlay_simple_scroll.html title="The Sadness" subtitle="Mood" scrolltitle="#Sadness #Emotion" image="/assets/images/hero/low/HERO_SADNESS_H_0008.jpg" href=site.url %}</blockquote>
 
-### Panel Overlay Image
+## Panel Overlay Image
 
 ### Half Panel Overlay Image
 
@@ -337,6 +337,10 @@ class Untitled {
 ### Full Panel Overlay Image
 
 <blockquote>{% include image_overlay_full_panel.html title=site.alias desc=site.description image="/assets/images/hero/low/HERO_SADNESS_H_0001.jpg" href=site.url readmore="Read More" %}</blockquote>
+
+## Fade Framed Overlay Image
+
+<blockquote>{% include image_overlay_fade_framed.html title=site.alias desc=site.description image="/assets/images/hero/low/HERO_SADNESS_H_0009.jpg" href=site.url %}</blockquote>
 
 # Music
 
