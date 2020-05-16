@@ -1,4 +1,4 @@
-<figure class="overlay-image-simple-scroll">
+<figure class="overlay-image-simple-scroll" style="{% if include.maxwidth.size > 0 %}max-width: {{ include.maxwidth }} !important;{% endif %}">
   <img src="{{ include.image }}" />
   <figcaption>
     <div>

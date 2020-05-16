@@ -1,0 +1,177 @@
+@import url(https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css);
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,500,700);
+
+.overlay-image-half-panel {
+  font-family: 'Raleway', Arial, sans-serif;
+  position: relative;
+  overflow: hidden;
+  margin: 10px auto !important;
+  min-width: 230px;
+  max-width: 315px;
+  width: 100%;
+  text-align: left;
+  color: #ffffff;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+  font-size: 16px;
+}
+
+.overlay-image-half-panel-blue {
+  background: #20638f;
+}
+
+.overlay-image-half-panel-green {
+  background: #32C146;
+}
+
+.overlay-image-half-panel-red {
+  background: #FC625D;
+}
+
+.overlay-image-half-panel-orange {
+  background: #ffd43b;
+}
+
+.overlay-image-half-panel-dark {
+  background: #444;
+}
+
+.overlay-image-half-panel * {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+.overlay-image-half-panel>img,
+.overlay-image-half-panel .image img {
+  -webkit-transform: scale(1.05);
+  transform: scale(1.05);
+  max-width: 100%;
+}
+
+.overlay-image-half-panel>img {
+  vertical-align: top;
+  position: relative;
+  -webkit-filter: blur(5px);
+  filter: blur(5px);
+  opacity: 0.6;
+}
+
+.overlay-image-half-panel figcaption,
+.overlay-image-half-panel .image {
+  -webkit-transition-delay: 0.2s;
+  transition-delay: 0.2s;
+}
+
+.overlay-image-half-panel .image {
+  position: absolute;
+  top: 0;
+  bottom: 25%;
+  right: 0;
+  left: 0;
+  overflow: hidden;
+  box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.1), 0px 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+.overlay-image-half-panel .image img {
+  position: absolute;
+  top: 0;
+}
+
+.overlay-image-half-panel figcaption {
+  position: absolute;
+  top: 75%;
+  bottom: 46px;
+  left: 20px;
+  right: 20px;
+  border-bottom: 2px solid #ffffff;
+  padding-top: 20px;
+  z-index: 1;
+}
+
+.overlay-image-half-panel h3,
+.overlay-image-half-panel p {
+  margin: 0;
+}
+
+.overlay-image-half-panel h3 {
+  font-weight: 700;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+}
+
+figure.overlay-image-simple-scroll h3::before,
+figure.overlay-image-simple-scroll h3::after {
+  display: none !important;
+}
+
+.overlay-image-half-panel p {
+  font-size: 0.9em;
+  letter-spacing: 1px;
+  font-weight: 400;
+  opacity: 0;
+}
+
+.overlay-image-half-panel .read-more {
+  display: block;
+  opacity: 0;
+  -webkit-transform: translateX(-20px);
+  transform: translateX(-20px);
+  line-height: 48px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 0 20px;
+  color: #ffffff;
+  right: 0;
+  bottom: 0;
+  font-weight: 500;
+  position: absolute;
+}
+
+.overlay-image-half-panel a {
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  position: absolute;
+  z-index: 1;
+  border: none !important;
+}
+
+.overlay-image-half-panel a {
+  background: none !important;
+}
+
+.overlay-image-half-panel:hover .read-more,
+.overlay-image-half-panel.hover .read-more,
+.overlay-image-half-panel:hover figcaption,
+.overlay-image-half-panel.hover figcaption {
+  opacity: 1;
+  -webkit-transform: translateX(0px);
+  transform: translateX(0px);
+}
+
+.overlay-image-half-panel:hover figcaption,
+.overlay-image-half-panel.hover figcaption,
+.overlay-image-half-panel:hover .image,
+.overlay-image-half-panel.hover .image {
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
+
+.overlay-image-half-panel:hover figcaption,
+.overlay-image-half-panel.hover figcaption {
+  top: 50%;
+}
+
+.overlay-image-half-panel:hover .image,
+.overlay-image-half-panel.hover .image {
+  bottom: 50%;
+}
+
+.overlay-image-half-panel:hover p,
+.overlay-image-half-panel.hover p {
+  opacity: 1;
+  -webkit-transition-delay: 0.2s;
+  transition-delay: 0.2s;
+}

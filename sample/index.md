@@ -328,6 +328,10 @@ class Untitled {
 
 <blockquote>{% include image_overlay_simple_scroll.html title="The Sadness" subtitle="Mood" scrolltitle="#Sadness #Emotion" image="/assets/images/hero/low/HERO_SADNESS_H_0008.jpg" href=site.url %}</blockquote>
 
+## Half Panel Overlay Image
+
+<blockquote>{% include image_overlay_half_panel.html title=site.alias desc=site.desc image="/assets/images/hero/low/HERO_SADNESS_H_0009.jpg" href=site.url %}</blockquote>
+
 # Music
 
 <blockquote>{% include music_player.html playerid='sample' title='Rivellon' artist='Divinity: Original Sin 2' music='/assets/music/Rivellon.mp3' cover='https://cdn-prod.scalefast.com/public/assets/user/6562614/image/fc0fea76b4a2f75dc282d0dba05a31a1.jpg' %}</blockquote>
