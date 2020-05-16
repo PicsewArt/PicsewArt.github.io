@@ -57,7 +57,8 @@ figure.overlay-image-listing .links {
   padding: 0;
 }
 
-figure.overlay-image-listing h3 {
+figure.overlay-image-listing h3,
+figure.overlay-image-listing h3 a {
   line-height: 1.3em;
   font-weight: 900;
   font-size: 1.3em;
