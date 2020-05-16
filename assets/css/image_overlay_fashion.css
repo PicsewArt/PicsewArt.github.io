@@ -3,7 +3,8 @@
 .overlay-image-fashion {
   font-family: 'Poppins:400,700', Arial, sans-serif;
   position: relative;
-  display: inline-block;
+  /* display: inline-block; */
+  display: block;
   overflow: hidden;
   margin: 10px auto !important;
   min-width: 250px;

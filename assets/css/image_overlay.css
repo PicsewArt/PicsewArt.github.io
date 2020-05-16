@@ -13,6 +13,7 @@ div.overlay_container {
   /* padding: 1em 0; */
   /* float: left;
   max-width: 70%; */
+  max-width: 310px;
   overflow: hidden;
 }
 

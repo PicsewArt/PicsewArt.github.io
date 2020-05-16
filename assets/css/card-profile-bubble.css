@@ -5,7 +5,8 @@
 card-profile-bubble {
   box-shadow: none !important;
   color: #141414;
-  display: inline-block;
+  /* display: inline-block; */
+  display: block;
   font-family: 'Open Sans', Arial, sans-serif;
   font-size: 14px;
   line-height: 1.4em;
