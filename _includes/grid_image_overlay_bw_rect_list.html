@@ -20,9 +20,9 @@
 		{% assign element_url = element[3] %}
 
 		{% capture element_html %}
-    <!-- BEGIN CARD PROFILE (BORDERD) -->
+    <!-- BEGIN GRID ITEM -->
     {% include image_overlay_bw_rect.html title=element_title hover=element_hover image=element_image href=element_url maxwidth="100%" %}
-    <!-- END CARD PROFILE (BORDERD) -->
+    <!-- END GRID ITEM -->
     {% endcapture %}
     {% assign grid_list_gourp_array = grid_list_gourp_array | push: element_html %}
 

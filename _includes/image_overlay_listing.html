@@ -1,0 +1,14 @@
+<figure class="overlay-image-listing" style="{% if include.maxwidth.size > 0 %}max-width: {{ include.maxwidth }} !important;{% endif %}">
+  <img src="{{ include.image }}" />
+  <figcaption>
+    <h3>{% if include.href.size > 0 %}<a href="{{ include.href }}">{{ include.title }}</a>{% else %}{{ include.title }}{% endif %}</h3>
+    {% if include.items.size > 0 %}
+    <ul class="links">
+      {% assign items_array = include.items | split: ',' %}
+      {% for item in items_array %}
+      <li>{{ item }}</li>
+      {% endfor %}
+    </ul>
+    {% endif %}
+  </figcaption>
+</figure>

@@ -279,8 +279,6 @@ class Untitled {
 
 > ![Normal Image]({{ site.url }}/assets/images/avatar.jpg)
 
-> ![Normal Image]({{ site.url }}/assets/images/icons/DarksidersII/DarksidersII-light-1600x1600.png)
-
 ## Grid Images
 
 {% assign grid_images = '/assets/images/hero/low/HERO_TECH_H_0014.jpg,/assets/images/hero/low/HERO_TECH_H_0013.jpg,/assets/images/hero/low/HERO_TECH_H_0012.jpg, /assets/images/hero/low/HERO_TECH_H_0011.jpg, /assets/images/hero/low/HERO_TECH_H_0010.jpg, /assets/images/hero/low/HERO_TECH_H_0009.jpg' %}
@@ -296,7 +294,7 @@ class Untitled {
 
 <blockquote>{% include unsplash.html id='GNNZ2KuYz2o' %}</blockquote>
 
-## Overlay Image
+## Overlay Images
 
 ### Overlay Normal Image
 
@@ -317,6 +315,14 @@ class Untitled {
 ### Black-White Rectangle Overlay Image
 
 <blockquote>{% include image_overlay_bw_rect.html title="The<br/>Sadness" hover="Read More" image="/assets/images/hero/low/HERO_PAINTINGS_H_0001.jpg" href=site.url %}</blockquote>
+
+## Lined Overlay Image
+
+<blockquote>{% include image_overlay_lines.html title="The Sadness" subtitle="is killing me" desc="Still be suffering is stupid." image="/assets/images/hero/low/HERO_SADNESS_H_0006.jpg" href=site.url %}</blockquote>
+
+## Listing Overlay Image
+
+<blockquote>{% include image_overlay_listing.html title="The Sadness is killing me" image="/assets/images/hero/low/HERO_SADNESS_H_0007.jpg" href=site.url items="Vintage,Classic,Luxury,Retro" %}</blockquote>
 
 # Music
 

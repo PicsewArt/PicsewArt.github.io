@@ -9,8 +9,8 @@
 		{% assign element_index = forloop.index %}
 
     {% comment %}
-		<!-- element[0]: title.first-word -->
-		<!-- element[1]: title.other-word -->
+		<!-- element[0]: title -->
+		<!-- element[1]: subtitle -->
 		<!-- element[2]: desc -->
     <!-- element[3]: image -->
 		<!-- element[4]: url -->
@@ -23,7 +23,7 @@
 
 		{% capture element_html %}
     <!-- BEGIN GRID ITEM -->
-    {% include image_overlay_fashion.html title=element_title subtitle=element_subtitle desc=element_desc image=element_image href=element_url maxwidth="100%" %}
+    {% include image_overlay_lines.html title=element_title subtitle=element_subtitle desc=element_desc image=element_image href=element_url maxwidth="100%" %}
     <!-- END GRID ITEM -->
     {% endcapture %}
     {% assign grid_list_gourp_array = grid_list_gourp_array | push: element_html %}
