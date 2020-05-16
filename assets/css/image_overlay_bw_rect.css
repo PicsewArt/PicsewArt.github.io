@@ -4,7 +4,7 @@
   font-family: 'Open Sans', sans-serif;
   position: relative;
   overflow: hidden;
-  margin: 10px auto;
+  margin: 10px auto !important;
   min-width: 230px;
   max-width: 315px;
   width: 100%;
