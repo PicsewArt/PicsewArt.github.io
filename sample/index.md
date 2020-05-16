@@ -306,9 +306,13 @@ class Untitled {
 
 <blockquote>{% include image_overlay.html unsplash='ydU5iN4mWek' title='Unsplash' desc='Woods in Wassergspreng, Austria.' fadein='bottom' maxwidth="100%" %}</blockquote>
 
-### Modern Overlay Image
+### Boxed Overlay Image
 
-<blockquote>{% include image_overlay_box.html title="Sadness" subtitle="is killing me" desc="Still be suffering is stupid." image="/assets/images/hero/high/HERO_SADNESS_H_0005.jpg"%}</blockquote>
+<blockquote>{% include image_overlay_box.html title="Sadness" subtitle="is killing me" desc="Still be suffering is stupid." image="/assets/images/hero/high/HERO_SADNESS_H_0005.jpg" %}</blockquote>
+
+### Fashion Overlay Image
+
+<blockquote>{% include image_overlay_fashion.html title="The" subtitle="Sadness" desc="is killing me." image="/assets/images/hero/high/HERO_SADNESS_H_0006.jpg" href=site.url %}</blockquote>
 
 # Music
 

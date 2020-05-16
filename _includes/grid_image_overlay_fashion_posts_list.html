@@ -1,8 +1,3 @@
----
-layout: default
-title: "Creative"
-description: "Build, Test, Discover and Create the New World."
----
 {% assign converted_list = '' | split: '/' %}
 {% for post in include.list %}
 	{% assign tempSubArray = '' | split: '/' %}
@@ -11,12 +6,15 @@ description: "Build, Test, Discover and Create the New World."
 	<!-- element[2]: desc -->
 	<!-- element[3]: image -->
 	<!-- element[4]: url -->
-	{% assign tempSubArray = tempSubArray | push: 'The' %}
-	{% assign tempSubArray = tempSubArray | push: create.title %}
-	{% assign tempSubArray = tempSubArray | push: 'Creative is Timeless' %}
-	{% assign the_creative_img = site.url | append: site.path.images | append: '/creative/' | append: create.cover.url %}
-	{% assign tempSubArray = tempSubArray | push: the_creative_img %}
-	{% assign tempSubArray = tempSubArray | push: create.url %}
+	{% assign post_title_words = post.title | split: " " %}
+	{% assign post_subtitle = title_words | shift | join: " " %}
+	{% assign tempSubArray = tempSubArray | push: post_title_words.first %}
+	{% assign tempSubArray = tempSubArray | push: post_subtitle %}
+	{% assign post_desc = post.category | append: " #" | append: post.tags.firsts %}
+	{% assign tempSubArray = tempSubArray | push: post_desc %}
+	{% capture post_img %}{% include post_hero_url.html image=post.hero.url res='low' %}{% endcapture %}
+	{% assign tempSubArray = tempSubArray | push: post_img %}
+	{% assign tempSubArray = tempSubArray | push: post.url %}
 
 	{% assign converted_list = converted_list | push: tempSubArray %}
 {% endfor %}
