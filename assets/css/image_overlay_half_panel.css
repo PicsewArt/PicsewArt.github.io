@@ -80,7 +80,7 @@
 
 .overlay-image-half-panel figcaption {
   position: absolute;
-  top: clac(100% - 120px);
+  top: calc(100% - 120px);
   bottom: 46px;
   left: 20px;
   right: 20px;
