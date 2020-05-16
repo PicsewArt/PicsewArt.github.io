@@ -1,0 +1,96 @@
+@import url(https://fonts.googleapis.com/css?family=Josefin+Sans:400,700);
+
+figure.overlay-image-drop {
+  font-family: 'Josefin Sans', Arial, sans-serif;
+  position: relative;
+  overflow: hidden;
+  margin: 10px auto;
+  min-width: 230px;
+  max-width: 315px;
+  width: 100%;
+  background: #000000;
+  text-align: left;
+  color: #ffffff;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+  font-size: 16px;
+}
+
+figure.overlay-image-drop * {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all 0.4s ease-out;
+  transition: all 0.4s ease-out;
+}
+
+figure.overlay-image-drop img {
+  max-width: 100%;
+  vertical-align: top;
+  position: relative;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.9);
+}
+
+figure.overlay-image-drop img:first-of-type {
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+  opacity: 0.25;
+}
+
+figure.overlay-image-drop img:nth-of-type(2) {
+  position: absolute;
+  bottom: 25px;
+  left: 0;
+  z-index: 1;
+}
+
+figure.overlay-image-drop figcaption {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 15px 20px;
+}
+
+figure.overlay-image-drop figcaption h3,
+figure.overlay-image-drop figcaption p {
+  margin: 0 0 5px;
+}
+
+figure.overlay-image-drop figcaption h3 {
+  font-weight: 400;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
+
+figure.overlay-image-drop figcaption h3 span {
+  font-weight: 700;
+}
+
+figure.overlay-image-drop h3::before,
+figure.overlay-image-drop h3::after {
+  display: none !important;
+}
+
+figure.overlay-image-drop figcaption p {
+  opacity: 0.8;
+}
+
+figure.overlay-image-drop a {
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  position: absolute;
+  z-index: 2;
+  border: none;
+}
+
+figure.overlay-image-drop a:hover {
+  background: none !important;
+}
+
+figure.overlay-image-drop:hover img,
+figure.overlay-image-drop.hover img {
+  -webkit-transform: translateY(25px);
+  transform: translateY(25px);
+}
