@@ -37,7 +37,7 @@ figure.overlay-image-drop img:first-of-type {
 
 figure.overlay-image-drop img:nth-of-type(2) {
   position: absolute;
-  bottom: 25px;
+  bottom: calc(100% - 25px);
   left: 0;
   z-index: 1;
 }
@@ -91,6 +91,6 @@ figure.overlay-image-drop a:hover {
 
 figure.overlay-image-drop:hover img,
 figure.overlay-image-drop.hover img {
-  -webkit-transform: translateY(25px);
-  transform: translateY(25px);
+  -webkit-transform: translateY(calc(100% - 25px));
+  transform: translateY(calc(100% - 25px));
 }

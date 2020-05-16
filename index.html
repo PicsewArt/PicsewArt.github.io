@@ -34,8 +34,7 @@ cols: 3
 
 		{% assign this_item = this_item | push: this_media_url %}
 		{% assign this_item = this_item | push: '' %}
-		{% assign this_media_desc = album.title | append: " | " | append: album.media.first.url %}
-		{% assign this_item = this_item | push: this_media_desc %}
+		{% assign this_item = this_item | push: '' %}
 		{% assign this_item = this_item | push: this_thumbnail_url %}
 		{% assign this_item = this_item | push: album.media.first.format %}
 		{% assign this_item = this_item | push: album.media.first.type %}
