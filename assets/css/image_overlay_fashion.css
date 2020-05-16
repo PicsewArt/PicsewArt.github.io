@@ -84,7 +84,7 @@
 }
 
 .overlay-image-fashion-a:hover {
-  background: none;
+  background: none !important;
 }
 
 .overlay-image-fashion:hover img,
