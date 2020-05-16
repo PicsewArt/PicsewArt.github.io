@@ -166,7 +166,7 @@
 
 .overlay-image-half-panel:hover .image,
 .overlay-image-half-panel.hover .image {
-  bottom: 25%;
+  bottom: 50%;
 }
 
 .overlay-image-half-panel:hover p,
