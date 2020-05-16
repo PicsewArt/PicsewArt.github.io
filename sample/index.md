@@ -300,7 +300,7 @@ class Untitled {
 
 ### Overlay Normal Image
 
-<blockquote>{% include image_overlay.html image='/assets/images/hero/high/HERO_PAINTINGS_V_0000.jpg' title=site.name desc=site.description link=site.url %}</blockquote>
+<blockquote>{% include image_overlay.html image='/assets/images/low/high/HERO_PAINTINGS_V_0000.jpg' title=site.name desc=site.description link=site.url %}</blockquote>
 
 ### Overlay Unsplash Image
 
@@ -308,11 +308,11 @@ class Untitled {
 
 ### Boxed Overlay Image
 
-<blockquote>{% include image_overlay_box.html title="Sadness" subtitle="is killing me" desc="Still be suffering is stupid." image="/assets/images/hero/high/HERO_SADNESS_H_0005.jpg" %}</blockquote>
+<blockquote>{% include image_overlay_box.html title="Sadness" subtitle="is killing me" desc="Still be suffering is stupid." image="/assets/images/hero/low/HERO_SADNESS_H_0005.jpg" %}</blockquote>
 
 ### Fashion Overlay Image
 
-<blockquote>{% include image_overlay_fashion.html title="The" subtitle="Sadness" desc="is killing me." image="/assets/images/hero/high/HERO_SADNESS_H_0006.jpg" href=site.url %}</blockquote>
+<blockquote>{% include image_overlay_fashion.html title="The" subtitle="Sadness" desc="is killing me." image="/assets/images/hero/low/HERO_SADNESS_H_0006.jpg" href=site.url %}</blockquote>
 
 # Music
 
