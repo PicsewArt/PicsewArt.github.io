@@ -45,10 +45,11 @@ figure.overlay-image-drop img:nth-of-type(2) {
 figure.overlay-image-drop figcaption {
   /* background-color: rgba(0, 0, 0, 0.5); */
   position: absolute;
-  bottom: calc(100% - 10px);
+  bottom: 0;
   left: 0;
   width: 100%;
   padding: 15px 20px;
+  top: 10px;
 }
 
 figure.overlay-image-drop figcaption.blue {
