@@ -326,7 +326,7 @@ class Untitled {
 
 ## Simple Scroll Overlay Image
 
-<blockquote>{% include image_overlay_simple_scroll.html title="The Sadness" subtitle="Mood" scrolltitle="" image="/assets/images/hero/low/HERO_SADNESS_H_0007.jpg" href=site.url items="Vintage,Classic,Luxury,Retro" %}</blockquote>
+<blockquote>{% include image_overlay_simple_scroll.html title="The Sadness" subtitle="Mood" scrolltitle="#Sadness #Emotion" image="/assets/images/hero/low/HERO_SADNESS_H_0008.jpg" href=site.url %}</blockquote>
 
 # Music
 
