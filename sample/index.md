@@ -330,7 +330,7 @@ class Untitled {
 
 ## Half Panel Overlay Image
 
-<blockquote>{% include image_overlay_half_panel.html title=site.alias desc=site.description image="/assets/images/hero/low/HERO_SADNESS_H_0009.jpg" href=site.url %}</blockquote>
+<blockquote>{% include image_overlay_half_panel.html title=site.alias desc=site.description image="/assets/images/hero/low/HERO_SADNESS_V_0001.jpg" href=site.url %}</blockquote>
 
 # Music
 
