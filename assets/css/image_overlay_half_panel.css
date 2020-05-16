@@ -161,12 +161,12 @@
 
 .overlay-image-half-panel:hover figcaption,
 .overlay-image-half-panel.hover figcaption {
-  top: 50%;
+  top: 25%;
 }
 
 .overlay-image-half-panel:hover .image,
 .overlay-image-half-panel.hover .image {
-  bottom: 50%;
+  bottom: 25%;
 }
 
 .overlay-image-half-panel:hover p,
