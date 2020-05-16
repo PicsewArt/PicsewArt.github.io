@@ -1,3 +1,0 @@
-- grid_profile_net/cycle H1
-- image_overlay_box H1 Quote
-- Blogroll
