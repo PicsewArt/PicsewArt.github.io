@@ -27,7 +27,7 @@ figure.bordered-profile-card h3:after,
 figure.bordered-profile-card h4:after,
 figure.bordered-profile-card h5:after,
 figure.bordered-profile-card h6:after {
-  content; '' !important;
+  display: none !important;
 }
 
 .bordered-profile-card * {
@@ -63,6 +63,11 @@ figure.bordered-profile-card h6:after {
 .bordered-profile-card h4,
 .bordered-profile-card p {
   margin: 0 0 5px;
+}
+
+.bordered-profile-card h3,
+.bordered-profile-card h4 {
+  max-height: 60px;
 }
 
 p.bordered-profile-card-p {
