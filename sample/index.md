@@ -466,7 +466,7 @@ int main(int argc, char *argv[]) {
 
 ## Drop Icons Profile Card
 
-<blockquote>{% include card_profile_bubble.html title=site.name image="/assets/images/avatar.jpg" url=site.url github=site.github_url email=site.email %}</blockquote>
+<blockquote>{% include card_profile_drop_icons.html title=site.name image="/assets/images/avatar.jpg" url=site.url github=site.github_url email=site.email %}</blockquote>
 
 ## Quotes Profile Card
 
