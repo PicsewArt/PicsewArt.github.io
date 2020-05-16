@@ -23,13 +23,15 @@ on_load:
   <!-- element[2]: desc -->
   <!-- element[3]: image -->
   <!-- element[4]: url -->
-  <!-- element[5]: email -->
-  <!-- element[6]: phone -->
+  <!-- element[5]: github -->
+  <!-- element[6]: email -->
+  <!-- element[7]: phone -->
   {% assign grid_list_element_array = grid_list_element_array | push: link.title %}
   {% assign grid_list_element_array = grid_list_element_array | push: link.subtitle %}
   {% assign grid_list_element_array = grid_list_element_array | push: link.desc %}
   {% assign grid_list_element_array = grid_list_element_array | push: link.image %}
   {% assign grid_list_element_array = grid_list_element_array | push: link.url %}
+  {% assign grid_list_element_array = grid_list_element_array | push: link.github %}
   {% assign grid_list_element_array = grid_list_element_array | push: link.emial %}
   {% assign grid_list_element_array = grid_list_element_array | push: link.phone %}
 
