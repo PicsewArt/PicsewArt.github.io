@@ -13,17 +13,18 @@ afterload_css: []
 on_load:
   call: ""
   def: ''
+cols: 3
 ---
 	{% assign recent_posts = '' | split: '/' %}
-	{% for post in site.posts limit: 3 %}
+	{% for post in site.posts limit: page.cols %}
 		{% assign recent_posts = recent_posts | push: post %}
 	{% endfor %}
-  {% include grid_image_overlay_listing_posts_list.html sectionid="recent-posts" list=recent_posts cols=3 title='Recent Posts' title_url="/posts/index.html" desc='Writing on various topics including travel, finance and technology.' readmore_title="Read More" readmore='/posts/index.html' %}
+  {% include grid_image_overlay_listing_posts_list.html sectionid="recent-posts" list=recent_posts cols=page.cols title='Recent Posts' title_url="/posts/index.html" desc='Writing on various topics including travel, finance and technology.' readmore_title="Read More" readmore='/posts/index.html' %}
 
 	<!-- SEPARATOR -->
 
 	{% assign recent_media = '' | split: '/' %}
-	{% for album in site.gallery limit: 3 %}
+	{% for album in site.gallery limit: page.cols %}
 		{% assign this_item = '' | split: '/' %}
 
 		{% comment %}{% assign media_url = site.url | append: '/gallery/detail/?album=' | append: page.unique | append: '&idx=' | append: forloop.index | append: "&type=" | append: item.type %}{% endcomment %}
@@ -43,5 +44,5 @@ on_load:
 	{% endfor %}
 	{% assign recent_media_container = '' | split: '/' %}
 	{% assign recent_media_container = recent_media_container | push: recent_media %}
-	{% include grid_list.html sectionid="recent-meida" list=recent_media_container cols=3 title='Recent Media' title_url="/gallery/index.html" desc='Passionate about photography and enjoy taking pictures all around the world.' readmore_title="View More" readmore='/gallery/index.html' gallery=true %}
+	{% include grid_list.html sectionid="recent-meida" list=recent_media_container cols=page.cols title='Recent Media' title_url="/gallery/index.html" desc='Passionate about photography and enjoy taking pictures all around the world.' readmore_title="View More" readmore='/gallery/index.html' gallery=true %}
 	{% include gallery_lightbox.html %}
