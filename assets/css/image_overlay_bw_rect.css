@@ -47,6 +47,7 @@
   font-weight: 400;
   margin: 0;
   letter-spacing: 2px;
+  height: 44px;
 }
 
 .overlay-image-bw-rect h3::before,
@@ -85,12 +86,12 @@
 
 .overlay-image-bw-rect:hover .title,
 .overlay-image-bw-rect.hover .title {
-  -webkit-transform: translateY(-150%);
-  transform: translateY(-150%);
+  -webkit-transform: translateY(-100%);
+  transform: translateY(-100%);
 }
 
 .overlay-image-bw-rect:hover .hover,
 .overlay-image-bw-rect.hover .hover {
-  -webkit-transform: translateY(-150%);
-  transform: translateY(-150%);
+  -webkit-transform: translateY(-100%);
+  transform: translateY(-100%);
 }
