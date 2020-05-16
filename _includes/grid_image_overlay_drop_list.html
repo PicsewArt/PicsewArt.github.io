@@ -13,15 +13,17 @@
 		<!-- element[1]: desc -->
     <!-- element[2]: image -->
 		<!-- element[3]: url -->
+		<!-- element[4]: color -->
 		{% endcomment %}
 		{% assign element_title = element[0] %}
 		{% assign element_desc = element[1] %}
     {% assign element_image = element[2] %}
 		{% assign element_url = element[3] %}
+		{% assign element_color = element[4] %}
 
 		{% capture element_html %}
     <!-- BEGIN GRID ITEM -->
-    {% include image_overlay_drop.html title=element_title desc=element_desc image=element_image href=element_url maxwidth="100%" %}
+    {% include image_overlay_drop.html title=element_title desc=element_desc color=element_color image=element_image href=element_url maxwidth="100%" %}
     <!-- END GRID ITEM -->
     {% endcapture %}
     {% assign grid_list_gourp_array = grid_list_gourp_array | push: element_html %}

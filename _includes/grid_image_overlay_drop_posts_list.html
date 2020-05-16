@@ -5,12 +5,14 @@
 	<!-- element[1]: desc -->
 	<!-- element[2]: image -->
 	<!-- element[3]: url -->
+	<!-- element[4]: color -->
 	{% assign tempSubArray = tempSubArray | push: post.title %}
 	{% capture post_desc %}{% include post_preview.html html=post.excerpt limit=site.excerpt_limit %}{% endcapture %}
 	{% assign tempSubArray = tempSubArray | push: post_desc %}
 	{% capture post_img %}{% include post_hero_url.html image=post.hero.url res='low' %}{% endcapture %}
 	{% assign tempSubArray = tempSubArray | push: post_img %}
 	{% assign tempSubArray = tempSubArray | push: post.url %}
+	{% assign tempSubArray = tempSubArray | push: 'fuchsia' %}
 
 	{% assign converted_list = converted_list | push: tempSubArray %}
 {% endfor %}

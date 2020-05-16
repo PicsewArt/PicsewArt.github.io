@@ -51,26 +51,29 @@ figure.overlay-image-drop figcaption {
   padding: 15px 20px;
 }
 
-figure.overlay-image-drop figcaption.dark {
+figure.overlay-image-drop figcaption.blue {
   background-color: RGBA(32,99,143,0.5);
 }
 
-figure.overlay-image-drop figcaption.dark {
+figure.overlay-image-drop figcaption.green {
   background-color: RGBA(50,193,70,0.5);
 }
 
-figure.overlay-image-drop figcaption.dark {
+figure.overlay-image-drop figcaption.red {
   background-color: RGBA(252,98,93,0.5);
 }
 
-figure.overlay-image-drop figcaption.dark {
+figure.overlay-image-drop figcaption.orange {
   background-color: RGBA(255,212,59,0.5);
 }
 
 figure.overlay-image-drop figcaption.dark {
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: RGBA(0, 0, 0, 0.5);
 }
 
+figure.overlay-image-drop figcaption.fuchsia {
+  background-color: RGBA(252,40,252,0.5);
+}
 
 figure.overlay-image-drop figcaption h3,
 figure.overlay-image-drop figcaption p {

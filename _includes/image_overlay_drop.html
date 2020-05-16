@@ -1,7 +1,7 @@
 <figure class="overlay-image-drop" style="{% if include.maxwidth.size > 0 %}max-width: {{ include.maxwidth }} !important;{% endif %}">
   <img src="{{ include.image }}"/>
   <img src="{{ include.image }}"/>
-  <figcaption>
+  <figcaption class="{{ include.color | default: 'dark' }}"">
     <h3>{{ include.title }}</h3>
     <!-- <h3>Indigo<span> Violet</span></h3> -->
     <p>{{ include.desc }}</p>
