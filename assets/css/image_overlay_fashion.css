@@ -58,16 +58,19 @@
 
 .overlay-image-fashion .title1 {
   font-weight: 700;
+  max-height: 44px;
 }
 
 .overlay-image-fashion .title2 {
   color: #a58e7c;
   font-weight: 300;
+  max-height: 44px;
 }
 
 .overlay-image-fashion .title3 {
   font-weight: 700;
   font-size: 25px;
+  max-height: 25;
 }
 
 .overlay-image-fashion-a {
