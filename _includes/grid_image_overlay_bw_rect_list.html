@@ -1,0 +1,33 @@
+{% assign grid_list_array = ''| split: '/' %}
+
+{% for group in include.list %}
+	{% assign group_index = forloop.index %}
+
+	{% assign grid_list_gourp_array = ''| split: '/' %}
+
+	{% for element in group %}
+		{% assign element_index = forloop.index %}
+
+    {% comment %}
+		<!-- element[0]: title -->
+		<!-- element[1]: hover -->
+    <!-- element[3]: image -->
+		<!-- element[4]: url -->
+		{% endcomment %}
+		{% assign element_title = element[0] %}
+		{% assign element_hover = element[1] %}
+    {% assign element_image = element[2] %}
+		{% assign element_url = element[3] %}
+
+		{% capture element_html %}
+    <!-- BEGIN CARD PROFILE (BORDERD) -->
+    {% include image_overlay_bw_rect.html title=element_title hover=element_hover image=element_image href=element_url maxwidth="100%" %}
+    <!-- END CARD PROFILE (BORDERD) -->
+    {% endcapture %}
+    {% assign grid_list_gourp_array = grid_list_gourp_array | push: element_html %}
+
+  {% endfor %}
+  {% assign grid_list_array = grid_list_array | push: grid_list_gourp_array %}
+
+{% endfor %}
+{% include grid_list_container.html sectionid=include.sectionid cols=include.cols title=include.title title_url=include.title_url desc=include.desc readmore_title=include.readmore_title readmore=include.readmore list=grid_list_array %}

@@ -1,0 +1,8 @@
+<figure class="overlay-image-bw-rect" style="{% if include.maxwidth.size > 0 %}max-width: {{ include.maxwidth }} !important;{% endif %}">
+  <img src="{{ include.image }}" />
+  <figcaption>
+    <h3 class="title">{{ include.title }}</h3>
+    <h3 class="hover">{{ include.hover }}</h3>
+  </figcaption>
+  <a href="{{ include.href }}"></a>
+</figure>
