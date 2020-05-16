@@ -1,0 +1,9 @@
+<figure class="drop-icons-profile-card">
+  <img src="{{ include.image }}"/>
+  <figcaption>
+    <h3>{{ include.title }}</h3>
+    <div class="icons">
+      {% include linked_icons.html url=include.url github=include.github email=include.email phone=include.phone %}
+    </div>
+  </figcaption>
+</figure>
