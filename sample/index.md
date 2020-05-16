@@ -340,7 +340,7 @@ class Untitled {
 
 ## Fade Framed Overlay Image
 
-<blockquote>{% include image_overlay_fade_framed.html title=site.alias desc=site.description image="/assets/images/hero/low/HERO_SADNESS_H_0009.jpg" href=site.url %}</blockquote>
+<blockquote>{% include image_overlay_fade_framed.html title=site.alias desc=site.description image="/assets/images/hero/low/HERO_SADNESS_V_0002.jpg" href=site.url %}</blockquote>
 
 # Music
 
