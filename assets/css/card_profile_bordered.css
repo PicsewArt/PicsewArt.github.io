@@ -1,5 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=Open+sans);
 @import url(https://fonts.googleapis.com/css?family=Playfair+Display);
+
 .bordered-profile-card {
   font-family: 'Open Sans', Arial, sans-serif;
   position: relative;
@@ -46,7 +47,7 @@ figure.bordered-profile-card h6:after {
 .bordered-profile-card .profile-image img {
   width: 100%;
   vertical-align: top;
-  background-color: rgba(255,255,255,0.1);
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 .bordered-profile-card figcaption {
@@ -64,32 +65,26 @@ figure.bordered-profile-card h6:after {
   margin: 0 0 5px;
 }
 
-.bordered-profile-card h3,
-.bordered-profile-card h4 {
-  max-height: 60px;
-}
-
-p.bordered-profile-card-p {
-  height: 140px;
-  overflow: hidden;
-}
-
 .bordered-profile-card h3 {
   font-weight: 600;
   font-size: 1.3em;
   font-family: 'Playfair Display', Arial, sans-serif;
+  height: 24px;
 }
 
 .bordered-profile-card h4 {
   color: #8c8c8c;
   font-weight: 400;
   letter-spacing: 2px;
+  height: 40px;
 }
 
 .bordered-profile-card p {
   font-size: 0.9em;
   letter-spacing: 1px;
   opacity: 0.9;
+  height: 140px;
+  overflow: hidden;
 }
 
 .bordered-profile-card .icons {
