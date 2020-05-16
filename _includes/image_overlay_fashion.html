@@ -1,4 +1,4 @@
-<figure class="overlay-image-fashion">
+<figure class="overlay-image-fashion" style="{% if include.maxwidth.size > 0 %}max-width: {{ include.maxwidth }} !important;{% endif %}">
   <img src="{{ include.image }}"/>
   <figcaption>
     <h3 class="title1">{{ include.title }}</h3>

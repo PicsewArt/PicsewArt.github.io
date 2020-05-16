@@ -23,7 +23,7 @@
 
 		{% capture element_html %}
     <!-- BEGIN CARD PROFILE (BORDERD) -->
-    {% include image_overlay_fashion.html title=element_title subtitle=element_subtitle desc=element_desc image=element_image href=element_url %}
+    {% include image_overlay_fashion.html title=element_title subtitle=element_subtitle desc=element_desc image=element_image href=element_url maxwidth="100%" %}
     <!-- END CARD PROFILE (BORDERD) -->
     {% endcapture %}
     {% assign grid_list_gourp_array = grid_list_gourp_array | push: element_html %}
