@@ -100,8 +100,8 @@
   text-transform: uppercase;
 }
 
-figure.overlay-image-simple-scroll h3::before,
-figure.overlay-image-simple-scroll h3::after {
+.overlay-image-half-panel h3::before,
+.overlay-image-half-panel h3::after {
   display: none !important;
 }
 
