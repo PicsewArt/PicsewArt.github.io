@@ -4,9 +4,9 @@
     <!--<h2>Diana <span>Reed</span></h2>-->
     <p class="cycled-profile-card-p">{{ include.desc }}</p>
     <div class="icons">
-      {% if include.url.size > 0 %}<a href="{{ include.url }}" target="_blank"><i class="ion-ios-home"></i></a>{% endif %}
-      {% if include.email.size > 0 %}<a href="mailto:{{ include.email }}"><i class="ion-ios-email"></i></a>{% endif %}
-      {% if include.phone.size > 0 %}<a href="tel:{{ include.phone }}"><i class="ion-ios-telephone"></i></a>{% endif %}
+      {% if include.url.size > 0 %}<a href="{{ include.url }}" target="_blank"><i class="fa fa-home"></i></a>{% endif %}
+      {% if include.email.size > 0 %}<a href="mailto:{{ include.email }}"><i class="fa fa-email"></i></a>{% endif %}
+      {% if include.phone.size > 0 %}<a href="tel:{{ include.phone }}"><i class="fa fa-telephone"></i></a>{% endif %}
     </div>
   </figcaption><img src="{{ include.image }}" />
   <div class="position">{{ include.caption }}</div>
