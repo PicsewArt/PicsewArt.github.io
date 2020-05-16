@@ -77,6 +77,10 @@
   bottom: 0;
   left: 0;
   right: 0;
+  border: none;
+}
+.overlay-image-box a:hover {
+  background: none;
 }
 .overlay-image-box:hover figcaption,
 .overlay-image-box.hover figcaption {
