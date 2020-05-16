@@ -43,6 +43,8 @@
   font-weight: 400;
   line-height: 24px;
   margin: 3px 0;
+  max-height: 24px;
+  overflow: hidden;
 }
 .overlay-image-box h5 {
   font-weight: 400;
@@ -50,6 +52,8 @@
   text-transform: uppercase;
   color: #bbb;
   letter-spacing: 1px;
+  max-height: 25px;
+  overflow: hidden;
 }
 .overlay-image-box h3::before,
 .overlay-image-box h5::before,
@@ -57,15 +61,14 @@
 .overlay-image-box h5::after {
   display: none;
 }
-.overlay-image-box blockquote {
+.overlay-image-box p {
   padding: 0;
   margin: 0;
   font-style: italic;
   font-size: 1em;
-  background: none;
-}
-.overlay-image-box blockquote::before {
-  display: none;
+  word-wrap: break-all;
+  overflow: hidden;
+  max-height: 98px;
 }
 .overlay-image-box a {
   position: absolute;
