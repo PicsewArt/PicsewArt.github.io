@@ -1,4 +1,4 @@
-<figure class="cycled-profile-card yellow">
+<figure class="cycled-profile-card yellow" style="{% if include.maxwidth.size > 0 %}max-width: {{ include.maxwidth }} !important;{% endif %}">
   <figcaption>
     <h2>{{ include.title }}</h2>
     <!--<h2>Diana <span>Reed</span></h2>-->

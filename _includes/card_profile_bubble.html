@@ -1,4 +1,4 @@
-<figure class="card-profile-bubble">
+<figure class="card-profile-bubble" style="{% if include.maxwidth.size > 0 %}max-width: {{ include.maxwidth }} !important;{% endif %}">
   <div class="profile-image"><img src="{{ include.image }}" />
     <div class="icons">
       {% if include.url.size > 0 %}<a href="{{ include.url }}" target="_blank"><i class="fa fa-home"></i></a>{% endif %}

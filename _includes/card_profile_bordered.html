@@ -1,4 +1,4 @@
-<figure class="bordered-profile-card">
+<figure class="bordered-profile-card" style="{% if include.maxwidth.size > 0 %}max-width: {{ include.maxwidth }} !important;{% endif %}">
   <div class="profile-image"><img src="{{ include.image }}" /></div>
   <figcaption>
     <h3>{{ include.title }}</h3>

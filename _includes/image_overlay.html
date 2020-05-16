@@ -6,7 +6,7 @@
 {% capture overlay_unsplash %}{{ include.unsplash }}{% endcapture %}
 {% capture overlay_maxwidth %}{{ include.maxwidth }}{% endcapture %}
 <div class="overlay_container">
-  <div class="overlay_contents" style="max-width: {% if overlay_maxwidth.size > 0 %}{{ overlay_maxwidth }}{% else %}310px{% endif %} !important;">
+  <div class="overlay_contents" style="{% if include.maxwidth.size > 0 %}max-width: {{ include.maxwidth }} !important;{% endif %}">
     {% if overlay_link.size > 0 %}<a class="overlay_a" href="{{ overlay_link }}" target="_blank">
     {% elsif overlay_unsplash.size > 0 %}<a class="overlay_a" href="https://unsplash.com/photos/{{ overlay_unsplash }}" target="_blank">{% endif %}
       <div class="content-overlay"></div>
