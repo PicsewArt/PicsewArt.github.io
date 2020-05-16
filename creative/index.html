@@ -2,25 +2,51 @@
 layout: default
 title: "Creative"
 description: "Build, Test, Discover and Create the New World."
+style: 'fashion'
+#style: 'box'
+cols: 2
 ---
 {% assign converted_list = '' | split: '/' %}
 {% for create in site.creative %}
 	{% assign tempSubArray = '' | split: '/' %}
-	<!-- element[0]: title.first-word -->
-	<!-- element[1]: title.other-word -->
-	<!-- element[2]: desc -->
-	<!-- element[3]: image -->
-	<!-- element[4]: url -->
-	{% assign tempSubArray = tempSubArray | push: 'The' %}
-	{% assign tempSubArray = tempSubArray | push: create.title %}
-	{% assign tempSubArray = tempSubArray | push: 'is timeless.' %}
 	{% assign the_creative_img = site.url | append: site.path.images | append: '/creative/' | append: create.cover.url %}
-	{% assign tempSubArray = tempSubArray | push: the_creative_img %}
-	{% assign tempSubArray = tempSubArray | push: create.url %}
+
+	{% if page.style == 'fashion' %}
+
+		<!-- element[0]: title.first-word -->
+		<!-- element[1]: title.other-word -->
+		<!-- element[2]: desc -->
+		<!-- element[3]: image -->
+		<!-- element[4]: url -->
+		{% assign tempSubArray = tempSubArray | push: 'The' %}
+		{% assign tempSubArray = tempSubArray | push: create.title %}
+		{% assign tempSubArray = tempSubArray | push: 'is timeless.' %}
+		{% assign tempSubArray = tempSubArray | push: the_creative_img %}
+		{% assign tempSubArray = tempSubArray | push: create.url %}
+
+	{% elsif page.style == 'box' %}
+
+		<!-- element[0]: title.first-word -->
+		<!-- element[1]: title.other-word -->
+		<!-- element[2]: desc -->
+		<!-- element[3]: image -->
+		<!-- element[4]: url -->
+		{% assign tempSubArray = tempSubArray | push: 'The' %}
+		{% assign tempSubArray = tempSubArray | push: create.title %}
+		{% assign tempSubArray = tempSubArray | push: 'is timeless.' %}
+		{% assign tempSubArray = tempSubArray | push: the_creative_img %}
+		{% assign tempSubArray = tempSubArray | push: create.url %}
+
+	{% endif %}
 
 	{% assign converted_list = converted_list | push: tempSubArray %}
 {% endfor %}
 
 {% assign outer_list = '' | split: '/' %}
 {% assign outer_list = outer_list | push: converted_list %}
-{% include grid_image_overlay_fashion_list.html list=outer_list desc=" " cols=3 %}
+
+{% if page.style == 'fashion' %}
+	{% include grid_image_overlay_fashion_list.html list=outer_list desc=" " cols=page.cols %}
+{% elsif page.style == 'box' %}
+	{% include grid_image_overlay_box_list.html list=outer_list desc=" " cols=page.cols %}
+{% endif %}
