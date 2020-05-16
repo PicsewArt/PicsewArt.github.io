@@ -110,6 +110,7 @@
   letter-spacing: 1px;
   font-weight: 400;
   opacity: 0;
+  overflow: hidden;
 }
 
 .overlay-image-half-panel .read-more {
