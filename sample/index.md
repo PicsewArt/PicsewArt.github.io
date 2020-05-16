@@ -408,6 +408,6 @@ int main(int argc, char *argv[]) {
 
 # Profile Card
 
-<blockquote>{% include card_profile_cycled.html title="the <span>Senorita</span>" caption="Designer" desc=site.description image="/assets/images/avatar.jpg" url=site.url emial=site.email %}</blockquote>
+<blockquote>{% include card_profile_cycled.html title="the <span>Senorita</span>" caption=site.alias desc=site.description image="/assets/images/avatar.jpg" url=site.url email=site.email %}</blockquote>
 
-<blockquote>{% include card_profile_bordered.html title="Senorita" subtitle="Just A Designer" desc=site.description image="/assets/images/avatar.jpg" url=site.url emial=site.email %}</blockquote>
+<blockquote>{% include card_profile_bordered.html title="Senorita" subtitle=site.alias desc=site.description image="/assets/images/avatar.jpg" url=site.url email=site.email %}</blockquote>
