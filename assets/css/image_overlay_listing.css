@@ -62,6 +62,7 @@ figure.overlay-image-listing h3 a {
   line-height: 24px;
   font-weight: 900;
   font-size: 24px;
+  color: #eee;
 }
 
 figure.overlay-image-listing h3::before,
