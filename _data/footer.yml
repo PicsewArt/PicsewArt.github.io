@@ -9,5 +9,5 @@ quicklinks:
     title: "Music"
   - url: "/blogroll/index.html"
     title: "Blogroll"
-  # - url: "/sample/index.html"
-  #   title: "Sample Doc"
+  - url: "/sample/index.html"
+    title: "Sample"
