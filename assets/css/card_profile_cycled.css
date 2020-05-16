@@ -13,7 +13,7 @@ figure.cycled-profile-card h3:after,
 figure.cycled-profile-card h4:after,
 figure.cycled-profile-card h5:after,
 figure.cycled-profile-card h6:after {
-  content; none;
+  content; none !important;
 }
 
 figure.cycled-profile-card {
