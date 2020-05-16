@@ -45,7 +45,7 @@ figure.overlay-image-drop img:nth-of-type(2) {
 figure.overlay-image-drop figcaption {
   /* background-color: rgba(0, 0, 0, 0.5); */
   position: absolute;
-  bottom: 0;
+  bottom: calc(100% - 10px);
   left: 0;
   width: 100%;
   padding: 15px 20px;
@@ -97,6 +97,7 @@ figure.overlay-image-drop h3::after {
 
 figure.overlay-image-drop figcaption p {
   opacity: 0.8;
+  line-height: 16px;
 }
 
 figure.overlay-image-drop a {
@@ -118,3 +119,5 @@ figure.overlay-image-drop.hover img {
   -webkit-transform: translateY(calc(100% - 10px));
   transform: translateY(calc(100% - 10px));
 }
+
+figure.overlay-image-drop:hover
