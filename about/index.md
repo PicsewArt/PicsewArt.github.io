@@ -1,6 +1,7 @@
 ---
 layout: about
 title: "About"
+active_title: "About"
 #date: "2020-05-06"
 hero:
   format: 'jpeg'
