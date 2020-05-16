@@ -54,6 +54,7 @@
   letter-spacing: 1px;
   max-height: 25px;
   overflow: hidden;
+  font-size: 16px;
 }
 .overlay-image-box h3::before,
 .overlay-image-box h5::before,
@@ -63,7 +64,7 @@
 }
 .overlay-image-box p {
   padding: 0;
-  margin: 0;
+  margin: 5px 0 0 0;
   font-style: italic;
   font-size: 1em;
   word-wrap: break-all;
