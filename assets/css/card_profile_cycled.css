@@ -27,11 +27,13 @@ figure.cycled-profile-card {
   background: #ffffff;
   color: #000000;
 }
+
 figure.cycled-profile-card * {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
-figure.cycled-profile-card > img {
+
+figure.cycled-profile-card>img {
   width: 50%;
   border-radius: 50%;
   border: 4px solid #ffffff;
@@ -44,12 +46,14 @@ figure.cycled-profile-card > img {
   right: -15%;
   z-index: 1;
 }
+
 figure.cycled-profile-card figcaption {
   padding: 20px 30px 20px 20px;
   position: absolute;
   left: 0;
   width: 50%;
 }
+
 figure.cycled-profile-card figcaption h2,
 figure.cycled-profile-card figcaption p {
   margin: 0;
@@ -57,37 +61,50 @@ figure.cycled-profile-card figcaption p {
   padding: 10px 0;
   width: 100%;
 }
+
 figure.cycled-profile-card figcaption h2 {
   font-size: 1.3em;
   font-weight: 300;
   text-transform: uppercase;
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 }
+
 figure.cycled-profile-card figcaption h2 span {
   font-weight: 800;
 }
+
 figure.cycled-profile-card figcaption p {
   font-size: 0.9em;
   opacity: 0.8;
 }
+
+p.cycled-profile-card-p {
+  max-height: 120px;
+  overflow: hidden;
+}
+
 figure.cycled-profile-card figcaption .icons {
   width: 100%;
   text-align: left;
 }
+
 figure.cycled-profile-card figcaption .icons i {
   font-size: 26px;
   padding: 5px;
   top: 50%;
   color: #000000;
 }
+
 figure.cycled-profile-card figcaption a {
   opacity: 0.3;
   -webkit-transition: opacity 0.35s;
   transition: opacity 0.35s;
 }
+
 figure.cycled-profile-card figcaption a:hover {
   opacity: 0.8;
 }
+
 figure.cycled-profile-card .position {
   width: 100%;
   text-align: left;
@@ -99,16 +116,20 @@ figure.cycled-profile-card .position {
   background: #000000;
   clear: both;
 }
+
 figure.cycled-profile-card.blue .position {
   background: #20638f;
 }
+
 figure.cycled-profile-card.red .position {
   background: #962d22;
 }
+
 figure.cycled-profile-card.yellow .position {
   background: #bf6516;
 }
-figure.cycled-profile-card:hover > img,
-figure.cycled-profile-card.hover > img {
+
+figure.cycled-profile-card:hover>img,
+figure.cycled-profile-card.hover>img {
   right: -12%;
 }
