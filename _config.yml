@@ -12,10 +12,10 @@ range:
   start: 2020
   end: 2020
 ui:
-  theme: "light"
-  theme_reversed: "dark"
-  # theme: "dark"
-  # theme_reversed: "light"
+  # theme: "light"
+  # theme_reversed: "dark"
+  theme: "dark"
+  theme_reversed: "light"
   # show_search: false
   show_search: true
   posts_list_style: 'group'
