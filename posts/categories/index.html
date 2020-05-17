@@ -7,6 +7,7 @@ active_title: "Posts"
   <tr><th>Category</th><th>Contains</th></tr>
   {% for cat in site.categories %}<tr><td><a href="#{{ cat[0] | replace: ' ', '_' }}">{{ cat[0] | replace: '__', '\_\_' }}</a></td><td>{{ cat[1].size }} post{% if cat[1].size > 1 %}s{% endif %}</td></tr>{% endfor %}
 </table> -->
+{% assign all_cats = '' | split: '/' %}
 {% for cat in site.categories %}
   {% assign cat_name = cat[0] %}
   {% assign cat_no_space = cat_name | replace: ' ', '_' %}
@@ -26,8 +27,12 @@ active_title: "Posts"
   {% assign this_cat = this_cat | push: 'Click to view' %}
   {% assign this_cat = this_cat | push: cat_img %}
   {% assign this_cat = this_cat | push: cat_href %}
+
+  {% assign all_cats = all_cats | push: this_cat %}
 {% endfor %}
-{% include grid_image_overlay_fade_detailed_list.html sectionid="counter" list=outer_list title="All Categories" title_url='' desc='' cols=3 %}
+{% assign all_cats_container = '' | split: '/' %}
+{% assign all_cats_container = all_cats_container | push: all_cats %}
+{% include grid_image_overlay_fade_detailed_list.html sectionid="counter" list=all_cats_container title="All Categories" title_url='' desc='' cols=3 %}
 <br />
 <hr>
 <br />
