@@ -27,6 +27,7 @@ figure.overlay-image-simple-scroll img {
   vertical-align: top;
   -webkit-transition: opacity 0.35s;
   transition: opacity 0.35s;
+  display: block;
 }
 
 figure.overlay-image-simple-scroll figcaption {

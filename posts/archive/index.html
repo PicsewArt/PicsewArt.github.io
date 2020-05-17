@@ -42,5 +42,5 @@ active_title: "Posts"
 <br />
 
 {% for group in the_groups %}
-  {% include grid_image_overlay_fade_detailed_posts_list.html title=group.first desc=" " list=group.last cols=3 %}
+  {% include grid_image_overlay_simple_scroll_posts_list.html title=group.first desc=" " list=group.last cols=3 %}
 {% endfor %}
