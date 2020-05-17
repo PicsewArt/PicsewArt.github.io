@@ -15,6 +15,11 @@
   font-size: 1rem;
 }
 
+.hack header h1:after {
+  content: none;
+  display: none;
+}
+
 .hack h1+* {
   margin-top: 0
 }
@@ -54,6 +59,31 @@
 
 .hack h6:before {
   content: "###### "
+}
+
+.hack header h2:before {
+  content: none;
+  display: none;
+}
+
+.hack header h3:before {
+  content: none;
+  display: none;
+}
+
+.hack header h4:before {
+  content: none;
+  display: none;
+}
+
+.hack header h5:before {
+  content: none;
+  display: none;
+}
+
+.hack header h6:before {
+  content: none;
+  display: none;
 }
 
 .hack pre code {
