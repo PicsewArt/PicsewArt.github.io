@@ -1,0 +1,12 @@
+<figure class="overlay-image-camera" style="{% if include.maxwidth.size > 0 %}max-width: {{ include.maxwidth }} !important;{% endif %}">
+  <img src="{{ inlcude.image }}" />
+  <figcaption>
+    <div class="heading">
+      <h3>{{ include.title }}</h3>
+    </div>
+    <div class="caption">
+      <p>{{ include.subtitle }}</p>
+    </div>
+  </figcaption>
+  {% if include.href.size > 0 %}<a href="{{ include.href }}"></a>{% endif %}
+</figure>

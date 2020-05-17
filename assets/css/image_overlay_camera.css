@@ -1,0 +1,142 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,500,800);
+figure.overlay-image-camera {
+  font-family: 'Raleway', Arial, sans-serif;
+  position: relative;
+  overflow: hidden;
+  margin: 10px auto !important;
+  min-width: 220px;
+  max-width: 310px;
+  max-height: 220px;
+  width: 100%;
+  background: #000000;
+  color: #ffffff;
+  text-align: center;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+}
+
+figure.overlay-image-camera * {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all 0.45s ease-in-out;
+  transition: all 0.45s ease-in-out;
+}
+
+figure.overlay-image-camera img {
+  max-width: 100%;
+  position: relative;
+  opacity: 1;
+}
+
+figure.overlay-image-camera figcaption {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  right: 20px;
+  bottom: 20px;
+  border: 1px solid white;
+  border-width: 0 1px;
+}
+
+figure.overlay-image-camera .heading {
+  overflow: hidden;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+figure.overlay-image-camera .caption {
+  overflow: hidden;
+  -webkit-transform: translateY(50%);
+  transform: translateY(50%);
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+}
+
+figure.overlay-image-camera h3,
+figure.overlay-image-camera p {
+  display: table;
+  margin: 0 auto;
+  padding: 0 10px;
+  position: relative;
+  text-align: center;
+  width: auto;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+figure.overlay-image-camera h3 span,
+figure.overlay-image-camera p span {
+  font-weight: 800;
+}
+
+figure.overlay-image-camera h3:before,
+figure.overlay-image-camera p:before,
+figure.overlay-image-camera h3:after,
+figure.overlay-image-camera p:after {
+  position: absolute;
+  display: block;
+  width: 1000%;
+  height: 1px;
+  content: '';
+  background: white;
+}
+
+figure.overlay-image-camera h3:before,
+figure.overlay-image-camera p:before {
+  left: -1000%;
+}
+
+figure.overlay-image-camera h3:after,
+figure.overlay-image-camera p:after {
+  right: -1000%;
+}
+
+figure.overlay-image-camera h3:before,
+figure.overlay-image-camera h3:after {
+  top: 50%;
+}
+
+figure.overlay-image-camera p {
+  font-size: 0.8em;
+  font-weight: 500;
+  line-height: 1em;
+}
+
+figure.overlay-image-camera p:before,
+figure.overlay-image-camera p:after {
+  bottom: 50%;
+}
+
+figure.overlay-image-camera a {
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  position: absolute;
+  z-index: 1;
+}
+
+figure.overlay-image-camera a:hover {
+  background: none !important;
+}
+
+figure.overlay-image-camera:hover img,
+figure.overlay-image-camera.hover img {
+  opacity: 0.35;
+  -webkit-transform: scale(1.15);
+  transform: scale(1.15);
+}
+
+/*
+html {
+  height: 100%;
+}
+body {
+  background-color: #212121;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: wrap;
+  margin: 0;
+  height: 100%;
+} */
