@@ -25,7 +25,7 @@
 
 		{% capture element_html %}
     <!-- BEGIN GRID ITEM -->
-    {% include image_overlay_camera.html title=element_title subtitle=element_subtitle image=element_image type=element_type format=element_format href=element_url gallery=include.gallery maxwidth="100%" %}
+    {% include image_overlay_camera.html title=element_title subtitle=element_subtitle image=element_image media_type=element_type media_format=element_format href=element_url gallery=include.gallery maxwidth="100%" %}
     <!-- END GRID ITEM -->
     {% endcapture %}
     {% assign grid_list_gourp_array = grid_list_gourp_array | push: element_html %}
