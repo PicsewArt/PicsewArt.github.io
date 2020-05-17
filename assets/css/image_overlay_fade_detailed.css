@@ -50,6 +50,7 @@ figure.overlay-image-fade-detailed h2 {
   display: inline-block;
   font-weight: 400;
   text-transform: uppercase;
+  line-height: 24px;
 }
 
 figure.overlay-image-fade-detailed h2::before,
@@ -63,6 +64,7 @@ figure.overlay-image-fade-detailed p {
   bottom: 0;
   font-size: 0.8em;
   font-weight: 500;
+  line-height: 1em;
 }
 
 figure.overlay-image-fade-detailed a {
