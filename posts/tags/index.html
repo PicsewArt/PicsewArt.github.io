@@ -15,7 +15,7 @@ active_title: "Posts"
   {% assign tag_posts = tag[1] %}
   {% assign tag_count = tag_posts.size %}
   {% capture tag_desc %}Contains {{ tag_count }} post{% if tag_count.size > 1 %}s{% endif %}{% endcapture %}
-  {% assign tag_img = site.url | append: site.path.hero.low | append: tag_posts.first.hero.url %}
+  {% assign tag_img = site.url | append: site.path.hero.low | append: '/' | append: tag_posts.first.hero.url %}
   <!-- element[0]: title -->
   <!-- element[1]: subtitle -->
   <!-- element[2]: subtitle scroll -->
