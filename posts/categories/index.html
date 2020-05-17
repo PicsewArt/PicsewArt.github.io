@@ -27,7 +27,7 @@ active_title: "Posts"
   {% assign this_cat = this_cat | push: 'Click to view' %}
   {% assign this_cat = this_cat | push: cat_img %}
   {% assign this_cat = this_cat | push: cat_href %}
-
+  <!-- {{ this_cat | inspect }} -->
   {% assign all_cats = all_cats | push: this_cat %}
 {% endfor %}
 {% assign all_cats_container = '' | split: '/' %}
