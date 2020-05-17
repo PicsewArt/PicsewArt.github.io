@@ -93,7 +93,7 @@ h6 {
 fieldset {
   border: none;
   padding: 0;
-  margin: 0
+  margin: 0;
 }
 
 pre {
@@ -102,7 +102,8 @@ pre {
   margin: 0;
   background-color: #fff;
   border: 1px solid #ccc;
-  overflow: auto
+  overflow: auto;
+  word-break: break-all;
 }
 
 code[class*=language-],
@@ -110,7 +111,7 @@ pre[class*=language-],
 pre code {
   font-weight: 100;
   text-shadow: none;
-  margin: 1.75rem 0
+  margin: 1.75rem 0;
 }
 
 a {
