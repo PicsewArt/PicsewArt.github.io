@@ -179,16 +179,18 @@
   border-color: #ccc
 }
 
-.light a {
-  color: var(--light-link-color);
-  background-color: var(--light-link-bg-color);
-  border-color: var(--light-link-border-color);
+.dark a {
+  color: var(--dark-link-color);
+  background-color: var(--dark-link-bg-color);
+  border-color: var(--dark-link-border-color);
+  border-bottom: 1px var(--dark-link-border-color) dashed;
 }
 
 .dark a:hover,
 .dark a:focus {
-  color: var(--navlink-color);
-  border-color: var(--navlink-border-color);
+  color: var(--link-color--active);
+  border-color: var(--link-border-color--active);
+  background-color: var(--dark-link-bg-color--active);
   outline: none;
 }
 
@@ -241,10 +243,8 @@
 .dark a.btn {
   cursor: pointer;
   text-decoration: none;
-  /* text-transform: uppercase; */
   text-transform: lowercase;
   border-bottom: 1px var(--trim-color) dashed !important;
-  /* background-color: #f0fefe; */
   color: var(--trim-color) !important;
   padding: 6px;
   margin: unset;
