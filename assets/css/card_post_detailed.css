@@ -186,9 +186,10 @@
   max-width: 310px;
   min-width: 250px;
   padding: 0;
+  margin: 0 auto;
   -webkti-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  float: left;
+  /* float: left; */
   overflow: hidden;
 }
