@@ -51,8 +51,19 @@
 .light h2 a,
 .light h3 a,
 .light h4 a,
-.light h5 a {
+.light h5 a,
+.light h6 a {
   color: var(--light-text-color);
+  border: none;
+}
+
+.light h1 a:hover,
+.light h2 a:hover,
+.light h3 a:hover,
+.light h4 a:hover,
+.light h5 a:hover,
+.light h6 a:hover {
+  background: none;
 }
 
 .light code {
