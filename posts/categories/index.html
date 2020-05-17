@@ -9,7 +9,7 @@ active_title: "Posts"
 </table> -->
 {% assign all_cats = '' | split: '/' %}
 {% for cat in site.categories %}
-  {% assign cat_name = cat[0] %}
+  {% assign cat_name = cat.first %}
   {% assign cat_no_space = cat_name | replace: ' ', '_' %}
   {% assign cat_href = "#" | append: cat_no_space %}">
   {% assign cat_posts = cat[1] %}
