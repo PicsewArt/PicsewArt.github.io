@@ -13,11 +13,12 @@ afterload_css: []
 on_load:
   call: ""
   def: ''
+limit: 6
 cols: 3
 posts_style: 'scroll'
 ---
 	{% assign recent_posts = '' | split: '/' %}
-	{% for post in site.posts limit: page.cols %}
+	{% for post in site.posts limit: page.limit %}
 		{% assign recent_posts = recent_posts | push: post %}
 	{% endfor %}
   {% if page.posts_style == 'scroll' %}
@@ -29,7 +30,7 @@ posts_style: 'scroll'
 	<!-- SEPARATOR -->
 
 	{% assign recent_media = '' | split: '/' %}
-	{% for album in site.gallery limit: page.cols %}
+	{% for album in site.gallery limit: page.limit %}
 		{% assign this_item = '' | split: '/' %}
 
 		{% comment %}{% assign media_url = site.url | append: '/gallery/detail/?album=' | append: page.unique | append: '&idx=' | append: forloop.index | append: "&type=" | append: item.type %}{% endcomment %}
