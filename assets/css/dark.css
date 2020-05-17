@@ -317,9 +317,9 @@
   background-color: var(--accessible-gray);
 }
 
-.light .theme-toggler {
+.dark .theme-toggler {
   fill: var(--dark-text-color);
   stroke: var(--dark-text-color);
-  max-width: 14px;
-  max-height: 14px;
+  height: 18px;
+  margin-bottom: -4.5px !important;
 }
