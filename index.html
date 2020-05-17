@@ -31,21 +31,23 @@ posts_style: 'scroll'
 
 	{% assign recent_media = '' | split: '/' %}
 	{% for album in site.gallery limit: page.limit %}
-		{% assign this_item = '' | split: '/' %}
+    {% for item in album.media limit: 2 %}
+  		{% assign this_item = '' | split: '/' %}
 
-		{% comment %}{% assign media_url = site.url | append: '/gallery/detail/?album=' | append: page.unique | append: '&idx=' | append: forloop.index | append: "&type=" | append: item.type %}{% endcomment %}
+  		{% comment %}{% assign media_url = site.url | append: '/gallery/detail/?album=' | append: page.unique | append: '&idx=' | append: forloop.index | append: "&type=" | append: item.type %}{% endcomment %}
 
-		{% capture this_media_url %}{% include gallery_media_url.html item=album.media.first %}{% endcapture %}
-		{% capture this_thumbnail_url %}{% include gallery_media_thumbnail_url.html item=album.media.first %}{% endcapture %}
+  		{% capture this_media_url %}{% include gallery_media_url.html item=item %}{% endcapture %}
+  		{% capture this_thumbnail_url %}{% include gallery_media_thumbnail_url.html item=item %}{% endcapture %}
 
-    {% assign this_item = this_item | push: album.title %}
-		{% assign this_item = this_item | push: album.desc %}
-    {% assign this_item = this_item | push: this_thumbnail_url %}
-    {% assign this_item = this_item | push: this_media_url %}
-    {% assign this_item = this_item | push: album.media.first.type %}
-		{% assign this_item = this_item | push: album.media.first.format %}
+      {% assign this_item = this_item | push: album.title %}
+  		{% assign this_item = this_item | push: album.desc %}
+      {% assign this_item = this_item | push: this_thumbnail_url %}
+      {% assign this_item = this_item | push: this_media_url %}
+      {% assign this_item = this_item | push: item.type %}
+  		{% assign this_item = this_item | push: item.format %}
 
-		{% assign recent_media = recent_media | push: this_item %}
+  		{% assign recent_media = recent_media | push: this_item %}
+    {% endfor %}
 	{% endfor %}
 	{% assign recent_media_container = '' | split: '/' %}
 	{% assign recent_media_container = recent_media_container | push: recent_media %}
