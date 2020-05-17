@@ -29,10 +29,13 @@ figure.overlay-image-fade-detailed img {
 
 figure.overlay-image-fade-detailed figcaption {
   position: absolute;
-  bottom: calc(0% - 1px);
+  /* bottom: calc(0% - 1px); */
+  bottom: calc(100% + 1px);
   left: 0;
   width: 100%;
   z-index: 1;
+  /* -webkit-transform: translateY(calc(100% + 1px));
+  transform: translateY(calc(100% + 1px)); */
   -webkit-transform: translateY(calc(100% + 1px));
   transform: translateY(calc(100% + 1px));
 }
