@@ -250,7 +250,7 @@
 .light a.btn:hover {
   /* background-color: #ff2e88; */
   background-color: var(--light-nav-bg-color--active);;
-  color: #fff
+  color: var(--light-link-color);
 }
 
 .light .form[role="search"] label {
