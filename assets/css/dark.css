@@ -318,8 +318,8 @@
 }
 
 .dark .theme-toggler {
-  fill: var(--dark-text-color);
-  stroke: var(--dark-text-color);
+  fill: var(--dark-text-color) !important;
+  stroke: var(--dark-text-color) !important;
   height: 18px;
   margin-bottom: -4.5px !important;
 }
