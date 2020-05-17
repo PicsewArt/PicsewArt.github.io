@@ -1,14 +1,14 @@
 :root {
   --light-link-color: #2BBC8A;
   --light-link-color--active: #2BBC8A;
-  --light-link-bg-color: #fff;
+  --light-link-bg-color: rgba(0,0,0,0);
   --light-link-bg-color--active: RGBA(255,212,59,0.33);
   --light-link-border-color: #2BBC8A;
   --light-link-border-color--active: #2BBC8A;
 
   --light-nav-color: #2BBC8A;
   --light-nav-color--active: #2BBC8A;
-  --light-nav-bg-color: #fff;
+  --light-nav-bg-color: rgba(0,0,0,0);;
   --light-nav-bg-color--active: RGBA(255,212,59,0.33);
   --light-nav-border-color: #2BBC8A;
   --light-nav-border-color--active: #2BBC8A;
