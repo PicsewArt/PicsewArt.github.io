@@ -1,0 +1,58 @@
+.hack h1:after {
+  content: "====================================================================================================";
+  position: absolute;
+  bottom: 3px;
+  left: 0;
+  font-size: 1rem;
+}
+
+.hack h2:before,
+.hack h3:before,
+.hack h4:before,
+.hack h5:before,
+.hack h6:before {
+  display: inline
+}
+
+.hack h2:before {
+  content: "## "
+}
+
+.hack h3:before {
+  content: "### "
+}
+
+.hack h4:before {
+  content: "#### "
+}
+
+.hack h5:before {
+  content: "##### "
+}
+
+.hack h6:before {
+  content: "###### "
+}
+
+.hack pre code {
+  font-weight: normal;
+  border: none;
+  background: none;
+  padding: 0;
+  margin: 0;
+  border-radius: 0;
+}
+
+.hack code {
+  font-weight: 700;
+  border: 1px solid var(--charcoal-gray);
+  color: #fff;
+  padding: 1px 4px;
+  margin: 0 2px;
+  border-radius: 3px;
+  word-break: break-all;
+}
+
+.hack a[rel*="external"]::after {
+  content: " "url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20class='i-external'%20viewBox='0%200%2032%2032'%20width='14'%20height='14'%20fill='none'%20stroke='%23ff9800'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='9.38%'%3E%3Cpath%20d='M14%209%20L3%209%203%2029%2023%2029%2023%2018%20M18%204%20L28%204%2028%2014%20M28%204%20L14%2018'/%3E%3C/svg%3E");
+}

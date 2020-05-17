@@ -47,6 +47,21 @@
   content: ''
 }
 
+.light header h1,
+.light header h2,
+.light header h3,
+.light header h4,
+.light header h5,
+.light header h6 {
+  color: var(--light-text-color--stronger);
+}
+
+.light h1,
+.light h2,
+.light h3,
+.light h4,
+.light h5,
+.light h6,
 .light h1 a,
 .light h2 a,
 .light h3 a,

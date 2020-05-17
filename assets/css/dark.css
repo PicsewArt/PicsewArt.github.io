@@ -26,7 +26,7 @@
   color: #ccc;
 }
 
-.hack.dark {
+.dark {
   color: var(--text-color--light);
   /* reset */
 }
@@ -52,6 +52,21 @@
   content: ''
 }
 
+.dark header h1,
+.dark header h2,
+.dark header h3,
+.dark header h4,
+.dark header h5,
+.dark header h6 {
+  color: var(--text-color--dark);
+}
+
+.dark h1,
+.dark h2,
+.dark h3,
+.dark h4,
+.dark h5,
+.dark h6,
 .dark h1 a,
 .dark h2 a,
 .dark h3 a,
