@@ -890,7 +890,7 @@ blockquote {
   padding-bottom: 1rem;
   padding-right: 1rem;
   overflow: hidden;
-  background-color: var(--atomone-gray);
+  margin: 0;
 }
 
 blockquote:before {

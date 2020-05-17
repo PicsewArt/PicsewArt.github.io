@@ -33,8 +33,15 @@ button.animated-button .circle {
   margin: 0;
   width: 3rem;
   height: 3rem;
-  background: #fff;
   border-radius: 1.625rem;
+}
+
+.dark button.animated-button .circle {
+  background: #fff;
+}
+
+.light button.animated-button .circle {
+  background: #000;
 }
 
 button.animated-button .circle .icon {
@@ -44,7 +51,7 @@ button.animated-button .circle .icon {
   top: 0;
   bottom: 0;
   margin: auto;
-  background: #282936;
+  /* background: #282936; */
 }
 
 button.animated-button .circle .icon.arrow {
@@ -63,10 +70,18 @@ button.animated-button .circle .icon.arrow::before {
   right: 0.0625rem;
   width: 0.625rem;
   height: 0.625rem;
-  border-top: 0.125rem solid #282936;
-  border-right: 0.125rem solid #282936;
   -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
+}
+
+.dark button.animated-button .circle .icon.arrow::before {
+  border-top: 0.125rem solid #282936;
+  border-right: 0.125rem solid #282936;
+}
+
+.light button.animated-button .circle .icon.arrow::before {
+  border-top: 0.125rem solid #fff;
+  border-right: 0.125rem solid #fff;
 }
 
 button.animated-button .button-text {
@@ -79,48 +94,66 @@ button.animated-button .button-text {
   bottom: 0;
   padding: 0.75rem 0;
   margin: 0 0 0 1.85rem;
-  color: #fff;
   font-weight: 700;
   line-height: 1.6;
   text-align: center;
   text-transform: uppercase;
 }
 
-button.animated-button .button-text a {
+.dark button.animated-button .button-text {
   color: #fff;
-  border: none;
 }
 
-/* button.animated-button .button-text a:hover {
-  background: none;
-  color: #282936;
-} */
+.light button.animated-button .button-text {
+  color: var(--light-text-color);
+}
+
+.dark button.animated-button:hover .button-text {
+  color: #282936 !important;
+}
+
+.dark button.animated-button:hover .button-text {
+  color: #fff !important;
+}
+
+
+.dark button.animated-button .button-text a  {
+  color: #fff;
+}
+
+.light button.animated-button .button-text a {
+  color: var(--light-text-color);
+}
+
+button.animated-button .button-text a {
+  border: none !important;
+}
+
+button.animated-button .button-text a:hover {
+  background: none !important;
+}
+
+.dark button.animated-button .button-text a:hover {
+  color:
+}
+
+.light button.animated-button .button-text a:hover {
+
+}
 
 button.animated-button:hover .circle {
   width: 100%;
 }
 
-button.animated-button:hover .circle .icon.arrow {
+.dark button.animated-button:hover .circle .icon.arrow {
   background: #282936;
+}
+
+.light button.animated-button:hover .circle .icon.arrow {
+  background: #fff;
+}
+
+button.animated-button:hover .circle .icon.arrow {
   -webkit-transform: translate(1rem, 0);
   transform: translate(1rem, 0);
 }
-
-button.animated-button:hover .button-text {
-  color: #282936;
-}
-
-/* @supports (display: grid) {
-  body {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 0.625rem;
-    grid-template-areas: ". main main ."". main main .";
-  }
-
-  #container {
-    grid-area: main;
-    align-self: center;
-    justify-self: center;
-  }
-} */

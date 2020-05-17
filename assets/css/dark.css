@@ -270,3 +270,7 @@
 .dark .form[role="search"] .form-control:target {
   color: var(--link-color--active) !important;
 }
+
+.light blockquote {
+  background-color: var(--atomone-gray);
+}

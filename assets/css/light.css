@@ -265,3 +265,7 @@
 .light .form[role="search"] .form-control:target {
   color: var(--trim-color) !important;
 }
+
+.light blockquote {
+  background-color: #fff;
+}

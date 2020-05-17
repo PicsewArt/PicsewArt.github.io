@@ -1,11 +1,23 @@
-blockquote.layer {
+.dark blockquote.layer {
   background-color: #272822 !important;
 }
 
-blockquote.layer-bright {
+.dark blockquote.layer-bright {
   background-color: #888 !important;
 }
 
-blockquote.layer-bright::before {
+.dark blockquote.layer-bright::before {
+  color: #000 !important;
+}
+
+.light blockquote.layer {
+  background-color: #F7F7F7 !important;
+}
+
+.light blockquote.layer-bright {
+  background-color: #888 !important;
+}
+
+.light blockquote.layer-bright::before {
   color: #000 !important;
 }
