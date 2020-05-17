@@ -254,3 +254,17 @@
   background-color: var(--navlink-bg-color--active) !important;
   color: #fff
 }
+
+.dark .form[role="search"] label {
+  color: var(--trim-color);
+}
+
+.dark .form[role="search"] .form-control {
+  color: var(--link-color--active);
+}
+
+.dark .form[role="search"] .form-control:focus,
+.dark .form[role="search"] .form-control:hover,
+.dark .form[role="search"] .form-control:target {
+  color: var(--link-color--active);
+}
