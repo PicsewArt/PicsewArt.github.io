@@ -18,7 +18,7 @@ on_load:
 {% for album in site.gallery %}
   {% if album.published %}
     {% assign all_media = '' | split: '/' %}
-    {% for item in page.media %}
+    {% for item in album.media %}
       {% assign this_item = '' | split: '/' %}
 
       {% comment %}{% assign media_url = site.url | append: '/gallery/detail/?album=' | append: page.unique | append: '&idx=' | append: forloop.index | append: "&type=" | append: item.type %}{% endcomment %}
