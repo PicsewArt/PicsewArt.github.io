@@ -45,9 +45,9 @@ posts_style: 'scroll'
 	{% assign recent_media_container = '' | split: '/' %}
 	{% assign recent_media_container = recent_media_container | push: recent_media %}
 
-  {% if page.posts_style = 'scroll' %}
+  {% if page.posts_style == 'scroll' %}
     {% include grid_image_overlay_simple_scroll_posts_list.html sectionid="recent-meida" list=recent_media_container cols=page.cols title='Recent Media' title_url="/gallery/index.html" desc='Passionate about photography and enjoy taking pictures all around the world.' readmore_title="View More" readmore='/gallery/index.html' %}
-  {% elsif page.posts_style = 'camera' %}
+  {% elsif page.posts_style == 'camera' %}
   	{% include grid_image_overlay_camera_list.html sectionid="recent-meida" list=recent_media_container cols=page.cols title='Recent Media' title_url="/gallery/index.html" desc='Passionate about photography and enjoy taking pictures all around the world.' readmore_title="View More" readmore='/gallery/index.html' %}
   {% endif %}
 	{% include gallery_lightbox.html %}
