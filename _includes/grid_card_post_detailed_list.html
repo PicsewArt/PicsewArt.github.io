@@ -29,7 +29,7 @@
 
 		{% capture element_html %}
     <!-- BEGIN CARD ITEM -->
-    {% include card_post_detailed.html title=element_title desc=element_desc image=element_image href=element_url day=element_day month=element_month year=element_year %}
+    {% include card_post_detailed.html title=element_title desc=element_desc image=element_image href=element_url badge=element_bagde day=element_day month=element_month date=element_year %}
     <!-- END CARD ITEM -->
     {% endcapture %}
     {% assign grid_list_gourp_array = grid_list_gourp_array | push: element_html %}
