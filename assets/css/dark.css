@@ -274,3 +274,7 @@
 .dark blockquote {
   background-color: var(--atomone-gray);
 }
+
+.dark blockquote blockquote {
+  background-color: var(--accessible-gray);
+}

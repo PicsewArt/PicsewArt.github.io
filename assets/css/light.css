@@ -270,3 +270,7 @@
 .light blockquote {
   background-color: #fff;
 }
+
+.light blockquote blockquote {
+  background-color: #a9a9a9;
+}
