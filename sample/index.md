@@ -486,7 +486,7 @@ int main(int argc, char *argv[]) {
 
 ### Detailed Post Card
 
-<blockquote>{% include card_post_detailed.html title=site.alias desc=site.description image='/assets/images/hero/low/HERO_SADNESS_H_0012.jpg' href=site.url badge=site.name day='01' month=01 date='Jan 01, 1970' %}<、blockquote>
+<blockquote>{% include card_post_detailed.html title=site.alias desc=site.description image='/assets/images/hero/low/HERO_SADNESS_H_0012.jpg' href=site.url badge=site.name day='01' month=01 date='Jan 01, 1970' %}</blockquote>
 
 ### Tinted Post Card
 
