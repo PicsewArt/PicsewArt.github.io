@@ -148,8 +148,3 @@ figure.overlay-image-listing.hover li:nth-child(4) {
   -webkit-transition-delay: 0.4s;
   transition-delay: 0.4s;
 }
-
-/* Demo purposes only */
-body {
-  background-color: #212121;
-}
