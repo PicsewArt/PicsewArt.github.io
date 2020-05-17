@@ -128,8 +128,8 @@
   font-weight: 400;
 }
 
-.post-module .post-content .sub_title::before,
-.post-module .post-content .sub_title::after {
+.post-module .post-content .title::before,
+.post-module .post-content .title::after {
   display: none !important;
 }
 
