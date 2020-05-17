@@ -1,4 +1,4 @@
-<div class="card-post-detailed">
+<div class="card-post-detailed" style="{% if include.maxwidth.size > 0 %}max-width: {{ include.maxwidth }} !important;{% endif %}">
   <!-- Post-->
   <div class="post-module">
     <!-- Thumbnail-->
@@ -18,5 +18,5 @@
       <div class="post-meta"><span class="timestamp"><i class="fa fa-clock-o"></i>&nbsp;{{ include.date }}</span></div>
     </div>
   </div>
-  {% if include.href.size > 0 %}<a href="{{ include.href }}"></a>{% endif %}
+  {% if include.href.size > 0 %}<a class="link" href="{{ include.href }}"></a>{% endif %}
 </div>

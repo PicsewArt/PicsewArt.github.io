@@ -128,6 +128,11 @@
   font-weight: 400;
 }
 
+.post-module .post-content .sub_title::before,
+.post-module .post-content .sub_title::after {
+  display: none !important;
+}
+
 .post-module .post-content .description {
   display: block;
   color: #666666;
@@ -158,8 +163,20 @@
   text-decoration: none;
 }
 
+.card-post-detailed a.link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none !important;
+}
+
+.card-post-detailed a.link:hover {
+  background: none !important;
+}
+
 .card-post-detailed {
-  /* width: 50%; */
   max-width: 310px;
   min-width: 250px;
   padding: 0 25px;
