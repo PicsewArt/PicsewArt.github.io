@@ -4,7 +4,7 @@ title: "Posts"
 ---
 	<!-- BEGIN POST BLOCK -->
 
-	{% if site.posts_list_style == 'simple' %}
+	{% if site.ui.posts_list_style == 'simple' %}
 
 	{% for post in paginator.posts %}
 	<article itemprop="citation" itemscope itemtype="https://schema.org/SoftwareApplication" id="security7-networks">
@@ -22,7 +22,7 @@ title: "Posts"
 	<nav class="readmore"><a itemprop="url" href="{% include post_url.html url=post.url %}">Read More&nbsp;&raquo;</a></nav>
 	{% endfor %}
 
-	{% elsif site.posts_list_style == 'normal' %}
+	{% elsif site.ui.posts_list_style == 'normal' %}
 	<!-- NORMAL STYLE -->
 
 	{% for post in paginator.posts %}
@@ -90,7 +90,7 @@ title: "Posts"
 	<nav class="readmore"><a itemprop="url" href="{% include post_url.html url=post.url %}">Read More&nbsp;&raquo;</a></nav>
 	{% endfor %}
 
-	{% elsif site.posts_list_style == 'group' %}
+	{% elsif site.ui.posts_list_style == 'group' %}
 	<!-- GROUPED STYLE -->
 
 	{% include grid_image_overlay_fade_detailed_posts_list.html desc=" " list=paginator.posts cols=3 readmore='/posts/archive/index.html' readmore_title='Archive' %}

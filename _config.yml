@@ -11,8 +11,14 @@ timezone: Asia/Shanghai
 range:
   start: 2020
   end: 2020
-# theme: 'dark'
-theme: 'light'
+ui:
+  theme: "light"
+  # theme: "dark"
+  # show_search: false
+  show_search: true
+  posts_list_style: 'group'
+  # posts_list_style: 'simple'
+  # posts_list_style: 'normal'
 
 hero:
   url: 'HERO_SADNESS_H_0009.jpg'
@@ -108,10 +114,3 @@ path:
   videos: "/assets/videos"
   css: "/assets/css"
   js: "/assets/js"
-
-# show_search: false
-show_search: true
-
-# posts_list_style: 'simple'
-# posts_list_style: 'normal'
-posts_list_style: 'group'
