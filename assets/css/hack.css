@@ -154,29 +154,6 @@
   left: -7px
 }
 
-.hack blockquote {
-  position: relative;
-  /* padding-left: 17px; */
-  /* padding-left: 2ch; */
-  padding-left: 3rem;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-  padding-right: 1rem;
-  overflow: hidden;
-  background-color: var(--atomone-gray);
-}
-
-.hack blockquote:before {
-  /* content: ">\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>"; */
-  content: '“';
-  white-space: pre;
-  position: absolute;
-  top: 1.5rem;
-  left: 0.5rem;
-  line-height: 20px;
-  font-size: 3rem;
-}
-
 .hack em:after,
 .hack em:before {
   content: "*";
