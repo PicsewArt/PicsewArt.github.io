@@ -25,6 +25,7 @@ figure.overlay-image-fade-detailed * {
 figure.overlay-image-fade-detailed img {
   max-width: 100%;
   opacity: 0.9;
+  display: block;
 }
 
 figure.overlay-image-fade-detailed figcaption {
@@ -41,7 +42,7 @@ figure.overlay-image-fade-detailed figcaption.bottom {
 }
 
 figure.overlay-image-fade-detailed figcaption.top {
-  top: 0;
+  top: 100%;
   -webkit-transform: translateY(calc(-100%));
   transform: translateY(calc(-100%));
 }
