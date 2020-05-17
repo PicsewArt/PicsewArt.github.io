@@ -1,4 +1,6 @@
 :root {
+  --light-page-color: #FDF6E4;
+
   --light-link-color: #2BBC8A;
   --light-link-color--active: #2BBC8A;
   --light-link-bg-color: rgba(0,0,0,0);
@@ -20,7 +22,7 @@
 }
 
 .light {
-  background-color: var(--light-bg-color);
+  background-color: var(--light-page-color);
   color: var(--light-text-color);
 }
 

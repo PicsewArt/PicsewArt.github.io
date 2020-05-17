@@ -1,4 +1,6 @@
 :root {
+  --dark-page-color: #111;
+
   --dark-link-color: var(--link-color);
   --dark-link-color--active: var(--link-color--active);;
   --dark-link-bg-color: rgba(0,0,0,0);
@@ -20,7 +22,7 @@
 }
 
 .dark {
-  background-color: #000;
+  background-color: var(--dark-page-color);
   color: #ccc;
 }
 
