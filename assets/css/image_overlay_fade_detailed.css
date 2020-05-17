@@ -24,7 +24,7 @@ figure.overlay-image-fade-detailed * {
 
 figure.overlay-image-fade-detailed img {
   max-width: 100%;
-  opacity: 0.4;
+  opacity: 0.9;
 }
 
 figure.overlay-image-fade-detailed figcaption {
@@ -85,7 +85,7 @@ figure.overlay-image-fade-detailed a:hover {
 
 figure.overlay-image-fade-detailed:hover img,
 figure.overlay-image-fade-detailed.hover img {
-  opacity: 1;
+  opacity: 0.4;
 }
 
 figure.overlay-image-fade-detailed:hover figcaption,
