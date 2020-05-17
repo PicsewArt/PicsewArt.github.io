@@ -178,6 +178,7 @@
   color: var(--light-link-color);
   background-color: var(--light-link-bg-color);
   border-color: var(--light-link-border-color);
+  border-bottom: 1px var(--light-link-border-color) dashed;
 }
 
 .light a:hover,
