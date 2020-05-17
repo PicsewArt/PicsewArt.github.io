@@ -28,7 +28,7 @@ layout: null
     -->
 </head>
 
-<body class="hack {{ site.ui.theme }} main container"{% if page.on_load.call.size > 0 %} onload="loadTheme();{{ page.on_load.call }}"{% else %} onload="loadThemeSet();"{% endif %}>
+<body class="hack {{ site.ui.theme }} main container"{% if page.on_load.call.size > 0 %} onload="loadTheme();{{ page.on_load.call }}"{% else %} onload="loadTheme();"{% endif %}>
 
   {% unless page.disable_nav == true %}
   {% include layout_nav.html %}
