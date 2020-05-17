@@ -429,3 +429,42 @@
 .hack .card .card-content pre {
   margin: unset;
 }
+
+/* --- */
+
+.hack header:first-of-type h1 {}
+
+.hack>header nav {}
+
+.hack>header {
+  display: grid;
+  grid-template: 1fr minmax(min-content, auto) / 4fr 3fr;
+  row-gap: 1vmin;
+  column-gap: 20px;
+  grid-template-areas: "search search""nav nav";
+  margin-bottom: 1rem;
+}
+
+.hack>header nav:last-of-type {
+  text-align: right;
+}
+
+@media screen and (max-width: 30em) {
+  .hack>header a[itemprop="url"] {
+    display: block;
+  }
+
+  .form[role="search"] {
+    margin-bottom: 10px;
+  }
+}
+
+.hack>header .form[role="search"] {
+  width: unset;
+  text-align: right;
+  position: relative;
+  /* z-index: 20; */
+  grid-column: search;
+  grid-row: search;
+  margin-top: -20px;
+}
