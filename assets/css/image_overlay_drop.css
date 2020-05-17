@@ -85,10 +85,12 @@ figure.overlay-image-drop figcaption h3 {
   font-weight: 400;
   text-transform: uppercase;
   margin-bottom: 5px;
+  color: #fff;
 }
 
 figure.overlay-image-drop figcaption h3 span {
   font-weight: 700;
+  color: #fff;
 }
 
 figure.overlay-image-drop h3::before,

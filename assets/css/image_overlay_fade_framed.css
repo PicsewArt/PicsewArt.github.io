@@ -65,6 +65,7 @@
 .overlay-image-fade-framed h3 {
   font-size: 1.3em;
   font-family: 'Yeseva One', Arial, sans-serif;
+  color: #fff;
 }
 
 .overlay-image-fade-framed h3::before,
@@ -76,6 +77,7 @@
   font-size: 0.8em;
   letter-spacing: 1px;
   opacity: 0.75;
+  color: #fff;
 }
 
 .overlay-image-fade-framed a {

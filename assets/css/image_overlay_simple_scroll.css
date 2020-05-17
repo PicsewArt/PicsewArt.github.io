@@ -52,6 +52,7 @@ figure.overlay-image-simple-scroll h3 {
   left: 0;
   padding: 0 30px;
   text-transform: uppercase;
+  color: #fff;
 }
 
 figure.overlay-image-simple-scroll h2::before,

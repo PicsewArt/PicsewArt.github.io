@@ -56,6 +56,7 @@
   margin: 0;
   font-weight: 800;
   text-transform: uppercase;
+  color: #fff;
 }
 
 .drop-icons-profile-card h3::before,
@@ -90,24 +91,24 @@
   color: #ffffff;
 }
 
-.drop-icons-profile-card:hover img,
-.drop-icons-profile-card.hover img {
+.drop-icons-profile-card:hover img {
   -webkit-transform: translateY(20px);
   transform: translateY(20px);
 }
 
-.drop-icons-profile-card:hover figcaption,
-.drop-icons-profile-card.hover figcaption {
+.drop-icons-profile-card:hover figcaption {
   color: #34495e;
 }
 
-.drop-icons-profile-card:hover figcaption:before,
-.drop-icons-profile-card.hover figcaption:before {
+.drop-icons-profile-card:hover h3 {
+  color: #34495e;
+}
+
+.drop-icons-profile-card:hover figcaption:before {
   -webkit-transform: translateY(0);
   transform: translateY(0);
 }
 
-.drop-icons-profile-card:hover figcaption i,
-.drop-icons-profile-card.hover figcaption i {
+.drop-icons-profile-card:hover figcaption i {
   color: #34495e;
 }
