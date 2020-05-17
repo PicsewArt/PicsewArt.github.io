@@ -5,7 +5,7 @@
   background: #FFFFFF;
   min-width: 250px;
   /* height: 350px; */
-  padding-top: 65%;
+  padding-top: 85%;
   -webkit-box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.15);
   -moz-box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.15);
   box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.15);
@@ -126,7 +126,7 @@
 
 .post-module .post-content .sub_title {
   margin: 0;
-  padding: 0 0 20px;
+  padding: 0;
   color: #e74c3c;
   font-size: 20px;
   font-weight: 400;
