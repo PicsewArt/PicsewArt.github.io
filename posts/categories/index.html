@@ -11,7 +11,7 @@ active_title: "Posts"
 {% for cat in site.categories %}
   {% assign cat_name = cat.first %}
   {% assign cat_no_space = cat_name | replace: ' ', '_' %}
-  {% assign cat_href = "#" | append: cat_no_space %}">
+  {% assign cat_href = "#" | append: cat_no_space %}
   {% assign cat_posts = cat[1] %}
   {% assign cat_count = cat_posts.size %}
   {% capture cat_desc %}Contains {{ cat_count }} post{% if cat_count.size > 1 %}s{% endif %}{% endcapture %}
