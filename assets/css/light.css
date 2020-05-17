@@ -300,3 +300,7 @@
 .light blockquote blockquote {
   background-color: #a9a9a9;
 }
+
+.light .theme-toggler {
+  fill: var(--light-text-color);
+}

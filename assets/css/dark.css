@@ -316,3 +316,7 @@
 .dark blockquote blockquote {
   background-color: var(--accessible-gray);
 }
+
+.light .theme-toggler {
+  fill: var(--dark-text-color);
+}
