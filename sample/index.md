@@ -452,30 +452,42 @@ int main(int argc, char *argv[]) {
 
 # Cards
 
-## Normal Profile Card
+## Profile Cards
+
+### Normal Profile Card
 
 <blockquote>{% include card_profile.html title=site.name desc=site.description image="/assets/images/avatar.jpg" url=site.url email=site.email %}</blockquote>
 
-## Cycled Profile Card
+### Cycled Profile Card
 
 <blockquote>{% include card_profile_cycled.html title="the <span>Senorita</span>" caption=site.alias desc=site.description image="/assets/images/avatar.jpg" url=site.url email=site.email %}</blockquote>
 
-## Bordered Profile Card
+### Bordered Profile Card
 
 <blockquote>{% include card_profile_bordered.html title=site.name subtitle=site.alias desc=site.description image="/assets/images/avatar.jpg" url=site.url email=site.email %}</blockquote>
 
-## Bubble Profile Card
+### Bubble Profile Card
 
 <blockquote>{% include card_profile_bubble.html title=site.name subtitle=site.alias desc=site.description image="/assets/images/avatar.jpg" url=site.url email=site.email %}</blockquote>
 
-## Drop Icons Profile Card
+### Drop Icons Profile Card
 
 <blockquote>{% include card_profile_drop_icons.html title=site.name image="/assets/images/avatar.jpg" url=site.url github=site.github_url email=site.email %}</blockquote>
 
-## Quotes Profile Card
+### Quotes Profile Card
 
 <blockquote>{% include card_profile_quotes.html title=site.name subtitle=site.alias desc=site.description image="/assets/images/avatar.jpg" %}</blockquote>
 
-## Post Card
+## Post Cards
+
+### Normal Post Card
 
 <blockquote>{% include card_post.html title=site.name desc=site.description image="/assets/images/hero/low/HERO_SADNESS_H_0011.jpg" day='01' month='May' year='2020' %}</blockquote>
+
+### Detailed Post Card
+
+{% include card_post_detailed.html title=site.alias desc=site.description image='/assets/images/hero/low/HERO_SADNESS_H_0012.jpg' href=site.url badge=site.name day='01' month=01 date='Jan 01, 1970' %}
+
+### Tinted Post Card
+
+{% include card_post_tinted.html title=site.name desc=site.description image='/assets/images/hero/low/HERO_SADNESS_H_0004.jpg' href=site.url color='blue' button='View More' maxwidth="100%" %}
