@@ -10,8 +10,11 @@
 
 <!-- Theme -->
 <!-- <link rel="stylesheet" href="{{ site.url }}{{ site.path.css }}/hack.css"> -->
-<!-- <link rel="stylesheet" href="{{ site.url }}{{ site.path.css }}/dark.css"> -->
+{% if site.ui.theme == 'dark' %}
+<link rel="stylesheet" href="{{ site.url }}{{ site.path.css }}/dark.css">
+{% else %}
 <link rel="stylesheet" href="{{ site.url }}{{ site.path.css }}/light.css">
+{% endif %}
 
 <!-- Plugin -->
 <link rel="stylesheet" href="{{ site.url }}{{ site.path.css }}/music_player.css">
