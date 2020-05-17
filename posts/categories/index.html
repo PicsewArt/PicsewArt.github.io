@@ -3,14 +3,35 @@ layout: default
 title: "Categories"
 active_title: "Posts"
 ---
-<table style="text-align: center;">
+<!-- <table style="text-align: center;">
   <tr><th>Category</th><th>Contains</th></tr>
   {% for cat in site.categories %}<tr><td><a href="#{{ cat[0] | replace: ' ', '_' }}">{{ cat[0] | replace: '__', '\_\_' }}</a></td><td>{{ cat[1].size }} post{% if cat[1].size > 1 %}s{% endif %}</td></tr>{% endfor %}
-</table>
+</table> -->
+{% for cat in site.categories %}
+  {% assign cat_name = cat[0] %}
+  {% assign cat_no_space = cat_name | replace: ' ', '_' %}
+  {% assign cat_href = "#" | append: cat_no_space %}">
+  {% assign cat_posts = cat[1] %}
+  {% assign cat_count = cat_posts.size %}
+  {% capture cat_desc %}Contains {{ cat_count }} post{% if cat_count.size > 1 %}s{% endif %}{% endcapture %}
+  {% assign cat_img = site.url | append: site.path.hero.low | append: cat_posts.first.hero.url %}
+  <!-- element[0]: title -->
+  <!-- element[1]: subtitle -->
+  <!-- element[2]: subtitle scroll -->
+  <!-- element[3]: image -->
+  <!-- element[4]: url -->
+  {% assign this_cat = '' | split: '/' %}
+  {% assign this_cat = this_cat | push: cat_name %}
+  {% assign this_cat = this_cat | push: cat_desc  %}
+  {% assign this_cat = this_cat | push: 'Click to view' %}
+  {% assign this_cat = this_cat | push: cat_img %}
+  {% assign this_cat = this_cat | push: cat_href %}
+{% endfor %}
+{% include grid_image_overlay_fade_detailed_list.html sectionid="counter" list=outer_list title="All Categories" title_url='' desc='' cols=3 %}
 <br />
 <hr>
 <br />
 {% for cat in site.categories %}
   {% assign cat_posts = cat[1] %}
-  {% include grid_image_overlay_fade_detailed_posts_list.html title=cat.first desc=" " list=cat_posts cols=3 readmore_title='Archive' readmore='/posts/archive/index.html' %}
+  {% include grid_image_overlay_simple_scroll_posts_list.html title=cat.first desc=" " list=cat_posts cols=3 readmore_title='Archive' readmore='/posts/archive/index.html' %}
 {% endfor %}
