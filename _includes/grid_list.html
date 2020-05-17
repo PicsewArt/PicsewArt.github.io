@@ -26,7 +26,7 @@
 		{% assign element_media_type = element[5] | default: 'image' %}
 		{% capture element_media_mix %} type="{{ element_media_type }}/{{ element_format }}"{% if element_media_type == 'video'%} data-poster="{{ element_img }}" data-sources='[{ "href": "{{ element_url }}", "type": "{{ element_media_type }}/{{ element_format }}"}]'{% endif %}{% endcapture %}
 		<a href="{{ element_url }}" target="{{ include.target | default: '_self' }}"{% if include.gallery %}{{ element_media_mix }}{% endif %}>
-			<figure aria-hidden="true" itemscope itemtype="https://schema.org/ImageObject" {{ element_media_mix }}>
+			<figure aria-hidden="true" itemscope itemtype="https://schema.org/ImageObject" style="margin: 0 auto;" {{ element_media_mix }}>
 					<link itemprop="contentUrl" href="{{ element_img }}">
 					<meta itemprop="encodingFormat" content="{{ element_media_type }}/{{ element_format }}">
 					<meta itemprop="name" content="thumbnail">
