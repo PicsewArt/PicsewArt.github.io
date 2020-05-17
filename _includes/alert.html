@@ -26,14 +26,14 @@
 
   {% elsif alert_p.size > 0 %}
 
-      <div class="alert_post_content" style="color: var(--hackcss-dark--text-color);">
+      <div class="alert-post-content">
         <article>{% include toc_skip_generator.html html=alert_p %}</article>
         {% if alert_p_readmore.size > 0 %}{% include button.html href=alert_p_readmore title='Read More' %}{% endif %}
       </div>
 
   {% elsif alert_post.title.size > 0 %}
 
-      <div class="alert_post_content" style="color: var(--hackcss-dark--text-color);">
+      <div class="alert-post-content">
         <h1 toc-skip="true" id="{{ alert_post.title | replace: ' ', '_' }}">{{ alert_post.title }}</h1>
         <article>{% include toc_skip_generator.html html=alert_post.content %}</article>
         {% include button.html href=alert_post.url title='Read More' %}
@@ -41,7 +41,7 @@
 
   {% elsif alert_post_on_title.size > 0 %}
 
-      <div class="alert_post_content" style="color: var(--hackcss-dark--text-color);">
+      <div class="alert-post-content">
         <h1 toc-skip="true" id="{{ alert_post_on_title | replace: ' ', '_' }}">{{ alert_post_on_title }}</h1>
         {% assign alert_found_posts = site.posts | where: "title", alert_post_on_title %}
         {% include toc_skip_generator.html html=alert_found_posts.first.content %}

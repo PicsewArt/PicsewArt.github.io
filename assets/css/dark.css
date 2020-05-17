@@ -271,6 +271,6 @@
   color: var(--link-color--active) !important;
 }
 
-.light blockquote {
+.dark blockquote {
   background-color: var(--atomone-gray);
 }

@@ -1,19 +1,21 @@
 @charset "UTF-8";
 
 div.window-wrapper-container {
-  /* border-radius: 6px; */
   border-top-left-radius: 6px;
   border-top-right-radius: 6px;
-  border: 1px solid var(--charcoal-gray);
-  /* background-image: url("{{ site.url }}{{ site.path.hero.low }}/HERO_TECH_V_0004.jpg"); */
-  /* background-repeat: no-repeat; */
-  /* background-size: 100% auto; */
   -moz-background-size: 100% auto;
   color: #fff;
   overflow: hidden;
   position: relative;
   margin: 0 auto 1rem auto;
-  /* width: 70%; */
+}
+
+.dark div.window-wrapper-container {
+    border: 1px solid var(--charcoal-gray);
+}
+
+.light div.window-wrapper-container {
+    border: 1px solid #fff;
 }
 
 div.window-wrapper-container:before {

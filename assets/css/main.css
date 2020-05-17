@@ -641,33 +641,6 @@ select.form-control {
   padding: .5rem 0
 }
 
-.alert {
-  color: #ccc;
-  padding: 1rem;
-  border: 1px solid #ccc;
-  /* margin-bottom: 1.75rem; */
-}
-
-.alert-success {
-  color: #4caf50;
-  border-color: #4caf50
-}
-
-.alert-error {
-  color: #f44336;
-  border-color: #f44336
-}
-
-.alert-info {
-  color: #00bcd4;
-  border-color: #00bcd4
-}
-
-.alert-warning {
-  color: #ff9800;
-  border-color: #ff9800
-}
-
 .media:not(:last-child) {
   margin-bottom: 1.25rem
 }
@@ -890,7 +863,7 @@ blockquote {
   padding-bottom: 1rem;
   padding-right: 1rem;
   overflow: hidden;
-  margin: 0;
+  margin: 5px 0;
 }
 
 blockquote:before {
