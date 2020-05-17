@@ -20,7 +20,11 @@ posts_style: 'scroll'
 	{% for post in site.posts limit: page.cols %}
 		{% assign recent_posts = recent_posts | push: post %}
 	{% endfor %}
-  {% include grid_card_post_detailed_posts_list.html sectionid="recent-posts" list=recent_posts cols=page.cols title='Recent Posts' title_url="/posts/index.html" desc='Writing on various topics including travel, finance and technology.' readmore_title="Read More" readmore='/posts/index.html' %}
+  {% if page.posts_style == 'scroll' %}
+    {% include grid_image_overlay_simple_scroll_posts_list.html sectionid="recent-posts" list=recent_posts cols=page.cols title='Recent Posts' title_url="/posts/index.html" desc='Writing on various topics including travel, finance and technology.' readmore_title="Read More" readmore='/posts/index.html' %}
+  {% elsif page.posts_style == 'detailed' %}
+  	{% include grid_card_post_detailed_posts_list.html sectionid="recent-posts" list=recent_posts cols=page.cols title='Recent Posts' title_url="/posts/index.html" desc='Writing on various topics including travel, finance and technology.' readmore_title="Read More" readmore='/posts/index.html' %}
+  {% endif %}
 
 	<!-- SEPARATOR -->
 
@@ -45,9 +49,5 @@ posts_style: 'scroll'
 	{% assign recent_media_container = '' | split: '/' %}
 	{% assign recent_media_container = recent_media_container | push: recent_media %}
 
-  {% if page.posts_style == 'scroll' %}
-    {% include grid_image_overlay_simple_scroll_posts_list.html sectionid="recent-meida" list=recent_media_container cols=page.cols title='Recent Media' title_url="/gallery/index.html" desc='Passionate about photography and enjoy taking pictures all around the world.' readmore_title="View More" readmore='/gallery/index.html' %}
-  {% elsif page.posts_style == 'camera' %}
-  	{% include grid_image_overlay_camera_list.html sectionid="recent-meida" list=recent_media_container cols=page.cols title='Recent Media' title_url="/gallery/index.html" desc='Passionate about photography and enjoy taking pictures all around the world.' readmore_title="View More" readmore='/gallery/index.html' %}
-  {% endif %}
+  {% include grid_image_overlay_camera_list.html sectionid="recent-meida" list=recent_media_container cols=page.cols title='Recent Media' title_url="/gallery/index.html" desc='Passionate about photography and enjoy taking pictures all around the world.' readmore_title="View More" readmore='/gallery/index.html' %}
 	{% include gallery_lightbox.html %}
