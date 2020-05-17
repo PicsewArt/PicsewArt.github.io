@@ -1,186 +1,186 @@
-.dark {
+.light {
   background-color: #000;
   color: #ccc;
 }
 
-.hack.dark {
+.light.light {
   color: var(--text-color--light);
   /* reset */
 }
 
-.hack.dark h1[itemprop] {
+.light.light h1[itemprop] {
   filter: brightness(3);
 }
 
-.dark strong {
+.light strong {
   color: #D09A6A;
 }
 
-.dark strong:before, .dark strong:after {
+.light strong:before, .light strong:after {
   content: '**';
   color: #D09A6A;
 }
 
-.dark .alert strong {
+.light .alert strong {
   color: #fff;
 }
 
-.dark .alert strong:before, .dark .alert strong:after {
+.light .alert strong:before, .light .alert strong:after {
   content: ''
 }
 
-.dark h1 a,
-.dark h2 a,
-.dark h3 a,
-.dark h4 a,
-.dark h5 a {
+.light h1 a,
+.light h2 a,
+.light h3 a,
+.light h4 a,
+.light h5 a {
   color: #ccc
 }
 
-.dark code {
+.light code {
   color: #fff;
 }
 
-.dark code {
+.light code {
   font-weight: 100
 }
 
-.dark table {
+.light table {
   color: #ccc
 }
 
-.dark table td,
-.dark table th {
+.light table td,
+.light table th {
   border-color: #444
 }
 
-.dark table tbody td:first-child {
+.light table tbody td:first-child {
   color: #fff
 }
 
-.dark .form-group label {
+.light .form-group label {
   color: #ccc;
   border-color: rgba(95, 95, 95, .78)
 }
 
-.dark .form-group.form-textarea label:after {
+.light .form-group.form-textarea label:after {
   background-color: #000
 }
 
-.dark .form-control {
+.light .form-control {
   color: #ccc;
   border-color: rgba(95, 95, 95, .78)
 }
 
-.dark .form-control:focus {
+.light .form-control:focus {
   border-color: #ccc;
   color: #ccc
 }
 
-.dark textarea.form-control {
+.light textarea.form-control {
   color: #ccc
 }
 
-.dark .card {
+.light .card {
   border-color: rgba(95, 95, 95, .78)
 }
 
-.dark .card .card-header {
+.light .card .card-header {
   background-color: transparent;
   color: #ccc;
   border-bottom: 1px solid rgba(95, 95, 95, .78)
 }
 
-.dark .btn.btn-ghost.btn-default {
+.light .btn.btn-ghost.btn-default {
   border-color: #ababab;
   color: #ababab
 }
 
-.dark .btn.btn-ghost.btn-default:focus,
-.dark .btn.btn-ghost.btn-default:hover {
+.light .btn.btn-ghost.btn-default:focus,
+.light .btn.btn-ghost.btn-default:hover {
   border-color: #9c9c9c;
   color: #9c9c9c;
   z-index: 1
 }
 
-.dark .btn.btn-ghost.btn-default:focus,
-.dark .btn.btn-ghost.btn-default:hover {
+.light .btn.btn-ghost.btn-default:focus,
+.light .btn.btn-ghost.btn-default:hover {
   border-color: #e0e0e0;
   color: #e0e0e0
 }
 
-.dark .btn.btn-ghost.btn-primary:focus,
-.dark .btn.btn-ghost.btn-primary:hover {
+.light .btn.btn-ghost.btn-primary:focus,
+.light .btn.btn-ghost.btn-primary:hover {
   border-color: #64b5f6;
   color: #64b5f6
 }
 
-.dark .btn.btn-ghost.btn-success:focus,
-.dark .btn.btn-ghost.btn-success:hover {
+.light .btn.btn-ghost.btn-success:focus,
+.light .btn.btn-ghost.btn-success:hover {
   border-color: #81c784;
   color: #81c784
 }
 
-.dark .btn.btn-ghost.btn-info:focus,
-.dark .btn.btn-ghost.btn-info:hover {
+.light .btn.btn-ghost.btn-info:focus,
+.light .btn.btn-ghost.btn-info:hover {
   border-color: #4dd0e1;
   color: #4dd0e1
 }
 
-.dark .btn.btn-ghost.btn-error:focus,
-.dark .btn.btn-ghost.btn-error:hover {
+.light .btn.btn-ghost.btn-error:focus,
+.light .btn.btn-ghost.btn-error:hover {
   border-color: #e57373;
   color: #e57373
 }
 
-.dark .btn.btn-ghost.btn-warning:focus,
-.dark .btn.btn-ghost.btn-warning:hover {
+.light .btn.btn-ghost.btn-warning:focus,
+.light .btn.btn-ghost.btn-warning:hover {
   border-color: #ffb74d;
   color: #ffb74d
 }
 
-.dark .avatarholder,
-.dark .placeholder {
+.light .avatarholder,
+.light .placeholder {
   background-color: transparent;
   border-color: #333
 }
 
-.dark .menu .menu-item {
+.light .menu .menu-item {
   color: #ccc;
   border-color: rgba(95, 95, 95, .78)
 }
 
-.dark .menu .menu-item.active,
-.dark .menu .menu-item:hover {
+.light .menu .menu-item.active,
+.light .menu .menu-item:hover {
   color: #fff;
   border-color: #ccc
 }
 
-.dark a:hover,
-.dark a:focus {
+.light a:hover,
+.light a:focus {
   color: var(--link-color--active);
   background-color: var(--link-bg-color--active);
   border-color: var(--link-border-color--active);
   outline: none;
 }
 
-.dark article[itemtype="http://schema.org/BlogPosting"] header .blur-up {
+.light article[itemtype="http://schema.org/BlogPosting"] header .blur-up {
   opacity: 0.92;
 }
 
-.dark nav a[itemprop="url"].active {
+.light nav a[itemprop="url"].active {
   color: var(--navlink-color--active);
   background-color: var(--navlink-bg-color--active);
   border-color: var(--navlink-border-color--active);
 }
 
-.dark nav a[itemprop="url"].active:hover,
-.dark nav a[itemprop="url"].active:focus {
+.light nav a[itemprop="url"].active:hover,
+.light nav a[itemprop="url"].active:focus {
   filter: brightness(1.1);
 }
 
-.dark nav a[itemprop="url"],
-.dark nav.readmore a {
+.light nav a[itemprop="url"],
+.light nav.readmore a {
   text-transform: lowercase;
   color: var(--navlink-color);
   border-color: var(--navlink-border-color);
@@ -189,23 +189,23 @@
   display: inline-block;
 }
 
-.dark>header nav::after {
+.light>header nav::after {
   position: absolute;
   right: 0;
   background: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, .5) 80%, rgba(100, 100, 100, 1) 100%);
 }
 
-.dark nav:first-of-type a[itemprop="url"]:first-of-type {
+.light nav:first-of-type a[itemprop="url"]:first-of-type {
   color: var(--trim-color);
 }
 
-.dark nav a[itemprop="url"]:hover,
-.dark nav a[itemprop="url"]:focus {
+.light nav a[itemprop="url"]:hover,
+.light nav a[itemprop="url"]:focus {
   color: var(--navlink-color--active);
   background-color: var(--navlink-bg-color--active);
 }
 
-.dark nav a[itemprop="url"] svg {
+.light nav a[itemprop="url"] svg {
   stroke: var(--accent-color);
   margin-bottom: -2px;
 }
