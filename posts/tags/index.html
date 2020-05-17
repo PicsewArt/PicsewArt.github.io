@@ -3,10 +3,39 @@ layout: default
 title: "Tags"
 active_title: "Posts"
 ---
-<table style="text-align: center;">
+<!-- <table style="text-align: center;">
   <tr><th>Tag</th><th>Contains</th></tr>
   {% for tag in site.tags %}<tr><td><a href="#{{ tag[0] | replace: ' ', '_' }}">{{ tag[0] | replace: '__', '\_\_' }}</a></td><td>{{ tag[1].size }} post{% if tag[1].size > 1 %}s{% endif %}</td></tr>{% endfor %}
-</table>
+</table> -->
+{% assign all_tags = '' | split: '/' %}
+{% for tag in site.tags %}
+  {% assign tag_name = tag.first %}
+  {% assign tag_no_space = tag_name | replace: ' ', '_' %}
+  {% assign tag_href = "#" | append: tag_no_space %}
+  {% assign tag_posts = tag[1] %}
+  {% assign tag_count = tag_posts.size %}
+  {% capture tag_desc %}Contains {{ tag_count }} post{% if tag_count.size > 1 %}s{% endif %}{% endcapture %}
+  {% assign tag_img = site.url | append: site.path.hero.low | append: tag_posts.first.hero.url %}
+  <!-- element[0]: title -->
+  <!-- element[1]: subtitle -->
+  <!-- element[2]: subtitle scroll -->
+  <!-- element[3]: image -->
+  <!-- element[4]: url -->
+  {% assign this_tag = '' | split: '/' %}
+  {% assign this_tag = this_tag | push: tag_name %}
+  {% assign this_tag = this_tag | push: tag_desc  %}
+  {% assign this_tag = this_tag | push: 'Click to view' %}
+  {% assign this_tag = this_tag | push: tag_img %}
+  {% assign this_tag = this_tag | push: tag_href %}
+
+  {% assign all_tags = all_tags | push: this_tag %}
+{% endfor %}
+{% assign all_tags_container = '' | split: '/' %}
+{% assign all_tags_container = all_tags_container | push: all_tags %}
+{% include grid_image_overlay_fade_detailed_list.html sectionid="counter" list=all_tags_container title="All Tags" title_url='' desc='' cols=3 %}
+<br />
+<hr>
+<br />
 <br />
 <hr>
 <br />
