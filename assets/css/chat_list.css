@@ -32,6 +32,11 @@
   line-height: 30px;
 }
 
+.chat-title h2::before,
+.chat-title h2::after {
+  display: none;
+}
+
 .chat-title .avatar {
   float: left;
   margin: 10px;
