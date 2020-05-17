@@ -15,9 +15,9 @@ on_load:
   call: ""
   def: ''
 ---
+{% assign all_media = '' | split: '/' %}
 {% for album in site.gallery %}
   {% if album.published %}
-    {% assign all_media = '' | split: '/' %}
     {% for item in album.media %}
       {% assign this_item = '' | split: '/' %}
 
