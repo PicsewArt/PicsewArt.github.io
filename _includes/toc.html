@@ -117,7 +117,7 @@
 {% endcapture %}{% assign tocWorkspace = '' %}
 {% assign mdtoc = my_toc | markdownify | strip %}
 {% if mdtoc.size > 0 %}
-<details style="background-color: var(--atomone-gray); padding: 1rem 2rem; margin: 1rem 0; border-radius: 3px;">
+<details class="toc">
   <summary>{% if page.toc == 'cn' %}目录{% else %}Table of Content{% endif %}</summary>
   <nav id="TableOfContents" style="">
     {{ mdtoc }}
