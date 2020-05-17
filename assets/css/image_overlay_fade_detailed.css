@@ -28,12 +28,12 @@ figure.overlay-image-fade-detailed img {
 
 figure.overlay-image-fade-detailed figcaption {
   position: absolute;
-  bottom: 0%;
+  bottom: calc(0% - 1px);
   left: 0;
   width: 100%;
   z-index: 1;
-  -webkit-transform: translateY(100%);
-  transform: translateY(100%);
+  -webkit-transform: translateY(calc(100% + 1px));
+  transform: translateY(calc(100% + 1px));
 }
 
 figure.overlay-image-fade-detailed h2,
