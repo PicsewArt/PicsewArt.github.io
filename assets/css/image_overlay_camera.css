@@ -24,7 +24,7 @@ figure.overlay-image-camera * {
 figure.overlay-image-camera img {
   max-width: 100%;
   position: relative;
-  opacity: 0.35;
+  opacity: 0.75;
 }
 
 figure.overlay-image-camera figcaption {
