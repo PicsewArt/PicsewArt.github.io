@@ -17,14 +17,12 @@ active_title: "Posts"
   {% capture cat_desc %}Contains {{ cat_count }} post{% if cat_count.size > 1 %}s{% endif %}{% endcapture %}
   {% assign cat_img = site.url | append: site.path.hero.low | append: '/' | append: cat_posts.first.hero.url %}
   <!-- element[0]: title -->
-  <!-- element[1]: subtitle -->
-  <!-- element[2]: subtitle scroll -->
-  <!-- element[3]: image -->
-  <!-- element[4]: url -->
+  <!-- element[1]: desc -->
+  <!-- element[2]: image -->
+  <!-- element[3]: url -->
   {% assign this_cat = '' | split: '/' %}
   {% assign this_cat = this_cat | push: cat_name %}
   {% assign this_cat = this_cat | push: cat_desc  %}
-  {% assign this_cat = this_cat | push: 'Click to view' %}
   {% assign this_cat = this_cat | push: cat_img %}
   {% assign this_cat = this_cat | push: cat_href %}
 
