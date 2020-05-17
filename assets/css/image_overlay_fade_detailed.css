@@ -51,6 +51,7 @@ figure.overlay-image-fade-detailed h2 {
   font-weight: 400;
   text-transform: uppercase;
   line-height: 24px;
+  margin-bottom: 5px;
 }
 
 figure.overlay-image-fade-detailed h2::before,

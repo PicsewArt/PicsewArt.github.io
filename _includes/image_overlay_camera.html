@@ -1,4 +1,7 @@
-<figure class="overlay-image-camera" style="{% if include.maxwidth.size > 0 %}max-width: {{ include.maxwidth }} !important;{% endif %}">
+{% assign this_media_type = include.type | default: 'image' %}
+{% assign this_media_format = include.format | default: 'jpeg' %}
+{% capture this_media_mix %} type="{{ this_media_type }}/{{ this_media_format }}"{% if this_media_type == 'video'%} data-poster="{{ include.thumb }}" data-sources='[{ "href": "{{ include.href }}", "type": "{{ this_media_type }}/{{ this_media_format }}"}]'{% endif %}{% endcapture %}
+<figure class="overlay-image-camera" {{ this_media_mix }} style="{% if include.maxwidth.size > 0 %}max-width: {{ include.maxwidth }} !important;{% endif %}">
   <img src="{{ inlcude.image }}" />
   <figcaption>
     <div class="heading">
@@ -8,5 +11,5 @@
       <p>{{ include.subtitle }}</p>
     </div>
   </figcaption>
-  {% if include.href.size > 0 %}<a href="{{ include.href }}"></a>{% endif %}
+  {% if include.href.size > 0 %}<a href="{{ include.href }}" {{ this_media_mix }}></a>{% endif %}
 </figure>
