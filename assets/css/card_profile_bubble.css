@@ -88,6 +88,14 @@
   border: none !important;
 }
 
+.dark .card-profile-bubble a {
+  color: #fff;
+}
+
+.dark .card-profile-bubble a {
+  color: var(--light-text-color);
+}
+
 .card-profile-bubble a:hover {
   background: none !important;
 }

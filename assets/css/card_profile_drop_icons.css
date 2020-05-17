@@ -71,6 +71,7 @@
 
 .drop-icons-profile-card .icons a {
   display: inline-block;
+  border: none !important;
 }
 
 .drop-icons-profile-card .icons i {
