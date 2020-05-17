@@ -1,9 +1,31 @@
+.hack h1 {
+  position: relative;
+  display: inline-block;
+  display: table-cell;
+  padding: 20px 0 30px;
+  margin: 0;
+  overflow: hidden
+}
+
 .hack h1:after {
   content: "====================================================================================================";
   position: absolute;
   bottom: 3px;
   left: 0;
   font-size: 1rem;
+}
+
+.hack h1+* {
+  margin-top: 0
+}
+
+.hack h2,
+.hack h3,
+.hack h4,
+.hack h5,
+.hack h6 {
+  position: relative;
+  margin-bottom: 1.75rem
 }
 
 .hack h2:before,

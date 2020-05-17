@@ -1156,3 +1156,9 @@ ul.thumbnail.grid li a:hover figure::after {
   height: 100%;
   background: radial-gradient(circle, rgba(0, 0, 0, 0.1) 0, rgba(0, 0, 0, 0.3) 100%)
 }
+
+/* EXTENDED */
+
+.article-content {
+margin-top: 20px;
+}
