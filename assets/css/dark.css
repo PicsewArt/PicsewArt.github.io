@@ -319,4 +319,6 @@
 
 .light .theme-toggler {
   fill: var(--dark-text-color);
+  max-width: 14px;
+  max-height: 14px;
 }
