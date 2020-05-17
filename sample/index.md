@@ -491,3 +491,8 @@ int main(int argc, char *argv[]) {
 ### Tinted Post Card
 
 <blockquote>{% include card_post_tinted.html title=site.name desc=site.description image='/assets/images/hero/low/HERO_SADNESS_V_0001.jpg' href=site.url color='green' button='View More' %}</blockquote>
+
+# Chat List
+
+{% assign chatlist = '' | split: '/' %}{% for post in site.posts limit: 6 %}{% assign chat = '' | split: '/' %}{% if forloop.index == 3 %}{% assign chat = chat | push: 'image' %}{% assign chat_img = site.path.hero.low | append: '/' | append: post.hero.url %}{% assign chat = chat | push: chat_img %}{% else %}{% assign post_ex = post.content | strip_html | strip_newlines | slice: 0, 88 | append: '.' %}{% assign chat = chat | push: 'text' %}{% assign chat = chat | push: post_ex %}{% endif %}{% assign chat_time = '20:' | append: forloop.index | append: '0' %}{% assign chat = chat | push: chat_time %}{% assign chatlist = chatlist | push: chat %}{% endfor %}
+<blockquote>{% include chat_list.html title=site.name avatar='/assets/images/avatar.jpg' list=chatlist %}</blockquote>

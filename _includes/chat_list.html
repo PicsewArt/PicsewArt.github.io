@@ -1,0 +1,20 @@
+<div class="chat">
+  <div class="chat-title">
+    <h2>{{ include.title }}</h2>
+    <figure class="avatar"><img src="{{ include.avatar }}"></figure>
+  </div>
+  <div class="messages">
+    <div class="messages-content">
+      {% for item in include.list %}
+      <!-- [0]: type: 'text'/'image' -->
+      <!-- [1]: content: text/image -->
+      <!-- [2]: time: 19:22 -->
+      <div class="message">{% if item.first == 'text' %}{{ item[1] }}{% elsif item.first == 'image' %}<img src="{{ item[1] }}"/>{% else %}...{% endif %}<div class="timestamp">{{ item.last }}</div></div>
+      {% endfor %}
+    </div>
+  </div>
+  <div class="action-box">
+    <textarea class="action-box-input" type="text" placeholder="Type message..."></textarea>
+    <button class="action-box-submit" type="submit" onclick="insertMessage()"><i class="fa fa-paper-plane"></i></button>
+  </div>
+</div>
