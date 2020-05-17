@@ -5,6 +5,13 @@
   /* margin-bottom: 1.75rem; */
 }
 
+.light .alert {
+  color: var(--light-text-color);
+  padding: 1rem;
+  border: 1px solid var(--light-text-color);
+  /* margin-bottom: 1.75rem; */
+}
+
 .alert-success {
   color: #4caf50;
   border-color: #4caf50

@@ -112,7 +112,7 @@ button.animated-button .button-text {
   color: #282936 !important;
 }
 
-.dark button.animated-button:hover .button-text {
+.light button.animated-button:hover .button-text {
   color: #fff !important;
 }
 
