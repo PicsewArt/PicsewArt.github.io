@@ -256,15 +256,15 @@
 }
 
 .dark .form[role="search"] label {
-  color: var(--trim-color);
+  color: var(--trim-color) !important;
 }
 
 .dark .form[role="search"] .form-control {
-  color: var(--link-color--active);
+  color: var(--link-color--active) !important;
 }
 
 .dark .form[role="search"] .form-control:focus,
 .dark .form[role="search"] .form-control:hover,
 .dark .form[role="search"] .form-control:target {
-  color: var(--link-color--active);
+  color: var(--link-color--active) !important;
 }

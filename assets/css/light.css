@@ -251,15 +251,15 @@
 }
 
 .dark .form[role="search"] label {
-  color: var(--light-link-color);
+  color: var(--light-link-color) !important;
 }
 
 .dark .form[role="search"] .form-control {
-  color: var(--trim-color);
+  color: var(--trim-color) !important;
 }
 
 .dark .form[role="search"] .form-control:focus,
 .dark .form[role="search"] .form-control:hover,
 .dark .form[role="search"] .form-control:target {
-  color: var(--trim-color);
+  color: var(--trim-color) !important;
 }
