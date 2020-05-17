@@ -36,8 +36,8 @@ cols: 3
 		{% assign this_item = this_item | push: album.desc %}
     {% assign this_item = this_item | push: this_thumbnail_url %}
     {% assign this_item = this_item | push: this_media_url %}
+    {% assign this_item = this_item | push: album.media.first.type %}
 		{% assign this_item = this_item | push: album.media.first.format %}
-		{% assign this_item = this_item | push: album.media.first.type %}
 
 		{% assign recent_media = recent_media | push: this_item %}
 	{% endfor %}
