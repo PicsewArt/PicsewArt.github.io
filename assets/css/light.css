@@ -25,7 +25,7 @@
 }
 
 .light.light h1[itemprop] {
-  filter: brightness(3);
+  filter: brightness(1);
 }
 
 .light strong {
@@ -170,6 +170,12 @@
 .light .menu .menu-item:hover {
   color: var(--light-text-color);
   border-color: var(--light-text-color)
+}
+
+.light a {
+  color: var(--light-link-color);
+  background-color: var(--light-link-bg-color);
+  border-color: var(--light-link-border-color);
 }
 
 .light a:hover,

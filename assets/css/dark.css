@@ -177,11 +177,16 @@
   border-color: #ccc
 }
 
+.light a {
+  color: var(--light-link-color);
+  background-color: var(--light-link-bg-color);
+  border-color: var(--light-link-border-color);
+}
+
 .dark a:hover,
 .dark a:focus {
-  color: var(--link-color--active);
-  background-color: var(--link-bg-color--active);
-  border-color: var(--link-border-color--active);
+  color: var(--navlink-color);
+  border-color: var(--navlink-border-color);
   outline: none;
 }
 
