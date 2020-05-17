@@ -1,3 +1,24 @@
+:root {
+  --dark-link-color: var(--link-color);
+  --dark-link-color--active: var(--link-color--active);;
+  --dark-link-bg-color: rgba(0,0,0,0);
+  --dark-link-bg-color--active: var(--link-bg-color--active);
+  --dark-link-border-color: var(--link-border-color);
+  --dark-link-border-color--active: var(--link-border-color--active);
+
+  --dark-nav-color: var(--link-color);
+  --dark-nav-color--active: var(--link-color--active);
+  --dark-nav-bg-color: rbga(0,0,0,0);
+  --dark-nav-bg-color--active: var(--link-bg-color--active);
+  --dark-nav-border-color: var(--link-border-color);
+  --dark-nav-border-color--active: var(--link-border-color--active);
+
+  --dark-text-color: var(--hackcss-dark--text-color);
+  --dark-text-color--stronger: #fff;
+  --dark-bg-color: #000;
+  --dark-code-color: #fff;
+}
+
 .dark {
   background-color: #000;
   color: #ccc;
@@ -208,4 +229,23 @@
 .dark nav a[itemprop="url"] svg {
   stroke: var(--accent-color);
   margin-bottom: -2px;
+}
+
+.dark a.btn {
+  cursor: pointer;
+  text-decoration: none;
+  /* text-transform: uppercase; */
+  text-transform: lowercase;
+  border-bottom: 1px var(--trim-color) dashed !important;
+  /* background-color: #f0fefe; */
+  color: var(--trim-color) !important;
+  padding: 6px;
+  margin: unset;
+  display: inline-block;
+}
+
+.dark a.btn:hover {
+  /* background-color: #ff2e88; */
+  background-color: var(--navlink-bg-color--active) !important;
+  color: #fff
 }

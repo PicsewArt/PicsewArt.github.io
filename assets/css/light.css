@@ -1,11 +1,27 @@
-.light {
-  background-color: #000;
-  color: #ccc;
+:root {
+  --light-link-color: #2BBC8A;
+  --light-link-color--active: #2BBC8A;
+  --light-link-bg-color: #fff;
+  --light-link-bg-color--active: RGBA(255,212,59,0.33);
+  --light-link-border-color: #2BBC8A;
+  --light-link-border-color--active: #2BBC8A;
+
+  --light-nav-color: #2BBC8A;
+  --light-nav-color--active: #2BBC8A;
+  --light-nav-bg-color: #fff;
+  --light-nav-bg-color--active: RGBA(255,212,59,0.33);
+  --light-nav-border-color: #2BBC8A;
+  --light-nav-border-color--active: #2BBC8A;
+
+  --light-text-color: #333;
+  --light-text-color--stronger: #000;
+  --light-bg-color: #fff;
+  --light-code-color: #CC2A41;
 }
 
-.light.light {
-  color: var(--text-color--light);
-  /* reset */
+.light {
+  background-color: var(--light-bg-color);
+  color: var(--light-text-color);
 }
 
 .light.light h1[itemprop] {
@@ -22,7 +38,7 @@
 }
 
 .light .alert strong {
-  color: #fff;
+  color: var(--light-text-color);
 }
 
 .light .alert strong:before, .light .alert strong:after {
@@ -34,32 +50,32 @@
 .light h3 a,
 .light h4 a,
 .light h5 a {
-  color: #ccc
+  color: var(--light-text-color);
 }
 
 .light code {
-  color: #fff;
+  color: var(--light-code-color);
 }
 
 .light code {
-  font-weight: 100
+  font-weight: 100;
 }
 
 .light table {
-  color: #ccc
+  color: var(--light-text-color);
 }
 
 .light table td,
 .light table th {
-  border-color: #444
+  border-color: var(--light-text-color);
 }
 
 .light table tbody td:first-child {
-  color: #fff
+  color: var(--light-text-color);
 }
 
 .light .form-group label {
-  color: #ccc;
+  color: var(--light-text-color);
   border-color: rgba(95, 95, 95, .78)
 }
 
@@ -68,17 +84,17 @@
 }
 
 .light .form-control {
-  color: #ccc;
+  color: var(--light-text-color);
   border-color: rgba(95, 95, 95, .78)
 }
 
 .light .form-control:focus {
-  border-color: #ccc;
-  color: #ccc
+  border-color: var(--light-text-color);
+  color: var(--light-text-color)
 }
 
 .light textarea.form-control {
-  color: #ccc
+  color: var(--light-text-color)
 }
 
 .light .card {
@@ -87,7 +103,7 @@
 
 .light .card .card-header {
   background-color: transparent;
-  color: #ccc;
+  color: var(--light-text-color);
   border-bottom: 1px solid rgba(95, 95, 95, .78)
 }
 
@@ -142,25 +158,25 @@
 .light .avatarholder,
 .light .placeholder {
   background-color: transparent;
-  border-color: #333
+  border-color: var(--light-text-color);
 }
 
 .light .menu .menu-item {
-  color: #ccc;
+  color: var(--light-text-color);
   border-color: rgba(95, 95, 95, .78)
 }
 
 .light .menu .menu-item.active,
 .light .menu .menu-item:hover {
-  color: #fff;
-  border-color: #ccc
+  color: var(--light-text-color);
+  border-color: var(--light-text-color)
 }
 
 .light a:hover,
 .light a:focus {
-  color: var(--link-color--active);
-  background-color: var(--link-bg-color--active);
-  border-color: var(--link-border-color--active);
+  color: var(--light-link-color--active);
+  background-color: var(--light-link-bg-color--active);
+  border-color: var(--light-link-border-color--active);
   outline: none;
 }
 
@@ -169,9 +185,9 @@
 }
 
 .light nav a[itemprop="url"].active {
-  color: var(--navlink-color--active);
-  background-color: var(--navlink-bg-color--active);
-  border-color: var(--navlink-border-color--active);
+  color: var(--light-nav-color--active);
+  background-color: var(--light-nav-bg-color--active);
+  border-color: var(--light-nav-border-color--active);
 }
 
 .light nav a[itemprop="url"].active:hover,
@@ -182,8 +198,9 @@
 .light nav a[itemprop="url"],
 .light nav.readmore a {
   text-transform: lowercase;
-  color: var(--navlink-color);
-  border-color: var(--navlink-border-color);
+  color: var(--light-nav-color);
+  background-color: var(--light-nav-bg-color);
+  border-color: var(--light-nav-border-color);
   padding: 6px;
   margin: unset;
   display: inline-block;
@@ -196,16 +213,33 @@
 }
 
 .light nav:first-of-type a[itemprop="url"]:first-of-type {
-  color: var(--trim-color);
+  color: var(--light-link-color);
 }
 
 .light nav a[itemprop="url"]:hover,
 .light nav a[itemprop="url"]:focus {
-  color: var(--navlink-color--active);
-  background-color: var(--navlink-bg-color--active);
+  color: var(--light-link-color);
+  background-color: var(--light-nav-bg-color--active);;
 }
 
 .light nav a[itemprop="url"] svg {
   stroke: var(--accent-color);
   margin-bottom: -2px;
+}
+
+.light a.btn {
+  cursor: pointer;
+  text-decoration: none;
+  text-transform: lowercase;
+  border-bottom: 1px var(--light-link-color) dashed;
+  color: var(--light-link-color);
+  padding: 6px;
+  margin: unset;
+  display: inline-block;
+}
+
+.light a.btn:hover {
+  /* background-color: #ff2e88; */
+  background-color: var(--light-nav-bg-color--active);;
+  color: #fff
 }

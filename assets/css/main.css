@@ -1,6 +1,68 @@
 ---
 layout: null
 ---
+:root {
+  scroll-behavior: smooth;
+  --screen-size-small: 30em;
+
+  /* vendor defaults */
+  --hackcss-dark--text-color: #ccc;
+
+  --code-bg-color: #00bcd4;
+
+  /* shades of gray */
+  --white-smoke-gray: #f5f5f5;
+  --platinum-gray: #e5e4e2;
+  --battleship-gray: #848482;
+  --marengo-gray: #4c5866;
+  --charcoal-gray: #36454f;
+  --jet-gray: #343434;
+  --gunmetal-gray: #2a3439;
+
+  --accessible-gray: #959595;
+  /* 7.0 constrast / black - AAA conformance */
+  --atomone-gray: #282c34;
+
+  /* shades of black */
+  --licorice-black: #1a1110;
+  --smoky-black: #100c08;
+
+  /* border and accent colors */
+  --trim-color: fuchsia;
+  /* used in layout – controls theme-color meta */
+  --accent-color: #ff9800;
+
+  /* text colors */
+  --text-color--light: var(--hackcss-dark--text-color);
+  --text-color--dark: var(--gunmetal-gray);
+  --text-color--muted: var(--marengo-gray);
+
+  /* action colors */
+  --primary-color: #2196f3;
+  --success-color: #4caf50;
+  --warning-color: #ff9800;
+  --error-color: #f44336;
+  --info-color: #00bcd4;
+
+  /* link colors */
+  --link-color: #f9f;
+  /* f0f, dc6ae8, 0f0 */
+  --link-color--active: #0f0;
+  /* f9f, f0f, dc6ae8 */
+  --link-border-color: #dc6ae8;
+  /* 0f0, f9f, f0f */
+  --link-border-color--active: #f0f;
+  /* dc6ae8, 0f0, f0f */
+  --link-bg-color--active: #dc6ae840;
+
+  /* navigation colors */
+  --navlink-color: var(--link-color);
+  --navlink-color--active: var(--link-color--active);
+  --navlink-border-color: var(--link-border-color);
+  --navlink-border-color--active: var(--link-border-color--active);
+  --navlink-bg-color--active: var(--link-bg-color--active);
+
+}
 html {
   font-size: 12px
 }
@@ -60,25 +122,6 @@ a {
 
 a:hover {
   background-color: #ff2e88;
-  color: #fff
-}
-
-a.btn {
-  cursor: pointer;
-  text-decoration: none;
-  /* text-transform: uppercase; */
-  text-transform: lowercase;
-  border-bottom: 1px var(--trim-color) dashed !important;
-  /* background-color: #f0fefe; */
-  color: var(--trim-color) !important;
-  padding: 6px;
-  margin: unset;
-  display: inline-block;
-}
-
-a.btn:hover {
-  /* background-color: #ff2e88; */
-  background-color: var(--navlink-bg-color--active) !important;
   color: #fff
 }
 
@@ -1031,11 +1074,6 @@ select.form-control {
   color: #ffd43b;
 }
 
-:root {
-  scroll-behavior: smooth;
-  --screen-size-small: 30em
-}
-
 @keyframes intro {
   0% {
     opacity: 0
@@ -1245,66 +1283,6 @@ img {
   html {
     margin-left: calc(100vw - 100%)
   }
-}
-
-:root {
-  /* vendor defaults */
-  --hackcss-dark--text-color: #ccc;
-
-  --code-bg-color: #00bcd4;
-
-  /* shades of gray */
-  --white-smoke-gray: #f5f5f5;
-  --platinum-gray: #e5e4e2;
-  --battleship-gray: #848482;
-  --marengo-gray: #4c5866;
-  --charcoal-gray: #36454f;
-  --jet-gray: #343434;
-  --gunmetal-gray: #2a3439;
-
-  --accessible-gray: #959595;
-  /* 7.0 constrast / black - AAA conformance */
-  --atomone-gray: #282c34;
-
-  /* shades of black */
-  --licorice-black: #1a1110;
-  --smoky-black: #100c08;
-
-  /* border and accent colors */
-  --trim-color: fuchsia;
-  /* used in layout – controls theme-color meta */
-  --accent-color: #ff9800;
-
-  /* text colors */
-  --text-color--light: var(--hackcss-dark--text-color);
-  --text-color--dark: var(--gunmetal-gray);
-  --text-color--muted: var(--marengo-gray);
-
-  /* action colors */
-  --primary-color: #2196f3;
-  --success-color: #4caf50;
-  --warning-color: #ff9800;
-  --error-color: #f44336;
-  --info-color: #00bcd4;
-
-  /* link colors */
-  --link-color: #f9f;
-  /* f0f, dc6ae8, 0f0 */
-  --link-color--active: #0f0;
-  /* f9f, f0f, dc6ae8 */
-  --link-border-color: #dc6ae8;
-  /* 0f0, f9f, f0f */
-  --link-border-color--active: #f0f;
-  /* dc6ae8, 0f0, f0f */
-  --link-bg-color--active: #dc6ae840;
-
-  /* navigation colors */
-  --navlink-color: var(--link-color);
-  --navlink-color--active: var(--link-color--active);
-  --navlink-border-color: var(--link-border-color);
-  --navlink-border-color--active: var(--link-border-color--active);
-  --navlink-bg-color--active: var(--link-bg-color--active);
-
 }
 
 .js-copied {
