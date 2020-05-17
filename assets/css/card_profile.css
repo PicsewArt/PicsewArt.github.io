@@ -68,6 +68,10 @@
   opacity: 0.9;
 }
 
+.profile-card a {
+  border: none !important;
+}
+
 .profile-card .icons {
   position: absolute;
   bottom: 0;

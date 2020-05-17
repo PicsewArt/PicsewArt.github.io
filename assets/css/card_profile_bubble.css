@@ -92,7 +92,7 @@
   color: #fff;
 }
 
-.dark .card-profile-bubble a {
+.light .card-profile-bubble a {
   color: var(--light-text-color);
 }
 

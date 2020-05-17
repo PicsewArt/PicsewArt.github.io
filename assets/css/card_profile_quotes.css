@@ -16,7 +16,7 @@ figure.quotes-profile-card {
   color: #333;
 }
 
-.dark figure.quotes-profile-card {
+.light figure.quotes-profile-card {
   color: #ccc;
 }
 
@@ -127,6 +127,6 @@ figure.quotes-profile-card .author span {
   color: #000;
 }
 
-.dark figure.quotes-profile-card .author span {
+.light figure.quotes-profile-card .author span {
   color: #fff;
 }

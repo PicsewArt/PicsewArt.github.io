@@ -87,6 +87,10 @@ figure.bordered-profile-card h6:after {
   overflow: hidden;
 }
 
+.bordered-profile-card a {
+  border: none !important;
+}
+
 .bordered-profile-card .icons {
   text-align: center;
   width: 100%;
