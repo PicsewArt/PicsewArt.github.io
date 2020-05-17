@@ -13,7 +13,7 @@
     <div class="post-content">
       <div class="category">{{ include.badge }}</div>
       <h1 class="title">{{ include.title }}</h1>
-      <h2 class="sub_title">{{ include.subtitle }}</h2>
+      {% if include.subtitle.size > 0 %}<h2 class="sub_title">{{ include.subtitle }}</h2>{% endif %}
       <p class="description">{{ include.desc }}</p>
       <div class="post-meta"><span class="timestamp"><i class="fa fa-clock-o"></i>&nbsp;{{ include.date }}</span></div>
     </div>
