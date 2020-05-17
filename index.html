@@ -43,6 +43,6 @@ cols: 3
 	{% endfor %}
 	{% assign recent_media_container = '' | split: '/' %}
 	{% assign recent_media_container = recent_media_container | push: recent_media %}
-  <!-- {{ recent_media | inspect }} -->
+
 	{% include grid_image_overlay_camera_list.html sectionid="recent-meida" list=recent_media_container cols=page.cols title='Recent Media' title_url="/gallery/index.html" desc='Passionate about photography and enjoy taking pictures all around the world.' readmore_title="View More" readmore='/gallery/index.html' %}
 	{% include gallery_lightbox.html %}

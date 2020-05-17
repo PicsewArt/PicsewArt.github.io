@@ -23,7 +23,7 @@ active_title: 'Albums'
 	{% endfor %}
 	{% assign all_media_container = '' | split: '/' %}
 	{% assign all_media_container = all_media_container | push: all_media %}
-	<!-- {{ all_media | inspect }} -->
+
 	{% include grid_image_overlay_camera_list.html sectionid="album-meida" list=all_media_container cols=3 %}
 	<br />
 	{% include button_back.html %}

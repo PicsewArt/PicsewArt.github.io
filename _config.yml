@@ -83,7 +83,7 @@ defaults:
       afterlink_css: []
       preload_js: []
       preload_css: []
-      afterload_js: ['bindGalleryEventById("grouped-list-section-s");']
+      afterload_js: ['bindGalleryEventById("grouped-list-section-salbum-meida");']
       afterload_css: []
       on_load:
         call: ""
