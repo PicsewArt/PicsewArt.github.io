@@ -15,6 +15,10 @@
   font-size: 1rem;
 }
 
+.hack header h1 {
+  padding: 0;
+}
+
 .hack header h1:after {
   content: none;
   display: none;
