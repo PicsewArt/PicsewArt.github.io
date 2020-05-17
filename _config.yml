@@ -11,6 +11,8 @@ timezone: Asia/Shanghai
 range:
   start: 2020
   end: 2020
+# theme: dark
+theme: light
 
 hero:
   url: 'HERO_SADNESS_H_0009.jpg'

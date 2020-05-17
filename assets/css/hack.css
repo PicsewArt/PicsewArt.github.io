@@ -1,0 +1,431 @@
+.hack,
+.hack blockquote,
+.hack code,
+.hack em,
+.hack strong {
+  font-size: 1rem;
+}
+
+.hack,
+.hack blockquote,
+.hack code,
+.hack em,
+.hack h1,
+.hack h2,
+.hack h3,
+.hack h4,
+.hack h5,
+.hack h6,
+.hack strong {
+  font-size: 1rem;
+  font-style: normal;
+  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif
+}
+
+.hack h1 { font-size: 2.0rem; }
+.hack h2 { font-size: 1.5em; }
+.hack h3 { font-size: 1.17em; }
+.hack h4 { font-size: 1.0em; }
+.hack h5 { font-size: 0.83em; }
+.hack h6 { font-size: 0.67em; }
+
+.hack blockquote,
+.hack code,
+.hack em,
+.hack strong,
+.hack strong:before,
+.hack strong:after {
+  line-height: 20px
+}
+
+.hack blockquote,
+.hack code,
+.hack footer,
+.hack h1,
+.hack h2,
+.hack h3,
+.hack h4,
+.hack h5,
+.hack h6,
+.hack header,
+.hack li,
+.hack ol,
+.hack p,
+.hack section,
+.hack ul {
+  float: none;
+  margin: 0;
+  padding: 0
+}
+
+.hack blockquote,
+.hack h1,
+.hack ol,
+.hack p,
+.hack ul {
+  margin-top: 20px;
+  margin-bottom: 20px
+}
+
+.hack h1 {
+  position: relative;
+  display: inline-block;
+  display: table-cell;
+  padding: 20px 0 30px;
+  margin: 0;
+  overflow: hidden
+}
+
+.hack h1:after {
+  content: "====================================================================================================";
+  position: absolute;
+  bottom: 3px;
+  left: 0;
+  font-size: 1rem;
+}
+
+.hack h1+* {
+  margin-top: 0
+}
+
+.hack h2,
+.hack h3,
+.hack h4,
+.hack h5,
+.hack h6 {
+  position: relative;
+  margin-bottom: 1.75rem
+}
+
+.hack h2:before,
+.hack h3:before,
+.hack h4:before,
+.hack h5:before,
+.hack h6:before {
+  display: inline
+}
+
+.hack h2:before {
+  content: "## "
+}
+
+.hack h3:before {
+  content: "### "
+}
+
+.hack h4:before {
+  content: "#### "
+}
+
+.hack h5:before {
+  content: "##### "
+}
+
+.hack h6:before {
+  content: "###### "
+}
+
+.hack li {
+  position: relative;
+  display: block;
+  padding-left: 20px
+}
+
+.hack li:after {
+  position: absolute;
+  top: 0;
+  left: 0
+}
+
+.hack ul>li:after {
+  content: "-"
+}
+
+.hack ol {
+  counter-reset: a
+}
+
+.hack ol>li:after {
+  content: counter(a) ".";
+  counter-increment: a
+}
+
+.hack ol li:nth-child(n+10):after {
+  left: -7px
+}
+
+.hack blockquote {
+  position: relative;
+  /* padding-left: 17px; */
+  /* padding-left: 2ch; */
+  padding-left: 3rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-right: 1rem;
+  overflow: hidden;
+  background-color: var(--atomone-gray);
+}
+
+.hack blockquote:before {
+  /* content: ">\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>"; */
+  content: '“';
+  white-space: pre;
+  position: absolute;
+  top: 1.5rem;
+  left: 0.5rem;
+  line-height: 20px;
+  font-size: 3rem;
+}
+
+.hack em:after,
+.hack em:before {
+  content: "*";
+  display: inline
+}
+
+.hack em {
+  font-style: italic;
+  color: #64AFEB;
+}
+
+.hack pre code:after,
+.hack pre code:before {
+  content: ""
+}
+
+.hack pre code {
+  font-weight: normal;
+  border: none;
+  /* color: var(--text-color--light); */
+  background: none !important;
+  padding: 0;
+  margin: 0;
+  border-radius: 0;
+}
+
+.hack code {
+  font-weight: 700;
+  border: 1px solid var(--charcoal-gray);
+  /* color: var(--text-color--light); */
+  color: #fff;
+  /* background-color: var(--code-bg-color); */
+  padding: 1px 4px;
+  margin: 0 2px;
+  border-radius: 3px;
+  word-break: break-all;
+}
+
+.hack code:after,
+.hack code:before {
+  content: "`";
+  display: inline
+}
+
+.hack hr {
+  position: relative;
+  height: 20px;
+  overflow: hidden;
+  border: 0;
+  margin: 20px 0
+}
+
+.hack hr:after {
+  content: "----------------------------------------------------------------------------------------------------";
+  position: absolute;
+  top: 0;
+  left: 0;
+  line-height: 20px;
+  width: 100%;
+  word-wrap: break-word
+}
+
+@-moz-document url-prefix() {
+  .hack h1 {
+    display: block
+  }
+}
+
+.hack-ones ol>li:after {
+  content: "1."
+}
+
+.hack pre {
+  background-color: #000;
+}
+
+.hack pre {
+  tab-size: 4;
+  -moz-tab-size: 4;
+  word-wrap: break-word;
+  white-space: pre-wrap;
+  border: 0;
+}
+
+.hack pre code {
+  color: #ffd43b;
+}
+
+.hack .readmore {
+  margin-bottom: 2.2em
+}
+
+.hack li ul {
+  margin: 0
+}
+
+.hack ol li {
+  padding-left: 27px
+}
+
+.hack .form input,
+.hack .form textarea,
+.hack .form button,
+.hack .form label {
+  font-size: 1rem
+}
+
+.hack .alert .highlight:first-of-type .chroma,
+.hack .card .highlight:first-of-type .chroma,
+.hack .alert pre:first-of-type,
+.hack .alert p:first-of-type,
+.hack .card pre:first-of-type,
+.hack .card p:first-of-type {
+  margin-top: unset
+}
+
+.hack .alert .highlight:last-of-type .chroma,
+.hack .card .highlight:last-of-type .chroma,
+.hack .alert pre:last-of-type,
+.hack .alert p:last-of-type,
+.hack .card pre:last-of-type,
+.hack .card p:last-of-type {
+  margin-bottom: unset
+}
+
+.hack blockquote,
+.hack blockquote:after {
+  line-height: 1.5
+}
+
+.hack figure,
+.standard figure {
+  margin: unset
+}
+
+.hack figure a {
+  border-bottom: none
+}
+
+.hack figure a:hover {
+  background-color: inherit
+}
+
+.hack .muted {
+  color: var(--text-color--muted);
+}
+
+.hack .help-block {
+  color: var(--accessible-gray);
+}
+
+.hack .help-block.status {
+  color: var(--white-smoke-gray);
+}
+
+.hack abbr[title],
+.hack acronym[title] {
+  text-decoration: unset;
+  border-bottom: 1px dotted var(--accent-color);
+}
+
+.hack a[rel*="external"]::after {
+  content: " "url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20class='i-external'%20viewBox='0%200%2032%2032'%20width='14'%20height='14'%20fill='none'%20stroke='%23ff9800'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='9.38%'%3E%3Cpath%20d='M14%209%20L3%209%203%2029%2023%2029%2023%2018%20M18%204%20L28%204%2028%2014%20M28%204%20L14%2018'/%3E%3C/svg%3E");
+}
+
+.hack table {
+  caption-side: bottom;
+}
+
+.hack caption {
+  margin-top: 0.5rem;
+  font-variant: all-small-caps;
+}
+
+.hack a {
+  color: var(--link-color);
+  border-bottom: 1px var(--link-border-color) dashed;
+}
+
+.hack samp {
+  color: var(--battleship-gray);
+}
+
+.hack kbd {
+  border: 1px solid var(--charcoal-gray);
+  color: var(--text-color--light);
+  background-color: var(--atomone-gray);
+  padding: 1px 4px;
+  margin: 0 2px;
+  border-radius: 3px;
+}
+
+.hack h1[itemprop] {
+  font-size: 2rem;
+  padding-bottom: unset;
+}
+
+.hack h1[itemprop],
+.hack h1[itemprop] a {
+  font-variant-caps: titling-caps;
+  background-color: var(--text-color--dark);
+  color: transparent;
+  text-shadow: 0 2px 3px rgba(255, 255, 255, 0.1);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+}
+
+.hack h1[itemprop]::after {
+  content: unset;
+}
+
+.hack h1[itemprop] a {
+  font-size: 1.4rem;
+  border: unset;
+}
+
+.hack h1[itemprop] a:hover,
+.hack h1[itemprop] a:focus {
+  background-color: var(--text-color--dark);
+  filter: brightness(1.2);
+}
+
+.hack header h1+p.muted {
+  text-transform: uppercase;
+  font-size: smaller;
+  /* margin-top: 0.25rem; */
+}
+
+.hack footer aside h1[itemprop] {
+  font-size: 1.4rem;
+}
+
+.hack p.muted a {
+  padding: 2px;
+}
+
+.hack p.muted svg {
+  margin-bottom: -5px;
+}
+
+.hack blockquote[itemprop="description"] {
+  font-style: oblique;
+}
+
+.hack .card .inner ul {
+  margin: unset;
+}
+
+.hack .card .card-content pre {
+  margin: unset;
+}
