@@ -22,7 +22,7 @@
 	{% endif %}
 {% endfor %}
 
-<section id="grouped-list-section-s{{ include.sectionid }}">
+<section id="grid-list-section-s{{ include.sectionid }}">
 		{% if include.title.size > 0 or include.desc.size > 0 %}
 		<header>
 			{% if include.title.size > 0 %}<h1 itemprop="name"><a href="{{ include.titleurl }}">{{ include.title }}</a></h1>{% endif %}

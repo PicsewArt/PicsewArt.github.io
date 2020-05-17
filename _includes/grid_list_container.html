@@ -1,5 +1,5 @@
 <!-- BEGIN A GRID GROUP SECTION -->
-<section id="grouped-list-section-s{{ include.sectionid }}" style="word-break: break-all;">
+<section class="grid-list-section" id="grid-list-section-s{{ include.sectionid }}" style="word-break: break-all;">
 	{% if include.title.size > 0 or include.desc.size > 0 %}
 	<header>
 		{% if include.title.size > 0 %}<h1 itemprop="name" id="{{ include.title | replace: ' ', '_' }}">{% if include.title_url.size > 0 %}<a href="{{ include.title_url }}">{{ include.title }}</a>{% else %}{{ include.title }}{% endif %}</h1>{% endif %}

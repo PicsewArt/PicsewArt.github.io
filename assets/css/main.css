@@ -1162,3 +1162,7 @@ ul.thumbnail.grid li a:hover figure::after {
 .article-content {
 margin-top: 20px;
 }
+
+.grid-list-section {
+  margin: 10px auto;
+}
