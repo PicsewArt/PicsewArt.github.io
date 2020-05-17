@@ -248,26 +248,9 @@ a.btn:hover {
 .hack code,
 .hack em,
 .hack strong,
-.dark strong:before,
-.dark strong:after {
+.hack strong:before,
+.hack strong:after {
   line-height: 20px
-}
-
-.dark strong {
-  color: #D09A6A;
-}
-
-.dark strong:before, .dark strong:after {
-  content: '**';
-  color: #D09A6A;
-}
-
-.dark .alert strong {
-  color: #fff;
-}
-
-.dark .alert strong:before, .dark .alert strong:after {
-  content: ''
 }
 
 .hack blockquote,
@@ -1031,180 +1014,22 @@ select.form-control {
   }
 }
 
-.dark {
-  color: #ccc
-}
-
-.dark,
-.dark pre {
+.hack pre {
   background-color: #000;
 }
 
-.dark pre {
+.hack pre {
   tab-size: 4;
   -moz-tab-size: 4;
   word-wrap: break-word;
   white-space: pre-wrap;
-  /* border-width: 0 0 0 3px; */
-  /* border-color: rgba(255,255,255,0.5); */
-  /* border: 1px solid var(--charcoal-gray); */
   border: 0;
-  /* color: var(--text-color--light); */
-  /* background-color: var(--atomone-gray); */
-  /* padding: 1px 4px; */
-  /* margin: 0 2px; */
-  /* border-radius: 3px; */
-  /* background-color: rgb(23, 42, 69) !important; */
 }
 
-.dark pre code {
-  /* color: #00bcd4 */
+.hack pre code {
   color: #ffd43b;
 }
 
-.dark h1 a,
-.dark h2 a,
-.dark h3 a,
-.dark h4 a,
-.dark h5 a {
-  color: #ccc
-}
-
-.dark code {
-  color: #fff;
-}
-
-.dark code {
-  font-weight: 100
-}
-
-.dark table {
-  color: #ccc
-}
-
-.dark table td,
-.dark table th {
-  border-color: #444
-}
-
-.dark table tbody td:first-child {
-  color: #fff
-}
-
-.dark .form-group label {
-  color: #ccc;
-  border-color: rgba(95, 95, 95, .78)
-}
-
-.dark .form-group.form-textarea label:after {
-  background-color: #000
-}
-
-.dark .form-control {
-  color: #ccc;
-  border-color: rgba(95, 95, 95, .78)
-}
-
-.dark .form-control:focus {
-  border-color: #ccc;
-  color: #ccc
-}
-
-.dark textarea.form-control {
-  color: #ccc
-}
-
-.dark .card {
-  border-color: rgba(95, 95, 95, .78)
-}
-
-.dark .card .card-header {
-  background-color: transparent;
-  color: #ccc;
-  border-bottom: 1px solid rgba(95, 95, 95, .78)
-}
-
-.dark .btn.btn-ghost.btn-default {
-  border-color: #ababab;
-  color: #ababab
-}
-
-.dark .btn.btn-ghost.btn-default:focus,
-.dark .btn.btn-ghost.btn-default:hover {
-  border-color: #9c9c9c;
-  color: #9c9c9c;
-  z-index: 1
-}
-
-.dark .btn.btn-ghost.btn-default:focus,
-.dark .btn.btn-ghost.btn-default:hover {
-  border-color: #e0e0e0;
-  color: #e0e0e0
-}
-
-.dark .btn.btn-ghost.btn-primary:focus,
-.dark .btn.btn-ghost.btn-primary:hover {
-  border-color: #64b5f6;
-  color: #64b5f6
-}
-
-.dark .btn.btn-ghost.btn-success:focus,
-.dark .btn.btn-ghost.btn-success:hover {
-  border-color: #81c784;
-  color: #81c784
-}
-
-.dark .btn.btn-ghost.btn-info:focus,
-.dark .btn.btn-ghost.btn-info:hover {
-  border-color: #4dd0e1;
-  color: #4dd0e1
-}
-
-.dark .btn.btn-ghost.btn-error:focus,
-.dark .btn.btn-ghost.btn-error:hover {
-  border-color: #e57373;
-  color: #e57373
-}
-
-.dark .btn.btn-ghost.btn-warning:focus,
-.dark .btn.btn-ghost.btn-warning:hover {
-  border-color: #ffb74d;
-  color: #ffb74d
-}
-
-.dark .avatarholder,
-.dark .placeholder {
-  background-color: transparent;
-  border-color: #333
-}
-
-.dark .menu .menu-item {
-  color: #ccc;
-  border-color: rgba(95, 95, 95, .78)
-}
-
-.dark .menu .menu-item.active,
-.dark .menu .menu-item:hover {
-  color: #fff;
-  border-color: #ccc
-}
-
-/*!* Copyright (C) 2019 Josh Habdas <jhabdas@protonmail.com>
-*
-* This file is part of After Dark.
-*
-* After Dark is free software: you can redistribute it and/or modify
-* it under the terms of the GNU Affero General Public License as published
-* by the Free Software Foundation, either version 3 of the License, or
-* (at your option) any later version.
-*
-* After Dark is distributed in the hope that it will be useful,
-* but WITHOUT ANY WARRANTY; without even the implied warranty of
-* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
-* GNU Affero General Public License for more details.
-*
-* You should have received a copy of the GNU Affero General Public License
-* along with this program. If not, see <https://www.gnu.org/licenses/>.*/
 :root {
   scroll-behavior: smooth;
   --screen-size-small: 30em
@@ -1483,11 +1308,6 @@ img {
 
 .js-copied {
   animation: intro 1.65s 0.35s reverse;
-}
-
-.hack.dark {
-  color: var(--text-color--light);
-  /* reset */
 }
 
 .hack .muted {
@@ -2012,10 +1832,6 @@ img {
 .hack h1[itemprop] a:focus {
   background-color: var(--text-color--dark);
   filter: brightness(1.2);
-}
-
-.hack.dark h1[itemprop] {
-  filter: brightness(3);
 }
 
 .hack header h1+p.muted {
