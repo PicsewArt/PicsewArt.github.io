@@ -3,7 +3,6 @@ function bindGalleryEventByElement(element) {
     event = event || window.event
     var target = event.target || event.srcElement
     console.dir(target);
-    console.dir(element);
     var link = target.src ? (target.parentNode.href ? target.parentNode : target.parentNode.parentNode) : (target.href ? target : target.parentNode);
     // // this will be very slow:
     // var link = target.src
@@ -21,6 +20,7 @@ function bindGalleryEventByElement(element) {
     // }
     // // ....
     var options = { index: link, event: event, continuous: true }
+    console.log(link);
     var links = this.getElementsByTagName('a'); // Node list
     blueimp.Gallery(links, options)
   }
