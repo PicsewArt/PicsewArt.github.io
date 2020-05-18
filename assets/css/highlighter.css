@@ -195,7 +195,7 @@ div[class^="language-coq"]::before, figure.highlight pre code[class^="language-c
 }
 
 div[class^="language-cpp"]::before, figure.highlight pre code[class^="language-cpp"]::before {
-  content: 'Cpp' !important;
+  content: 'C++' !important;
 }
 
 div[class^="language-crystal"]::before, figure.highlight pre code[class^="language-crystal"]::before {
@@ -203,11 +203,11 @@ div[class^="language-crystal"]::before, figure.highlight pre code[class^="langua
 }
 
 div[class^="language-csharp"]::before, figure.highlight pre code[class^="language-csharp"]::before {
-  content: 'Csharp' !important;
+  content: 'C#' !important;
 }
 
 div[class^="language-css"]::before, figure.highlight pre code[class^="language-css"]::before {
-  content: 'Css' !important;
+  content: 'CSS' !important;
 }
 
 div[class^="language-d"]::before, figure.highlight pre code[class^="language-d"]::before {
@@ -350,7 +350,8 @@ div[class^="language-java"]::before, figure.highlight pre code[class^="language-
   content: 'Java' !important;
 }
 
-div[class^="language-javascript"]::before, figure.highlight pre code[class^="language-javascript"]::before {
+div[class^="language-javascript"]::before, figure.highlight pre code[class^="language-javascript"]::before,
+div[class^="language-js"]::before, figure.highlight pre code[class^="language-js"]::before {
   content: 'JavaScript' !important;
 }
 
@@ -371,11 +372,11 @@ div[class^="language-jsonnet"]::before, figure.highlight pre code[class^="langua
 }
 
 div[class^="language-jsp"]::before, figure.highlight pre code[class^="language-jsp"]::before {
-  content: 'Jsp' !important;
+  content: 'JSP' !important;
 }
 
 div[class^="language-jsx"]::before, figure.highlight pre code[class^="language-jsx"]::before {
-  content: 'Jsx' !important;
+  content: 'JSX' !important;
 }
 
 div[class^="language-julia"]::before, figure.highlight pre code[class^="language-julia"]::before {
