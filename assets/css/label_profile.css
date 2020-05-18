@@ -26,8 +26,8 @@
   border-radius: 5px;
   margin: 0 5px;
   display: inline-block;
-  align-items: center;
-  align-content: center;
+  /* align-items: center; */
+  /* align-content: center; */
   position: relative;
 }
 
