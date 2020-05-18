@@ -28,7 +28,7 @@ layout: null
     -->
 </head>
 
-<body class="hack {{ site.ui.theme }} main container"{% if page.on_load.call.size > 0 %} onload="loadTheme();{{ page.on_load.call }}"{% else %} onload="loadTheme();"{% endif %}>
+<body class="hack {{ site.ui.theme }} main container"{% if page.on_load.call.size > 0 %} onload="{{ page.on_load.call }}"{% endif %}>
 
   {% unless page.disable_nav == true %}
   {% include layout_nav.html %}
@@ -46,31 +46,6 @@ layout: null
 
   {% include layout_end.html %}
 
-  <script type="text/javascript">
-    function toggleTheme() {
-      $('body').toggleClass('dark').toggleClass('light');
-      if($('body').hasClass('dark')) {
-        localStorage.setItem('theme','dark');
-      } else {
-        localStorage.setItem('theme','light');
-      }
-    }
-  </script>
-  <script>
-    $('#theme-toggle').click(function() {
-      toggleTheme();
-    });
-  </script>
-  <script>
-    function loadTheme() {
-      var themeSet = localStorage.getItem('theme');
-      if (themeSet == 'dark') {
-        $('body').removeClass('light').addClass('dark');
-      } else {
-        $('body').removeClass('dark').addClass('light');
-      }
-      console.log(themeSet);
-    }
-  </script>
+
 </body>
 </html>
