@@ -112,6 +112,6 @@ layout: default
 	{% if page.has_info %}
 	<div class="post_info">
 		<hr>
-		<p>Published by <span itemprop="author"><a href="{{ site.url }}/about/index.html">@{{ site.author }}</a></span> (<time itemprop="datePublished">{{ page.date | date: "%b %d, %Y" }}</time>) in <span itemprop="articleSection"><a href="{{ site.url }}/posts/categories/index.html#{{ page.category | replace: ' ', '_' }}">{{ page.category }}</a></span> and tagged{% for tag in page.tags %} <a href="{{ site.url }}/posts/tags/#{{ tag | replace: ' ', '_' }}">#{{ tag }}</a>{% endfor %}.</p>
+		<p>Published by <span itemprop="author"><a href="{{ site.url }}/about/index.html">@{{ site.author }}</a></span> (<time itemprop="datePublished">{{ page.date | date: "%b %d, %Y" }}</time>) in <span itemprop="articleSection"><a href="{{ site.url }}/posts/categories/index.html#{{ page.category | replace: ' ', '_' }}">{{ page.category }}</a></span> and tagged{% for tag in page.tags %} {% assign tag_id = tag | replace: ' ', '_' %}{% assign tag_url = site.url | append: '/posts/tags/#' | append: tag_id %}{% include tag_label.html href=tag_url title=tag %}{% endfor %}.</p>
 	</div>
 	{% endif %}
