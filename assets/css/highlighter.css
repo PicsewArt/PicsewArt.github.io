@@ -5,6 +5,11 @@ div.highlight {
   background: none;
 }
 
+pre {
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
 div[class^="language-"],
 figure.highlight {
   /* border-radius: 6px; */
