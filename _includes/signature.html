@@ -1,5 +1,21 @@
 <!-- START POST SIGNATURE -->
-<div class="sign" style="height: 128px !important;">
-	<img alt="Señorita" src="{{ site.url }}{{ site.path.images }}/sign_{{ site.ui.theme_reversed }}.png" style="float: right !important; width: 256px !important; max-width: 100% !important;">
+<style type="text/css" media="screen">
+	.signature-container {
+		height: 128px !important;
+	}
+	.signature-container .signature-image {
+		float: right !important;
+		width: 256px !important;
+		max-width: 100% !important;
+	}
+	.dark .signature-container .signature-image {
+		content: url('{{ site.url }}{{ site.path.images }}/sign_light.png');
+	}
+	.light .signature-container .signature-image {
+		content: url('{{ site.url }}{{ site.path.images }}/sign_dark.png');
+	}
+</style>
+<div class="signature-container">
+	<img class="signature-image" alt="{{ site.name }} | {{ site.author }}" />
 </div>
 <!-- END POST SIGNATURE -->
