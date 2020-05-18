@@ -1,1 +1,1 @@
-{% if include.href.size > 0 %}<a class="tag-link" href="{{ include.href }}">{% endif %}<i class="tag-label"><span class="tag-symbol">#</span><span class="tag-name">{{ include.title }}</span></i>{% if include.href.size > 0 %}</a>{% endif %}
+{% if include.href.size > 0 %}<a class="tag-link" href="{{ include.href }}">{% endif %}<i class="tag-label"><span class="tag-symbol">#</span><span class="tag-name">{{ include.title | default: " " }}</span></i>{% if include.href.size > 0 %}</a>{% endif %}

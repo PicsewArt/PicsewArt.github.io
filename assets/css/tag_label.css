@@ -10,13 +10,6 @@ a.tag-link:hover {
 
 i.tag-label {
   margin: 0 5px;
-}
-
-i.tag-label,
-i.tag-label * {
-  font-family: 'Lato', sans-serif;
-  box-sizing: border-box;
-  margin: 0;
   height: 25px;
   min-width: 5em;
   display: inline-block;
@@ -26,6 +19,12 @@ i.tag-label * {
   border-radius: .5em;
   line-height: 1;
   font-style: normal;
+}
+
+i.tag-label,
+i.tag-label * {
+  font-family: 'Lato', sans-serif;
+  box-sizing: border-box;
 }
 
 .tag-label .tag-symbol,
