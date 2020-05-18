@@ -51,6 +51,8 @@ now add `JQuery`:
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 ```
 
+toggle and save:
+
 ```js
 function toggleTheme() {
   $('body').toggleClass('dark').toggleClass('light');
@@ -80,7 +82,13 @@ function loadTheme() {
 ```
 
 ```html
-<body class="dark" onload="javascript:loadTheme();">
+<body class="dark">
+  <!-- ... -->
+  <script>
+    loadTheme();
+  </script>
+  <!-- ... -->
+</body>
 ```
 
 ## `localStorage` Between Pages from Different Sites
