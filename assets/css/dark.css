@@ -81,6 +81,7 @@
 .dark header h6 a {
   color: #ccc;
   border: none;
+  background: none;
 }
 
 .dark h1 a:hover,

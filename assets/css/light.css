@@ -70,6 +70,7 @@
 .light h6 a {
   color: var(--light-text-color);
   border: none;
+  background: none;
 }
 
 .light h1 a:hover,
