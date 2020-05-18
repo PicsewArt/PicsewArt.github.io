@@ -5,7 +5,7 @@
   /* margin-bottom: 1.75rem; */
 }
 
-.light .alert {
+.light div[class='alert'] {
   color: var(--light-text-color);
   padding: 1rem;
   border: 1px solid var(--light-text-color);
