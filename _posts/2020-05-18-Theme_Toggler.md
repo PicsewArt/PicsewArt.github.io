@@ -94,9 +94,9 @@ This technique is quite simple:
 * on you page you must create `iframe` to a domain from which you want to get data
 * your data domain need listen to `message` event: `document.addEventListener ("message", handler, useCapture);`
 * `handler` will be responsible for accessing `localStorage` and posting its content to source domain
-* your source domain may call `handler` function on data domain with `postMessage` API [https://developer.mozilla.org/en-US/docs/DOM/window.postMessage](https://developer.mozilla.org/en-US/docs/DOM/window.postMessage)
+* your source domain may call `handler` function on data domain with [`postMessage` API](https://developer.mozilla.org/en-US/docs/DOM/window.postMessage)
 
-For security of your data you can use `HTTP header X-Frame-Options ALLOW-FROM` uri [https://developer.mozilla.org/en-US/docs/HTTP/X-Frame-Options?redirectlocale=en-US&redirectslug=The_X-FRAME-OPTIONS_response_header](https://developer.mozilla.org/en-US/docs/HTTP/X-Frame-Options?redirectlocale=en-US&redirectslug=The_X-FRAME-OPTIONS_response_header)
+For security of your data you can use [`HTTP header X-Frame-Options ALLOW-FROM` uri](https://developer.mozilla.org/en-US/docs/HTTP/X-Frame-Options?redirectlocale=en-US&redirectslug=The_X-FRAME-OPTIONS_response_header)
 
 # Switch Different Stylesheets
 
