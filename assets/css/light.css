@@ -83,7 +83,9 @@
 }
 
 .light code {
-  color: var(--light-code-color);
+  color: var(--light-text-color);
+  background: #F7F7F7;
+  border: 1px solid #959595;
 }
 
 .light code {
