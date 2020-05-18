@@ -8,8 +8,8 @@ a.label-tag-link:hover {
   background: none;
 }
 
-i.label-tag-label {
-  margin: 0 5px;
+.label-tag {
+  margin: 3px;
   height: 25px;
   min-width: 5em;
   display: inline-block;
@@ -21,14 +21,14 @@ i.label-tag-label {
   font-style: normal;
 }
 
-i.label-tag-label,
-i.label-tag-label * {
+.label-tag,
+.label-tag * {
   font-family: 'Lato', sans-serif;
   box-sizing: border-box;
 }
 
-.label-tag-label .label-tag-symbol,
-.label-tag-label .label-tag-name {
+.label-tag .label-tag-symbol,
+.label-tag .label-tag-name {
   height: 100%;
   padding: 5px 5px;
   display: inline-block;
@@ -36,7 +36,7 @@ i.label-tag-label * {
   text-align: center;
 }
 
-.label-tag-label .label-tag-symbol {
+.label-tag .label-tag-symbol {
   width: 30px;
   font-size: 15px;
   background: #F15F22;
@@ -44,7 +44,7 @@ i.label-tag-label * {
   border-bottom-left-radius: .5em;
 }
 
-.label-tag-label .label-tag-name {
+.label-tag .label-tag-name {
   height: 100%;
   padding: 5px 5px;
   color: #F15F22;

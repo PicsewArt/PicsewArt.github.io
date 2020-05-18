@@ -3,6 +3,15 @@
   box-sizing: border-box;
   margin: 0 auto;
   font-size: 12px;
+  min-width: 40px;
+  border: 1px solid #e1e1e1;
+  background: #f7f7f7;
+  height: 25px;
+  border-radius: 12.5px;
+  margin: 3px;
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
 }
 
 .label-profile p {
@@ -18,18 +27,6 @@
   color: #0072b6;
 }
 
-.label-profile {
-  min-width: 40px;
-  border: 1px solid #e1e1e1;
-  background: #f7f7f7;
-  height: 25px;
-  border-radius: 5px;
-  margin: 5px;
-  display: inline-block;
-  position: relative;
-  vertical-align: middle;
-}
-
 .label-profile figure {
   margin: 0;
   float: left;
@@ -41,8 +38,8 @@
   height: 100%;
   max-width: 25px;
   max-height: 100%;
-  border-top-left-radius: 5px;
-  border-bottom-left-radius: 5px;
+  border-top-left-radius: 12.5px;
+  border-bottom-left-radius: 12.5px;
 }
 
 .label-profile header {
@@ -63,8 +60,8 @@
   height: 100%;
   font-size: 14px;
   line-height: 15px;
-  border-top-right-radius: 5px;
-  border-bottom-right-radius: 5px;
+  border-top-right-radius: 12.5px;
+  border-bottom-right-radius: 12.5px;
 }
 
 .label-profile a {
