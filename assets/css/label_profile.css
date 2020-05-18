@@ -1,7 +1,7 @@
 .label-profile {
   font-family: 'Open Sans', sans-serif;
   box-sizing: border-box;
-  margin: 2em auto;
+  margin: 0 auto;
   font-size: 12px;
 }
 
@@ -24,9 +24,10 @@
   background: #f7f7f7;
   height: 25px;
   border-radius: 5px;
-  margin: 0 5px;
+  margin: 5px;
   display: inline-block;
   position: relative;
+  vertical-align: middle;
 }
 
 .label-profile figure {
