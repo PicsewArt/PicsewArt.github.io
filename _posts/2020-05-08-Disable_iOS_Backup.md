@@ -2,7 +2,7 @@
 title: "Disable Automatic iOS Backup"
 category: "Technology"
 tags: ["iOS", "macOS", "Windows", "iTunes"]
-date: 20200508T16s0000+08:00
+date: 20200508T160000+08:00
 hero:
   format: 'jpeg'
   url: 'HERO_TECH_H_0002.jpg'
