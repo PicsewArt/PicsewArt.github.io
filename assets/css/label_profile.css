@@ -19,15 +19,13 @@
 }
 
 .label-profile {
-  min-width: 100px;
+  min-width: 40px;
   border: 1px solid #e1e1e1;
   background: #f7f7f7;
-  height: 30px;
+  height: 25px;
   border-radius: 5px;
   margin: 0 5px;
   display: inline-block;
-  /* align-items: center; */
-  /* align-content: center; */
   position: relative;
 }
 
@@ -40,8 +38,8 @@
 .label-profile figure img {
   display: block;
   height: 100%;
-  max-width: 30px;
-  max-height: 30px;
+  max-width: 25px;
+  max-height: 100%;
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
 }
