@@ -305,6 +305,12 @@
   background-color: #a9a9a9;
 }
 
+.dark pre,
+.dark pre code,
+.dark pre code span {
+  word-break: break-all;
+}
+
 .light .theme-toggler {
   fill: var(--light-text-color) !important;
   stroke: var(--light-text-color) !important;

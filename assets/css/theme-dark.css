@@ -318,6 +318,12 @@
   background-color: var(--accessible-gray);
 }
 
+.dark pre,
+.dark pre code,
+.dark pre code span {
+  word-break: break-all;
+}
+
 .dark .theme-toggler {
   fill: var(--dark-text-color) !important;
   stroke: var(--dark-text-color) !important;
