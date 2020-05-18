@@ -90,16 +90,6 @@
   display: none;
 }
 
-.hack pre code {
-  font-weight: normal;
-  border: none;
-  background: none;
-  padding: 0;
-  margin: 0;
-  border-radius: 0;
-  word-break: break-all;
-}
-
 .hack code {
   font-weight: 700;
   border: 1px solid var(--charcoal-gray);
@@ -108,6 +98,17 @@
   margin: 0 2px;
   border-radius: 3px;
   word-break: break-word;
+}
+
+.hack pre code,
+.hack pre code span {
+  font-weight: normal;
+  border: none;
+  background: none;
+  padding: 0;
+  margin: 0;
+  border-radius: 0;
+  word-break: break-all;
 }
 
 .hack a[rel*="external"]::after {
