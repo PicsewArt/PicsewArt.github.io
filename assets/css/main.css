@@ -112,6 +112,7 @@ pre code {
   font-weight: 100;
   text-shadow: none;
   margin: 1.75rem 0;
+  word-break: break-all;
 }
 
 a {

@@ -75,6 +75,7 @@ figure.highlight pre::before {
 div[class^="language-"] pre,
 figure.highlight pre {
   background-color: rgba(0, 0, 0, 0.9) !important;
+  word-break: break-all;
 }
 
 /* BEGIN JEKYLL ROUGE CODE BLOCK ONLY */
