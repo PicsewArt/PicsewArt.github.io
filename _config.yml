@@ -35,7 +35,7 @@ markdown: kramdown
 kramdown:
   syntax_highlighter: rouge
 
-permalink: /posts/post_:title/
+permalink: /posts/contents/:title/
 excerpt_limit: 50
 
 sass:
