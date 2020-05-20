@@ -1,4 +1,4 @@
-<figure class="card-post-tinted {{ include.color | default: 'red' }}" style="{% if include.maxwidth.size > 0 %}max-width: {{ include.maxwidth }} !important;{% endif %}">
+<figure class="card-post-tinted {{ include.color | default: 'red' }}" style="{% if include.maxwidth.size > 0 %}max-width: {{ include.maxwidth }} !important;{% endif %}{% if include.maxheight.size > 0 %}max-height: {{ include.maxheight }} !important;{% endif %}">
   <img src="{{ include.image }}"/>
   <figcaption>
     <h2>{{ include.title }}</h2>

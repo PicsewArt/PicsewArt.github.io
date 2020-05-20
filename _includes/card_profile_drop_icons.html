@@ -1,4 +1,4 @@
-<figure class="drop-icons-profile-card" style="{% if include.maxwidth.size > 0 %}max-width: {{ include.maxwidth }} !important;{% endif %}">
+<figure class="drop-icons-profile-card" style="{% if include.maxwidth.size > 0 %}max-width: {{ include.maxwidth }} !important;{% endif %}{% if include.maxheight.size > 0 %}max-height: {{ include.maxheight }} !important;{% endif %}">
   <img src="{{ include.image }}"/>
   <figcaption>
     <h3>{{ include.title }}</h3>

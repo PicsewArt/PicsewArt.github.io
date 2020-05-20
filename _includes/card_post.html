@@ -1,4 +1,4 @@
-<figure class="card-post" style="{% if include.maxwidth.size > 0 %}max-width: {{ include.maxwidth }} !important;{% endif %}">
+<figure class="card-post" style="{% if include.maxwidth.size > 0 %}max-width: {{ include.maxwidth }} !important;{% endif %}{% if include.maxheight.size > 0 %}max-height: {{ include.maxheight }} !important;{% endif %}">
   <div class="image">
     <img src="{{ include.image }}"/>
   </div>

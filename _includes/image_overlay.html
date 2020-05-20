@@ -5,7 +5,7 @@
 {% capture overlay_link %}{{ include.link }}{% endcapture %}
 {% capture overlay_unsplash %}{{ include.unsplash }}{% endcapture %}
 {% capture overlay_maxwidth %}{{ include.maxwidth }}{% endcapture %}
-<div class="overlay_container" style="{% if include.maxwidth.size > 0 %}max-width: {{ include.maxwidth }} !important;{% endif %}">
+<div class="overlay_container" style="{% if include.maxwidth.size > 0 %}max-width: {{ include.maxwidth }} !important;{% endif %}{% if include.maxheight.size > 0 %}max-height: {{ include.maxheight }} !important;{% endif %}">
   <div class="overlay_contents">
     {% if overlay_link.size > 0 %}<a class="overlay_a" href="{{ overlay_link }}" target="_blank">
     {% elsif overlay_unsplash.size > 0 %}<a class="overlay_a" href="https://unsplash.com/photos/{{ overlay_unsplash }}" target="_blank">{% endif %}

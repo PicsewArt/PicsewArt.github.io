@@ -1,4 +1,4 @@
-<div class="card-post-detailed" style="{% if include.maxwidth.size > 0 %}max-width: {{ include.maxwidth }} !important;{% endif %}">
+<div class="card-post-detailed" style="{% if include.maxwidth.size > 0 %}max-width: {{ include.maxwidth }} !important;{% endif %}{% if include.maxheight.size > 0 %}max-height: {{ include.maxheight }} !important;{% endif %}">
   <!-- Post-->
   <div class="post-module">
     {% if include.href.size > 0 %}<a class="link" href="{{ include.href }}">{% endif %}
