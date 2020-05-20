@@ -41,7 +41,14 @@ figure.bordered-profile-card h6:after {
   z-index: 1;
   position: relative;
   padding: 10px;
+}
+
+.dark .bordered-profile-card .profile-image {
   border: 2px solid #e8b563;
+}
+
+.light .bordered-profile-card .profile-image {
+  border: 2px solid #2bbc8a;
 }
 
 .bordered-profile-card .profile-image img {
@@ -52,11 +59,42 @@ figure.bordered-profile-card h6:after {
 
 .bordered-profile-card figcaption {
   width: 100%;
-  background-color: #F2F2F2;
-  color: #555;
   padding: 125px 25px 25px;
   margin-top: -100px;
   display: inline-block;
+}
+
+.dark .bordered-profile-card figcaption {
+  background-color: #F2F2F2;
+}
+
+.light .bordered-profile-card figcaption {
+  background-color: #333;
+  color: #fff;
+}
+
+.dark .bordered-profile-card h3 {
+  color: #000;
+}
+
+.dark .bordered-profile-card h4 {
+  color: #8c8c8c;
+}
+
+.dark .bordered-profile-card p {
+  color: #555;
+}
+
+.light .bordered-profile-card h3 {
+  color: #fff;
+}
+
+.light .bordered-profile-card h4 {
+  color: #8c8c8c;
+}
+
+.light .bordered-profile-card p {
+  color: #fff;
 }
 
 .bordered-profile-card h3,
