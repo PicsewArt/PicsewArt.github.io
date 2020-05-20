@@ -85,8 +85,7 @@ layout: default
 			{% endif %}
 		</figure>
 		{% else %}
-		{% assign page_tags = page.tags | join: "," %}
-		{% include image_overlay_listing.html title=page.title image=page_hero items=page_tags maxwidth="100%" maxheight="100%" %}
+		{% include image_overlay_white_cross.html title=page.title image=page_hero maxwidth="100%" maxheight="100%" %}
 		{% endif %}
 		<!-- END PAGE HERO -->
 		{% endif %}

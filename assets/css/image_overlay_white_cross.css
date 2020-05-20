@@ -1,0 +1,121 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,700);
+
+.overlay-image-white-cross {
+  font-family: 'Raleway', Arial, sans-serif;
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  margin: 10px auto;
+  min-width: 230px;
+  max-width: 315px;
+  width: 100%;
+  color: #000000;
+  text-align: left;
+  font-size: 16px;
+  background: #ffffff;
+}
+
+.overlay-image-white-cross *,
+.overlay-image-white-cross:before,
+.overlay-image-white-cross:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+.overlay-image-white-cross img {
+  max-width: 100%;
+  backface-visibility: hidden;
+  vertical-align: top;
+}
+
+.overlay-image-white-cross:before,
+.overlay-image-white-cross:after {
+  content: '';
+  background-color: #000;
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  opacity: 0;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.overlay-image-white-cross:before {
+  width: 300px;
+  height: 2px;
+}
+
+.overlay-image-white-cross:after {
+  height: 300px;
+  width: 2px;
+}
+
+.overlay-image-white-cross figcaption {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.overlay-image-white-cross h3 {
+  font-weight: 400;
+  padding: 8px 15px;
+  margin: 0;
+  opacity: 0;
+  -webkit-transform: translateY(100%);
+  transform: translateY(100%);
+  color: #000;
+}
+
+.overlay-image-white-cross h3::before,
+.overlay-image-white-cross h3::after {
+  display: none !important;
+}
+
+.overlay-image-white-cross a {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  border: none !important;
+}
+
+.overlay-image-white-cross a:hover {
+  background: none !important;
+}
+
+.overlay-image-white-cross:hover img,
+.overlay-image-white-cross.hover img {
+  zoom: 1;
+  filter: alpha(opacity=25);
+  -webkit-opacity: 0.25;
+  opacity: 0.25;
+}
+
+.overlay-image-white-cross:hover:before,
+.overlay-image-white-cross.hover:before,
+.overlay-image-white-cross:hover:after,
+.overlay-image-white-cross.hover:after {
+  opacity: 1;
+}
+
+.overlay-image-white-cross:hover:before,
+.overlay-image-white-cross.hover:before {
+  width: 50px;
+}
+
+.overlay-image-white-cross:hover:after,
+.overlay-image-white-cross.hover:after {
+  height: 50px;
+}
+
+.overlay-image-white-cross:hover h3,
+.overlay-image-white-cross.hover h3 {
+  -webkit-transform: translateY(0%);
+  transform: translateY(0%);
+  opacity: 1;
+}
