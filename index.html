@@ -31,7 +31,8 @@ posts_style: 'scroll'
 
 	{% assign recent_media = '' | split: '/' %}
 	{% for album in site.gallery limit: page.limit %}
-    {% for item in album.media reversed limit: 2 %}
+    {% assign new_at_first = album.media | reverse %}
+    {% for item in new_at_first limit: 2 %}
   		{% assign this_item = '' | split: '/' %}
 
   		{% comment %}{% assign media_url = site.url | append: '/gallery/detail/?album=' | append: page.unique | append: '&idx=' | append: forloop.index | append: "&type=" | append: item.type %}{% endcomment %}
