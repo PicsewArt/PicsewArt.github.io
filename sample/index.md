@@ -356,7 +356,7 @@ class Untitled {
 
 ## Scale Detailed Overlay Image
 
-<blockquote>{% include image_overlay_scale_detail.html title='Te Quiero <span>Lento</span>' image="/assets/images/hero/low/HERO_SADNESS_H_0013.jpg" href=site.url %}</blockquote>
+<blockquote>{% include image_overlay_scale_detail.html title='Te Quiero <span>Lento</span>' desc=site.description image="/assets/images/hero/low/HERO_SADNESS_H_0013.jpg" href=site.url %}</blockquote>
 
 # Music
 
