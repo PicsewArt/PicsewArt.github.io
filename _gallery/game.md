@@ -19,4 +19,10 @@ media:
   - url: "paj_0001.mp4"
     type: "video"
     format: "mp4"
+  - url: "game_0003.jpg"
+    type: 'image'
+    format: "jpeg"
+  - url: "game_0004.jpg"
+    type: 'image'
+    format: "jpeg"
 ---
