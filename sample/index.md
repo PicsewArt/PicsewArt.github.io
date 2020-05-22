@@ -354,6 +354,10 @@ class Untitled {
 
 <blockquote>{% include image_overlay_camera.html title=site.name subtitle=site.alias image="/assets/images/hero/low/HERO_SADNESS_H_0012.jpg" href=site.url %}</blockquote>
 
+## Scale Detailed Overlay Image
+
+<blockquote>{% include image_overlay_scale_detail.html title='Te Quiero <span>Lento</span>' image="/assets/images/hero/low/HERO_SADNESS_H_0013.jpg" href=site.url %}</blockquote>
+
 # Music
 
 <blockquote>{% include music_player.html playerid='sample' title='Rivellon' artist='Divinity: Original Sin 2' music='/assets/music/Rivellon.mp3' cover='https://cdn-prod.scalefast.com/public/assets/user/6562614/image/fc0fea76b4a2f75dc282d0dba05a31a1.jpg' %}</blockquote>
