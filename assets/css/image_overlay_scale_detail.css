@@ -26,6 +26,7 @@ figure.overlay-image-scale-detail img {
   max-width: 100%;
   position: relative;
   opacity: 0.9;
+  display: block;
 }
 
 figure.overlay-image-scale-detail figcaption {
