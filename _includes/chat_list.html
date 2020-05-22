@@ -10,7 +10,7 @@
       <!-- [1]: content: text/image -->
       <!-- [2]: time: 19:22 -->
       <!-- [3]: send: if send: 'send', if not send: nil -->
-      <div class="message {% if item[3].size > 0 %}personal{% endif %}">{% if item.first == 'text' %}{{ item[1] }}{% elsif item.first == 'image' %}<img src="{{ item[1] }}"/>{% else %}...{% endif %}<div class="timestamp">{{ item.last }}</div></div>
+      <div class="message {% if item[3].size > 0 %}personal{% endif %}">{% if item.first == 'text' %}{{ item[1] }}{% elsif item.first == 'image' %}<img src="{{ item[1] }}"/>{% else %}...{% endif %}<div class="timestamp">{{ item[2] }}</div></div>
       {% endfor %}
     </div>
   </div>
