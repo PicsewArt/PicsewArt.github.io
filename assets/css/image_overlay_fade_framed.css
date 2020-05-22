@@ -87,7 +87,7 @@
   left: 0;
   right: 0;
   z-index: 1;
-  background: none !important;
+  border: none !important;
 }
 
 .overlay-image-fade-framed a:hover {
