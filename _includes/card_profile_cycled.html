@@ -1,7 +1,7 @@
 <figure class="cycled-profile-card yellow" style="{% if include.maxwidth.size > 0 %}max-width: {{ include.maxwidth }} !important;{% endif %}{% if include.maxheight.size > 0 %}max-height: {{ include.maxheight }} !important;{% endif %}">
   <figcaption>
-    <h2>{{ include.title }}</h2>
-    <!--<h2>Diana <span>Reed</span></h2>-->
+    <h2 toc-skip="true">{{ include.title }}</h2>
+    <!--<h2 toc-skip="true">Diana <span>Reed</span></h2>-->
     <p class="cycled-profile-card-p">{{ include.desc }}</p>
     <div class="icons">
       {% include linked_icons.html url=include.url github=include.github email=include.email phone=include.phone %}

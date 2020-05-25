@@ -1,7 +1,7 @@
 <figure class="overlay-image-fade-detailed" style="{% if include.maxwidth.size > 0 %}max-width: {{ include.maxwidth }} !important;{% endif %}{% if include.maxheight.size > 0 %}max-height: {{ include.maxheight }} !important;{% endif %}">
   <img src="{{ include.image }}" />
   <figcaption class="{{ include.position | default: 'top' }}"><!-- top/bottom -->
-    <h2>{{ include.title }}</h2>
+    <h2 toc-skip="true">{{ include.title }}</h2>
     <p>{{ include.desc }}</p>
   </figcaption>
   {% if include.href.size > 0 %}<a href="{{ include.href }}"></a>{% endif %}

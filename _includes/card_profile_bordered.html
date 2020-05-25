@@ -1,8 +1,8 @@
 <figure class="bordered-profile-card" style="{% if include.maxwidth.size > 0 %}max-width: {{ include.maxwidth }} !important;{% endif %}{% if include.maxheight.size > 0 %}max-height: {{ include.maxheight }} !important;{% endif %}">
   <div class="profile-image"><img src="{{ include.image }}" /></div>
   <figcaption>
-    <h3>{{ include.title }}</h3>
-    <h4>{{ include.subtitle }}</h4>
+    <h3 toc-skip="true">{{ include.title }}</h3>
+    <h4 toc-skip="true">{{ include.subtitle }}</h4>
     <p class="bordered-profile-card-p">{{ include.desc }}</p>
     <div class="icons">
       {% include linked_icons.html url=include.url github=include.github email=include.email phone=include.phone %}

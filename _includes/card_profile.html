@@ -1,7 +1,7 @@
 <figure class="profile-card">
   <img src="{{ include.image }}" />
   <figcaption>
-    <h2>{{ include.title }}</h2>
+    <h2 toc-skip="true">{{ include.title }}</h2>
     <p>{{ include.desc }}</p>
     <div class="icons">
       {% include linked_icons.html url=include.url github=include.github email=include.email phone=include.phone %}
