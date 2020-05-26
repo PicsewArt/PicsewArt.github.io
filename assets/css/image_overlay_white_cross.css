@@ -83,7 +83,14 @@
   opacity: 0;
   -webkit-transform: translateY(100%);
   transform: translateY(100%);
+}
+
+.light .overlay-image-white-cross h3 {
   color: #000;
+}
+
+.dark .overlay-image-white-cross h3 {
+  color: #fff;
 }
 
 .overlay-image-white-cross h3::before,
