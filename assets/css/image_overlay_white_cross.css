@@ -9,10 +9,18 @@
   min-width: 230px;
   max-width: 315px;
   width: 100%;
-  color: #000000;
   text-align: left;
   font-size: 16px;
+}
+
+.light .overlay-image-white-cross {
+  color: #000000;
   background: #ffffff;
+}
+
+.dark .overlay-image-white-cross {
+  color: #ffffff;
+  background: #000000;
 }
 
 .overlay-image-white-cross *,
@@ -33,7 +41,6 @@
 .overlay-image-white-cross:before,
 .overlay-image-white-cross:after {
   content: '';
-  background-color: #000;
   position: absolute;
   z-index: 1;
   top: 50%;
@@ -41,6 +48,16 @@
   opacity: 0;
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
+}
+
+.light .overlay-image-white-cross:before,
+.light .overlay-image-white-cross:after {
+  background-color: #000;
+}
+
+.dark .overlay-image-white-cross:before,
+.dark .overlay-image-white-cross:after {
+  background-color: #fff;
 }
 
 .overlay-image-white-cross:before {
