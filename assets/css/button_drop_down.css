@@ -37,6 +37,7 @@
 
 .dropdown_button_wrapper:hover .dropdown_button_list {
     display: block;
+    position: relative;
 }
 
 .dropdown_button_wrapper:hover .dropdown_button {
