@@ -24,20 +24,19 @@
 }
 
 .dropdown_button_link {
-  color: #333;
+  color: #333 !important;
   padding: 6px 16px;
   text-decoration: none;
   display: block;
   background: none;
   font-size: 16px;
-  border-width: 0;
+  border: none;
   line-height: 20px;
 }
 
 .dropdown_button_link:hover {
-  background-color: #FFD43B;
-  border-width: 0;
-  border-radius: calc((20px + 6px * 2) * 0.5);
+  background-color: #F8F9FD;
+  border: none;
 }
 
 .dropdown_button_wrapper:hover .dropdown_button_list {
