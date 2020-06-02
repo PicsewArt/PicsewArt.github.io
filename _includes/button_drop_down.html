@@ -3,7 +3,7 @@
   <div class="dropdown_button_list">
     {% assign dropdown_button_list = include.list | split: ',,' %}
     {% for item in include.list %}
-      {% assign item_parts = dropdown_button_list | split: '##' %}
+      {% assign item_parts = item | split: '##' %}
       <!-- item_parts.first: title -->
       <!-- item_parts.last: url -->
     <a class="dropdown_button_link" href="{{ item_parts.first }}" target="_blank">{{ item_parts.last }}</a>
