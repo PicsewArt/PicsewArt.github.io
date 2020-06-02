@@ -28,15 +28,15 @@
   padding: 6px 16px;
   text-decoration: none;
   display: block;
-  background: none;
+  background: none !important;
   font-size: 16px;
-  border: none;
+  border: none !important;
   line-height: 20px;
 }
 
 .dropdown_button_link:hover {
-  background-color: #F8F9FD;
-  border: none;
+  background-color: #F8F9FD !important;
+  border: none !important;
 }
 
 .dropdown_button_wrapper:hover .dropdown_button_list {
