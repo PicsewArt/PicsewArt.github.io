@@ -1,33 +1,35 @@
 .dropdown_button_wrapper {
-    position: relative;
-    display: inline-block;
+  position: relative;
+  display: inline-block;
 }
 
 .dropdown_button {
-    background-color: #699318;
-    color: #fff;
-    padding: 8px 16px;
-    font-size: 16px;
-    border-radius: 16px;
-    cursor: pointer;
+  background-color: #699318;
+  color: #fff;
+  padding: 10px 32px;
+  font-size: 16px;
+  border-radius: calc((20px + 10px * 2) * 0.5);
+  cursor: pointer;
+  border-width: 0;
+  line-height: 20px;
 }
 
 .dropdown_button_list {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
 }
 
 .dropdown_button_list a.dropdown_button_link {
-    color: #333;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    border: none;
-    background-color: #fff;
+  color: #333;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  border: none;
+  background-color: #fff;
 }
 
 .dropdownsie-content a.dropdown_button_link:hover {
@@ -36,10 +38,10 @@
 }
 
 .dropdown_button_wrapper:hover .dropdown_button_list {
-    display: block;
-    position: relative;
+  display: block;
+  position: relative;
 }
 
 .dropdown_button_wrapper:hover .dropdown_button {
-    background-color: #709D1A;
+  background-color: #709D1A;
 }
