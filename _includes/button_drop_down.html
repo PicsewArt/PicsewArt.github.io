@@ -1,0 +1,12 @@
+<div class="dropdown_button_wrapper"{% if include.center.size > 0 %} style="margin: 0 auto;"{% endif %}>
+  <button class="dropdown_button">{{ include.title }}&nbsp;<i class="fa fa-{{ include.fa }}"></i></button>
+  <div class="dropdown_button_list">
+    {% assign dropdown_button_list = include.list | split: ',,' %}
+    {% for item in include.list %}
+      {% assign item_parts = dropdown_button_list | split: '##' %}
+      <!-- item_parts.first: title -->
+      <!-- item_parts.last: url -->
+    <a class="dropdown_button_link" href="{{ item_parts.first }}" target="_blank">{{ item_parts.last }}</a>
+    {% endfor %}
+  </div>
+</div>
