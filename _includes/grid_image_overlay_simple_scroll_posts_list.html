@@ -7,7 +7,8 @@
 	<!-- element[3]: image -->
 	<!-- element[4]: url -->
 	{% assign tempSubArray = tempSubArray | push: post.title %}
-	{% assign tempSubArray = tempSubArray | push: post.category %}
+	{% assign post_subtitle = post.date | date: "%b %d, %Y" %}
+	{% assign tempSubArray = tempSubArray | push: post_subtitle %}
 	{% assign tempTags = post.tags | join: " #" %}
 	{% assign tempTags_final = '#' | append: tempTags %}
 	{% assign tempSubArray = tempSubArray | push: tempTags_final %}
