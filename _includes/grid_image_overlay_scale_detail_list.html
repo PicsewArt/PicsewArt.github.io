@@ -21,7 +21,7 @@
 
 		{% capture element_html %}
     <!-- BEGIN GRID ITEM -->
-    {% include image_overlay_scale_detail.html title=element_title desc=element_subtitle image=element_image href=element_url maxwidth="100%" %}
+    {% include image_overlay_scale_detail.html title=element_title desc=element_desc image=element_image href=element_url maxwidth="100%" %}
     <!-- END GRID ITEM -->
     {% endcapture %}
     {% assign grid_list_gourp_array = grid_list_gourp_array | push: element_html %}
