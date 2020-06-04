@@ -15,27 +15,33 @@ on_load:
   call: ""
   def: ''
 ---
-{% assign all_media = '' | split: '/' %}
+{% assign all_pics = '' | split: '/' %}
 {% for album in site.gallery %}
   {% if album.published %}
-    {% for item in album.media %}
-      {% assign this_item = '' | split: '/' %}
-
-      {% comment %}{% assign media_url = site.url | append: '/gallery/detail/?album=' | append: page.unique | append: '&idx=' | append: forloop.index | append: "&type=" | append: item.type %}{% endcomment %}
-
-      {% capture this_media_url %}{% include gallery_media_url.html item=item %}{% endcapture %}
-      {% capture this_thumbnail_url %}{% include gallery_media_thumbnail_url.html item=item %}{% endcapture %}
-
-      {% assign this_item = this_item | push: album.title %}
-      {% assign this_item = this_item | push: item.url %}
-      {% assign this_item = this_item | push: this_thumbnail_url %}
-      {% assign this_item = this_item | push: this_media_url %}
-      {% assign this_item = this_item | push: item.type %}
-      {% assign this_item = this_item | push: item.format %}
-
-      {% assign all_media = all_media | push: this_item %}
+    {% for pic in album.media %}
+      {% assign all_pics = all_pics | push: pic %}
     {% endfor %}
   {% endif %}
+{% endfor %}
+{% assign all_pics_sorted = all_pics | sort: 'date' | reverse %}
+
+{% assign all_media = '' | split: '/' %}
+{% for item in all_pics_sorted %}
+  {% assign this_item = '' | split: '/' %}
+
+  {% comment %}{% assign media_url = site.url | append: '/gallery/detail/?album=' | append: page.unique | append: '&idx=' | append: forloop.index | append: "&type=" | append: item.type %}{% endcomment %}
+
+  {% capture this_media_url %}{% include gallery_media_url.html item=item %}{% endcapture %}
+  {% capture this_thumbnail_url %}{% include gallery_media_thumbnail_url.html item=item %}{% endcapture %}
+
+  {% assign this_item = this_item | push: album.title %}
+  {% assign this_item = this_item | push: item.url %}
+  {% assign this_item = this_item | push: this_thumbnail_url %}
+  {% assign this_item = this_item | push: this_media_url %}
+  {% assign this_item = this_item | push: item.type %}
+  {% assign this_item = this_item | push: item.format %}
+
+  {% assign all_media = all_media | push: this_item %}
 {% endfor %}
 
 {% assign all_media_container = '' | split: '/' %}
