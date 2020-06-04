@@ -30,7 +30,7 @@ posts_style: 'scroll'
 	<!-- SEPARATOR -->
   {% assign all_pics = '' | split: '/' %}
   {% for album in site.gallery %}
-    {% for pic in album %}
+    {% for pic in album.media %}
       {% assign all_pics = all_pics | push: pic %}
     {% endfor %}
   {% endfor %}
