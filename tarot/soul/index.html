@@ -27,11 +27,10 @@ style: "grid"
         {% assign this_card = '' | split: '/' %}
 
         {% assign this_card = this_card | push: card.title %}
-        {% assign this_card = this_card | push: group.title %}
 
-        {% assign card_tags = card.tags | join: '</span><span>#' %}
+        {% assign card_tags = card.tags | join: '</span>&nbsp;<span>#' %}
         {% assign card_desc = card.descriptions | join: '<br />' %}
-        {% assign card_detail = '<span>' | append: card_tags | append: '</span><br />' | append: card_desc %}
+        {% assign card_detail = group.title | append: '<span>#' | append: card_tags | append: '</span><br />' | append: card_desc %}
         {% assign this_card = this_card | push: card_detail %}
 
         {% assign card_sec_title = section.title | replace: ' ', '_' %}
@@ -45,7 +44,7 @@ style: "grid"
 
       {% assign cards_list_container = '' | split: '/' %}
       {% assign cards_list_container = cards_list_container | push: cards_list %}
-      {% include grid_image_overlay_box_list.html sectionid=forloop.index title=group.title list=cards_list_container bgcolor='#fff' color='#000' subcolor='#bbb' cols=3 %}
+      {% assign grid_image_overlay_scale_detail_list.html sectionid=forloop.index title=group.title list=cards_list_container cols=3 %}
 
     {% endfor %}
   {% endfor %}
