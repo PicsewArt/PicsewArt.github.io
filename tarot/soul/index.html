@@ -147,6 +147,32 @@ layout: default_toc
     color: rgb(228, 167, 123);
     font-weight: 400;
   }
+
+  .dark .card_info_title,
+  .dark .card_info_group,
+  .dark .card_tags_u,
+  .dark .card_description_wrapper,
+  .dark .card_description_title,
+  .dark .card_description_p {
+    color: rgb(228, 167, 123);
+  }
+  .dark .card_tags_u {
+    text-decoration-color: rgb(228, 167, 123);
+    border-bottom-color: rgb(228, 167, 123);
+  }
+
+  .light .card_info_title,
+  .light .card_info_group,
+  .light .card_tags_u,
+  .light .card_description_wrapper,
+  .light .card_description_title,
+  .light .card_description_p {
+    color: RGB(4,7,6);
+  }
+  .light .card_tags_u {
+    text-decoration-color: RGB(4,7,6);
+    border-bottom-color: RGB(4,7,6);
+  }
 </style>
 {% for section in site.data.SoulCardsTarot %}
 <h1>{{ section.title }}</h1>
@@ -159,8 +185,7 @@ layout: default_toc
     <div class="card_grid_item card_grid_medium_up_one_half">
       <div class="card_image_wrapper">
         <div class="card_image_container">
-          <!-- <img class="card_image" src="./cards/{{ section.title | replace: ' ', '_' }}/{{ group.title | replace: ' ', '_' }}/{{ card.title | replace: ' ', '_' }}.webp"> -->
-          <img class="card_image" src="https://cdn.shopify.com/s/files/1/0032/1801/4308/products/Marjor-Arcana-07_black_720x.png">
+          <img class="card_image" src="{{ site.url }}/assets/images/tarot/{{ section.title | replace: ' ', '_' }}/{{ group.title | replace: ' ', '_' }}/{{ card.title | replace: ' ', '_' }}.webp">
         </div>
       </div>
     </div>
