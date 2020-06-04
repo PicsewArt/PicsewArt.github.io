@@ -5,16 +5,18 @@ style: "grid"
 ---
 {% if page.style == 'grid' %}
 
-  {% capture detailed_toc %}
-  <ul>
-  {% for section in site.data.SoulCardsTarot %}
-    {% for group in section.groups %}
-      <li>{{ section.title }} | <a href="#grid-list-section-s{{ forloop.index }}">{{ group.title }}</a></li>
-    {% endfor %}
-  {% endfor %}
-  </ul>
-  {% endcapture %}
-  {% include detailed.html title='Table of Content' contents=detailed_toc %}
+  <details class="detailed-content" open="">
+    <summary class="detailed_title">Table of Content</summary>
+    <nav id="TableOfContents" style="">
+      <ul>
+      {% for section in site.data.SoulCardsTarot %}
+        {% for group in section.groups %}
+          <li>{{ section.title }} | <a href="#grid-list-section-s{{ forloop.index }}">{{ group.title }}</a></li>
+        {% endfor %}
+      {% endfor %}
+      </ul>
+    </nav>
+  </details>
 
   {% for section in site.data.SoulCardsTarot %}
     {% for group in section.groups %}
