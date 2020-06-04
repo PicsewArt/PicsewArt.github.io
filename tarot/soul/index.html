@@ -184,9 +184,11 @@ layout: default
 {% endcapture %}
 {% include detailed.html title='Table of Content' contents=detailed_toc %}
 {% for section in site.data.SoulCardsTarot %}
+<div id="{{ section.title | replace: ' ', '_' }}"></div>
 {% for group in section.groups %}
+<div id="{{ section.title | replace: ' ', '_' }}-{{ group.title | replace: ' ', '_' }}"></div>
 {% for card in group.cards %}
-<div class="card_wrapper" id="card-{{ forloop.index }}">
+<div class="card_wrapper" id="{{ section.title | replace: ' ', '_' }}-{{ group.title | replace: ' ', '_' }}-{{ card.title | replace: ' ', '_' }}">
   <div class="card_grid_wrapper">
 
     <div class="card_grid_item card_grid_medium_up_one_half">
