@@ -19,14 +19,19 @@ on_load:
 {% for album in site.gallery %}
   {% if album.published %}
     {% for pic in album.media %}
-      {% assign all_pics = all_pics | push: pic %}
+      {% assign a_pic_data = '' | split: '/' %}
+      {% assign a_pic_data = a_pic_data | push: album.title %}
+      {% assign a_pic_data = a_pic_data | push: pic %}
+      {% assign all_pics = all_pics | push: a_pic_data %}
     {% endfor %}
   {% endif %}
 {% endfor %}
 {% assign all_pics_sorted = all_pics | sort: 'date' | reverse %}
 
 {% assign all_media = '' | split: '/' %}
-{% for item in all_pics_sorted %}
+{% for pic_data in all_pics_sorted %}
+  {% assign album_title = pic_data.first %}
+  {% assign item = pic_data.last %}
   {% assign this_item = '' | split: '/' %}
 
   {% comment %}{% assign media_url = site.url | append: '/gallery/detail/?album=' | append: page.unique | append: '&idx=' | append: forloop.index | append: "&type=" | append: item.type %}{% endcomment %}
@@ -34,7 +39,7 @@ on_load:
   {% capture this_media_url %}{% include gallery_media_url.html item=item %}{% endcapture %}
   {% capture this_thumbnail_url %}{% include gallery_media_thumbnail_url.html item=item %}{% endcapture %}
 
-  {% assign this_item = this_item | push: album.title %}
+  {% assign this_item = this_item | push: album_title %}
   {% assign this_item = this_item | push: item.url %}
   {% assign this_item = this_item | push: this_thumbnail_url %}
   {% assign this_item = this_item | push: this_media_url %}
