@@ -13,10 +13,13 @@ media:
   - url: "mood_sadness_0001.mp4"
     type: 'video'
     format: "mp4"
+    date: 2020-05-01
   - url: "mood_0001.jpg"
     type: 'image'
     format: "jpeg"
+    date: 2020-05-01
   - url: "mood_0002.jpg"
     type: 'image'
     format: "jpeg"
+    date: 2020-05-01
 ---
