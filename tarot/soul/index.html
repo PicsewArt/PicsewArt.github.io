@@ -167,10 +167,24 @@ layout: default_toc
     border-bottom-color: RGB(4,7,6);
   }
 </style>
+{% capture detailed_toc %}
+<ul>
 {% for section in site.data.SoulCardsTarot %}
-<h1>{{ section.title }}</h1>
+  <li><a href="#{{ section.title | replace: ' ', '_' }}">{{ section.title }}</a><ul>
+    {% for group in section.groups %}
+      <li><a href="#{{ section.title | replace: ' ', '_' }}-{{ group.title | replace: ' ', '_' }}">{{ group.title }}</a><ul>
+      {% for card in group.cards %}
+        <li><a href="#{{ section.title | replace: ' ', '_' }}-{{ group.title | replace: ' ', '_' }}-{{ card.title | replace: ' ', '_' }}">{{ card.title }}</a></li>
+      {% endfor %}
+      </ul></li>
+    {% endfor %}
+  </ul></li>
+{% endfor %}
+</ul>
+{% endcapture %}
+{% include detailed.html title='Table of Content' contents=detailed_toc %}
+{% for section in site.data.SoulCardsTarot %}
 {% for group in section.groups %}
-<h4>{{ group.title }}</h4>
 {% for card in group.cards %}
 <div class="card_wrapper" id="card-{{ forloop.index }}">
   <div class="card_grid_wrapper">
