@@ -1,7 +1,7 @@
 ---
 title: "Life"
 unique: "life"
-published: false
+published: true
 desc: "Everyday life"
 cover:
   url: "cover_life.jpg"
