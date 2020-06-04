@@ -11,9 +11,10 @@ style: "grid"
       <ul>
       {% for section in site.data.SoulCardsTarot %}
         {% for group in section.groups %}
-          <li>{{ section.title }} | <a href="#grid-list-section-s{{ forloop.index }}">{{ group.title }}</a></li>
+        <li>{{ section.title }} | <a href="#grid-list-section-s{{ forloop.index }}">{{ group.title }}</a></li>
         {% endfor %}
       {% endfor %}
+        <li><a href="#grid-list-section-sback">Card Back</a></li>
       </ul>
     </nav>
   </details>
@@ -35,7 +36,7 @@ style: "grid"
         {% assign card_sec_title = section.title | replace: ' ', '_' %}
         {% assign card_grp_title = group.title | replace: ' ', '_' %}
         {% assign card_crd_title = card.title | replace: ' ', '_' %}
-        {% assign card_img = site.url | append: '/assets/images/tarot/' | append: card_sec_title | append: '/' | append: card_grp_title | append: '/' | append: card_crd_title | append: '.webp' %}
+        {% assign card_img = site.url | append: '/assets/images/tarot/Soul/' | append: card_sec_title | append: '/' | append: card_grp_title | append: '/' | append: card_crd_title | append: '.webp' %}
         {% assign this_card = this_card | push: card_img %}
         {% assign this_card = this_card | push: card_img %}
 
@@ -48,6 +49,14 @@ style: "grid"
 
     {% endfor %}
   {% endfor %}
+
+  {% assign back_list = '' | split: '/' %}
+  {% assign this_card_back = '' | split: '/' %}
+  {% assign this_card_back = this_card_back | push: '/assets/images/tarot/Soul/Back.png' %}
+  {% assign back_list = back_list | push: this_card_back %}
+  {% assign back_list_container = '' | split: '/' %}
+  {% assign back_list_container = back_list_container | push: back_list %}
+  {% include grid_image_overlay_scale_detail_list.html sectionid='back' title='Back' list=back_list_container cols=3 %}
 
 {% else %}
   <style type="text/css" media="screen">
