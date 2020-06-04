@@ -36,7 +36,7 @@ posts_style: 'scroll'
       {% endfor %}
     {% endif %}
   {% endfor %}
-  {% assign all_pics_sorted = all_pics | sort: 'date' | reverse %}
+  {% assign all_pics_sorted = all_pics | sort: "date" | reverse %}
 
 	{% assign recent_media = '' | split: '/' %}
   {% for item in all_pics_sorted limit: page.limit %}
