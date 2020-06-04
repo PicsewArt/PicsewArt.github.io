@@ -49,7 +49,7 @@ posts_style: 'scroll'
 
     {% assign date_formatted = item.date | date: "%b %d, %Y" %}
     {% assign this_item = this_item | push: date_formatted %}
-		{% assign this_item = this_item | push: item.url %}
+		{% assign this_item = this_item | push: item.type %}
     {% assign this_item = this_item | push: this_thumbnail_url %}
     {% assign this_item = this_item | push: this_media_url %}
     {% assign this_item = this_item | push: item.type %}
