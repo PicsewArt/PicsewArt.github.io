@@ -2,7 +2,7 @@
 title: "Life"
 unique: "life"
 published: true
-desc: "Everyday life"
+desc: "Dancer in the Dark"
 cover:
   url: "cover_life.jpg"
   format: "jpg"
@@ -19,4 +19,16 @@ media:
     type: 'image'
     format: "jpeg"
     date: 20200604T120000+08:00
+  - url: "mood_sadness_0001.mp4"
+    type: 'video'
+    format: "mp4"
+    date: 20200501T120000+08:00
+  - url: "mood_0001.jpg"
+    type: 'image'
+    format: "jpeg"
+    date: 20200501T120000+08:00
+  - url: "mood_0002.jpg"
+    type: 'image'
+    format: "jpeg"
+    date: 20200501T120000+08:00
 ---
