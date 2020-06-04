@@ -28,9 +28,8 @@ style: "grid"
 
         {% assign this_card = this_card | push: card.title %}
 
-        {% assign card_tags = card.tags | join: '</span>&nbsp;<span>#' %}
-        {% assign card_desc = card.descriptions | join: '<br />' %}
-        {% assign card_detail = group.title | append: '<span>#' | append: card_tags | append: '</span><br />' | append: card_desc %}
+        {% assign card_tags = card.tags | join: '</span><br /><span>#' %}
+        {% assign card_detail = group.title | append: '<br /><br /><span>#' | append: card_tags | append: '</span>' %}
         {% assign this_card = this_card | push: card_detail %}
 
         {% assign card_sec_title = section.title | replace: ' ', '_' %}
