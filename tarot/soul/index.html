@@ -1,0 +1,198 @@
+---
+title: "Soul Cards Tarot"
+layout: default
+---
+<style type="text/css" media="screen">
+  .card_wrapper {
+    margin: 0 auto;
+  }
+  .card_wrapper,
+  .card_wrapper * {
+    box-sizing: border-box;
+  }
+  .card_grid_wrapper {
+    list-style-image: none;
+    overflow-anchor: none;
+    *zoom: 1;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin-left: -30px;
+  }
+  .card_grid_wrapper:after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+  .card_grid_item {
+    float: left;
+    padding-left: 30px;
+    width: 100%;
+  }
+  .card_grid_medium_up_one_half {
+    width: 50%;
+  }
+  .card_image_wrapper {
+    max-width: 309.33852140077823px;
+    max-height: 530px;
+    margin: 0 auto;
+    width: 100%;
+  }
+  .card_image_container {
+    margin: 0 auto;
+    min-height: 1px;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    padding-bottom: 4px;
+    padding-top: 171.3333333%;
+  }
+  .card_image {
+    max-width: 309.33852140077823px;
+    max-height: 530px;
+    display: block;
+    margin: 0 auto;
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    width: calc(100% - 8px);
+    border-color: currentcolor;
+    border: 0;
+  }
+  .card_detail_wrapper {
+    margin-top: 10%;
+  }
+  .card_info_wrapper {
+    text-align: center;
+  }
+  .card_info_title {
+    margin-bottom: 5px;
+    font-family: "Cormorant";
+    font-size: 2.58824em;
+    text-transform: none;
+    letter-spacing: 0;
+    margin: 0 0 17.5px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.2;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    text-align: center;
+    color: rgb(228, 167, 123);
+  }
+  .card_info_group {
+    font-size: 12px;
+    text-align: center;
+    letter-spacing: 6px;
+    font-family: "Montserrat",sans-serif !important;
+    color: rgb(228, 167, 123);
+  }
+  .card_info_line {
+    border-color: currentcolor currentcolor rgb(139, 75, 28);
+  }
+  .card_tags_wrapper {
+    margin-left: 7%;
+    margin-top: 15%;
+  }
+  .card_tags_list {
+    font-family: "Montserrat",sans-serif !important;
+    margin: 0;
+    padding: 0;
+  }
+  .card_tags_li {
+    margin-left: 5%;
+    padding-left: 0px;
+    display: inline-block;
+    padding-bottom: 3%;
+    list-style-image: none;
+    list-style: none;
+  }
+  .card_tags_u {
+    text-decoration-color: rgb(228, 167, 123);
+    padding-bottom: 6px;
+    border-bottom-color: rgb(228, 167, 123);
+    text-decoration: none;
+    text-underline-position: under;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: rgb(228, 167, 123);
+  }
+  .card_description_wrapper {
+    text-align: justify;
+    font-family: "Cormorant";
+    margin-bottom: 0;
+    width: 50%;
+    text-align: center;
+    margin-left: 25%;
+    color: rgb(228, 167, 123);
+    margin-top: 30px;
+  }
+  .card_description_title {
+    text-align: center;
+    color: rgb(228, 167, 123);
+    margin-top: 0;
+    margin-bottom: 27.5px;
+    font-family: "Montserrat",sans-serif !important;
+    font-size: 1.29412em;
+    margin: 0 0 17.5px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.2;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+  }
+  .card_description_p {
+    font-family: "Cormorant";
+    text-align: justify;
+    color: rgb(228, 167, 123);
+    font-weight: 400;
+  }
+</style>
+{% for section in site.data.SoulCardsTarot %}
+<h1>{{ section.title }}</h1>
+{% for group in section.groups %}
+<h4>{{ group.title }}</h4>
+{% for card in group.cards %}
+<div class="card_wrapper" id="card-{{ forloop.index }}">
+  <div class="card_grid_wrapper">
+
+    <div class="card_grid_item card_grid_medium_up_one_half">
+      <div class="card_image_wrapper">
+        <div class="card_image_container">
+          <!-- <img class="card_image" src="./cards/{{ section.title | replace: ' ', '_' }}/{{ group.title | replace: ' ', '_' }}/{{ card.title | replace: ' ', '_' }}.webp"> -->
+          <img class="card_image" src="https://cdn.shopify.com/s/files/1/0032/1801/4308/products/Marjor-Arcana-07_black_720x.png">
+        </div>
+      </div>
+    </div>
+
+    <div class="card_grid_item card_grid_medium_up_one_half">
+      <div class="card_detail_wrapper">
+
+        <div class="card_info_wrapper">
+          <p class="card_info_title">{{ card.title }}</p>
+          <span class="card_info_group">{{ group.title }}</span>
+          <hr class="card_info_line" width="400px">
+        </div>
+
+        <div class="card_tags_wrapper">
+          <ul class="card_tags_list">
+            {% for tag in card.tags %}
+            <li class="card_tags_li"><u class="card_tags_u">{{ tag }}</u></li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="card_description_wrapper">
+    <p class="card_description_title">{{ card.title }}</p>
+    {% for desc in card.descriptions %}
+    <p class="card_description_p"><span>{{ desc }}</span></p>
+    {% endfor %}
+  </div>
+</div>
+{% endfor %}
+{% endfor %}
+{% endfor %}
