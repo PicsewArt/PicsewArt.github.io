@@ -45,8 +45,8 @@ posts_style: 'scroll'
 		{% capture this_media_url %}{% include gallery_media_url.html item=item %}{% endcapture %}
 		{% capture this_thumbnail_url %}{% include gallery_media_thumbnail_url.html item=item %}{% endcapture %}
 
-    {% assign this_item = this_item | push: pic.format %}
-		{% assign this_item = this_item | push: pic.url %}
+    {% assign this_item = this_item | push: item.format %}
+		{% assign this_item = this_item | push: item.url %}
     {% assign this_item = this_item | push: this_thumbnail_url %}
     {% assign this_item = this_item | push: this_media_url %}
     {% assign this_item = this_item | push: item.type %}
