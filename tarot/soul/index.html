@@ -44,7 +44,7 @@ style: "grid"
 
       {% assign cards_list_container = '' | split: '/' %}
       {% assign cards_list_container = cards_list_container | push: cards_list %}
-      {% assign grid_image_overlay_scale_detail_list.html sectionid=forloop.index title=group.title list=cards_list_container cols=3 %}
+      {% include grid_image_overlay_scale_detail_list.html sectionid=forloop.index title=group.title list=cards_list_container cols=3 %}
 
     {% endfor %}
   {% endfor %}
