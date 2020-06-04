@@ -37,6 +37,7 @@ style: "grid"
         {% assign card_crd_title = card.title | replace: ' ', '_' %}
         {% assign card_img = site.url | append: '/assets/images/tarot/' | append: card_sec_title | append: '/' | append: card_grp_title | append: '/' | append: card_crd_title | append: '.webp' %}
         {% assign this_card = this_card | push: card_img %}
+        {% assign this_card = this_card | push: card_img %}
 
         {% assign cards_list = cards_list | push: this_card %}
       {% endfor %}
