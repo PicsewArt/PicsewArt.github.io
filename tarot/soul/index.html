@@ -18,30 +18,33 @@ style: "grid"
 
   {% for section in site.data.SoulCardsTarot %}
     {% for group in section.groups %}
+
       {% assign cards_list = '' | split: '/' %}
       {% for card in group.cards %}
-        <!-- element[0]: title.first-word -->
-        <!-- element[1]: title.other-word -->
-        <!-- element[2]: desc -->
-        <!-- element[3]: image -->
-        <!-- element[4]: url -->
-        {% assign cards_list = cards_list | push: card.title %}
-        {% assign cards_list = cards_list | push: group.title %}
+
+        {% assign this_card = '' | split: '/' %}
+
+        {% assign this_card = this_card | push: card.title %}
+        {% assign this_card = this_card | push: group.title %}
 
         {% assign card_tags = card.tags | join: '</span><span>#' %}
         {% assign card_desc = card.descriptions | join: '<br />' %}
         {% assign card_detail = '<span>' | append: card_tags | append: '</span><br />' | append: card_desc %}
-        {% assign cards_list = cards_list | push: card_detail %}
+        {% assign this_card = this_card | push: card_detail %}
 
         {% assign card_sec_title = section.title | replace: ' ', '_' %}
         {% assign card_grp_title = group.title | replace: ' ', '_' %}
         {% assign card_crd_title = card.title | replace: ' ', '_' %}
         {% assign card_img = site.url | append: '/assets/images/tarot/' | append: card_sec_title | append: '/' | append: card_grp_title | append: '/' | append: card_crd_title | append: '.webp' %}
-        {% assign cards_list = cards_list | push: card_img %}
+        {% assign this_card = this_card | push: card_img %}
+
+        {% assign cards_list = cards_list | push: this_card %}
       {% endfor %}
+
       {% assign cards_list_container = '' | split: '/' %}
       {% assign cards_list_container = cards_list_container | push: cards_list %}
       {% include grid_image_overlay_box_list.html sectionid=forloop.index title=group.title list=cards_list_container bgcolor='#fff' color='#000' subcolor='#bbb' cols=3 %}
+
     {% endfor %}
   {% endfor %}
 
