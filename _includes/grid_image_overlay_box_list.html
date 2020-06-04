@@ -23,7 +23,7 @@
 
 		{% capture element_html %}
     <!-- BEGIN GRID ITEM -->
-    {% include image_overlay_box.html title=element_title subtitle=element_subtitle desc=element_desc image=element_image href=element_url maxwidth="100%" %}
+    {% include image_overlay_box.html title=element_title subtitle=element_subtitle desc=element_desc image=element_image href=element_url color=include.color subcolor=include.subcolor bgcolor=include.bgcolor maxwidth="100%" %}
     <!-- END GRID ITEM -->
     {% endcapture %}
     {% assign grid_list_gourp_array = grid_list_gourp_array | push: element_html %}
