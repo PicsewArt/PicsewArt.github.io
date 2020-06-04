@@ -16,17 +16,21 @@ style: "grid"
         <!-- element[4]: url -->
         {% assign cards_list = cards_list | push: card.title %}
         {% assign cards_list = cards_list | push: group.title %}
+
         {% assign card_tags = card.tags | join: '</span><span>#' %}
         {% assign card_desc = card.descriptions | join: '<br />' %}
         {% assign card_detail = '<span>' | append: card_tags | append: '</span><br />' | append: card_desc %}
         {% assign cards_list = cards_list | push: card_detail %}
+
         {% assign card_sec_title = section.title | replace: ' ', '_' %}
         {% assign card_grp_title = group.title | replace: ' ', '_' %}
         {% assign card_crd_title = card.title | replace: ' ', '_' %}
         {% assign card_img = site.url | append: '/assets/images/tarot/' | append: card_sec_title | append: '/' | append: card_grp_title | append: '/' | append: card_crd_title | append: '.webp' %}
         {% assign cards_list = cards_list | push: card_img %}
       {% endfor %}
-      {% include grid_image_overlay_box_list.html title=group.title list=cards_list bgcolor='#fff' color='#000' subcolor='#bbb' cols=3 %}
+      {% assign cards_list_container = '' | split: '/' %}
+      {% assign cards_list_container = cards_list_container | push: cards_list %}
+      {% include grid_image_overlay_box_list.html title=group.title list=cards_list_container bgcolor='#fff' color='#000' subcolor='#bbb' cols=3 %}
     {% endfor %}
   {% endfor %}
 
