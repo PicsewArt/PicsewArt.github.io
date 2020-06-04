@@ -5,6 +5,17 @@ style: "grid"
 ---
 {% if page.style == 'grid' %}
 
+  {% capture detailed_toc %}
+  <ul>
+  {% for section in site.data.SoulCardsTarot %}
+    {% for group in section.groups %}
+      <li>{{ section.title }} | <a href="#grid-list-section-s{{ forloop.index }}">{{ group.title }}</a></li>
+    {% endfor %}
+  {% endfor %}
+  </ul>
+  {% endcapture %}
+  {% include detailed.html title='Table of Content' contents=detailed_toc %}
+
   {% for section in site.data.SoulCardsTarot %}
     {% for group in section.groups %}
       {% assign cards_list = '' | split: '/' %}
@@ -30,7 +41,7 @@ style: "grid"
       {% endfor %}
       {% assign cards_list_container = '' | split: '/' %}
       {% assign cards_list_container = cards_list_container | push: cards_list %}
-      {% include grid_image_overlay_box_list.html title=group.title list=cards_list_container bgcolor='#fff' color='#000' subcolor='#bbb' cols=3 %}
+      {% include grid_image_overlay_box_list.html sectionid=forloop.index title=group.title list=cards_list_container bgcolor='#fff' color='#000' subcolor='#bbb' cols=3 %}
     {% endfor %}
   {% endfor %}
 
