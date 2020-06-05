@@ -6,7 +6,7 @@
 <meta name="description" content="{{ site.description }}">
 <meta name="keywords" content="app, art, blogging, debugging, entrepreneurship, finance, framework, hacking, investing, library, opinion, plugin, politics, privacy, programming, reference, reflection, relationships, security, technology, tool, tooling, travel, tutorial, tutorials, ">
 
-{% assign icons_folder = site.url | append: site.path.images | append: '/icons' %}
+{% assign icons_folder = site.url | append: site.path.images | append: '/icons/' | append: site.favicon %}
 {% assign favicon_png = icons_folder | append: '/favicon.png' %}
 <meta property="og:title" content="{{ page.title }}" />
 <meta property="og:description" content="{{ site.description }}" />
