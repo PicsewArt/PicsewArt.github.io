@@ -55,12 +55,12 @@ cover:
   {% endfor %}
 
   {% assign back_list = '' | split: '/' %}
-  {% assign this_card_back = '' | split: '/' %}
+  {% assign this_card = '' | split: '/' %}
   {% assign this_card = this_card | push: 'Card Back' %}
   {% assign this_card = this_card | push: 'Card Back' %}
-  {% assign this_card_back = this_card_back | push: '/assets/images/tarot/Soul/Back.png' %}
-  {% assign back_list = back_list | push: this_card_back %}
-  {% assign back_list = back_list | push: this_card_back %}
+  {% assign this_card = this_card | push: '/assets/images/tarot/Soul/Back.png' %}
+  {% assign this_card = this_card | push: '/assets/images/tarot/Soul/Back.png' %}
+  {% assign back_list = back_list | push: this_card %}
   {% assign back_list_container = '' | split: '/' %}
   {% assign back_list_container = back_list_container | push: back_list %}
   {% include grid_image_overlay_scale_detail_list.html sectionid='back' title='Back' list=back_list_container cols=3 %}
