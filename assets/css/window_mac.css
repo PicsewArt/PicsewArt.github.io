@@ -71,3 +71,7 @@ div.window-wrapper {
   border-radius: 5px
   /* border: 1px solid var(--charcoal-gray); */
 }
+
+div.window-wrapper code {
+  color: #000;
+}
