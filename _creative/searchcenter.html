@@ -333,6 +333,7 @@ engines:
     .m-bottom {
       margin-bottom: 20px;
       max-width: 768px;
+      text-align: center;
     }
 
     /* Amazing flex utility classes */
@@ -576,10 +577,12 @@ engines:
           <i class="material-icons">search</i>
         </div>
         <div class="m-bottom">
-          <button class="btn dark-grey m-right" onclick="javascript:back2home();">Back to Home</button>
           {% for engine in page.engines %}
           <button class="btn primary" onclick="javascript:searchOn('{{ engine.url }}');">{{ engine.title }}</button>
           {% endfor %}
+        </div>
+        <div class="m-bottom">
+          <button class="btn dark-grey m-right" onclick="javascript:back2home();">Back to Home</button>
         </div>
         <div class="text-center text-grey font-lighter">
           <div><small>© {{ site.author }} (2020) All rights reserved.</small></div>
