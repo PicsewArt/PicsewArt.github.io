@@ -4,7 +4,8 @@ div.window-wrapper-container {
   border-top-left-radius: 6px;
   border-top-right-radius: 6px;
   -moz-background-size: 100% auto;
-  color: #fff;
+  color: #000;
+  background-color: #ECECEC;
   overflow: hidden;
   position: relative;
   margin: 0 auto 1rem auto;

@@ -364,6 +364,12 @@ $(document).ready(() => {
 {% endcapture %}
 <style media="screen" type="text/css">
   {{ css_source }}
+  .functions-container {
+    padding: 16px;
+  }
+  .dark .functions-container {
+    background-color: #000;
+  }
 </style>
 <!-- FUNCTIONS -->
 <div id="functions">
@@ -373,7 +379,7 @@ $(document).ready(() => {
   <p>For as long as I worked on creating this solution from multiple resources I found some had spent far longer to create this already completed solution. Only slightly modified to focus on HEX colors.</p>
   <br />
   {% include window_mac_start.html title="CSS filter Generator"%}
-  <div style="padding: 16px;">
+  <div clss="functions-container">
     {{ html_source }}
   </div>
   {% include window_mac_end.html %}
