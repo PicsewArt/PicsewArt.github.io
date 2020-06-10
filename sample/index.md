@@ -486,6 +486,10 @@ int main(int argc, char *argv[]) {
 
 <blockquote>{% include card_profile_quotes.html title=site.name subtitle=site.alias desc=site.description image="/assets/images/avatar.jpg" %}</blockquote>
 
+### Simple White Profile Card
+
+<blockquote>{% include card_profile_simple_white.html name=site.name desc=site.alias avatar=site.avatar icons="github:::https://github.com/,,,twitter:::https://twitter.com/,,,facebook:::https://facebook.com/" %}</blockquote>
+
 ## Post Cards
 
 ### Normal Post Card
