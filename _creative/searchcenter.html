@@ -566,12 +566,6 @@ engines:
         console.log('keyword not found');
       }
     }
-
-    {% for engine in page.engines %}
-    function {{ engine.title | downcase }}() {
-      searchOn('{{ engine.url }}');
-    }
-    {% endfor %}
   </script>
   <div id="app">
     <div data-reactroot="">
@@ -584,7 +578,7 @@ engines:
         <div class="m-bottom">
           <button class="btn dark-grey m-right" onclick="javascript:back2home();">Back to Home</button>
           {% for engine in page.engines %}
-          <button class="btn primary" onclick="javascript:{{ engine.title | downcase }}();">{{ engine.title }}</button>
+          <button class="btn primary" onclick="javascript:searchOn('{{ engine.url }}');">{{ engine.title }}</button>
           {% endfor %}
         </div>
         <div class="text-center text-grey font-lighter">
