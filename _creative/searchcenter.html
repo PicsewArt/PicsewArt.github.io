@@ -543,6 +543,35 @@ engines:
 </head>
 
 <body>
+  <script type="text/javascript">
+    function redirect2(aUrl) {
+      window.open(aUrl, '_blank')//, 'location=yes,height=570,width=520,scrollbars=yes,status=yes');
+    }
+
+    function back2home() {
+      redirect2('https://lasenhorita.github.io/');
+    }
+
+    function searchOn(engineUrl) {
+      var theKeyword = document.getElementById('search-field').value;
+      if (theKeyword != null) {
+        if (theKeyword.length > 0) {
+          var searchUrl = engineUrl + encodeURIComponent(theKeyword);
+          redirect2(searchUrl);
+        } else {
+          console.log('keyword not found');
+        }
+      } else {
+        console.log('keyword not found');
+      }
+    }
+
+    {% for engine in page.engines %}
+    function {{ engine.title | downcase }}() {
+      searchOn('{{ engine.url }}');
+    }
+    {% endfor %}
+  </script>
   <div id="app">
     <div data-reactroot="">
       <div class="flex-align-center-justify-center-direction-column view-height p-all">
@@ -565,29 +594,4 @@ engines:
   </div>
 
 </body>
-<script type="text/javascript">
-  function redirect2(aurl) {
-    window.open(aurl, '_blank')//, 'location=yes,height=570,width=520,scrollbars=yes,status=yes');
-  }
-
-  function back2home() {
-    redirect2('https://lasenhorita.github.io/');
-  }
-
-  function search(engineUrl) {
-    var keyword = document.getElementById('search-field').value;
-    if (keyword != null) {
-      if (keyword.length > 0) {
-        var searchUrl = engineUrl + encodeURIComponent(keyword);
-        redirect2(searchUrl);
-      }
-    }
-  }
-
-  {% for engine in page.engines %}
-  function {{ engine.title | downcase }}() {
-    search('{{ engine.url }}');
-  }
-  {% endfor %}
-</script>
 </html>
