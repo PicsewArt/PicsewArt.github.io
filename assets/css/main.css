@@ -864,9 +864,12 @@ blockquote {
   padding-top: 1rem;
   padding-bottom: 1rem;
   padding-right: 1rem;
-  /* overflow: hidden; */
   overflow: visible;
   margin: 5px 0;
+  border-width: 0.5px;
+  border-radius: 5px;
+  border-color: #515F65;
+  border-style: solid;
 }
 
 blockquote:before {

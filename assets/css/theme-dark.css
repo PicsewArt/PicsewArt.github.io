@@ -312,6 +312,10 @@
 
 .dark blockquote {
   background-color: var(--atomone-gray);
+  border-width: 0.5px;
+  border-radius: 5px;
+  border-color: #515F65;
+  border-style: solid;
 }
 
 .dark blockquote blockquote {
