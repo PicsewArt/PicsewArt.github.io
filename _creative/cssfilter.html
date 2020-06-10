@@ -389,7 +389,7 @@ $(document).ready(() => {
 <!-- POST TEXT -->
 <div id="post-text" itemprop="text">
 
-  <h1>Demo</h1>
+  <h1 id="demo">Demo</h1>
 {% highlight js %}
 {{ js_source }}
 {% endhighlight %}
@@ -404,7 +404,7 @@ $(document).ready(() => {
 {% endhighlight %}
 
 
-  <h1>Usage</h1>
+  <h1 id="usage">Usage</h1>
 
 {% highlight js %}
 let color = new Color(0, 255, 0);
@@ -415,7 +415,7 @@ let filterCSS = result.css;
 
 
 
-  <h1>Explanation</h1>
+  <h1 id="explanation">Explanation</h1>
 
   <p>We'll begin by writing some Javascript.</p>
 
@@ -495,7 +495,7 @@ let filterCSS = result.css;
     </li>
   </ul>
 
-  <h2>Implementing <code>grayscale()</code>, <code>sepia()</code>, and <code>saturate()</code></h2>
+  <h2 id="imp_grayscale">Implementing <code>grayscale()</code>, <code>sepia()</code>, and <code>saturate()</code></h2>
 
   <p>The heart of CSS/SVG filters are <a href="https://www.w3.org/TR/filter-effects/#FilterPrimitivesOverview" rel="noreferrer">filter primitives</a>, which represent low-level modifications to an image.</p>
 
@@ -558,7 +558,7 @@ function saturate(value = 1) {
 }
 {% endhighlight %}
 
-  <h2>Implementing <code>hue-rotate()</code></h2>
+  <h2 id="imp_hue">Implementing <code>hue-rotate()</code></h2>
 
   <p>The <a href="https://www.w3.org/TR/filter-effects/#element-attrdef-fecolormatrix-values" rel="noreferrer"><code>hue-rotate()</code></a> filter is implemented by <a href="https://www.w3.org/TR/filter-effects/#feColorMatrixElement"
       rel="noreferrer"><code>&lt;feColorMatrix type="hueRotate" /&gt;</code></a>.</p>
@@ -594,7 +594,7 @@ function hueRotate(angle = 0) {
 }
 {% endhighlight %}
 
-  <h2>Implementing <code>brightness()</code> and <code>contrast()</code></h2>
+  <h2 id="imp_brightness">Implementing <code>brightness()</code> and <code>contrast()</code></h2>
 
   <p>The <a href="https://www.w3.org/TR/filter-effects/#brightnessEquivalent" rel="noreferrer"><code>brightness()</code></a> and <a href="https://www.w3.org/TR/filter-effects/#contrastEquivalent" rel="noreferrer"><code>contrast()</code></a> filters
     are implemented by <a href="https://www.w3.org/TR/filter-effects/#feComponentTransferElement" rel="noreferrer"><code>&lt;feComponentTransfer&gt;</code></a> with <a
@@ -623,7 +623,7 @@ function brightness(value = 1) { this.linear(value); }
   function contrast(value = 1) { this.linear(value, -(0.5 * value) + 0.5); }
 {% endhighlight %}
 
-  <h2>Implementing <code>invert()</code></h2>
+  <h2 id="imp_invert">Implementing <code>invert()</code></h2>
 
   <p>The <a href="https://www.w3.org/TR/filter-effects/#invertEquivalent" rel="noreferrer"><code>invert()</code></a> filter is implemented by <a href="https://www.w3.org/TR/filter-effects/#feComponentTransferElement"
       rel="noreferrer"><code>&lt;feComponentTransfer&gt;</code></a> with <a href="https://www.w3.org/TR/filter-effects/#element-attrdef-fecomponenttransfer-type" rel="noreferrer"><code>&lt;feFuncX type="table" /&gt;</code></a>.</p>
@@ -683,7 +683,7 @@ function invert(value = 1) {
 }
 {% endhighlight %}
 
-  <h2>Implementing SPSA</h2>
+  <h2 id="imp+spsa">Implementing SPSA</h2>
 
   <p>First, we must define a <a href="https://en.wikipedia.org/wiki/Loss_function" rel="noreferrer">loss function</a>, that returns the difference between the color produced by a filter combination, and the target color. If the filters are perfect,
     the loss function should return 0.</p>
@@ -835,7 +835,7 @@ function solveNarrow(wide) {
 }
 {% endhighlight %}
 
-  <h2>Tuning SPSA</h2>
+  <h2 id="tuning_spsa">Tuning SPSA</h2>
 
   <p><strong>Warning: Do not mess with the SPSA code, especially with its constants, unless you are <em>sure</em> you know what you are doing.</strong></p>
 
@@ -864,7 +864,7 @@ Average time: 11.4915ms
     <li>Use the <code>--debug</code> flag if you want to see the result of each iteration.</li>
   </ul>
 
-  <h2>TL;DR</h2>
+  <h2 id="tldr">TL;DR</h2>
 
   <p><img src="https://imgs.xkcd.com/comics/machine_learning.png" alt=""></p>
 </div>
