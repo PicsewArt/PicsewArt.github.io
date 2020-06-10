@@ -387,6 +387,7 @@ $(document).ready(() => {
     {{ js_source }}
   </script>
 </div>
+{% capture learn_more %}
 <!-- POST TEXT -->
 <div id="post-text" itemprop="text">
 
@@ -928,3 +929,5 @@ Average time: 11.4915ms
 
   <p><img src="{{ site.url }}{{ site.path.images }}/creative/cssfilter/machine_learning.png"></p>
 </div>
+{% endcapture %}
+{% include detailed.html title='Learn more about <code>CSS filter</code>' contents=learn_more %}
