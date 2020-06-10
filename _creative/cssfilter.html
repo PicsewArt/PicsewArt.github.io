@@ -837,7 +837,7 @@ function solveNarrow(wide) {
 
   <h2 id="tuning_spsa">Tuning SPSA</h2>
 
-  <p><strong>Warning: Do not mess with the SPSA code, especially with its constants, unless you are <em>sure</em> you know what you are doing.</strong></p>
+  {% include alert.html type='warning' title='Warning' msg='Warning: Do not mess with the SPSA code, especially with its constants, unless you are <em>sure</em> you know what you are doing.' %}
 
   <p>The important constants are <em>A</em>, <em>a</em>, <em>c</em>, the initial values, the retry thresholds, the values of <code>max</code> in <code>fix()</code>, and the number of iterations of each stage. All of these values were carefully tuned
     to produce good results, and randomly screwing with them will almost definitely reduce the usefulness of the algorithm.</p>
