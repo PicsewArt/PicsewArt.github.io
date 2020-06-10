@@ -504,7 +504,7 @@ let filterCSS = result.css;
       rel="noreferrer"><code>&lt;feColorMatrix&gt;</code></a>, which performs <a href="https://en.wikipedia.org/wiki/Matrix_multiplication" rel="noreferrer">matrix multiplication</a> between a matrix specified by the filter (often dynamically
     generated), and a matrix created from the color. Diagram:</p>
 
-  <p><img src="https://i.stack.imgur.com/eNsON.png" alt="Matrix multiplication"></p>
+  <p><img src="{{ site.url }}{{ site.path.images }}/creative/cssfilter/eNsON.png" alt="Matrix multiplication"></p>
 
   <p>There are some optimizations we can make here:</p>
 
@@ -565,11 +565,11 @@ function saturate(value = 1) {
 
   <p>The filter matrix is calculated as shown below:</p>
 
-  <p><a href="https://i.stack.imgur.com/CBlfP.png" rel="noreferrer"><img src="https://i.stack.imgur.com/CBlfP.png" alt=""></a></p>
+  <p><img src="{{ site.url }}{{ site.path.images }}/creative/cssfilter/CBlfP.png"></p>
 
   <p>For instance, element <em>a<sub>00</sub></em> would be calculated like so:</p>
 
-  <p><img src="https://i.stack.imgur.com/cXnSJ.png" alt=""></p>
+  <p><img src="{{ site.url }}{{ site.path.images }}/creative/cssfilter/cXnSJ.png"></p>
 
   <p>Some notes:</p>
 
@@ -602,7 +602,7 @@ function hueRotate(angle = 0) {
 
   <p>Each <code>&lt;feFuncX type="linear" /&gt;</code> element accepts a <em>slope</em> and <em>intercept</em> attribute. It then calculates each new color value through a simple formula:</p>
 
-{% highlight js %}
+{% highlight sh %}
 value = slope * value + intercept
 {% endhighlight %}
 
@@ -926,5 +926,5 @@ Average time: 11.4915ms
 
   <h2 id="tldr">TL;DR</h2>
 
-  <p><img src="https://imgs.xkcd.com/comics/machine_learning.png" alt=""></p>
+  <p><img src="{{ site.url }}{{ site.path.images }}/creative/cssfilter/machine_learning.png"></p>
 </div>
