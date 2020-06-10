@@ -13,9 +13,9 @@
 }
 
 .dark .signature-container .signature-image {
-  filter: invert(1);
+  filter: invert(99%) sepia(99%) saturate(0%) hue-rotate(255deg) brightness(107%) contrast(100%);
 }
 
 .light .signature-container .signature-image {
-  filter: invert(0);
+  filter: invert(0%) sepia(5%) saturate(6%) hue-rotate(327deg) brightness(96%) contrast(101%);
 }
