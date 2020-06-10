@@ -7,6 +7,10 @@
   background: #000
 }
 
+.highlight pre code[class^="language-"] {
+  color: #fff;
+}
+
 .highlight .ge {
   font-style: italic
 }
