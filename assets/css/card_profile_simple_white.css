@@ -118,4 +118,9 @@
 
 .card-profile-simple-white-social-item a {
   display: block;
+  border: none;
+}
+
+.card-profile-simple-white-social-item a:hover {
+  background: none;
 }
