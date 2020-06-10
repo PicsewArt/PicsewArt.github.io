@@ -844,7 +844,67 @@ function solveNarrow(wide) {
 
   <p>If you insist on altering it, you must measure before you "optimize".</p>
 
-  <p>First, apply <a href="https://pastebin.com/MegNhzqk" rel="noreferrer">this patch</a>.</p>
+  <p>First, apply this patch:</p>
+
+{% highlight js %}
+diff --git a/code.js b/code.js
+index 346f3af..6868483 100644
+--- a/code.js
++++ b/code.js
+@@ -1,4 +1,5 @@
+ "use strict";
++const LOG_DEBUG = process.argv.includes("--debug");
+
+ class Color {
+     constructor(r, g, b) { this.set(r, g, b); }
+@@ -111,6 +112,7 @@ class Solver {
+
+     solve() {
+         let result = this.solveNarrow(this.solveWide());
++        if(LOG_DEBUG) { console.log("-----------"); }
+         return {
+             values: result.values,
+             loss: result.loss,
+@@ -149,6 +158,8 @@ class Solver {
+         let highArgs = new Array(6);
+         let lowArgs = new Array(6);
+
++        if(LOG_DEBUG) { console.log(`\nRunning SPSA for ${iters} iterations. α=${alpha} γ=${gamma} A=${A} a=${a} c=${c} θ=${values}`); }
++
+         for(let k = 0; k < iters; k++) {
+             let ck = c / Math.pow(k + 1, gamma);
+             for(let i = 0; i < 6; i++) {
+@@ -166,6 +177,8 @@ class Solver {
+
+             let loss = this.loss(values);
+             if(loss < bestLoss) { best = values.slice(0); bestLoss = loss; }
++
++            if(LOG_DEBUG && k % 10 === 0) { console.log(`Iteration ${k + 1}. Loss: ${loss.toFixed(3)} ${this.css(values)}`); }
+         } return { values: best, loss: bestLoss };
+
+         function fix(value, idx) {
+@@ -206,4 +219,21 @@ class Solver {
+         function fmt(idx, multiplier = 1) { return Math.round(filters[idx] * multiplier); }
+         return `filter: invert(${fmt(0)}%) sepia(${fmt(1)}%) saturate(${fmt(2)}%) hue-rotate(${fmt(3, 3.6)}deg) brightness(${fmt(4)}%) contrast(${fmt(5)}%);`;
+     }
+ }
++const TEST_ITERATIONS = 2000;
++let color = new Color(0, 0, 0);
++let sumLoss = 0;
++let start = Date.now();
++function randRGB() { return Math.floor(Math.random() * 256); }
++
++for(let i = 0; i < TEST_ITERATIONS; i++) {
++    color.set(randRGB(), randRGB(), randRGB());
++    if(LOG_DEBUG) { console.log("Color: " + color.toString()); }
++
++    let solver = new Solver(color);
++    let result = solver.solve();
++    sumLoss += result.loss;
++}
++console.log("Average loss: " + sumLoss / TEST_ITERATIONS);
++console.log("Average time: " + (Date.now() - start) / TEST_ITERATIONS + "ms");
+{% endhighlight %}
 
   <p>Then run the code in Node.js. After quite some time, the result should be something like this:</p>
 
