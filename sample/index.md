@@ -488,7 +488,7 @@ int main(int argc, char *argv[]) {
 
 ### Simple White Profile Card
 
-<blockquote>{% include card_profile_simple_white.html name=site.name desc=site.alias avatar=site.avatar icons="github:::https://github.com/,,,twitter:::https://twitter.com/,,,facebook:::https://facebook.com/" %}</blockquote>
+<blockquote>{% include card_profile_simple_white.html name=site.name desc=site.alias avatar=site.avatar icons="github:::https://github.com/,,,twitter:::https://twitter.com/,,,facebook:::https://facebook.com/" maxwidth='390px' maxheight='390px' %}</blockquote>
 
 ## Post Cards
 
