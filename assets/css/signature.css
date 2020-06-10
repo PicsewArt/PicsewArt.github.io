@@ -1,0 +1,21 @@
+.signature-container {
+  height: 128px !important;
+}
+
+.signature-container .signature-image {
+  float: right !important;
+  width: 256px !important;
+  max-width: 100% !important;
+}
+
+.signature-container .signature-image {
+  content: url('{{ site.url }}{{ site.path.images }}/signature.svg');
+}
+
+.dark .signature-container .signature-image {
+  filter: invert(1);
+}
+
+.light .signature-container .signature-image {
+  filter: invert(0);
+}
