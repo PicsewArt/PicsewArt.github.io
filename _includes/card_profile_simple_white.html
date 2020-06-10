@@ -7,7 +7,7 @@
       {% assign profile_icons = include.icons | split: ',,,' %}
       {% for icon in include.icons %}
       {% assign icon_contents = icon | split: ':::' %}
-      <div class="card-profile-simple-white-social-item"><a href="{{ icon.last }}"><i class="fa fa-{{ icon.first }}"></i></a></div>
+      <div class="card-profile-simple-white-social-item"><a href="{{ icon_contents.last }}"><i class="fa fa-{{ icon_contents.first }}"></i></a></div>
       {% endfor %}
     </div>
   </div>
