@@ -12,18 +12,18 @@ engines:
     url: "https://www.baidu.com/baidu?ie=utf-8&wd="
   - title: "Yandex"
     url: "https://yandex.com/search/?text="
+  - title: "Bing"
+    url: "https://www.bing.com/search?q="
   - title: "Youtube"
     url: "https://www.youtube.com/results?search_query="
+  - title: "Unsplash"
+    url: "https://unsplash.com/s/photos/"
   - title: "Github"
     url: "https://github.com/search?q="
   - title: "Stack Overflow"
     url: "https://stackoverflow.com/search?q="
   - title: "CodePen"
     url: "https://codepen.io/search/pens?q="
-  - title: "Unsplash"
-    url: "https://unsplash.com/s/photos/"
-  - title: "Señorita"
-    url: "https://lasenhorita.github.io/search/index.html?query="
 ---
 <!DOCTYPE html>
 <html class="" lang="en">
@@ -583,6 +583,7 @@ engines:
         </div>
         <div class="m-bottom">
           <button class="btn dark-grey m-right" onclick="javascript:back2home();">Back to Home</button>
+          <button class="btn primary" onclick="javascript:searchOn('{{ site.url }}/search/index.html?query=');">{{ site.name }}</button>
         </div>
         <div class="text-center text-grey font-lighter">
           <div><small>© {{ site.author }} (2020) All rights reserved.</small></div>
