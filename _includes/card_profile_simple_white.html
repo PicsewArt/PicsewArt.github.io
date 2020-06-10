@@ -1,0 +1,14 @@
+<div class="card-profile-simple-white-column">
+  <div class="card-profile-simple-white-user">
+    <div class="card-profile-simple-white-user-avatar"><img src="{{ include.avatar }}" /></div>
+    <div class="card-profile-simple-white-user-name">{{ include.name }}</div>
+    <div class="card-profile-simple-white-user-title">{{ include.desc }}</div>
+    <div class="card-profile-simple-white-social">
+      {% assign profile_icons = include.icons | split: ',,,' %}
+      {% for icon in include.icons %}
+      {% assign icon_contents = icon | split: ':::' %}
+      <div class="card-profile-simple-white-social-item"><a href="{{ icon.last }}"><i class="fa fa-{{ icon.first }}"></i></a></div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
