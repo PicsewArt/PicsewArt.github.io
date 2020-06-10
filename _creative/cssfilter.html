@@ -365,23 +365,25 @@ $(document).ready(() => {
 <style media="screen" type="text/css">
   {{ css_source }}
 </style>
+<!-- FUNCTIONS -->
+<div id="functions">
+  <h1>CSS filter generator to convert from black to target hex color</h1>
+  <p>The goal was to be able to create custom style sheets and allow for the coloring of icons for <a href="{{ site.url }}" target="_blank">{{ site.name }}</a>.</p>
+  <p>For this code to work well the starting color needs to be black. If your icon set isn't black you can prepend "<code>brightness(0) saturate(100%)</code>" to your filter property which will first turn the icon set to black.</p>
+  <p>For as long as I worked on creating this solution from multiple resources I found some had spent far longer to create this already completed solution. Only slightly modified to focus on HEX colors.</p>
 
-<!-- partial -->
-<h1>CSS filter generator to convert from black to target hex color</h1>
-<table>
-  <tr valign="top">
-    <td width="50%">
-      {{ html_source }}
-    </td>
-    <td>
-      <p>The goal was to be able to create custom style sheets and allow for the coloring of icons for <a href="{{ site.url }}" target="_blank">{{ site.name }}</a>.</p>
-      <p>For this code to work well the starting color needs to be black. If your icon set isn't black you can prepend "<code>brightness(0) saturate(100%)</code>" to your filter property which will first turn the icon set to black.</p>
-      <p>For as long as I worked on creating this solution from multiple resources I found some had spent far longer to create this already completed solution. Only slightly modified to focus on HEX colors.</p>
-    </td>
-  </tr>
-</table>
-<div class="post-text" itemprop="text">
-  <hr>
+  <div>
+    {{ html_source }}
+  </div>
+
+  {{ js_link_source }}
+  <script type="text/javascript">
+    {{ js_source }}
+  </script>
+</div>
+<!-- POST TEXT -->
+<div id="post-text" itemprop="text">
+
   <h1>Demo</h1>
 {% highlight js %}
 {{ js_source }}
@@ -395,7 +397,7 @@ $(document).ready(() => {
 {{ js_link_source }}
 {{ html_source }}
 {% endhighlight %}
-  <hr>
+
 
   <h1>Usage</h1>
 
@@ -406,7 +408,7 @@ let result = solver.solve();
 let filterCSS = result.css;
 {% endhighlight %}
 
-  <hr>
+
 
   <h1>Explanation</h1>
 
@@ -861,8 +863,3 @@ Average time: 11.4915ms
 
   <p><img src="https://imgs.xkcd.com/comics/machine_learning.png" alt=""></p>
 </div>
-<!-- partial -->
-{{ js_link_source }}
-<script type="text/javascript">
-  {{ js_source }}
-</script>
