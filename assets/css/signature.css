@@ -2,11 +2,7 @@
 layout: null
 ---
 .signature-container {
-    padding-bottom: 20px;
-}
-
-.signature-image {
-  height: 213px !important;
+    height: 213px !important;
 }
 
 .signature-container .signature-image {
