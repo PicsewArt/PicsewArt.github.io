@@ -41,6 +41,7 @@ figure.overlay-image-listing * {
 
 figure.overlay-image-listing img {
   max-width: 100%;
+  display: block;
 }
 
 figure.overlay-image-listing figcaption {
