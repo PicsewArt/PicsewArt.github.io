@@ -3,7 +3,7 @@ title: "Swift 代码规范"
 cave: true
 hero:
   format: 'jpeg'
-  url: 'post/swift'
+  url: 'post/swift.jpg'
 category: "iOS"
 tags: [iOS, macOS, Swift, StyleGuide]
 ---
