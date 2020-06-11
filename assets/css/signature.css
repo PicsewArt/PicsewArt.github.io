@@ -1,13 +1,14 @@
 ---
 layout: null
 ---
-.signature-container {
-    height: 214px !important;
-}
+/* .signature-container {
+    height: 150px !important;
+} */
 
 .signature-container .signature-image {
   float: right !important;
-  width: 256px !important;
+  width: 180px !important;
+  height: 150px !important;
   max-width: 100% !important;
 }
 
