@@ -5,7 +5,7 @@ tags: ["Sadness"]
 date: 20200515T041800+08:00
 hero:
   format: 'jpeg'
-  url: 'HERO_SADNESS_H_0014.jpg'
+  url: 'HERO_0005.jpg'
 ---
 I can’t pinpoint why you’re special. I can’t pinpoint why I think of you Every. Single. Day.
 

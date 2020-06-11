@@ -3,7 +3,7 @@ category: "OS X"
 cave: true
 hero:
   format: 'jpeg'
-  url: 'post/macintosh.jpg'
+  url: 'HERO_0010.jpg'
 title:  "OS X : SSH 克隆会话"
 tags: [OS X,Mac,SSH]
 summary: "Mac SSH 克隆会话"

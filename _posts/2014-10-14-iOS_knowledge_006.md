@@ -3,7 +3,7 @@ category: "iOS"
 cave: true
 hero:
   format: 'jpeg'
-  url: 'post/iOS.jpg'
+  url: 'HERO_0017.jpg'
 title:  "iOS 小知识: KVC 与 简单集合运算符"
 tags: [iOS]
 ---

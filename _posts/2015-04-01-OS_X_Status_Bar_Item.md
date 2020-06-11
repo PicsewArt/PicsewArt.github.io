@@ -6,7 +6,7 @@ tags: [OS X, NSStatusBarItem]
 cave: true
 hero:
   format: 'jpeg'
-  url: 'post/macintosh.jpg'
+  url: 'HERO_0026.jpg'
 ---
 直入主题, 为 OS X APP 添加菜单栏图标:
 

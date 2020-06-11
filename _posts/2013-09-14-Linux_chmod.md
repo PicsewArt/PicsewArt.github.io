@@ -3,7 +3,7 @@ category: "UNIX"
 cave: true
 hero:
   format: 'jpeg'
-  url: 'post/unix.jpg'
+  url: 'HERO_0013.jpg'
 title:  "UNIX/Linux Command: chmod"
 tags: [UNIX,Linux]
 summary: "UNIX/Linux Command: chmod"

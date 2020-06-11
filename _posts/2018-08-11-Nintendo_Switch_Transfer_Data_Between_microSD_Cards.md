@@ -3,7 +3,7 @@ category: "Switch"
 cave: true
 hero:
   format: 'jpeg'
-  url: 'post/switch.jpg'
+  url: 'HERO_0055.jpg'
 title:  "How to Transfer Data Between microSD Cards for Use on Nintendo Switch"
 tags: [Nintendo, Switch, 任天堂, NS]
 ---

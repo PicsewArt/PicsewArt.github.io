@@ -5,7 +5,7 @@ tags: ["Sadness"]
 date: 20200513T030000+08:00
 hero:
   format: 'jpeg'
-  url: 'HERO_SADNESS_H_0013.jpg'
+  url: 'HERO_0018.jpg'
 ---
 if things had been different then we would be together now. or even still in contact every now and then. you are etched into my memory for a possible eternity and although it's been a while i still wonder what could have been
 

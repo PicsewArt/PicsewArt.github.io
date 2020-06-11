@@ -3,7 +3,7 @@ category: "iOS"
 cave: true
 hero:
   format: 'jpeg'
-  url: 'post/iOS.jpg'
+  url: 'HERO_0024.jpg'
 title:  "iOS 小知识: 汉字转拼音"
 tags: [iOS]
 ---

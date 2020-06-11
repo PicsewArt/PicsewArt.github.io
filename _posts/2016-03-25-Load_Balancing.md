@@ -7,7 +7,7 @@ tags: [Linux/UNIX, Load Balancing, Quote]
 cave: true
 hero:
   format: 'jpeg'
-  url: 'post/unix.jpg'
+  url: 'HERO_0034.jpg'
 ---
 开头先理解一下所谓的“均衡”
 

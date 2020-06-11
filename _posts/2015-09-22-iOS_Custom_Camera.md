@@ -3,7 +3,7 @@ category: "iOS"
 cave: true
 hero:
   format: 'jpeg'
-  url: 'post/iOS.jpg'
+  url: 'HERO_0003.jpg'
 title: "iOS : 自定义相机实现视频录制和照片拍摄"
 tags: [iOS,Camera]
 summary: "iOS : 自定义相机实现视频录制和照片拍摄"

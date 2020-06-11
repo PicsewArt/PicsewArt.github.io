@@ -3,7 +3,7 @@ category: "iOS"
 cave: true
 hero:
   format: 'jpeg'
-  url: 'post/iOS.jpg'
+  url: 'HERO_0042.jpg'
 title:  "iOS : App Group"
 tags: [iOS,App Group]
 ---

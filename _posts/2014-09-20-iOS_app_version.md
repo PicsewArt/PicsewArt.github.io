@@ -6,7 +6,7 @@ tags: [iOS]
 cave: true
 hero:
   format: 'jpeg'
-  url: 'post/iOS.jpg'
+  url: 'HERO_0003.jpg'
 ---
 获取 iOS 应用版本信息:
 

@@ -6,7 +6,7 @@ tags: [Xcode, LLVM]
 cave: true
 hero:
   format: 'jpeg'
-  url: 'post/xcode.jpg'
+  url: 'HERO_0045.jpg'
 ---
 在使用Xcode5进行iOS7开发时，在打开SDK文件后，可能会不小心对其中的代码进行了一些操作，那么在下一次 Build 或者 Run 的时候就会出现类似以下的错误:
  

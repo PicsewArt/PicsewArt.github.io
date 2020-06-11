@@ -5,7 +5,7 @@ tags: [Haskell, Haskell Primer]
 cave: true
 hero:
   format: 'jpeg'
-  url: 'post/haskell.jpg'
+  url: 'HERO_0047.jpg'
 ---
 模式匹配主要用来定义一些数据必须遵循的规则，根据他们来解析数据。
 

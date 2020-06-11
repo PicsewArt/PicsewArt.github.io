@@ -6,7 +6,7 @@ tags: [iOS, iOS 11]
 cave: true
 hero:
   format: 'jpeg'
-  url: 'post/iOS.jpg'
+  url: 'HERO_0028.jpg'
 ---
 Implement like below:
 

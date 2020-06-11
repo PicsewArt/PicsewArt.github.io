@@ -3,7 +3,7 @@ category: "iOS"
 cave: true
 hero:
   format: 'jpeg'
-  url: 'post/iOS.jpg'
+  url: 'HERO_0004.jpg'
 title:  "iOS 小知识: UITableView 收起键盘"
 tags: [iOS]
 ---

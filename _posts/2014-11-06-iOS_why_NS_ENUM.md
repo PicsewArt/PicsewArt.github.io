@@ -6,7 +6,7 @@ tags: [iOS, Objective-C, NS_ENUM, enum]
 cave: true
 hero:
   format: 'jpeg'
-  url: 'post/iOS.jpg'
+  url: 'HERO_0029.jpg'
 ---
 First, `NS_ENUM` uses a new feature of the C language where you can specify the underlying type for an `enum`. In this case, the underlying type for the `enum` is NSInteger (in plain C it would be whatever the compiler decides, char, short, or even a 24 bit integer if the compiler feels like it).
 

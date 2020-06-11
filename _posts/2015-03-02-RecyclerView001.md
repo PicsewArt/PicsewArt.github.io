@@ -4,7 +4,7 @@ category: "Android"
 cave: true
 hero:
   format: 'jpeg'
-  url: 'post/android.jpg'
+  url: 'HERO_0039.jpg'
 tags: [Android, Java, RecyclerView]
 ---
 

@@ -5,7 +5,7 @@ tags: [Swift]
 cave: true
 hero:
   format: 'jpeg'
-  url: 'post/swift.jpg'
+  url: 'HERO_0054.jpg'
 ---
 本文罗列了一些比较好的 Swift 学习资源。
 

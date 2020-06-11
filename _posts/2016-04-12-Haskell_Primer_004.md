@@ -5,7 +5,7 @@ tags: [Haskell, Haskell Primer]
 cave: true
 hero:
   format: 'jpeg'
-  url: 'post/haskell.jpg'
+  url: 'HERO_0033.jpg'
 ---
 列表 (`List`)，是一种单类型 (`Homogeneous`) 数据结构，用于存储一个或多个同类型元素，例如一系列的数字。
 

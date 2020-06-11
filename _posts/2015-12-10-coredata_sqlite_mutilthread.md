@@ -5,7 +5,7 @@ tags: [CoreData, SQLite, Mutilthreading]
 cave: true
 hero:
   format: 'jpeg'
-  url: 'post/iOS.jpg'
+  url: 'HERO_0041.jpg'
 ---
 数据库读取操作一般都是多线程访问的。在对数据进行读取时，我们要保证其当前状态不能被修改，即读取时加锁，否则就会出现数据错误混乱。
 iOS中常用的两种数据持久化存储方式:

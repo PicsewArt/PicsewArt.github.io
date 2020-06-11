@@ -3,7 +3,7 @@ category: "Xcode"
 cave: true
 hero:
   format: 'jpeg'
-  url: 'post/xcode.jpg'
+  url: 'HERO_0020.jpg'
 title:  "Xcode : 修改新创建文件的默认注释"
 tags: [iOS,Xcode]
 summary: "Xcode : 修改新创建文件的默认注释"

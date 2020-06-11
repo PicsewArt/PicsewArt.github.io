@@ -4,7 +4,7 @@ category: "Xcode"
 cave: true
 hero:
   format: 'jpeg'
-  url: 'post/xcode.jpg'
+  url: 'HERO_0021.jpg'
 tags: [iOS,Xcode,Xcode Ghost]
 ---
 由于 Xcode Ghost 肆虐，苹果提供了验证 Xcode 来源的方法，需要使用终端:

@@ -5,7 +5,7 @@ tags: ["Sadness"]
 date: 20200520T124000+08:00
 hero:
   format: 'jpeg'
-  url: 'HERO_SADNESS_H_0002.jpg'
+  url: 'HERO_0027.jpg'
 ---
 Quiero cada día pasarlo junto a ti
 

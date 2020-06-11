@@ -4,7 +4,7 @@ category: "iOS"
 cave: true
 hero:
   format: 'jpeg'
-  url: 'post/iOS.jpg'
+  url: 'HERO_0038.jpg'
 tags: [iOS,iOS 9,Split View]
 ---
 如果你越过狱，或者玩过苏菲，你一定对有过多个 App 同时运行同时显示同时使用的操作，使用 iOS 的小伙伴们最心痛的莫过于多任务，不过这一切都被 iOS 9 终结于此。

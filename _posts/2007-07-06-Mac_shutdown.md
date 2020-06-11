@@ -3,7 +3,7 @@ category: "OS X"
 cave: true
 hero:
   format: 'jpeg'
-  url: 'post/macintosh.jpg'
+  url: 'HERO_0013.jpg'
 title:  "OS X: 终端关机重启"
 tags: [OS X]
 summary: "OS X: 终端关机重启"

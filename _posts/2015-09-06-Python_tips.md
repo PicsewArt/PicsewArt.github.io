@@ -4,7 +4,7 @@ category: "Python"
 cave: true
 hero:
   format: 'jpeg'
-  url: 'post/python.jpg'
+  url: 'HERO_0042.jpg'
 excerpt: "Here are some useful tips and tricks in Python for beginners to the language."
 tags: [Python]
 ---

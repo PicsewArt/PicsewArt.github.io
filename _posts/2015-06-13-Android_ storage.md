@@ -4,7 +4,7 @@ category: "Android"
 cave: true
 hero:
   format: 'jpeg'
-  url: 'post/android.jpg'
+  url: 'HERO_0010.jpg'
 tags: [Android]
 ---
 这篇博客主要说说用 File 存储文件的相关内容。

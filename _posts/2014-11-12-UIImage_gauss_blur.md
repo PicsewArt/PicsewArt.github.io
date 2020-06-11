@@ -6,7 +6,7 @@ tags: [iOS, UIImage]
 cave: true
 hero:
   format: 'jpeg'
-  url: 'post/iOS.jpg'
+  url: 'HERO_0009.jpg'
 ---
 为 `UIImage` 生成高斯模糊效果:
 

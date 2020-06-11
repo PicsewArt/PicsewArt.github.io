@@ -4,7 +4,7 @@ category: "Android"
 cave: true
 hero:
   format: 'jpeg'
-  url: 'post/android.jpg'
+  url: 'HERO_0031.jpg'
 tags: [Android,Launch Time]
 ---
 尽管大家都知道 adb 获取应用启动时间的方法，但似乎很多人并不清楚获取的值代表着什么。

@@ -6,7 +6,7 @@ tags: [Swift, Enum]
 cave: true
 hero:
   format: 'jpeg'
-  url: 'post/swift.jpg'
+  url: 'HERO_0048.jpg'
 ---
 Have you ever done this before:
 

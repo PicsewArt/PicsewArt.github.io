@@ -4,7 +4,7 @@ category: "UNIX"
 cave: true
 hero:
   format: 'jpeg'
-  url: 'post/unix.jpg'
+  url: 'HERO_0001.jpg'
 tags: [UNIX,Linux,ranger,终端,Terminal]
 ---
 ranger 是一款终端文件管理工具，它和大部分同类工具类似，除了它是左右结构。

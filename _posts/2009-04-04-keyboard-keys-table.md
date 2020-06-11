@@ -6,7 +6,7 @@ tags: [Keyboard]
 cave: true
 hero:
   format: 'jpeg'
-  url: 'post/other.jpg'
+  url: 'HERO_0036.jpg'
 ---
 Key       | Meaning
 --------- | -------------

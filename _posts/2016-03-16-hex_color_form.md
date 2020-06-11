@@ -6,7 +6,7 @@ tags: [CSS, Hex Color]
 cave: true
 hero:
   format: 'jpeg'
-  url: 'post/css.jpg'
+  url: 'HERO_0011.jpg'
 ---
 The three-digit hex form typically follows the RGB (RGB) format. Expanding this form to the six-digit form is as simple as doubling each digit: `09C` becomes `0099CC`.
 

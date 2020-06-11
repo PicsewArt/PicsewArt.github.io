@@ -4,7 +4,7 @@ category: "iOS"
 cave: true
 hero:
   format: 'jpeg'
-  url: 'post/iOS.jpg'
+  url: 'HERO_0029.jpg'
 tags: [iOS, Quote]
 title: Command that Terminal
 ---

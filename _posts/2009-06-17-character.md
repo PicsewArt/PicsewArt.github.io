@@ -3,7 +3,7 @@ category: "Other"
 cave: true
 hero:
   format: 'jpeg'
-  url: 'post/other.jpg'
+  url: 'HERO_0045.jpg'
 quote: true
 title:  "字符编码"
 tags: [C, C++, Quote]

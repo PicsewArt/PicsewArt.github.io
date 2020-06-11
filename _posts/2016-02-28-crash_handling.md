@@ -6,7 +6,7 @@ tags: [Swift, Objective-C, NSException, Crash, iOS, Signal]
 cave: true
 hero:
   format: 'jpeg'
-  url: 'post/iOS.jpg'
+  url: 'HERO_0048.jpg'
 ---
 当一个 iOS 应用崩溃, 往往只是单纯的消失, 用户却不知道发生了什么。然而, 为你的应用添加异常和信号处理的功能并不是一件困难的事情, 有了处理程序我们可以告诉用户发生了什么状况, 甚至还能及时修正或恢复用户的使用场景而不必退出应用。
 

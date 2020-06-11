@@ -6,7 +6,7 @@ tags: [iOS, Swift, Swift 4, Access Levels]
 cave: true
 hero:
   format: 'jpeg'
-  url: 'post/swift.jpg'
+  url: 'HERO_0058.jpg'
 ---
 You may not have noticed but there was a small but important change to the `private` access level in Swift 4. After a quick recap of the five levels I cover what has changed in Swift 4, what do you need to know when migrating from Swift 3 and what is the point of `fileprivate` now?
 

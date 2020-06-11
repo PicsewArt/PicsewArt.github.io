@@ -4,7 +4,7 @@ category: "iOS"
 cave: true
 hero:
   format: 'jpeg'
-  url: 'post/iOS.jpg'
+  url: 'HERO_0059.jpg'
 tags: [iOS,Objective-C,QRCode,CIFilter]
 ---
 最近发过几个关于二维码的内容( [**相机扫描二维码**]({{ site.blog_perma }}/iOS_QRCode_Scanner/)，[**识别图片二维码**]({{ site.blog_perma }}/iOS_QRCode_Scanner_2/)，趁热打铁，再来一篇二维码生成的博文吧。

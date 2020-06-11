@@ -4,7 +4,7 @@ category: "iOS"
 cave: true
 hero:
   format: 'jpeg'
-  url: 'post/iOS.jpg'
+  url: 'HERO_0023.jpg'
 tags: [iOS,Objective-C,Runtime,RuntimeSeries]
 ---
 很多人在初学 iOS 时都忽略掉了 Runtime 部分，因为 Objective-C 已经可以满足绝大部分的日常开发需求。

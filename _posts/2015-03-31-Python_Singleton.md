@@ -4,7 +4,7 @@ category: "Python"
 cave: true
 hero:
   format: 'jpeg'
-  url: 'post/python.jpg'
+  url: 'HERO_0025.jpg'
 tags: [Python,Singleton]
 ---
 单利模式(Singleton)是大部分开发任务中常用的设计模式之一。这里我主要总结一下 Python 中的单利实现方式。

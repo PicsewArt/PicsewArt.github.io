@@ -4,7 +4,7 @@ category: "Android"
 cave: true
 hero:
   format: 'jpeg'
-  url: 'post/android.jpg'
+  url: 'HERO_0012.jpg'
 tags: [Android]
 ---
 好像一直都没有系统的写过 Android 方面的博客，就先从布局开始吧，介绍一些布局属性。

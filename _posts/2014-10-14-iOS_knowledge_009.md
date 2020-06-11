@@ -3,7 +3,7 @@ category: "iOS"
 cave: true
 hero:
   format: 'jpeg'
-  url: 'post/iOS.jpg'
+  url: 'HERO_0029.jpg'
 title:  "iOS 小知识: 生成随机浮点数"
 tags: [iOS]
 ---

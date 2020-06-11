@@ -3,7 +3,7 @@ category: "OS X"
 cave: true
 hero:
   format: 'jpeg'
-  url: 'post/macintosh.jpg'
+  url: 'HERO_0026.jpg'
 title:  "OS X: 制作 U 盘安装盘"
 tags: [OS X, Mac]
 ---

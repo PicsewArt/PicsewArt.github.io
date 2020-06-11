@@ -7,7 +7,7 @@ tags: [iOS, Objective-C, NS_ENUM, NS_OPTIONS]
 cave: true
 hero:
   format: 'jpeg'
-  url: 'post/iOS.jpg'
+  url: 'HERO_0001.jpg'
 ---
 When everything is an object, nothing is.
 

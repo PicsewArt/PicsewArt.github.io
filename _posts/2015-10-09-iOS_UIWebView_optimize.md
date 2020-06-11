@@ -4,7 +4,7 @@ category: "iOS"
 cave: true
 hero:
   format: 'jpeg'
-  url: 'post/iOS.jpg'
+  url: 'HERO_0053.jpg'
 tags: [iOS,UIWebView]
 ---
 为了降低开发和维护成本，很多公司和团队选择了嵌入 Web 页面的方式发布客户端，但一直以来 Web 应用与 Native 应用的在用户体验方面都存在不小的差距，因此如何缩小这种差距就成了一个关键的问题。

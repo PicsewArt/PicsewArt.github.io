@@ -4,7 +4,7 @@ category: "iOS"
 cave: true
 hero:
   format: 'jpeg'
-  url: 'post/iOS.jpg'
+  url: 'HERO_0007.jpg'
 tags: [iOS,Touch ID,LocalAuthentication]
 ---
 苹果在 iOS 8 中向开发者开放了 Touch ID 的 API，本文主要介绍它的使用。

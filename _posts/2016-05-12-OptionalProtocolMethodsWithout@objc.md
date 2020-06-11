@@ -6,7 +6,7 @@ tags: [Objective-C, Swift, Protocol, "@objc"]
 cave: true
 hero:
   format: 'jpeg'
-  url: 'post/swift.jpg'
+  url: 'HERO_0014.jpg'
 ---
 Objective-C 协议 (`protocol`) 在 Swift 中是一个特殊的存在, 当你使用 `@objc` 标记一个协议, `LLVM` 会生成一系列额外内容:
 

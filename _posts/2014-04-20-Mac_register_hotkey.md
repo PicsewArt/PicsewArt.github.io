@@ -3,7 +3,7 @@ category: "OS X"
 cave: true
 hero:
   format: 'jpeg'
-  url: 'post/macintosh.jpg'
+  url: 'HERO_0001.jpg'
 title:  "Mac: 注册全局热键"
 tags: [OS X, Cocoa]
 ---

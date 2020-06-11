@@ -4,7 +4,7 @@ title:  "Markdown Syntax"
 cave: true
 hero:
   format: 'jpeg'
-  url: 'post/markdown.jpg'
+  url: 'HERO_0013.jpg'
 tags: [Markdown]
 summary: "Markdown Syntax"
 ---

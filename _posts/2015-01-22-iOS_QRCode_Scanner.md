@@ -4,7 +4,7 @@ category: "iOS"
 cave: true
 hero:
   format: 'jpeg'
-  url: 'post/iOS.jpg'
+  url: 'HERO_0024.jpg'
 tags: [iOS,Objective-C,QRCode]
 ---
 扫二维码在目前的国内可谓是十分流行，今天有朋友问我二维码扫描怎么做，其实这些功能苹果在 `AVFoundtion` 中已经实现，对于一般的需求都可以满足。

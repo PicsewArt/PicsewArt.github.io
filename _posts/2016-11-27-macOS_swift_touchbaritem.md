@@ -6,7 +6,7 @@ tags: [OS X, macOS, Cocoa, NSTouchBar]
 cave: true
 hero:
   format: 'jpeg'
-  url: 'post/macintosh.jpg'
+  url: 'HERO_0010.jpg'
 ---
 Protocol and extensions:
 

@@ -3,7 +3,7 @@ category: "Swift"
 cave: true
 hero:
   format: 'jpeg'
-  url: 'post/swift.jpg'
+  url: 'HERO_0007.jpg'
 title:  "What’s new in Swift 4.2?"
 tags: [Swift]
 ---

@@ -5,7 +5,7 @@ tags: [Public Key, Private Key]
 cave: true
 hero:
   format: 'jpeg'
-  url: 'post/hack.jpg'
+  url: 'HERO_0049.jpg'
 ---
 公钥(`yuè`)和私钥的概念并不是什么新鲜事物，鉴于不少小伙伴还是不明白，简单写个说明的文章吧。
 

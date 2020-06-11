@@ -3,7 +3,7 @@ category: "iOS"
 cave: true
 hero:
   format: 'jpeg'
-  url: 'post/iOS.jpg'
+  url: 'HERO_0023.jpg'
 title: "iOS : 为什么 BOOL 可以赋值为 nil"
 tags: [iOS,BOOL,nil]
 summary: "iOS : 为什么 BOOL 可以赋值为 nil"

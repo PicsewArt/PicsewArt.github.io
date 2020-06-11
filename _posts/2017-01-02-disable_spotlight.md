@@ -3,7 +3,7 @@ category: "OS X"
 cave: true
 hero:
   format: 'jpeg'
-  url: 'post/macintosh.jpg'
+  url: 'HERO_0058.jpg'
 title:  "How to hide the Spotlight icon from the Menu Bar"
 tags: ["SIP", "Rootless", "System Integrity Protection", "Spotlight"]
 ---

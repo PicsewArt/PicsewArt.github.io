@@ -4,7 +4,7 @@ category: "iOS"
 cave: true
 hero:
   format: 'jpeg'
-  url: 'post/iOS.jpg'
+  url: 'HERO_0042.jpg'
 tags: [iOS,iOS 9,Advanced Touch Input]
 ---
 一直以来 iOS 的触摸输入操作的延迟都为人诟病，如果你常用绘图应用，你应该也有过类似的体验: 当你在屏幕上描绘线条，如果速度较快，那么线条就总是在手指触摸位置的后面一段距离追赶。在 iOS 9 中苹果针对这一问题做了改善，从手势的获取，到屏幕的显示，各个环节都做了性能优化来减少时间延迟。

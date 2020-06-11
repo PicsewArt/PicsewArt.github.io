@@ -6,7 +6,7 @@ tags: [iOS, NSString, Unicode]
 cave: true
 hero:
   format: 'jpeg'
-  url: 'post/iOS.jpg'
+  url: 'HERO_0036.jpg'
 ---
 将 `NSString` 中的 `Unicode` 字符替换为 `UTF-8` 字符:
 

@@ -4,7 +4,7 @@ category: "iOS"
 cave: true
 hero:
   format: 'jpeg'
-  url: 'post/iOS.jpg'
+  url: 'HERO_0052.jpg'
 tags: [iOS, Quote]
 title: Pebble Smart-watch, Xcode 5 and OS X Mavericks
 ---

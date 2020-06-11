@@ -4,7 +4,7 @@ category: "UNIX"
 cave: true
 hero:
   format: 'jpeg'
-  url: 'post/unix.jpg'
+  url: 'HERO_0012.jpg'
 tags: ["Gem"]
 ---
 You can install new gems on Fedora by either installing upstream gems from RubyGems.org or packaged gems from Fedora official repositories.

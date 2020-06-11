@@ -3,7 +3,7 @@ category: "RegEx"
 cave: true
 hero:
   format: 'jpeg'
-  url: 'post/regex.jpg'
+  url: 'HERO_0052.jpg'
 quote: true
 title:  "RegEx Implementation"
 tags: [RegEx, C++, Quote]

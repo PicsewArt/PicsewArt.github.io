@@ -6,7 +6,7 @@ tags: [CSS]
 cave: true
 hero:
   format: 'jpeg'
-  url: 'post/css.jpg'
+  url: 'HERO_0020.jpg'
 ---
 关于 CSS Selectors Level 4 阶段性新特性的总结。
 

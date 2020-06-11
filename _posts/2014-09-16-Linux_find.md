@@ -3,7 +3,7 @@ category: "UNIX"
 cave: true
 hero:
   format: 'jpeg'
-  url: 'post/unix.jpg'
+  url: 'HERO_0007.jpg'
 title:  "UNIX/Linux Command: find"
 tags: [UNIX,Linux]
 summary: "UNIX/Linux Command: find"

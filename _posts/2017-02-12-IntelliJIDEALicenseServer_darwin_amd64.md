@@ -6,7 +6,7 @@ tags: [Sierra, JetBrains, IDE]
 cave: true
 hero:
   format: 'jpeg'
-  url: 'post/macintosh.jpg'
+  url: 'HERO_0005.jpg'
 ---
 Using `sudo ./IntelliJIDEALicenseServer_darwin_amd64` on macOS 10.12+ will be some problems like `Permission denied` and `Command not found`.
 

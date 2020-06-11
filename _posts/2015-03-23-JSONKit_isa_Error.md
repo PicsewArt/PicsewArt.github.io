@@ -3,7 +3,7 @@ category: "iOS"
 cave: true
 hero:
   format: 'jpeg'
-  url: 'post/iOS.jpg'
+  url: 'HERO_0014.jpg'
 title:  "JSONKit isa错误解决办法"
 tags: [iOS,Objective-C,JSONKit,isa]
 summary: "JSONKit isa错误解决办法"

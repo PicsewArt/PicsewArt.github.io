@@ -4,7 +4,7 @@ category: "iOS"
 cave: true
 hero:
   format: 'jpeg'
-  url: 'post/iOS.jpg'
+  url: 'HERO_0011.jpg'
 tags: [iOS,confusion,代码混淆,花指令,逆向]
 ---
 

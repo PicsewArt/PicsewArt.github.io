@@ -6,7 +6,7 @@ tags: [iOS, UIView, drawRect]
 cave: true
 hero:
   format: 'jpeg'
-  url: 'post/iOS.jpg'
+  url: 'HERO_0040.jpg'
 ---
 绘制圆角矩形:
 

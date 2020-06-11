@@ -3,7 +3,7 @@ category: "iOS"
 cave: true
 hero:
   format: 'jpeg'
-  url: 'post/iOS.jpg'
+  url: 'HERO_0033.jpg'
 title:  "Linux 配置 IP"
 tags: [UNIX,Linux,IP]
 summary: "Linux 配置 IP"

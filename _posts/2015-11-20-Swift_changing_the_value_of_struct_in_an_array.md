@@ -5,7 +5,7 @@ tags: [iOS,Swift]
 cave: true
 hero:
   format: 'jpeg'
-  url: 'post/swift.jpg'
+  url: 'HERO_0034.jpg'
 ---
 今天帮朋友看了这样一个问题:
 

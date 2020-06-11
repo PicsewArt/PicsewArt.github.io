@@ -3,7 +3,7 @@ category: "iOS"
 cave: true
 hero:
   format: 'jpeg'
-  url: 'post/iOS.jpg'
+  url: 'HERO_0046.jpg'
 title:  "iOS 小知识: 模拟 Home 键点击"
 tags: [iOS]
 ---

@@ -3,7 +3,7 @@ category: "OS X"
 cave: true
 hero:
   format: 'jpeg'
-  url: 'post/macintosh.jpg'
+  url: 'HERO_0027.jpg'
 title:  "VMWare Fusion Pro 11: Application cannot run correctly."
 tags: [OS X, macOS, VMWare]
 ---

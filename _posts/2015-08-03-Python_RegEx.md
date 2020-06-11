@@ -4,7 +4,7 @@ category: "Python"
 cave: true
 hero:
   format: 'jpeg'
-  url: 'post/python.jpg'
+  url: 'HERO_0025.jpg'
 tags: [Python, RegEx]
 ---
 本文主要介绍 `Python` 正则表达式的基本使用.

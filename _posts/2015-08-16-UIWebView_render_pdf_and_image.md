@@ -6,7 +6,7 @@ tags: [iOS, UIWebView, PDF, UIPrintPageRenderer]
 cave: true
 hero:
   format: 'jpeg'
-  url: 'post/iOS.jpg'
+  url: 'HERO_0028.jpg'
 ---
 使用分类的方式来实现:
 

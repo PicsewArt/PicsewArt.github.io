@@ -3,7 +3,7 @@ category: "Git"
 cave: true
 hero:
   format: 'jpeg'
-  url: 'post/git.jpg'
+  url: 'HERO_0014.jpg'
 title:  "Git Error: insufficient permission for adding an object to repository database .git/objects"
 tags: [OS X,Mac,Git]
 summary: "Git Error: insufficient permission for adding an object to repository database .git/objects"

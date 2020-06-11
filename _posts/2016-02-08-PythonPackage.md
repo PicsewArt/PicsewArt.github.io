@@ -4,7 +4,7 @@ category: "Python"
 cave: true
 hero:
   format: 'jpeg'
-  url: 'post/python.jpg'
+  url: 'HERO_0009.jpg'
 tags: [Python]
 ---
 一般来说构建一个包是很简单的事情，许多人只把一堆模块都放进一个有 `__init__.py ` 文件的目录里面，但是，随着对包的修改越来越多，糟糕的设计就会变得臃肿、脆弱，甚至带来循环依赖问题。

@@ -4,7 +4,7 @@ category: "iOS"
 cave: true
 hero:
   format: 'jpeg'
-  url: 'post/iOS.jpg'
+  url: 'HERO_0031.jpg'
 tags: [iOS, Quote]
 title: The data beyond the JPEG
 ---

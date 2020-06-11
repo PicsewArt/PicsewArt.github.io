@@ -3,7 +3,7 @@ category: "OS X"
 cave: true
 hero:
   format: 'jpeg'
-  url: 'post/macintosh.jpg'
+  url: 'HERO_0049.jpg'
 title:  "OS X : 制作系统安装盘"
 tags: [OS X]
 ---

@@ -6,7 +6,7 @@ tags: [OS X, Mac, Cocoa, AppKit]
 cave: true
 hero:
   format: 'jpeg'
-  url: 'post/macintosh.jpg'
+  url: 'HERO_0010.jpg'
 ---
 周末提交的 APP 又被秒拒, 理由很简单, “Menu Bar Extra is invisible in macOS Dark Mode”, 菜单栏图标在黑色模式中看不到。
 

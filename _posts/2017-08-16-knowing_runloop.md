@@ -3,7 +3,7 @@ category: "iOS"
 cave: true
 hero:
   format: 'jpeg'
-  url: 'post/iOS.jpg'
+  url: 'HERO_0056.jpg'
 title:  "深入理解 Runloop"
 tags: [iOS, macOS]
 ---

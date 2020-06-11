@@ -4,7 +4,7 @@ category: "Xcode"
 cave: true
 hero:
   format: 'jpeg'
-  url: 'post/xcode.jpg'
+  url: 'HERO_0032.jpg'
 tags: [Xcode]
 ---
 最近 Xcode 8 中遇到这样一个错误:

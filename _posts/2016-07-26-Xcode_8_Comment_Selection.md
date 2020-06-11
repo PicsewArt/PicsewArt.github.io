@@ -4,7 +4,7 @@ category: "Xcode"
 cave: true
 hero:
   format: 'jpeg'
-  url: 'post/xcode.jpg'
+  url: 'HERO_0030.jpg'
 tags: [Xcode]
 ---
 Xcode 8 发布以来，Beta 版有一个可能不是很普遍的问题: 注释快捷键 `⌘` + `/` 失效。

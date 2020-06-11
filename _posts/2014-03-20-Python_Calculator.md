@@ -4,7 +4,7 @@ category: "Python"
 cave: true
 hero:
   format: 'jpeg'
-  url: 'post/python.jpg'
+  url: 'HERO_0056.jpg'
 tags: [GUI,Python,Calculator]
 ---
 用 Python 实现一个 GUI 计算器的基本思路，后面有时间会添加更高级的计算功能:

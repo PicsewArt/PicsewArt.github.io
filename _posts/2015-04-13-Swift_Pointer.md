@@ -7,7 +7,7 @@ summary: "Swift 中指针的使用"
 cave: true
 hero:
   format: 'jpeg'
-  url: 'post/swift.jpg'
+  url: 'HERO_0047.jpg'
 ---
 Apple 期望在 Swift 中指针能够尽量减少登场几率，因此在 Swift 中指针被映射为了一个泛型类型，并且还比较抽象。
 

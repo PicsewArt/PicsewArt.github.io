@@ -3,7 +3,7 @@ category: "Xcode"
 cave: true
 hero:
   format: 'jpeg'
-  url: 'post/xcode.jpg'
+  url: 'HERO_0026.jpg'
 title: "Xcode 7 : 浅析 .tbd 与 .dylib"
 tags: [iOS,Xcode 7,tbd,dylib]
 summary: "Xcode 7 : 浅析 .tbd 与 .dylib"

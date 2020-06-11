@@ -3,7 +3,7 @@ category: "C"
 cave: true
 hero:
   format: 'jpeg'
-  url: 'post/c.jpg'
+  url: 'HERO_0036.jpg'
 title:  "NULL、0 与 nullptr"
 tags: [C,C++]
 summary: "NULL、0 与 nullptr"

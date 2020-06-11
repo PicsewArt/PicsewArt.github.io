@@ -7,7 +7,7 @@ tags: [C]
 cave: true
 hero:
   format: 'jpeg'
-  url: 'post/c.jpg'
+  url: 'HERO_0044.jpg'
 ---
 <table cellspacing="5" cellpadding="2">
     <caption>C语言运算符优先级</caption>

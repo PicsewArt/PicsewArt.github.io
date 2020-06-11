@@ -5,7 +5,7 @@ tags: [Socket, TCP/IP, HTTP]
 cave: true
 hero:
   format: 'jpeg'
-  url: 'post/iOS.jpg'
+  url: 'HERO_0007.jpg'
 ---
 最近总被问到 `Socket` 问题, 好久没写了, 干脆总结一下吧。
 

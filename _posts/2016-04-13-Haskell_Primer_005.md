@@ -5,7 +5,7 @@ tags: [Haskell, Haskell Primer]
 cave: true
 hero:
   format: 'jpeg'
-  url: 'post/haskell.jpg'
+  url: 'HERO_0028.jpg'
 ---
 学习了列表之后，我们再来认识一下元组 (`Tuple`)。
 

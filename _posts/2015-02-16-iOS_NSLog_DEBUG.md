@@ -4,7 +4,7 @@ category: "iOS"
 cave: true
 hero:
   format: 'jpeg'
-  url: 'post/iOS.jpg'
+  url: 'HERO_0035.jpg'
 tags: [iOS,Debug,NSLog]
 ---
 偶然看到别人代码里的 NSLog，忽然想到或许可以写一片简短的博客，能帮到一些朋友也说不定。

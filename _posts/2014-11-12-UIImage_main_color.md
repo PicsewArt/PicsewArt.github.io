@@ -6,7 +6,7 @@ tags: [iOS, UIImage]
 cave: true
 hero:
   format: 'jpeg'
-  url: 'post/iOS.jpg'
+  url: 'HERO_0026.jpg'
 ---
 获取一个 `UIImage` 实例的主色调:
 

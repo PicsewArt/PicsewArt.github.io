@@ -7,7 +7,7 @@ tags: [Java]
 cave: true
 hero:
   format: 'jpeg'
-  url: 'post/java.jpg'
+  url: 'HERO_0046.jpg'
 ---
 <table cellspacing="5" cellpadding="2">
     <caption>Java 运算符优先级</caption>

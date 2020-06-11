@@ -4,7 +4,7 @@ category: "UNIX"
 cave: true
 hero:
   format: 'jpeg'
-  url: 'post/unix.jpg'
+  url: 'HERO_0013.jpg'
 excerpt: "ImageMagick® is a software suite to create, edit, compose, or convert bitmap images."
 tags: [Linux, UNIX, Mac, Windows, ImageMagick]
 ---

@@ -4,7 +4,7 @@ category: "iOS"
 cave: true
 hero:
   format: 'jpeg'
-  url: 'post/iOS.jpg'
+  url: 'HERO_0003.jpg'
 tags: [iOS,UIBezierPath,iOS Animation]
 ---
 贝塞尔曲线是计算机图形学的伟大推动者，它在 iOS 中的应用 `UIBezierPath` 也是 UI 动画制作中十分常用的工具，本文主要介绍 `UIBezierPath` 在 iOS 中的基本使用。

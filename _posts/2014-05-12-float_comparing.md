@@ -4,7 +4,7 @@ category: "C"
 cave: true
 hero:
   format: 'jpeg'
-  url: 'post/c.jpg'
+  url: 'HERO_0047.jpg'
 tags: [iOS,C,Float]
 ---
 其实浮点数的精度缺失应该是个众所周知的问题，而我第一次注意到这件事还是在学生时代，跟随着社会的洪流涌入了 J2EE 的学习热潮中，在一次使用 JavaScript 的过程中出现曾让我无比震惊的一幕:

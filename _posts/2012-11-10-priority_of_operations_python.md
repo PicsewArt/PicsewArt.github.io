@@ -7,7 +7,7 @@ tags: [Python]
 cave: true
 hero:
   format: 'jpeg'
-  url: 'post/python.jpg'
+  url: 'HERO_0016.jpg'
 ---
 <div class="quote">
 这个表给出Python的运算符优先级 (从低到高) 。<br/>

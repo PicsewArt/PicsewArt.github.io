@@ -6,7 +6,7 @@ tags: [iOS, Mac, macOS, Terminal, CocoaPods, Gemfile, ruby]
 cave: true
 hero:
   format: 'jpeg'
-  url: 'post/iOS.jpg'
+  url: 'HERO_0059.jpg'
 ---
 工作在一个 iOS 开发团队中，可能会有很多关于安装 CocoaPods 的问题。团队成员拥有不同的 `cocoapods` `gem` 的安装版本，并且当有人运行 `pod install` 时，会将事情搞得一团糟。解决方案是, 使用 Gemfile。你可以在 Gemfile 中指定 cocoapods gem 的使用版本。
 

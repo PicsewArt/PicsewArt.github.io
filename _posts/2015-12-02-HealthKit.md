@@ -4,7 +4,7 @@ category: "iOS"
 cave: true
 hero:
   format: 'jpeg'
-  url: 'post/iOS.jpg'
+  url: 'HERO_0047.jpg'
 tags: [iOS,HealthKit]
 ---
 HealthKit 发布已经很久了，最近有机会用到，小试一把。

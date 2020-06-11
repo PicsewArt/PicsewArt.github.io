@@ -4,7 +4,7 @@ category: "HTML"
 cave: true
 hero:
   format: 'jpeg'
-  url: 'post/html.jpg'
+  url: 'HERO_0047.jpg'
 tags: [HTML]
 ---
 常见的几种自动跳转页面的方式, 以 3 秒后跳转到本博客为例:

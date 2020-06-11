@@ -4,7 +4,7 @@ category: "iOS"
 cave: true
 hero:
   format: 'jpeg'
-  url: 'post/iOS.jpg'
+  url: 'HERO_0036.jpg'
 tags: [iOS, Quote]
 title: Travis CI and iOS Projects
 ---

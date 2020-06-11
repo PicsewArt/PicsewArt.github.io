@@ -6,7 +6,7 @@ tags: [User-Agents]
 cave: true
 hero:
   format: 'jpeg'
-  url: 'post/html.jpg'
+  url: 'HERO_0058.jpg'
 ---
 一些常见的 User-Agents 示例:
 

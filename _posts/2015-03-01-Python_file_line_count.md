@@ -4,7 +4,7 @@ category: "Python"
 cave: true
 hero:
   format: 'jpeg'
-  url: 'post/python.jpg'
+  url: 'HERO_0005.jpg'
 tags: [python]
 ---
 无所事事，忽然想到统计一下自己写的项目的代码行数。

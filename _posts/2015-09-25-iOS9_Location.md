@@ -3,7 +3,7 @@ category: "iOS"
 cave: true
 hero:
   format: 'jpeg'
-  url: 'post/iOS.jpg'
+  url: 'HERO_0019.jpg'
 title:  "iOS 9 : CLLocation 后台定位"
 tags: [iOS,iOS 9,CLLocationManager,CLLocation]
 ---
