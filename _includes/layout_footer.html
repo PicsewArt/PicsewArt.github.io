@@ -9,22 +9,31 @@
       </div>
 
       <div class="footer-panel-list">
-        <h6 class="footer-h6">Post Tags</h6>
+        <h6 class="footer-h6">Tags</h6>
         <ul class="footer-links-list">
           {% capture captured_tags %}{% for tag in site.tags %}<li class="footer-li" data-sort="{{ site.posts.size | minus: tag[1].size | prepend: '0000' | slice: -4, 4 }}"><a class="footer-a" href="{{ site.url }}/posts/tags/index.html#{{ tag[0] | replace: ' ', '_' }}">{{ tag[0] }}</a></li>@SEP@{% endfor %}{% endcapture %}
           {% assign sorted_tags = captured_tags | split: '@SEP@' | sort %}
-          {% for tag in sorted_tags limit: site.data.footer.quicklinks.size %}
+          {% for tag in sorted_tags limit: site.foorer_list_size %}
             {{ tag }}
           {% endfor %}
-          <!-- <li class="footer-li"><a class="footer-a" href="{{ site.url }}/sample/index.html">Sample Doc</a></li> -->
         </ul>
       </div>
 
-      <div class="footer-panel-list">
+      <!-- <div class="footer-panel-list">
         <h6 class="footer-h6">Quick Links</h6>
         <ul class="footer-links-list">
           {% for link in site.data.footer.quicklinks %}
           <li class="footer-li"><a class="footer-a" href="{{ link.url }}">{{ link.title }}</a></li>
+          {% endfor %}
+        </ul>
+      </div> -->
+      <div class="footer-panel-list">
+        <h6 class="footer-h6">Categories</h6>
+        <ul class="footer-links-list">
+          {% capture captured_cats %}{% for cat in site.categories %}<li class="footer-li" data-sort="{{ site.posts.size | minus: cat[1].size | prepend: '0000' | slice: -4, 4 }}"><a class="footer-a" href="{{ site.url }}/posts/categories/index.html#{{ cat[0] | replace: ' ', '_' }}">{{ cat[0] }}</a></li>@SEP@{% endfor %}{% endcapture %}
+          {% assign sorted_cats = captured_cats | split: '@SEP@' | sort %}
+          {% for cat in sorted_cats limit: site.foorer_list_size %}
+            {{ cat }}
           {% endfor %}
         </ul>
       </div>
@@ -40,7 +49,7 @@
       <div class="footer-panel-icons">
         <ul class="social-icons">
           <li class="footer-social-icons-li"><a class="github" href="{{ site.github_url }}"><i class="fa fa-github footer-icon-1"></i></a></li>
-          <li class="footer-social-icons-li"><a class="about" href="{{ site.url }}/about/index.html"><i class="fa fa-user footer-icon-2"></i></a></li>
+          <li class="footer-social-icons-li"><a class="book" href="{{ site.url }}/sample/index.html"><i class="fa fa-book footer-icon-2"></i></a></li>
           <li class="footer-social-icons-li"><a class="rss" href="{{ site.url }}/feed.xml"><i class="fa fa-rss footer-icon-3"></i></a></li>
           <li class="footer-social-icons-li"><a class="email" href="mailto:{{ site.email }}"><i class="fa fa-paper-plane footer-icon-4"></i></a></li>
         </ul>

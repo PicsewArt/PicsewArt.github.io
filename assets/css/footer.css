@@ -260,6 +260,10 @@ li.footer-social-icons-li {
   background-color: #ea4c89 !important;
 }
 
+.social-icons a.footer-icon-5:hover {
+  background-color: #ffd43b !important;
+}
+
 @media (max-width:767px) {
   .social-icons li.title {
     display: block !important;
