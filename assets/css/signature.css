@@ -5,6 +5,7 @@ layout: null
   float: right;
   max-width: 100%;
   position: relative;
+  width: 256px;
 }
 
 .signature-container::after {
