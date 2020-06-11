@@ -547,12 +547,12 @@ engines:
 
 <body>
   <script type="text/javascript">
-    function redirect2(aUrl) {
-      window.open(aUrl, '_blank')//, 'location=yes,height=570,width=520,scrollbars=yes,status=yes');
+    function redirect2(aUrl, target='_blank') {
+      window.open(aUrl, target)//, 'location=yes,height=570,width=520,scrollbars=yes,status=yes');
     }
 
     function back2home() {
-      redirect2('{{ site.url }}');
+      redirect2('{{ site.url }}', '_self');
     }
 
     function searchOn(engineUrl) {
