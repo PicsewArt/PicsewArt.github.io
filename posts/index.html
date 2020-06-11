@@ -1,6 +1,8 @@
 ---
 layout: default
 title: "Posts"
+list_pages: false
+#list_pages: true
 ---
 	<!-- BEGIN POST BLOCK -->
 
@@ -106,4 +108,4 @@ title: "Posts"
 	<!-- Page {{ paginator.page }} of {{ paginator.total_pages }} -->
 	{% assign previous_text = '«&nbsp;Previous' %}
 	{% assign next_text = 'Next&nbsp;»' %}
-	<center><p><nav>{% if paginator.previous_page %}<a href="{{ site.url }}{{ paginator.previous_page_path }}/index.html">{{ previous_text }}</a>{% else %}{{ previous_text }}{% endif %}&nbsp;|&nbsp;<span>{% assign total_pages_number = paginator.total_pages %}{% for idx in (1..total_pages_number) %}{% if idx == paginator.page %}{{ idx }}{% else %}<a href="{{ site.url }}/posts{% unless idx == 1 %}/page/{{ idx }}{% endunless %}/index.html">{{ idx }}</a>{% endif %}{% unless forloop.last %}&nbsp;{% endunless %}{% endfor %}</span>&nbsp;|&nbsp;{% if paginator.next_page %}<a href="{{ site.url }}{{ paginator.next_page_path }}/index.html">{{ next_text }}</a>{% else %}{{ next_text }}{% endif %}</nav></p></center>
+	<center><p><nav>{% if paginator.previous_page %}<a href="{{ site.url }}{{ paginator.previous_page_path }}/index.html">{{ previous_text }}</a>{% else %}{{ previous_text }}{% endif %}&nbsp;|&nbsp;<span>{% assign total_pages_number = paginator.total_pages %}{% if page.list_pages %}{% for idx in (1..total_pages_number) %}{% if idx == paginator.page %}{{ idx }}{% else %}<a href="{{ site.url }}/posts{% unless idx == 1 %}/page/{{ idx }}{% endunless %}/index.html">{{ idx }}</a>{% endif %}{% unless forloop.last %}&nbsp;{% endunless %}{% endfor %}{% else %}<a href="{{ site.url }}/posts/index.html">First Page</a>&nbsp;|&nbsp;<a href="{{ site.url }}/posts/{{ total_pages_number }}/index.html">Last Page</a>{% endif %}</span>&nbsp;|&nbsp;{% if paginator.next_page %}<a href="{{ site.url }}{{ paginator.next_page_path }}/index.html">{{ next_text }}</a>{% else %}{{ next_text }}{% endif %}</nav></p></center>
