@@ -114,7 +114,7 @@ layout: default
 		{% if page.has_info %}
 		<div class="post_info">
 			<hr>
-			<span>Published by {% include label_profile.html title=site.author href="/about/index.html" image="/assets/images/avatar.jpg" %} (<time itemprop="datePublished">{{ page.date | date: "%b %d, %Y" }}</time>) in <span itemprop="articleSection"><a href="{{ site.url }}/posts/categories/index.html#{{ page.category | replace: ' ', '_' }}">{{ page.category }}</a></span> and tagged{% for tag in page.tags %} {% assign tag_id = tag | replace: ' ', '_' %}{% assign tag_url = site.url | append: '/posts/tags/#' | append: tag_id %}{% include label_tag.html href=tag_url title=tag %}{% endfor %}.</span>
+			<span>Published by {% include label_profile.html title=site.author href="/about/index.html" image="/assets/images/avatar.png" %} (<time itemprop="datePublished">{{ page.date | date: "%b %d, %Y" }}</time>) in <span itemprop="articleSection"><a href="{{ site.url }}/posts/categories/index.html#{{ page.category | replace: ' ', '_' }}">{{ page.category }}</a></span> and tagged{% for tag in page.tags %} {% assign tag_id = tag | replace: ' ', '_' %}{% assign tag_url = site.url | append: '/posts/tags/#' | append: tag_id %}{% include label_tag.html href=tag_url title=tag %}{% endfor %}.</span>
 		</div>
 		{% endif %}
 		</center>
