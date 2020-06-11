@@ -1,0 +1,30 @@
+.dialog {
+  margin: 10px 10px 0;
+  background: #efefef;
+  padding: 20px 60px;
+  position: relative;
+  border: none;
+  border-radius: 8px;
+  font-style: italic;
+}
+
+.dialog:before,
+.dialog:after {
+  content: "\201C";
+  position: absolute;
+  font-size: 80px;
+  line-height: 1;
+  color: #757f9a;
+  font-style: normal;
+}
+
+.dialog:before {
+  top: 0;
+  left: 10px;
+}
+
+.dialog:after {
+  content: "\201D";
+  right: 10px;
+  bottom: -0.5em;
+}
