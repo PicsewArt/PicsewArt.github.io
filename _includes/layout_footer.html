@@ -11,8 +11,10 @@
       <div class="footer-panel-list">
         <h6 class="footer-h6">Post Tags</h6>
         <ul class="footer-links-list">
-          {% for tag in site.tags limit: site.data.footer.quicklinks.size %}
-          <li class="footer-li"><a class="footer-a" href="{{ site.url }}/posts/tags/index.html#{{ tag[0] | replace: ' ', '_' }}">{{ tag[0] }}</a></li>
+          {% capture captured_tags %}{% for tag in site.tags %}<li class="footer-li" data-sort="{{ site.posts.size | minus: tag[1].size | prepend: '0000' | slice: -4, 4 }}"><a class="footer-a" href="{{ site.url }}/posts/tags/index.html#{{ tag[0] | replace: ' ', '_' }}">{{ tag[0] }}</a></li>@SEP@{% endfor %}{% endcapture %}
+          {% assign sorted_tags = captured_tags | split: '@SEP@' | sort %}
+          {% for tag in sorted_tags limit: site.data.footer.quicklinks.size %}
+            {{ tag }}
           {% endfor %}
           <!-- <li class="footer-li"><a class="footer-a" href="{{ site.url }}/sample/index.html">Sample Doc</a></li> -->
         </ul>
