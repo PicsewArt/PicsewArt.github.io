@@ -281,7 +281,7 @@ class Untitled {
 
 ## Normal Image
 
-> ![Normal Image]({{ site.url }}/assets/images/avatar.png)
+> ![Normal Image]({{ site.avatar.rect }})
 
 ## Grid Images
 
@@ -302,7 +302,7 @@ class Untitled {
 
 ### Overlay Normal Image
 
-<blockquote>{% include image_overlay.html image='/assets/images/hero/low/HERO_0001.jpg' title=site.name desc=site.description link=site.url maxwidth="200px" %}</blockquote>
+<blockquote>{% include image_overlay.html image='/assets/images/avatar_painting_full.jpg' title=site.name desc=site.description link=site.url maxwidth="200px" %}</blockquote>
 
 ### Overlay Unsplash Image
 
@@ -326,7 +326,7 @@ class Untitled {
 
 ## Listing Overlay Image
 
-<blockquote>{% include image_overlay_listing.html title="The Sadness is killing me" image="/assets/images/hero/low/HERO_0007.jpg" href=site.url items="Vintage,Classic,Luxury,Retro" %}</blockquote>
+<blockquote>{% include image_overlay_listing.html title="The Sadness is killing me" image="/assets/images/hero/low/HERO_0019.jpg" href=site.url items="Vintage,Classic,Luxury,Retro" %}</blockquote>
 
 ## Simple Scroll Overlay Image
 
@@ -336,7 +336,7 @@ class Untitled {
 
 ### Half Panel Overlay Image
 
-<blockquote>{% include image_overlay_half_panel.html title=site.alias desc=site.description image="/assets/images/hero/low/HERO_0001.jpg" href=site.url readmore="Read More" %}</blockquote>
+<blockquote>{% include image_overlay_half_panel.html title=site.alias desc=site.description image="/assets/images/avatar_painting_full.jpg" href=site.url readmore="Read More" %}</blockquote>
 
 ### Full Panel Overlay Image
 
@@ -344,7 +344,7 @@ class Untitled {
 
 ## Fade Framed Overlay Image
 
-<blockquote>{% include image_overlay_fade_framed.html title=site.alias desc=site.description image="/assets/images/hero/low/HERO_0003.jpg" href=site.url %}</blockquote>
+<blockquote>{% include image_overlay_fade_framed.html title=site.alias desc=site.description image="/assets/images/avatar_painting_full.jpg" href=site.url %}</blockquote>
 
 ## Dropping Overlay Image
 
@@ -360,7 +360,7 @@ class Untitled {
 
 ## Scale Detailed Overlay Image
 
-<blockquote>{% include image_overlay_scale_detail.html title='Te Quiero <span>Lento</span>' desc=site.description image="/assets/images/hero/low/HERO_0013.jpg" href=site.url %}</blockquote>
+<blockquote>{% include image_overlay_scale_detail.html title='Te Quiero <span>Lento</span>' desc=site.description image="/assets/images/avatar_painting_full.jpg" href=site.url %}</blockquote>
 
 # Music
 
@@ -464,31 +464,31 @@ int main(int argc, char *argv[]) {
 
 ### Normal Profile Card
 
-<blockquote>{% include card_profile.html title=site.name desc=site.description image="/assets/images/avatar.png" url=site.url email=site.email %}</blockquote>
+<blockquote>{% include card_profile.html title=site.name desc=site.description image=site.avatar.rect url=site.url email=site.email %}</blockquote>
 
 ### Cycled Profile Card
 
-<blockquote>{% include card_profile_cycled.html title="the <span>Senorita</span>" caption=site.alias desc=site.description image="/assets/images/avatar.png" url=site.url email=site.email %}</blockquote>
+<blockquote>{% include card_profile_cycled.html title="the <span>Senorita</span>" caption=site.alias desc=site.description image=site.avatar.rect url=site.url email=site.email %}</blockquote>
 
 ### Bordered Profile Card
 
-<blockquote>{% include card_profile_bordered.html title=site.name subtitle=site.alias desc=site.description image="/assets/images/avatar.png" url=site.url email=site.email %}</blockquote>
+<blockquote>{% include card_profile_bordered.html title=site.name subtitle=site.alias desc=site.description image=site.avatar.rect url=site.url email=site.email %}</blockquote>
 
 ### Bubble Profile Card
 
-<blockquote>{% include card_profile_bubble.html title=site.name subtitle=site.alias desc=site.description image="/assets/images/avatar.png" url=site.url email=site.email %}</blockquote>
+<blockquote>{% include card_profile_bubble.html title=site.name subtitle=site.alias desc=site.description image=site.avatar.rect url=site.url email=site.email %}</blockquote>
 
 ### Drop Icons Profile Card
 
-<blockquote>{% include card_profile_drop_icons.html title=site.name image="/assets/images/avatar.png" url=site.url github=site.github_url email=site.email %}</blockquote>
+<blockquote>{% include card_profile_drop_icons.html title=site.name image=site.avatar.rect url=site.url github=site.github_url email=site.email %}</blockquote>
 
 ### Quotes Profile Card
 
-<blockquote>{% include card_profile_quotes.html title=site.name subtitle=site.alias desc=site.description image="/assets/images/avatar.png" %}</blockquote>
+<blockquote>{% include card_profile_quotes.html title=site.name subtitle=site.alias desc=site.description image=site.avatar.rect %}</blockquote>
 
 ### Simple White Profile Card
 
-<blockquote>{% include card_profile_simple_white.html name=site.name desc=site.alias avatar=site.avatar icons="github:::https://github.com/,,,twitter:::https://twitter.com/,,,facebook:::https://facebook.com/" maxwidth='390px' maxheight='390px' %}</blockquote>
+<blockquote>{% include card_profile_simple_white.html name=site.name desc=site.alias avatar=site.avatar.rect icons="github:::https://github.com/,,,twitter:::https://twitter.com/,,,facebook:::https://facebook.com/" maxwidth='390px' maxheight='390px' %}</blockquote>
 
 ## Post Cards
 
@@ -502,8 +502,8 @@ int main(int argc, char *argv[]) {
 
 ### Tinted Post Card
 
-<blockquote>{% include card_post_tinted.html title=site.name desc=site.description image='/assets/images/hero/low/HERO_0001.jpg' href=site.url color='green' button='View More' %}</blockquote>
+<blockquote>{% include card_post_tinted.html title=site.name desc=site.description image='/assets/images/avatar_painting_full.jpg' href=site.url color='green' button='View More' %}</blockquote>
 
 # Chat List
 
-{% assign chatlist = '' | split: '/' %}{% for post in site.posts limit: 6 %}{% assign chat = '' | split: '/' %}{% if forloop.index == 3 %}{% assign chat = chat | push: 'image' %}{% assign chat_img = site.path.hero.low | append: '/' | append: post.hero.url %}{% assign chat = chat | push: chat_img %}{% else %}{% assign chat = chat | push: 'text' %}{% capture post_limit %}{% cycle 20, 70, 12, 80, 150, 35 %}{% endcapture %}{% assign post_ex = post.content | strip_html | strip_newlines | slice: 0, post_limit | append: '.' %}{% assign chat = chat | push: post_ex %}{% endif %}{% assign chat_time = '20:0' | append: forloop.index %}{% assign chat = chat | push: chat_time %}{% if forloop.index == 2 or forloop.index == 4 %}{% assign chat = chat | push: 'send' %}{% endif %}{% assign chatlist = chatlist | push: chat %}{% endfor %}<blockquote>{% include chat_list.html title=site.name avatar='/assets/images/avatar.png' list=chatlist %}</blockquote>
+{% assign chatlist = '' | split: '/' %}{% for post in site.posts limit: 6 %}{% assign chat = '' | split: '/' %}{% if forloop.index == 3 %}{% assign chat = chat | push: 'image' %}{% assign chat_img = site.path.hero.low | append: '/' | append: post.hero.url %}{% assign chat = chat | push: chat_img %}{% else %}{% assign chat = chat | push: 'text' %}{% capture post_limit %}{% cycle 20, 70, 12, 80, 150, 35 %}{% endcapture %}{% assign post_ex = post.content | strip_html | strip_newlines | slice: 0, post_limit | append: '.' %}{% assign chat = chat | push: post_ex %}{% endif %}{% assign chat_time = '20:0' | append: forloop.index %}{% assign chat = chat | push: chat_time %}{% if forloop.index == 2 or forloop.index == 4 %}{% assign chat = chat | push: 'send' %}{% endif %}{% assign chatlist = chatlist | push: chat %}{% endfor %}<blockquote>{% include chat_list.html title=site.name avatar=site.avatar.rect list=chatlist %}</blockquote>
