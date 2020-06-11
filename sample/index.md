@@ -4,7 +4,7 @@ title: "Sample"
 date: "2020-05-06"
 hero:
   format: 'jpeg'
-  url: 'HERO_TECH_H_0004.jpg'
+  url: 'HERO_0026.jpg'
 has_about: true
 show_hero: true
 post_has_front_header: true
@@ -281,11 +281,11 @@ class Untitled {
 
 ## Normal Image
 
-> ![Normal Image]({{ site.url }}/assets/images/avatar.jpg)
+> ![Normal Image]({{ site.url }}/assets/images/avatar.png)
 
 ## Grid Images
 
-{% assign grid_images = '/assets/images/hero/low/HERO_TECH_H_0014.jpg,/assets/images/hero/low/HERO_TECH_H_0013.jpg,/assets/images/hero/low/HERO_TECH_H_0012.jpg, /assets/images/hero/low/HERO_TECH_H_0011.jpg, /assets/images/hero/low/HERO_TECH_H_0010.jpg, /assets/images/hero/low/HERO_TECH_H_0009.jpg' %}
+{% assign grid_images = '/assets/images/hero/low/HERO_0014.jpg,/assets/images/hero/low/HERO_0013.jpg,/assets/images/hero/low/HERO_0012.jpg, /assets/images/hero/low/HERO_0011.jpg, /assets/images/hero/low/HERO_0010.jpg, /assets/images/hero/low/HERO_0009.jpg' %}
 <blockquote>{% include image_grid.html cols=2 images=grid_images %}</blockquote>
 
 <blockquote>{% include image_grid.html cols=3 images=grid_images %}</blockquote>
@@ -302,7 +302,7 @@ class Untitled {
 
 ### Overlay Normal Image
 
-<blockquote>{% include image_overlay.html image='/assets/images/hero/low/HERO_PAINTINGS_V_0000.jpg' title=site.name desc=site.description link=site.url maxwidth="200px" %}</blockquote>
+<blockquote>{% include image_overlay.html image='/assets/images/hero/low/HERO_0001.jpg' title=site.name desc=site.description link=site.url maxwidth="200px" %}</blockquote>
 
 ### Overlay Unsplash Image
 
@@ -310,57 +310,57 @@ class Untitled {
 
 ### Boxed Overlay Image
 
-<blockquote>{% include image_overlay_box.html title="Sadness" subtitle="is killing me" desc="Still be suffering is stupid." image="/assets/images/hero/low/HERO_SADNESS_H_0005.jpg" %}</blockquote>
+<blockquote>{% include image_overlay_box.html title="Sadness" subtitle="is killing me" desc="Still be suffering is stupid." image="/assets/images/hero/low/HERO_0005.jpg" %}</blockquote>
 
 ### Fashion Overlay Image
 
-<blockquote>{% include image_overlay_fashion.html title="The" subtitle="Sadness" desc="is killing me." image="/assets/images/hero/low/HERO_PAINTINGS_V_0001.jpg" href=site.url %}</blockquote>
+<blockquote>{% include image_overlay_fashion.html title="The" subtitle="Sadness" desc="is killing me." image="/assets/images/hero/low/HERO_0001.jpg" href=site.url %}</blockquote>
 
 ### Black-White Rectangle Overlay Image
 
-<blockquote>{% include image_overlay_bw_rect.html title="The<br/>Sadness" hover="Read More" image="/assets/images/hero/low/HERO_PAINTINGS_H_0001.jpg" href=site.url %}</blockquote>
+<blockquote>{% include image_overlay_bw_rect.html title="The<br/>Sadness" hover="Read More" image="/assets/images/hero/low/HERO_0002.jpg" href=site.url %}</blockquote>
 
 ## Lined Overlay Image
 
-<blockquote>{% include image_overlay_lines.html title="The Sadness" subtitle="is killing me" desc="Still be suffering is stupid." image="/assets/images/hero/low/HERO_SADNESS_H_0006.jpg" href=site.url %}</blockquote>
+<blockquote>{% include image_overlay_lines.html title="The Sadness" subtitle="is killing me" desc="Still be suffering is stupid." image="/assets/images/hero/low/HERO_0006.jpg" href=site.url %}</blockquote>
 
 ## Listing Overlay Image
 
-<blockquote>{% include image_overlay_listing.html title="The Sadness is killing me" image="/assets/images/hero/low/HERO_SADNESS_H_0007.jpg" href=site.url items="Vintage,Classic,Luxury,Retro" %}</blockquote>
+<blockquote>{% include image_overlay_listing.html title="The Sadness is killing me" image="/assets/images/hero/low/HERO_0007.jpg" href=site.url items="Vintage,Classic,Luxury,Retro" %}</blockquote>
 
 ## Simple Scroll Overlay Image
 
-<blockquote>{% include image_overlay_simple_scroll.html title="The Sadness" subtitle="Mood" scrolltitle="#Sadness #Emotion" image="/assets/images/hero/low/HERO_SADNESS_H_0008.jpg" href=site.url %}</blockquote>
+<blockquote>{% include image_overlay_simple_scroll.html title="The Sadness" subtitle="Mood" scrolltitle="#Sadness #Emotion" image="/assets/images/hero/low/HERO_0008.jpg" href=site.url %}</blockquote>
 
 ## Panel Overlay Image
 
 ### Half Panel Overlay Image
 
-<blockquote>{% include image_overlay_half_panel.html title=site.alias desc=site.description image="/assets/images/hero/low/HERO_SADNESS_V_0001.jpg" href=site.url readmore="Read More" %}</blockquote>
+<blockquote>{% include image_overlay_half_panel.html title=site.alias desc=site.description image="/assets/images/hero/low/HERO_0001.jpg" href=site.url readmore="Read More" %}</blockquote>
 
 ### Full Panel Overlay Image
 
-<blockquote>{% include image_overlay_full_panel.html title=site.alias desc=site.description image="/assets/images/hero/low/HERO_SADNESS_H_0001.jpg" href=site.url readmore="Read More" %}</blockquote>
+<blockquote>{% include image_overlay_full_panel.html title=site.alias desc=site.description image="/assets/images/hero/low/HERO_0002.jpg" href=site.url readmore="Read More" %}</blockquote>
 
 ## Fade Framed Overlay Image
 
-<blockquote>{% include image_overlay_fade_framed.html title=site.alias desc=site.description image="/assets/images/hero/low/HERO_SADNESS_V_0002.jpg" href=site.url %}</blockquote>
+<blockquote>{% include image_overlay_fade_framed.html title=site.alias desc=site.description image="/assets/images/hero/low/HERO_0003.jpg" href=site.url %}</blockquote>
 
 ## Dropping Overlay Image
 
-<blockquote>{% include image_overlay_drop.html color="orange" title=site.alias desc=site.description image="/assets/images/hero/low/HERO_SADNESS_H_0010.jpg" href=site.url %}</blockquote>
+<blockquote>{% include image_overlay_drop.html color="orange" title=site.alias desc=site.description image="/assets/images/hero/low/HERO_0010.jpg" href=site.url %}</blockquote>
 
 ## Fade Detailed Overlay Image
 
-<blockquote>{% include image_overlay_fade_detailed.html title=site.alias desc=site.description image="/assets/images/hero/low/HERO_SADNESS_H_0011.jpg" href=site.url %}</blockquote>
+<blockquote>{% include image_overlay_fade_detailed.html title=site.alias desc=site.description image="/assets/images/hero/low/HERO_0011.jpg" href=site.url %}</blockquote>
 
 ## Camera Overlay Image
 
-<blockquote>{% include image_overlay_camera.html title=site.name subtitle=site.alias image="/assets/images/hero/low/HERO_SADNESS_H_0012.jpg" href=site.url %}</blockquote>
+<blockquote>{% include image_overlay_camera.html title=site.name subtitle=site.alias image="/assets/images/hero/low/HERO_0012.jpg" href=site.url %}</blockquote>
 
 ## Scale Detailed Overlay Image
 
-<blockquote>{% include image_overlay_scale_detail.html title='Te Quiero <span>Lento</span>' desc=site.description image="/assets/images/hero/low/HERO_SADNESS_H_0013.jpg" href=site.url %}</blockquote>
+<blockquote>{% include image_overlay_scale_detail.html title='Te Quiero <span>Lento</span>' desc=site.description image="/assets/images/hero/low/HERO_0013.jpg" href=site.url %}</blockquote>
 
 # Music
 
@@ -396,9 +396,9 @@ class Untitled {
 
 ## Detailed Alerts
 
-<blockquote>{% include alert.html type='info' title='Image' msg='Click to show the image.' image='/assets/images/hero/low/HERO_SADNESS_H_0013.jpg' %}</blockquote>
+<blockquote>{% include alert.html type='info' title='Image' msg='Click to show the image.' image='/assets/images/hero/low/HERO_0013.jpg' %}</blockquote>
 
-<blockquote>{% include alert.html type='error' title='Overlay Image' msg='Image with some informations.' image='/assets/images/hero/low/HERO_SADNESS_H_0012.jpg' image_title=site.name image_desc=site.description link=site.url %}</blockquote>
+<blockquote>{% include alert.html type='error' title='Overlay Image' msg='Image with some informations.' image='/assets/images/hero/low/HERO_0012.jpg' image_title=site.name image_desc=site.description link=site.url %}</blockquote>
 
 <blockquote>{% include alert.html type='success' title='iFrame' msg='Contains a web page.' iframe=site.url %}</blockquote>
 
@@ -445,7 +445,7 @@ int main(int argc, char *argv[]) {
 ## macOS
 
 <blockquote>{% include window_mac_start.html title="PlayStation"%}
-{% include image_overlay.html image='/assets/images/hero/high/HERO_GAME_H_0002.jpg' title="PlayStation" desc="Hey, check this out!" link=site.url maxwidth="100%" %}
+{% include image_overlay.html image='/assets/images/hero/high/HERO_0002.jpg' title="PlayStation" desc="Hey, check this out!" link=site.url maxwidth="100%" %}
 {% include window_mac_end.html %}</blockquote>
 
 ## System 10
@@ -455,7 +455,7 @@ int main(int argc, char *argv[]) {
 {% include window_old_mac_end.html btn="Read More" href=site.posts.first.url %}</blockquote>
 
 <blockquote class="layer-bright">{% include window_old_mac_start.html title='Photography' %}
-{% include image_frame.html image='/assets/images/hero/high/HERO_PAINTINGS_V_0005.jpg' maxwidth="60%" %}
+{% include image_frame.html image='/assets/images/hero/high/HERO_0005.jpg' maxwidth="60%" %}
 {% include window_old_mac_end.html btn="View More" href='/gallery/index.html' %}</blockquote>
 
 # Cards
@@ -464,27 +464,27 @@ int main(int argc, char *argv[]) {
 
 ### Normal Profile Card
 
-<blockquote>{% include card_profile.html title=site.name desc=site.description image="/assets/images/avatar.jpg" url=site.url email=site.email %}</blockquote>
+<blockquote>{% include card_profile.html title=site.name desc=site.description image="/assets/images/avatar.png" url=site.url email=site.email %}</blockquote>
 
 ### Cycled Profile Card
 
-<blockquote>{% include card_profile_cycled.html title="the <span>Senorita</span>" caption=site.alias desc=site.description image="/assets/images/avatar.jpg" url=site.url email=site.email %}</blockquote>
+<blockquote>{% include card_profile_cycled.html title="the <span>Senorita</span>" caption=site.alias desc=site.description image="/assets/images/avatar.png" url=site.url email=site.email %}</blockquote>
 
 ### Bordered Profile Card
 
-<blockquote>{% include card_profile_bordered.html title=site.name subtitle=site.alias desc=site.description image="/assets/images/avatar.jpg" url=site.url email=site.email %}</blockquote>
+<blockquote>{% include card_profile_bordered.html title=site.name subtitle=site.alias desc=site.description image="/assets/images/avatar.png" url=site.url email=site.email %}</blockquote>
 
 ### Bubble Profile Card
 
-<blockquote>{% include card_profile_bubble.html title=site.name subtitle=site.alias desc=site.description image="/assets/images/avatar.jpg" url=site.url email=site.email %}</blockquote>
+<blockquote>{% include card_profile_bubble.html title=site.name subtitle=site.alias desc=site.description image="/assets/images/avatar.png" url=site.url email=site.email %}</blockquote>
 
 ### Drop Icons Profile Card
 
-<blockquote>{% include card_profile_drop_icons.html title=site.name image="/assets/images/avatar.jpg" url=site.url github=site.github_url email=site.email %}</blockquote>
+<blockquote>{% include card_profile_drop_icons.html title=site.name image="/assets/images/avatar.png" url=site.url github=site.github_url email=site.email %}</blockquote>
 
 ### Quotes Profile Card
 
-<blockquote>{% include card_profile_quotes.html title=site.name subtitle=site.alias desc=site.description image="/assets/images/avatar.jpg" %}</blockquote>
+<blockquote>{% include card_profile_quotes.html title=site.name subtitle=site.alias desc=site.description image="/assets/images/avatar.png" %}</blockquote>
 
 ### Simple White Profile Card
 
@@ -494,16 +494,16 @@ int main(int argc, char *argv[]) {
 
 ### Normal Post Card
 
-<blockquote>{% include card_post.html title=site.name desc=site.description image="/assets/images/hero/low/HERO_SADNESS_H_0011.jpg" day='01' month='May' year='2020' %}</blockquote>
+<blockquote>{% include card_post.html title=site.name desc=site.description image="/assets/images/hero/low/HERO_0011.jpg" day='01' month='May' year='2020' %}</blockquote>
 
 ### Detailed Post Card
 
-<blockquote>{% include card_post_detailed.html title=site.alias desc=site.description image='/assets/images/hero/low/HERO_SADNESS_H_0012.jpg' href=site.url badge=site.name day='01' month='Jan' date='Jan 01, 1970' %}</blockquote>
+<blockquote>{% include card_post_detailed.html title=site.alias desc=site.description image='/assets/images/hero/low/HERO_0012.jpg' href=site.url badge=site.name day='01' month='Jan' date='Jan 01, 1970' %}</blockquote>
 
 ### Tinted Post Card
 
-<blockquote>{% include card_post_tinted.html title=site.name desc=site.description image='/assets/images/hero/low/HERO_SADNESS_V_0001.jpg' href=site.url color='green' button='View More' %}</blockquote>
+<blockquote>{% include card_post_tinted.html title=site.name desc=site.description image='/assets/images/hero/low/HERO_0001.jpg' href=site.url color='green' button='View More' %}</blockquote>
 
 # Chat List
 
-{% assign chatlist = '' | split: '/' %}{% for post in site.posts limit: 6 %}{% assign chat = '' | split: '/' %}{% if forloop.index == 3 %}{% assign chat = chat | push: 'image' %}{% assign chat_img = site.path.hero.low | append: '/' | append: post.hero.url %}{% assign chat = chat | push: chat_img %}{% else %}{% assign chat = chat | push: 'text' %}{% capture post_limit %}{% cycle 20, 70, 12, 80, 150, 35 %}{% endcapture %}{% assign post_ex = post.content | strip_html | strip_newlines | slice: 0, post_limit | append: '.' %}{% assign chat = chat | push: post_ex %}{% endif %}{% assign chat_time = '20:0' | append: forloop.index %}{% assign chat = chat | push: chat_time %}{% if forloop.index == 2 or forloop.index == 4 %}{% assign chat = chat | push: 'send' %}{% endif %}{% assign chatlist = chatlist | push: chat %}{% endfor %}<blockquote>{% include chat_list.html title=site.name avatar='/assets/images/avatar.jpg' list=chatlist %}</blockquote>
+{% assign chatlist = '' | split: '/' %}{% for post in site.posts limit: 6 %}{% assign chat = '' | split: '/' %}{% if forloop.index == 3 %}{% assign chat = chat | push: 'image' %}{% assign chat_img = site.path.hero.low | append: '/' | append: post.hero.url %}{% assign chat = chat | push: chat_img %}{% else %}{% assign chat = chat | push: 'text' %}{% capture post_limit %}{% cycle 20, 70, 12, 80, 150, 35 %}{% endcapture %}{% assign post_ex = post.content | strip_html | strip_newlines | slice: 0, post_limit | append: '.' %}{% assign chat = chat | push: post_ex %}{% endif %}{% assign chat_time = '20:0' | append: forloop.index %}{% assign chat = chat | push: chat_time %}{% if forloop.index == 2 or forloop.index == 4 %}{% assign chat = chat | push: 'send' %}{% endif %}{% assign chatlist = chatlist | push: chat %}{% endfor %}<blockquote>{% include chat_list.html title=site.name avatar='/assets/images/avatar.png' list=chatlist %}</blockquote>
