@@ -106,9 +106,10 @@ layout: default
 		</div>
 		<br />
 		{% include signature.html %}
+		<br style="clear: both;" />
 	</div>
 	{% if page.has_action %}
-	<div class="page_actions" style="clear: right; padding-top: 20px;">
+	<div class="page_actions">
 		<center>
 	<!-- <a onclick="history.back(-1)" class="btn">&lt; Back</a> -->{% if page.next %}<a class="btn" href="{{ site.url }}{{ page.next.url }}index.html">«&nbsp;Newer:&nbsp;{{ page.next.title }}</a>&nbsp;{% endif %}{% if page.next and page.previous%}&nbsp;{% endif %}{% if page.previous %}<a class="btn" href="{{ site.url }}{{ page.previous.url }}index.html">Older:&nbsp;{{ page.previous.title }}&nbsp;»</a>{% endif %}
 		{% if page.has_info %}
