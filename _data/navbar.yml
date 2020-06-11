@@ -11,6 +11,8 @@ left:
   # - title: 'Sample'
   #   url: '/sample/index.html'
 right:
+  - title: "Engines"
+    url: "/engines/index.html"
   - title: "Blogroll"
     url: "/blogroll/index.html"
   - title: 'About'
