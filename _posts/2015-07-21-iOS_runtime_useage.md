@@ -4,7 +4,7 @@ category: "iOS"
 cave: true
 hero:
   format: 'jpeg'
-  url: 'HERO_0006.jpg'
+  url: 'HERO_0041.jpg'
 tags: [iOS,Objective-C,Runtime,RuntimeSeries]
 ---
 通过上一篇的一些简单介绍与阐述，相信大家应该对 Runtime 有一个基本的认识了，于是，这一篇我们就来看看 Runtime 的基本应用。

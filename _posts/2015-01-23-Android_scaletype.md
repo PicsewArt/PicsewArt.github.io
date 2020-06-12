@@ -6,7 +6,7 @@ tags: [Android, ScaleType]
 cave: true
 hero:
   format: 'jpeg'
-  url: 'HERO_0040.jpg'
+  url: 'HERO_0027.jpg'
 ---
 应该是个很常用的属性, 总结一下。
 

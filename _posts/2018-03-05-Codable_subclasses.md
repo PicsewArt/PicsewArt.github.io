@@ -6,7 +6,7 @@ tags: [iOS, Swift, Codable]
 cave: true
 hero:
   format: 'jpeg'
-  url: 'HERO_0052.jpg'
+  url: 'HERO_0039.jpg'
 ---
 In this code, the groceries properties is not deserialised from JSON. The name property is, but not the groceries one.
 

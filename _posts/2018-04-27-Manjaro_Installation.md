@@ -4,7 +4,7 @@ category: "UNIX"
 cave: true
 hero:
   format: 'jpeg'
-  url: 'HERO_0015.jpg'
+  url: 'HERO_0045.jpg'
 tags: ["Manjaro"]
 ---
 ## 前言

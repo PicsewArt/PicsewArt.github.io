@@ -4,7 +4,7 @@ category: "iOS"
 cave: true
 hero:
   format: 'jpeg'
-  url: 'HERO_0012.jpg'
+  url: 'HERO_0054.jpg'
 tags: [iOS, Quote]
 title: __block directive, a simple explanation
 ---

@@ -3,7 +3,7 @@ category: "iOS"
 cave: true
 hero:
   format: 'jpeg'
-  url: 'HERO_0004.jpg'
+  url: 'HERO_0012.jpg'
 title:  "iOS UITableView: Appearance of HeaderView & FooterView for Section"
 tags: [iOS,UITableView]
 summary: "iOS UITableView: Appearance of HeaderView & FooterView for Section"

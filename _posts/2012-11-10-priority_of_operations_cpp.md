@@ -7,7 +7,7 @@ tags: [C++]
 cave: true
 hero:
   format: 'jpeg'
-  url: 'HERO_0046.jpg'
+  url: 'HERO_0014.jpg'
 ---
 <table cellspacing="5" cellpadding="2">
     <caption>C++运算符优先级</caption>

@@ -6,7 +6,7 @@ tags: [iOS, Swift, Codable]
 cave: true
 hero:
   format: 'jpeg'
-  url: 'HERO_0020.jpg'
+  url: 'HERO_0057.jpg'
 ---
 How do you decode a JSON feed that has several custom date formats? If you are lucky using a `dateDecodingStrategy` might be enough. Unfortunately it has limited support for the `.iso8601` format and you can only set one strategy at a time so it does not help when you have two or more different date formats.
 

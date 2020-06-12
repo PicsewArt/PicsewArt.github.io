@@ -4,7 +4,7 @@ category: "iOS"
 cave: true
 hero:
   format: 'jpeg'
-  url: 'HERO_0053.jpg'
+  url: 'HERO_0046.jpg'
 tags: [iOS,UIBezierPath,iOS Animation]
 ---
 通过[前面博客]({{ site.blog_perma }}/UIBezierPath_001/)的介绍，你应该已经对 `UIBezierPath` 的基本使用有了了解，接下来，本文主要介绍 `UIBezierPath` 在 UI 动画中的应用——拖拽气泡的基本算法。

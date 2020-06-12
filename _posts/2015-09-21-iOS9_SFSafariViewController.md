@@ -3,7 +3,7 @@ category: "iOS"
 cave: true
 hero:
   format: 'jpeg'
-  url: 'HERO_0051.jpg'
+  url: 'HERO_0021.jpg'
 title: "iOS 9 : SFSafariViewController"
 tags: [iOS,iOS 9,SFSafariViewController]
 ---

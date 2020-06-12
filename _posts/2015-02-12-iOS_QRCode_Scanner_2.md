@@ -4,7 +4,7 @@ category: "iOS"
 cave: true
 hero:
   format: 'jpeg'
-  url: 'HERO_0005.jpg'
+  url: 'HERO_0045.jpg'
 tags: [iOS,Objective-C,QRCode]
 ---
 接[**上文**]({{ site.blog_perma }}/iOS_QRCode_Scanner/)，好久之前试了试二维码扫描功能，由于苹果实现了基本的检测，我们要做的其实就只是实现一个摄像机功能。最近公司项目需要从图片识别二维码，于是趁这个机会把新的代码贴上来，正如我所说，依然不需要什么智商。

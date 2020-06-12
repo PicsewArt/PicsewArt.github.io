@@ -6,7 +6,7 @@ title: "NYTimes Objective-C Style Guide/纽约时报 移动团队 Objective-C �
 cave: true
 hero:
   format: 'jpeg'
-  url: 'HERO_0015.jpg'
+  url: 'HERO_0035.jpg'
 category: "iOS"
 tags: [iOS, macOS, Objective-C, Style Guide]
 ---

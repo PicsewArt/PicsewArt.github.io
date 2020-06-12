@@ -6,7 +6,7 @@ tags: [iOS, Mac, macOS, Terminal, Xcode, vim]
 cave: true
 hero:
   format: 'jpeg'
-  url: 'HERO_0043.jpg'
+  url: 'HERO_0044.jpg'
 ---
 因为时不时会给自己或者被人的电脑💻重装系统, 装系统很简单, 但之后要配置的内容还是蛮多的, 这里列举一下吧。
 

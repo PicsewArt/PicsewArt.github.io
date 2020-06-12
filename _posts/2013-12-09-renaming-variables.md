@@ -4,7 +4,7 @@ category: "iOS"
 cave: true
 hero:
   format: 'jpeg'
-  url: 'HERO_0024.jpg'
+  url: 'HERO_0009.jpg'
 tags: [iOS, Quote]
 title: Renaming Variables in Xcode
 ---

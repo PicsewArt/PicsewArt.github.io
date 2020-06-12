@@ -5,7 +5,7 @@ tags: ["Hello World"]
 date: 19700101T000000+08:00
 hero:
   format: 'jpeg'
-  url: 'HERO_0011.jpg'
+  url: 'HERO_0027.jpg'
 ---
 "Hello World" is the first program one usually writes when learning a new programming language. Having first been mentioned in Brian Kernighan's [tutorial to the B programming language](https://www.bell-labs.com/usr/dmr/www/bintro.html), it became widely known through Kernighan & Ritchie's 1978 book that introduced "[The C Programming Language](http://en.wikipedia.org/wiki/The_C_Programming_Language_(book))", where it read like this:
 

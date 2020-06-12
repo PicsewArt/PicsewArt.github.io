@@ -4,7 +4,7 @@ category: "iOS"
 cave: true
 hero:
   format: 'jpeg'
-  url: 'HERO_0016.jpg'
+  url: 'HERO_0032.jpg'
 tags: [iOS,iOS 9,Shared Links]
 ---
 在 Safari Extensibility 中除了前面提到的 Content Blocker 之外，还有一个新功能叫做 Shared Links，它的作用正如它的名字，共享链接。

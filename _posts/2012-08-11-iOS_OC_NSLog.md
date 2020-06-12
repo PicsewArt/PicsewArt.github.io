@@ -3,7 +3,7 @@ category: "iOS"
 cave: true
 hero:
   format: 'jpeg'
-  url: 'HERO_0006.jpg'
+  url: 'HERO_0029.jpg'
 title:  "iOS : 关闭 NSLog"
 tags: [iOS,NSLog]
 summary: "iOS : 关闭 NSLog"

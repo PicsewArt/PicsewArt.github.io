@@ -4,7 +4,7 @@ category: "iOS"
 cave: true
 hero:
   format: 'jpeg'
-  url: 'HERO_0038.jpg'
+  url: 'HERO_0060.jpg'
 tags: [iOS]
 ---
 从 iOS 8 开始苹果允许开发者创造自己的第三方输入法，最近有些朋友问我关于第三方输入法开发的问题，所以也就有了这篇博客。

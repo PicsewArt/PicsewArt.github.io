@@ -3,7 +3,7 @@ category: "iOS"
 cave: true
 hero:
   format: 'jpeg'
-  url: 'HERO_0029.jpg'
+  url: 'HERO_0046.jpg'
 title:  "iOS 9 : StoryBoard Refrences"
 tags: [iOS,iOS 9,StoryBoard Refrences,StoryBoard]
 ---

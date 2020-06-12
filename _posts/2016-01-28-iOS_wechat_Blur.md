@@ -4,7 +4,7 @@ category: "iOS"
 cave: true
 hero:
   format: 'jpeg'
-  url: 'HERO_0030.jpg'
+  url: 'HERO_0022.jpg'
 tags: [iOS,Blur]
 ---
 上一篇博客用 HTML5 + CSS3 实现了一个简单的微信红包照片的效果，那当然少不了街机 iPhone 中的实现。

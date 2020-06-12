@@ -6,7 +6,7 @@ tags: [HTML, CSS, JavaScript, table-cell, box-flex]
 cave: true
 hero:
   format: 'jpeg'
-  url: 'HERO_0040.jpg'
+  url: 'HERO_0034.jpg'
 ---
 虽然我们可以用 `width` 设置百分比甚至固定值的方式使列表项等宽, 但对于未知数量的列表, 可能需要更好的方式来实现。
 

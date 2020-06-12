@@ -4,7 +4,7 @@ category: "Lisp"
 cave: true
 hero:
   format: 'jpeg'
-  url: 'HERO_0044.jpg'
+  url: 'HERO_0003.jpg'
 tags: [Lisp,SBCL,CodeRunner]
 ---
 Lisp 是继 FORTRAN 之后历史最悠久的高级语言，作为一名括号爱好者，我简单说明一下在 CodeRunner 中运行 Lisp 的方法，由于 Lisp 分支、实现、方言众多，我们选择其中一个 SBCL 来做说明 (不是 `SB's CLisp` 哟)。

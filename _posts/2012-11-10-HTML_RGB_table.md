@@ -7,7 +7,7 @@ tags: [HTML, RGB]
 cave: true
 hero:
   format: 'jpeg'
-  url: 'HERO_0051.jpg'
+  url: 'HERO_0031.jpg'
 ---
 <table cellspacing="5" cellpadding="2">
     <tr>

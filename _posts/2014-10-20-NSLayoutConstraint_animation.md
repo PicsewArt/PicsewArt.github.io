@@ -6,7 +6,7 @@ tags: [iOS, NSLayoutConstraint]
 cave: true
 hero:
   format: 'jpeg'
-  url: 'HERO_0020.jpg'
+  url: 'HERO_0032.jpg'
 ---
 直接上代码:
 

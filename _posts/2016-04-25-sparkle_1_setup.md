@@ -6,7 +6,7 @@ tags: [OS X, Sparkle]
 cave: true
 hero:
   format: 'jpeg'
-  url: 'HERO_0010.jpg'
+  url: 'HERO_0015.jpg'
 ---
 做 Mac 开发的同学应该至少都听说过 Sparkle，一个应用升级框架，Sparkle 是开源的，参考 [Github](https://github.com/sparkle-project/Sparkle)。
 

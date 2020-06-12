@@ -4,7 +4,7 @@ category: "iOS"
 cave: true
 hero:
   format: 'jpeg'
-  url: 'HERO_0009.jpg'
+  url: 'HERO_0041.jpg'
 tags: [iOS,Debug,print,Swift]
 ---
 接上文，本篇我们借鉴一下 JavaScript 中的 `console.log`:

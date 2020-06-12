@@ -5,7 +5,7 @@ tags: ["Sadness"]
 date: 20200427T120000+08:00
 hero:
   format: 'jpeg'
-  url: 'HERO_0031.jpg'
+  url: 'HERO_0013.jpg'
 ---
 I know why. And understand that this is how it has to be.
 

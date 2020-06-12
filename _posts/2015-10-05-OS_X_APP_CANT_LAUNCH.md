@@ -4,7 +4,7 @@ category: "OS X"
 cave: true
 hero:
   format: 'jpeg'
-  url: 'HERO_0041.jpg'
+  url: 'HERO_0015.jpg'
 tags: [Mac]
 ---
 如果在启动应用/游戏时遇到 "`应用程序 XXX.app 不能打开`" 的问题，通常可能是执行文件的权限有误。

@@ -6,7 +6,7 @@ tags: [iOS, CocoaPods]
 cave: true
 hero:
   format: 'jpeg'
-  url: 'HERO_0035.jpg'
+  url: 'HERO_0018.jpg'
 ---
 在发布到 `CocoaPods` 是如果遇到下面的问题:
 

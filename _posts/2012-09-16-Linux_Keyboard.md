@@ -3,7 +3,7 @@ category: "UNIX"
 cave: true
 hero:
   format: 'jpeg'
-  url: 'HERO_0027.jpg'
+  url: 'HERO_0001.jpg'
 title:  "UNIX/Linux 终端常用快捷键"
 tags: [UNIX,Linux,CentOS,Terminal]
 summary: "UNIX/Linux 终端常用快捷键"

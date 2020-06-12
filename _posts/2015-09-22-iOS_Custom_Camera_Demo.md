@@ -3,7 +3,7 @@ category: "iOS"
 cave: true
 hero:
   format: 'jpeg'
-  url: 'HERO_0037.jpg'
+  url: 'HERO_0061.jpg'
 title: "iOS : 自定义相机实例 Demo"
 tags: [iOS,Camera]
 summary: "iOS : 自定义相机实例 Demo"

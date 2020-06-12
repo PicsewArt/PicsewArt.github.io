@@ -3,7 +3,7 @@ category: "Xcode"
 cave: true
 hero:
   format: 'jpeg'
-  url: 'HERO_0024.jpg'
+  url: 'HERO_0017.jpg'
 title:  "Xcode : Failed to get the task for process xxxxx"
 tags: [iOS,Xcode]
 summary: "Xcode : Failed to get the task for process xxxxx"

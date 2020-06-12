@@ -7,7 +7,7 @@ tags: [HTML, Escape, 转义字符]
 cave: true
 hero:
   format: 'jpeg'
-  url: 'HERO_0040.jpg'
+  url: 'HERO_0023.jpg'
 ---
 <table cellspacing="0" cellpadding="0">
     <tr>

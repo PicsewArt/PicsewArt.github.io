@@ -6,7 +6,7 @@ tags: [Swift]
 cave: true
 hero:
   format: 'jpeg'
-  url: 'HERO_0030.jpg'
+  url: 'HERO_0004.jpg'
 ---
 这里是一些 Swift 3 的基本语法示例，Swift 前几个版本变化较大，所以做一个总结。
 

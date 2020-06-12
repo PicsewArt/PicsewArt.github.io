@@ -6,7 +6,7 @@ tags: [OS X, spctl]
 cave: true
 hero:
   format: 'jpeg'
-  url: 'HERO_0004.jpg'
+  url: 'HERO_0020.jpg'
 ---
 自从 Sierra 之后, `系统偏好设置` -> `通用` -> `允许以下位置下载的应用` 中的 `任何来源` 便消失了。
 

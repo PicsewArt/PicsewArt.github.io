@@ -5,7 +5,7 @@ tags: [Git, SVN]
 cave: true
 hero:
   format: 'jpeg'
-  url: 'HERO_0006.jpg'
+  url: 'HERO_0059.jpg'
 ---
 最近都在找工作，所以博客更新停滞了下来。之前几个 Primer 系列也没有写完。不过暂时先写一些和面试有关的内容吧，因为这几次面试，总被问到 SVN 和 Git 的相关问题，但在其中却也发现一些理解误区，因此也就有了这篇博客。
 

@@ -3,7 +3,7 @@ category: "iOS"
 cave: true
 hero:
   format: 'jpeg'
-  url: 'HERO_0050.jpg'
+  url: 'HERO_0030.jpg'
 title:  "iOS 小知识: 忽略编译器警告"
 tags: [iOS]
 ---

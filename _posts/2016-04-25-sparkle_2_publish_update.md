@@ -6,7 +6,7 @@ tags: [OS X, Sparkle]
 cave: true
 hero:
   format: 'jpeg'
-  url: 'HERO_0023.jpg'
+  url: 'HERO_0031.jpg'
 ---
 配置好一些基本的内容后，是时候发布一个新版本了。
 

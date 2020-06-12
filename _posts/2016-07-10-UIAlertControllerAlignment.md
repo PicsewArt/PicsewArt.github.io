@@ -6,7 +6,7 @@ tags: [iOS, Swift, UIAlertController]
 cave: true
 hero:
   format: 'jpeg'
-  url: 'HERO_0022.jpg'
+  url: 'HERO_0039.jpg'
 ---
 Custom text alignment of `UIAlertController`:
 

@@ -6,7 +6,7 @@ tags: [OS X, UTIs]
 cave: true
 hero:
   format: 'jpeg'
-  url: 'HERO_0035.jpg'
+  url: 'HERO_0008.jpg'
 ---
 We know that `lsregister -dump` is an option; however, I'm left to wonder if there isn't a better solution.
 

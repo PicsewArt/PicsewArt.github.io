@@ -4,7 +4,7 @@ category: "RVM"
 cave: true
 hero:
   format: 'jpeg'
-  url: 'HERO_0008.jpg'
+  url: 'HERO_0051.jpg'
 tags: [RVM, SSL, OpenSSL]
 ---
 今天在虚拟机里安装 CocoaPods 的时候，偶然遇到一个问题:

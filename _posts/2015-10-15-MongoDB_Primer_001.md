@@ -5,7 +5,7 @@ tags: [MongoDB, MongoDB Primer]
 cave: true
 hero:
   format: 'jpeg'
-  url: 'HERO_0018.jpg'
+  url: 'HERO_0053.jpg'
 ---
 [MongoDB](https://www.mongodb.com) 是一个基于分布式文件存储的数据库。由 C++ 语言编写。旨在为 Web 应用提供可扩展的高性能数据存储解决方案。
 

@@ -6,7 +6,7 @@ tags: [Swift, C, "@_silgen_name"]
 cave: true
 hero:
   format: 'jpeg'
-  url: 'HERO_0036.jpg'
+  url: 'HERO_0004.jpg'
 ---
 As a general Swift developer, one wouldn't come across this attribute, unless working with, say, porting Swift to some other platform.
 

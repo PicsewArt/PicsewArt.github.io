@@ -4,7 +4,7 @@ category: "Kotlin"
 cave: true
 hero:
   format: 'jpeg'
-  url: 'HERO_0048.jpg'
+  url: 'HERO_0044.jpg'
 tags: [Kotlin]
 ---
 前面对 Kotlin 的情况做了简单介绍，这一篇再来说说它的基本语法。

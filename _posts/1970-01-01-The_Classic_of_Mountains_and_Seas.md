@@ -6,7 +6,7 @@ toc: "cn"
 cave: true
 hero:
   format: 'jpeg'
-  url: 'HERO_0005.jpg'
+  url: 'HERO_0014.jpg'
 ---
 ## 南山经
 

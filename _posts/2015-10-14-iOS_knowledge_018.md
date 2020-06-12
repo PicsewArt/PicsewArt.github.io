@@ -5,7 +5,7 @@ tags: [Interview]
 cave: true
 hero:
   format: 'jpeg'
-  url: 'HERO_0022.jpg'
+  url: 'HERO_0045.jpg'
 ---
 最近遇到和看到的一些面试题。
 

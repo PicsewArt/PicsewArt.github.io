@@ -4,7 +4,7 @@ category: "HTML"
 cave: true
 hero:
   format: 'jpeg'
-  url: 'HERO_0032.jpg'
+  url: 'HERO_0052.jpg'
 tags: [HTML,HTML5,Blur,CSS3]
 ---
 前几天微信红包照片着实火了一把，很多人也已经发现可以通过抓包获取到原始图片，而其背后的实现方式也引起了一些朋友的兴趣。

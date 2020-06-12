@@ -3,7 +3,7 @@ category: "iOS"
 cave: true
 hero:
   format: 'jpeg'
-  url: 'HERO_0059.jpg'
+  url: 'HERO_0054.jpg'
 title:  "iOS 小知识: URL 脱义"
 tags: [iOS]
 ---

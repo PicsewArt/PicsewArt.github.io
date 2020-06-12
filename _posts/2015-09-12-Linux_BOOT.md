@@ -3,7 +3,7 @@ category: "UNIX"
 cave: true
 hero:
   format: 'jpeg'
-  url: 'HERO_0017.jpg'
+  url: 'HERO_0050.jpg'
 quote: true
 title:  "Start-up Procedure of CentOS 6.5"
 tags: [UNIX, Linux, CentOS, Quote]

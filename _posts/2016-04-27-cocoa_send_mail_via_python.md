@@ -6,7 +6,7 @@ tags: [OS X, Python]
 cave: true
 hero:
   format: 'jpeg'
-  url: 'HERO_0011.jpg'
+  url: 'HERO_0042.jpg'
 ---
 偶然看到一个讨论, 需求很简单, 单纯的 SMTP 邮件发送。
 

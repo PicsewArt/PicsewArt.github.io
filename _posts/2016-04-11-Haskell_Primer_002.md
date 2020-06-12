@@ -5,7 +5,7 @@ tags: [Haskell, Haskell Primer]
 cave: true
 hero:
   format: 'jpeg'
-  url: 'HERO_0004.jpg'
+  url: 'HERO_0048.jpg'
 ---
 通过上一篇我们简单尝试了 `Haskell` 语言，也许你没有察觉，其实我们自始至终都在使用着函数。
 

@@ -6,7 +6,7 @@ tags: [iOS, PDF]
 cave: true
 hero:
   format: 'jpeg'
-  url: 'HERO_0050.jpg'
+  url: 'HERO_0016.jpg'
 ---
 从 Xcode 6 开始我们有了基于矢量图像 (PDF文件) 的编译能力。
 

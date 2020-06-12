@@ -6,7 +6,7 @@ tags: [iOS, setAlternateIconName]
 cave: true
 hero:
   format: 'jpeg'
-  url: 'HERO_0033.jpg'
+  url: 'HERO_0057.jpg'
 ---
 最近苹果发布了新的 iOS 正式版本 10.3, 有一个新特性引起了不少人的注意 —— 换图标。
 

@@ -4,7 +4,7 @@ category: "JavaScript"
 cave: true
 hero:
   format: 'jpeg'
-  url: 'HERO_0010.jpg'
+  url: 'HERO_0048.jpg'
 tags: [JavaScript, J2EE]
 ---
 相信大家都遇到过手机验证码的功能，今天介绍一个简单的实现方式。

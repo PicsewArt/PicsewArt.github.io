@@ -7,7 +7,7 @@ tags: [Python]
 cave: true
 hero:
   format: 'jpeg'
-  url: 'HERO_0041.jpg'
+  url: 'HERO_0053.jpg'
 ---
 # 不可不知的Python陷阱
 

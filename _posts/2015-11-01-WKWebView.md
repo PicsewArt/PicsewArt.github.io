@@ -6,7 +6,7 @@ tags: [iOS, WKWebView]
 cave: true
 hero:
   format: 'jpeg'
-  url: 'HERO_0016.jpg'
+  url: 'HERO_0032.jpg'
 excerpt: "开发App的过程中, 常常会遇到在App内部加载网页, 通常用<code>UIWebView</code>加载。这个自iOS2开始使用的网页加载器一直是开发的<code>心病</code>: 加载速度慢, 占用内存多, 优化困难。如果加载网页多, 还可能因为过量占用内存而给系统<code>kill</code>掉。各种优化的方法效果也不那么明显。"
 ---
 iOS8以后, 苹果推出了新框架`Wekkit`, 提供了替换`UIWebView`的组件`WKWebView`。各种`UIWebView`的问题没有了, 速度更快了, 占用内存少了, 一句话, `WKWebView`是App内部加载网页的最佳选择!

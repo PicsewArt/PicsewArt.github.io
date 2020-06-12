@@ -5,7 +5,7 @@ tags: [UNIX, Linux, Terminal, grep]
 cave: true
 hero:
   format: 'jpeg'
-  url: 'HERO_0033.jpg'
+  url: 'HERO_0034.jpg'
 ---
 # grep 基本概念
 

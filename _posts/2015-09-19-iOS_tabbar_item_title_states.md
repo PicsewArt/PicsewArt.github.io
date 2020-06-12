@@ -3,7 +3,7 @@ category: "iOS"
 cave: true
 hero:
   format: 'jpeg'
-  url: 'HERO_0043.jpg'
+  url: 'HERO_0002.jpg'
 title:  "iOS Waring: TabBar Item States"
 tags: [iOS]
 summary: "iOS Waring: TabBar Item States"

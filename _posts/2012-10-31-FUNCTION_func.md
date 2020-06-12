@@ -3,7 +3,7 @@ category: "C"
 cave: true
 hero:
   format: 'jpeg'
-  url: 'HERO_0025.jpg'
+  url: 'HERO_0037.jpg'
 title:  "__FUNCTION__ 与 __func__ 浅析"
 tags: [C,iOS,C++,__FUNCTION__,__func__]
 ---

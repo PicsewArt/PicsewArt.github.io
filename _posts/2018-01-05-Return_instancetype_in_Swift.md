@@ -6,7 +6,7 @@ tags: [iOS, Swift]
 cave: true
 hero:
   format: 'jpeg'
-  url: 'HERO_0016.jpg'
+  url: 'HERO_0002.jpg'
 ---
 To return instancetype in Swift, you can define a generic helper method which infers the type of self from the calling context:
 

@@ -3,7 +3,7 @@ category: "OS X"
 cave: true
 hero:
   format: 'jpeg'
-  url: 'HERO_0038.jpg'
+  url: 'HERO_0004.jpg'
 title:  "OS X: 用终端多开应用"
 tags: [OS X, Mac]
 ---

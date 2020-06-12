@@ -4,7 +4,7 @@ category: "AsciiDoc"
 cave: true
 hero:
   format: 'jpeg'
-  url: 'HERO_0019.jpg'
+  url: 'HERO_0039.jpg'
 tags: [AsciiDoc]
 ---
 轻量级的标记语言已经有很多([Wikipedia](https://en.wikipedia.org/wiki/Lightweight_markup_language))，例如我用来写博客的 Markdown 就是目前十分流行的一种轻量级标记语言，包括 Github、StackOverflow 等很多网站以及个人都在使用。

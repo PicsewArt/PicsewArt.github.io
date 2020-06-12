@@ -4,7 +4,7 @@ category: "UNIX"
 cave: true
 hero:
   format: 'jpeg'
-  url: 'HERO_0057.jpg'
+  url: 'HERO_0008.jpg'
 tags: [Linux, Ubuntu, Clang, Swift]
 ---
 本文主要关于在 `Ubuntu` 中安装和使用 `Swift` 的相关步骤。

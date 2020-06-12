@@ -4,7 +4,7 @@ category: "reStructuredText"
 cave: true
 hero:
   format: 'jpeg'
-  url: 'HERO_0057.jpg'
+  url: 'HERO_0035.jpg'
 tags: [reStructuredText, reST, rST]
 ---
 其实之前写过一篇 [关于 AsciiDoc 的博文]({{ site.blog_perma }}/Asciidoc_Syntax/)，其中提到过 `reStructuredText` ，最近赋闲，有朋友问了我关于 `reStructuredText` 的问题，于是也就有了写这篇语法入门的念头。

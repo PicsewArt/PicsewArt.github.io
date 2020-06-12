@@ -5,7 +5,7 @@ tags: ["HTML", "CSS", "JavaScript", "JQuery"]
 date: 20200518T120000+08:00
 hero:
   format: 'jpeg'
-  url: 'HERO_0031.jpg'
+  url: 'HERO_0012.jpg'
 ---
 So, I am trying to add in a very simple method of switching between 2 stylesheets/themes.
 

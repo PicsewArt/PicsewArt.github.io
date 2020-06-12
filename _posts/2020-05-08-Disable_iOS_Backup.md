@@ -5,7 +5,7 @@ tags: ["iOS", "macOS", "Windows", "iTunes"]
 date: 20200508T160000+08:00
 hero:
   format: 'jpeg'
-  url: 'HERO_0028.jpg'
+  url: 'HERO_0062.jpg'
 ---
 When you sync your iPhone or iPad with iTunes, it triggers an automatic backup. Whilst it's a sensible precaution to backup regularly, it is possible to skip iTunes backups. I don't recommend performing an iTunes sync without a backup, but here's how you can disable those backups, and re-enable them if you change your mind.
 

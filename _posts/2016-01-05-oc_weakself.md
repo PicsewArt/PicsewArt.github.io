@@ -6,7 +6,7 @@ tags: [iOS, Objective-C]
 cave: true
 hero:
   format: 'jpeg'
-  url: 'HERO_0005.jpg'
+  url: 'HERO_0059.jpg'
 ---
 The correct way to define a weak object is:
 

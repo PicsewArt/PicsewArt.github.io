@@ -6,7 +6,7 @@ tags: [Android, ScrollView]
 cave: true
 hero:
   format: 'jpeg'
-  url: 'HERO_0046.jpg'
+  url: 'HERO_0057.jpg'
 ---
 先写布局
 

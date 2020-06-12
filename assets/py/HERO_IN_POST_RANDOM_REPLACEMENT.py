@@ -5,7 +5,7 @@ import fileinput
 import random
 
 basepath = '/Volumes/Shared/Common/Git/Picsew/_posts/'
-hero_count = 59
+hero_count = 62
 
 onlyfiles = [f for f in listdir(basepath) if isfile(join(basepath, f))]
 

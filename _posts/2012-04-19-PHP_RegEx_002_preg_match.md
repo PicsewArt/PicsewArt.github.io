@@ -3,7 +3,7 @@ category: "PHP"
 cave: true
 hero:
   format: 'jpeg'
-  url: 'HERO_0042.jpg'
+  url: 'HERO_0011.jpg'
 title:  "PHP 与 RegEx 浅析 002: preg_match()"
 tags: [PHP,RegEx,PHP RegEx,PHP Primer]
 summary: "PHP 与 RegEx 浅析 002: preg_match()"

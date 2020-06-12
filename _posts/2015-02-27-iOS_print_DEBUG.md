@@ -4,7 +4,7 @@ category: "iOS"
 cave: true
 hero:
   format: 'jpeg'
-  url: 'HERO_0059.jpg'
+  url: 'HERO_0057.jpg'
 tags: [iOS,Debug,print,Swift]
 ---
 接上文，本篇是 Swift 版本。

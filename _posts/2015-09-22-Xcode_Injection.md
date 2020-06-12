@@ -3,7 +3,7 @@ category: "iOS"
 cave: true
 hero:
   format: 'jpeg'
-  url: 'HERO_0050.jpg'
+  url: 'HERO_0019.jpg'
 title: "Injection for Xcode : 翻滚吧！开发效率"
 tags: [iOS,Xcode,Injection]
 ---

@@ -5,7 +5,7 @@ tags: [OS X, macOS, Quartz Event Services]
 cave: true
 hero:
   format: 'jpeg'
-  url: 'HERO_0056.jpg'
+  url: 'HERO_0036.jpg'
 ---
 玩过远程辅助工具小伙伴应该都对模拟鼠标事件不陌生, 要做到这件事, 可以使用 [Quartz Event Services](https://developer.apple.com/reference/coregraphics/1658572-quartz_event_services)。
 

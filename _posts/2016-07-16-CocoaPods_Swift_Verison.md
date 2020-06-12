@@ -5,7 +5,7 @@ tags: [CocoaPods, Swift]
 cave: true
 hero:
   format: 'jpeg'
-  url: 'HERO_0055.jpg'
+  url: 'HERO_0031.jpg'
 ---
 最近使用 CocoaPods 又出了点问题，在执行 `pod trunk push` 的时候，出现了 `Xcode Build` 错误，提示了一些关于 Swift 版本的错误。
 

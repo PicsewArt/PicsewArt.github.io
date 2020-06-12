@@ -6,7 +6,7 @@ tags: [TCP, UDP]
 cave: true
 hero:
   format: 'jpeg'
-  url: 'HERO_0032.jpg'
+  url: 'HERO_0041.jpg'
 excerpt: "TCP/UDP 常见端口 对照表"
 ---
 > 下面的表格中列举了包括在红帽企业 Linux 中的服务、守护进程、和程序所使用的最常见的通信端口。该列表还可以在 /etc/services 文件中找到。要查看由互联网号码分派局 (IANA) 制定的“著名的已注册动态端口”官方列表，请参考以下 URL：

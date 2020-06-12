@@ -6,7 +6,7 @@ tags: [iOS, OS X, Cocoa]
 cave: true
 hero:
   format: 'jpeg'
-  url: 'HERO_0036.jpg'
+  url: 'HERO_0048.jpg'
 ---
 将 Hex 颜色 (例如 `#ffffff`) 转换为 `UIColor`/`NSColor`, 以 `UIColor` 举例:
 

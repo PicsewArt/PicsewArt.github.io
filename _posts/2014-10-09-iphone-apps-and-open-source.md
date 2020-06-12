@@ -4,7 +4,7 @@ category: "iOS"
 cave: true
 hero:
   format: 'jpeg'
-  url: 'HERO_0043.jpg'
+  url: 'HERO_0050.jpg'
 tags: [iOS, Quote]
 title: iOS apps and the Open Source they use
 ---

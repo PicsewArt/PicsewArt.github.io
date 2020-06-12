@@ -4,7 +4,7 @@ category: "iOS"
 cave: true
 hero:
   format: 'jpeg'
-  url: 'HERO_0019.jpg'
+  url: 'HERO_0046.jpg'
 tags: [iOS, Quote]
 title: Using a hardware controller for your debugger
 ---

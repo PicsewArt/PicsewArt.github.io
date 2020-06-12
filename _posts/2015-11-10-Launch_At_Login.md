@@ -6,7 +6,7 @@ tags: [OS X, Launch]
 cave: true
 hero:
   format: 'jpeg'
-  url: 'HERO_0001.jpg'
+  url: 'HERO_0017.jpg'
 ---
 To have the app launch start at login you just need to call `SMLoginItemSetEnabled` with your bundle ID and bool value.
 

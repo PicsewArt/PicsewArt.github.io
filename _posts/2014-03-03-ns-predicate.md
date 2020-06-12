@@ -4,7 +4,7 @@ category: "iOS"
 cave: true
 hero:
   format: 'jpeg'
-  url: 'HERO_0016.jpg'
+  url: 'HERO_0046.jpg'
 tags: [iOS, Quote]
 title: Optimizing NSPredicates
 ---

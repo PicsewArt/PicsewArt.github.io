@@ -6,7 +6,7 @@ tags: [Jekyll, Liquid, concat]
 cave: true
 hero:
   format: 'jpeg'
-  url: 'HERO_0048.jpg'
+  url: 'HERO_0032.jpg'
 ---
 今天在使用 Jekyll 时遇到一个问题: 数组合并。
 

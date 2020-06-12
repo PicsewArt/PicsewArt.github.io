@@ -4,7 +4,7 @@ category: "UNIX"
 cave: true
 hero:
   format: 'jpeg'
-  url: 'HERO_0034.jpg'
+  url: 'HERO_0026.jpg'
 tags: [UNIX,Linux,awk]
 ---
 最近遇到一个需求，就是要清理掉文本中重复的行。这看起来并不是什么困难的事情，你可以使用 Python、Ruby、Perl 甚至 C 来完成这项任务，轻而易举。

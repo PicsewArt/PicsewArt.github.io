@@ -4,7 +4,7 @@ category: "UNIX"
 cave: true
 hero:
   format: 'jpeg'
-  url: 'HERO_0005.jpg'
+  url: 'HERO_0029.jpg'
 tags: [Linux, CentOS, Clang]
 ---
 本文主要关于在 `CentOS` 中安装 `Clang` 的相关步骤。

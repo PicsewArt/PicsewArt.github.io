@@ -6,7 +6,7 @@ tags: [iOS, Objective-C]
 cave: true
 hero:
   format: 'jpeg'
-  url: 'HERO_0040.jpg'
+  url: 'HERO_0012.jpg'
 ---
 The first question is what scope you want your constants to have, which is really two questions:
 

@@ -7,7 +7,7 @@ tags: [iOS]
 cave: true
 hero:
   format: 'jpeg'
-  url: 'HERO_0049.jpg'
+  url: 'HERO_0051.jpg'
 ---
 我们不是迷信测试，但它应该帮助我们加快开发进度，并且让事情变得更有趣。
 
