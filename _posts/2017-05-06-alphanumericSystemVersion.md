@@ -6,7 +6,7 @@ tags: [iOS, sysctl, Swift]
 cave: true
 hero:
   format: 'jpeg'
-  url: 'HERO_0034.jpg'
+  url: 'HERO_0049.jpg'
 ---
 This is the way to get the alphanumeric system version like `16E195` in `10.3(16E195)`.
 

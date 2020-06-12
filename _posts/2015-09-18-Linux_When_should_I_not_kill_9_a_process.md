@@ -3,7 +3,7 @@ category: "UNIX"
 cave: true
 hero:
   format: 'jpeg'
-  url: 'HERO_0047.jpg'
+  url: 'HERO_0006.jpg'
 quote: true
 title:  "UNIX/Linux Command: When should I not kill 9 a process"
 tags: [UNIX, Linux, Quote]

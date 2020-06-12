@@ -3,7 +3,7 @@ category: "iOS"
 cave: true
 hero:
   format: 'jpeg'
-  url: 'HERO_0043.jpg'
+  url: 'HERO_0029.jpg'
 title:  "iOS 小知识: 去除 NSString 两端空白与空行"
 tags: [iOS]
 ---

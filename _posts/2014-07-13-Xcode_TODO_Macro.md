@@ -4,7 +4,7 @@ category: "Xcode"
 cave: true
 hero:
   format: 'jpeg'
-  url: 'HERO_0037.jpg'
+  url: 'HERO_0062.jpg'
 tags: [Xcode, iOS, Macro, 宏, Obejctive-C, C]
 ---
 自从 `Xcode Ghost` 事件之后苹果就开始收缩插件功能了, 直到现在的 `Xcode` 已经去掉了旧形式的插件。

@@ -5,7 +5,7 @@ tags: [Haskell, Haskell Primer]
 cave: true
 hero:
   format: 'jpeg'
-  url: 'HERO_0037.jpg'
+  url: 'HERO_0005.jpg'
 ---
 尝试了一些函数调用之后，紧接着了解一下函数的定义，这与调用的形式类似，只是多了函数行为的定义:
 

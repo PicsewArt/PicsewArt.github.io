@@ -4,7 +4,7 @@ category: "iOS"
 cave: true
 hero:
   format: 'jpeg'
-  url: 'HERO_0001.jpg'
+  url: 'HERO_0013.jpg'
 tags: [iOS, Quote]
 title: Using the View Hierarchy and Console for easier debugging
 ---

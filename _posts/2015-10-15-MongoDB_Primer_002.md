@@ -5,7 +5,7 @@ tags: [MongoDB, MongoDB Primer]
 cave: true
 hero:
   format: 'jpeg'
-  url: 'HERO_0047.jpg'
+  url: 'HERO_0025.jpg'
 ---
 在进一步学习之前，首先来了解一些 MongoDB 基本概念，即文档、集合、数据库。通过这个表格也许可以更好的了解它们:
 

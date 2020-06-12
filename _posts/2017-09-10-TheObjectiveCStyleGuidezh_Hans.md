@@ -6,7 +6,7 @@ title: "The Objective-C Style Guide/Objective-C 规范指南"
 cave: true
 hero:
   format: 'jpeg'
-  url: 'HERO_0015.jpg'
+  url: 'HERO_0038.jpg'
 category: "iOS"
 tags: [iOS, macOS, Objective-C, Style Guide]
 ---

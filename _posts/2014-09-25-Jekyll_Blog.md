@@ -5,7 +5,7 @@ tags: [Jekyll, Liquid]
 cave: true
 hero:
   format: 'jpeg'
-  url: 'HERO_0010.jpg'
+  url: 'HERO_0028.jpg'
 ---
 其实最初做这个博客，可能是因为我暗藏了一颗文青的心，后来老有人问我博客怎么做的，想来想去干脆写个教程好了。
 

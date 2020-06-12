@@ -4,7 +4,7 @@ category: "iOS"
 cave: true
 hero:
   format: 'jpeg'
-  url: 'HERO_0040.jpg'
+  url: 'HERO_0047.jpg'
 tags: [iOS,CADisplayLink,iOS Animation]
 ---
 我们知道，凡是动画一定会涉及到时间问题，UI 动画也不例外，定时更是一个十分常用的操作。本文主要介绍一种定时器——`CADisplayLink`的基本使用。

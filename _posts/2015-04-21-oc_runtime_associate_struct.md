@@ -6,7 +6,7 @@ tags: [Objective-C, Runtime]
 cave: true
 hero:
   format: 'jpeg'
-  url: 'HERO_0042.jpg'
+  url: 'HERO_0029.jpg'
 ---
 
 The `value` of function `OBJC_EXPORT void objc_setAssociatedObject(id object, const void *key, id value, objc_AssociationPolicy policy)` must be an Objective-C object. We need to wrap the struct in an Objective-C class.

@@ -6,7 +6,7 @@ tags: [OS X, Cocoa]
 cave: true
 hero:
   format: 'jpeg'
-  url: 'HERO_0028.jpg'
+  url: 'HERO_0051.jpg'
 ---
 The way to change the cursor when it's over an `NSButton`:
 

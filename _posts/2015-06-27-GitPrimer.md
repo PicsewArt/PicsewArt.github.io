@@ -4,7 +4,7 @@ category: "Git"
 cave: true
 hero:
   format: 'jpeg'
-  url: 'HERO_0040.jpg'
+  url: 'HERO_0062.jpg'
 tags: [Linux, Ubuntu, Git, Terminal]
 ---
 Git是一款免费、开源的分布式版本控制系统，用于敏捷高效地处理任何或小或大的项目。

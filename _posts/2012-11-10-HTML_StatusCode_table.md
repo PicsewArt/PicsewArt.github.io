@@ -7,7 +7,7 @@ tags: [HTML, Status Code]
 cave: true
 hero:
   format: 'jpeg'
-  url: 'HERO_0036.jpg'
+  url: 'HERO_0037.jpg'
 ---
 <table cellspacing="5" cellpadding="2">
   <tr>

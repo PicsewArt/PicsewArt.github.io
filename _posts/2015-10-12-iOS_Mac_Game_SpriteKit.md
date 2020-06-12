@@ -4,7 +4,7 @@ category: "Game"
 cave: true
 hero:
   format: 'jpeg'
-  url: 'HERO_0014.jpg'
+  url: 'HERO_0005.jpg'
 tags: [iOS,Game,SpriteKit]
 ---
 最近抽时间研究了一下 iOS 上主要的一些游戏开发库诸如 SpriteKit、SceneKit、Metal、Unity 及 OpenGL ES，做一个简单的总结。

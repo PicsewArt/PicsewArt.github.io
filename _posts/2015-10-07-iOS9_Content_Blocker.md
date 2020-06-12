@@ -4,7 +4,7 @@ category: "iOS"
 cave: true
 hero:
   format: 'jpeg'
-  url: 'HERO_0036.jpg'
+  url: 'HERO_0032.jpg'
 tags: [iOS,iOS 9,Content Blocker,广告拦截]
 ---
 我猜很多人已经注意到，在 iOS 9 正式版发布之后，应用商店上开始大量出现广告拦截应用，本文就和小伙伴们一起来了解一下苹果新推出的内容拦截功能—— Content Blocker。

@@ -5,7 +5,7 @@ tags: ["Sadness"]
 date: 20200510T160000+08:00
 hero:
   format: 'jpeg'
-  url: 'HERO_0034.jpg'
+  url: 'HERO_0027.jpg'
 ---
 I wish I could tell you everything on my mind. I’ve been dying to. I’ve been dying to let it out, let you know. But there’s something inside me holding me back. An excuse, a fear, an anxiety. I like to think of what things might be like if I could talk to you, what might change if you knew. Would my fear of rejection be realized? Or would we grow together like I wish we would?
 

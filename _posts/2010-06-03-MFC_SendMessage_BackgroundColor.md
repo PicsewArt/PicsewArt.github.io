@@ -4,7 +4,7 @@ title:  "MFC: 对话框添加背景图片"
 cave: true
 hero:
   format: 'jpeg'
-  url: 'HERO_0044.jpg'
+  url: 'HERO_0002.jpg'
 tags: [MFC,C++]
 summary: "MFC: 对话框添加背景图片"
 ---

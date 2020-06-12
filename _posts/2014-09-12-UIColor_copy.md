@@ -6,7 +6,7 @@ tags: [iOS, UIColor]
 cave: true
 hero:
   format: 'jpeg'
-  url: 'HERO_0050.jpg'
+  url: 'HERO_0021.jpg'
 ---
 `UIColor` 实例默认是不支持 `copy` 操作的, 但有时候我们还是需要这样的操作, 怎么实现呢?
 

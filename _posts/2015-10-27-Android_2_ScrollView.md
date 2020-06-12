@@ -4,7 +4,7 @@ category: "Android"
 cave: true
 hero:
   format: 'jpeg'
-  url: 'HERO_0020.jpg'
+  url: 'HERO_0039.jpg'
 tags: [Android,ScrollView]
 ---
 ScrollView 联动，就是指多个 ScrollView 中有一个滚动时其它 ScrollView 也随同滚动的效果。并不是什么复杂的事情，最近自己在写一些东西时用到了，所以顺便分享一下。

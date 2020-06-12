@@ -4,7 +4,7 @@ category: "CocoaPods"
 cave: true
 hero:
   format: 'jpeg'
-  url: 'HERO_0018.jpg'
+  url: 'HERO_0028.jpg'
 tags: [CocoaPods]
 ---
 CocoaPods 相比不用介绍了，本文主要介绍一些 pod 常用操作: CocoaPods is a dependency manager for iOS & Mac projects.

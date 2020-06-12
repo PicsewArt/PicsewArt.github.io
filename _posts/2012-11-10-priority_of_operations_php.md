@@ -7,7 +7,7 @@ tags: [PHP]
 cave: true
 hero:
   format: 'jpeg'
-  url: 'HERO_0025.jpg'
+  url: 'HERO_0022.jpg'
 ---
 <table cellspacing="5" cellpadding="2">
     <caption>PHP运算符优先级</caption>

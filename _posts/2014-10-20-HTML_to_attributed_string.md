@@ -6,7 +6,7 @@ tags: [iOS, NSAttributedString]
 cave: true
 hero:
   format: 'jpeg'
-  url: 'HERO_0025.jpg'
+  url: 'HERO_0007.jpg'
 ---
 将 HTML 代码转换成属性文字, 其实很简单:
 

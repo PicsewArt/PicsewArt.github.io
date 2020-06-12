@@ -4,7 +4,7 @@ category: "RegEx"
 cave: true
 hero:
   format: 'jpeg'
-  url: 'HERO_0025.jpg'
+  url: 'HERO_0033.jpg'
 tags: [RegEx]
 ---
 <p>正则表达式是一种文本模式，包括普通字符 (例如，a 到 z 之间的字母) 和特殊字符 (称为"元字符) 。模式描述在搜索文本时要匹配的一个或多个字符串。</p>

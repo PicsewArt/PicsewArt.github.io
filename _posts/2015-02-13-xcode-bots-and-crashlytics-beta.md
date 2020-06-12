@@ -4,7 +4,7 @@ category: "iOS"
 cave: true
 hero:
   format: 'jpeg'
-  url: 'HERO_0035.jpg'
+  url: 'HERO_0047.jpg'
 tags: [iOS, Quote]
 title: Integrating Xcode Bots and Crashlytics Beta
 ---

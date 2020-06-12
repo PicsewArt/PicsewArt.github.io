@@ -6,7 +6,7 @@ tags: [Android, ADB]
 cave: true
 hero:
   format: 'jpeg'
-  url: 'HERO_0006.jpg'
+  url: 'HERO_0051.jpg'
 ---
 调试Android程序有时需要adb shell 命令，adb全称Android Debug Bridge ，就是起到调试桥的作用。通过adb我们可以在Eclipse中通过DDMS来调试Android程序，说白了就是debug工具。adb通过监听Socket TCP 5554等端口让IDE和Qemu通讯。默认情况下当我们运行Eclipse时adb进程就会自动运行。adb是一个C/S模式的程序，由三个部分组成：a client，a server and a daemon。其中client和server运行在的development machine上，daemon运行在emulator或设备上。
 

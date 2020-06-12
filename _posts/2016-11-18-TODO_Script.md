@@ -6,7 +6,7 @@ tags: [iOS, Xcode, Script]
 cave: true
 hero:
   format: 'jpeg'
-  url: 'HERO_0038.jpg'
+  url: 'HERO_0019.jpg'
 ---
 I rarely use comments when I’m coding1. I do make one exception though; using `// TODO:` and `// FIXME:` to highlight pieces of code I need to revisit at a later date. The advantage of doing this is that the lines then show up in the jump bar popover in bold text with one-click access to the exact line.
 

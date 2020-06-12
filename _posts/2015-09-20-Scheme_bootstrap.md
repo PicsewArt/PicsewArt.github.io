@@ -3,7 +3,7 @@ category: "Lisp"
 cave: true
 hero:
   format: 'jpeg'
-  url: 'HERO_0059.jpg'
+  url: 'HERO_0058.jpg'
 quote: true
 title:  "完成一个 Scheme 解释器需要哪些知识"
 tags: [Scheme, Quote]

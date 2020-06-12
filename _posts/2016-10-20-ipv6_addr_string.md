@@ -6,7 +6,7 @@ tags: [iOS, IPv6]
 cave: true
 hero:
   format: 'jpeg'
-  url: 'HERO_0020.jpg'
+  url: 'HERO_0010.jpg'
 ---
 将 `struct in6_addr` 转换为字符串:
 

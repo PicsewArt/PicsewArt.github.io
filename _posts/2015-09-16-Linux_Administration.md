@@ -3,7 +3,7 @@ category: "UNIX"
 cave: true
 hero:
   format: 'jpeg'
-  url: 'HERO_0061.jpg'
+  url: 'HERO_0008.jpg'
 title:  "UNIX/Linux 文件权限浅析"
 tags: [UNIX,Linux]
 summary: "UNIX/Linux 文件权限浅析"

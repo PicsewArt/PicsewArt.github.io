@@ -5,7 +5,7 @@ tags: [Haskell, Haskell Primer]
 cave: true
 hero:
   format: 'jpeg'
-  url: 'HERO_0030.jpg'
+  url: 'HERO_0049.jpg'
 ---
 在 `Haskell` 中，类型类 (`typeclass`) 是定义类型行为的接口，如果一个类型是某类型类的实例 (`Instance`)，那么它一定实现了该类型类所描述的行为。
 

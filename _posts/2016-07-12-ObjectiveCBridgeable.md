@@ -6,7 +6,7 @@ quote: true
 tags: [iOS, Swift, "_ObjectiveCBridgeable"]
 hero:
   format: 'jpeg'
-  url: 'HERO_0034.jpg'
+  url: 'HERO_0032.jpg'
 ---
 Swift is out there for about a year and it’s a great programming language. I think that almost every iOS/OSX developer out there has already written couple of things in Swift (if you haven’t, go ahead and try, you won’t regret it, I promise). Although, we have many years of libs and frameworks built using Objective-C and sooner or later a project may have both Swift and Objective-C working together.
 

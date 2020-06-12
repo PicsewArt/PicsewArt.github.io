@@ -4,7 +4,7 @@ category: "iOS"
 cave: true
 hero:
   format: 'jpeg'
-  url: 'HERO_0053.jpg'
+  url: 'HERO_0033.jpg'
 tags: [iOS,JavaScript,JavaScriptCore]
 ---
 最近在个人项目中频繁的使用 JavaScript，于是趁着这个机会介绍一些 iOS 开发中关于 JavaScript 的内容。

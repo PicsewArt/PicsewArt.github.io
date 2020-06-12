@@ -6,7 +6,7 @@ tags: [iOS, Runtime, Objective-C, NSCopying]
 cave: true
 hero:
   format: 'jpeg'
-  url: 'HERO_0036.jpg'
+  url: 'HERO_0044.jpg'
 ---
 给每个类手动添加 `NSCopying` 支持真的很累, 干脆一次性解决吧:
 

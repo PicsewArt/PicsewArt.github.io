@@ -6,7 +6,7 @@ toc: "cn"
 cave: true
 hero:
   format: 'jpeg'
-  url: 'HERO_0058.jpg'
+  url: 'HERO_0016.jpg'
 ---
 ## 简繁汉字对照表
 

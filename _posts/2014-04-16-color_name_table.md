@@ -6,7 +6,7 @@ tags: [Hex, Color, HTML]
 cave: true
 hero:
   format: 'jpeg'
-  url: 'HERO_0014.jpg'
+  url: 'HERO_0007.jpg'
 ---
 <table>
     <tbody>

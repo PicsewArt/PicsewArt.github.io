@@ -3,7 +3,7 @@ category: "iOS"
 cave: true
 hero:
   format: 'jpeg'
-  url: 'HERO_0026.jpg'
+  url: 'HERO_0020.jpg'
 title:  "iOS 小知识: 为 UIView 设置图片"
 tags: [iOS]
 ---

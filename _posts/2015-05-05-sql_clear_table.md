@@ -6,7 +6,7 @@ tags: [iOS, SQLite, SQLite3]
 cave: true
 hero:
   format: 'jpeg'
-  url: 'HERO_0058.jpg'
+  url: 'HERO_0061.jpg'
 ---
 `SQL` 标准中有 `TRUNCATE table` 语句, 用来清空表的所有内容,但 `SQLite` 不支持这个语句。在 `SQLite` 中直接使用 `DELETE FROM table` 就可以了。对于大多数 `DBMS` 来说, 用 `DELETE` 不如用 `TRUNCATE` 速度快, 因为 `TRUNCATE` 不用访问整个表, 不用记录数据的变动。
 

@@ -5,7 +5,7 @@ tags: [Haskell, Haskell Primer]
 cave: true
 hero:
   format: 'jpeg'
-  url: 'HERO_0059.jpg'
+  url: 'HERO_0020.jpg'
 ---
 有了前面一些基础介绍，现在我们开始介绍 `Haskell` 中关于类型的各种知识。
 

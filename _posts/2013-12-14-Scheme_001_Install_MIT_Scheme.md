@@ -3,7 +3,7 @@ category: "Lisp"
 cave: true
 hero:
   format: 'jpeg'
-  url: 'HERO_0023.jpg'
+  url: 'HERO_0024.jpg'
 quote: true
 title:  "Scheme 001：Install MIT-Scheme"
 tags: [Scheme, Quote]

@@ -6,7 +6,7 @@ tags: [iOS, GIF, ALAsset]
 cave: true
 hero:
   format: 'jpeg'
-  url: 'HERO_0023.jpg'
+  url: 'HERO_0015.jpg'
 ---
 大家都知道iOS的系统相册是不支持 gif 图片预览的。但是, 这并不代表系统相册不能保存和读取 gif 图片。通过 Safari 长按 gif 图片, 选择保存到相册, 这时保存到相册里的图片就是 gif 的, 虽然它不会动。
 

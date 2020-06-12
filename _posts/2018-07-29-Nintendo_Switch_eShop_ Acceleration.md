@@ -3,7 +3,7 @@ category: "Switch"
 cave: true
 hero:
   format: 'jpeg'
-  url: 'HERO_0052.jpg'
+  url: 'HERO_0042.jpg'
 title:  "Nintendo Switch 下载加速"
 tags: [Nintendo, Switch, 任天堂, NS]
 ---

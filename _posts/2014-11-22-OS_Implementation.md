@@ -3,7 +3,7 @@ category: "Other"
 cave: true
 hero:
   format: 'jpeg'
-  url: 'HERO_0010.jpg'
+  url: 'HERO_0036.jpg'
 quote: true
 title:  "OS Implementation"
 tags: [OS, System, Quote]

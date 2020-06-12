@@ -3,7 +3,7 @@ category: "Xcode"
 cave: true
 hero:
   format: 'jpeg'
-  url: 'HERO_0057.jpg'
+  url: 'HERO_0040.jpg'
 title:  "Xcode: The meaning of Debug Navigator icons"
 tags: [Xcode]
 ---

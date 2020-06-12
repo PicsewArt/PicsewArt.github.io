@@ -6,7 +6,7 @@ tags: [Xcode, Code Sense]
 cave: true
 hero:
   format: 'jpeg'
-  url: 'HERO_0019.jpg'
+  url: 'HERO_0037.jpg'
 ---
 聊天的时候有人问了一个平常大家不太注意的问题, 如图, 左侧小图标:
 

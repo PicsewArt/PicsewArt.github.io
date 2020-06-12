@@ -6,7 +6,7 @@ tags: [Xcode, find, symbolicatecrash]
 cave: true
 hero:
   format: 'jpeg'
-  url: 'HERO_0004.jpg'
+  url: 'HERO_0011.jpg'
 ---
 `symbolicatecrash` 是在开发调试和问题定位中是很常用的工具, 但它在 Xcode 中的位置经常随着 Xcode 版本变化, 不过其实要找到他还是很简单的:
 

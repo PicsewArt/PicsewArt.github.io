@@ -4,7 +4,7 @@ category: "iOS"
 cave: true
 hero:
   format: 'jpeg'
-  url: 'HERO_0032.jpg'
+  url: 'HERO_0020.jpg'
 tags: [iOS, Quote]
 title: Easier debugging using breakpoints with actions
 ---

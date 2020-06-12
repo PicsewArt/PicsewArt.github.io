@@ -6,7 +6,7 @@ tags: [iOS, iOS 11, LABiometry]
 cave: true
 hero:
   format: 'jpeg'
-  url: 'HERO_0007.jpg'
+  url: 'HERO_0017.jpg'
 ---
 I'm trying to support FaceID in my application.
 

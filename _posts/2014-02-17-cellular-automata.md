@@ -4,7 +4,7 @@ category: "iOS"
 cave: true
 hero:
   format: 'jpeg'
-  url: 'HERO_0055.jpg'
+  url: 'HERO_0060.jpg'
 tags: [iOS, Quote]
 title: Game of Life Cellular Automata
 ---

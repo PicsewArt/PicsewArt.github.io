@@ -3,7 +3,7 @@ category: "Swift"
 cave: true
 hero:
   format: 'jpeg'
-  url: 'HERO_0040.jpg'
+  url: 'HERO_0021.jpg'
 title:  "Swift struct type recursion"
 tags: [Swift]
 ---

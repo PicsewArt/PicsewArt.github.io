@@ -4,7 +4,7 @@ category: "Python"
 cave: true
 hero:
   format: 'jpeg'
-  url: 'HERO_0053.jpg'
+  url: 'HERO_0046.jpg'
 tags: [Python,tree]
 ---
 用 Python 实现一个 tree 指令的模拟，后面有时间再做优化:

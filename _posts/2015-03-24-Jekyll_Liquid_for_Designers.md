@@ -5,7 +5,7 @@ tags: [Jekyll, Liquid]
 cave: true
 hero:
   format: 'jpeg'
-  url: 'HERO_0033.jpg'
+  url: 'HERO_0062.jpg'
 ---
 `Jekyll` 是这个博客网站的主要支撑之一，本文主要介绍其基本语法及使用。
 

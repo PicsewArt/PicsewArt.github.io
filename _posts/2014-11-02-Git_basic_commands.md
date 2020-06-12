@@ -4,7 +4,7 @@ category: "Git"
 cave: true
 hero:
   format: 'jpeg'
-  url: 'HERO_0049.jpg'
+  url: 'HERO_0034.jpg'
 tags: [Git]
 ---
 这一篇简单介绍下 Git 中基本的指令。

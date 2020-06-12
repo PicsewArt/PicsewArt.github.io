@@ -4,7 +4,7 @@ category: "UNIX"
 cave: true
 hero:
   format: 'jpeg'
-  url: 'HERO_0060.jpg'
+  url: 'HERO_0007.jpg'
 tags: ["Git"]
 ---
 It is easiest to install Git on Linux using the preferred package manager of your Linux distribution. If you prefer to build from source, you can find tarballs on kernel.org. The latest version is 2.26.2.

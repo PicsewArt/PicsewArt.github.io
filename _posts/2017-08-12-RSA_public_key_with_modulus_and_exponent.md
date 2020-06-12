@@ -6,7 +6,7 @@ tags: [Objective-C, C, RSA, Encryption, Public Key, Modulus, Exponent]
 cave: true
 hero:
   format: 'jpeg'
-  url: 'HERO_0035.jpg'
+  url: 'HERO_0034.jpg'
 ---
 Was trying to generate a RSA public key with RSA modulus(n) and RSA public exponent(e).
 

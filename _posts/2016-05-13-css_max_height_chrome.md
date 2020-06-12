@@ -6,7 +6,7 @@ tags: [CSS]
 cave: true
 hero:
   format: 'jpeg'
-  url: 'HERO_0042.jpg'
+  url: 'HERO_0010.jpg'
 ---
 Some times using percentages for fluidity in layouts is tricky because you have to deal with containers and border-type things.
 

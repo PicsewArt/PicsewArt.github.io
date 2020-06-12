@@ -6,7 +6,7 @@ tags: [Git]
 cave: true
 hero:
   format: 'jpeg'
-  url: 'HERO_0055.jpg'
+  url: 'HERO_0011.jpg'
 ---
 `.DS_Store` 是个很烦人的家伙, 在使用版本控制工具时, 我们都希望能忽略它的存在, 不过在每一个仓库中都设置一次好像更烦人, 那现在我们想办法一次性解决这个问题吧:
 

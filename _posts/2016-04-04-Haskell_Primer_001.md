@@ -5,7 +5,7 @@ tags: [Haskell, Haskell Primer]
 cave: true
 hero:
   format: 'jpeg'
-  url: 'HERO_0008.jpg'
+  url: 'HERO_0007.jpg'
 ---
 关于什么是 `Haskell` 以及为什么要选择 `Haskell` 的问题就不再讨论了。本文主要介绍学习 `Haskell` 要准备的工作。
 

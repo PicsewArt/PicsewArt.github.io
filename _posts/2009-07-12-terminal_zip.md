@@ -6,7 +6,7 @@ tags: [UNIX, Terminal, zip, password, unzip]
 cave: true
 hero:
   format: 'jpeg'
-  url: 'HERO_0007.jpg'
+  url: 'HERO_0045.jpg'
 ---
 压缩打包文件是十分常见的操作, 所以今天整理了一些关于 `zip` 指令的内容。
 

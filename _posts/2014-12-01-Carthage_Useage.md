@@ -6,7 +6,7 @@ tags: [iOS, Carthage]
 cave: true
 hero:
   format: 'jpeg'
-  url: 'HERO_0042.jpg'
+  url: 'HERO_0038.jpg'
 ---
 # Carthage：去中心化的Cocoa依赖管理器
 

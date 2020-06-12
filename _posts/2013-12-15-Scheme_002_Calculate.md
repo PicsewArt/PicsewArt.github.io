@@ -3,7 +3,7 @@ category: "Lisp"
 cave: true
 hero:
   format: 'jpeg'
-  url: 'HERO_0012.jpg'
+  url: 'HERO_0032.jpg'
 quote: true
 title:  "Scheme 002：Calculate"
 tags: [Scheme, Quote]

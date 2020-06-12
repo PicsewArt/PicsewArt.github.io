@@ -3,7 +3,7 @@ category: "Lisp"
 cave: true
 hero:
   format: 'jpeg'
-  url: 'HERO_0055.jpg'
+  url: 'HERO_0023.jpg'
 title:  "Scheme 字符串操作总结"
 tags: [Scheme]
 summary: "Scheme 字符串操作总结"

@@ -4,7 +4,7 @@ category: "RVM"
 cave: true
 hero:
   format: 'jpeg'
-  url: 'HERO_0042.jpg'
+  url: 'HERO_0017.jpg'
 tags: [Ruby,RVM]
 ---
 最近用 Ruby 较多，主要介绍一些 rvm 相关内容吧。rvm 是 Ruby 版本管理工具。

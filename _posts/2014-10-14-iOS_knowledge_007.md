@@ -3,7 +3,7 @@ category: "iOS"
 cave: true
 hero:
   format: 'jpeg'
-  url: 'HERO_0012.jpg'
+  url: 'HERO_0045.jpg'
 title:  "iOS 小知识: App Store Link"
 tags: [iOS]
 ---

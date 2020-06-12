@@ -7,7 +7,7 @@ tags: [OS X, Terminal]
 cave: true
 hero:
   format: 'jpeg'
-  url: 'HERO_0025.jpg'
+  url: 'HERO_0016.jpg'
 ---
 # Terminal Cheatsheet for Mac
 

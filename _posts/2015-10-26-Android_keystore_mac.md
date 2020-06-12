@@ -4,7 +4,7 @@ category: "Android"
 cave: true
 hero:
   format: 'jpeg'
-  url: 'HERO_0058.jpg'
+  url: 'HERO_0037.jpg'
 tags: [Android, keystore, Mac,]
 ---
 在 Mac 中生成 keystore 其实也很简单, 虽然 Android Studio 中有这个功能, 但不少小伙伴还在用 eclipse 呢。

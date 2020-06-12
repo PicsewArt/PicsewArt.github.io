@@ -3,7 +3,7 @@ category: "UNIX"
 cave: true
 hero:
   format: 'jpeg'
-  url: 'HERO_0061.jpg'
+  url: 'HERO_0051.jpg'
 title: "Linux : 文件系统结构图"
 tags: [Linux,File System,文件系统结构]
 summary: "Linux : 文件系统结构图"

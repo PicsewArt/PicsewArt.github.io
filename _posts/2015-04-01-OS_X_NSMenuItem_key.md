@@ -6,7 +6,7 @@ tags: [OS X, NSMenuItem]
 cave: true
 hero:
   format: 'jpeg'
-  url: 'HERO_0026.jpg'
+  url: 'HERO_0002.jpg'
 ---
 `NSMenu` 是很常用的东西, 除了可以通过点击响应事件外, 还可以设置快捷键:
 

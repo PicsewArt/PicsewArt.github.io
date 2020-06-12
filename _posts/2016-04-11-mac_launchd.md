@@ -6,7 +6,7 @@ tags: [OS X, launchd]
 cave: true
 hero:
   format: 'jpeg'
-  url: 'HERO_0019.jpg'
+  url: 'HERO_0015.jpg'
 ---
 I would like to create a service to execute a task automatically, and starting and stopping it on demand. In Windows, it is possible to create an application that can be installed as a service (`Windows Service`). So what would be the equivalent of services on Mac OS X? How are they implemented and where to start to learn about it?
 

@@ -3,7 +3,7 @@ category: "UNIX"
 cave: true
 hero:
   format: 'jpeg'
-  url: 'HERO_0043.jpg'
+  url: 'HERO_0044.jpg'
 title:  "CentOS : 图形界面与命令行界面切换"
 tags: [UNIX,Linux,CentOS]
 summary: "CentOS 图形界面与命令行界面切换"

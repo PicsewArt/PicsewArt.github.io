@@ -6,7 +6,7 @@ tags: [OS X, NSHomeDirectory]
 cave: true
 hero:
   format: 'jpeg'
-  url: 'HERO_0003.jpg'
+  url: 'HERO_0005.jpg'
 ---
 We all know that `NSHomeDirectory()` is retuning the sandbox root (not the home directory),  `[@"~" stringByExpandingTildeInPath]` is doing the same thing.
 

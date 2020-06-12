@@ -4,7 +4,7 @@ category: "Xcode"
 cave: true
 hero:
   format: 'jpeg'
-  url: 'HERO_0039.jpg'
+  url: 'HERO_0029.jpg'
 tags: [iOS, Mac, Apple, Xcode, OS X]
 ---
 由于 Xcode 中的自带的文档为在线文档，不包含离线 HTML 文件，然而 Xcode 中的下载速度又实在让人无奈，所以本文主要介绍如何加速下载 Xcode 文档的问题。

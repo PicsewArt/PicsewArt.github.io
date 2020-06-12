@@ -7,7 +7,7 @@ tags: [iOS, Swift, Quote]
 cave: true
 hero:
   format: 'jpeg'
-  url: 'HERO_0017.jpg'
+  url: 'HERO_0037.jpg'
 ---
 本文转自 `@OnevCat` 博客，版权归原作者所有。
 

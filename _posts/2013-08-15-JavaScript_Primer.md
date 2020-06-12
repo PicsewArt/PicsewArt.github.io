@@ -3,7 +3,7 @@ category: "JavaScript"
 cave: true
 hero:
   format: 'jpeg'
-  url: 'HERO_0030.jpg'
+  url: 'HERO_0015.jpg'
 quote: true
 title:  "JavaScript 入门教程"
 tags: [JavaScript, Quote]

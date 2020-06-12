@@ -6,7 +6,7 @@ tags: [Data Structures, Algorithms, Quote]
 cave: true
 hero:
   format: 'jpeg'
-  url: 'HERO_0002.jpg'
+  url: 'HERO_0014.jpg'
 ---
 ### 什么是哈希表
 

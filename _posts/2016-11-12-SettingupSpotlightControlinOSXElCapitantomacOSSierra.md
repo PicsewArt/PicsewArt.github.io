@@ -6,7 +6,7 @@ tags: [Spotlight Control]
 cave: true
 hero:
   format: 'jpeg'
-  url: 'HERO_0062.jpg'
+  url: 'HERO_0043.jpg'
 ---
 OS X El Capitan introduced a new Security Feature called System Integrity Protection. With System Integrity Protection Bartender 2 needs additional setup steps performed before it can control Spotlight. Bartender 2 can control all other Apple menu items without these additional steps.
 

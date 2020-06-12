@@ -6,7 +6,7 @@ tags: [OS X, NSImage]
 cave: true
 hero:
   format: 'jpeg'
-  url: 'HERO_0014.jpg'
+  url: 'HERO_0058.jpg'
 ---
 Just simple:
 ```swift
