@@ -1,0 +1,78 @@
+---
+layout: null
+---
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  {% include layout_head.html %}
+  <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700|Montserrat" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="{{ site.url }}{{ site.path.css }}/normalize.min.css">
+  <link rel="stylesheet" href="{{ site.url }}{{ site.path.css }}/tattoo.css">
+</head>
+
+<body>
+  <!-- partial:index.partial.html -->
+  <nav class="standard-nav">
+    <div class="links">
+      <a href="{{ site.url }}"><i class="fa fa-home"></i></a>
+      <a href="{{ site.url }}/posts/"><i class="fa fa-book"></i></a>
+      <a href="{{ site.url }}/gallery/"><i class="fa fa-camera-retro"></i></a>
+      <a href="{{ site.url }}/creative/"><i class="fa fa-superpowers"></i></a>
+      <a href="{{ site.url }}/blogroll/"><i class="fa fa-link"></i></a>
+      <a href="{{ site.url }}/about/"><i class="fa fa-info-circle"></i></a>
+    </div>
+    <div class="links">
+      <a href="{{ site.url }}/engines/"><i class="fa fa-search"></i></a>
+    </div>
+  </nav>
+
+  <section id="home">
+    <div class="tattoo-row">
+      <div class="tattoo-col">
+        <header class="top-intro">
+          <h1 class="lead">{{ page.title }}</span></h1>
+          <p>{{ page.description }}</p>
+        </header>
+      </div>
+    </div>
+    <section class="hero">
+      <div class="tattoo-row">
+        <div class="tattoo-col">
+          <header>
+            <p>Welcome to</p>
+            <h1>Picsew.cn</h1>
+            <!-- <a href="#subscribe" class="tattoo-btn">Subscribe</a> -->
+            <a href="{{ site.url }}/about/" class="tattoo-btn">About Me</a>
+          </header>
+        </div>
+      </div>
+    </section>
+  </section>
+
+  {{ content }}
+
+  <footer>
+    <div class="tattoo-row">
+      <div class="tattoo-col">
+        <a href="{{ site.github_url }}"><i class="fa fa-github"></i></a>
+        <a href="{{ site.url }}/sample/"><i class="fa fa-laptop"></i></a>
+        <a href="{{ site.url }}/feed.xml"><i class="fa fa-rss"></i></a>
+        <a href="mailto:{{ site.email }}"><i class="fa fa-paper-plane"></i></a>
+      </div>
+    </div>
+    <div class="tattoo-row">
+      <div class="tattoo-col">{% assign revision_url = site.github_url | append: 'commit/' | append: site.github.build_revision %}
+        <p>Copy <i class="fa fa-copyright"></i> 2020 | made by <a href="{{ revision_url }}">Picsew</a> <i class="fa fa-heart"></i></p>
+      </div>
+    </div>
+  </footer>
+  <!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+  <!-- <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script> -->
+  <script src="{{ site.url }}{{ site.path.js }}/tattoo.js"></script>
+
+</body>
+
+</html>
