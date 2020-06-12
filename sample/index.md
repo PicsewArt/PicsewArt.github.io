@@ -4,7 +4,7 @@ title: "Sample"
 date: "2020-05-06"
 hero:
   format: 'jpeg'
-  url: 'HERO_0026.jpg'
+  url: 'HERO_0040.jpg'
 has_about: true
 show_hero: true
 post_has_front_header: true
