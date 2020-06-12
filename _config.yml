@@ -1,10 +1,10 @@
 name: "Picsew"
 alias: "A Cat's Complaining"
-author: "Lee"
+author: "Picsew"
 avatar:
   round: "/assets/images/avatar_round.png"
   rect: "/assets/images/avatar_color.png"
-description: "The name is Lee and this is my personal web site. I see myself as a relentless problem-solver, and I’m always looking for a new challenge."
+description: "The name is Picsew and this is my personal web site. I see myself as a relentless problem-solver, and I’m always looking for a new challenge."
 url: "https://picsew.cn"
 # url: '/Volumes/Shared/Common/Git/Picsew/_site'
 email: "picsew@126.com"
