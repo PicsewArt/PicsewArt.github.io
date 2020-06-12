@@ -95,7 +95,7 @@ title: "Home"
           <h2>Popular Categories</h2>
         </header>
         {% capture captured_cats %}{% for cat in site.categories %}
-        <div class="tattoo-row" data-sort="{{ site.posts.size | minus: tag[1].size | prepend: '0000' | slice: -4, 4 }}">
+        <div class="tattoo-row" data-sort="{{ site.posts.size | minus: cat[1].size | prepend: '0000' | slice: -4, 4 }}">
           <div class="tattoo-col p-posts">
             <div class="p-img"><img src="{{ site.url }}{{ site.path.images }}/hero/low/{{ cat[1].first.hero.url }}"></div>
             <div class="p-text">
