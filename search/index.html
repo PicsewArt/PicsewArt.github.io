@@ -75,7 +75,7 @@ search_tags: false
             appendString += 's';
           }
           appendString += ' for "' + keyword + '"</a></h1>';
-          appendString += '<header>';
+          appendString += '</header>';
           appendString += '<div class="grid" id="grid-list-s-g1" itemscope itemtype="https://schema.org/ItemList">';
           appendString += '<meta itemprop="itemListOrder" content="Unordered">';
           appendString += '<meta itemprop="name" content="Search">';
@@ -83,20 +83,15 @@ search_tags: false
           for (var i = 0; i < originalData.length; i++) {
             var item = originalData[i];
             appendString += '<div class="cell" id="grid-list-s{{ include.sectionid }}-g1-i' + i + '" style="-ms-flex: 0 0 33.333%; flex: 0 0 33.333%; padding: 3px;" itemprop="itemListElement" itemscope itemtype="https://schema.org/SoftwareApplication">';
-            appendString += '<a itemprop="url" href="' + item.url + '">';
-            appendString += '<figure aria-hidden="true" itemscope itemtype="https://schema.org/ImageObject">';
-            appendString += '<link itemprop="contentUrl" href="{{ site.url }}{{ site.path.hero.low }}/' + item.hero + '">';
-            appendString += '<meta itemprop="encodingFormat" content="image/' + item.heroformat + '">';
-            appendString += '<meta itemprop="name" content="thumbnail">';
-            appendString += '<meta itemprop="headline" content="{{ site.url }}{{ site.path.hero.low }}/' + item.hero + '">';
-            appendString += '<img itemprop="thumbnailUrl" alt="THUMBNAIL" src="{{ site.url }}{{ site.path.hero.low }}/' + item.hero + '" data-src="{{ site.url }}{{ site.path.hero.low }}/' + item.hero + '">';
+            appendString += '<figure class="overlay-image-simple-scroll" style="max-width: 100% !important;">';
+            appendString += '<img src="' + item.hero + '">';
+            appendString += '<figcaption><div><h3 toc-skip="true">' + item.date + '</h3><h3 toc-skip="true">' + item.category + '</h3></div><div><h2 toc-skip="true">' + item.title + '</h2></div></figcaption>';
             appendString += '</figure>';
-            appendString += '<p itemprop="name">' + item.title + '</p>';
-            appendString += '</a>';
-            appendString += '<small itemprop="description"><p>' + item.content.substring(1, item.content.length - 1).substring(0, 150) + '...</p></small>';
+            appendString += '<a href="' + item.url + '"></a>';
             appendString += '</div>';
           }
           appendString += '</div>';
+          appendString += '<nav class="readmore"><a itemprop="url" href="{{ site.url }}/posts/index.html">Read More</a></nav>';
 
           searchResults.innerHTML = appendString;
         } else {
