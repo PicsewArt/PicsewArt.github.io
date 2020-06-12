@@ -84,7 +84,7 @@ search_tags: false
             var item = originalData[i];
             appendString += '<div class="cell" id="grid-list-s{{ include.sectionid }}-g1-i' + i + '" style="-ms-flex: 0 0 33.333%; flex: 0 0 33.333%; padding: 3px;" itemprop="itemListElement" itemscope itemtype="https://schema.org/SoftwareApplication">';
             appendString += '<figure class="overlay-image-simple-scroll" style="max-width: 100% !important;">';
-            appendString += '<img src="' + item.hero + '">';
+            appendString += '<img src="{{ site.url }}{{ site.path.images }}/hero/low/' + item.hero + '">';
             appendString += '<figcaption><div><h3 toc-skip="true">' + item.date + '</h3><h3 toc-skip="true">' + item.category + '</h3></div><div><h2 toc-skip="true">' + item.title + '</h2></div></figcaption>';
             appendString += '</figure>';
             appendString += '<a href="' + item.url + '"></a>';
