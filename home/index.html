@@ -117,8 +117,10 @@ title: "Home"
         </header>
         <div class="tattoo-row">
           <div class="tattoo-col">
-            {% for tag in site.tags limit: 20 %}
-            <span class="tag"><a href="{{ site.url }}/posts/tags/index.html#{{ tag[0] | replace: ' ', '_' }}">{{ tag[0] }}</a></span>
+            {% capture captured_tags %}{% for tag in site.tags %}<span class="tag" data-sort="{{ site.posts.size | minus: tag[1].size | prepend: '0000' | slice: -4, 4 }}"><a href="{{ site.url }}/posts/tags/index.html#{{ tag[0] | replace: ' ', '_' }}">{{ tag[0] }}</a></span>@SEP@{% endfor %}{% endcapture %}
+            {% assign sorted_tags = captured_tags | split: '@SEP@' | sort %}
+            {% for tag in sorted_tags limit: 20 %}
+              {{ tag }}
             {% endfor %}
           </div>
         </div>
