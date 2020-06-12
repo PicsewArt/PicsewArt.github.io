@@ -1,12 +1,12 @@
 name: "Picsew"
 alias: "A Cat's Complaining"
-author: "Chiu"
+author: "Lee"
 avatar:
   round: "/assets/images/avatar_round.png"
   rect: "/assets/images/avatar_color.png"
-description: "The name is Chiu and this is my personal web site. I see myself as a relentless problem-solver, and I’m always looking for a new challenge."
+description: "The name is Lee and this is my personal web site. I see myself as a relentless problem-solver, and I’m always looking for a new challenge."
 url: "https://picsew.cn"
-# url: '/Volumes/Shared/Common/Git/LaSenhorita/_site'
+# url: '/Volumes/Shared/Common/Git/Picsew/_site'
 email: "picsew@126.com"
 github_url: "https://github.com/PicsewArt/PicsewArt.github.io/"
 timezone: Asia/Shanghai
