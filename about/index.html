@@ -4,13 +4,18 @@ title: "About"
 active_title: "About"
 ---
 <style type="text/css">
+  .profile-image img {
+    background-size: cover;
+    width: 80px;
+    height: 80px;
+  }
   .dark .profile-image img {
-    content: url('https://picsew.cn/assets/images/avatar.png') !important;
+    background-image: url(https://picsew.cn/assets/images/avatar.png);
   }
   .light .profile-image img {
-    content: url('https://picsew.cn/assets/images/avatar_color.png') !important;
+    background-image: url(https://picsew.cn/assets/images/avatar_color.png);
   }
 </style>
 {% include gap.html %}
-{% include card_profile_bubble.html title=site.name subtitle=site.alias desc=site.description url=site.url github=site.github_url email=site.email image="" maxwidth="100%" %}
+{% include card_profile_bubble.html title=site.name subtitle=site.alias desc=site.description url=site.url github=site.github_url email=site.email image=site.data.base64.pixel1trans maxwidth="100%" %}
 {% include signature.html %}
