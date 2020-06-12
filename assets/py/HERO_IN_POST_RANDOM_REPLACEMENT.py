@@ -11,7 +11,8 @@ onlyfiles = [f for f in listdir(basepath) if isfile(join(basepath, f))]
 
 r = re.compile("  url: '.+?\.jpg'", re.MULTILINE | re.DOTALL)
 
-last_nums = [0, 0, 0, 0, 0, 0,]
+last_nums = [0, 0, 0, 0, 0, 0]
+
 for afile in onlyfiles:
 	filepath = basepath + afile
 	f1 = open(filepath, 'r')
