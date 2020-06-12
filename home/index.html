@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  {% include layout_head.html %}
+  <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700|Montserrat" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="./normalize.min.css">
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+  <!-- partial:index.partial.html -->
+  <nav class="standard-nav">
+    <div class="links">
+      <a href="{{ site.url }}"><i class="fa fa-home"></i></a>
+      <a href="{{ site.url }}/posts/"><i class="fa fa-book"></i></a>
+      <a href="{{ site.url }}/gallery/"><i class="fa fa-camera-retro"></i></a>
+      <a href="{{ site.url }}/creative/"><i class="fa fa-superpowers"></i></a>
+      <a href="{{ site.url }}/blogroll/"><i class="fa fa-link"></i></a>
+      <a href="{{ site.url }}/about/"><i class="fa fa-info-circle"></i></a>
+    </div>
+    <div class="links">
+      <a href="{{ site.url }}/engines/"><i class="fa fa-search"></i></a>
+    </div>
+  </nav>
+
+  <section id="home">
+    <div class="tattoo-row">
+      <div class="tattoo-col">
+        <header class="top-intro">
+          <h1 class="lead">The Art of <span class="accent">{{ site.name }}</span></h1>
+          <p>See and read about the art of {{ site.name }}</p>
+        </header>
+      </div>
+    </div>
+    <section class="hero">
+      <div class="tattoo-row">
+        <div class="tattoo-col">
+          <header>
+            <p>By {{ site.author }}</p>
+            <h1>{{ site.alias }}</h1>
+            <a href="#subscribe" class="tattoo-btn">Subscribe</a>
+          </header>
+        </div>
+      </div>
+    </section>
+  </section>
+
+
+  <div class="tattoo-row-uneven">
+    <div class="tattoo-col-left">
+
+      {% for post in site.posts limit: 3 %}
+      <div class="tattoo-row">
+        <div class="tattoo-col">
+          <header class="blog-header">
+            <h2>{{ post.title }}</h2>
+            <p>{{ post.category }}<span class="date">&nbsp;{{ post.date | date: "%b %d, %Y %X" }}</span></p>
+          </header>
+          <img src="{{ site.url }}{{ site.path.images }}/hero/low/{{ post.hero.url }}" style="width: 100%; display: block;">
+          <p>{% include post_preview.html html=post.content limit=site.excerpt_limit %}</p>
+          <div class="post-btm-bar">
+            <button class="likes"><i class="fa fa-tags"></i> {{ post.category }}</button>
+            <button class="replies">View <span class="count">Detail</span></button>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+
+    </div>
+
+    <!-- SIDEBAR -->
+    <div class="tattoo-col-right">
+      <section class="profile">
+        <div class="tattoo-row author">
+          <div class="tattoo-col author">
+            <img src="{{ site.url }}{{ site.path.images }}/avatar_color.png" style="width: 100%; display: block;">
+            <div class="abt">
+              <h3 class="profile-title">{{ site.author }}</h3>
+              <p>{{ site.author }} is a lifestyle blogger who loves to write about his passions of everything. </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="popular-posts">
+        <header class="sidebar-header">
+          <h2>Popular Categories</h2>
+        </header>
+        {% capture captured_cats %}{% for cat in site.categories %}
+        <div class="tattoo-row" data-sort="{{ site.posts.size | minus: tag[1].size | prepend: '0000' | slice: -4, 4 }}">
+          <div class="tattoo-col p-posts">
+            <a href="{{ site.url }}/posts/categories/index.html#{{ cat[0] | replace: ' ', '_' }}">
+              <div class="p-img"><img src="{{ site.url }}{{ site.path.images }}/hero/low/{{ cat[1].first.hero.url }}"></div>
+              <div class="p-text">
+                <h5>{{ cat[0] }}</h5>
+                <p>Contains {{ cat[1].size }} posts.</p>
+              </div>
+            </a>
+          </div>
+        </div>@SEP@{% endfor %}{% endcapture %}
+        {% assign sorted_cats = captured_cats | split: '@SEP@' | sort %}
+        {% for cat in sorted_cats limit: site.foorer_list_size %}
+          {{ cat }}
+        {% endfor %}
+
+      </section>
+
+      <section class="tag-cloud">
+        <header class="sidebar-header">
+          <h2>Tags</h2>
+        </header>
+        <div class="tattoo-row">
+          <div class="tattoo-col">
+            {% for tag in site.tags %}
+            <span class="tag"><a href="{{ site.url }}/posts/tags/index.html#{{ tag[0] | replace: ' ', '_' }}">{{ tag[0] }}</a></span>
+            {% endfor %}
+          </div>
+        </div>
+      </section>
+
+      <section class="follow">
+        <header class="sidebar-header">
+          <h2>Follow me</h2>
+        </header>
+        <div class="tattoo-row">
+          <div class="tattoo-col">
+            <a href="{{ site.github_url }}"><i class="fa fa-github"></i></a>
+          </div>
+        </div>
+      </section>
+
+      <section class="subscribe" id="subscribe">
+        <header class="sidebar-header">
+          <h2>Subscribe</h2>
+        </header>
+        <div class="tattoo-row">
+          <div class="tattoo-col">
+            <p>Enter your e-mail below and get notified on the latest blog posts.</p>
+            <form>
+              <input type="email" name="email" value="E-mail">
+              <input type="submit">
+            </form>
+          </div>
+        </div>
+
+      </section>
+
+    </div>
+  </div>
+
+  <footer>
+    <div class="tattoo-row">
+      <div class="tattoo-col">
+        <a href="{{ site.github_url }}"><i class="fa fa-github"></i></a>
+        <a href="{{ site.url }}/sample/"><i class="fa fa-laptop"></i></a>
+        <a href="{{ site.url }}/feed.xml"><i class="fa fa-rss"></i></a>
+        <a href="mailto:{{ site.email }}"><i class="fa fa-paper-plane"></i></a>
+      </div>
+    </div>
+    <div class="tattoo-row">
+      <div class="tattoo-col">{% assign revision_url = site.github_url | append: 'commit/' | append: site.github.build_revision %}
+        <p>Copy <i class="fa fa-copyright"></i> 2020 | made by <a href="{{ revision_url }}">Picsew</a> <i class="fa fa-heart"></i></p>
+      </div>
+    </div>
+  </footer>
+  <!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+  <!-- <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script> -->
+  <script src="./script.js"></script>
+
+</body>
+
+</html>
