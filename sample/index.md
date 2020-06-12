@@ -302,7 +302,7 @@ class Untitled {
 
 ### Overlay Normal Image
 
-<blockquote>{% include image_overlay.html image='/assets/images/avatar_painting_full.jpg' title=site.name desc=site.description link=site.url maxwidth="200px" %}</blockquote>
+<blockquote>{% include image_overlay.html image=site.avatar.painting.full title=site.name desc=site.description link=site.url maxwidth="200px" %}</blockquote>
 
 ### Overlay Unsplash Image
 

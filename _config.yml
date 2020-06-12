@@ -9,6 +9,9 @@ avatar:
   rect:
     normal: "/assets/images/avatar/avatar.png"
     reverse: "/assets/images/avatar/avatar_color.png"
+  painting:
+    normal: "/assets/images/avatar/avatar_painting.jpg"
+    full: "/assets/images/avatar/avatar_painting_full.jpg"
   sep:
     normal: "/assets/images/avatar/avatar_sep.png"
 description: "The name is Picsew and this is my personal web site. I see myself as a relentless problem-solver, and I’m always looking for a new challenge."
