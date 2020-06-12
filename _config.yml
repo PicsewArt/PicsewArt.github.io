@@ -23,9 +23,10 @@ ui:
   posts_list_style: 'group'
   # posts_list_style: 'simple'
   # posts_list_style: 'normal'
+favicon: 'icons-pixel'
 # favicon: 'icons-ghostcat'
 # favicon: 'icons-holdcat'
-favicon: 'icons-sharp'
+# favicon: 'icons-sharp'
 foorer_list_size: 5
 hero:
   url: 'HERO_SADNESS_H_0009.jpg'
