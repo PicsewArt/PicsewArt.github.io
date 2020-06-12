@@ -17,12 +17,12 @@
 	  <div class="cell" id="grid-list-s{{ include.sectionid }}-g{{ group_index }}-i{{ element_index }}" style="{% include grid_cols_to_style.html cols=include.cols %} padding: 3px;">
 			<!-- BEGIN GRID CELL CONTENT -->
 			{{ element }}
-			<!-- BEGIN GRID CELL CONTENT -->
+			<!-- END GRID CELL CONTENT -->
 	  </div>
 		<!-- END A GRID CELL -->
 		{% endfor %}
 	</div>
-	<!-- BEGIN A GRID GRUOP -->
+	<!-- END A GRID GRUOP -->
 	{% endfor %}
 
 	{% if include.readmore.size > 0 %}
