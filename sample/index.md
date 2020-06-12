@@ -281,7 +281,7 @@ class Untitled {
 
 ## Normal Image
 
-> ![Normal Image]({{ site.avatar.rect }})
+> ![Normal Image]({{ site.avatar.prefer }})
 
 ## Grid Images
 
@@ -464,31 +464,31 @@ int main(int argc, char *argv[]) {
 
 ### Normal Profile Card
 
-<blockquote>{% include card_profile.html title=site.name desc=site.description image=site.avatar.rect url=site.url email=site.email %}</blockquote>
+<blockquote>{% include card_profile.html title=site.name desc=site.description image=site.avatar.prefer url=site.url email=site.email %}</blockquote>
 
 ### Cycled Profile Card
 
-<blockquote>{% include card_profile_cycled.html title="the <span>Senorita</span>" caption=site.alias desc=site.description image=site.avatar.rect url=site.url email=site.email %}</blockquote>
+<blockquote>{% include card_profile_cycled.html title="the <span>Senorita</span>" caption=site.alias desc=site.description image=site.avatar.prefer url=site.url email=site.email %}</blockquote>
 
 ### Bordered Profile Card
 
-<blockquote>{% include card_profile_bordered.html title=site.name subtitle=site.alias desc=site.description image=site.avatar.rect url=site.url email=site.email %}</blockquote>
+<blockquote>{% include card_profile_bordered.html title=site.name subtitle=site.alias desc=site.description image=site.avatar.prefer url=site.url email=site.email %}</blockquote>
 
 ### Bubble Profile Card
 
-<blockquote>{% include card_profile_bubble.html title=site.name subtitle=site.alias desc=site.description image=site.avatar.rect url=site.url email=site.email %}</blockquote>
+<blockquote>{% include card_profile_bubble.html title=site.name subtitle=site.alias desc=site.description image=site.avatar.prefer url=site.url email=site.email %}</blockquote>
 
 ### Drop Icons Profile Card
 
-<blockquote>{% include card_profile_drop_icons.html title=site.name image=site.avatar.rect url=site.url github=site.github_url email=site.email %}</blockquote>
+<blockquote>{% include card_profile_drop_icons.html title=site.name image=site.avatar.prefer url=site.url github=site.github_url email=site.email %}</blockquote>
 
 ### Quotes Profile Card
 
-<blockquote>{% include card_profile_quotes.html title=site.name subtitle=site.alias desc=site.description image=site.avatar.rect %}</blockquote>
+<blockquote>{% include card_profile_quotes.html title=site.name subtitle=site.alias desc=site.description image=site.avatar.prefer %}</blockquote>
 
 ### Simple White Profile Card
 
-<blockquote>{% include card_profile_simple_white.html name=site.name desc=site.alias avatar=site.avatar.rect icons="github:::https://github.com/,,,twitter:::https://twitter.com/,,,facebook:::https://facebook.com/" maxwidth='390px' maxheight='390px' %}</blockquote>
+<blockquote>{% include card_profile_simple_white.html name=site.name desc=site.alias avatar=site.avatar.prefer icons="github:::https://github.com/,,,twitter:::https://twitter.com/,,,facebook:::https://facebook.com/" maxwidth='390px' maxheight='390px' %}</blockquote>
 
 ## Post Cards
 
@@ -506,4 +506,4 @@ int main(int argc, char *argv[]) {
 
 # Chat List
 
-{% assign chatlist = '' | split: '/' %}{% for post in site.posts limit: 6 %}{% assign chat = '' | split: '/' %}{% if forloop.index == 3 %}{% assign chat = chat | push: 'image' %}{% assign chat_img = site.path.hero.low | append: '/' | append: post.hero.url %}{% assign chat = chat | push: chat_img %}{% else %}{% assign chat = chat | push: 'text' %}{% capture post_limit %}{% cycle 20, 70, 12, 80, 150, 35 %}{% endcapture %}{% assign post_ex = post.content | strip_html | strip_newlines | slice: 0, post_limit | append: '.' %}{% assign chat = chat | push: post_ex %}{% endif %}{% assign chat_time = '20:0' | append: forloop.index %}{% assign chat = chat | push: chat_time %}{% if forloop.index == 2 or forloop.index == 4 %}{% assign chat = chat | push: 'send' %}{% endif %}{% assign chatlist = chatlist | push: chat %}{% endfor %}<blockquote>{% include chat_list.html title=site.name avatar=site.avatar.rect list=chatlist %}</blockquote>
+{% assign chatlist = '' | split: '/' %}{% for post in site.posts limit: 6 %}{% assign chat = '' | split: '/' %}{% if forloop.index == 3 %}{% assign chat = chat | push: 'image' %}{% assign chat_img = site.path.hero.low | append: '/' | append: post.hero.url %}{% assign chat = chat | push: chat_img %}{% else %}{% assign chat = chat | push: 'text' %}{% capture post_limit %}{% cycle 20, 70, 12, 80, 150, 35 %}{% endcapture %}{% assign post_ex = post.content | strip_html | strip_newlines | slice: 0, post_limit | append: '.' %}{% assign chat = chat | push: post_ex %}{% endif %}{% assign chat_time = '20:0' | append: forloop.index %}{% assign chat = chat | push: chat_time %}{% if forloop.index == 2 or forloop.index == 4 %}{% assign chat = chat | push: 'send' %}{% endif %}{% assign chatlist = chatlist | push: chat %}{% endfor %}<blockquote>{% include chat_list.html title=site.name avatar=site.avatar.prefer list=chatlist %}</blockquote>

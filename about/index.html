@@ -10,10 +10,10 @@ active_title: "About"
     height: 80px;
   }
   .dark .profile-image img {
-    background-image: url(https://picsew.cn/assets/images/avatar.png);
+    background-image: url({{ site.url }}{{ site.avatar.rect.normal }});
   }
   .light .profile-image img {
-    background-image: url(https://picsew.cn/assets/images/avatar_color.png);
+    background-image: url({{ site.url }}{{ site.avatar.rect.reverse }});
   }
 </style>
 {% include gap.html %}

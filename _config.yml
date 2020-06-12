@@ -2,8 +2,15 @@ name: "Picsew"
 alias: "A Cat's Complaining"
 author: "Picsew"
 avatar:
-  round: "/assets/images/avatar_round.png"
-  rect: "/assets/images/avatar_color.png"
+  prefer: "/assets/images/avatar/avatar_color.png"
+  round:
+    normal: "/assets/images/avatar/avatar_round.png"
+    reverse: "/assets/images/avatar/avatar_round_color.png"
+  rect:
+    normal: "/assets/images/avatar/avatar.png"
+    reverse: "/assets/images/avatar/avatar_color.png"
+  sep:
+    normal: "/assets/images/avatar/avatar_sep.png"
 description: "The name is Picsew and this is my personal web site. I see myself as a relentless problem-solver, and I’m always looking for a new challenge."
 url: "https://picsew.cn"
 # url: '/Volumes/Shared/Common/Git/Picsew/_site'
