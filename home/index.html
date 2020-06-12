@@ -64,10 +64,11 @@ title: "Home"
             <p>{{ post.category }}<span class="date">&nbsp;{{ post.date | date: "%b %d, %Y %X" }}</span></p>
           </header>
           <img src="{{ site.url }}{{ site.path.images }}/hero/low/{{ post.hero.url }}" style="width: 100%; display: block;">
-          <p>{% include post_preview.html html=post.content limit=site.excerpt_limit %}</p>
+          <p>{% include post_preview.html html=post.content limit=300 %}</p>
           <div class="post-btm-bar">
             <button class="likes"><i class="fa fa-tags"></i> {{ post.category }}</button>
-            <button class="replies">View <span class="count">Detail</span></button>
+            <!-- <button class="replies">View <span class="count">Detail</span></button> -->
+            <a class="replies">View Detail</a>
           </div>
         </div>
       </div>
@@ -96,13 +97,11 @@ title: "Home"
         {% capture captured_cats %}{% for cat in site.categories %}
         <div class="tattoo-row" data-sort="{{ site.posts.size | minus: tag[1].size | prepend: '0000' | slice: -4, 4 }}">
           <div class="tattoo-col p-posts">
-            <a href="{{ site.url }}/posts/categories/index.html#{{ cat[0] | replace: ' ', '_' }}">
-              <div class="p-img"><img src="{{ site.url }}{{ site.path.images }}/hero/low/{{ cat[1].first.hero.url }}"></div>
-              <div class="p-text">
-                <h5>{{ cat[0] }}</h5>
-                <p>Contains {{ cat[1].size }} posts.</p>
-              </div>
-            </a>
+            <div class="p-img"><img src="{{ site.url }}{{ site.path.images }}/hero/low/{{ cat[1].first.hero.url }}"></div>
+            <div class="p-text">
+              <h5><a href="{{ site.url }}/posts/categories/index.html#{{ cat[0] | replace: ' ', '_' }}">{{ cat[0] }}</a></h5>
+              <p>Contains {{ cat[1].size }} posts.</p>
+            </div>
           </div>
         </div>@SEP@{% endfor %}{% endcapture %}
         {% assign sorted_cats = captured_cats | split: '@SEP@' | sort %}
@@ -118,7 +117,7 @@ title: "Home"
         </header>
         <div class="tattoo-row">
           <div class="tattoo-col">
-            {% for tag in site.tags %}
+            {% for tag in site.tags limit: 20 %}
             <span class="tag"><a href="{{ site.url }}/posts/tags/index.html#{{ tag[0] | replace: ' ', '_' }}">{{ tag[0] }}</a></span>
             {% endfor %}
           </div>
