@@ -336,12 +336,12 @@
 }
 
 /* BEGIN DARK ONLY */
-.grid-list-section h1 a:hover,
-.grid-list-section h2 a:hover,
-.grid-list-section h3 a:hover,
-.grid-list-section h4 a:hover,
-.grid-list-section h5 a:hover,
-.grid-list-section h6 a:hover, {
+.dark .grid-list-section h1 a:hover,
+.dark .grid-list-section h2 a:hover,
+.dark .grid-list-section h3 a:hover,
+.dark .grid-list-section h4 a:hover,
+.dark .grid-list-section h5 a:hover,
+.dark .grid-list-section h6 a:hover {
   color: #7E9CAB;
 }
 /* END DARK ONLY */
