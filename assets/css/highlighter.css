@@ -79,7 +79,7 @@ figure.highlight pre::before {
 
 div[class^="language-"] pre,
 figure.highlight pre {
-  background-color: rgba(0, 0, 0, 0.9) !important;
+  background-color: rgba(0, 0, 0, 0.6) !important;
   word-break: break-all;
 }
 
