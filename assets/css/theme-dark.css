@@ -334,3 +334,14 @@
   height: 18px;
   margin-bottom: -4.5px !important;
 }
+
+/* BEGIN DARK ONLY */
+h1 a:hover,
+h2 a:hover,
+h3 a:hover,
+h4 a:hover,
+h5 a:hover,
+h6 a:hover, {
+  color: #7E9CAB;
+}
+/* END DARK ONLY */
