@@ -1,5 +1,5 @@
 ---
-title: "I think I miss you more than I am allowed to"
+title: "Miss you more than I'm allowed to"
 category: "Mood"
 tags: ["Sadness"]
 date: 20200617T170000+08:00
