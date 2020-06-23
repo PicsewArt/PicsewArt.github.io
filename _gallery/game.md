@@ -35,4 +35,8 @@ media:
     type: 'image'
     format: "jpeg"
     date: 20200622T013000+08:00
+  - url: "ns_tf_20200622.png"
+    type: 'image'
+    format: "png"
+    date: 20200622T013000+08:00
 ---
