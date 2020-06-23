@@ -16,7 +16,7 @@ figure.highlight {
   border-top-left-radius: 6px;
   border-top-right-radius: 6px;
   border: 1px solid var(--charcoal-gray);
-  background-image: url("{{ site.url }}{{ site.path.hero.low }}/TECH_0029.jpg");
+  background-image: url("{{ site.url }}{{ site.path.hero.low }}/tech/TECH_0029.jpg");
   background-repeat: repeat-y;
   background-size: 100% auto;
   -moz-background-size: 100% auto;
