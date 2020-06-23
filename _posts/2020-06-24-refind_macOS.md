@@ -1,5 +1,5 @@
 ---
-title: "Stop macOS updates from taking over the rEFInd boot manager"
+title: "Stop taking over the rEFInd boot manager"
 category: "Mood"
 tags: ["macOS", "rEFInd"]
 date: 20200624T050000+08:00
