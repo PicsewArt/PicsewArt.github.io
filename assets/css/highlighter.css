@@ -698,3 +698,7 @@ div[class^="language-xojo"]::before, figure.highlight pre code[class^="language-
 div[class^="language-yaml"]::before, figure.highlight pre code[class^="language-yaml"]::before {
   content: 'YAML' !important;
 }
+
+.highlight code {
+  color: #000;
+}
