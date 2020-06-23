@@ -6,6 +6,7 @@ date: 20200624T050000+08:00
 hero:
   format: 'jpeg'
   url: 'HERO_0032.jpg'
+depends_on_includes: true
 ---
 How to stop macOS updates from taking over the rEFInd boot manager?
 
@@ -20,7 +21,7 @@ Below are the steps. The commands need to be entered into a Terminal application
 
 After the command completes, restart the Mac.
 
-{% include alert.html type='info' title='NOTE' msg='If you get an error message which includes the phrase "perhaps caused by APFS Snapshot usage by Time Machine", then see Neil's own answer to the question: <a href="https://apple.stackexchange.com/questions/321533/cant-resize-apfs-container-not-enough-free-space-in-container-due-to-apfs-limi">Can't resize APFS Container: Not enough free space in Container due to APFS limits or tidemarks</a> .
+{% include alert.html type='info' title='NOTE' msg='If you get an error message which includes the phrase "perhaps caused by APFS Snapshot usage by Time Machine", then see Neil\'s own answer to the question: <a href="https://apple.stackexchange.com/questions/321533/cant-resize-apfs-container-not-enough-free-space-in-container-due-to-apfs-limi">Can\'t resize APFS Container: Not enough free space in Container due to APFS limits or tidemarks</a> .' %}
 
 2. Download the `rEFInd Boot Manager` software from this [SourceForge web site](https://sourceforge.net/projects/refind/). Enter the following commands to install the software to the "`Macintosh HD via rEFInd`" volume. 
 
