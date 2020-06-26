@@ -39,4 +39,44 @@ media:
     type: 'image'
     format: "png"
     date: 20200622T013000+08:00
+  - url: "ps4_0001.jpg"
+    type: 'image'
+    format: "jpeg"
+    date: 20200626T023000+08:00
+  - url: "ps4_0002.jpg"
+    type: 'image'
+    format: "jpeg"
+    date: 20200626T023000+08:00
+  - url: "ps4_0003.jpg"
+    type: 'image'
+    format: "jpeg"
+    date: 20200626T023000+08:00
+  - url: "ps4_0004.jpg"
+    type: 'image'
+    format: "jpeg"
+    date: 20200626T023000+08:00
+  - url: "ps4_0005.jpg"
+    type: 'image'
+    format: "jpeg"
+    date: 20200626T023000+08:00
+  - url: "ps4_0006.jpg"
+    type: 'image'
+    format: "jpeg"
+    date: 20200626T023000+08:00
+  - url: "ps4_0007.jpg"
+    type: 'image'
+    format: "jpeg"
+    date: 20200626T023000+08:00
+  - url: "ps4_0008.jpg"
+    type: 'image'
+    format: "jpeg"
+    date: 20200626T023000+08:00
+  - url: "ps4_0009.jpg"
+    type: 'image'
+    format: "jpeg"
+    date: 20200626T023000+08:00
+  - url: "ps4_0010.jpg"
+    type: 'image'
+    format: "jpeg"
+    date: 20200626T023000+08:00
 ---
