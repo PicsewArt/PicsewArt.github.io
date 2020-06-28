@@ -5,7 +5,7 @@ tags: ["Sadness"]
 date: 20200629T020000+08:00
 hero:
   format: 'jpeg'
-  url: 'HERO_0012.jpg'
+  url: 'HERO_0035.jpg'
 ---
 I don’t even know if I am going to send this to you, but I figured I should write these thoughts down. I don’t know if we will ever be as close as we were or if maybe that was all in my head.
 
