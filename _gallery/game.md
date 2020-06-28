@@ -79,4 +79,12 @@ media:
     type: 'image'
     format: "jpeg"
     date: 20200626T023000+08:00
+  - url: "ps4_0011.jpg"
+    type: 'image'
+    format: "jpeg"
+    date: 20200628T120000+08:00
+  - url: "ps4_0012.jpg"
+    type: 'image'
+    format: "jpeg"
+    date: 20200628T123000+08:00
 ---
