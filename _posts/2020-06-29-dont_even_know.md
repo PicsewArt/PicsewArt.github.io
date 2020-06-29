@@ -11,4 +11,4 @@ I don’t even know if I am going to send this to you, but I figured I should wr
 
 I really don’t know, it just seems like we’ve drifted apart ever since your feelings changed. I wish things could be different, but I understand that attraction either happens or doesn’t and there isn’t anything I can do about it.
 
-I still have feelings for you and when I look at you I see an amazing person who I want to be my partner in life. You are caring, selfless, beautiful, intelligent and creative, and I’ve never met anyone like you before and I don’t want anyone else but you. This is just something I am going to have to figure out how to live with.
+I still have feelings for you and when I look at you I see an amazing person who I want to be my partner in life. I’ve never met anyone like you before and I don’t want anyone else but you. This is just something I am going to have to figure out how to live with.
