@@ -15,10 +15,6 @@ media:
     type: 'image'
     format: "png"
     date: 20200301T120000+08:00
-  - url: "sketch_0003.jpg"
-    type: 'image'
-    format: "jpeg"
-    date: 20200301T120000+08:00
   - url: "pen_0001.jpg"
     type: 'image'
     format: "jpeg"
@@ -175,4 +171,8 @@ media:
     type: 'image'
     format: "jpeg"
     date: 20190426T210000+08:00
+  - url: "pen_0040.jpg"
+    type: 'image'
+    format: "jpeg"
+    date: 20200630T230000+08:00
 ---
