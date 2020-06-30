@@ -1,6 +1,6 @@
 ---
 title: "Stop taking over the rEFInd boot manager"
-category: "Mood"
+category: "Technology"
 tags: ["macOS", "rEFInd"]
 date: 20200624T050000+08:00
 hero:
