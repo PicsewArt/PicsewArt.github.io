@@ -58,8 +58,6 @@ I’ve been enjoying Ethan Schoonover’s [Solarized Color Scheme](http://ethans
 <!-- BEGIN base02 -->
 <tr>
   <th rowspan="8">base02</th>
-  <th>TYPE</th>
-  <th>VALUE</th>
 </tr>
 <tr>
   <th>HEX</th>
@@ -93,8 +91,6 @@ I’ve been enjoying Ethan Schoonover’s [Solarized Color Scheme](http://ethans
 <!-- BEGIN base01 -->
 <tr>
   <th rowspan="8">base01</th>
-  <th>TYPE</th>
-  <th>VALUE</th>
 </tr>
 <tr>
   <th>HEX</th>
@@ -128,8 +124,6 @@ I’ve been enjoying Ethan Schoonover’s [Solarized Color Scheme](http://ethans
 <!-- BEGIN base00 -->
 <tr>
   <th rowspan="8">base00</th>
-  <th>TYPE</th>
-  <th>VALUE</th>
 </tr>
 <tr>
   <th>HEX</th>
@@ -163,8 +157,6 @@ I’ve been enjoying Ethan Schoonover’s [Solarized Color Scheme](http://ethans
 <!-- BEGIN base0 -->
 <tr>
   <th rowspan="8">base0</th>
-  <th>TYPE</th>
-  <th>VALUE</th>
 </tr>
 <tr>
   <th>HEX</th>
@@ -198,8 +190,6 @@ I’ve been enjoying Ethan Schoonover’s [Solarized Color Scheme](http://ethans
 <!-- BEGIN base1 -->
 <tr>
   <th rowspan="8">base1</th>
-  <th>TYPE</th>
-  <th>VALUE</th>
 </tr>
 <tr>
   <th>HEX</th>
@@ -233,8 +223,6 @@ I’ve been enjoying Ethan Schoonover’s [Solarized Color Scheme](http://ethans
 <!-- BEGIN base2 -->
 <tr>
   <th rowspan="8">base2</th>
-  <th>TYPE</th>
-  <th>VALUE</th>
 </tr>
 <tr>
   <th>HEX</th>
@@ -268,8 +256,6 @@ I’ve been enjoying Ethan Schoonover’s [Solarized Color Scheme](http://ethans
 <!-- BEGIN base3 -->
 <tr>
   <th rowspan="8">base3</th>
-  <th>TYPE</th>
-  <th>VALUE</th>
 </tr>
 <tr>
   <th>HEX</th>
@@ -303,8 +289,6 @@ I’ve been enjoying Ethan Schoonover’s [Solarized Color Scheme](http://ethans
 <!-- BEGIN yellow -->
 <tr>
   <th rowspan="8">yellow</th>
-  <th>TYPE</th>
-  <th>VALUE</th>
 </tr>
 <tr>
   <th>HEX</th>
@@ -338,8 +322,6 @@ I’ve been enjoying Ethan Schoonover’s [Solarized Color Scheme](http://ethans
 <!-- BEGIN orange -->
 <tr>
   <th rowspan="8">orange</th>
-  <th>TYPE</th>
-  <th>VALUE</th>
 </tr>
 <tr>
   <th>HEX</th>
@@ -373,8 +355,6 @@ I’ve been enjoying Ethan Schoonover’s [Solarized Color Scheme](http://ethans
 <!-- BEGIN red -->
 <tr>
   <th rowspan="8">red</th>
-  <th>TYPE</th>
-  <th>VALUE</th>
 </tr>
 <tr>
   <th>HEX</th>
@@ -408,8 +388,6 @@ I’ve been enjoying Ethan Schoonover’s [Solarized Color Scheme](http://ethans
 <!-- BEGIN magenta -->
 <tr>
   <th rowspan="8">magenta</th>
-  <th>TYPE</th>
-  <th>VALUE</th>
 </tr>
 <tr>
   <th>HEX</th>
@@ -443,8 +421,6 @@ I’ve been enjoying Ethan Schoonover’s [Solarized Color Scheme](http://ethans
 <!-- BEGIN violet -->
 <tr>
   <th rowspan="8">violet</th>
-  <th>TYPE</th>
-  <th>VALUE</th>
 </tr>
 <tr>
   <th>HEX</th>
@@ -478,8 +454,6 @@ I’ve been enjoying Ethan Schoonover’s [Solarized Color Scheme](http://ethans
 <!-- BEGIN blue -->
 <tr>
   <th rowspan="8">blue</th>
-  <th>TYPE</th>
-  <th>VALUE</th>
 </tr>
 <tr>
   <th>HEX</th>
@@ -513,8 +487,6 @@ I’ve been enjoying Ethan Schoonover’s [Solarized Color Scheme](http://ethans
 <!-- BEGIN cyan -->
 <tr>
   <th rowspan="8">cyan</th>
-  <th>TYPE</th>
-  <th>VALUE</th>
 </tr>
 <tr>
   <th>HEX</th>
@@ -548,8 +520,6 @@ I’ve been enjoying Ethan Schoonover’s [Solarized Color Scheme](http://ethans
 <!-- BEGIN green -->
 <tr>
   <th rowspan="8">green</th>
-  <th>TYPE</th>
-  <th>VALUE</th>
 </tr>
 <tr>
   <th>HEX</th>
