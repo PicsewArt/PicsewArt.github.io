@@ -1,7 +1,8 @@
 ---
 layout: null
-title: "EFI 錯誤碼查詢"
-version: "0.0.1"
+title: "騎記歐版 EF1 故障碼解析"
+version: "0.0.2"
+date: 20200708T170000+08:00
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -124,57 +125,90 @@ version: "0.0.1"
   <div class="margin"></div>
   <footer class="footer"><small>QiCycle © All rights reserved.</small></footer>
 </body>
-<script>
+<script type="text/javascript">
+  function decimalToHex(d, padding, upper=true) {
+    var hex = Number(d).toString(16);
+    padding = typeof (padding) === "undefined" || padding === null ? padding = 2 : padding;
+
+    while (hex.length < padding) {
+      hex = "0" + hex;
+    }
+    if (upper) {
+      return hex.toUpperCase();
+    }
+    return hex;
+  }
+</script>
+<script type="text/javascript">
   var btn = document.getElementById("btn");
   var btn1 = document.getElementById("btn1");
-  var arr = [
-    "功率管故障",
-    "過流故障",
-    "過溫故障",
-    "霍爾故障",
-    "欠壓故障",
-    "堵轉故障",
-    "速度傳感器故障",
-    "未使用",
-    "充電高溫告警",
-    "充電低溫告警",
-    "放電高溫告警",
-    "放電低溫告警",
-    "can總線錯誤",
-    "can總線錯誤",
-    "can總線錯誤",
-    "未使用"
+  var errors = [
+    ["功率管故障", "08"],
+    ["過流故障", "09"],
+    ["過溫故障", "10"],
+    ["霍爾故障", "11"],
+    ["欠壓故障", "12"],
+    ["堵轉故障", "13"],
+    ["傳感器故障", "14"],
+    ["N/A", "00"],
+    ["充電高溫告警", "01"],
+    ["充電低溫告警", "02"],
+    ["放電高溫告警", "03"],
+    ["放電低溫告警", "04"],
+    ["電機控制器無數據上報", "05"],
+    ["電池無數據上報", "06"],
+    ["表頭發送錯誤", "07"],
+    ["N/A", "00"]
   ].reverse();
   btn.onclick = function() {
     var text = document.getElementById("input");
     var str = document.getElementById("str");
-    var code = document.getElementById("code")
+    var code = document.getElementById("code");
     let number = Number(text.value);
     if (number > 65535 || number < 1) {
       str.innerHTML = "<p>" + "非法錯誤無碼：錯誤碼應介於0~65535之間" + "</p>"
       code.innerHTML = text.value;
-      return
+      return;
     }
-    var num = Number(text.value).toString(2);
+
+    var string = "";
+    var inputcode = text.value;
+    var num = Number(inputcode).toString(2);
     let length = num.length;
     for (var i = length; i < 16; i++) {
-      num = "0" + num
+      num = "0" + num;
     }
+
+    string += "<p>" + "故障碼[DEC]: " + inputcode + "</p>";
+    string += "<p>" + "故障碼[BIN]: " + num + "</p>";
+    var hex = decimalToHex(inputcode, 4);
+    // var err1 = decimalToHex(Number(inputcode) & 0xFF, 2);
+    // var err2 = decimalToHex((Number(inputcode) >> 8) & 0xFF, 2);
+    // string += "<p>" + "解析數據[HEX]: " + hex + "  " + err1 + "  " + err2 + "</p>";
+    string += "<p>" + "故障码[HEX]: " + hex + "</p>";
+    string += "<br />"
+
     var tatolArr = num.split("");
-    var string = "";
+    var error_results = [];
     for (var j = tatolArr.length; j > -1; j--) {
       if (Number(tatolArr[j])) {
-        let index = tatolArr.length - j;
-        string += "<p>" + index + "、" + arr[j] + "</p>"
+        // let index = tatolArr.length - j;
+        let e = errors[j];
+        let desc = e[0];
+        if (!desc.includes("N/A")) {
+          let index = e[1];
+          error_results.push("<p>" + index + ". " + desc + "</p>");
+        }
       }
     }
+    string += error_results.sort().join("\n");
     str.innerHTML = string;
     code.innerHTML = text.value;
   };
   btn1.onclick = function() {
     var text = document.getElementById("input");
     var str = document.getElementById("str");
-    var code = document.getElementById("code")
+    var code = document.getElementById("code");
     text.value = "";
     str.innerHTML = "";
     code.innerHTML = "N/A";
