@@ -70,7 +70,7 @@ version: "0.0.1"
 
   .content>.content-content>.content-content-header {
     margin-top: 50px;
-    margin-bottom: 50px;
+    margin-bottom: 10px;
   }
 
   .content>.content-content>.content-content-content {
@@ -90,38 +90,39 @@ version: "0.0.1"
 
   .footer {
     color: #788D96;
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    height: 40px;
+    clear: both;
+    position: relative;
+    height: 30px;
     text-align: center;
   }
 </style>
 
 <body>
-  <div class="content">
-    <div class="content-search">
-      <h1 class="content-title">{{ page.title }}</h1>
-      <div class="content-version">v{{ page.version }}</div>
-      <div class="margin"></div>
-      <div class="content-search-header">
-        <input id="input" class="content-search-header-ser" type="text" placeholder="請輸入故障碼" value="65535" />
+  <main>
+    <div class="content">
+      <div class="content-search">
+        <h1 class="content-title">{{ page.title }}</h1>
+        <div class="content-version">v{{ page.version }}</div>
         <div class="margin"></div>
-        <span class="content-search-header-btn" id="btn">查詢</span>
-        <span class="content-search-header-btn" id="btn1">重置</span>
+        <div class="content-search-header">
+          <input id="input" class="content-search-header-ser" type="text" placeholder="請輸入故障碼" value="65535" />
+          <div class="margin"></div>
+          <span class="content-search-header-btn" id="btn">查詢</span>
+          <span class="content-search-header-btn" id="btn1">重置</span>
+        </div>
+        <div class="content-search-total">提示：輸入應介於0至65535之間</div>
       </div>
-      <div class="content-search-total">提示：輸入應介於0至65535之間</div>
-    </div>
-    <div class="content-content">
-      <div class="content-content-header">
-        <p>當前輸入碼為 <span id="code">N/A</span></p>
+      <div class="content-content">
+        <div class="content-content-header">
+          <p>當前輸入碼為 <span id="code">N/A</span></p>
+        </div>
+        <div class="content-content-content" id="str"></div>
       </div>
-      <div class="content-content-content" id="str"></div>
     </div>
-  </div>
+  </main>
+
   <div class="margin"></div>
-  <div class="footer"><small>QiCycle © All rights reserved.</small></div>
+  <footer class="footer"><small>QiCycle © All rights reserved.</small></footer>
 </body>
 <script>
   var btn = document.getElementById("btn");
