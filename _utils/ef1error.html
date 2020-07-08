@@ -1,7 +1,7 @@
 ---
 layout: null
 title: "騎記歐版 EF1 故障碼解析"
-version: "0.0.3"
+version: "0.0.4"
 date: 20200708T180000+08:00
 ---
 <!DOCTYPE html>
@@ -170,8 +170,8 @@ date: 20200708T180000+08:00
     var code = document.getElementById("code");
     let number = Number(text.value);
     if (number > 65535 || number < 1) {
-      str.innerHTML = "<p>" + "非法錯誤無碼：錯誤碼應介於0~65535之間" + "</p>"
-      code.innerHTML = text.value;
+      str.innerHTML = "<p>" + "非法故障碼：應介於0至65535之間" + "</p>"
+      code.innerHTML = text.value ?? "N/A";;
       return;
     }
 
