@@ -1,0 +1,183 @@
+---
+layout: null
+title: "EFI 錯誤碼查詢"
+version: "0.0.1"
+---
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>{{ page.title }} | v{{ page.version }}</title>
+</head>
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    background-color: #EDEDED;
+  }
+
+  .content {}
+
+  .content>.content-search {
+    text-align: center;
+    margin-top: 200px;
+  }
+
+  .content>.content-search>.content-search-header {
+    line-height: 20px;
+  }
+
+  .content>.content-search>.content-search-header>.content-search-header-ser {
+    width: 250px;
+    height: 50px;
+    outline: none;
+    color: inherit;
+    border-radius: 25px;
+    font-family: inherit;
+    font-weight: lighter;
+    font-size: 20px;
+    padding: 0 25px 0 42px;
+    transition: all 0.2s ease-in;
+    border: solid 1px transparent;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 1px 9px rgba(0, 0, 0, 0.1);
+  }
+
+  .content>.content-search>.content-search-header>.content-search-header-btn {
+    border: 1px solid #eee;
+    padding: 6px 35px;
+    border-radius: 10px;
+    color: #fff;
+    background-color: #F15D34;
+  }
+
+  .content>.content-search>.content-search-total {
+    font-size: 15px;
+    color: #FF9800;
+    margin-top: 7px;
+  }
+
+  .content>.content-search>.content-search-header>.content-search-header-btn:hover {
+    cursor: pointer;
+  }
+
+  .content>.content-content {
+    text-align: center;
+  }
+
+  .content>.content-content>.content-content-header {
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+
+  .content>.content-content>.content-content-content {
+    width: auto;
+    display: inline-block;
+    text-align: left;
+    color: #aaa;
+  }
+
+  .content > .content-search > .content-version {
+    color: #788D96;
+  }
+
+  .margin {
+    height: 20px;
+  }
+
+  .footer {
+    color: #788D96;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 40px;
+    text-align: center;
+  }
+</style>
+
+<body>
+  <div class="content">
+    <div class="content-search">
+      <h1 class="content-title">{{ page.title }}</h1>
+      <div class="content-version">v{{ page.version }}</div>
+      <div class="margin"></div>
+      <div class="content-search-header">
+        <input id="input" class="content-search-header-ser" type="text" placeholder="請輸入故障碼" value="65535" />
+        <div class="margin"></div>
+        <span class="content-search-header-btn" id="btn">查詢</span>
+        <span class="content-search-header-btn" id="btn1">重置</span>
+      </div>
+      <div class="content-search-total">提示：輸入應介於0至65535之間</div>
+    </div>
+    <div class="content-content">
+      <div class="content-content-header">
+        <p>當前輸入碼為 <span id="code">N/A</span></p>
+      </div>
+      <div class="content-content-content" id="str"></div>
+    </div>
+  </div>
+  <div class="margin"></div>
+  <div class="footer"><small>QiCycle © All rights reserved.</small></div>
+</body>
+<script>
+  var btn = document.getElementById("btn");
+  var btn1 = document.getElementById("btn1");
+  var arr = [
+    "功率管故障",
+    "過流故障",
+    "過溫故障",
+    "霍爾故障",
+    "欠壓故障",
+    "堵轉故障",
+    "速度傳感器故障",
+    "未使用",
+    "充電高溫告警",
+    "充電低溫告警",
+    "放電高溫告警",
+    "放電低溫告警",
+    "can總線錯誤",
+    "can總線錯誤",
+    "can總線錯誤",
+    "未使用"
+  ].reverse();
+  btn.onclick = function() {
+    var text = document.getElementById("input");
+    var str = document.getElementById("str");
+    var code = document.getElementById("code")
+    let number = Number(text.value);
+    if (number > 65535 || number < 1) {
+      str.innerHTML = "<p>" + "非法錯誤無碼：錯誤碼應介於0~65535之間" + "</p>"
+      code.innerHTML = text.value;
+      return
+    }
+    var num = Number(text.value).toString(2);
+    let length = num.length;
+    for (var i = length; i < 16; i++) {
+      num = "0" + num
+    }
+    var tatolArr = num.split("");
+    var string = "";
+    for (var j = tatolArr.length; j > -1; j--) {
+      if (Number(tatolArr[j])) {
+        let index = tatolArr.length - j;
+        string += "<p>" + index + "、" + arr[j] + "</p>"
+      }
+    }
+    str.innerHTML = string;
+    code.innerHTML = text.value;
+  };
+  btn1.onclick = function() {
+    var text = document.getElementById("input");
+    var str = document.getElementById("str");
+    var code = document.getElementById("code")
+    text.value = "";
+    str.innerHTML = "";
+    code.innerHTML = "N/A";
+  }
+</script>
+
+</html>

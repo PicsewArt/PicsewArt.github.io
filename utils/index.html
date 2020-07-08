@@ -1,0 +1,22 @@
+---
+layout: default
+title: "Utils"
+active_title: 'Utils'
+---
+	{% assign all_utils = '' | split: '/' %}
+	{% for utils in site.utils %}
+		{% assign this_item = '' | split: '/' %}
+
+		{% assign this_item = this_item | push: util.title %}
+		{% assign this_item = this_item | push: util.title %}
+		{% assign this_util_cover_url = site.url | append: '/assets/images/hero/low/tech/TECH_0009.jpg' %}
+		{% assign this_item = this_item | push: this_util_cover_url %}
+		{% assign this_item = this_item | push: util.url %}
+		{% assign this_item = this_item | push: 'image' %}
+		{% assign this_item = this_item | push: 'image/jpeg' %}
+
+		{% assign all_utils = all_utils | push: this_item %}
+	{% endfor %}
+	{% assign all_utils_container = '' | split: '/' %}
+	{% assign all_utils_container = all_utils_container | push: all_utils %}
+	{% include grid_image_overlay_camera_list.html sectionid="utils-utils" list=all_utils_container cols=3 %}
