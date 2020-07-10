@@ -4,7 +4,7 @@ title: "Utils"
 active_title: 'Utils'
 ---
 	{% assign all_utils = '' | split: '/' %}
-	{% for utils in site.utils %}
+	{% for util in site.utils %}
 		{% assign this_item = '' | split: '/' %}
 
 		{% assign this_item = this_item | push: util.title %}
