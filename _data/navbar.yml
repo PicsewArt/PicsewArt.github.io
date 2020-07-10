@@ -7,14 +7,14 @@ left:
     url: '/posts/index.html'
   - title: 'Gallery'
     url: '/gallery/index.html'
-  - title: 'Creative'
-    url: '/creative/index.html'
+  # - title: 'Creative'
+  #   url: '/creative/index.html'
   # - title: 'Sample'
   #   url: '/sample/index.html'
 right:
-  - title: "Engines"
-    url: "/engines/index.html"
-    target: '_blank'
+  # - title: "Engines"
+  #   url: "/engines/index.html"
+  #   target: '_blank'
   - title: "Map"
     url: "/map/index.html"
     target: '_blank'
