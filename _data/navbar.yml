@@ -15,6 +15,9 @@ right:
   - title: "Engines"
     url: "/engines/index.html"
     target: '_blank'
+  - title: "Map"
+    url: "/map/index.html"
+    target: '_blank'
 #  - title: "Blogroll"
 #    url: "/blogroll/index.html"
   - title: 'About'
