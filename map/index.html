@@ -32,28 +32,38 @@ map:
   - title: "Search"
     url: "/search"
 ---
-<div>
-  <style type="text/css">
-    .see-through {
-      /* float: right;
-      display: block; */
-      max-width: 200px;
-      display: inline-block;
-      position: fixed;
-      right: 0;
-    }
-  </style>
-  <img class="see-through" src="{{ site.url }}/assets/images/through.png" />
-  <ul>
-  {% for item in page.map %}
-    <li><a href="{{ site.url }}{{ item.url }}">{{ item.title }}</a></li>
-    {% if item.sub.size > 0 %}
-      <ul>
-      {% for subitem in item.sub %}
-        <li><a href="{{ site.url }}{{ item.url }}{{ subitem.url }}">{{ subitem.title }}</a></li>
-      {% endfor %}
-      </ul>
-    {% endif %}
-  {% endfor %}
-  </ul>
+<style type="text/css">
+  .left .right {
+    width: 50%;
+  }
+  .right {
+    float: right;
+  }
+  .see-through {
+    float: right;
+    display: block;
+    max-width: 200px;
+  }
+</style>
+<div class="map-content">
+
+  <div class="right">
+    <img class="see-through" src="{{ site.url }}/assets/images/through.png" />
+  </div>
+
+  <div class="left">
+    <ul>
+    {% for item in page.map %}
+      <li><a href="{{ site.url }}{{ item.url }}">{{ item.title }}</a></li>
+      {% if item.sub.size > 0 %}
+        <ul>
+        {% for subitem in item.sub %}
+          <li><a href="{{ site.url }}{{ item.url }}{{ subitem.url }}">{{ subitem.title }}</a></li>
+        {% endfor %}
+        </ul>
+      {% endif %}
+    {% endfor %}
+    </ul>
+  </div>
+
 </div>
