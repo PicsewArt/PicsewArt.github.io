@@ -262,5 +262,5 @@ media:
   - url: "pen_0061.jpg"
     type: 'image'
     format: "jpeg"
-    date: 20200712T0180000+08:00
+    date: 20200712T180000+08:00
 ---
