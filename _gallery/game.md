@@ -31,7 +31,7 @@ media:
     type: 'image'
     format: "jpeg"
     date: 20200401T120000+08:00
-  - url: "ns_20200622.jpg"
+  - url: "ns_games.jpg"
     type: 'image'
     format: "jpeg"
     date: 20200622T013000+08:00
