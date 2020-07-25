@@ -1,6 +1,17 @@
 ---
 layout: default
 title: "Tweets"
+prelink_js: []
+prelink_css: ['/assets/gallery/sourcecode/css/blueimp-gallery.min.css', '/assets/gallery/sourcecode/css/blueimp-exception.css']
+afterlink_js: ['/assets/gallery/sourcecode/js/blueimp-gallery.min.js', '/assets/gallery/sourcecode/js/blueimp-binding.js']
+afterlink_css: []
+preload_js: []
+preload_css: []
+afterload_js: ['bindGalleryEventById("tweet-list");']
+afterload_css: []
+on_load:
+  call: ""
+  def: ''
 ---
 <style type="text/css">
   :root {
@@ -103,40 +114,43 @@ title: "Tweets"
     width: 100%;
   }
 </style>
-
-<div class="tweet-card">
-  <div class="tweet-left-panel">
-    <img class="user-avatar" src="{{ site.url }}/assets/images/avatar/avatar_color.png" />
-  </div>
-  <div class="tweet-right-panel">
-    <div class="tweet-user-info">
-      <span class="tweet-name"><a href="{{ site.url }}/about/">{{ site.author }}</a></span>
-      <span class="tweet-account"><a href="{{ site.url }}/about/">@picsew</a></span>
-      <span class="tweet-dot">·</span>
-      <span class="tweet-date">{{ tweet.date | date: "%b %d, %Y" }}</span>
+<div class="tweet-list" id="tweet-list">
+  {% for tweet in site.tweets %}
+  <div class="tweet-card">
+    <div class="tweet-left-panel">
+      <img class="user-avatar" src="{{ site.url }}/assets/images/avatar/avatar_color.png" />
     </div>
-    <div class="tweet-contents">
-      <div class="tweet-text">
-        <p>{{ tweet.text }}</p>
+    <div class="tweet-right-panel">
+      <div class="tweet-user-info">
+        <span class="tweet-name"><a href="{{ site.url }}/about/">{{ site.author }}</a></span>
+        <span class="tweet-account"><a href="{{ site.url }}/about/">@picsew</a></span>
+        <span class="tweet-dot">·</span>
+        <span class="tweet-date">{{ tweet.date | date: "%b %d, %Y" }}</span>
       </div>
-      {% if tweet.media.size > 0 %}
-      <div class="tweet-media">
-        {% for tweet_img in tweet.media %}
-        <div class="tweet-media-cell">
-          {% assign tweet_media_type = tweet_img.type | default: 'image' %}
-          {% assign tweet_media_format = tweet_img.format %}
-          {% assign tweet_media_folder = site.url | append: '/assets/tweets/' %}
-          {% assign tweet_media_original = tweet_media_folder | append: tweet_img.url %}
-          {% assign tweet_media_preview = tweet_media_folder | append: 'preview_' | append: tweet_img.url %}
-          <a href="{{ tweet_media_original }}" type="{{ tweet_media_type }}/{{ tweet_media_format }}"{% if tweet_media_type == 'video' %} data-poster="{{ tweet_media_preview }}" data-sources='[{ "href": "{{ tweet_media_original }}", "type": "{{ tweet_media_type }}/{{ tweet_media_format }}"}]'{% endif %}>
-            <img src="preview_{{ tweet_media_preview }}" />
-          </a>
+      <div class="tweet-contents">
+        <div class="tweet-text">
+          <p>{{ tweet.text }}</p>
         </div>
-        {% endfor %}
+        {% if tweet.media.size > 0 %}
+        <div class="tweet-media">
+          {% for tweet_img in tweet.media %}
+          <div class="tweet-media-cell">
+            {% assign tweet_media_type = tweet_img.type | default: 'image' %}
+            {% assign tweet_media_format = tweet_img.format %}
+            {% assign tweet_media_folder = site.url | append: '/assets/tweets/' %}
+            {% assign tweet_media_original = tweet_media_folder | append: tweet_img.url %}
+            {% assign tweet_media_preview = tweet_media_folder | append: 'preview_' | append: tweet_img.url %}
+            <a href="{{ tweet_media_original }}" type="{{ tweet_media_type }}/{{ tweet_media_format }}"{% if tweet_media_type == 'video' %} data-poster="{{ tweet_media_preview }}" data-sources='[{ "href": "{{ tweet_media_original }}", "type": "{{ tweet_media_type }}/{{ tweet_media_format }}"}]'{% endif %}>
+              <img src="preview_{{ tweet_media_preview }}" />
+            </a>
+          </div>
+          {% endfor %}
+        </div>
+        {% endif %}
       </div>
-      {% endif %}
     </div>
   </div>
+  {% endfor %}
 </div>
 
 {% include gallery_lightbox.html %}
