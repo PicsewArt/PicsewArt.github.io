@@ -97,7 +97,7 @@ defaults:
       path: ""
       type: tweets
     values:
-      layout: "tweet"
+      layout: "default"
       active_title: "Tweets"
   - scope:
       path: ""
