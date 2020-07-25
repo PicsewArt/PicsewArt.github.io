@@ -1,0 +1,142 @@
+---
+layout: default
+title: "Tweets"
+---
+<style type="text/css">
+  :root {
+    --tweet-avatar-length: 47px;
+    --tweet-user-font-size: 18px;
+    --tweet-user-line-height: 20px;
+    --tweet-text-font-size: 14px;
+    --tweet-text-line-height: 16px;
+    --tweet-color-white: #EDEDED;
+    --tweet-color-black: #000000;
+    --tweet-color-gray: #788D96;
+    --tweet-color-text: #212529;
+    --tweet-color-sky: #00BAF1;
+    --tweet-margin: 16px;
+  }
+  .tweet-card {
+    font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
+    max-width: 640px;
+    min-width: 320px;
+    border-radius: var(--tweet-margin);
+    border: 1px solid rgba(0, 0, 0, .125);
+    text-align: left;
+    margin: var(--tweet-margin) auto;
+    padding: var(--tweet-margin);
+    background-color: var(--tweet-color-light);
+    display: -webkit-flexbox;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    word-wrap: break-word;
+    align-items: flex-start;
+  }
+  .tweet-left-panel {
+    width: var(--tweet-avatar-length);
+  }
+  .tweet-right-panel {
+    flex: 1;
+    margin-left: var(--tweet-margin);
+  }
+  .tweet-user-avatar {
+    display: block;
+    width: var(--tweet-avatar-length);
+    height: var(--tweet-avatar-length);
+    border-radius: 50%;
+  }
+  .tweet-user-info {
+    height: var(--tweet-user-line-height);
+  }
+  .tweet-user-info .tweet-name {
+    color: var(--tweet-color-black);
+    font-weight: bold;
+    font-size: var(--tweet-user-font-size);
+    line-height: var(--tweet-user-line-height);
+  }
+  .tweet-user-info .tweet-account,
+  .tweet-user-info .tweet-dot,
+  .tweet-user-info .tweet-date {
+    color: var(--tweet-color-gray);
+    font-weight: 400;
+    font-size: var(--tweet-user-font-size);
+    line-height: var(--tweet-user-line-height);
+  }
+  .tweet-user-info .tweet-name a {
+    text-decoration: none;
+    color: var(--tweet-color-black);
+  }
+  .tweet-user-info .tweet-account a {
+    text-decoration: none;
+    color: var(--tweet-color-gray);
+  }
+  .tweet-user-info .tweet-name a:hover,
+  .tweet-user-info .tweet-account a:hover {
+    text-decoration: underline;
+    color: var(--tweet-color-sky);
+  }
+  .tweet-contents,
+  .tweet-contents .tweet-text,
+  .tweet-contents .tweet-text p {
+    color: var(--tweet-color-text);
+    font-size: var(--tweet-text-font-size);
+    font-weight: 400;
+    line-height: var(--tweet-text-line-height);
+    margin: 10px auto;
+  }
+  .tweet-media {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+  .tweet-media .tweet-media-cell {
+    -ms-flex: 0 0 50.00%;
+    flex: 0 0 50.00%;
+    box-sizing: border-box;
+  }
+  .tweet-media .tweet-media-cell img {
+    display: block;
+    width: 100%;
+  }
+</style>
+
+<div class="tweet-card">
+  <div class="tweet-left-panel">
+    <img class="user-avatar" src="{{ site.url }}/assets/images/avatar/avatar_color.png" />
+  </div>
+  <div class="tweet-right-panel">
+    <div class="tweet-user-info">
+      <span class="tweet-name"><a href="{{ site.url }}/about/">{{ site.author }}</a></span>
+      <span class="tweet-account"><a href="{{ site.url }}/about/">@picsew</a></span>
+      <span class="tweet-dot">·</span>
+      <span class="tweet-date">{{ tweet.date | date: "%b %d, %Y" }}</span>
+    </div>
+    <div class="tweet-contents">
+      <div class="tweet-text">
+        <p>{{ tweet.text }}</p>
+      </div>
+      {% if tweet.media.size > 0 %}
+      <div class="tweet-media">
+        {% for tweet_img in tweet.media %}
+        <div class="tweet-media-cell">
+          {% assign tweet_media_type = tweet_img.type | default: 'image' %}
+          {% assign tweet_media_format = tweet_img.format %}
+          {% assign tweet_media_folder = site.url | append: '/assets/tweets/' %}
+          {% assign tweet_media_original = tweet_media_folder | append: tweet_img.url %}
+          {% assign tweet_media_preview = tweet_media_folder | append: 'preview_' | append: tweet_img.url %}
+          <a href="{{ tweet_media_original }}" type="{{ tweet_media_type }}/{{ tweet_media_format }}"{% if tweet_media_type == 'video' %} data-poster="{{ tweet_media_preview }}" data-sources='[{ "href": "{{ tweet_media_original }}", "type": "{{ tweet_media_type }}/{{ tweet_media_format }}"}]'{% endif %}>
+            <img src="preview_{{ tweet_media_preview }}" />
+          </a>
+        </div>
+        {% endfor %}
+      </div>
+      {% endif %}
+    </div>
+  </div>
+</div>
+
+{% include gallery_lightbox.html %}
