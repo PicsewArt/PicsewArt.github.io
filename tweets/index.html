@@ -147,25 +147,30 @@ title: "Tweets"
   {% assign tweet_timeline = site.tweets | sort: 'date' | reverse %}
   {% assign tweet_gallery_binding_ids = '' | split: ',' %}
   {% for tweet in tweet_timeline %}
+
   <div class="tweet-card">
+
     <div class="tweet-left-panel">
       <img class="tweet-user-avatar" src="{{ site.url }}/assets/images/avatar/avatar_color.png" />
     </div>
+
     <div class="tweet-right-panel">
+
       <div class="tweet-user-info">
         <span class="tweet-name"><a href="{{ site.url }}/about/">{{ site.author }}</a></span>
         <span class="tweet-account"><a href="{{ site.url }}/about/">@picsew</a></span>
         <span class="tweet-dot">·</span>
         <span class="tweet-date">{{ tweet.date | date: "%b %d, %Y" }}</span>
       </div>
-      {% assign tweet_binding_id = 'tweet-contents-' | append: forloop.index %}
-      {% assign tweet_gallery_binding_ids = tweet_gallery_binding_ids | push: tweet_binding_id %}
-      <div class="tweet-contents" id="{{ tweet_gallery_binding_ids }}">
+
+      <div class="tweet-contents">
         <div class="tweet-text">
           <p>{{ tweet.text }}</p>
         </div>
         {% if tweet.media.size > 0 %}
-        <div class="tweet-media">
+          {% assign tweet_binding_id = 'tweet-contents-' | append: forloop.index %}
+          {% assign tweet_gallery_binding_ids = tweet_gallery_binding_ids | push: tweet_binding_id %}
+        <div class="tweet-media" id="{{ tweet_gallery_binding_ids }}">
           {% assign tweet_media_size_modulo2 = tweet.media.size | modulo: 2 %}
           {% if tweet.media.size == 1 %}
             {% assign tweet_media_cols = 1 %}
