@@ -95,6 +95,12 @@ defaults:
       show_hero: true
   - scope:
       path: ""
+      type: tweets
+    values:
+      layout: "tweet"
+      active_title: "Tweets"
+  - scope:
+      path: ""
       type: gallery
     values:
       layout: "album"
