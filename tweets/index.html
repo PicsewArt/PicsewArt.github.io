@@ -1,9 +1,20 @@
 ---
 layout: default
 title: "Tweets"
+prelink_js: []
+prelink_css: ['/assets/gallery/sourcecode/css/blueimp-gallery.min.css', '/assets/gallery/sourcecode/css/blueimp-exception.css']
+afterlink_js: ['/assets/gallery/sourcecode/js/blueimp-gallery.min.js', '/assets/gallery/sourcecode/js/blueimp-binding.js']
+afterlink_css: []
+preload_js: []
+preload_css: []
+afterload_js: ['tweetsBinding();']
+afterload_css: []
+on_load:
+  call: ""
+  def: ''
 ---
-<link rel="stylesheet" href="{{ site.url }}/assets/gallery/sourcecode/css/blueimp-gallery.min.css">
-<link rel="stylesheet" href="{{ site.url }}/assets/gallery/sourcecode/css/blueimp-exception.css">
+<!-- <link rel="stylesheet" href="{{ site.url }}/assets/gallery/sourcecode/css/blueimp-gallery.min.css">
+<link rel="stylesheet" href="{{ site.url }}/assets/gallery/sourcecode/css/blueimp-exception.css"> -->
 <style type="text/css">
   :root {
     --tweet-avatar-length: 47px;
@@ -206,11 +217,13 @@ title: "Tweets"
 
 {% include gallery_lightbox.html %}
 
-<script src="{{ site.url }}/assets/gallery/sourcecode/js/blueimp-gallery.min.js" charset="utf-8"></script>
-<script src="{{ sitelurl }}/assets/gallery/sourcecode/js/blueimp-binding.js" charset="utf-8"></script>
+<!-- <script src="{{ site.url }}/assets/gallery/sourcecode/js/blueimp-gallery.min.js" charset="utf-8"></script>
+<script src="{{ sitelurl }}/assets/gallery/sourcecode/js/blueimp-binding.js" charset="utf-8"></script> -->
 
 <script type="text/javascript">
-  {% for binding_id in tweet_gallery_binding_ids %}
-  bindGalleryEventById({{ binding_id}});
-  {% endfor %}
+  function tweetsBinding() {
+    {% for binding_id in tweet_gallery_binding_ids %}
+    bindGalleryEventById('{{ binding_id}}');
+    {% endfor %}
+  }
 </script>
