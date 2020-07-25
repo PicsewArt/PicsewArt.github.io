@@ -35,7 +35,7 @@ title: "Navigator"
       <div class="page">
         {% for app in section_as_page.links %}
         <div class="app" data-tooltip="{{ app.title }}">
-          <div class="app-icon"><a class="app-icon-link" href="{{ app.url }}" target="__black"><img class="app-icon-img" src="./icons/{% if app.image.size > 0 %}{{ app.image }}{% else %}general{% endif %}.png" /></a></div>
+          <div class="app-icon"><a class="app-icon-link" href="{{ app.url }}" target="__black"><img class="app-icon-img" src="../icons/{% if app.image.size > 0 %}{{ app.image }}{% else %}general{% endif %}.png" /></a></div>
           <div class="app-name tooltip"><a class="app-name-link" href="{{ app.url }}" target="__black">{{ app.title }}</a><span class="tooltip-text">{{ app.title }}</span></div>
         </div>
         {% endfor %}
@@ -45,7 +45,7 @@ title: "Navigator"
       <div class="bottom-bar">
         {% for app in site.data.navigator.first.sections.first.links limit: 4 %}
         <div class="app">
-          <div class="app-icon"><a class="app-icon-link" href="{{ app.url }}" target="__black"><img class="app-icon-img" src="./icons/{% if app.image.size > 0 %}{{ app.image }}{% else %}general{% endif %}.png" /></a></div>
+          <div class="app-icon"><a class="app-icon-link" href="{{ app.url }}" target="__black"><img class="app-icon-img" src="../icons/{% if app.image.size > 0 %}{{ app.image }}{% else %}general{% endif %}.png" /></a></div>
           <div class="app-name tooltip"><a class="app-name-link" href="{{ app.url }}" target="__black">{{ app.title }}</a><span class="tooltip-text">{{ app.title }}</span></div>
         </div>
         {% endfor %}
