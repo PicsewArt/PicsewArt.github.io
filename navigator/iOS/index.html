@@ -1,0 +1,73 @@
+---
+layout: null
+title: "Navigator"
+---
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>{{ site.name }} | {{ page.title }}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+
+<body>
+  <!-- partial:index.partial.html -->
+  <div class="screen">
+    {% for section_as_page in site.data.navigator.first.sections %}
+    <input type="radio" id="_p{{ forloop.index0 }}" name="pg"{% if forloop.index0 == 0 %} checked="checked"{% endif %} />
+    {% endfor%}
+
+    <div class="status">
+      <div class="carrier">Picsew</div>
+      <div class="clock" id="time-spot">12:00:00</div>
+      <div class="battery">
+        <div class="battery-meter">
+          <div class="battery-meter-inner"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="pages">
+      {% for section_as_page in site.data.navigator.first.sections %}
+      <div class="page">
+        {% for app in section_as_page.links %}
+        <div class="app" data-tooltip="{{ app.title }}">
+          <div class="app-icon"><a class="app-icon-link" href="{{ app.url }}" target="__black"><img class="app-icon-img" src="./icons/{% if app.image.size > 0 %}{{ app.image }}{% else %}general{% endif %}.png" /></a></div>
+          <div class="app-name tooltip"><a class="app-name-link" href="{{ app.url }}" target="__black">{{ app.title }}</a><span class="tooltip-text">{{ app.title }}</span></div>
+        </div>
+        {% endfor %}
+      </div>
+      {% endfor %}
+
+      <div class="bottom-bar">
+        {% for app in site.data.navigator.first.sections.first.links limit: 4 %}
+        <div class="app">
+          <div class="app-icon"><a class="app-icon-link" href="{{ app.url }}" target="__black"><img class="app-icon-img" src="./icons/{% if app.image.size > 0 %}{{ app.image }}{% else %}general{% endif %}.png" /></a></div>
+          <div class="app-name tooltip"><a class="app-name-link" href="{{ app.url }}" target="__black">{{ app.title }}</a><span class="tooltip-text">{{ app.title }}</span></div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+
+    <div class="pagination">
+      {% for section_as_page in site.data.navigator.first.sections %}
+      <label class="pagination-page tooltip" for="_p{{ forloop.index0 }}"><span class="pagination-page-dot"></span><span class="tooltip-text">{{ section_as_page.name }}</span></label>
+      {% endfor %}
+    </div>
+  </div>
+  <!-- partial -->
+  <script src="./date.js" charset="utf-8"></script>
+  <script type="text/javascript">
+    function updateTime() {
+      date = new Date();
+      document.getElementById("time-spot").innerHTML = dateFormat("HH:MM:SS", date);
+      setInterval("updateTime()", 1000);
+    }
+    updateTime();
+  </script>
+</body>
+
+</html>
