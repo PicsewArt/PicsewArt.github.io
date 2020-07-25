@@ -210,9 +210,9 @@ on_load:
                 {% assign tweet_media_preview = tweet_media_folder | append: tweet_img.url | append: '.jpg' %}
               {% endif %}
             {% else %}
+              {% assign tweet_media_folder = site.url | append: '/assets/tweets/' %}
               {% assign tweet_media_original = tweet_media_folder | append: tweet_img.url %}
               {% assign tweet_media_preview = tweet_media_folder | append: 'preview_' | append: tweet_img.url %}
-              {% assign tweet_media_folder = site.url | append: '/assets/tweets/' %}
             {% endif %}
             <a href="{{ tweet_media_original }}" type="{{ tweet_media_type }}/{{ tweet_media_format }}"{% if tweet_media_type == 'video' %} data-poster="{{ tweet_media_preview }}" data-sources='[{ "href": "{{ tweet_media_original }}", "type": "{{ tweet_media_type }}/{{ tweet_media_format }}"}]'{% endif %}>
               <img src="{{ tweet_media_preview }}" />
