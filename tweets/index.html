@@ -148,7 +148,8 @@ on_load:
   }
 </style>
 <div class="tweet-list" id="tweet-list">
-  {% for tweet in site.tweets %}
+  {% assign tweet_timeline = site.tweets | sort: 'date' | reverse %}
+  {% for tweet in tweet_timeline %}
   <div class="tweet-card">
     <div class="tweet-left-panel">
       <img class="tweet-user-avatar" src="{{ site.url }}/assets/images/avatar/avatar_color.png" />
