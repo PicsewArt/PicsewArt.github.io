@@ -166,7 +166,6 @@ on_load:
         {% if tweet.media.size > 0 %}
         <div class="tweet-media">
           {% assign tweet_media_size_modulo2 = tweet.media.size | modulo: 2 %}
-          {% for tweet_img in tweet.media %}
           {% if tweet.media.size == 1 %}
             {% assign tweet_media_cols = 1 %}
           {% elsif tweet.media.size == 2 %}
@@ -178,8 +177,9 @@ on_load:
               {% assign tweet_media_cols = 3 %}
             {% endif %}
           {% endif %}
-          {% capture tweet_media_cols %}style="{% include grid_cols_to_style.html cols=tweet_media_cols %}{% endcapture %}
-          <div class="tweet-media-cell">
+          
+          {% for tweet_img in tweet.media %}
+          <div class="tweet-media-cell" style="{% include grid_cols_to_style.html cols=tweet_media_cols %}">
             {% assign tweet_media_type = tweet_img.type | default: 'image' %}
             {% assign tweet_media_format = tweet_img.format %}
             {% assign tweet_media_folder = site.url | append: '/assets/tweets/' %}
