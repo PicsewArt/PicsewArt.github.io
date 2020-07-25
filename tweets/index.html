@@ -169,7 +169,7 @@ on_load:
           {% for tweet_img in tweet.media %}
           {% if tweet.media.size == 1 %}
             {% assign tweet_media_cols = 1 %}
-          {% elseif tweet.media.size == 2 %}
+          {% elsif tweet.media.size == 2 %}
             {% assign tweet_media_cols = 2 %}
           {% else %}
             {% if tweet_media_size_modulo2 == 0 %}
