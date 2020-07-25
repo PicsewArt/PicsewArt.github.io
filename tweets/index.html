@@ -20,10 +20,13 @@ on_load:
     --tweet-user-line-height: 20px;
     --tweet-text-font-size: 14px;
     --tweet-text-line-height: 16px;
-    --tweet-color-white: #EDEDED;
+    --tweet-color-light: #EDEDED;
+    --tweet-color-dark: #515F65;
+    --tweet-color-white: #ffffff;
     --tweet-color-black: #000000;
     --tweet-color-gray: #788D96;
-    --tweet-color-text: #212529;
+    --tweet-color-text-light: #EDEDED;
+    --tweet-color-text-dark: #212529;
     --tweet-color-sky: #00BAF1;
     --tweet-margin: 16px;
   }
@@ -32,11 +35,9 @@ on_load:
     max-width: 640px;
     min-width: 320px;
     border-radius: var(--tweet-margin);
-    border: 1px solid rgba(0, 0, 0, .125);
     text-align: left;
     margin: var(--tweet-margin) auto;
     padding: var(--tweet-margin);
-    background-color: var(--tweet-color-light);
     display: -webkit-flexbox;
     display: -ms-flexbox;
     display: flex;
@@ -45,6 +46,14 @@ on_load:
     flex-direction: row;
     word-wrap: break-word;
     align-items: flex-start;
+  }
+  .light .tweet-card {
+    border: 1px solid rgba(255, 255, 255, .125);
+    background-color: var(--tweet-color-light);
+  }
+  .dark .tweet-card {
+    border: 1px solid rgba(255, 255, 255, .125);
+    background-color: var(--tweet-color-dark);
   }
   .tweet-left-panel {
     width: var(--tweet-avatar-length);
@@ -63,10 +72,15 @@ on_load:
     height: var(--tweet-user-line-height);
   }
   .tweet-user-info .tweet-name {
-    color: var(--tweet-color-black);
     font-weight: bold;
     font-size: var(--tweet-user-font-size);
     line-height: var(--tweet-user-line-height);
+  }
+  .light .tweet-user-info .tweet-name {
+    color: var(--tweet-color-black);
+  }
+  .dark .tweet-user-info .tweet-name {
+    color: var(--tweet-color-white);
   }
   .tweet-user-info .tweet-account,
   .tweet-user-info .tweet-dot,
@@ -78,7 +92,12 @@ on_load:
   }
   .tweet-user-info .tweet-name a {
     text-decoration: none;
+  }
+  .light .tweet-user-info .tweet-name a {
     color: var(--tweet-color-black);
+  }
+  .dark .tweet-user-info .tweet-name a {
+    color: var(--tweet-color-white);
   }
   .tweet-user-info .tweet-account a {
     text-decoration: none;
@@ -92,11 +111,20 @@ on_load:
   .tweet-contents,
   .tweet-contents .tweet-text,
   .tweet-contents .tweet-text p {
-    color: var(--tweet-color-text);
     font-size: var(--tweet-text-font-size);
     font-weight: 400;
     line-height: var(--tweet-text-line-height);
     margin: 10px auto;
+  }
+  .light .tweet-contents,
+  .light .tweet-contents .tweet-text,
+  .light .tweet-contents .tweet-text p {
+    color: var(--tweet-color-text-light);
+  }
+  .dark .tweet-contents,
+  .dark .tweet-contents .tweet-text,
+  .dark .tweet-contents .tweet-text p {
+    color: var(--tweet-color-text-dark);
   }
   .tweet-media {
     display: -ms-flexbox;
