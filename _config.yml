@@ -71,6 +71,8 @@ collections:
     sort_by: title
   posts:
     output: true
+  tweets:
+    output: true
   creative:
     output: true
     sort_by: title
