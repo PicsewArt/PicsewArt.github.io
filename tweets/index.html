@@ -1,18 +1,9 @@
 ---
 layout: default
 title: "Tweets"
-prelink_js: []
-prelink_css: ['/assets/gallery/sourcecode/css/blueimp-gallery.min.css', '/assets/gallery/sourcecode/css/blueimp-exception.css']
-afterlink_js: ['/assets/gallery/sourcecode/js/blueimp-gallery.min.js', '/assets/gallery/sourcecode/js/blueimp-binding.js']
-afterlink_css: []
-preload_js: []
-preload_css: []
-afterload_js: ['bindGalleryEventById("tweet-list");']
-afterload_css: []
-on_load:
-  call: ""
-  def: ''
 ---
+<link rel="stylesheet" href="{{ site.url }}/assets/gallery/sourcecode/css/blueimp-gallery.min.css">
+<link rel="stylesheet" href="{{ site.url }}/assets/gallery/sourcecode/css/blueimp-exception.css">
 <style type="text/css">
   :root {
     --tweet-avatar-length: 47px;
@@ -152,8 +143,9 @@ on_load:
     width: 100%;
   }
 </style>
-<div class="tweet-list" id="tweet-list">
+<div class="tweet-list">
   {% assign tweet_timeline = site.tweets | sort: 'date' | reverse %}
+  {% assign tweet_gallery_binding_ids = '' | split: ',' %}
   {% for tweet in tweet_timeline %}
   <div class="tweet-card">
     <div class="tweet-left-panel">
@@ -166,7 +158,9 @@ on_load:
         <span class="tweet-dot">·</span>
         <span class="tweet-date">{{ tweet.date | date: "%b %d, %Y" }}</span>
       </div>
-      <div class="tweet-contents">
+      {% assign tweet_binding_id = 'tweet-contents-' | append: forloop.index %}
+      {% assign tweet_gallery_binding_ids = tweet_gallery_binding_ids | push: tweet_binding_id %}
+      <div class="tweet-contents" id="{{ tweet_gallery_binding_ids }}">
         <div class="tweet-text">
           <p>{{ tweet.text }}</p>
         </div>
@@ -206,3 +200,12 @@ on_load:
 </div>
 
 {% include gallery_lightbox.html %}
+
+<script src="{{ site.url }}/assets/gallery/sourcecode/js/blueimp-gallery.min.js" charset="utf-8"></script>
+<script src="{{ sitelurl }}/assets/gallery/sourcecode/js/blueimp-binding.js" charset="utf-8"></script>
+
+<script type="text/javascript">
+  {% for binding_id in tweet_gallery_binding_ids %}
+  bindGalleryEventById({{ binding_id}});
+  {% endfor %}
+</script>
