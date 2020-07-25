@@ -33,6 +33,9 @@ title: "Navigator"
     <div class="pages">
       {% for section_as_page in site.data.navigator.first.sections %}
       <div class="page">
+        <div class="page-title">
+          <h4>{{ section_as_page.title }}</h4>
+        </div>
         {% for app in section_as_page.links %}
         <div class="app" data-tooltip="{{ app.title }}">
           <div class="app-icon"><a class="app-icon-link" href="{{ app.url }}" target="__black"><img class="app-icon-img" src="../icons/{% if app.image.size > 0 %}{{ app.image }}{% else %}general{% endif %}.png" /></a></div>
