@@ -127,14 +127,18 @@ on_load:
     color: var(--tweet-color-text-light);
   }
   .tweet-media {
-    display: -ms-flexbox;
     display: flex;
-    -ms-flex-wrap: wrap;
+    display: -webkit-flex;
+    display: -ms-flexbox;
     flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+    border-radius: 5px;
   }
   .tweet-media .tweet-media-cell {
+    /* flex: 0 0 50.00%;
     -ms-flex: 0 0 50.00%;
-    flex: 0 0 50.00%;
+    -webkit-flex: 0 0 50.00%; */
     box-sizing: border-box;
   }
   .tweet-media .tweet-media-cell img {
@@ -161,7 +165,20 @@ on_load:
         </div>
         {% if tweet.media.size > 0 %}
         <div class="tweet-media">
+          {% assign tweet_media_size_modulo2 = tweet.media.size | modulo: 2 %}
           {% for tweet_img in tweet.media %}
+          {% if tweet.media.size == 1 %}
+            {% assign tweet_media_cols = 1 %}
+          {% elseif tweet.media.size == 2 %}
+            {% assign tweet_media_cols = 2 %}
+          {% else %}
+            {% if tweet_media_size_modulo2 == 0 %}
+              {% assign tweet_media_cols = 2 %}
+            {% else %}
+              {% assign tweet_media_cols = 3 %}
+            {% endif %}
+          {% endif %}
+          {% capture tweet_media_cols %}style="{% include grid_cols_to_style.html cols=tweet_media_cols %}{% endcapture %}
           <div class="tweet-media-cell">
             {% assign tweet_media_type = tweet_img.type | default: 'image' %}
             {% assign tweet_media_format = tweet_img.format %}
