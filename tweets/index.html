@@ -196,7 +196,6 @@ on_load:
           {% endif %}
 
           {% for tweet_img in tweet.media %}
-          <div class="tweet-media-cell" style="{% include grid_cols_to_style.html cols=tweet_media_cols %}">
             {% assign tweet_media_type = tweet_img.type | default: 'image' %}
             {% assign tweet_media_format = tweet_img.format %}
             {% if tweet_img.gallery %}
@@ -214,7 +213,8 @@ on_load:
               {% assign tweet_media_original = tweet_media_folder | append: tweet_img.url %}
               {% assign tweet_media_preview = tweet_media_folder | append: 'preview_' | append: tweet_img.url %}
             {% endif %}
-            <a href="{{ tweet_media_original }}" type="{{ tweet_media_type }}/{{ tweet_media_format }}"{% if tweet_media_type == 'video' %} data-poster="{{ tweet_media_preview }}" data-sources='[{ "href": "{{ tweet_media_original }}", "type": "{{ tweet_media_type }}/{{ tweet_media_format }}"}]'{% endif %}>
+          <div class="tweet-media-cell" style="{% include grid_cols_to_style.html cols=tweet_media_cols %}" type="{{ tweet_media_type }}/{{ tweet_media_format }}"{% if tweet_media_type == 'video' %} data-poster="{{ tweet_media_preview }}" data-sources='[{ "href": "{{ tweet_media_original }}", "type": "{{ tweet_media_type }}/{{ tweet_media_format }}"}]'{% endif %}>
+            <a href="{{ tweet_media_original }}">
               <img src="{{ tweet_media_preview }}" />
             </a>
           </div>
