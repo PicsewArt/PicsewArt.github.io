@@ -181,7 +181,7 @@ on_load:
         {% if tweet.media.size > 0 %}
           {% assign tweet_binding_id = 'tweet-contents-' | append: forloop.index %}
           {% assign tweet_gallery_binding_ids = tweet_gallery_binding_ids | push: tweet_binding_id %}
-        <div class="tweet-media" id="{{ tweet_gallery_binding_ids }}">
+        <div class="tweet-media" id="{{ tweet_binding_id }}">
           {% assign tweet_media_size_modulo2 = tweet.media.size | modulo: 2 %}
           {% if tweet.media.size == 1 %}
             {% assign tweet_media_cols = 1 %}
