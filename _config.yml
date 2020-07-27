@@ -43,9 +43,9 @@ foorer_list_size: 5
 hero:
   url: 'HERO_0040.jpg'
   format: 'jpeg'
-  author: "Chiu"
-  name: 'Señorita'
-  site: 'Señorita'
+  author: "Picsew"
+  name: 'Picsew'
+  site: 'Picsew'
   path: '/assets/images/hero'
 
 highlighter: rouge
