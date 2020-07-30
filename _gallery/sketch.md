@@ -283,8 +283,68 @@ media:
     type: 'image'
     format: "jpeg"
     date: 20200725T140000+08:00
-  - url: "pen_0067.jpg"
+  - url: "$1"
     type: 'image'
     format: "jpeg"
-    date: 20200725T203000+08:00
+    date: 20200730T093000+08:00
+  - url: "pen_0068.jpg"
+    type: 'image'
+    format: "jpeg"
+    date: 20200730T093000+08:00
+  - url: "pen_0069.jpg"
+    type: 'image'
+    format: "jpeg"
+    date: 20200730T093000+08:00
+  - url: "pen_0070.jpg"
+    type: 'image'
+    format: "jpeg"
+    date: 20200730T093000+08:00
+  - url: "pen_0071.jpg"
+    type: 'image'
+    format: "jpeg"
+    date: 20200730T093000+08:00
+  - url: "pen_0073.jpg"
+    type: 'image'
+    format: "jpeg"
+    date: 20200730T093000+08:00
+  - url: "pen_0074.jpg"
+    type: 'image'
+    format: "jpeg"
+    date: 20200730T093000+08:00
+  - url: "pen_0075.jpg"
+    type: 'image'
+    format: "jpeg"
+    date: 20200730T093000+08:00
+  - url: "pen_0076.jpg"
+    type: 'image'
+    format: "jpeg"
+    date: 20200730T093000+08:00
+  - url: "pen_0078.jpg"
+    type: 'image'
+    format: "jpeg"
+    date: 20200730T093000+08:00
+  - url: "pen_0079.jpg"
+    type: 'image'
+    format: "jpeg"
+    date: 20200730T093000+08:00
+  - url: "pen_0080.jpg"
+    type: 'image'
+    format: "jpeg"
+    date: 20200730T093000+08:00
+  - url: "pen_0081.jpg"
+    type: 'image'
+    format: "jpeg"
+    date: 20200730T093000+08:00
+  - url: "pen_0072.jpg"
+    type: 'image'
+    format: "jpeg"
+    date: 20200730T093000+08:00
+  - url: "pen_0077.jpg"
+    type: 'image'
+    format: "jpeg"
+    date: 20200730T093000+08:00
+  - url: "pen_0082.jpg"
+    type: 'image'
+    format: "jpeg"
+    date: 20200730T093000+08:00
 ---
