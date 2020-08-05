@@ -3,9 +3,8 @@ layout: default
 title: "Cheats"
 active_title： "Cheats"
 ---
-	<!-- BEGIN CHEATS BLOCK -->
-    <ul>
-	{% for cheat in site.cheats %}
-	    <li><a href="{{ cheat.url }}">{{ cheat.title }}</a></li>
-	{% endfor %}
-	</ul>
+<!-- BEGIN CHEATS BLOCK -->
+<ul>{% for cheat in site.cheats %}
+<li><a href="{{ cheat.url }}">{{ cheat.title }}</a></li>
+{% endfor %}
+</ul>
