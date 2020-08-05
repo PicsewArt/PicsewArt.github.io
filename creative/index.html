@@ -9,6 +9,7 @@ cols: 2
 ---
 {% assign converted_list = '' | split: '/' %}
 {% for create in site.creative %}
+    {% if page.dispaly %}
 	{% assign tempSubArray = '' | split: '/' %}
 	{% assign the_creative_img = site.url | append: site.path.images | append: '/creative/' | append: create.cover.url %}
 
@@ -52,6 +53,7 @@ cols: 2
 	{% endif %}
 
 	{% assign converted_list = converted_list | push: tempSubArray %}
+	{% endif %}
 {% endfor %}
 
 {% assign outer_list = '' | split: '/' %}

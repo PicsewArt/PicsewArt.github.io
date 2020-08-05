@@ -76,10 +76,7 @@ collections:
   creative:
     output: true
     sort_by: title
-  utils:
-    output: true
-    sort_by: title
-  music:
+  cheats:
     output: true
     sort_by: title
 
@@ -125,16 +122,10 @@ defaults:
       active_title: "Creative"
   - scope:
       path: ""
-      type: utils
+      type: cheats
     values:
-      # layout: ""
-      active_title: "Utils"
-  - scope:
-      path: ""
-      type: music
-    values:
-      layout: "music"
-      active_title: "Music"
+      layout: "post"
+      active_title: "Cheats"
 
 path:
   assets: "/assets"

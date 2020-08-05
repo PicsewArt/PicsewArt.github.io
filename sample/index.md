@@ -336,7 +336,7 @@ class Untitled {
 
 ### Half Panel Overlay Image
 
-<blockquote>{% include image_overlay_half_panel.html title=site.alias desc=site.description image="/assets/images/avatar_painting_full.jpg" href=site.url readmore="Read More" %}</blockquote>
+<blockquote>{% include image_overlay_half_panel.html title=site.alias desc=site.description image="/assets/images/forest.jpg" href=site.url readmore="Read More" %}</blockquote>
 
 ### Full Panel Overlay Image
 
@@ -344,7 +344,7 @@ class Untitled {
 
 ## Fade Framed Overlay Image
 
-<blockquote>{% include image_overlay_fade_framed.html title=site.alias desc=site.description image="/assets/images/avatar_painting_full.jpg" href=site.url %}</blockquote>
+<blockquote>{% include image_overlay_fade_framed.html title=site.alias desc=site.description image="/assets/images/forest.jpg" href=site.url %}</blockquote>
 
 ## Dropping Overlay Image
 
@@ -360,7 +360,7 @@ class Untitled {
 
 ## Scale Detailed Overlay Image
 
-<blockquote>{% include image_overlay_scale_detail.html title='Te Quiero <span>Lento</span>' desc=site.description image="/assets/images/avatar_painting_full.jpg" href=site.url %}</blockquote>
+<blockquote>{% include image_overlay_scale_detail.html title='Te Quiero <span>Lento</span>' desc=site.description image="/assets/images/forest.jpg" href=site.url %}</blockquote>
 
 # Music
 
@@ -502,7 +502,7 @@ int main(int argc, char *argv[]) {
 
 ### Tinted Post Card
 
-<blockquote>{% include card_post_tinted.html title=site.name desc=site.description image='/assets/images/avatar_painting_full.jpg' href=site.url color='green' button='View More' %}</blockquote>
+<blockquote>{% include card_post_tinted.html title=site.name desc=site.description image='/assets/images/forest.jpg' href=site.url color='green' button='View More' %}</blockquote>
 
 # Chat List
 
