@@ -27,6 +27,6 @@ cover:
 ## Death Toggle
 * `death.toggle false`
 
-# Milestone
+## Milestone
 
 * `aspirations.complete_current_milestone`
