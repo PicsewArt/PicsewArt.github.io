@@ -173,7 +173,7 @@ sudo pacman -S fcitx-gtk2 fcitx-gtk3 fcitx-qt4 fcitx-qt5
 
 #### 解决中文输入法无法切换问题
 
-添加文件 ``~/.xprofile`:
+添加文件 `~/.xprofile`:
 
 ```sh
 export GTK_MODULE=fcitx
