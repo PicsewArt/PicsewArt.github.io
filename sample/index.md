@@ -74,7 +74,7 @@ And this is a {% include button_round.html title='Download' href=site.url svg=si
 
 ### Drop-down Buttons
 
-<blockquote>{% include button_drop_down.html title='Download' fa='download' list='macOS Catalina##/assets/other/macOS-Catalina-10.15.5-19F96-MAS.torrent,,macOS High Sierra##/assets/other/macOS-High-Sierra-10.13.6-17G2208-15P6703-MAS.torrent,,macOS Mojave##/assets/other/macOS-Mojave-10.14.6-18G103-MAS.torrent,,macOS Sierra##macOS-Sierra-10.12.6-16G29-MAS.torrent' %}</blockquote>
+<blockquote>{% include button_drop_down.html title='Download' fa='download' list='macOS Catalina##/assets/ats/macOS-Catalina-10.15.5-19F96-MAS.torrent,,macOS High Sierra##/assets/ats/macOS-High-Sierra-10.13.6-17G2208-15P6703-MAS.torrent,,macOS Mojave##/assets/ats/macOS-Mojave-10.14.6-18G103-MAS.torrent,,macOS Sierra##/assets/ats/macOS-Sierra-10.12.6-16G29-MAS.torrent' %}</blockquote>
 
 # Keyboard
 
