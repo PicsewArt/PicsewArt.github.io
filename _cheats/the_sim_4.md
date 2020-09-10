@@ -1,5 +1,5 @@
 ---
-title: "The Sim 4"
+title: "The Sim 4 cheats"
 cover:
   url: "the_sim_4.jpg"
   format: "jpeg"

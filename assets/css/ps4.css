@@ -1,0 +1,94 @@
+---
+layout: null
+---
+i.ps4-l1,
+i.ps4-l2,
+i.ps4-r1,
+i.ps4-r2,
+i.ps4-left,
+i.ps4-right,
+i.ps4-up,
+i.ps4-down,
+i.ps4-triangle,
+i.ps4-t,
+i.ps4-square,
+i.ps4-s,
+i.ps4-x,
+i.ps4-circle,
+i.ps4-c {
+  display: inline-block;
+}
+
+i.ps4-l2,
+i.ps4-r2,
+i.ps4-left,
+i.ps4-right,
+i.ps4-up,
+i.ps4-down,
+i.ps4-triangle,
+i.ps4-t,
+i.ps4-square,
+i.ps4-s,
+i.ps4-x,
+i.ps4-circle,
+i.ps4-c {
+  height: 30px;
+  width: 30px;
+}
+
+i.ps4-l1,
+i.ps4-r1 {
+  height: 30px;
+  width: 47px;
+}
+/* ----------------- */
+i.ps4-l1 {
+  background-image: url('{{ site.url }}/assets/images/ps4/l1.png');
+}
+
+i.ps4-l2 {
+  background-image: url('{{ site.url }}/assets/images/ps4/l2.png');
+}
+
+i.ps4-r1 {
+  background-image: url('{{ site.url }}/assets/images/ps4/r1.png');
+}
+
+i.ps4-r2 {
+  background-image: url('{{ site.url }}/assets/images/ps4/r2.png');
+}
+
+i.ps4-left {
+  background-image: url('{{ site.url }}/assets/images/ps4/left.png');
+}
+
+i.ps4-right {
+  background-image: url('{{ site.url }}/assets/images/ps4/right.png');
+}
+
+i.ps4-up {
+  background-image: url('{{ site.url }}/assets/images/ps4/up.png');
+}
+
+i.ps4-down {
+  background-image: url('{{ site.url }}/assets/images/ps4/down.png');
+}
+
+i.ps4-triangle,
+i.ps4-t {
+  background-image: url('{{ site.url }}/assets/images/ps4/triangle.png');
+}
+
+i.ps4-square,
+i.ps4-s {
+  background-image: url('{{ site.url }}/assets/images/ps4/square.png');
+}
+
+i.ps4-x {
+  background-image: url('{{ site.url }}/assets/images/ps4/x.png');
+}
+
+i.ps4-circle,
+i.ps4-c {
+  background-image: url('{{ site.url }}/assets/images/ps4/circle.png');
+}
