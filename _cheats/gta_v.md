@@ -21,67 +21,67 @@ To activate GTA 5 cheats on the PS4 or PS3 all you need is the correct button co
 
 ## Fast Run
 
-<i class="ps4-triangle"></i> <i class="ps4-left"></i> <i class="ps4-right"></i> <i class="ps4-right"></i> L2 L1 <i class="ps4-square"></i>
+<i class="ps4-triangle"></i> <i class="ps4-left"></i> <i class="ps4-right"></i> <i class="ps4-right"></i> <i class="ps4-l2"></i> <i class="ps4-l1"></i> <i class="ps4-square"></i>
 
 ## Fast Swim
 
-<i class="ps4-left"></i> <i class="ps4-left"></i> L1 <i class="ps4-right"></i> <i class="ps4-right"></i> R2 <i class="ps4-left"></i> L2 <i class="ps4-right"></i>
+<i class="ps4-left"></i> <i class="ps4-left"></i> <i class="ps4-l1"></i> <i class="ps4-right"></i> <i class="ps4-right"></i> <i class="ps4-r2"></i> <i class="ps4-left"></i> <i class="ps4-l2"></i> <i class="ps4-right"></i>
 
 ## Recharge Ability
 
-<i class="ps4-x"></i> <i class="ps4-x"></i> <i class="ps4-square"></i> R1 L1 <i class="ps4-x"></i> <i class="ps4-right"></i> <i class="ps4-left"></i> <i class="ps4-x"></i>
+<i class="ps4-x"></i> <i class="ps4-x"></i> <i class="ps4-square"></i> <i class="ps4-r1"></i> <i class="ps4-l1"></i> <i class="ps4-x"></i> <i class="ps4-right"></i> <i class="ps4-left"></i> <i class="ps4-x"></i>
 
 ## Skyfall
 
-L1 L2 R1 R2 <i class="ps4-left"></i> <i class="ps4-right"></i> <i class="ps4-left"></i> <i class="ps4-right"></i> L1 L2 R1 R2 <i class="ps4-left"></i> <i class="ps4-right"></i> <i class="ps4-left"></i> <i class="ps4-right"></i>
+<i class="ps4-l1"></i> <i class="ps4-l2"></i> <i class="ps4-r1"></i> <i class="ps4-r2"></i> <i class="ps4-left"></i> <i class="ps4-right"></i> <i class="ps4-left"></i> <i class="ps4-right"></i> <i class="ps4-l1"></i> <i class="ps4-l2"></i> <i class="ps4-r1"></i> <i class="ps4-r2"></i> <i class="ps4-left"></i> <i class="ps4-right"></i> <i class="ps4-left"></i> <i class="ps4-right"></i>
 
 ## Super Jump
 
-<i class="ps4-left"></i> <i class="ps4-left"></i> <i class="ps4-triangle"></i> <i class="ps4-triangle"></i> <i class="ps4-right"></i> <i class="ps4-right"></i> <i class="ps4-left"></i> <i class="ps4-right"></i> <i class="ps4-square"></i> R1 R2
+<i class="ps4-left"></i> <i class="ps4-left"></i> <i class="ps4-triangle"></i> <i class="ps4-triangle"></i> <i class="ps4-right"></i> <i class="ps4-right"></i> <i class="ps4-left"></i> <i class="ps4-right"></i> <i class="ps4-square"></i> <i class="ps4-r1"></i> <i class="ps4-r2"></i>
 
 ## Explosive Ammo Rounds
 
-<i class="ps4-right"></i> <i class="ps4-square"></i> <i class="ps4-x"></i> <i class="ps4-left"></i> R1 R2 <i class="ps4-left"></i> <i class="ps4-right"></i> <i class="ps4-right"></i> L1 L1 L1
+<i class="ps4-right"></i> <i class="ps4-square"></i> <i class="ps4-x"></i> <i class="ps4-left"></i> <i class="ps4-r1"></i> <i class="ps4-r2"></i> <i class="ps4-left"></i> <i class="ps4-right"></i> <i class="ps4-right"></i> <i class="ps4-l1"></i> <i class="ps4-l1"></i> <i class="ps4-l1"></i>
 
 ## Explosive Melee Attacks
 
-<i class="ps4-right"></i> <i class="ps4-left"></i> <i class="ps4-x"></i> <i class="ps4-triangle"></i> R1 <i class="ps4-circle"></i> <i class="ps4-circle"></i> <i class="ps4-circle"></i> L2
+<i class="ps4-right"></i> <i class="ps4-left"></i> <i class="ps4-x"></i> <i class="ps4-triangle"></i> <i class="ps4-r1"></i> <i class="ps4-circle"></i> <i class="ps4-circle"></i> <i class="ps4-circle"></i> <i class="ps4-l2"></i>
 
 ## Flaming Bullets
 
-L1 R1 <i class="ps4-square"></i> R1 <i class="ps4-left"></i> R2 R1 <i class="ps4-left"></i> <i class="ps4-square"></i> <i class="ps4-right"></i> L1 L1
+<i class="ps4-l1"></i> <i class="ps4-r1"></i> <i class="ps4-square"></i> <i class="ps4-r1"></i> <i class="ps4-left"></i> <i class="ps4-r2"></i> <i class="ps4-r1"></i> <i class="ps4-left"></i> <i class="ps4-square"></i> <i class="ps4-right"></i> <i class="ps4-l1"></i> <i class="ps4-l1"></i>
 
 ## Lower Wanted Level
 
-R1 R1 <i class="ps4-circle"></i> R2 <i class="ps4-right"></i> <i class="ps4-left"></i> <i class="ps4-right"></i> <i class="ps4-left"></i> <i class="ps4-right"></i> <i class="ps4-left"></i>
+<i class="ps4-r1"></i> <i class="ps4-r1"></i> <i class="ps4-circle"></i> <i class="ps4-r2"></i> <i class="ps4-right"></i> <i class="ps4-left"></i> <i class="ps4-right"></i> <i class="ps4-left"></i> <i class="ps4-right"></i> <i class="ps4-left"></i>
 
 ## Raise Wanted Level
 
-R1 R1 <i class="ps4-circle"></i> R2 <i class="ps4-left"></i> <i class="ps4-right"></i> <i class="ps4-left"></i> <i class="ps4-right"></i> <i class="ps4-left"></i> <i class="ps4-right"></i>
+<i class="ps4-r1"></i> <i class="ps4-r1"></i> <i class="ps4-circle"></i> <i class="ps4-r2"></i> <i class="ps4-left"></i> <i class="ps4-right"></i> <i class="ps4-left"></i> <i class="ps4-right"></i> <i class="ps4-left"></i> <i class="ps4-right"></i>
 
 ## Invincibility / God Mode
 
-<i class="ps4-right"></i> <i class="ps4-x"></i> <i class="ps4-right"></i> <i class="ps4-left"></i> <i class="ps4-right"></i> R1 <i class="ps4-right"></i> <i class="ps4-left"></i> <i class="ps4-x"></i> <i class="ps4-triangle"></i>
+<i class="ps4-right"></i> <i class="ps4-x"></i> <i class="ps4-right"></i> <i class="ps4-left"></i> <i class="ps4-right"></i> <i class="ps4-r1"></i> <i class="ps4-right"></i> <i class="ps4-left"></i> <i class="ps4-x"></i> <i class="ps4-triangle"></i>
 
 ## Max Health & Armor
 
-<i class="ps4-circle"></i> L1 <i class="ps4-triangle"></i> R2 <i class="ps4-x"></i> <i class="ps4-square"></i> <i class="ps4-circle"></i> <i class="ps4-right"></i> <i class="ps4-square"></i> L1 L1 L1
+<i class="ps4-circle"></i> <i class="ps4-l1"></i> <i class="ps4-triangle"></i> <i class="ps4-r2"></i> <i class="ps4-x"></i> <i class="ps4-square"></i> <i class="ps4-circle"></i> <i class="ps4-right"></i> <i class="ps4-square"></i> <i class="ps4-l1"></i> <i class="ps4-l1"></i> <i class="ps4-l1"></i>
 
 ## Slow Motion Aim
 
-<i class="ps4-square"></i> L2 R1 <i class="ps4-triangle"></i> <i class="ps4-left"></i> <i class="ps4-square"></i> L2 <i class="ps4-right"></i> <i class="ps4-x"></i>
+<i class="ps4-square"></i> <i class="ps4-l2"></i> <i class="ps4-r1"></i> <i class="ps4-triangle"></i> <i class="ps4-left"></i> <i class="ps4-square"></i> <i class="ps4-l2"></i> <i class="ps4-right"></i> <i class="ps4-x"></i>
 
 ## Parachute
 
-<i class="ps4-left"></i> <i class="ps4-right"></i> L1 L2 R1 R2 R2 <i class="ps4-left"></i> <i class="ps4-left"></i> <i class="ps4-right"></i> L1
+<i class="ps4-left"></i> <i class="ps4-right"></i> <i class="ps4-l1"></i> <i class="ps4-l2"></i> <i class="ps4-r1"></i> <i class="ps4-r2"></i> <i class="ps4-r2"></i> <i class="ps4-left"></i> <i class="ps4-left"></i> <i class="ps4-right"></i> <i class="ps4-l1"></i>
 
 ## Weapons / Guns
 
-<i class="ps4-triangle"></i> R2 <i class="ps4-left"></i> L1 <i class="ps4-x"></i> <i class="ps4-right"></i> <i class="ps4-triangle"></i> <i class="ps4-down"></i> <i class="ps4-square"></i> L1 L1 L1
+<i class="ps4-triangle"></i> <i class="ps4-r2"></i> <i class="ps4-left"></i> <i class="ps4-l1"></i> <i class="ps4-x"></i> <i class="ps4-right"></i> <i class="ps4-triangle"></i> <i class="ps4-down"></i> <i class="ps4-square"></i> <i class="ps4-l1"></i> <i class="ps4-l1"></i> <i class="ps4-l1"></i>
 
 ## Change Weather
 
-R2 <i class="ps4-x"></i> L1 L1 L2 L2 L2 <i class="ps4-square"></i>
+<i class="ps4-r2"></i> <i class="ps4-x"></i> <i class="ps4-l1"></i> <i class="ps4-l1"></i> <i class="ps4-l2"></i> <i class="ps4-l2"></i> <i class="ps4-l2"></i> <i class="ps4-square"></i>
 
 ## Director Mode
 
@@ -89,59 +89,59 @@ Dial `1-999-57-825368` (JR TALENT) (_PS4 only_)
 
 ## Moon Gravity
 
-<i class="ps4-left"></i> <i class="ps4-left"></i> L1 R1 L1 <i class="ps4-right"></i> <i class="ps4-left"></i> L1 <i class="ps4-left"></i>
+<i class="ps4-left"></i> <i class="ps4-left"></i> <i class="ps4-l1"></i> <i class="ps4-r1"></i> <i class="ps4-l1"></i> <i class="ps4-right"></i> <i class="ps4-left"></i> <i class="ps4-l1"></i> <i class="ps4-left"></i>
 
 ## Slippery Cars
 
-<i class="ps4-triangle"></i> R1 R1 <i class="ps4-left"></i> R1 L1 R2 L1
+<i class="ps4-triangle"></i> <i class="ps4-r1"></i> <i class="ps4-r1"></i> <i class="ps4-left"></i> <i class="ps4-r1"></i> <i class="ps4-l1"></i> <i class="ps4-r2"></i> <i class="ps4-l1"></i>
 
 ## Slow Motion
 
-<i class="ps4-triangle"></i> <i class="ps4-left"></i> <i class="ps4-right"></i> <i class="ps4-right"></i> <i class="ps4-square"></i> R2 R1
+<i class="ps4-triangle"></i> <i class="ps4-left"></i> <i class="ps4-right"></i> <i class="ps4-right"></i> <i class="ps4-square"></i> <i class="ps4-r2"></i> <i class="ps4-r1"></i>
 
 ## Spawn BM<i class="ps4-x"></i>
 
-<i class="ps4-left"></i> <i class="ps4-left"></i> <i class="ps4-right"></i> <i class="ps4-right"></i> <i class="ps4-left"></i> <i class="ps4-right"></i> <i class="ps4-square"></i> <i class="ps4-circle"></i> <i class="ps4-triangle"></i> R1 R2
+<i class="ps4-left"></i> <i class="ps4-left"></i> <i class="ps4-right"></i> <i class="ps4-right"></i> <i class="ps4-left"></i> <i class="ps4-right"></i> <i class="ps4-square"></i> <i class="ps4-circle"></i> <i class="ps4-triangle"></i> <i class="ps4-r1"></i> <i class="ps4-r2"></i>
 
 ## Spawn Buzzard Helicopter
 
-<i class="ps4-circle"></i> <i class="ps4-circle"></i> L1 <i class="ps4-circle"></i> <i class="ps4-circle"></i> <i class="ps4-circle"></i> L1 L2 R1 <i class="ps4-triangle"></i> <i class="ps4-circle"></i> <i class="ps4-triangle"></i>
+<i class="ps4-circle"></i> <i class="ps4-circle"></i> <i class="ps4-l1"></i> <i class="ps4-circle"></i> <i class="ps4-circle"></i> <i class="ps4-circle"></i> <i class="ps4-l1"></i> <i class="ps4-l2"></i> <i class="ps4-r1"></i> <i class="ps4-triangle"></i> <i class="ps4-circle"></i> <i class="ps4-triangle"></i>
 
 ## Spawn Caddy
 
-<i class="ps4-circle"></i> L1 <i class="ps4-left"></i> R1 L2 <i class="ps4-x"></i> R1 L1 <i class="ps4-circle"></i> <i class="ps4-x"></i>
+<i class="ps4-circle"></i> <i class="ps4-l1"></i> <i class="ps4-left"></i> <i class="ps4-r1"></i> <i class="ps4-l2"></i> <i class="ps4-x"></i> <i class="ps4-r1"></i> <i class="ps4-l1"></i> <i class="ps4-circle"></i> <i class="ps4-x"></i>
 
 ## Spawn Comet
 
-R1 <i class="ps4-circle"></i> R2 <i class="ps4-right"></i> L1 L2 <i class="ps4-x"></i> <i class="ps4-x"></i> <i class="ps4-square"></i> R1
+<i class="ps4-r1"></i> <i class="ps4-circle"></i> <i class="ps4-r2"></i> <i class="ps4-right"></i> <i class="ps4-l1"></i> <i class="ps4-l2"></i> <i class="ps4-x"></i> <i class="ps4-x"></i> <i class="ps4-square"></i> <i class="ps4-r1"></i>
 
 ## Spawn Duster
 
-<i class="ps4-right"></i> <i class="ps4-left"></i> R1 R1 R1 <i class="ps4-left"></i> <i class="ps4-triangle"></i> <i class="ps4-triangle"></i> <i class="ps4-x"></i> <i class="ps4-circle"></i> L1 L1
+<i class="ps4-right"></i> <i class="ps4-left"></i> <i class="ps4-r1"></i> <i class="ps4-r1"></i> <i class="ps4-r1"></i> <i class="ps4-left"></i> <i class="ps4-triangle"></i> <i class="ps4-triangle"></i> <i class="ps4-x"></i> <i class="ps4-circle"></i> <i class="ps4-l1"></i> <i class="ps4-l1"></i>
 
 ## Spawn Limo
 
-R2 <i class="ps4-right"></i> L2 <i class="ps4-left"></i> <i class="ps4-left"></i> R1 L1 <i class="ps4-circle"></i> <i class="ps4-right"></i>
+<i class="ps4-r2"></i> <i class="ps4-right"></i> <i class="ps4-l2"></i> <i class="ps4-left"></i> <i class="ps4-left"></i> <i class="ps4-r1"></i> <i class="ps4-l1"></i> <i class="ps4-circle"></i> <i class="ps4-right"></i>
 
 ## Spawn PCJ-600
 
-R1 <i class="ps4-right"></i> <i class="ps4-left"></i> <i class="ps4-right"></i> R2 <i class="ps4-left"></i> <i class="ps4-right"></i> <i class="ps4-square"></i> <i class="ps4-right"></i> L2 L1 L1
+<i class="ps4-r1"></i> <i class="ps4-right"></i> <i class="ps4-left"></i> <i class="ps4-right"></i> <i class="ps4-r2"></i> <i class="ps4-left"></i> <i class="ps4-right"></i> <i class="ps4-square"></i> <i class="ps4-right"></i> <i class="ps4-l2"></i> <i class="ps4-l1"></i> <i class="ps4-l1"></i>
 
 ## Spawn Rapid GT
 
-R2 L1 <i class="ps4-circle"></i> <i class="ps4-right"></i> L1 R1 <i class="ps4-right"></i> <i class="ps4-left"></i> <i class="ps4-circle"></i> R2
+<i class="ps4-r2"></i> <i class="ps4-l1"></i> <i class="ps4-circle"></i> <i class="ps4-right"></i> <i class="ps4-l1"></i> <i class="ps4-r1"></i> <i class="ps4-right"></i> <i class="ps4-left"></i> <i class="ps4-circle"></i> <i class="ps4-r2"></i>
 
 ## Spawn Sanchez
 
-<i class="ps4-circle"></i> <i class="ps4-x"></i> L1 <i class="ps4-circle"></i> <i class="ps4-circle"></i> L1 <i class="ps4-circle"></i> R1 R2 L2 L1 L1
+<i class="ps4-circle"></i> <i class="ps4-x"></i> <i class="ps4-l1"></i> <i class="ps4-circle"></i> <i class="ps4-circle"></i> <i class="ps4-l1"></i> <i class="ps4-circle"></i> <i class="ps4-r1"></i> <i class="ps4-r2"></i> <i class="ps4-l2"></i> <i class="ps4-l1"></i> <i class="ps4-l1"></i>
 
 ## Spawn Stunt Plane
 
-<i class="ps4-circle"></i> <i class="ps4-right"></i> L1 L2 <i class="ps4-left"></i> R1 L1 L1 <i class="ps4-left"></i> <i class="ps4-left"></i> <i class="ps4-x"></i> <i class="ps4-triangle"></i>
+<i class="ps4-circle"></i> <i class="ps4-right"></i> <i class="ps4-l1"></i> <i class="ps4-l2"></i> <i class="ps4-left"></i> <i class="ps4-r1"></i> <i class="ps4-l1"></i> <i class="ps4-l1"></i> <i class="ps4-left"></i> <i class="ps4-left"></i> <i class="ps4-x"></i> <i class="ps4-triangle"></i>
 
 ## Spawn Trashmaster
 
-<i class="ps4-circle"></i> R1 <i class="ps4-circle"></i> R1 <i class="ps4-left"></i> <i class="ps4-left"></i> R1 L1 <i class="ps4-circle"></i> <i class="ps4-right"></i>
+<i class="ps4-circle"></i> <i class="ps4-r1"></i> <i class="ps4-circle"></i> <i class="ps4-r1"></i> <i class="ps4-left"></i> <i class="ps4-left"></i> <i class="ps4-r1"></i> <i class="ps4-l1"></i> <i class="ps4-circle"></i> <i class="ps4-right"></i>
 
 # Special Vehicles Cheats _for PS4 only_
 
