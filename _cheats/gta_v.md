@@ -99,9 +99,9 @@ Dial `1-999-57-825368` (JR TALENT) (_PS4 only_)
 
 <i class="ps4-triangle"></i> <i class="ps4-left"></i> <i class="ps4-right"></i> <i class="ps4-right"></i> <i class="ps4-square"></i> <i class="ps4-r2"></i> <i class="ps4-r1"></i>
 
-## Spawn BM<i class="ps4-x"></i>
+## Spawn BM
 
-<i class="ps4-left"></i> <i class="ps4-left"></i> <i class="ps4-right"></i> <i class="ps4-right"></i> <i class="ps4-left"></i> <i class="ps4-right"></i> <i class="ps4-square"></i> <i class="ps4-circle"></i> <i class="ps4-triangle"></i> <i class="ps4-r1"></i> <i class="ps4-r2"></i>
+<i class="ps4-x"></i> <i class="ps4-left"></i> <i class="ps4-left"></i> <i class="ps4-right"></i> <i class="ps4-right"></i> <i class="ps4-left"></i> <i class="ps4-right"></i> <i class="ps4-square"></i> <i class="ps4-circle"></i> <i class="ps4-triangle"></i> <i class="ps4-r1"></i> <i class="ps4-r2"></i>
 
 ## Spawn Buzzard Helicopter
 
