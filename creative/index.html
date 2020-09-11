@@ -2,73 +2,29 @@
 layout: default
 title: "Creative"
 description: "Build, Test, Discover and Create the New World."
-#style: 'overlay_fashion'
-#style: 'overlay_box'
-style: 'overlay_fade_detail'
 cols: 2
 ---
 {% assign converted_list = '' | split: '/' %}
+
 {% for create in site.creative %}
-    {% if page.dispaly %}
-	{% assign tempSubArray = '' | split: '/' %}
+    {% if create.display %}
+	{% assign this_item = '' | split: '/' %}
 	{% assign the_creative_img = site.url | append: site.path.images | append: '/creative/' | append: create.cover.url %}
 
-	{% if page.style == 'overlay_fashion' %}
+	<!-- element[0]: title -->
+	<!-- element[1]: desc -->
+	<!-- element[2]: image -->
+	<!-- element[3]: url -->
+	{% assign this_item = this_item | push: create.title %}
+	{% assign this_item = this_item | push: create.desc %}
+	{% assign this_item = this_item | push: the_creative_img %}
+	{% assign this_item = this_item | push: create.url %}
 
-		<!-- element[0]: title.first-word -->
-		<!-- element[1]: title.other-word -->
-		<!-- element[2]: desc -->
-		<!-- element[3]: image -->
-		<!-- element[4]: url -->
-		{% assign tempSubArray = tempSubArray | push: 'The' %}
-		{% assign tempSubArray = tempSubArray | push: create.title %}
-		{% assign tempSubArray = tempSubArray | push: create.desc %}
-		{% assign tempSubArray = tempSubArray | push: the_creative_img %}
-		{% assign tempSubArray = tempSubArray | push: create.url %}
-
-	{% elsif page.style == 'overlay_box' %}
-
-		<!-- element[0]: title.first-word -->
-		<!-- element[1]: title.other-word -->
-		<!-- element[2]: desc -->
-		<!-- element[3]: image -->
-		<!-- element[4]: url -->
-		{% assign tempSubArray = tempSubArray | push: 'The' %}
-		{% assign tempSubArray = tempSubArray | push: create.title %}
-		{% assign tempSubArray = tempSubArray | push: create.desc %}
-		{% assign tempSubArray = tempSubArray | push: the_creative_img %}
-		{% assign tempSubArray = tempSubArray | push: create.url %}
-		
-	{% elsif page.style == 'overlay_fade_detail' %}
-
-		<!-- element[0]: title -->
-		<!-- element[1]: desc -->
-		<!-- element[2]: image -->
-		<!-- element[3]: url -->
-		{% assign tempSubArray = tempSubArray | push: create.title %}
-		{% assign tempSubArray = tempSubArray | push: create.desc %}
-		{% assign tempSubArray = tempSubArray | push: the_creative_img %}
-		{% assign tempSubArray = tempSubArray | push: create.url %}
-
-	{% endif %}
-
-	{% assign converted_list = converted_list | push: tempSubArray %}
+	{% assign converted_list = converted_list | push: this_item %}
 	{% endif %}
 {% endfor %}
 
 {% assign outer_list = '' | split: '/' %}
 {% assign outer_list = outer_list | push: converted_list %}
 
-{% if page.style == 'overlay_fashion' %}
-
-	{% include grid_image_overlay_fashion_list.html list=outer_list desc=" " cols=page.cols %}
-	
-{% elsif page.style == 'overlay_box' %}
-
-	{% include grid_image_overlay_box_list.html list=outer_list desc=" " cols=page.cols %}
-
-{% elsif page.style == 'overlay_fade_detail' %}
-
-	{% include grid_image_overlay_fade_detailed_list.html list=outer_list desc=" " cols=page.cols %}
-
-{% endif %}
+{% include grid_image_overlay_fade_detailed_list.html list=outer_list desc=" " cols=page.cols %}
