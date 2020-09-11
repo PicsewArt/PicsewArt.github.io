@@ -60,7 +60,11 @@ INSPECT:
 	{% assign converted_list = converted_list | push: tempSubArray %}
 	{% endif %}
 {% endfor %}
+<!--
+INSPECT:
 
+{{ converted_list | inspect }}
+-->
 {% assign outer_list = '' | split: '/' %}
 {% assign outer_list = outer_list | push: converted_list %}
 
