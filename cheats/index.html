@@ -2,10 +2,29 @@
 layout: default
 title: "Cheats"
 active_title: "Cheats"
+cols: 3
 ---
+{% assign converted_list = '' | split: '/' %}
 
-<!-- BEGIN CHEATS BLOCK -->
-<ul>{% for cheat in site.cheats %}
-<li><a href="{{ cheat.url }}">{{ cheat.title }}</a></li>
+{% for cheat in site.cheats %}
+    
+	{% assign this_item = '' | split: '/' %}
+	{% assign the_game_img = site.url | append: '/assets/cheats/' | append: cheat.cover.url %}
+
+	<!-- element[0]: title -->
+	<!-- element[1]: desc -->
+	<!-- element[2]: image -->
+	<!-- element[3]: url -->
+	{% assign this_item = this_item | push: cheat.title %}
+	{% assign this_item = this_item | push: cheat.desc %}
+	{% assign this_item = this_item | push: the_game_img %}
+	{% assign this_item = this_item | push: cheat.url %}
+
+	{% assign converted_list = converted_list | push: this_item %}
+	
 {% endfor %}
-</ul>
+
+{% assign outer_list = '' | split: '/' %}
+{% assign outer_list = outer_list | push: converted_list %}
+
+{% include grid_image_overlay_fade_detailed_list.html list=outer_list desc=" " cols=page.cols %}

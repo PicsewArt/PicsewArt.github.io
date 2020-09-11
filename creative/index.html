@@ -5,33 +5,25 @@ description: "Build, Test, Discover and Create the New World."
 cols: 2
 ---
 {% assign converted_list = '' | split: '/' %}
-<!--
-INSPECT:
 
-{{ site.creative | inspect }}
--->
 {% for create in site.creative %}
     {% if create.display %}
-	{% assign tempSubArray = '' | split: '/' %}
+	{% assign this_item = '' | split: '/' %}
 	{% assign the_creative_img = site.url | append: site.path.images | append: '/creative/' | append: create.cover.url %}
 
 	<!-- element[0]: title -->
 	<!-- element[1]: desc -->
 	<!-- element[2]: image -->
 	<!-- element[3]: url -->
-	{% assign tempSubArray = tempSubArray | push: create.title %}
-	{% assign tempSubArray = tempSubArray | push: create.desc %}
-	{% assign tempSubArray = tempSubArray | push: the_creative_img %}
-	{% assign tempSubArray = tempSubArray | push: create.url %}
+	{% assign this_item = this_item | push: create.title %}
+	{% assign this_item = this_item | push: create.desc %}
+	{% assign this_item = this_item | push: the_creative_img %}
+	{% assign this_item = this_item | push: create.url %}
 
-	{% assign converted_list = converted_list | push: tempSubArray %}
+	{% assign converted_list = converted_list | push: this_item %}
 	{% endif %}
 {% endfor %}
-<!--
-INSPECT:
 
-{{ converted_list | inspect }}
--->
 {% assign outer_list = '' | split: '/' %}
 {% assign outer_list = outer_list | push: converted_list %}
 
