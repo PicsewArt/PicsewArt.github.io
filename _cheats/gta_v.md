@@ -1,5 +1,5 @@
 ---
-title: "GTA V Cheats For PlayStation"
+title: "GTA V for PS3/4"
 cover:
   url: "gta_v_ps.jpg"
   format: "jpeg"

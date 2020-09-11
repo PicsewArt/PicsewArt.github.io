@@ -1,5 +1,5 @@
 ---
-title: "Saints Row the Third cheats"
+title: "Saints Row 3"
 cover:
   url: "saints_row_3.jpg"
   format: "jpeg"
