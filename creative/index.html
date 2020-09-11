@@ -2,12 +2,17 @@
 layout: default
 title: "Creative"
 description: "Build, Test, Discover and Create the New World."
-style: 'overlay_fashion'
+#style: 'overlay_fashion'
 #style: 'overlay_box'
-#style: 'overlay_fade_detail'
+style: 'overlay_fade_detail'
 cols: 2
 ---
 {% assign converted_list = '' | split: '/' %}
+<!--
+INSPECT:
+
+{{ site.creative | inspect }}
+-->
 {% for create in site.creative %}
     {% if page.dispaly %}
 	{% assign tempSubArray = '' | split: '/' %}
