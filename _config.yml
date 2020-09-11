@@ -118,7 +118,6 @@ defaults:
       path: ""
       type: creative
     values:
-      # layout: ""
       active_title: "Creative"
   - scope:
       path: ""
