@@ -415,4 +415,8 @@ media:
     type: 'image'
     format: "jpeg"
     date: 20200918T112000+08:00
+  - url: "pen_0001.mp4"
+    type: 'video'
+    format: "mp4"
+    date: 20200919T122000+08:00
 ---
