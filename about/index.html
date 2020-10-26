@@ -16,6 +16,7 @@ active_title: "About"
     background-image: url({{ site.url }}{{ site.avatar.rect.reverse }});
   }
 </style>
+{% assign panel_title = 'Picsew.cn by ' | append: site.author %}
 {% include gap.html %}
-{% include card_profile_bubble.html title=site.author subtitle=site.alias desc=site.description url=site.url github=site.github_url email=site.email image=site.data.base64.pixel1trans maxwidth="100%" %}
+{% include card_profile_bubble.html title=panel_title subtitle=site.alias desc=site.description url=site.url github=site.github_url email=site.email image=site.data.base64.pixel1trans maxwidth="100%" %}
 {% include signature.html %}
