@@ -72,15 +72,13 @@ layout: null
                   <a href="#">
                     <i class="fa fa-tachometer-alt"></i>
                     <span>{{ category.title }}</span>
-                    {% if category.badge.size > 0 %}
-                    <span class="badge badge-pill badge-{{ category.badge.type }}">{{ category.badge.title }}</span>
-                    {% endif %}
+                    {% if category.badge.size > 0 %}<span class="badge badge-pill badge-{{ category.badge.type }}">{{ category.badge.title }}</span>{% endif %}
                   </a>
                   <div class="sidebar-submenu">
                     <ul>
                       {% for collection in category.collections %}
                       <li>
-                        <a href="{{ site.url }}/navigator/{{ collection.url }}">{{ collection.title }}<span class="badge badge-pill badge-sonar">{{ collection.links.size }}</span>{% endif %}</a>
+                        <a href="{{ site.url }}/navigator/{{ collection.url }}">{{ collection.title }}<span class="badge badge-pill badge-sonar">{{ collection.links.size }}</span></a>
                       </li>
                       {% endfor %}
                     </ul>
