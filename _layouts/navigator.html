@@ -87,12 +87,15 @@ layout: null
 
               {% else %}
 
+                {% for category in section.categories %}
                 <li>
                   <a href="{{ site.url }}/navigator/{{ category.url }}">
                     <i class="fa fa-book"></i>
                     <span>{{ category.title }}</span>
                   </a>
                 </li>
+                {% endfor %}
+                
               {% endif %}
 
             {% endfor %}
