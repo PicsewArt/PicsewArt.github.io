@@ -77,7 +77,7 @@ layout: null
                     <ul>
                       {% for collection in category.collections %}
                       <li>
-                        <a href="{{ site.url }}/navigator/{{ collection.url }}">{{ collection.title }}<span class="badge badge-pill badge-sonar">{{ collection.links.size }}</span></a>
+                        <a href="{{ site.url }}/navigator/{{ collection.url }}">{{ collection.title }}<span class="badge badge-pill badge-warning">{{ collection.links.size }}</span></a>
                       </li>
                       {% endfor %}
                     </ul>
@@ -95,7 +95,7 @@ layout: null
                   </a>
                 </li>
                 {% endfor %}
-                
+
               {% endif %}
 
             {% endfor %}
