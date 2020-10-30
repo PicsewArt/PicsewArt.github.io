@@ -145,9 +145,11 @@ description: "A web sites navigation page."
                 {% for link in collection.links %}
                 <div class="cell">
                   <figure class="icon">
-                    <img class="icon-image" src="./icons/{% if link.image.size > 0 %}{{ link.image }}{% else %}general{% endif %}.png" alt="icon">
+                    <div class="icon-image-container">
+                      <img class="icon-image" src="./icons/{% if link.image.size > 0 %}{{ link.image }}{% else %}general{% endif %}.png" alt="icon">
+                    </div>
                     <figcaption>
-                      <div>
+                      <div class="icon-title-container">
                         <p toc-skip="true" class="icon-title">{{ link.title }}</p>
                       </div>
                     </figcaption>
