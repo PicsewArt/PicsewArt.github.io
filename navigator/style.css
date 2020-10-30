@@ -503,7 +503,7 @@ figure.icon {
   width: 100%;
   background: #000000;
   color: #ffffff;
-  text-align: center;
+  text-align: left;
   max-width: 100% !important;
 }
 
@@ -542,12 +542,13 @@ figure.icon p {
   margin: 0;
   position: absolute;
   left: 0;
-  padding: 5px 5px;
+  padding: 3px 3px;
   text-transform: uppercase;
   color: #fff;
   /* font-weight: 900; */
   bottom: 0;
   line-height: 24px;
+  text-shadow: 1px 1px 1px #000;
 }
 
 figure.icon p::before,
