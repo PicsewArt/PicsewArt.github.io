@@ -70,7 +70,7 @@ description: "A web sites navigation page."
 
                 {% for category in section.categories %}
                 <li class="sidebar-dropdown">
-                  <a href="#">
+                  <a href="#{{ section.title }}_{{ category.title }}_{{ category.collections.first.title }}">
                     <i class="fa fa-tachometer-alt"></i>
                     <span>{{ category.title }}</span>
                     <span class="badge badge-pill badge-warning">{{ category.collections.size }}</span>
@@ -79,7 +79,7 @@ description: "A web sites navigation page."
                     <ul>
                       {% for collection in category.collections %}
                       <li>
-                        <a href="{{ site.url }}/navigator/{{ collection.url }}">{{ collection.title }}<span class="badge badge-pill badge-warning">{{ collection.links.size }}</span></a>
+                        <a href="#{{ section.title }}_{{ category.title }}_{{ collection.title }}">{{ collection.title }}<span class="badge badge-pill badge-warning">{{ collection.links.size }}</span></a>
                       </li>
                       {% endfor %}
                     </ul>
@@ -91,7 +91,7 @@ description: "A web sites navigation page."
 
                 {% for category in section.categories %}
                 <li>
-                  <a href="{{ site.url }}/navigator/{{ category.url }}">
+                  <a href="#{{ section.title }}_{{ category.title }}">
                     <i class="fa fa-book"></i>
                     <span>{{ category.title }}</span>
                   </a>
