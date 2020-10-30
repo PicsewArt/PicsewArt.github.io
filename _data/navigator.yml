@@ -15,7 +15,7 @@
               - title: "Google"
                 url: "https://google.com.tw/"
                 image: "google"
-              color: "RGBA(45, 169, 79, 0.75)"
+                color: "RGBA(45, 169, 79, 0.75)"
               - title: "谷歌搜图"
                 url: "https://www.google.com/imghp?hl=zh-CN&tab=wi"
                 image: "google"
