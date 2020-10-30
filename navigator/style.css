@@ -481,12 +481,21 @@ body {
 
 /* ---------------------- */
 
+div.icons-grid-list {
+  margin: 0 auto;
+}
+
+div.icons-section-title {
+  margin-top: 10px;
+}
+
 div.grid {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 }
+
 div.cell {
   box-sizing: border-box;
   padding: 3px;
