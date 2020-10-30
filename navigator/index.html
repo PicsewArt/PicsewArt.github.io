@@ -3,171 +3,55 @@ layout: "navigator"
 title: "Picsew Navigator"
 description: "A web sites navigation page."
 ---
-<!DOCTYPE html>
-<html lang="en">
+<section class="tag-cloud">
+      <header class="sidebar-header">
+        <h2>Tags</h2>
+      </header>
+      <div class="tattoo-row">
+        <div class="tattoo-col">
 
-<head>
-  <meta charset="UTF-8">
-  <title>{{ page.title }}</title>
-  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/css/bootstrap.css'>
-  <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.0.13/css/all.css'>
-  <!-- <link rel="stylesheet" href="{{ site.url }}/assets/css/navigator/style.css"> -->
-  <link rel="stylesheet" href="./style.css">
 
-</head>
 
-<body>
-  <!-- partial:index.partial.html -->
-  <div class="page-wrapper chiller-theme toggled">
-    <a id="show-sidebar" class="btn btn-sm btn-dark" href="#">
-      <i class="fas fa-bars"></i>
-    </a>
-    <nav id="sidebar" class="sidebar-wrapper">
-      <div class="sidebar-content">
-        <div class="sidebar-brand">
-          <a href="#">{{ page.title }}</a>
-          <div id="close-sidebar">
-            <i class="fas fa-times"></i>
-          </div>
+            <span class="tag" data-sort="0306"><a href="https://picsew.cn/posts/tags/index.html#iOS">iOS</a></span>
+
+            <span class="tag" data-sort="0421"><a href="https://picsew.cn/posts/tags/index.html#PHP">PHP</a></span>
+
+            <span class="tag" data-sort="0422"><a href="https://picsew.cn/posts/tags/index.html#UNIX">UNIX</a></span>
+
+            <span class="tag" data-sort="0423"><a href="https://picsew.cn/posts/tags/index.html#PHP_Primer">PHP Primer</a></span>
+
+            <span class="tag" data-sort="0424"><a href="https://picsew.cn/posts/tags/index.html#OS_X">OS X</a></span>
+
+            <span class="tag" data-sort="0424"><a href="https://picsew.cn/posts/tags/index.html#Quote">Quote</a></span>
+
+            <span class="tag" data-sort="0425"><a href="https://picsew.cn/posts/tags/index.html#Linux">Linux</a></span>
+
+            <span class="tag" data-sort="0427"><a href="https://picsew.cn/posts/tags/index.html#Sadness">Sadness</a></span>
+
+            <span class="tag" data-sort="0429"><a href="https://picsew.cn/posts/tags/index.html#Swift">Swift</a></span>
+
+            <span class="tag" data-sort="0434"><a href="https://picsew.cn/posts/tags/index.html#iOS_Primer">iOS Primer</a></span>
+
+            <span class="tag" data-sort="0435"><a href="https://picsew.cn/posts/tags/index.html#C++">C++</a></span>
+
+            <span class="tag" data-sort="0436"><a href="https://picsew.cn/posts/tags/index.html#Mac">Mac</a></span>
+
+            <span class="tag" data-sort="0436"><a href="https://picsew.cn/posts/tags/index.html#Objective-C">Objective-C</a></span>
+
+            <span class="tag" data-sort="0437"><a href="https://picsew.cn/posts/tags/index.html#C">C</a></span>
+
+            <span class="tag" data-sort="0437"><a href="https://picsew.cn/posts/tags/index.html#Xcode">Xcode</a></span>
+
+            <span class="tag" data-sort="0439"><a href="https://picsew.cn/posts/tags/index.html#Interview">Interview</a></span>
+
+            <span class="tag" data-sort="0441"><a href="https://picsew.cn/posts/tags/index.html#C++_Primer">C++ Primer</a></span>
+
+            <span class="tag" data-sort="0442"><a href="https://picsew.cn/posts/tags/index.html#Terminal">Terminal</a></span>
+
+            <span class="tag" data-sort="0442"><a href="https://picsew.cn/posts/tags/index.html#iOS_9">iOS 9</a></span>
+
+            <span class="tag" data-sort="0442"><a href="https://picsew.cn/posts/tags/index.html#macOS">macOS</a></span>
+
         </div>
-        <div class="sidebar-header">
-          <div class="user-pic">
-            <!-- <img class="img-responsive img-rounded" src="{{ site.url }}/assets/images/user.jpg" alt="User picture"> -->
-            <img class="img-responsive img-rounded" src="./assets/images/avatar/avatar_color.png" alt="User picture">
-          </div>
-          <div class="user-info">
-            <span class="user-name">{{ site.author }}</span>
-            <span class="user-role">Administrator</span>
-            <span class="user-status">
-              <i class="fa fa-circle"></i>
-              <span>Online</span>
-            </span>
-          </div>
-        </div>
-        <!-- sidebar-header  -->
-
-        <!-- <div class="sidebar-search">
-        <div>
-          <div class="input-group">
-            <input type="text" class="form-control search-menu" placeholder="Search...">
-            <div class="input-group-append">
-              <span class="input-group-text">
-                <i class="fa fa-search" aria-hidden="true"></i>
-              </span>
-            </div>
-          </div>
-        </div>
-      </div> -->
-
-        <!-- sidebar-search  -->
-        <div class="sidebar-menu">
-          <ul>
-            {% for section in site.data.navigator %}
-            <li class="header-menu">
-              <span>{{ section.title }}</span>
-            </li>
-
-              {% if section.categories.size > 1 %}
-
-                {% for category in section.categories %}
-                <li class="sidebar-dropdown">
-                  <a href="#">
-                    <i class="fa fa-tachometer-alt"></i>
-                    <span>{{ category.title }}</span>
-                    {% if category.badge.size > 0 %}
-                    <span class="badge badge-pill badge-{{ category.badge.type }}">{{ category.badge.title }}</span>
-                    {% endif %}
-                  </a>
-                  <div class="sidebar-submenu">
-                    <ul>
-                      {% for collection in category.collections %}
-                      <li>
-                        <a href="{{ site.url }}/navigator/{{ collection.url }}">{{ collection.title }}<span class="badge badge-pill badge-sonar">{{ collection.links.size }}</span>{% endif %}</a>
-                      </li>
-                      {% endfor %}
-                    </ul>
-                  </div>
-                </li>
-                {% endfor %}
-
-              {% else %}
-
-                <li>
-                  <a href="{{ site.url }}/navigator/{{ category.url }}">
-                    <i class="fa fa-book"></i>
-                    <span>{{ category.title }}</span>
-                  </a>
-                </li>
-              {% endif %}
-
-            {% endfor %}
-
-          </ul>
-        </div>
-        <!-- sidebar-menu  -->
       </div>
-      <!-- sidebar-content  -->
-
-      <!-- <div class="sidebar-footer">
-      <a href="#">
-        <i class="fa fa-bell"></i>
-        <span class="badge badge-pill badge-warning notification">3</span>
-      </a>
-      <a href="#">
-        <i class="fa fa-envelope"></i>
-        <span class="badge badge-pill badge-success notification">7</span>
-      </a>
-      <a href="#">
-        <i class="fa fa-cog"></i>
-        <span class="badge-sonar"></span>
-      </a>
-      <a href="#">
-        <i class="fa fa-power-off"></i>
-      </a>
-    </div> -->
-
-    </nav>
-    <!-- sidebar-wrapper  -->
-    <!-- page-content -->
-    <main class="page-content">
-      <div class="container">
-        <h2>{{ page.title }}</h2>
-        <hr>
-        <div class="row">
-          <div class="form-group col-md-12">
-
-            {{ CONTENT }}
-
-          </div>
-        </div>
-
-        <hr>
-        <footer class="text-center">
-          <div class="mb-2"><small>© 2020 made with <i class="fa fa-heart" style="color:red"></i> by - <a target="_blank" rel="noopener noreferrer" href="{{ site.url }}"> {{ site.author }}</a></small></div>
-
-          <div>
-            <a href="https://github.com/PicsewArt" target="_blank">
-              <img alt="GitHub followers" src="https://img.shields.io/github/followers/PicsewArt?label=github&style=social" />
-            </a>
-            <!-- <a href="https://twitter.com/Picsew" target="_blank">
-            <img alt="Twitter Follow" src="https://img.shields.io/twitter/follow/Picsew?label=twitter&style=social" />
-          </a> -->
-          </div>
-        </footer>
-
-      </div>
-
-    </main>
-    <!-- page-content" -->
-  </div>
-  <!-- page-wrapper -->
-  <!-- partial -->
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js'></script>
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/esm/popper.js'></script>
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/js/bootstrap.js'></script>
-  <!-- <script src="{{ site.url }}/assets/js/navigator/script.js"></script> -->
-  <script src="./script.js"></script>
-
-</body>
-
-</html>
+    </section>
