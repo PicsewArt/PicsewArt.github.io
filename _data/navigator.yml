@@ -1,4 +1,4 @@
-  - title: "Editors Choise"
+  - title: "General"
     categories:
       - title: "Favorite"
         collections:
@@ -99,11 +99,9 @@
                 url: "https://www.macwk.com/"
                 image: ""
                 color: "RGBA(35, 176, 247, 0.75)"
-  - title: "General"
-    categories:
-      - title: "Search"
+      - title: "General"
         collections:
-          - titlle: "Search"
+          - title: "Search"
             links:
               - title: "百度"
                 url: "https://baidu.com/"
@@ -133,8 +131,6 @@
                 url: "https://bing.com/"
                 image: "bing"
                 color: "RGBA(0, 131, 114, 0.75)"
-      - title: "Community"
-        collections:
           - title: "Community"
             links:
               - title: "9GAG"
@@ -201,8 +197,6 @@
                 url: "http://fanfou.com/"
                 image: "fanfou"
                 color: "RGBA(0, 187, 233, 0.75)"
-      - title: "Media"
-        collections:
           - title: "Media"
             links:
               - title: "Youtube"
@@ -294,8 +288,6 @@
               - title: "Permute"
                 url: "https://software.charliemonroe.net/permute"
                 image: ""
-      - title: "Arts"
-        collections:
           - title: "Arts"
             links:
               - title: "Imgur"
@@ -400,8 +392,6 @@
               - title: "Krita"
                 url: "https://krita.org/zh/"
                 image: "krita"
-      - title: "Development"
-        collections:
           - title: "Development"
             links:
               - title: "Cave"
@@ -510,8 +500,6 @@
                 image: ""
               - title: "Sparkle"
                 url: "https://sparkle-project.org/"
-      - title: "Knowledge"
-        collections:
           - title: "Knowledge"
             links:
               - title: "TechsViewer"
@@ -575,8 +563,6 @@
               - title: "专案开发时程名词"
                 url: "https://meniny.cn/docs/project/"
                 image: ""
-      - title: "Reading"
-        collections:
           - title: "Reading"
             links:
               - title: "小书屋"
@@ -615,8 +601,6 @@
                 url: "https://545c.com/dir/7823036-11625293-090948"
                 image: ""
                 color: ""
-      - title: "Google"
-        collections:
           - title: "Google"
             links:
               - title: "Google"
@@ -659,8 +643,6 @@
                 url: "https://mail.google.com/mail/u/0/#inbox"
                 image: "gmail"
                 color: "RGBA(237, 64, 45, 0.75)"
-      - title: "Apple"
-        collections:
           - title: "Apple"
             links:
               - title: "苹果（美国）"
@@ -725,8 +707,6 @@
                 url: "https://ipsw.me/"
               - title: "AppDB"
                 url: "https://appdb.me/"
-      - title: "Microsoft"
-        collections:
           - title: "Microsoft"
             links:
               - title: "MSDN ITellU"
@@ -739,16 +719,12 @@
                 url: "https://www.microsoft.com/en-us/download/details.aspx?id=15155"
               - title: "PowerToy"
                 url: "https://github.com/microsoft/PowerToys"
-      - title: "Adobe"
-        collections:
           - title: "Adobe"
             links:
               - title: "Adobe下载"
                 url: "https://www.adobe.com/cn/downloads.html"
                 image: "adobe"
                 color: "RGBA(255, 0, 0, 0.75)"
-      - title: "Mi"
-        collections:
           - title: "Mi"
             links:
               - title: "IoT开发者平台"
@@ -759,15 +735,11 @@
                 url: "https://cnbj6.cloud.mi.com/"
                 image: ""
                 color: "RGBA(255, 0, 0, 0.75)"
-      - title: "Netease"
-        collections:
           - title: "Netease"
             links:
               - title: "网易账号中心"
                 url: "https://m.reg.163.com/#/"
                 image: "netease_accounts"
-      - title: "Purchasing"
-        collections:
           - title: "Purchasing"
             links:
               - title: "淘宝"
@@ -778,8 +750,6 @@
                 url: "https://jd.com/"
                 image: "jd"
                 color: "RGBA(253, 59, 67, 0.75)"
-      - title: "CloudDrive"
-        collections:
           - title: "CloudDrive"
             links:
               - title: "欢喜云"
@@ -807,8 +777,6 @@
               - title: "sm.ms"
                 url: "https://sm.ms/"
                 image: ""
-      - title: "Markup"
-        collections:
           - title: "Markup"
             links:
               - title: "Dillinger"
@@ -845,8 +813,6 @@
                 url: "https://typora.io/"
               - title: "Boostnote"
                 url: "https://boostnote.io/"
-      - title: "Fonts"
-        collections:
           - title: "Fonts"
             links:
               - title: "求字体"
@@ -859,8 +825,6 @@
                 color: ""
               - title: "What the Font"
                 url: "https://www.myfonts.com/WhatTheFont/"
-      - title: "VideoGaming"
-        collections:
           - title: "VideoGaming"
             links:
               - title: "VGTime"
@@ -937,8 +901,6 @@
                 image: "the_witcher_3"
               - title: "3DM 运行库"
                 url: "https://dl.3dmgame.com/patch/89066.html"
-      - title: "OS"
-        collections:
           - title: "OS"
             links:
               - title: "Virtual Box"
@@ -1053,8 +1015,6 @@
                 image: "finder"
               - title: "SnapCraft"
                 url: "https://snapcraft.io/"
-      - title: "Browser"
-        collections:
           - title: "Browser"
             links:
               - title: "Chrome"
@@ -1082,8 +1042,6 @@
                 cate: "app"
               - title: "Bookmarks"
                 url: "https://meniny.cn/navigator/bookmarks/"
-      - title: "Utils"
-        collections:
           - title: "Utils"
             links:
               - title: "Toolslick"
@@ -1277,8 +1235,6 @@
                 url: "https://www.spectacleapp.com"
               - title: "Screensavers Planet"
                 url: "https://www.screensaversplanet.com"
-      - title: "GreatWall"
-        collections:
           - title: "GreatWall"
             links:
               - title: "蓝灯"
@@ -1288,8 +1244,6 @@
                 cate: "app"
               - title: "优云"
                 url: "https://youyun555.net/"
-      - title: "Security"
-        collections:
           - title: "Security"
             links:
               - title: "PCHunter"
@@ -1300,8 +1254,6 @@
                 url: "https://www.huorong.cn/"
                 image: "huorong"
                 cate: "app"
-      - title: "Spoof"
-        collections:
           - title: "Spoof"
             links:
               - title: "加群失败"

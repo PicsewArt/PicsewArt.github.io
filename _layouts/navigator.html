@@ -71,7 +71,7 @@ layout: null
                   <a href="#">
                     <i class="fa fa-tachometer-alt"></i>
                     <span>{{ category.title }}</span>
-                    {% if category.badge.size > 0 %}<span class="badge badge-pill badge-{{ category.badge.type }}">{{ category.badge.title }}</span>{% endif %}
+                    <span class="badge badge-pill badge-warning">{{ category.collections.size }}</span>
                   </a>
                   <div class="sidebar-submenu">
                     <ul>
