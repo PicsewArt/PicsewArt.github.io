@@ -585,8 +585,8 @@ figure.icon.hover img {
 /*默认*/
 @media (min-width: 980px){
 	.cell {
-    -ms-flex: 0 0 16.6666%;
-    flex: 0 0 16.6666%;
+    -ms-flex: 0 0 10%;
+    flex: 0 0 10%;
 	}
 }
 

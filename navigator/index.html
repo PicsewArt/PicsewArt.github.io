@@ -141,7 +141,7 @@ description: "A web sites navigation page."
                 {% for collection in category.collections %}
             <!-- section -->
             <div id="{{ section.title }}_{{ category.title }}_{{ collection.title }}">
-            <h3 class="section_title"></h3>
+            <h3 class="section_title">{{ collection.title }}</h3>
             <div class="grid" style="word-break: break-all;">
               {% for link in collection.links %}
               <div class="cell">
