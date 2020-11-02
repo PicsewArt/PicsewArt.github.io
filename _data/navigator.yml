@@ -197,6 +197,9 @@
                 url: "http://fanfou.com/"
                 image: "fanfou"
                 color: "RGBA(0, 187, 233, 0.75)"
+              - title: "Telegram"
+                url: "https://telegram.org/"
+                image: "telegram"
           - title: "Media"
             links:
               - title: "Youtube"
