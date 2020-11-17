@@ -1,0 +1,68 @@
+:toc: left
+:doctitle: 文档标题
+:icons: font
+
+= {doctitle}
+:author: 李申翊
+:email: meniny@miriding.com
+:revnumber: 1.0.0
+:revdate: Nov. 17, 2020
+:revremark: The first incarnation of {doctitle}
+:version-label!:
+
+[TIP]
+====
+说明性文字。
+====
+
+== 0.0 修订记录
+
+[%header, cols="2a, 2a, 6a"]
+|===
+|版本
+|日期
+|说明
+
+|1.0.0
+|2020-11-08
+|第一版。
+
+|1.1.0
+|2020-11-16
+|
+* 修改内容
+|===
+
+== 1.0 标题
+
+.???
+****
+* 待讨论内容
+****
+
+== 2.0 标题
+
+描述内容
+
+示意图：
+
+[%header, cols="2a,2a,2a"]
+|===
+|说明
+|说明
+|说明
+
+|
+image:./Export/Home.png[]
+|
+image:./Export/Home-Full-Close.png[]
+|
+image:./Export/Home-Full.png[]
+|===
+
+---
+
+[NOTE]
+====
+附件: `附件.xd`
+====
