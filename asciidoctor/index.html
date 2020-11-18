@@ -34,66 +34,71 @@
 	</head>
 	<body>
     <div class="function_area">
-  		<label>打开ADOC：</label>
+  		<label>打开文档：</label>
       <input type='file' onchange='loadFile(this)'>
-  		<label>打开CSS：</label>
+  		<label>打开样式：</label>
   		<input type='file' accept='text/css' onchange='loadCss(this)'>
-      <label>选择CSS</label>
+      <label>链接样式：</label>
       <select id="css-list">
-        <option value="NONE">NONE</option>
-        <option value="asciidoctor.css">asciidoctor.css</option>
-        <option value="adoc-golo.css">adoc-golo.css</option>
-        <option value="adoc-colony.css">adoc-colony.css</option>
-        <option value="adoc-github.css">adoc-github.css</option>
-        <option value="adoc-maker.css">adoc-maker.css</option>
-        <option value="adoc-rubygems.css">adoc-rubygems.css</option>
-        <option value="adoc-foundation.css">adoc-foundation.css</option>
-        <option value="adoc-foundation-lime.css">adoc-foundation-lime.css</option>
-        <option value="adoc-foundation-potion.css">adoc-foundation-potion.css</option>
-        <option value="adoc-readthedocs.css">adoc-readthedocs.css</option>
-        <option value="adoc-riak.css">adoc-riak.css</option>
-        <option value="adoc-iconic.css">adoc-iconic.css</option>
-        <option value="adoc-rocket-panda.css">adoc-rocket-panda.css</option>
-        <option value="ubuntu.css">ubuntu.css</option>
-        <option value="template.css">template.css</option>
-        <option value="boot-readable.css">boot-readable.css</option>
-        <option value="material-teal.css">material-teal.css</option>
-        <option value="material-brown.css">material-brown.css</option>
-        <option value="boot-cyborg.css">boot-cyborg.css</option>
-        <option value="boot-sandstone.css">boot-sandstone.css</option>
-        <option value="medium.css">medium.css</option>
-        <option value="boot-yeti.css">boot-yeti.css</option>
-        <option value="boot-journal.css">boot-journal.css</option>
-        <option value="material-green.css">material-green.css</option>
-        <option value="material-pink.css">material-pink.css</option>
-        <option value="material-blue.css">material-blue.css</option>
-        <option value="boot-paper.css">boot-paper.css</option>
-        <option value="boot-darkly.css">boot-darkly.css</option>
-        <option value="material-amber.css">material-amber.css</option>
-        <option value="boot-lumen.css">boot-lumen.css</option>
-        <option value="gazette.css">gazette.css</option>
-        <option value="fedora.css">fedora.css</option>
-        <option value="boot-superhero.css">boot-superhero.css</option>
-        <option value="material-orange.css">material-orange.css</option>
-        <option value="tufte.css">tufte.css</option>
-        <option value="monospace.css">monospace.css</option>
-        <option value="boot-spacelab.css">boot-spacelab.css</option>
-        <option value="material-grey.css">material-grey.css</option>
-        <option value="italian-pop.css">italian-pop.css</option>
-        <option value="plain.css">plain.css</option>
-        <option value="notebook.css">notebook.css</option>
-        <option value="material-purple.css">material-purple.css</option>
-        <option value="boot-cerulean.css">boot-cerulean.css</option>
-        <option value="clean.css">clean.css</option>
-        <option value="boot-slate.css">boot-slate.css</option>
-        <option value="boot-cosmo.css">boot-cosmo.css</option>
-        <option value="boot-flatly.css">boot-flatly.css</option>
-        <option value="material-red.css">material-red.css</option>
+        <option value="NONE" selected>无样式</option>
+        <optgroup label="默认组">
+          <option value="asciidoctor.css">asciidoctor.css</option>
+          <option value="adoc-golo.css">adoc-golo.css</option>
+          <option value="adoc-colony.css">adoc-colony.css</option>
+          <option value="adoc-github.css">adoc-github.css</option>
+          <option value="adoc-maker.css">adoc-maker.css</option>
+          <option value="adoc-rubygems.css">adoc-rubygems.css</option>
+          <option value="adoc-foundation.css">adoc-foundation.css</option>
+          <option value="adoc-foundation-lime.css">adoc-foundation-lime.css</option>
+          <option value="adoc-foundation-potion.css">adoc-foundation-potion.css</option>
+          <option value="adoc-readthedocs.css">adoc-readthedocs.css</option>
+          <option value="adoc-riak.css">adoc-riak.css</option>
+          <option value="adoc-iconic.css">adoc-iconic.css</option>
+          <option value="adoc-rocket-panda.css">adoc-rocket-panda.css</option>
+        </optgroup>
+        <optgroup label="扩展组">
+          <option value="ubuntu.css">ubuntu.css</option>
+          <option value="monospace.css">monospace.css</option>
+          <option value="gazette.css">gazette.css</option>
+          <option value="template.css">template.css</option>
+          <option value="boot-readable.css">boot-readable.css</option>
+          <option value="material-teal.css">material-teal.css</option>
+          <option value="material-brown.css">material-brown.css</option>
+          <option value="boot-cyborg.css">boot-cyborg.css</option>
+          <option value="boot-sandstone.css">boot-sandstone.css</option>
+          <option value="medium.css">medium.css</option>
+          <option value="boot-yeti.css">boot-yeti.css</option>
+          <option value="boot-journal.css">boot-journal.css</option>
+          <option value="material-green.css">material-green.css</option>
+          <option value="material-pink.css">material-pink.css</option>
+          <option value="material-blue.css">material-blue.css</option>
+          <option value="boot-paper.css">boot-paper.css</option>
+          <option value="boot-darkly.css">boot-darkly.css</option>
+          <option value="material-amber.css">material-amber.css</option>
+          <option value="boot-lumen.css">boot-lumen.css</option>
+          <option value="fedora.css">fedora.css</option>
+          <option value="boot-superhero.css">boot-superhero.css</option>
+          <option value="material-orange.css">material-orange.css</option>
+          <option value="tufte.css">tufte.css</option>
+          <option value="boot-spacelab.css">boot-spacelab.css</option>
+          <option value="material-grey.css">material-grey.css</option>
+          <option value="italian-pop.css">italian-pop.css</option>
+          <option value="plain.css">plain.css</option>
+          <option value="notebook.css">notebook.css</option>
+          <option value="material-purple.css">material-purple.css</option>
+          <option value="boot-cerulean.css">boot-cerulean.css</option>
+          <option value="clean.css">clean.css</option>
+          <option value="boot-slate.css">boot-slate.css</option>
+          <option value="boot-cosmo.css">boot-cosmo.css</option>
+          <option value="boot-flatly.css">boot-flatly.css</option>
+          <option value="material-red.css">material-red.css</option>
+        </optgroup>
       </select>
+      <label>保存：</label>
       <button type="button" onclick="saveDoc()">保存ADOC</button>
-  		<button type="button" onclick="previewDoc()">预览</button>
   		<button type="button" onclick="saveHTML()">保存HTML</button>
-      <a href="https://meniny.cn/docs/asciidoc/" target="_blank">语法指引</a>
+      <a href="https://meniny.cn/docs/asciidoc/" target="_blank" style="padding: 0 10px;">[语法指引]</a>
+      <button type="button" onclick="previewDoc()">预览</button>
     </div>
     <div class="container">
   		<textarea class="editor" id="editor"></textarea>
