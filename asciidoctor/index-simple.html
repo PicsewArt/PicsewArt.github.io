@@ -1,210 +1,44 @@
 <!DOCTYPE html>
 <html>
+	<head>
+		<meta charset="UTF-8">
+		<title>AsciiDoctor Live Editor by Ezra v0.0.1</title>
 
-<head>
-  <meta charset="UTF-8">
-  <title>AsciiDoctor Live Editor by Ezra v0.0.</title>
-  <style media="screen" type="text/css">
-    * {
-      box-sizing: border-box;
-    }
-
-    ::selection {
-      background-color: #002b36;
-    }
-
-    html {
-      margin: 0;
-      padding: 0;
-      width: 100%;
-      height: 100%;
-      font-weight: 300;
-      font-family: 'Source Sans Pro', 'Open Sans', Roboto, 'Helvetica Neue', 'Segoe UI', 'Myriad Pro', Helvetica, Myriad, Arial, sans-serif;
-    }
-
-    body {
-      margin: 0;
-      padding: 0;
-      width: 100%;
-      height: 100%;
-      color: #839496;
-      background: #002b36;
-      position: relative;
-    }
-
-    header {
-      width: 100%;
-      height: 50px;
-      position: fixed;
-      top: 0;
-      left: 0;
-      background: #073642;
-      padding: 0 15px;
-      box-shadow: rgba(0, 0, 0, .1) 0 1px 2px;
-      z-index: 250;
-      user-select: none;
-    }
-
-    header #brand {
-      position: absolute;
-      top: 50%;
-      margin-top: -7pt;
-    }
-
-    header #brand strong {
-      font-weight: 500;
-    }
-
-    header nav {
-      float: right;
-      background: #073642;
-      position: relative;
-    }
-
-    header nav:before {
-      content: '';
-      display: block;
-      width: 30px;
-      height: 50px;
-      position: absolute;
-      top: 0;
-      left: -30px;
-      background: linear-gradient(to right, rgba(7, 54, 66, 0) 0%, rgba(7, 54, 66, 1) 100%);
-    }
-
-    header button {
-      outline: none;
-      width: 40px;
-      height: 40px;
-      border-radius: 40px;
-      margin: 5px 0;
-      padding: 0;
-      line-height: 30px;
-      border: 1px solid #586e75;
-      color: #586e75;
-      cursor: pointer;
-      background: transparent;
-      transition: all .1s ease-in-out;
-      text-shadow: #002b36 0 2px 2px;
-      box-shadow: #002b36 0 1px 2px;
-    }
-
-    header button:focus,
-    header button:hover {
-      border-color: #839496;
-      color: #839496;
-    }
-
-    header button:active {
-      border-color: #93a1a1;
-      color: #93a1a1;
-    }
-
-    header button+button {
-      margin-left: 10px;
-    }
-
-    section {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      margin: 0;
-      padding: 50px 15px 30px 15px;
-      z-index: 100;
-    }
-
-    #editor,
-    #preview {
-      width: 49.25%;
-      float: left;
-      margin: 15px .75% 0 .75%;
-      border-radius: 2px;
-      transition: all .2s ease-in-out;
-      -webkit-appearance: none;
-      z-index: 500;
-    }
-
-    #editor {
-      outline: none;
-      transition: background-color .1s ease-in-out;
-      font-family: 'Source Code Pro', Menlo, Consolas, monospace;
-      color: #839496;
-      background: #073642;
-      outline: none;
-      border: none;
-      padding: 15px;
-      font-size: 12pt;
-      line-height: 1.2;
-      font-weight: 300;
-      height: auto;
-      box-shadow: rgba(0, 0, 0, .1) 0 1px 2px;
-      margin-left: 0;
-    }
-
-    #preview {
-      background: #fff;
-      /* opacity: 0.3; */
-      transition: opacity .1s ease-in-out;
-      outline: none;
-      appearance: none;
-      border: none;
-      box-shadow: rgba(0, 0, 0, .1) 0 1px 2px;
-      margin-right: 0;
-    }
-
-    #preview:hover,
-    #preview:focus {
-      opacity: 1;
-      cursor: default;
-    }
-
-    footer {
-      background: #073642;
-      width: 100%;
-      height: 30px;
-      line-height: 30px;
-      padding: 0 5px;
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      z-index: 250;
-      box-shadow: rgba(0, 0, 0, .1) 0 -1px 2px;
-    }
-
-    footer .download {
-      position: absolute;
-      top: 50px;
-      left: 50px;
-    }
-
-    @media (max-width: 481px) {
-      header #brand {
-        font-size: 10pt;
+		<style type="text/css">
+      .function_area {
+        width: 100%;
+        height: 40px;
       }
-
-      header #brand strong {
-        display: none;
+      .container {
+        width: 100%;
+        height: calc(100% - 120px);
       }
-    }
-  </style>
-</head>
-
-<body>
-  <section>
-    <textarea id="editor"></textarea>
-    <iframe id="preview"></iframe>
-    <textarea class="css" id="css-content"></textarea>
-  </section>
-  <header>
-    <span id="brand"><strong>AsciiDoctor Live</strong> <span id="filename"></span></span>
-    <nav>
-      <label>文档：</label>
+			.editor,
+			.previewer {
+				display: inline;
+				float: left;
+				width: calc(50% - 20px);
+				height: calc(100vh - 126px);
+			}
+			.editor {
+			}
+			.previewer {
+				/* padding: 10px; */
+        border-width: 1px;
+        border-color: #000;
+			}
+			.css {
+				display: none;
+			}
+		</style>
+	</head>
+	<body>
+    <div class="function_area">
+  		<label>打开文档：</label>
       <input type='file' onchange='loadFile(this)'>
-  		<label>样式：</label>
+  		<label>打开样式：</label>
   		<input type='file' accept='text/css' onchange='loadCss(this)'>
-      <label>样式：</label>
+      <label>链接样式：</label>
       <select id="css-list">
         <option value="NONE" selected>无样式</option>
         <optgroup label="默认组">
@@ -260,36 +94,25 @@
           <option value="material-red.css">material-red.css</option>
         </optgroup>
       </select>
-      <label>&nbsp;保存：</label>
-      <button type="button" onclick="saveDoc()">adoc</button>
-  		<button type="button" onclick="saveHTML()">html</button>
-      <a href="https://meniny.cn/docs/asciidoc/" target="_blank" style="padding: 0 10px; color: #fff !important;">[语法]</a>
+      <label>保存：</label>
+      <button type="button" onclick="saveDoc()">保存ADOC</button>
+  		<button type="button" onclick="saveHTML()">保存HTML</button>
+      <a href="https://meniny.cn/docs/asciidoc/" target="_blank" style="padding: 0 10px;">[语法指引]</a>
       <button type="button" onclick="previewDoc()">预览</button>
-    </nav>
-  </header>
-  <footer><a id="download" download="export.html"></a></footer>
-  <script type="text/javascript">
-    var editorPane = document.getElementById('editor'),
-      previewPane = document.getElementById('preview'),
-      downloadLink = document.getElementById('download'),
-      fileName = '';
-    // Editor Interactions
-    onload = editorPane.onkeyup = function() {
-      refreshView();
-    };
-    // Editor Functions
-    function refreshView() {
-      editorPane.style.height = (window.innerHeight - 110) + 'px';
-      previewPane.style.height = (window.innerHeight - 110) + 'px';
-      (previewPane.contentWindow.document).write(editorPane.value);
-      (previewPane.contentWindow.document).close();
-      editorPane.focus();
-    }
-  </script>
-
+    </div>
+    <div class="container">
+  		<textarea class="editor" id="editor"></textarea>
+  		<div class="previewer" id="previewer">
+  			<iframe id="iframe" width="100%" height="100%" frameborder="1"></iframe>
+  		</div>
+  		<textarea class="css" id="css"></textarea>
+    </div>
+	</body>
   <!-- <script src="node_modules/@asciidoctor/core/dist/browser/asciidoctor.js"></script> -->
   <script type="text/javascript">
-  /* Asciidoctor.js 2.2.0 | MIT | https://github.com/asciidoctor/asciidoctor.js*/
+  /*
+   Asciidoctor.js 2.2.0 | MIT | https://github.com/asciidoctor/asciidoctor.js
+  */
   var $jscomp=$jscomp||{};$jscomp.scope={};$jscomp.arrayIteratorImpl=function(b){var u=0;return function(){return u<b.length?{done:!1,value:b[u++]}:{done:!0}}};$jscomp.arrayIterator=function(b){return{next:$jscomp.arrayIteratorImpl(b)}};$jscomp.makeIterator=function(b){var u="undefined"!=typeof Symbol&&Symbol.iterator&&b[Symbol.iterator];return u?u.call(b):$jscomp.arrayIterator(b)};$jscomp.ASSUME_ES5=!1;$jscomp.ASSUME_NO_NATIVE_MAP=!1;$jscomp.ASSUME_NO_NATIVE_SET=!1;$jscomp.SIMPLE_FROUND_POLYFILL=!1;
   $jscomp.defineProperty=$jscomp.ASSUME_ES5||"function"==typeof Object.defineProperties?Object.defineProperty:function(b,u,A){b!=Array.prototype&&b!=Object.prototype&&(b[u]=A.value)};$jscomp.getGlobal=function(b){return"undefined"!=typeof window&&window===b?b:"undefined"!=typeof global&&null!=global?global:b};$jscomp.global=$jscomp.getGlobal(this);
   $jscomp.polyfill=function(b,u,A,D){if(u){A=$jscomp.global;b=b.split(".");for(D=0;D<b.length-1;D++){var x=b[D];x in A||(A[x]={});A=A[x]}b=b[b.length-1];D=A[b];u=u(D);u!=D&&null!=u&&$jscomp.defineProperty(A,b,{configurable:!0,writable:!0,value:u})}};$jscomp.underscoreProtoCanBeSet=function(){var b={a:!0},u={};try{return u.__proto__=b,u.a}catch(A){}return!1};
@@ -1748,7 +1571,7 @@
 			var doctitle = doc.getDocumentTitle();
 			var html = asciidoctor.convert(content, { 'standalone': true, 'attributes': { 'showtitle': true, 'icons': 'font'} });
       var css_file = document.getElementById("css-list").value ?? 'NONE';
-			var css_content = document.getElementById('css-content').value ?? '';
+			var css_content = document.getElementById('css').value ?? '';
 			var template = '<!DOCTYPE html>' +
 			'<html>' +
 			'<head>' +
@@ -1763,7 +1586,7 @@
 			html
 			'</body>' +
 			'</html>'
-			var iframe = document.getElementById('preview');
+			var iframe = document.getElementById('iframe');
 			iframe.srcdoc = template;
 		};
 		function loadFile(input) {
@@ -1847,6 +1670,4 @@
 			document.body.removeChild(elementA);
 		};
 	</script>
-</body>
-
 </html>
