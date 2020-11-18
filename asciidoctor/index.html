@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>AsciiDoctor Live Editor by Ezra v0.0.</title>
+  <title>AsciiDoctor Live Editor by Ezra v0.0.2</title>
   <style media="screen" type="text/css">
     * {
       box-sizing: border-box;
@@ -195,7 +195,7 @@
   <section>
     <textarea id="editor"></textarea>
     <iframe id="preview"></iframe>
-    <textarea class="css" id="css-content"></textarea>
+    <textarea class="css" id="css-content" style="display: none;"></textarea>
   </section>
   <header>
     <span id="brand"><strong>AsciiDoctor Live</strong> <span id="filename"></span></span>
@@ -204,7 +204,7 @@
       <input type='file' onchange='loadFile(this)'>
   		<label>样式：</label>
   		<input type='file' accept='text/css' onchange='loadCss(this)'>
-      <label>样式：</label>
+      <label>在线样式：</label>
       <select id="css-list">
         <option value="NONE" selected>无样式</option>
         <optgroup label="默认组">
