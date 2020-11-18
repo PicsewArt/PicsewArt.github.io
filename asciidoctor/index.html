@@ -267,25 +267,7 @@
       <button type="button" onclick="previewDoc()">预览</button>
     </nav>
   </header>
-  <footer><a id="download" download="export.html"></a></footer>
-  <script type="text/javascript">
-    var editorPane = document.getElementById('editor'),
-      previewPane = document.getElementById('preview'),
-      downloadLink = document.getElementById('download'),
-      fileName = '';
-    // Editor Interactions
-    onload = editorPane.onkeyup = function() {
-      refreshView();
-    };
-    // Editor Functions
-    function refreshView() {
-      editorPane.style.height = (window.innerHeight - 110) + 'px';
-      previewPane.style.height = (window.innerHeight - 110) + 'px';
-      (previewPane.contentWindow.document).write(editorPane.value);
-      (previewPane.contentWindow.document).close();
-      editorPane.focus();
-    }
-  </script>
+  <footer></footer>
 
   <!-- <script src="node_modules/@asciidoctor/core/dist/browser/asciidoctor.js"></script> -->
   <script type="text/javascript">
@@ -1847,6 +1829,24 @@
 			document.body.removeChild(elementA);
 		};
 	</script>
+
+  <script type="text/javascript">
+    var editorPane = document.getElementById('editor'),
+      previewPane = document.getElementById('preview');
+    // Editor Interactions
+    onload = editorPane.onkeyup = function() {
+      refreshView();
+    };
+    // Editor Functions
+    function refreshView() {
+      editorPane.style.height = (window.innerHeight - 110) + 'px';
+      previewPane.style.height = (window.innerHeight - 110) + 'px';
+      // (previewPane.contentWindow.document).write(editorPane.value);
+      // (previewPane.contentWindow.document).close();
+      // previewDoc();
+      editorPane.focus();
+    }
+  </script>
 </body>
 
 </html>
