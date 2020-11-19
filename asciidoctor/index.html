@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>AsciiDoctor Live v0.1.0</title>
+  <title>AsciiDoctor Live v0.1.1</title>
   <style media="screen" type="text/css">
     * {
       box-sizing: border-box;
@@ -1835,7 +1835,7 @@
 			document.body.removeChild(elementA);
 		};
 		function saveHTML() {
-			var iframe = document.getElementById('iframe');
+			var iframe = document.getElementById('preview');
 			var elementA = document.createElement('a');
 			elementA.setAttribute('href', 'data:text/html;charset=utf-8,' + encodeURIComponent(iframe.srcdoc));
 			elementA.setAttribute('download', +new Date() + ".html");
