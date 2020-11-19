@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>AsciiDoctor Live Editor by Ezra v0.0.2</title>
+  <title>AsciiDoctor Live Editor by Ezra v0.0.3</title>
   <style media="screen" type="text/css">
     * {
       box-sizing: border-box;
@@ -1785,7 +1785,7 @@
 				filename = file.name.split(".")[0];
 				var reader = new FileReader();
 				reader.onload = function() {
-					document.getElementById('css').value = this.result;
+					document.getElementById('css_content').value = this.result;
 				}
 				reader.readAsText(file);
 			}
@@ -1795,7 +1795,7 @@
 				xmlDoc = new ActiveXObject("Microsoft.XMLDOM");
 				xmlDoc.async = false;
 				xmlDoc.load(input.value);
-				document.getElementById('css').value = xmlDoc.xml;
+				document.getElementById('css_content').value = xmlDoc.xml;
 			}
 			//支持FF
 			else if (document.implementation && document.implementation.createDocument) {
@@ -1803,7 +1803,7 @@
 				xmlDoc = document.implementation.createDocument("", "", null);
 				xmlDoc.async = false;
 				xmlDoc.load(input.value);
-				document.getElementById('css').value = xmlDoc.xml;
+				document.getElementById('css_content').value = xmlDoc.xml;
 			} else {
 				alert('error');
 			}
