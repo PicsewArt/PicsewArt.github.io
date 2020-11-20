@@ -1830,8 +1830,9 @@
     function saveDoc() {
 			var editor = document.getElementById('editor');
 			var elementA = document.createElement('a');
-			elementA.setAttribute('href', 'data:text/html;charset=utf-8,' + encodeURIComponent(editor.value));
+			elementA.setAttribute('href', 'data:text/asciidoc;charset=utf-8,' + encodeURIComponent(editor.value));
 			elementA.setAttribute('download', +new Date() + ".adoc");
+			elementA.setAttribute('target', "__blank");
 			elementA.style.display = 'none';
 			document.body.appendChild(elementA);
 			elementA.click();
@@ -1842,6 +1843,7 @@
 			var elementA = document.createElement('a');
 			elementA.setAttribute('href', 'data:text/html;charset=utf-8,' + encodeURIComponent(iframe.srcdoc));
 			elementA.setAttribute('download', +new Date() + ".html");
+			elementA.setAttribute('target', "__blank");
 			elementA.style.display = 'none';
 			document.body.appendChild(elementA);
 			elementA.click();
