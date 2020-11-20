@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>AsciiDoctor Live v1.5</title>
+  <title>AsciiDoctor Live v1.6</title>
   <style media="screen" type="text/css">
     * {
       box-sizing: border-box;
@@ -1843,7 +1843,8 @@
 			elementA.click();
 			document.body.removeChild(elementA);
 			window.open(dataText);*/
-			download(editor.value, +new Date() + ".adoc", "text/plain");
+			//download(editor.value, +new Date() + ".adoc", "text/plain");
+			download(dataText, +new Date() + ".adoc", "text/plain");
 		};
 		function saveHTML() {
 			var iframe = document.getElementById('preview');
@@ -1857,7 +1858,8 @@
 			elementA.click();
 			document.body.removeChild(elementA);
 			window.open(dataText);*/
-			download(iframe.srcdoc, +new Date() + ".html", "text/html");
+			//download(iframe.srcdoc, +new Date() + ".html", "text/html");
+			download(dataText, +new Date() + ".html", "text/html");
 		};
 	</script>
 
