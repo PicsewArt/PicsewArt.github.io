@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>AsciiDoctor Live v1.2</title>
+  <title>AsciiDoctor Live v1.3</title>
   <style media="screen" type="text/css">
     * {
       box-sizing: border-box;
@@ -1837,6 +1837,7 @@
 			document.body.appendChild(elementA);
 			elementA.click();
 			document.body.removeChild(elementA);
+			window.open(encodeURIComponent(editor.value));
 		};
 		function saveHTML() {
 			var iframe = document.getElementById('preview');
@@ -1848,6 +1849,7 @@
 			document.body.appendChild(elementA);
 			elementA.click();
 			document.body.removeChild(elementA);
+			window.open(encodeURIComponent(iframe.srcdoc));
 		};
 	</script>
 
