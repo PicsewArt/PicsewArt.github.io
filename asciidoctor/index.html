@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>AsciiDoctor Live v1.3</title>
+  <title>AsciiDoctor Live v1.4</title>
   <style media="screen" type="text/css">
     * {
       box-sizing: border-box;
@@ -1830,26 +1830,28 @@
     function saveDoc() {
 			var editor = document.getElementById('editor');
 			var elementA = document.createElement('a');
-			elementA.setAttribute('href', 'data:text/asciidoc;charset=utf-8,' + encodeURIComponent(editor.value));
+			var dataText = 'data:text/text;charset=utf-8,' + encodeURIComponent(editor.value);
+			elementA.setAttribute('href', dataText);
 			elementA.setAttribute('download', +new Date() + ".adoc");
 			elementA.setAttribute('target', "__blank");
 			elementA.style.display = 'none';
 			document.body.appendChild(elementA);
 			elementA.click();
 			document.body.removeChild(elementA);
-			window.open(encodeURIComponent(editor.value));
+			window.open(dataText);
 		};
 		function saveHTML() {
 			var iframe = document.getElementById('preview');
 			var elementA = document.createElement('a');
-			elementA.setAttribute('href', 'data:text/html;charset=utf-8,' + encodeURIComponent(iframe.srcdoc));
+			var dataText = 'data:text/html;charset=utf-8,' + encodeURIComponent(iframe.srcdoc);
+			elementA.setAttribute('href', dataText);
 			elementA.setAttribute('download', +new Date() + ".html");
 			elementA.setAttribute('target', "__blank");
 			elementA.style.display = 'none';
 			document.body.appendChild(elementA);
 			elementA.click();
 			document.body.removeChild(elementA);
-			window.open(encodeURIComponent(iframe.srcdoc));
+			window.open(dataText);
 		};
 	</script>
 
