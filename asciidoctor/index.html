@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>AsciiDoctor Live v1.6</title>
+  <title>AsciiDoctor Live v1.7</title>
   <style media="screen" type="text/css">
     * {
       box-sizing: border-box;
@@ -196,6 +196,7 @@
     <textarea id="editor"></textarea>
     <iframe id="preview"></iframe>
     <textarea class="css" id="css-content" style="display: none;"></textarea>
+    <textarea class="adocname" id="adoc-name" style="display: none;"></textarea>
   </section>
   <header>
     <span id="brand"><strong>AsciiDoctor Live</strong> <span id="filename"></span></span>
@@ -1923,11 +1924,43 @@ end
 			var iframe = document.getElementById('preview');
 			iframe.srcdoc = template;
 		};
+    function loadLocalFile(input, contentToElement, nameToElement) {
+			//支持chrome IE10
+			if (window.FileReader) {
+				var file = input.files[0];
+				filename = file.name.split(".")[0];
+        document.getElementById(nameToElement).value = filename;
+				var reader = new FileReader();
+				reader.onload = function() {
+					document.getElementById(contentToElement).value = this.result;
+				}
+				reader.readAsText(file);
+			}
+			//支持IE 7 8 9 10
+			else if (typeof window.ActiveXObject != 'undefined'){
+				var xmlDoc;
+				xmlDoc = new ActiveXObject("Microsoft.XMLDOM");
+				xmlDoc.async = false;
+				xmlDoc.load(input.value);
+				document.getElementById(contentToElement).value = xmlDoc.xml;
+			}
+			//支持FF
+			else if (document.implementation && document.implementation.createDocument) {
+				var xmlDoc;
+				xmlDoc = document.implementation.createDocument("", "", null);
+				xmlDoc.async = false;
+				xmlDoc.load(input.value);
+				document.getElementById(contentToElement).value = xmlDoc.xml;
+			} else {
+				alert('error');
+			}
+		};
 		function loadFile(input) {
 			//支持chrome IE10
 			if (window.FileReader) {
 				var file = input.files[0];
 				filename = file.name.split(".")[0];
+        document.getElementById('adoc-name').value = filename;
 				var reader = new FileReader();
 				reader.onload = function() {
 					document.getElementById('editor').value = this.result;
@@ -1999,22 +2032,14 @@ end
 			document.body.removeChild(elementA);
 			window.open(dataText);*/
 			//download(editor.value, +new Date() + ".adoc", "text/plain");
-			download(dataText, +new Date() + ".adoc", "text/plain");
+      var fn = document.getElementById('adoc-name').value ?? +new Date();
+			download(dataText, fn + ".adoc", "text/plain");
 		};
 		function saveHTML() {
 			var iframe = document.getElementById('preview');
-			//var elementA = document.createElement('a');
 			var dataText = 'data:text/html;charset=utf-8,' + encodeURIComponent(iframe.srcdoc);
-			/*elementA.setAttribute('href', dataText);
-			elementA.setAttribute('download', +new Date() + ".html");
-			elementA.setAttribute('target', "__blank");
-			elementA.style.display = 'none';
-			document.body.appendChild(elementA);
-			elementA.click();
-			document.body.removeChild(elementA);
-			window.open(dataText);*/
-			//download(iframe.srcdoc, +new Date() + ".html", "text/html");
-			download(dataText, +new Date() + ".html", "text/html");
+      var fn = document.getElementById('adoc-name').value ?? +new Date();
+			download(dataText, fn + ".html", "text/html");
 		};
 	</script>
 
@@ -2038,4 +2063,3 @@ end
 </body>
 
 </html>
-
