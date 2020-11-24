@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>AsciiDoctor Live v2.2</title>
+  <title>AsciiDoctor Live v2.3</title>
   <style media="screen" type="text/css">
     * {
       box-sizing: border-box;
@@ -2056,6 +2056,10 @@ end
       // (previewPane.contentWindow.document).close();
       // previewDoc();
       editorPane.focus();
+    }
+    
+    window.onload = function() {
+      previewDoc();
     }
   </script>
   
