@@ -215,64 +215,65 @@
 
 [TIP]
 ====
-说明性文字。
+Description.
 ====
 
-== 修订记录
+== Records
 
 [%header, cols="2a, 2a, 6a"]
 |===
-|版本
-|日期
-|说明
+|Version
+|Date
+|Description
 
 |1.0.0
 |2020-11-08
-|第一版。
+|The first incarnation of {doctitle}.
 
 |1.1.0
 |2020-11-16
 |
-* 修改内容
+* Item
 |===
 
-== 1.0 标题
+== Title 1
 
 .???
 ****
-* 待讨论内容
+* Item
+* Item
 ****
 
 [[bookmark-title,cunstom-tag]]
-== 标题
+== Title 2
 
 [.text-center]
 .Programming is a walk in the park
 image::https://picsew.cn/assets/images/programming-is-a-walk-in-the-park.png[width=100]
 
-描述内容[[bookmark-a]]一个行内标签。
+Here is a [[bookmark-a]] inline tag。
 
-跳转到<<bookmark-a,前面的标签>>。
+Jump to <<bookmark-a,that inline tag>>。
 
-跳转到<<bookmark-title,前面的标题>>。
+Jump to <<bookmark-title,Title 2>>。
 
-* 列表 1
-** 列表 2
-*** 列表 3
-* [ ] 检查 1
-* [x] 检查 2
-* [*] 检查 3
+* Item 1
+** Item 2
+*** Item 3
+* [ ] Checkbox 1
+* [x] Checkbox 2
+* [*] Checkbox 3
 
-. 列表 1
-.. 列表 2
-... 列表 3
-. 列表 4
+. Item 1
+.. Item 2
+... Item 3
+. Item 4
 
 [qanda]
-一个问题::
-  回答.
-第二个问题::
-  哈哈
+A Question::
+  Answer.
+A Question::
+  Haha.
 [%hardbreaks]
 
 Operating Systems::
@@ -286,13 +287,13 @@ Operating Systems::
     . FreeBSD
     . NetBSD
 
-示意图：
+Sketch:
 
 [%header%footer%autowidth, cols="2a,2a,2a"]
 |===
-|说明
-|说明
-|说明
+|Description
+|Description
+|Description
 
 |
 image:./Export/Home.png[]
@@ -321,12 +322,14 @@ image:./Export/Home-Full.png[]
 </dependency>
 ----
 
-// 注释
+// Comment
 
 ////
-这里
-有一个
-注释
+This
+is
+a
+Multline
+Comment
 ////
 
 [source,ruby]
@@ -345,7 +348,7 @@ end
 
 [NOTE]
 ====
-附件: link:./附件.xd[附件.xd]
+Attachments: link:./AdobeXD.xd[AdobeXD.xd]
 ====</textarea>
     <iframe id="preview"></iframe>
     <textarea class="css" id="css-content" style="display: none;"></textarea>
@@ -354,13 +357,13 @@ end
   <header>
     <span id="brand"><strong>AsciiDoctor Live</strong> <span id="filename"></span></span>
     <nav>
-      <label>文档：</label>
+      <label>Adoc：</label>
       <input type='file' name="Open AsciiDoc" onchange='loadFile(this)'>
-  		<label>样式：</label>
+  		<label>CSS：</label>
   		<input type='file' accept='text/css' name="Open Stylesheet" onchange='loadCss(this)'>
-      <label>在线样式：</label>
+      <label>Link：</label>
       <select id="css-list">
-        <option value="NONE">无样式</option>
+        <option value="NONE">None</option>
         <optgroup label="默认组">
           <option value="asciidoctor.css" selected>asciidoctor.css</option>
           <option value="adoc-golo.css">adoc-golo.css</option>
@@ -415,14 +418,14 @@ end
           <option value="material-red.css">material-red.css</option>
         </optgroup>
       </select>
-      <label>&nbsp;保存：</label>
+      <label>&nbsp;Save：</label>
       <button type="button" onclick="saveDoc()">adoc</button>
       <button type="button" onclick="saveHTML()">html</button>
       <!--<form method="get" action="file.doc">
         <button type="submit">HTML</button>
       </form>-->
-      <a href="https://meniny.cn/docs/asciidoc/" target="_blank" style="padding: 0 10px; color: #fff !important;">[语法]</a>
-      <button type="button" onclick="previewDoc()">预览</button>
+      <a href="https://meniny.cn/docs/asciidoc/" target="_blank" style="padding: 0 10px; color: #fff !important;">[Syntax]</a>
+      <button type="button" onclick="previewDoc()">Preview</button>
     </nav>
   </header>
   <footer></footer>
