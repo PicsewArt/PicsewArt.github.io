@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>AsciiDoctor Live v2.4</title>
+  <title>AsciiDoctor Live v2.5</title>
   <style media="screen" type="text/css">
     * {
       box-sizing: border-box;
@@ -357,6 +357,7 @@ Attachments: link:./AdobeXD.xd[AdobeXD.xd]
   <header>
     <span id="brand"><strong>AsciiDoctor Live</strong> <span id="filename"></span></span>
     <nav>
+      <div id="dropbox" style="min-width: 40px; max-width: 110px; min-height: 24px; padding: 5px; border-width: 1px; border-color: #fff; border-style: solid;">DropZone</div>
       <label>Adoc：</label>
       <input type='file' name="Open AsciiDoc" onchange='loadFile(this)'>
   		<label>CSS：</label>
@@ -2064,6 +2065,82 @@ Attachments: link:./AdobeXD.xd[AdobeXD.xd]
     /*window.onload = function() {
       previewDoc();
     }*/
+  </script>
+  
+  <script type="text/javascript">
+    var dropbox = document.getElementById('dropbox');
+
+    dropbox.addEventListener('dragenter', noopHandler, false);
+    dropbox.addEventListener('dragexit', noopHandler, false);
+    dropbox.addEventListener('dragover', noopHandler, false);
+    dropbox.addEventListener('drop', drop, false);
+
+    function noopHandler(evt) {
+      evt.stopPropagation();
+      evt.preventDefault();
+    }
+    
+    function isContains(str, substr) {
+      return str.indexOf(substr) >= 0;
+    }
+    
+    function readfiles(files) {
+      for (var i = 0; i < files.length; i++) {
+        //document.getElementById('fileDragName').value = files[i].name
+        //document.getElementById('fileDragSize').value = files[i].size
+        //document.getElementById('fileDragType').value = files[i].type
+        reader = new FileReader();
+        reader.onload = function(event) {
+          document.getElementById('fileDragData').value = event.target.result;
+        }
+        reader.readAsDataURL(files[i]);
+      }
+    }
+    
+    function readfirstfile(files) {
+      console.log(files.length);
+      if (files.length > 0) {
+        var filename = files[0].name;
+        console.log(filename);
+        if (isContains(filename, '.adoc')) {
+          document.getElementById('adoc-name').value = filename;
+        } else if (isContains(filename, '.ad')) {
+          document.getElementById('adoc-name').value = filename;
+        } else if (isContains(filename, '.asciidoc')) {
+          document.getElementById('adoc-name').value = filename;
+        } else if (isContains(filename, '.css')) {
+          //document.getElementById('css-content').value = filename;
+        } else {
+          console.log('ERROR!!!');
+          alert("Please grag .adoc/.css file here.");
+          return
+        }
+        reader = new FileReader();
+        reader.onload = function(event) {
+          console.log('READ');
+          if (isContains(filename, '.css')) {
+            document.getElementById('css-content').value = event.target.result;
+          } else {
+            document.getElementById('editor').value = event.target.result;
+          }
+        }
+        reader.readAsDataURL(files[0]);
+      }
+    }
+    
+    function drop(evt) {
+      evt.stopPropagation();
+      evt.preventDefault(); 
+    
+      var holder = document.getElementById('dropbox');
+      holder.ondragover = function () { this.className = 'hover'; return false; };
+      holder.ondragend = function () { this.className = ''; return false; };
+      holder.ondrop = function (e) {
+        this.className = '';
+        e.preventDefault();
+        readfirstfile(e.dataTransfer.files);
+      }
+    }
   </script>
   
 </body>
