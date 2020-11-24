@@ -191,7 +191,7 @@
   </style>
 </head>
 
-<body>
+<body onload="javascript:setTemplate();">
   <section>
     <textarea id="editor"></textarea>
     <iframe id="preview"></iframe>
@@ -273,6 +273,161 @@
   </header>
   <footer></footer>
 
+  <script type="text/javascript">
+    function setTemplate() {
+      var adocTemplate = `:doctype: book
+:page-layout!:
+:sectanchors:
+:sectlinks:
+:sectnums:
+:toc: left
+:toclevels: 6
+:toc-title: 索引
+:doctitle: 文档标题
+:icons: font
+:source-highlighter: pygments
+
+= {doctitle}
+:author: 李申翊
+:email: meniny@miriding.com
+:revnumber: 1.0.0
+:revdate: Nov. 17, 2020
+:revremark: The first incarnation of {doctitle}
+:version-label!:
+
+[TIP]
+====
+说明性文字。
+====
+
+== 修订记录
+
+[%header, cols="2a, 2a, 6a"]
+|===
+|版本
+|日期
+|说明
+
+|1.0.0
+|2020-11-08
+|第一版。
+
+|1.1.0
+|2020-11-16
+|
+* 修改内容
+|===
+
+== 1.0 标题
+
+.???
+****
+* 待讨论内容
+****
+
+[[bookmark-title,cunstom-tag]]
+== 标题
+
+描述内容[[bookmark-a]]一个行内标签。
+
+跳转到<<bookmark-a,前面的标签>>。
+
+跳转到<<bookmark-title,前面的标题>>。
+
+* 列表 1
+** 列表 2
+*** 列表 3
+* [ ] 检查 1
+* [x] 检查 2
+* [*] 检查 3
+
+. 列表 1
+.. 列表 2
+... 列表 3
+. 列表 4
+
+[qanda]
+一个问题::
+  回答.
+第二个问题::
+  哈哈
+[%hardbreaks]
+
+Operating Systems::
+  Linux:::
+    . Fedora
+      * Desktop
+    . Ubuntu
+      * Desktop
+      * Server
+  BSD:::
+    . FreeBSD
+    . NetBSD
+
+示意图：
+
+[%header%footer%autowidth, cols="2a,2a,2a"]
+|===
+|说明
+|说明
+|说明
+
+|
+image:./Export/Home.png[]
+|
+image:./Export/Home-Full-Close.png[]
+|
+image:./Export/Home-Full.png[]
+
+|aaaa
+|bbbb
+|cccc
+
+|aaaa
+|bbbb
+|cccc
+|===
+
+:version: 1.5.6.1
+
+[source,xml,subs="verbatim,attributes"]
+----
+<dependency>
+  <groupId>org.asciidoctor</groupId>
+  <artifactId>asciidoctor-java-integration</artifactId>
+  <version>{version}</version>
+</dependency>
+----
+
+// 注释
+
+////
+这里
+有一个
+注释
+////
+
+[source,ruby]
+----
+require 'sinatra' <1>
+
+get '/hi' do <2> <3>
+  "Hello World!"
+end
+----
+<1> Library import
+<2> URL mapping
+<3> Response block
+
+---
+
+[NOTE]
+====
+附件: link:./附件.xd[附件.xd]
+====`;
+      document.getElementById('editor').value = adocTemplate;
+    }
+  </script>
   <!-- <script src="node_modules/@asciidoctor/core/dist/browser/asciidoctor.js"></script> -->
   <script type="text/javascript">
   /* Asciidoctor.js 2.2.0 | MIT | https://github.com/asciidoctor/asciidoctor.js*/
