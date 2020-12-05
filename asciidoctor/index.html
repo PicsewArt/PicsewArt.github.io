@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>AsciiDoctor v0.2.010</title>
+  <title>AsciiDoctor v0.2.011</title>
   <style media="screen" type="text/css">
     * {
       box-sizing: border-box;
@@ -431,7 +431,7 @@ Attachments: link:./AdobeXD.xd[AdobeXD.xd]
       <label>Footer:</label>
       <select id="footer-list">
         <option value="Default">Default</option>
-        <option value="dard-red">Dark Red</option>
+        <option value="dark-red">Dark Red</option>
       </select>
       <label>Save:</label>
       <button type="button" onclick="saveDoc()">adoc</button>
@@ -2079,16 +2079,18 @@ Attachments: link:./AdobeXD.xd[AdobeXD.xd]
 			var content = document.getElementById("editor").value ?? '';
 			var footer_selected = document.getElementById("footer-list").value ?? 'Default';
 			var footer_content = '';
+			console.log(footer_selected);
 			switch (footer_selected) {
 			  case 'dark-red':
 			  footer_content += '\n\n';
-			  footer_content += '++++';
+			  footer_content += '++++\n';
 			  footer_content += '<footer style="border-top: solid #A44B4B; border-width: 15px; background: #2E2E2E; width:100%; height:120px;"><p style="color: #424242; font-family: Lato; font-size: 20px; text-align: center; margin-top: 40px;">&copy;	MADE WITH ❤️ BY EZRA</p></footer>';
-			  footer_content += '++++';
+			  footer_content += '\n++++';
 			    break;
 			  default:
 			}
 			content += footer_content;
+			console.log(content);
 			var doc = asciidoctor.load(content);
 			var doctitle = doc.getDocumentTitle();
 			var html = asciidoctor.convert(content, { 'standalone': true, 'attributes': { 'showtitle': true, 'icons': 'font'} });
