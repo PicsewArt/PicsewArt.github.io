@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>AsciiDoctor v0.2.006</title>
+  <title>AsciiDoctor v0.2.007</title>
   <style media="screen" type="text/css">
     * {
       box-sizing: border-box;
@@ -204,8 +204,9 @@
 :doctitle: This is a Title
 :icons: font
 :source-highlighter: pygments
-:last-update-label!:
-:docinfo: shared-footer
+:nofooter:
+//:last-update-label!:
+//:docinfo: shared-footer
 
 = {doctitle}
 :author: Ezra
@@ -346,17 +347,40 @@ end
 <2> URL mapping
 <3> Response block
 
+////
 ---
 
 [.text-center]
 [.small]#Made with ❤️ in Shenzhen#
-
+////
 ---
 
 [NOTE]
 ====
 Attachments: link:./AdobeXD.xd[AdobeXD.xd]
-====</textarea>
+====
+
+++++
+<style type="text/css">
+.custom-footer {
+width: 100%;
+height: 34px;
+background-color: #333;
+color: #fff;
+}
+.custom-footer .footer-text {
+}
+.custom-footer .footer-text a {
+color: #fff;
+text-decoration: none;
+}
+</style>
+<div class="custom-footer">
+<center>
+<p class="footer-text"><small><a href="https://pcisew.cn/asciidoctor/">Made with ❤️ by Ezra</a></small></p>
+</center>
+</div>
+++++</textarea>
     <iframe id="preview"></iframe>
     <textarea class="css" id="css-content" style="display: none;"></textarea>
     <textarea class="adocname" id="adoc-name" style="display: none;">Untitled</textarea>
