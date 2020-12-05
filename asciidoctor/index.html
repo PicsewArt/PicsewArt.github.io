@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>AsciiDoctor Live v2.8.3</title>
+  <title>AsciiDoctor Live v2.9</title>
   <style media="screen" type="text/css">
     * {
       box-sizing: border-box;
@@ -1988,6 +1988,7 @@ Attachments: link:./AdobeXD.xd[AdobeXD.xd]
 				anchor.href = url;
 				anchor.setAttribute("download", fileName);
 				anchor.className = "download-js-link";
+				anchor.target = "__blank";
 				anchor.innerHTML = "downloading...";
 				anchor.style.display = "none";
 				document.body.appendChild(anchor);
@@ -2019,8 +2020,6 @@ Attachments: link:./AdobeXD.xd[AdobeXD.xd]
 			setTimeout(function(){ document.body.removeChild(f); }, 333);
 
 		}//end saver
-
-
 
 
 		if (navigator.msSaveBlob) { // IE10+ : (has Blob, but not a[download] or URL)
