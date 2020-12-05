@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>AsciiDoctor v0.2.008</title>
+  <title>AsciiDoctor v0.2.009</title>
   <style media="screen" type="text/css">
     * {
       box-sizing: border-box;
@@ -358,27 +358,21 @@ end
 [NOTE]
 ====
 Attachments: link:./AdobeXD.xd[AdobeXD.xd]
-====
-
-++++
-<footer style="border-top: solid #A44B4B; border-width: 15px; background: #2E2E2E; width:100%; height:120px;">
-  <p style="color: #424242; font-family: Lato; font-size: 20px; text-align: center; margin-top: 40px;">&copy;	MADE WITH ❤️ BY EZRA</p>
-</footer>
-++++</textarea>
+====</textarea>
     <iframe id="preview"></iframe>
     <textarea class="css" id="css-content" style="display: none;"></textarea>
     <textarea class="adocname" id="adoc-name" style="display: none;">Untitled</textarea>
   </section>
   <header>
-    <span id="brand"><strong>AsciiDoctor Live</strong> <span id="filename"></span></span>
+    <span id="brand"><strong>AsciiDoctor</strong> <span id="filename"></span></span>
     <nav>
       <!-- <div id="dropbox" style="min-width: 40px; max-width: 110px; min-height: 24px; padding: 5px; border-width: 1px; border-color: #fff; border-style: solid;">DropZone</div> -->
       <label>Adoc：</label>
-      <input type='file' name="Open AsciiDoc" onchange='loadFile(this)'>
+      <input type='file' name="Open AsciiDoc" onchange='loadFile(this)' style="max-width: 140px;">
   		<label>CSS：</label>
-  		<input type='file' accept='text/css' name="Open Stylesheet" onchange='loadCss(this)'>
+  		<input type='file' accept='text/css' name="Open Stylesheet" onchange='loadCss(this)' style="max-width: 140px;">
       <label>Link：</label>
-      <select id="css-list">
+      <select id="css-list" style="max-width: 80px;">
         <option value="NONE">None</option>
         <optgroup label="Default">
           <option value="asciidoctor.css" selected>asciidoctor.css</option>
@@ -433,6 +427,11 @@ Attachments: link:./AdobeXD.xd[AdobeXD.xd]
           <option value="boot-flatly.css">boot-flatly.css</option>
           <option value="material-red.css">material-red.css</option>
         </optgroup>
+      </select>
+      <label>Footer：</label>
+      <select id="footer-list">
+        <option value="NONE">None</option>
+        <option value="dard-red">Dark Red</option>
       </select>
       <label>&nbsp;Save：</label>
       <button type="button" onclick="saveDoc()">adoc</button>
@@ -2078,6 +2077,18 @@ Attachments: link:./AdobeXD.xd[AdobeXD.xd]
 		function previewDoc() {
 			var asciidoctor = Asciidoctor()
 			var content = document.getElementById("editor").value ?? '';
+			var footer_selected = document.getElementById("footer-list").value ?? 'Default';
+			var footer_content = '';
+			switch (footer_selected) {
+			  case 'dark-red':
+			  footer_content += '\n\n';
+			  footer_content += '++++';
+			  footer_content += '<footer style="border-top: solid #A44B4B; border-width: 15px; background: #2E2E2E; width:100%; height:120px;"><p style="color: #424242; font-family: Lato; font-size: 20px; text-align: center; margin-top: 40px;">&copy;	MADE WITH ❤️ BY EZRA</p></footer>';
+			  footer_content += '++++';
+			    break;
+			  default:
+			}
+			content += footer_content;
 			var doc = asciidoctor.load(content);
 			var doctitle = doc.getDocumentTitle();
 			var html = asciidoctor.convert(content, { 'standalone': true, 'attributes': { 'showtitle': true, 'icons': 'font'} });
