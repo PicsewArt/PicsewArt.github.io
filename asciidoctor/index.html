@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>AsciiDoctor Live v0.2</title>
+  <title>AsciiDoctor Live v0.2.002</title>
   <style media="screen" type="text/css">
     * {
       box-sizing: border-box;
@@ -2189,10 +2189,14 @@ Attachments: link:./AdobeXD.xd[AdobeXD.xd]
 		function saveText(content, mime, name, ext) {
 			var dataText = 'data:text/' + mime + ';charset=utf-8,' + encodeURIComponent(content);
 			var fn = prompt("Filename", name + '.' + ext);
-			if (fn != null && fn != "") {
-			    download(new Blob([dataText]), fn, 'text/' + mime);
+			if (fn === null) {
+			    alert('ERROR!');
 			} else {
-                download(new Blob([dataText]), 'UNTITLED.' + ext, 'text/' + mime);
+			    if (fn != null && fn != "") {
+			        download(new Blob([dataText]), fn, 'text/' + mime);
+        			} else {
+                    download(new Blob([dataText]), 'UNTITLED.' + ext, 'text/' + mime);
+			    }
 			}
 		};
 		function saveDoc() {
