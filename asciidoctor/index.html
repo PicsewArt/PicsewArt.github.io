@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>AsciiDoctor Live v2.9</title>
+  <title>AsciiDoctor Live v0.2</title>
   <style media="screen" type="text/css">
     * {
       box-sizing: border-box;
@@ -2183,12 +2183,17 @@ Attachments: link:./AdobeXD.xd[AdobeXD.xd]
 				alert('error');
 			}
 		};
-		function getADocName() {
-		    return document.getElementById('adoc-name').value ?? +new Date();
+		function getADocName(repl) {
+		    return document.getElementById('adoc-name').value ?? (repl ?? 'UNTITLED');
 		};
 		function saveText(content, mime, name, ext) {
 			var dataText = 'data:text/' + mime + ';charset=utf-8,' + encodeURIComponent(content);
-			download(new Blob([dataText]), name + '.' + ext, 'text/' + mime);
+			var fn = prompt("Filename", name + '.' + ext);
+			if (fn != null && fn != "") {
+			    download(new Blob([dataText]), fn, 'text/' + mime);
+			} else {
+                download(new Blob([dataText]), 'UNTITLED.' + ext, 'text/' + mime);
+			}
 		};
 		function saveDoc() {
 			var editor = document.getElementById('editor');
