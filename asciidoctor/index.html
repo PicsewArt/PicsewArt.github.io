@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>AsciiDoctor v0.2.011</title>
+  <title>AsciiDoctor v0.2.012</title>
   <style media="screen" type="text/css">
     * {
       box-sizing: border-box;
@@ -2079,7 +2079,6 @@ Attachments: link:./AdobeXD.xd[AdobeXD.xd]
 			var content = document.getElementById("editor").value ?? '';
 			var footer_selected = document.getElementById("footer-list").value ?? 'Default';
 			var footer_content = '';
-			console.log(footer_selected);
 			switch (footer_selected) {
 			  case 'dark-red':
 			  footer_content += '\n\n';
@@ -2090,7 +2089,6 @@ Attachments: link:./AdobeXD.xd[AdobeXD.xd]
 			  default:
 			}
 			content += footer_content;
-			console.log(content);
 			var doc = asciidoctor.load(content);
 			var doctitle = doc.getDocumentTitle();
 			var html = asciidoctor.convert(content, { 'standalone': true, 'attributes': { 'showtitle': true, 'icons': 'font'} });
