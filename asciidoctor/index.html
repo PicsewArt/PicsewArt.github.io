@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>AsciiDoctor v0.2.014</title>
+  <title>AsciiDoctor v0.2.015</title>
   <style media="screen" type="text/css">
     * {
       box-sizing: border-box;
@@ -2220,15 +2220,38 @@ Attachments: link:./AdobeXD.xd[AdobeXD.xd]
 			    //alert('ERROR!');
 			} else {
 			    if (fn != null && fn != "") {
+            saveLink(fn + '.' + ext, content, mime);
               document.getElementById('adoc-name').value = fn;
-			        //download(new Blob([dataText]), fn + '.' + ext, 'text/' + mime);
-              window.open(dataText, '_blank');
-        			} else {
-                    //download(new Blob([dataText]), 'UNTITLED.' + ext, 'text/' + mime);
-                    window.open(dataText, '_blank');
+			        // download(new Blob([dataText]), fn + '.' + ext, 'text/' + mime);
+              // window.open(dataText, '_blank');
+    			} else {
+              // download(new Blob([dataText]), 'UNTITLED.' + ext, 'text/' + mime);
+              // window.open(dataText, '_blank');
+              saveLink('UNTITLED.' + ext, content, mime);
 			    }
-			}
+      }
 		};
+    function saveLink(fn, content, mime) {
+      var textFileAsBlob = new Blob([ content ], { type: 'text/' + mime });
+      var downloadLink = document.createElement("a");
+      downloadLink.download = fn;
+      downloadLink.innerHTML = 'Download ' + fn;
+      if (window.webkitURL != null) {
+        // Chrome allows the link to be clicked without actually adding it to the DOM.
+        downloadLink.href = window.webkitURL.createObjectURL(textFileAsBlob);
+      } else {
+        // Firefox requires the link to be added to the DOM before it can be clicked.
+        downloadLink.href = window.URL.createObjectURL(textFileAsBlob);
+        downloadLink.onclick = destroyClickedElement;
+        downloadLink.style.display = "none";
+        document.body.appendChild(downloadLink);
+      }
+      downloadLink.click();
+    };
+    function destroyClickedElement(event) {
+      // remove the link from the DOM
+      document.body.removeChild(event.target);
+    };
 		function saveDoc() {
 			var editor = document.getElementById('editor');
 			saveText(editor.value, 'plain', getADocName(), 'adoc');
