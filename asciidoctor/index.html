@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>AsciiDoctor v0.2.020</title>
+  <title>AsciiDoctor v0.2.021</title>
   <style media="screen" type="text/css">
     * {
       box-sizing: border-box;
@@ -212,7 +212,7 @@
 :author: Ezra
 :email: ezra@domain.com
 :revnumber: 1.0.0
-:revdate: Nov. 17, 2020
+:revdate: Feb. 10, 2021
 :revremark: The first incarnation of {doctitle}
 :version-label!:
 
@@ -2085,14 +2085,21 @@ Attachments: link:./AdobeXD.xd[AdobeXD.xd]
 			  case 'dark-red':
   			  footer_content += '\n\n';
   			  footer_content += '++++\n';
-  			  footer_content += '<footer style="border-top: solid #A44B4B; border-width: 15px; background: #2E2E2E; width:100%; height:120px;"><p style="color: #424242; font-family: Lato; font-size: 20px; text-align: center; margin-top: 40px;">&copy;	MADE WITH ❤️ BY EZRA</p></footer>';
+  			  footer_content += '<footer style="border-top: solid #A44B4B; border-width: 15px; background: #2E2E2E; width:100%; height:120px;"><p style="color: #424242; font-family: Lato; font-size: 20px; text-align: center; margin-top: 40px;">&copy;	MADE WITH ❤️ ';
+          var fn = prompt("Footer prompt", 'BY EZRA');
+    			if (fn === null) {
+    			  footer_content += 'BY EZRA';
+    			} else {
+            footer_content += fn;
+          }
+          footer_content += '</p></footer>';
   			  footer_content += '\n++++';
 			    break;
         case 'simple':
           footer_content += '\n\n---\n\n\n[.text-center]\n[.small]#Made with ❤️ by ';
-          var fn = prompt("Filename", name);
+          var fn = prompt("Footer prompt", 'by Ezra');
     			if (fn === null) {
-    			  footer_content += 'Ezra';
+    			  footer_content += 'by Ezra';
     			} else {
             footer_content += fn;
           }
