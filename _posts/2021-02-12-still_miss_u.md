@@ -5,14 +5,8 @@ tags: ["Sadness"]
 date: 20210212T233030+08:00
 hero:
   format: 'jpeg'
-  url: 'HERO_0002.jpg'
+  url: 'HERO_0008.jpg'
 ---
-Hi, how are you?
-
-I’ve been thinking about you. I miss you. I miss our conversations and connection.
-
-I find you insanely attractive.
-
 We didn't get a lot of time, but I really miss what we had. I miss all of it. Spending time with you, making you laugh and making you feel loved. I miss looking into your eyes and feeling safe and comfortable.
 
 I wish I could still spend time with you and talk to you every day, I've felt so isolated and lonely without you. There were so many things I wanted to do with you that can't happen now, and it hurts so much. I'm feeling considerably better now, but every now and then I still feel like I'm being pushed down by something I can't see.
