@@ -12,7 +12,8 @@ active_title: 'Albums'
 		{% capture this_media_url %}{% include gallery_media_url.html item=item %}{% endcapture %}
 		{% capture this_thumbnail_url %}{% include gallery_media_thumbnail_url.html item=item %}{% endcapture %}
 
-		{% assign this_item = this_item | push: forloop.index %}
+		{% assign this_idx = page.media.size | minus: forloop.index | plus: 1 %}
+		{% assign this_item = this_item | push: this_idx %}
 		{% assign date_formatted = item.date | date: "%b %d, %Y" %}
     {% assign this_item = this_item | push: date_formatted %}
 		{% assign this_item = this_item | push: this_thumbnail_url %}
