@@ -1,10 +1,10 @@
 ---
-title: "Sketch"
-unique: "sketch"
+title: "Drawings"
+unique: "drawings"
 published: true
-desc: "Lovely paintings"
+desc: "Lovely drawings"
 cover:
-  url: "cover_painting.jpg"
+  url: "cover_drawings.jpg"
   format: "jpg"
 media:
   # - url: "sketch_0001.jpg"
