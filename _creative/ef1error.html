@@ -1,9 +1,9 @@
 ---
 layout: null
-title: "騎記歐版 EF1 故障碼解析"
-version: "0.0.4"
-date: 20200708T180000+08:00
-desc: "騎記歐版 EF1 故障碼解析"
+title: "小米電助力折疊自行車 F1 歐規版故障碼解析"
+version: "0.0.5"
+date: 20210314T230000+08:00
+desc: "小米電助力折疊自行車 F1 歐規版故障碼解析"
 cover:
   url: 'ef1error.png'
   format: 'png'
@@ -112,13 +112,14 @@ display: false
     <div class="content">
       <div class="content-search">
         <h1 class="content-title">{{ page.title }}</h1>
-        <div class="content-version">v{{ page.version }}</div>
+        <div class="content-version">v{{ page.version }} by <a href="{{ page.author_link}}" target="_blank">{{ site.author }}</a></div>
         <div class="margin"></div>
         <div class="content-search-header">
           <input id="input" class="content-search-header-ser" type="text" placeholder="請輸入故障碼" value="65535" />
           <div class="margin"></div>
-          <span class="content-search-header-btn" id="btn">查詢</span>
-          <span class="content-search-header-btn" id="btn1">重置</span>
+          <span class="content-search-header-btn" id="btn_clear">清空</span>
+          <span class="content-search-header-btn" id="btn_reset">重置</span>
+          <span class="content-search-header-btn" id="btn_analyse">查詢</span>
         </div>
         <div class="content-search-total">提示：輸入應介於0至65535之間</div>
       </div>
@@ -149,8 +150,9 @@ display: false
   }
 </script>
 <script type="text/javascript">
-  var btn = document.getElementById("btn");
-  var btn1 = document.getElementById("btn1");
+  var btn_analyse = document.getElementById("btn_analyse");
+  var btn_reset = document.getElementById("btn_reset");
+  var btn_clear = document.getElementById("btn_clear");
   var errors = [
     ["功率管故障", "08"],
     ["過流故障", "09"],
@@ -169,7 +171,7 @@ display: false
     ["表頭發送錯誤", "07"],
     ["N/A", "00"]
   ].reverse();
-  btn.onclick = function() {
+  btn_analyse.onclick = function() {
     var text = document.getElementById("input");
     var str = document.getElementById("str");
     var code = document.getElementById("code");
@@ -214,7 +216,15 @@ display: false
     str.innerHTML = string;
     code.innerHTML = text.value;
   };
-  btn1.onclick = function() {
+  btn_reset.onclick = function() {
+    var text = document.getElementById("input");
+    var str = document.getElementById("str");
+    var code = document.getElementById("code");
+    text.value = "65535";
+    str.innerHTML = "";
+    code.innerHTML = "N/A";
+  }
+  btn_clear.onclick = function() {
     var text = document.getElementById("input");
     var str = document.getElementById("str");
     var code = document.getElementById("code");
