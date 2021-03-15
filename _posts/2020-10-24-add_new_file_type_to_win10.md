@@ -1,5 +1,5 @@
 ---
-title: "New file types to Windows 10 Context Menu"
+title: "New file types to Win10 Context Menu"
 category: "Technology"
 tags: ["Windows 10"]
 date: 20201024T143030+08:00
