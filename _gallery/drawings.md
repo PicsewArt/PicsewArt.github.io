@@ -507,14 +507,6 @@ media:
     type: 'image'
     format: "jpeg"
     date: 20210312T222200+08:00
-  - url: "pen_0124.jpg"
-    type: 'image'
-    format: "jpeg"
-    date: 20210312T222200+08:00
-  - url: "pen_0125.png"
-    type: 'image'
-    format: "png"
-    date: 20210312T222200+08:00
   - url: "pen_all.mp4"
     type: 'video'
     format: "mp4"
