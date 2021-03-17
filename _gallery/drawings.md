@@ -7,14 +7,6 @@ cover:
   url: "cover_drawings.jpg"
   format: "jpg"
 media:
-  # - url: "sketch_0001.jpg"
-  #   type: 'image'
-  #   format: "jpeg"
-  #   date: 20200301T120000+08:00
-  # - url: "sketch_0002.png"
-  #   type: 'image'
-  #   format: "png"
-  #   date: 20200301T120000+08:00
   - url: "pen_0000.jpg"
     type: 'image'
     format: "jpeg"
@@ -512,6 +504,14 @@ media:
     format: "jpeg"
     date: 20210312T222200+08:00
   - url: "pen_0123.jpg"
+    type: 'image'
+    format: "jpeg"
+    date: 20210312T222200+08:00
+  - url: "pen_0124.jpg"
+    type: 'image'
+    format: "jpeg"
+    date: 20210312T222200+08:00
+  - url: "pen_0125.jpg"
     type: 'image'
     format: "jpeg"
     date: 20210312T222200+08:00
