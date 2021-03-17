@@ -383,10 +383,6 @@ media:
     type: 'image'
     format: "jpeg"
     date: 20200730T183000+08:00
-  - url: "pen_0000.mp4"
-    type: 'video'
-    format: "mp4"
-    date: 20200730T184000+08:00
   - url: "pen_0094.jpg"
     type: 'image'
     format: "jpeg"
