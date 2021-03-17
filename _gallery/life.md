@@ -35,4 +35,40 @@ media:
     type: 'video'
     format: "mp4"
     date: 20200606T203000+08:00
+  - url: "life_0004.jpg"
+    type: 'image'
+    format: "jpeg"
+    date: 20210318T010000+08:00
+  - url: "life_0005.jpg"
+    type: 'image'
+    format: "jpeg"
+    date: 20210318T010000+08:00
+  - url: "life_0006.jpg"
+    type: 'image'
+    format: "jpeg"
+    date: 20210318T010000+08:00
+  - url: "life_0007.jpg"
+    type: 'image'
+    format: "jpeg"
+    date: 20210318T010000+08:00
+  - url: "life_0008.jpg"
+    type: 'image'
+    format: "jpeg"
+    date: 20210318T010000+08:00
+  - url: "life_0009.jpg"
+    type: 'image'
+    format: "jpeg"
+    date: 20210318T010000+08:00
+  - url: "life_0010.jpg"
+    type: 'image'
+    format: "jpeg"
+    date: 20210318T010000+08:00
+  - url: "life_0011.jpg"
+    type: 'image'
+    format: "jpeg"
+    date: 20210318T010000+08:00
+  - url: "life_0012.jpg"
+    type: 'image'
+    format: "jpeg"
+    date: 20210318T010000+08:00
 ---
