@@ -479,9 +479,9 @@ media:
     type: 'image'
     format: "gif"
     date: 20210312T222200+08:00
-  - url: "pen_0117.gif"
+  - url: "pen_0117.jpg"
     type: 'image'
-    format: "gif"
+    format: "jpg"
     date: 20210312T222200+08:00
   - url: "pen_0118.jpg"
     type: 'image'
@@ -511,9 +511,9 @@ media:
     type: 'image'
     format: "jpeg"
     date: 20210312T222200+08:00
-  - url: "pen_0125.jpg"
+  - url: "pen_0125.png"
     type: 'image'
-    format: "jpeg"
+    format: "png"
     date: 20210312T222200+08:00
   - url: "pen_all.mp4"
     type: 'video'
