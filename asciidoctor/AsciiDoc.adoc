@@ -1,0 +1,165 @@
+:doctype: book
+:page-layout!:
+:sectanchors:
+:sectlinks:
+:sectnums:
+:toc: left
+:toclevels: 6
+:toc-title: 索引/ToC
+:doctitle: 标题
+:icons: font
+:source-highlighter: pygments
+:nofooter:
+// :last-update-label!:
+// :docinfo: shared-footer
+:priority1: Urgent
+:priority2: High
+:priority3: Middle
+:priority4: Low
+:priority5: NiceToHave
+
+= {doctitle}
+:author: Ezra
+:email: ezra@domain.com
+:revnumber: 1.0.0
+:revdate: Apr. 05th, 2021
+// :revremark: The first incarnation of {doctitle}
+:version-label!:
+
+[TIP]
+====
+Description.
+====
+
+[[Records]]
+== Records/更新记录
+
+[%header, cols="2a, 2a, 6a"]
+|===
+|版本/Version
+|日期/Date
+|说明/Description
+
+|1.0.0
+|2020-11-08
+|The first incarnation.
+|===
+
+[[Title]]
+== 一个标题
+
+.???
+****
+* Item
+* Item
+****
+
+[.text-center]
+.Programming is a walk in the park
+image::https://picsew.cn/assets/images/programming-is-a-walk-in-the-park.png[width=100]
+
+Here is a [[bookmark-a]] inline tag。
+
+Jump to <<bookmark-a,that inline tag>>。
+
+Jump to <<Title,一个标题>>。
+
+* Item 1
+** Item 2
+*** Item 3
+* [ ] Checkbox 1
+* [x] Checkbox 2
+* [*] Checkbox 3
+
+. Item 1
+.. Item 2
+... Item 3
+. Item 4
+
+[qanda]
+A Question::
+  Answer.
+A Question::
+  Haha.
+[%hardbreaks]
+
+Operating Systems::
+  Linux:::
+    . Fedora
+      * Desktop
+    . Ubuntu
+      * Desktop
+      * Server
+  BSD:::
+    . FreeBSD
+    . NetBSD
+
+Sketch:
+
+[%header%footer%autowidth, cols="2a,2a,2a"]
+|===
+|Description
+|Description
+|Description
+
+|
+image:./Export/Home.png[]
+|
+image:./Export/Home-Full-Close.png[]
+|
+image:./Export/Home-Full.png[]
+
+|aaaa
+|bbbb
+|cccc
+
+|aaaa
+|bbbb
+|cccc
+|===
+
+:version: 1.5.6.1
+
+[source,xml,subs="verbatim,attributes"]
+----
+<dependency>
+  <groupId>org.asciidoctor</groupId>
+  <artifactId>asciidoctor-java-integration</artifactId>
+  <version>{version}</version>
+</dependency>
+----
+
+// Comment
+
+////
+This
+is
+a
+Multline
+Comment
+////
+
+[source,ruby]
+----
+require 'sinatra' <1>
+
+get '/hi' do <2> <3>
+  "Hello World!"
+end
+----
+<1> Library import
+<2> URL mapping
+<3> Response block
+
+---
+
+[[Attachments]]
+[NOTE]
+====
+附件/Attachments: link:./AdobeXD.xd[AdobeXD.xd]
+====
+
+---
+
+[.text-center]
+[.small]#Made with ❤️ in Shenzhen#
