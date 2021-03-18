@@ -7,6 +7,10 @@ cover:
   url: "cover_drawings.jpg"
   format: "jpg"
 media:
+  - url: "pen_000A.jpg"
+    type: 'image'
+    format: "jpeg"
+    date: 20190426T210000+08:00
   - url: "pen_0000.jpg"
     type: 'image'
     format: "jpeg"
