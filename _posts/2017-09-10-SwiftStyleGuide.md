@@ -120,7 +120,7 @@ private func doTheThings(things: [Thing]) {}
 
 ```swift
 private struct TheFez {
-	var owner: Person = Elias()
+	var owner: Person = Ezra()
 }
 ```
 
@@ -148,7 +148,7 @@ let capitals: [Country: City] = [Sweden: Stockholm]
 var thing : Double?
 class SomeWrongStyleClass :NSObject { ... }
 func drinkWine(wine:WineType) -> Void { ... }
-let student:[Sring:String] = ["name"   : "Abel"]
+let student:[Sring:String] = ["name"   : "Lee"]
 ```
 
 #### 其它符号

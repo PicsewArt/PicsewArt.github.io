@@ -103,7 +103,7 @@ Haskell> 3 /= 3
 False
 Haskell> "Meniny" == "meniny"
 False
-Haskell> "Elias" == "Elias"
+Haskell> "Ezra" == "Ezra"
 True
 Haskell>
 ```

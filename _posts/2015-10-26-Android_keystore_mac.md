@@ -35,7 +35,7 @@ $ keytool -genkey -v -keystore android.keystore -alias android -keyalg RSA -vali
 Enter keystore password:
 Re-enter new password:
 What is your first and last name?
-  [Unknown]:  Elias Abel
+  [Unknown]:  Ezra
 What is the name of your organizational unit?
   [Unknown]:  meniny.cn
 What is the name of your organization?
@@ -46,11 +46,11 @@ What is the name of your State or Province?
   [Unknown]:  Beijing
 What is the two-letter country code for this unit?
   [Unknown]:  86
-Is CN=Elias Abel, OU=meniny.cn, O=Meniny Inc, L=Beijing, ST=Beijing, C=86 correct?
+Is CN=Ezra, OU=meniny.cn, O=Meniny Inc, L=Beijing, ST=Beijing, C=86 correct?
   [no]:  y
 
 Generating 1,024 bit RSA key pair and self-signed certificate (SHA1withRSA) with a validity of 20,000 days
-	for: CN=Elias Abel, OU=meniny.cn, O=Meniny Inc, L=Beijing, ST=Beijing, C=86
+	for: CN=Ezra, OU=meniny.cn, O=Meniny Inc, L=Beijing, ST=Beijing, C=86
 Enter key password for <android>
 	(RETURN if same as keystore password):
 [Storing /Users/Meniny/Desktop/demo.keystore]

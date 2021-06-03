@@ -1182,7 +1182,7 @@ CGFloat height = frame.size.height;
 **推荐: **
 
 ```objc
-static NSString * const MXAboutViewControllerName = @"Elias's Blog";
+static NSString * const MXAboutViewControllerName = @"Ezra's Blog";
 
 static const CGFloat MXImageThumbnailHeight = 50.0;
 ```
@@ -1196,7 +1196,7 @@ CG_EXTERN static const CGFloat MXImageThumbnailHeight;
 **反对: **
 
 ```objc
-#define CompanyName @"Elias's Blog"
+#define CompanyName @"Ezra's Blog"
 
 #define thumbnailHeight 2
 ```

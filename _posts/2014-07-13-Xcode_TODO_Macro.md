@@ -24,29 +24,29 @@ tags: [Xcode, iOS, Macro, 宏, Obejctive-C, C]
 相关的预处理指令有:
 
 ```c
-#warning elias
-#pragma message "elias"
-#pragma GCC warning "elias"
-#error elias
-#pragma GCC error "elias"
+#warning ezra
+#pragma message "ezra"
+#pragma GCC warning "ezra"
+#error ezra
+#pragma GCC error "ezra"
 ```
 
 但是问题来了, 我们是不能通过 `#define` 来使用这些预处理指令。这时候 `_Pragma` 就派上了用场，它可以将部分 `#pragma` 指令字符串化, 例如刚才提到的:
 
 ```c
-#pragma message "elias"
+#pragma message "ezra"
 // 它等价于
-_Pragma("message(\"elias\")")
+_Pragma("message(\"ezra\")")
 // 也等价于
-_Pragma("message \"elias\"")
+_Pragma("message \"ezra\"")
 ```
 
 这下就简单了, 先来一个简单的:
 
 ```c
-#define DEFINE_WARNING _Pragma("message(\"elias\")")
+#define DEFINE_WARNING _Pragma("message(\"ezra\")")
 int main(void) {
-    // 警告[!]elias
+    // 警告[!]ezra
     DEFINE_WARNING
     return 1;
 }

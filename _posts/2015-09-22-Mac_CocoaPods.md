@@ -219,7 +219,7 @@ $ pod trunk register EMAIL [NAME]
 
 $ pod trunk register meniny@qq.com
 
-$ pod trunk register elias@outlook.com 'EliasAbel' --verbose
+$ pod trunk register ezra@outlook.com 'EzraLee' --verbose
 
 ```
 

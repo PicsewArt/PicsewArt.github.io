@@ -210,7 +210,7 @@ $ emerge --ask --verbose dev-vcs/git
 name: Meniny's Blog
 url: {{ site.url }}/
 description: I’m a software engineer lived in China. This is my very own Blog which shares skills. All written content on this site is provided under a Creative Commons ShareAlike license and all code is provided under a MIT license unless otherwise stated. Please give sources if you'd like to quote.
-author: "Elias Abel"
+author: "Ezra"
 email: meniny#qq.com
 domain: www.meniny.com
 permalink: /post/:categories/:title/
@@ -429,7 +429,7 @@ CNAME|*|xxxxx.github.io
 
 这些解析需要一定的时间，请耐心等待。
 
-顺便一提，有了域名，还可以在 QQ 邮箱绑定域名邮箱哦。比如 `Elias@meniny.cn`，详细信息请参照 QQ 邮箱 [设置] - [账户] - [域名邮箱] 部分。
+顺便一提，有了域名，还可以在 QQ 邮箱绑定域名邮箱哦。比如 `Ezra@meniny.cn`，详细信息请参照 QQ 邮箱 [设置] - [账户] - [域名邮箱] 部分。
 
 ## 其它
 

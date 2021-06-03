@@ -104,7 +104,7 @@ squaresum x y = x * x + y * y
 ```haskell
 someFunction' x = x + 1
 another'function x = x + 2
-give'me'a'strng = "This is Elias."
+give'me'a'strng = "This is Ezra."
 ```
 
 使用起来并没有什么不同:
@@ -115,7 +115,7 @@ Haskell> someFunction' 2
 Haskell> another'function 3
 5
 Haskell> give'me'a'string
-"This is Elias."
+"This is Ezra."
 Haskell>
 ```
 

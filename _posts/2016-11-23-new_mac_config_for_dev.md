@@ -402,7 +402,7 @@ set incsearch
 其中 `railscasts` 是自定义的高亮配置, 并不是默认提供的, 默认配置有:
 
 ```console
-Elias Abel $ ls /usr/share/vim/vim74/colors/
+Ezra $ ls /usr/share/vim/vim74/colors/
 README.txt     evening.vim    ron.vim
 blue.vim       industry.vim   shine.vim
 darkblue.vim   koehler.vim    slate.vim
@@ -583,7 +583,7 @@ vi ~/.bash_profile
 按 `i` 进入编辑模式, 并依据实际情况添加:
 
 ```sh
-export PS1="\[\e[1;32m\]Elias Abel $ \[\e[m\]"
+export PS1="\[\e[1;32m\]Ezra $ \[\e[m\]"
 #export PS1='\n😋☞ $ '
 #export PS1='\e[1;32m\]\h\[\e[m\]\[\e[0m\]:\[\e[m\]\[\e[1;35:m\]\W\[\e[m\] \[\e[1;33m\]\u\[\e[m\]\[\e[0m\]$ \[\e[m\]'
 

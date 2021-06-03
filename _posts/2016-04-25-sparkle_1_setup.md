@@ -91,12 +91,12 @@ pod 'Sparkle'
 * 注意，你的 `Info.plist` 中还应包含有格式正确的 `CFBundleVersion ` 键值对
 
 ```xml
-<?xml version="1.0" standalone="yes"?><rss xmlns:sparkle="https://www.andymatuschak.org/xml-namespaces/sparkle" version="2.0"><channel><title>Elias</title>
+<?xml version="1.0" standalone="yes"?><rss xmlns:sparkle="https://www.andymatuschak.org/xml-namespaces/sparkle" version="2.0"><channel><title>Ezra</title>
 <item>
 <title>1.0</title>
 <pubDate>2017-04-25</pubDate>
 <sparkle:minimumSystemVersion>10.11</sparkle:minimumSystemVersion>
-<enclosure url="{{ site.url }}/clients/mac/Elias.zip" sparkle:version="21" sparkle:shortVersionString="1.0" length="4312551" type="application/octet-stream" sparkle:dsaSignature="MC0CFxxxxxxxxxxxxxx4Ag4X8n+ogIxxxxxxxxxxxxxxxR4SKM="/>
+<enclosure url="{{ site.url }}/clients/mac/Ezra.zip" sparkle:version="21" sparkle:shortVersionString="1.0" length="4312551" type="application/octet-stream" sparkle:dsaSignature="MC0CFxxxxxxxxxxxxxx4Ag4X8n+ogIxxxxxxxxxxxxxxxR4SKM="/>
 </item>
 </channel></rss>
 ```

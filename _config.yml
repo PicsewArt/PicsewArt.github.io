@@ -10,7 +10,7 @@ email: "picsew@126.com"
 github_url: "https://github.com/PicsewArt/PicsewArt.github.io/"
 timezone: Asia/Shanghai
 range:
-  start: 2020
+  start: 2007
   end: 2021
 avatar:
   prefer: "/assets/images/avatar/avatar_color.png"
