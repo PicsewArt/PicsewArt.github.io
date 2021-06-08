@@ -1,7 +1,7 @@
 ---
-title: "3800"
-category: "Mood"
-tags: ["Sadness"]
+title: "Git Workflow"
+category: "Technology"
+tags: ["Git"]
 date: 20210608T170000+08:00
 hero:
   format: 'jpeg'
@@ -66,4 +66,4 @@ git config pull.ff false
 git config --global pull.ff false
 ```
 
-<center><br /><img src="https://picsew.cn/assets/images/card-pub.png" alt="PROFILE" align=center style="width: 100%; max-width: 350px;"/></center>
+<center><br /><img src="{{ site.url }}/assets/images/card-pub.jpg" alt="PROFILE" align=center style="width: 100%; max-width: 350px;"/></center>
