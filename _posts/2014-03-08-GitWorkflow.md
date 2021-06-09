@@ -37,13 +37,13 @@ hero:
 
 在阅读的过程中请记住, 本文中的几种工作流是作为方案指导而不是条例规定。在展示了各种工作流可能的用法后, 你可以从不同的工作流中挑选或揉合出一个满足你自己需求的工作流。
 
-![Git Workflows]({{ site.url }}/assets/images/git_workflow.png)
+![Git Workflows]({{ site.url }}/assets/images/posts/git_workflow.png)
 
 ### [](#_集中式工作流)[2.1. 集中式工作流](#_集中式工作流)
 
 如果你的开发团队成员已经很熟悉 `Subversion` , 集中式工作流让你无需去适应一个全新流程就可以体验 `Git` 带来的收益。这个工作流也可以作为向更 `Git` 风格工作流迁移的友好过渡。
 
-![Git Workflows: SVN-style]({{ site.url }}/assets/images/git-workflow-svn.png)
+![Git Workflows: SVN-style]({{ site.url }}/assets/images/posts/git-workflow-svn.png)
 
 转到分布式版本控制系统看起来像个令人生畏的任务, 但不改变已用的工作流, 你也可以用上 `Git` 带来的收益。团队可以用和 `Subversion` 完全不变的方式来开发项目。
 
@@ -62,13 +62,13 @@ hero:
 
 然后, 开发者发布修改到正式项目中, 开发者要把本地 `master` 分支的修改『推』到中央仓库中。这相当于 `svn commit` 操作, 但 `push` 操作会把所有还不在中央仓库的本地提交都推上去。
 
-![git-workflow-svn-push-local]({{ site.url }}/assets/images/git-workflow-svn-push-local.png)
+![git-workflow-svn-push-local]({{ site.url }}/assets/images/posts/git-workflow-svn-push-local.png)
 
 #### [](#_冲突解决)[2.1.2. 冲突解决](#_冲突解决)
 
 中央仓库代表了正式项目, 所以提交历史应该被尊重且是稳定不变的。如果开发者本地的提交历史和中央仓库有分歧, `Git` 会拒绝 `push` 提交否则会覆盖已经在中央库的正式提交。
 
-![git-workflow-svn-managingconflicts]({{ site.url }}/assets/images/git-workflow-svn-managingconflicts.png)
+![git-workflow-svn-managingconflicts]({{ site.url }}/assets/images/posts/git-workflow-svn-managingconflicts.png)
 
 在开发者提交自己功能修改到中央库前, 需要先 `fetch` 在中央库的新增提交, `rebase` 自己提交到中央库提交历史之上。
 
