@@ -12,17 +12,17 @@ hero:
 ![git-workflow]({{ site.url }}/assets/images/git-workflow.png)
 
 > - `master` - 默认主分支，一般功能开发不与此分支交互
->   - hotfix - 问题修复分支，完成后立即合并入 `master` 与 `develop` 分支
+>   - `hotfix-*` - 问题修复分支，完成后立即合并入 `master` 与 `develop` 分支
 >   - `develop` - 主开发分支，也即功能最新最全的分支
->     - feature - 功能开发分支，完成后合并入 develop` 分支
->     - `release-*` - 版本发布分支，完成后合并入 `master` 与 `develop` 分支并添加 tag 标记
+>     - `feature-*` - 功能开发分支，完成后合并入 `develop` 分支
+>     - `release-*` - 版本发布分支，完成后合并入 `master` 与 `develop` 分支并添加 `tag` 标记
 >
-> 其中 `develop` 及 hotfix 为 `master` 的子分支，feature 及 `release-*` 为 `develop` 的子分支。
+> 其中 `develop` 及 `hotfix-*` 为 `master` 的子分支，`feature-*` 及 `release-*` 为 `develop` 的子分支。
 
-- 首先由 `master` 分支 fork 产生 `develop` 分支；
-- 进行功能开发时，由 `develop` 分支 fork 产生 feature 分支，完成后合并入 `develop` 分支；
-- 进行版本发布时，由 `develop` 分支 fork 产生 `release-*` 分支，完成后合并入 `master` 与 `develop` 分支，并添加 tag 标记；
-- 进行线上版本问题修复时，由 `master` 分支 fork 产生 hotfix 分支，完成后合并入 `master` 与 `develop` 分支。
+- 首先由 `master` 分支 `fork` 产生 `develop` 分支；
+- 进行功能开发时，由 `develop` 分支 `fork` 产生 `feature-*` 分支，完成后合并入 `develop` 分支；
+- 进行版本发布时，由 `develop` 分支 `fork` 产生 `release-*` 分支，完成后合并入 `master` 与 `develop` 分支，并添加 `tag` 标记；
+- 进行线上版本问题修复时，由 `master` 分支 `fork` 产生 `hotfix-*` 分支，完成后合并入 `master` 与 `develop` 分支。
 
 ## Pick & Squash - 遴选与压平
 
