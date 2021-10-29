@@ -1,0 +1,119 @@
+html,body,h1,h2,h3,h4,h5,h6,p,br,form,input,button,textarea,select,ul,ol,li,dl,dt,dd,pre{margin:0;padding:0;font-size:12px; }
+html{_background-attachment:fixed;}
+body{padding:0;background: #fff; font-family:'microsoft yahei', 'Helvetica Neue', Arial, 'Liberation Sans', FreeSans, sans-serif; color: #666; overflow-x: hidden;}
+a{text-decoration:none;color:#999;outline:none;}
+a:hover{text-decoration:none; color: #e00f0f;}
+textarea,select,input,button,label{vertical-align:middle}
+button{background:none;border:none;}
+ol,ul,li{list-style-type:none;}
+table{border-collapse:collapse;}
+img{border:0;}
+
+/*clear float*/
+.clearfix{clear:both;height:1%;display:table;*display:inline-block;}
+.clearall{overflow:hidden;_zoom:1;}
+.clear{clear:both;font-size:0;height:0;line-height:0; overflow: hidden;}
+
+/*-start-public-*/
+.com_css_outer{ _margin-left:960px; _zoom:1;}
+.com_css_inner{ _position:relative; _float:left; _margin-left:-960px;}
+.com_css_wrapper{ min-width:960px; border:0 solid #000; _zoom:1;}
+/*-end-public-*/
+
+/*-start-common-footer-*/
+.com_footer{width: 100%; border-top: 1px solid #ddd; padding: 10px 0 20px;}
+.com_footer .line{text-align: center; line-height: 24px; font-size: 12px;}
+.com_footer .line a,
+.com_footer .line span{ padding:0 2px;}
+.com_footer .line .copyright{font-family: Arial, Helvetica, Sans-Serif;}
+/*-end-common-footer-*/
+
+/*-start-common-css-*/
+.com_css_page_width{width: 960px; margin: 0 auto;}
+.com_css_page_width_auto{width: 100%;}
+.com_css_mt20{margin-top: 20px;}
+.com_css_mb20{margin-bottom: 20px;}
+.com_css_pt20{padding-top: 20px;}
+.com_css_pb20{padding-bottom: 20px;}
+.com_css_mt10{margin-top: 10px;}
+.com_css_mb10{margin-bottom: 10px;}
+.com_css_pb10{padding-bottom: 10px;}
+.com_css_pt10{padding-top: 10px;}
+.com_css_mr10{margin-right: 10px;}
+.com_css_mr5{margin-right: 5px;}
+.com_css_pr10{padding-right: 10px;}
+.com_css_pr5{padding-right: 5px;}
+.com_css_ml10{margin-left: 10px;}
+.com_css_ml5{margin-left: 5px;}
+.com_css_pl10{padding-left: 10px;}
+.com_css_pl5{padding-left: 5px;}
+
+.com_css_float_left{float: left;display: inline;}
+.com_css_float_right{float: right;display: inline;}
+/*-end-common-css-*/
+
+/*-start-common-css-form-*/
+.com_css_form{padding: 20px 0;overflow: hidden;}
+.com_css_form .fs{position: relative; clear:both;height:1%;display:table;*display:inline-block;margin-bottom: 40px;}
+.com_css_form .fs .header{position: absolute; height: 24px; line-height: 24px;padding: 5px 10px; left: 15px; top: -20px; font-weight: bold; font-size: 14px;}
+.com_css_form .fs .header .tip{font-size: 12px; font-weight: normal;}
+.com_css_form .fs .li{float: left; display: inline; min-height: 48px; _height: 48px;}
+.com_css_form .fs2 .li{width: 50%;}
+.com_css_form .fs3 .li{width: 33%;}
+.com_css_form .fs4 .li{width: 25%;}
+.com_css_form .fs5 .li{width: 20%;}
+
+.com_css_form .fss1{border: 1px solid #ccc; padding: 10px 0; background-color: #fff;}
+.com_css_form .fss1 .header{background-color: #fafafa; border: 1px solid #ccc;}
+.com_css_form .half{width: 50%; float: left;overflow: hidden;}
+.com_css_form .li{padding: 8px 0 8px; line-height: 30px; width: 489px; overflow-x: hidden; position: relative;}
+.com_css_form .li .label{width: 160px;text-align: right; position: absolute; left: 0; top:8px; font-size: 14px;}
+.com_css_form .li .libs{padding:0 0 0 170px; min-height: 30px; _height: 30px;}
+.com_css_form .li input,
+.com_css_form .li .s{display: inline-block; margin: 0 10px 0 0;}
+.com_css_form .li .s{line-height: 30px;}
+.com_css_form .li .red{color:#ed145b;}
+.com_css_form .error{color: #cf4c35;}
+.com_css_form input.text,
+.com_css_form textarea
+{-webkit-border-radius: 2px;border-radius: 2px;border: 1px solid #ccc;font-size: 12px;outline: 0;background: #fff;padding: 5px;line-height: 1.5em;height: 1.5em;}
+.com_css_form textarea{width: 200px; min-height: 120px; _height: 120px;}
+.com_css_form select{line-height: 28px; height: 28px; border-width: 1px; padding:0 0 0 3px; font-size: 12px; display: inline-block; margin: 0 10px 0 0; }
+.com_css_form .error input.text,
+.com_css_form .error textarea,
+.com_css_form .error select{border-color: #cf4c35; background-color:#FEEEEE;}
+.com_css_form .short{width: 100px;}
+.com_css_form .normal{width: 200px;}
+.com_css_form .middle{width: 400px;}
+.com_css_form .long{width: 250px;}
+.com_css_form .button{border: 0; height: 30px; line-height: 30px; padding: 0 20px; text-align: center; font-size: 13px; cursor: pointer;}
+.com_css_form .bg_red{color: #fff; background-color: #e00f0f;}
+.com_css_form .bg_green{color: #fff; background-color: #45A021;}
+.com_css_form .li .help_inline,
+.com_css_form .li .help_block{display:inline-block; line-height: 30px; padding: 0 0 0 2px;}
+.com_css_form .li .help_block{display: block;}
+/*-end-common-css-form-*/
+
+/*-start-common-css-list-*/
+.com_css_list{zoom: 1;}
+.com_css_list li,
+.com_css_list .li{float: left; display: inline;}
+.com_css_list .last{margin-right: 0;}
+/*-end-common-css-list-*/
+
+/*-start-common-css-tab-*/
+.com_css_tab{border-bottom: 2px solid #45A021; height: 37px;}
+.com_css_tab li,
+.com_css_tab .li{float: left;display: inline;margin: 0 10px 0 0;}
+.com_css_tab li a,
+.com_css_tab .li a,
+.com_css_tab li span,
+.com_css_tab .li span{float: left;display: inline;padding: 0 36px; line-height: 36px; border: 1px solid #ccc; border-bottom: 0; background-color: #f5f9fe; cursor: pointer;}
+.com_css_tab li a.cur,
+.com_css_tab .li a.cur,
+.com_css_tab li span.cur,
+.com_css_tab .li span.cur{color: #fff; background-color: #45A021; font-weight: bold;border-color: #45A021; font-size: 14px; position: relative; cursor: default;}
+.com_css_tab .num{font-family:"arial"; padding: 0 6px; font-size: 26px; height: 32px; line-height: 32px; overflow: hidden; position: absolute; left: 6px; top:1px;}
+.com_css_tab_box{border: 2px solid #45A021; border-top: 0}
+.com_css_tab_box_content{display: none;}
+/*-end-common-css-tab-*/

@@ -1,0 +1,217 @@
+@media (min-width: 1920px) {
+// Your CSS here
+}
+
+@media (min-width: 1280px) {
+    // Your CSS here
+}
+
+@media (min-width: 768px) {
+    // Your CSS here
+}
+
+@media (min-width: 0px) {
+    // Your CSS here
+}
+#divUrlType input{display:none;}
+#divUrlType label {
+	display:block;
+	float:left;
+	width:auto;
+	height:50px;
+	font-size:14px;
+	background:#f3f3f3;
+	color:#aab5bd;
+	border:none;
+	line-height:50px;
+	text-align:center;
+	border-bottom:1px solid #ddd;
+	padding:0 25px;
+	cursor:pointer;
+}
+
+#divUrlType label.i-selected {
+	color:#788188;
+	background:#efefef;
+	border:1px solid #ddd;
+	border-bottom:none;
+}
+
+#urlToolBox .urlInputGm {
+	margin-top:60px;
+}
+#urlToolBox .urlInputGm li {
+	float: left;
+	clear:both;
+	width:100%;
+	margin-bottom:10px
+}
+#urlToolBox .urlInputGm li label.i-label{
+	width:130px;
+	height:50px;
+	line-height:40px;
+	display:block;
+	float:left;
+	font-size:14px;
+	color:#788188;
+	text-align:right;
+}
+#urlToolBox .urlInputGm li input.i-input{
+	height:40px;
+	line-height:40px;
+	font-size:24px;
+	border:1px solid #ddd;
+	border-radius:5px;
+	outline:0;
+	padding:0;
+	margin-left:5px;
+	width:380px;
+	display:block;
+	float:left;
+	text-indent:10px;
+}
+#urlToolBox .urlInputGm li textarea.i-textarea{
+	width:380px;
+	height:150px;
+	font-size:24px;
+	border:1px solid #ddd;
+	border-radius:5px;
+	margin-left:5px;
+	outline:0;
+	padding:0;
+	display:block;
+	float:left;
+}
+#urlToolBox .urlInputGm li button.i-button{
+	width:185px;
+	margin:0 auto;
+	height:38px;
+	outline:0;
+	background-image:url(https://./css/btn.png);
+	margin-left:70px;
+	cursor:pointer;
+	display:block;
+	float:left;
+}
+#urlToolBox .urlInputGm li img.i-img {
+	border:1px solid #ddd;
+	outline:0;
+	margin-left:5px;
+	display:block;
+	float:left;
+}
+#urlToolBox .urlInputGm li select.i-select {
+	border:none;
+	outline:0;
+	display:block;
+	float:right;
+	margin-right:100px;
+	margin-top:12px;
+}
+#urlToolBox .urlInputGm li .i-span-r {
+	display:block;
+	float:right;
+	color:#aab5bd;
+	margin-top:10px;
+}
+.header {
+height: 70px;
+border-bottom: 1px solid #393b40;
+box-shadow: inset 0 -1px #2b2b2f;
+}
+.container {
+position: relative;
+width: 1150px;
+margin: 0 auto;
+}
+.header .container {
+z-index:1;
+}
+.header .logo {
+float: left;
+width: 70px;
+height: 70px;
+background: #4fb8cb url("http://img03.taobaocdn.com/imgextra/i3/39767794/TB2aFKMbFXXXXbZXXXXXXXXXXXX-39767794.jpg") center no-repeat;
+z-index: 5;
+}
+.header h1 {
+float: left;
+line-height: 70px;
+margin-left: 15px;
+color: #c2bfbf;
+font-size: 18px;
+letter-spacing: 8px;
+font-weight:normal;
+}
+
+a.alltemplets,a.hrlink,div.junetool{
+display:block;
+position:absolute;
+color:#7c7e80;
+font-size:14px;
+font-family:΢���ź�;
+height:70px;
+line-height:70px;
+text-align:center;
+z-index:2;
+}
+a.alltemplets{
+width:100px;
+top:0;
+right:100px;
+}
+a.hrlink{
+width:100px;
+top:0;
+right:200px;
+color:#cc3738;
+}
+div.junetool{
+overflow:hidden;
+width:100px;
+top:0;
+right:0;
+background:url(http://img04.taobaocdn.com/imgextra/i4/39767794/TB2NrQkbFXXXXXJXXXXXXXXXXXX-39767794.png) right center no-repeat;
+text-align:left;
+text-indent:15px;
+}
+div.junetool:hover{
+overflow:visible;
+color:#eee;
+background-color:#1d1e23;
+background-image:url(http://img02.taobaocdn.com/imgextra/i2/39767794/TB2Pi.abFXXXXXfXpXXXXXXXXXX-39767794.png);
+*height:270px;
+}
+a.alltemplets:hover{
+color:#eee;
+background-color:#1d1e23;
+}
+a.junetoola{
+display:block;
+color:#7c7e80;
+font-size:14px;
+}
+a.junetoola:hover{
+color:#eee;
+}
+div.junetool ul{
+width:140px;
+padding-top:1px;
+}
+div.junetool ul li{
+*line-height:40px;
+*height:40px;
+}
+div.junetool ul a.june-preview{
+display:block;
+background:#2d2e33;
+line-height:40px;
+color:#7c7e80;
+border-bottom:1px #282828 solid;
+*height:40px;
+font-size:12px;
+}
+div.junetool ul a.june-preview:hover{
+background:#1d1e23;
+color:#eee;
+}
