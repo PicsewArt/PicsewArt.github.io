@@ -1,6 +1,6 @@
 :doctitle: AsciiDoc Guide
 :home: https://picsew.cn
-:assets: {home}/assets
+:assets: {home}/assets/adocsyntax
 :image: {assets}/images
 :video: {assets}/videos
 :thispage: {home}/asciidoctor/syntax/
@@ -35,7 +35,7 @@ link:https://en.wikipedia.org/wiki/Lightweight_markup_language[轻量级的标�
 
 `Markdown` 语法简洁，即便阅读未经渲染的源文件也有不错的可读性。但它对于较为复杂的格式例如表格的支持始终遭人诟病，许多网站使用各自不同的扩展语法来实现，也从而导致了各种方言的滋生。这也是为何会出现 link:https://blog.codinghorror.com/standard-flavored-markdown/[Standard Markdown] 项目的原因，虽然因为种种原因又更名为 link:https://blog.codinghorror.com/standard-flavored-markdown/[Common Markdown]，然而整个 `Markdown` 社区依然缺乏创建者的支持，`Common Markdown` 也很可能沦为另一个方言。
 
-image::{image}/posts/content/md_standards.png[title="Markdown Standards"]
+image::{image}/md_standards.png[title="Markdown Standards"]
 
 === Why AsciiDoc?
 
@@ -278,7 +278,7 @@ image::{image}/posts/content/md_standards.png[title="Markdown Standards"]
 [source, asciidoc]
 ....
 [.right.text-center]
-image::{image}/avatar/oschina_200.jpg[OSChina,200,200]
+image::{image}/avatar.png[Avatar,200,200]
 ....
 
 === 横线 Lines
@@ -324,24 +324,24 @@ image::{image}/avatar/oschina_200.jpg[OSChina,200,200]
 
 [source, asciidoc]
 ....
-An image image:{image}/avatar/oschina_200.jpg[some, 50] here.
+An image image:{image}/avatar.png[Avatar, 50] here.
 ....
 
 .result
 ====
-An image image:{image}/avatar/oschina_200.jpg[some, 50] here.
+An image image:{image}/avatar.png[Avatar, 50] here.
 ====
 
 ==== 块图片 Block Images
 
 [source, asciidoc]
 ....
-image::{image}/avatar/oschina_200.jpg[caption="Caption: ", title="Blocked Image", 100]
+image::{image}/avatar.png[caption="Caption: ", title="Blocked Image", 100]
 ....
 
 .result
 ====
-image::{image}/avatar/oschina_200.jpg[caption="Caption: ", title="Blocked Image", 100]
+image::{image}/avatar.png[caption="Caption: ", title="Blocked Image", 100]
 ====
 
 === 视频 Videos
