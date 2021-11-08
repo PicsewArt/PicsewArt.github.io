@@ -1,0 +1,2250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 2.0.10">
+<meta name="author" content="Ezra">
+<title>AsciiDoc 指引</title>
+<style>
+/* Based on Paper from Bootswatch (http://bootswatch.com/paper/) */
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500,700");
+
+/* document body (contains all content) */
+body {
+  font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  line-height: 1.846;
+  color: #666666;
+  background-color: #ffffff;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+/* document header (contains title etc) */
+#header {
+  width: 100%;
+}
+#header>h1 {
+  border-bottom: 1px solid #ddddd8;
+  padding-bottom: 8px;
+}
+
+/* headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: inherit;
+  font-weight: 400;
+  line-height: 1.1;
+  color: #444444;
+}
+h1,
+h2,
+h3 {
+  margin-top: 23px;
+  margin-bottom: 11.5px;
+}
+h4,
+h5,
+h6 {
+  margin-top: 11.5px;
+  margin-bottom: 11.5px;
+}
+h1 {
+/*   font-size: 4em;  */
+  font-size: 56px; 
+}
+h2 {
+  font-size: 45px;
+}
+h3 {
+  font-size: 34px;
+}
+h4 {
+  font-size: 24px;
+}
+h5 {
+  font-size: 20px;
+}
+h6 {
+  font-size: 14px;
+}
+
+/* plain paragraph text */
+.paragraph {
+/*   font-family: sans-serif; */
+  margin: 0 0 11.5px;
+}
+p {
+/*   font-family: sans-serif; */
+  margin: 0 0 11.5px;
+}
+
+/* blockquote text */
+.quoteblock {
+  font-style: italic;
+}
+blockquote {
+  padding: 11.5px 23px;
+  margin: 0 0 23px;
+  font-size: 16.25px;
+  border-left: 5px solid #eeeeee;
+}
+blockquote p:last-child,
+blockquote ul:last-child,
+blockquote ol:last-child {
+  margin-bottom: 0;
+}
+.blockquote-reverse,
+blockquote.pull-right {
+  padding-right: 15px;
+  padding-left: 0;
+  border-right: 5px solid #eeeeee;
+  border-left: 0;
+  text-align: right;
+}
+.blockquote-reverse footer:before,
+blockquote.pull-right footer:before,
+.blockquote-reverse small:before,
+blockquote.pull-right small:before,
+.blockquote-reverse .small:before,
+blockquote.pull-right .small:before {
+  content: '';
+}
+.blockquote-reverse footer:after,
+blockquote.pull-right footer:after,
+.blockquote-reverse small:after,
+blockquote.pull-right small:after,
+.blockquote-reverse .small:after,
+blockquote.pull-right .small:after {
+  content: '\00A0 \2014';
+}
+
+/* blockquote attribution text */
+.attribution,
+.cite,
+blockquote footer,
+blockquote small,
+blockquote .small {
+  display: block;
+/*   font-size: 80%; */
+  line-height: 1.846;
+  color: #bbbbbb;
+}
+.attribution:before,
+blockquote footer:before,
+blockquote small:before,
+blockquote .small:before {
+  content: '\2014 \00A0';
+}
+
+/* unordered list */
+ul, ol {
+  margin-top: 0;
+  margin-bottom: 11.5px;
+}
+ul ul,
+ol ul,
+ul ol,
+ol ol {
+  margin-bottom: 0;
+}
+
+
+/* links */
+a {
+  color: #2196f3;
+  text-decoration: none;
+}
+a:hover,
+a:focus {
+  color: #0a6ebd;
+  text-decoration: underline;
+}
+a:focus {
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+
+/* horizontal rules */
+hr {
+  margin-top: 23px;
+  margin-bottom: 23px;
+  border: 0;
+  border-top: 1px solid #eeeeee;
+}
+
+/* table */
+table {
+  background-color: transparent;
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 20px;
+  border-collapse: collapse;
+}
+table col[class*="col-"] {
+  position: static;
+  float: none;
+  display: table-column;
+}
+table td[class*="col-"],
+table th[class*="col-"] {
+  position: static;
+  float: none;
+  display: table-cell;
+}
+
+/* table caption */
+caption {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  color: #bbbbbb;
+  text-align: left;
+}
+
+/* table header row */
+thead {
+  border-bottom: 2px solid #dddddd;
+}
+
+/* table header cell */
+th {
+  text-align: left;
+  padding-left: 8px;
+}
+
+/* table footer */
+tfoot {
+  color: #807F81;
+  border-top: 1px solid #dddddd;
+}
+
+/* table cell */
+td {
+  border-top: 1px solid #dddddd;
+}
+td p {
+  margin: auto;
+  padding: 8px;
+}
+
+/* table body */
+tbody > tr:nth-of-type(odd) {
+  background-color: #f9f9f9;
+}
+tbody > tr:hover {
+  background-color: #f5f5f5;
+}
+
+/* inline code */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+code {
+  padding: 2px 4px;
+  font-size: 90%;
+  color: #212121;
+  background-color: #f5f5f5;
+  border-radius: 3px;
+}
+kbd {
+  padding: 2px 4px;
+  font-size: 90%;
+  color: #ffffff;
+  background-color: #333333;
+  border-radius: 3px;
+  -webkit-box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.25);
+          box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.25);
+}
+kbd kbd {
+  padding: 0;
+  font-size: 100%;
+  font-weight: bold;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+pre {
+  display: block;
+  padding: 11px;
+  margin: 0 0 11.5px;
+  font-size: 12px;
+  line-height: 1.846;
+  word-break: break-all;
+  word-wrap: break-word;
+  color: #212121;
+  background-color: #f5f5f5;
+  border: 1px solid #cccccc;
+  border-radius: 3px;
+}
+pre code {
+  padding: 0;
+  font-size: inherit;
+  color: inherit;
+  white-space: pre-wrap;
+  background-color: transparent;
+  border-radius: 0;
+}
+
+/* image */
+img {
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+/* footer section */
+#footer {
+  margin-top: 22px;
+  padding: 14px 16px;
+  color: #666666;
+  background-color: #ffffff;
+}
+
+/* responsiveness fixes */
+video {
+  max-width: 100%;
+}
+
+/* table of Contents sidebar */
+#toctitle {
+  color: #ffffff;
+}
+
+#toc ul {
+  display: inline;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+#toc li {
+  display: block;
+}
+
+#toc a {
+  background-color: #ffffff;
+  float: left;
+  color: #666666;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+#toc li a:hover {
+  color: #212121;
+  background-color: #ffffff;
+  text-decoration: none;
+}
+
+#toc:after {
+  content: " ";
+  visibility: hidden;
+  display: block;
+  height: 0;
+  clear: both;
+}
+
+@media all and (max-width: 600px) {
+table {
+  width: 55vw!important;
+  font-size: 3vw;
+}
+
+</style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body class="book toc2 toc-left">
+<div id="header">
+<h1>AsciiDoc 指引 <sup><a href="https://meniny.cn/docs/asciidoc/full.html">full</a></sup></h1>
+<div class="details">
+<span id="author" class="author">Ezra</span><br>
+<span id="email" class="email"><a href="mailto:admin@meniny.cn">admin@meniny.cn</a></span><br>
+<span id="revnumber"> 1.0.0,</span>
+<span id="revdate">Nov. 17, 2018</span>
+<br><span id="revremark">The first incarnation of AsciiDoc 指引 ^link:https://meniny.cn/docs/asciidoc/full.html[full]^</span>
+</div>
+<div id="toc" class="toc2">
+<div id="toctitle">索引</div>
+<ul class="sectlevel1">
+<li><a href="#_简介">1. 简介</a>
+<ul class="sectlevel2">
+<li><a href="#_markdown_还不够吗">1.1. Markdown 还不够吗</a></li>
+<li><a href="#_为什么选择_asciidoc">1.2. 为什么选择 AsciiDoc</a></li>
+<li><a href="#_asciidoc_与_markdown">1.3. AsciiDoc 与 Markdown</a></li>
+</ul>
+</li>
+<li><a href="#_语法">2. 语法</a>
+<ul class="sectlevel2">
+<li><a href="#_标题">2.1. 标题</a>
+<ul class="sectlevel3">
+<li><a href="#_分离浮动标题">2.1.1. 分离/浮动标题</a></li>
+</ul>
+</li>
+<li><a href="#_目录">2.2. 目录</a></li>
+<li><a href="#_样式">2.3. 样式</a>
+<ul class="sectlevel3">
+<li><a href="#_粗体">2.3.1. 粗体</a></li>
+<li><a href="#_斜体">2.3.2. 斜体</a></li>
+<li><a href="#_高亮">2.3.3. 高亮</a></li>
+<li><a href="#_下划线">2.3.4. 下划线</a></li>
+<li><a href="#_删划线">2.3.5. 删划线</a></li>
+<li><a href="#_大小标记">2.3.6. 大小标记</a></li>
+<li><a href="#_上标下标">2.3.7. 上标下标</a></li>
+</ul>
+</li>
+<li><a href="#_居中">2.4. 居中</a></li>
+<li><a href="#_横线">2.5. 横线</a></li>
+<li><a href="#_断行">2.6. 断行</a></li>
+<li><a href="#_分页">2.7. 分页</a></li>
+<li><a href="#_图片">2.8. 图片</a>
+<ul class="sectlevel3">
+<li><a href="#_行内图片">2.8.1. 行内图片</a></li>
+<li><a href="#_块图片">2.8.2. 块图片</a></li>
+</ul>
+</li>
+<li><a href="#_视频">2.9. 视频</a>
+<ul class="sectlevel3">
+<li><a href="#_普通视频">2.9.1. 普通视频</a></li>
+<li><a href="#_youtube_视频">2.9.2. Youtube 视频</a></li>
+<li><a href="#_vimeo_视频">2.9.3. Vimeo 视频</a></li>
+</ul>
+</li>
+<li><a href="#_链接">2.10. 链接</a></li>
+<li><a href="#_标记">2.11. 标记</a>
+<ul class="sectlevel3">
+<li><a href="#_自定义标题标签">2.11.1. 自定义标题标签</a></li>
+</ul>
+</li>
+<li><a href="#_列表">2.12. 列表</a>
+<ul class="sectlevel3">
+<li><a href="#_无序列表">2.12.1. 无序列表</a></li>
+<li><a href="#_有序列表">2.12.2. 有序列表</a></li>
+<li><a href="#_勾选列表">2.12.3. 勾选列表</a></li>
+<li><a href="#_标签列表">2.12.4. 标签列表</a></li>
+<li><a href="#_问答列表">2.12.5. 问答列表</a></li>
+</ul>
+</li>
+<li><a href="#_表格">2.13. 表格</a>
+<ul class="sectlevel3">
+<li><a href="#_简单列表">2.13.1. 简单列表</a></li>
+<li><a href="#_嵌套语法">2.13.2. 嵌套语法</a></li>
+<li><a href="#_停靠位置">2.13.3. 停靠位置</a></li>
+<li><a href="#_合并单元格">2.13.4. 合并单元格</a></li>
+<li><a href="#_单元格与列的样式">2.13.5. 单元格与列的样式</a></li>
+</ul>
+</li>
+<li><a href="#_区块">2.14. 区块</a>
+<ul class="sectlevel3">
+<li><a href="#_横栏块">2.14.1. 横栏块</a></li>
+<li><a href="#_示例块">2.14.2. 示例块</a></li>
+<li><a href="#_透传块">2.14.3. 透传块</a></li>
+<li><a href="#_引用块">2.14.4. 引用块</a></li>
+<li><a href="#_警告块">2.14.5. 警告块</a></li>
+<li><a href="#_代码块">2.14.6. 代码块</a>
+<ul class="sectlevel4">
+<li><a href="#_markdown_风格">Markdown 风格</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#_行内代码">2.15. 行内代码</a></li>
+<li><a href="#_注释">2.16. 注释</a></li>
+<li><a href="#_键盘">2.17. 键盘</a></li>
+<li><a href="#_导入">2.18. 导入</a></li>
+<li><a href="#_脚注">2.19. 脚注</a></li>
+</ul>
+</li>
+<li><a href="#_工具">3. 工具</a>
+<ul class="sectlevel2">
+<li><a href="#_asciidocfx">3.1. AsciidocFX</a></li>
+<li><a href="#_atom">3.2. Atom</a></li>
+<li><a href="#_asciidoctor">3.3. AsciiDoctor</a>
+<ul class="sectlevel3">
+<li><a href="#_stylesheets">3.3.1. Stylesheets</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#_关于">4. 关于</a></li>
+</ul>
+</div>
+</div>
+<div id="content">
+<div class="sect1">
+<h2 id="_简介"><a class="anchor" href="#_简介"></a><a class="link" href="#_简介">1. 简介</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>轻量级的标记语言已经有很多(<a href="https://en.wikipedia.org/wiki/Lightweight_markup_language">Wikipedia</a>)，例如我用来写博客的 <code>Markdown</code> 就是目前十分流行的一种轻量级标记语言，包括 <code>Github</code>、<code>StackOverflow</code> 等很多网站以及个人都在使用。</p>
+</div>
+<div class="sect2">
+<h3 id="_markdown_还不够吗"><a class="anchor" href="#_markdown_还不够吗"></a><a class="link" href="#_markdown_还不够吗">1.1. Markdown 还不够吗</a></h3>
+<div class="paragraph">
+<p><code>Markdown</code> 语法简介，即便阅读未经渲染的源文件也有不错的可读性。但它对于较为复杂的格式例如表格的支持始终遭人诟病，许多网站使用各自不同的扩展语法来实现，也从而导致了各种方言的滋生。这也是为何会出现 <a href="https://blog.codinghorror.com/standard-flavored-markdown/">Standard Markdown</a> 项目的原因，虽然因为种种原因又更名为 <a href="https://blog.codinghorror.com/standard-flavored-markdown/">Common Markdown</a>，然而整个 <code>Markdown</code> 社区依然缺乏创建者的支持，<code>Common Markdown</code> 也很可能沦为另一个方言。</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="https://meniny.cn/assets/images/posts/content/md_standards.png" alt="md standards">
+</div>
+<div class="title">Figure 1. Markdown Standards</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_为什么选择_asciidoc"><a class="anchor" href="#_为什么选择_asciidoc"></a><a class="link" href="#_为什么选择_asciidoc">1.2. 为什么选择 AsciiDoc</a></h3>
+<div class="paragraph">
+<p>第一次接触到 AsciiDoc 是通过 <code>O&#8217;Reilly</code> 的图书，<code>Atlas</code> 的推荐语言就是 <code>AsciiDoc</code>。那么十多种标记语言中，为什么要选择 <code>AsciiDoc</code> 呢？其实在选择另一种标记语言时，我做过一些简单的研究:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>LaTex :</strong> 大名鼎鼎的 <code>LaTex</code> 是除了 <code>Markdown</code> 之外我第一个投入精力学习的标记语言。不得不说 <code>LaTex</code> 十分强大，但与这份强大伴随而来则是复杂的语法，导致了写作过程的枯燥，也让我失去了对 <code>LaTex</code> 的兴趣。</p>
+</li>
+<li>
+<p><strong>reStructuredText :</strong> <code>REST</code> 也是一种松散的文本结构，功能也较为全面，但书写起来更像是在写 <code>Python。</code></p>
+</li>
+<li>
+<p><strong>Org mode :</strong> 我想基本上只有 <code>Emacs</code> 社区的人在使用了吧。</p>
+</li>
+<li>
+<p><strong>Texy!，BBCode，Creole，Textile&#8230;&#8203; :</strong> 事实上大部分轻量级的标记语言语法都较为类似，所以这场抉择很大程度上是使用范围、功能、兼容性、扩展性等多方面的比赛，这也是我为什么不选择这些语言的原因。</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_asciidoc_与_markdown"><a class="anchor" href="#_asciidoc_与_markdown"></a><a class="link" href="#_asciidoc_与_markdown">1.3. AsciiDoc 与 Markdown</a></h3>
+<div class="paragraph">
+<p><code>AsciiDoc</code> 的语法与 <code>Markdown</code> 十分类似，在学会 <code>Markdown</code> 的前提下很容易转向 <code>AsciiDoc</code> 阵营。</p>
+</div>
+<div class="paragraph">
+<p>在的功能方面，前面已经说过许多功能 <code>Markdown</code> 要通过扩展语法和 <code>HTML</code> 来实现，前者直接导致了通用性的缺失，后者提高了后期编撰的成本，而 AsciiDoc 的学习成本也远不及多学一门 <code>HTML</code> 甚至多种扩展语法。</p>
+</div>
+<div class="paragraph">
+<p><code>AsciiDoc</code> 原生支持的特性就足以应付大多数电子文档的编撰需求，你可以使用标准的 <code>AsciiDoc</code> 语法为你的文档添加作者信息、版本信息、表格等特性，它还支持文档引入、自定义块语法等功能。</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_语法"><a class="anchor" href="#_语法"></a><a class="link" href="#_语法">2. 语法</a></h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_标题"><a class="anchor" href="#_标题"></a><a class="link" href="#_标题">2.1. 标题</a></h3>
+<div class="paragraph">
+<p>{ascii} 中的标题共分为六层，分别使用对应数量的 <code>=</code> 进行标识:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code data-lang="asciidoc" class="language-asciidoc hljs">= 零级
+
+== 一级
+
+=== 二级
+
+==== 三级
+
+===== 四级
+
+====== 五级</code></pre>
+</div>
+</div>
+<div class="exampleblock">
+<div class="title">Example 1. result</div>
+<div class="content">
+<h1 id="_零级" class="float">零级</h1>
+<h2 id="_一级" class="float">一级</h2>
+<h3 id="_二级" class="float">二级</h3>
+<h4 id="_三级" class="float">三级</h4>
+<h5 id="_四级" class="float">四级</h5>
+<h6 id="_五级" class="float">五级</h6>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_分离浮动标题"><a class="anchor" href="#_分离浮动标题"></a><a class="link" href="#_分离浮动标题">2.1.1. 分离/浮动标题</a></h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code data-lang="asciidoc" class="language-asciidoc hljs">[discrete]
+=== 分离/浮动标题
+
+[float]
+=== 分离/浮动标题</code></pre>
+</div>
+</div>
+<div class="exampleblock">
+<div class="title">Example 2. result</div>
+<div class="content">
+<h3 id="_分离浮动标题_2" class="discrete">分离/浮动标题</h3>
+<h3 id="_分离浮动标题_3" class="float">分离/浮动标题</h3>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_目录"><a class="anchor" href="#_目录"></a><a class="link" href="#_目录">2.2. 目录</a></h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code data-lang="asciidoc" class="language-asciidoc hljs">:toc:
+
+:toc: right
+
+:toc: left</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_样式"><a class="anchor" href="#_样式"></a><a class="link" href="#_样式">2.3. 样式</a></h3>
+<div class="sect3">
+<h4 id="_粗体"><a class="anchor" href="#_粗体"></a><a class="link" href="#_粗体">2.3.1. 粗体</a></h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code data-lang="asciidoc" class="language-asciidoc hljs">普通文字 *粗体字* 普通文字</code></pre>
+</div>
+</div>
+<div class="exampleblock">
+<div class="title">Example 3. result</div>
+<div class="content">
+<div class="paragraph">
+<p>普通文字 <strong>粗体字</strong> 普通文字</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_斜体"><a class="anchor" href="#_斜体"></a><a class="link" href="#_斜体">2.3.2. 斜体</a></h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code data-lang="asciidoc" class="language-asciidoc hljs">普通文字 _斜体字_ 普通文字</code></pre>
+</div>
+</div>
+<div class="exampleblock">
+<div class="title">Example 4. result</div>
+<div class="content">
+<div class="paragraph">
+<p>普通文字 <em>斜体字</em> 普通文字</p>
+</div>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code data-lang="asciidoc" class="language-asciidoc hljs">*_粗体 &amp; 斜体_*</code></pre>
+</div>
+</div>
+<div class="exampleblock">
+<div class="title">Example 5. result</div>
+<div class="content">
+<div class="paragraph">
+<p><strong><em>粗体 &amp; 斜体</em></strong></p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_高亮"><a class="anchor" href="#_高亮"></a><a class="link" href="#_高亮">2.3.3. 高亮</a></h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code data-lang="asciidoc" class="language-asciidoc hljs">普通文字 #高亮内容# 普通文字</code></pre>
+</div>
+</div>
+<div class="exampleblock">
+<div class="title">Example 6. result</div>
+<div class="content">
+<div class="paragraph">
+<p>普通文字 <mark>高亮内容</mark> 普通文字</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_下划线"><a class="anchor" href="#_下划线"></a><a class="link" href="#_下划线">2.3.4. 下划线</a></h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code data-lang="asciidoc" class="language-asciidoc hljs">普通文字 [.underline]#下划线文字# 普通文字</code></pre>
+</div>
+</div>
+<div class="exampleblock">
+<div class="title">Example 7. result</div>
+<div class="content">
+<div class="paragraph">
+<p>普通文字 <span class="underline">下划线文字</span> 普通文字</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_删划线"><a class="anchor" href="#_删划线"></a><a class="link" href="#_删划线">2.3.5. 删划线</a></h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code data-lang="asciidoc" class="language-asciidoc hljs">普通文字 [.line-through]#删划线文字# 普通文字</code></pre>
+</div>
+</div>
+<div class="exampleblock">
+<div class="title">Example 8. result</div>
+<div class="content">
+<div class="paragraph">
+<p>普通文字 <span class="line-through">删划线文字</span> 普通文字</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_大小标记"><a class="anchor" href="#_大小标记"></a><a class="link" href="#_大小标记">2.3.6. 大小标记</a></h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code data-lang="asciidoc" class="language-asciidoc hljs">普通文字中含有 [.small]#示例小标记# 以及 [.big]##示例大标记##。</code></pre>
+</div>
+</div>
+<div class="exampleblock">
+<div class="title">Example 9. result</div>
+<div class="content">
+<div class="paragraph">
+<p>普通文字中含有 <span class="small">示例小标记</span> 以及 <span class="big">示例大标记</span>。</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_上标下标"><a class="anchor" href="#_上标下标"></a><a class="link" href="#_上标下标">2.3.7. 上标下标</a></h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code data-lang="asciidoc" class="language-asciidoc hljs">普通文字^上标^
+
+普通文字~下标~</code></pre>
+</div>
+</div>
+<div class="exampleblock">
+<div class="title">Example 10. result</div>
+<div class="content">
+<div class="paragraph">
+<p>普通文字<sup>上标</sup></p>
+</div>
+<div class="paragraph">
+<p>普通文字<sub>下标</sub></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_居中"><a class="anchor" href="#_居中"></a><a class="link" href="#_居中">2.4. 居中</a></h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code data-lang="asciidoc" class="language-asciidoc hljs">[.text-center]</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_横线"><a class="anchor" href="#_横线"></a><a class="link" href="#_横线">2.5. 横线</a></h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code data-lang="asciidoc" class="language-asciidoc hljs">***</code></pre>
+</div>
+</div>
+<div class="exampleblock">
+<div class="title">Example 11. result</div>
+<div class="content">
+<hr>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_断行"><a class="anchor" href="#_断行"></a><a class="link" href="#_断行">2.6. 断行</a></h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code data-lang="asciidoc" class="language-asciidoc hljs">[%hardbreaks]</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_分页"><a class="anchor" href="#_分页"></a><a class="link" href="#_分页">2.7. 分页</a></h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code data-lang="asciidoc" class="language-asciidoc hljs">&lt;&lt;&lt;</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_图片"><a class="anchor" href="#_图片"></a><a class="link" href="#_图片">2.8. 图片</a></h3>
+<div class="sect3">
+<h4 id="_行内图片"><a class="anchor" href="#_行内图片"></a><a class="link" href="#_行内图片">2.8.1. 行内图片</a></h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code data-lang="asciidoc" class="language-asciidoc hljs">An image image:{image}/avatar/oschina_200.jpg[some, 50] here.</code></pre>
+</div>
+</div>
+<div class="exampleblock">
+<div class="title">Example 12. result</div>
+<div class="content">
+<div class="paragraph">
+<p>An image <span class="image"><img src="https://meniny.cn/assets/images/avatar/oschina_200.jpg" alt="some" width="50"></span> here.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_块图片"><a class="anchor" href="#_块图片"></a><a class="link" href="#_块图片">2.8.2. 块图片</a></h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code data-lang="asciidoc" class="language-asciidoc hljs">image::{image}/avatar/oschina_200.jpg[caption="Caption: ", title="Blocked Image", 100]</code></pre>
+</div>
+</div>
+<div class="exampleblock">
+<div class="title">Example 13. result</div>
+<div class="content">
+<div class="imageblock">
+<div class="content">
+<img src="https://meniny.cn/assets/images/avatar/oschina_200.jpg" alt="oschina 200" height="100">
+</div>
+<div class="title">Caption: Blocked Image</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_视频"><a class="anchor" href="#_视频"></a><a class="link" href="#_视频">2.9. 视频</a></h3>
+<div class="sect3">
+<h4 id="_普通视频"><a class="anchor" href="#_普通视频"></a><a class="link" href="#_普通视频">2.9.1. 普通视频</a></h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code data-lang="asciidoc" class="language-asciidoc hljs">video::video_file.mp4[]
+
+video::video_file.mp4[width=640, start=60, end=140, options=autoplay]</code></pre>
+</div>
+</div>
+<div class="exampleblock">
+<div class="title">Example 14. result</div>
+<div class="content">
+<div class="videoblock">
+<div class="content">
+<video src="https://meniny.cn/assets/videos/wow.mp4" width="200" poster="WOW" controls>
+Your browser does not support the video tag.
+</video>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_youtube_视频"><a class="anchor" href="#_youtube_视频"></a><a class="link" href="#_youtube_视频">2.9.2. Youtube 视频</a></h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code data-lang="asciidoc" class="language-asciidoc hljs">video::rPQoq7ThGAU[youtube]</code></pre>
+</div>
+</div>
+<div class="exampleblock">
+<div class="title">Example 15. result</div>
+<div class="content">
+<div class="videoblock">
+<div class="content">
+<iframe src="https://www.youtube.com/embed/rPQoq7ThGAU?rel=0" frameborder="0" allowfullscreen></iframe>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_vimeo_视频"><a class="anchor" href="#_vimeo_视频"></a><a class="link" href="#_vimeo_视频">2.9.3. Vimeo 视频</a></h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code data-lang="asciidoc" class="language-asciidoc hljs">video::67480300[vimeo]</code></pre>
+</div>
+</div>
+<div class="exampleblock">
+<div class="title">Example 16. result</div>
+<div class="content">
+<div class="videoblock">
+<div class="content">
+<iframe src="https://player.vimeo.com/video/67480300" frameborder="0" allowfullscreen></iframe>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_链接"><a class="anchor" href="#_链接"></a><a class="link" href="#_链接">2.10. 链接</a></h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code data-lang="asciidoc" class="language-asciidoc hljs">获取更多详情，请link:{home}[点击这里], 或者 {home}[像这样]</code></pre>
+</div>
+</div>
+<div class="exampleblock">
+<div class="title">Example 17. result</div>
+<div class="content">
+<div class="paragraph">
+<p>获取更多详情，请<a href="https://meniny.cn">点击这里</a>, 或者 <a href="https://meniny.cn">像这样</a></p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_标记"><a class="anchor" href="#_标记"></a><a class="link" href="#_标记">2.11. 标记</a></h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code data-lang="asciidoc" class="language-asciidoc hljs">[#goals]
+* Goal 1
+* Goal 2
+
+Jump to link:#golas[Link with id].</code></pre>
+</div>
+</div>
+<div class="exampleblock">
+<div class="title">Example 18. result</div>
+<div class="content">
+<div id="goals" class="ulist">
+<ul>
+<li>
+<p>Goal 1</p>
+</li>
+<li>
+<p>Goal 2</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Jump to <a href="#golas">Link with id</a>.</p>
+</div>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code data-lang="asciidoc" class="language-asciidoc hljs">这里有[[bookmark-a]]一个行内标签。
+
+跳转到&lt;&lt;bookmark-a,前面的标签&gt;&gt;。</code></pre>
+</div>
+</div>
+<div class="exampleblock">
+<div class="title">Example 19. result</div>
+<div class="content">
+<div class="paragraph">
+<p>这里有<a id="bookmark-a"></a>一个行内标签。</p>
+</div>
+<div class="paragraph">
+<p>跳转到<a href="#bookmark-a">前面的标签</a>。</p>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_自定义标题标签"><a class="anchor" href="#_自定义标题标签"></a><a class="link" href="#_自定义标题标签">2.11.1. 自定义标题标签</a></h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code data-lang="asciidoc" class="language-asciidoc hljs">[[bookmark-title,cunstom-tag]]
+=== 一个标题带有自定义标签</code></pre>
+</div>
+</div>
+<div class="exampleblock">
+<div class="title">Example 20. result</div>
+<div class="content">
+<h3 id="bookmark-title" class="float">一个标题带有自定义标签</h3>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_列表"><a class="anchor" href="#_列表"></a><a class="link" href="#_列表">2.12. 列表</a></h3>
+<div class="sect3">
+<h4 id="_无序列表"><a class="anchor" href="#_无序列表"></a><a class="link" href="#_无序列表">2.12.1. 无序列表</a></h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code data-lang="asciidoc" class="language-asciidoc hljs">* level 1
+** level 2
+*** level 3
+**** level 4
+***** level 5
+* level 1</code></pre>
+</div>
+</div>
+<div class="exampleblock">
+<div class="title">Example 21. result</div>
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>level 1</p>
+<div class="ulist">
+<ul>
+<li>
+<p>level 2</p>
+<div class="ulist">
+<ul>
+<li>
+<p>level 3</p>
+<div class="ulist">
+<ul>
+<li>
+<p>level 4</p>
+<div class="ulist">
+<ul>
+<li>
+<p>level 5</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>level 1</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_有序列表"><a class="anchor" href="#_有序列表"></a><a class="link" href="#_有序列表">2.12.2. 有序列表</a></h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code data-lang="asciidoc" class="language-asciidoc hljs">. level 1
+.. level 2
+... level 3
+.... level 4
+..... level 5
+. level 1</code></pre>
+</div>
+</div>
+<div class="exampleblock">
+<div class="title">Example 22. result</div>
+<div class="content">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>level 1</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>level 2</p>
+<div class="olist lowerroman">
+<ol class="lowerroman" type="i">
+<li>
+<p>level 3</p>
+<div class="olist upperalpha">
+<ol class="upperalpha" type="A">
+<li>
+<p>level 4</p>
+<div class="olist upperroman">
+<ol class="upperroman" type="I">
+<li>
+<p>level 5</p>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>level 1</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_勾选列表"><a class="anchor" href="#_勾选列表"></a><a class="link" href="#_勾选列表">2.12.3. 勾选列表</a></h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code data-lang="asciidoc" class="language-asciidoc hljs">* [x] 已选
+* [ ] 未选
+*     普通</code></pre>
+</div>
+</div>
+<div class="exampleblock">
+<div class="title">Example 23. result</div>
+<div class="content">
+<div class="ulist checklist">
+<ul class="checklist">
+<li>
+<p><i class="fa fa-check-square-o"></i> 已选</p>
+</li>
+<li>
+<p><i class="fa fa-square-o"></i> 未选</p>
+</li>
+<li>
+<p>普通</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_标签列表"><a class="anchor" href="#_标签列表"></a><a class="link" href="#_标签列表">2.12.4. 标签列表</a></h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code data-lang="asciidoc" class="language-asciidoc hljs">Operating Systems::
+  Linux:::
+    . Fedora
+      * Desktop
+    . Ubuntu
+      * Desktop
+      * Server
+  BSD:::
+    . FreeBSD
+    . NetBSD
+
+Cloud Providers::
+  PaaS:::
+    . OpenShift
+    . CloudBees
+  IaaS:::
+    . Amazon EC2
+    . Rackspace</code></pre>
+</div>
+</div>
+<div class="exampleblock">
+<div class="title">Example 24. result</div>
+<div class="content">
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Operating Systems</dt>
+<dd>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Linux</dt>
+<dd>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Fedora</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Desktop</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Ubuntu</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Desktop</p>
+</li>
+<li>
+<p>Server</p>
+</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+</dd>
+<dt class="hdlist1">BSD</dt>
+<dd>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>FreeBSD</p>
+</li>
+<li>
+<p>NetBSD</p>
+</li>
+</ol>
+</div>
+</dd>
+</dl>
+</div>
+</dd>
+<dt class="hdlist1">Cloud Providers</dt>
+<dd>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">PaaS</dt>
+<dd>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>OpenShift</p>
+</li>
+<li>
+<p>CloudBees</p>
+</li>
+</ol>
+</div>
+</dd>
+<dt class="hdlist1">IaaS</dt>
+<dd>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Amazon EC2</p>
+</li>
+<li>
+<p>Rackspace</p>
+</li>
+</ol>
+</div>
+</dd>
+</dl>
+</div>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_问答列表"><a class="anchor" href="#_问答列表"></a><a class="link" href="#_问答列表">2.12.5. 问答列表</a></h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code data-lang="asciidoc" class="language-asciidoc hljs">What is this?:: You tell me!
+
+Why?:: I don't know.</code></pre>
+</div>
+</div>
+<div class="exampleblock">
+<div class="title">Example 25. result</div>
+<div class="content">
+<div class="dlist">
+<dl>
+<dt class="hdlist1">What is this?</dt>
+<dd>
+<p>You tell me!</p>
+</dd>
+<dt class="hdlist1">Why?</dt>
+<dd>
+<p>I don&#8217;t know.</p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_表格"><a class="anchor" href="#_表格"></a><a class="link" href="#_表格">2.13. 表格</a></h3>
+<div class="sect3">
+<h4 id="_简单列表"><a class="anchor" href="#_简单列表"></a><a class="link" href="#_简单列表">2.13.1. 简单列表</a></h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code data-lang="asciidoc" class="language-asciidoc hljs">.表格标题
+|===
+|列标题 1 |列标题 2 |列标题 3
+
+|列1行1
+|列2行1
+|列3行1
+
+|列1行2
+|列2行2
+|列3行2
+|===</code></pre>
+</div>
+</div>
+<div class="exampleblock">
+<div class="title">Example 26. result</div>
+<div class="content">
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 1. 表格标题</caption>
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">列标题 1</th>
+<th class="tableblock halign-left valign-top">列标题 2</th>
+<th class="tableblock halign-left valign-top">列标题 3</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">列1行1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">列2行1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">列3行1</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">列1行2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">列2行2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">列3行2</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code data-lang="asciidoc" class="language-asciidoc hljs">[%header,cols=2*]
+|===
+|列标题 1
+|列标题 2
+
+|列1行1
+|列2行1
+
+|列1行2
+|列2行2
+|===</code></pre>
+</div>
+</div>
+<div class="exampleblock">
+<div class="title">Example 27. result</div>
+<div class="content">
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">列标题 1</th>
+<th class="tableblock halign-left valign-top">列标题 2</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">列1行1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">列2行1</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">列1行2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">列2行2</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code data-lang="asciidoc" class="language-asciidoc hljs">[%header%footer%autowidth,cols=2*]
+|===
+|列标题 1
+|列标题 2
+
+|列1行1
+|列2行1
+
+|列1行2
+|列2行2
+|===</code></pre>
+</div>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<caption class="title">Table 2. result</caption>
+<colgroup>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">列标题 1</th>
+<th class="tableblock halign-left valign-top">列标题 2</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">列1行1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">列2行1</p></td>
+</tr>
+</tbody>
+<tfoot>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">列1行2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">列2行2</p></td>
+</tr>
+</tfoot>
+</table>
+</div>
+<div class="sect3">
+<h4 id="_嵌套语法"><a class="anchor" href="#_嵌套语法"></a><a class="link" href="#_嵌套语法">2.13.2. 嵌套语法</a></h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code data-lang="asciidoc" class="language-asciidoc hljs">[cols="2,2,5a"]
+|===
+|Firefox
+|Browser
+|Mozilla Firefox is an open-source web browser.
+
+It's designed for:
+
+* standards compliance
+* performance
+* portability
+
+http://getfirefox.com[Get Firefox]!
+|===</code></pre>
+</div>
+</div>
+<div class="exampleblock">
+<div class="title">Example 28. result</div>
+<div class="content">
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 22.2222%;">
+<col style="width: 22.2222%;">
+<col style="width: 55.5556%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Firefox</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Browser</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Mozilla Firefox is an open-source web browser.</p>
+</div>
+<div class="paragraph">
+<p>It&#8217;s designed for:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>standards compliance</p>
+</li>
+<li>
+<p>performance</p>
+</li>
+<li>
+<p>portability</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><a href="http://getfirefox.com">Get Firefox</a>!</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_停靠位置"><a class="anchor" href="#_停靠位置"></a><a class="link" href="#_停靠位置">2.13.3. 停靠位置</a></h4>
+<div class="paragraph">
+<p>在单元格分隔符 (<code>|</code>) 前使用 <code>^</code>、<code>&lt;</code>、<code>&gt;</code> 符号分别表示该单元格横向居中、左对齐、右对齐。</p>
+</div>
+<div class="paragraph">
+<p>在单元格分隔符 (<code>|</code>) 前使用 <code>.^</code> 符号表示该单元格纵向居中。</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code data-lang="asciidoc" class="language-asciidoc hljs">|===
+^|居中
+&lt;|左对齐
+&gt;|右对齐
+|这是一个普通的单元格，使用默认的停靠规则
+|===</code></pre>
+</div>
+</div>
+<div class="exampleblock">
+<div class="title">Example 29. result</div>
+<div class="content">
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 100%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock">居中</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">左对齐</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-right valign-top"><p class="tableblock">右对齐</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">这是一个普通的单元格，使用默认的停靠规则</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_合并单元格"><a class="anchor" href="#_合并单元格"></a><a class="link" href="#_合并单元格">2.13.4. 合并单元格</a></h4>
+<div class="paragraph">
+<p>在单元格分隔符 (<code>|</code>) 前使用 <code>N\+</code> 表示该单元格横向占据 <code>N</code> 列。</p>
+</div>
+<div class="paragraph">
+<p>在单元格分隔符 (<code>|</code>) 前使用 <code>.N\+</code> 表示该单元格纵向占据 <code>N</code> 行。</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code data-lang="asciidoc" class="language-asciidoc hljs">|===
+|列1|列2|列3
+2+|横向占据2个单元格|cell
+2.2+|横竖均占据2个单元格|cell
+|cell
+|===</code></pre>
+</div>
+</div>
+<div class="exampleblock">
+<div class="title">Example 30. result</div>
+<div class="content">
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">列1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">列2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">列3</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" colspan="2"><p class="tableblock">横向占据2个单元格</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">cell</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" colspan="2" rowspan="2"><p class="tableblock">横竖均占据2个单元格</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">cell</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">cell</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code data-lang="asciidoc" class="language-asciidoc hljs">|===
+|列1|列2|列3
+2+^|横向占据2个单元格，横向居中|cell
+2.2+^.^|横竖均占据2个单元格，横纵居中|cell
+|cell
+|===</code></pre>
+</div>
+</div>
+<div class="exampleblock">
+<div class="title">Example 31. result</div>
+<div class="content">
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">列1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">列2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">列3</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" colspan="2"><p class="tableblock">横向占据2个单元格，横向居中</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">cell</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-middle" colspan="2" rowspan="2"><p class="tableblock">横竖均占据2个单元格，横纵居中</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">cell</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">cell</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code data-lang="asciidoc" class="language-asciidoc hljs">|===
+|cell .3+^.^|纵向占据三个单元格，横纵居中
+m|cell
+e|cell
+|===</code></pre>
+</div>
+</div>
+<div class="exampleblock">
+<div class="title">Example 32. result</div>
+<div class="content">
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">cell</p></td>
+<td class="tableblock halign-center valign-middle" rowspan="3"><p class="tableblock">纵向占据三个单元格，横纵居中</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>cell</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>cell</em></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_单元格与列的样式"><a class="anchor" href="#_单元格与列的样式"></a><a class="link" href="#_单元格与列的样式">2.13.5. 单元格与列的样式</a></h4>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 16.6666%;">
+<col style="width: 16.6666%;">
+<col style="width: 25%;">
+<col style="width: 41.6668%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">样式名称</th>
+<th class="tableblock halign-left valign-top">Style Name</th>
+<th class="tableblock halign-left valign-top">属性值</th>
+<th class="tableblock halign-left valign-top">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">AsciiDoc</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">AsciiDoc</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>a</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">支持块级元素（段落，定界的块和块宏）。
+这种样式有效地创建了一个嵌套的独立AsciiDoc文档。
+隐式属性（例如来自父文档的doctitle）将被隐藏。
+自定义属性是继承的。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">重点</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Emphasis</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>e</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">文字是斜体的。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">标头</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Header</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>h</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">将应用标头属性。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">字面</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Literal</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>l</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">内容被视为位于文字块内。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">等距</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Monospaced</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>m</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">文本以等宽字体呈现。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">无（默认样式）</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">None (default style)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>d</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">文本的处理方式就像普通段落一样。
+支持段落中允许的所有标记（即，内联格式，内联宏）。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">强文本</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Strong</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>s</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">文字为粗体。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">诗</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Verse</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>v</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">列内容被视为在诗句块中。</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_区块"><a class="anchor" href="#_区块"></a><a class="link" href="#_区块">2.14. 区块</a></h3>
+<div class="sect3">
+<h4 id="_横栏块"><a class="anchor" href="#_横栏块"></a><a class="link" href="#_横栏块">2.14.1. 横栏块</a></h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code data-lang="asciidoc" class="language-asciidoc hljs">.横栏
+****
+这是一个**横栏块**
+****</code></pre>
+</div>
+</div>
+<div class="exampleblock">
+<div class="title">Example 33. result</div>
+<div class="content">
+<div class="sidebarblock">
+<div class="content">
+<div class="title">横栏</div>
+<div class="paragraph">
+<p>这是一个<strong><em>横栏块</em></strong></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_示例块"><a class="anchor" href="#_示例块"></a><a class="link" href="#_示例块">2.14.2. 示例块</a></h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code data-lang="asciidoc" class="language-asciidoc hljs">.result
+====
+这是一个示例
+====</code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_透传块"><a class="anchor" href="#_透传块"></a><a class="link" href="#_透传块">2.14.3. 透传块</a></h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code data-lang="asciidoc" class="language-asciidoc hljs">++++
+&lt;a href="{home}"&gt;内嵌 HTML 代码&lt;/a&gt;
+++++</code></pre>
+</div>
+</div>
+<div class="exampleblock">
+<div class="title">Example 34. result</div>
+<div class="content">
+<a href="{home}">内嵌 HTML 代码</a>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_引用块"><a class="anchor" href="#_引用块"></a><a class="link" href="#_引用块">2.14.4. 引用块</a></h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code data-lang="asciidoc" class="language-asciidoc hljs">[quote, 林肯, 第XX任美国总统]
+____
+Four score and seven years ago our fathers brought forth
+on this continent a new nation...
+____</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code data-lang="asciidoc" class="language-asciidoc hljs">[quote, 爱因斯坦]
+A person who never made a mistake never tried anything new.</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code data-lang="asciidoc" class="language-asciidoc hljs">____
+A person who never made a mistake never tried anything new.
+
+Contains a link:{home}[link].
+____</code></pre>
+</div>
+</div>
+<div class="exampleblock">
+<div class="title">Example 35. result</div>
+<div class="content">
+<div class="quoteblock">
+<blockquote>
+<div class="paragraph">
+<p>Four score and seven years ago our fathers brought forth
+on this continent a new nation&#8230;&#8203;</p>
+</div>
+</blockquote>
+<div class="attribution">
+&#8212; 林肯<br>
+<cite>第XX任美国总统</cite>
+</div>
+</div>
+</div>
+</div>
+<div class="exampleblock">
+<div class="title">Example 36. result</div>
+<div class="content">
+<div class="quoteblock">
+<blockquote>
+A person who never made a mistake never tried anything new.
+</blockquote>
+<div class="attribution">
+&#8212; 爱因斯坦
+</div>
+</div>
+</div>
+</div>
+<div class="exampleblock">
+<div class="title">Example 37. result</div>
+<div class="content">
+<div class="quoteblock">
+<blockquote>
+<div class="paragraph">
+<p>A person who never made a mistake never tried anything new.</p>
+</div>
+<div class="paragraph">
+<p>Contains a <a href="https://meniny.cn">link</a>.</p>
+</div>
+</blockquote>
+</div>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_警告块"><a class="anchor" href="#_警告块"></a><a class="link" href="#_警告块">2.14.5. 警告块</a></h4>
+<div class="paragraph">
+<p>在 <code>AsciiDoctor</code> 中, 使用这些图标需要在文档头配置 <code>:icons: font</code>。</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code data-lang="asciidoc" class="language-asciidoc hljs">NOTE: 备注
+
+TIP: 提示
+
+IMPORTANT: 重要
+
+WARNING: 警告
+
+CAUTION: 当心
+
+[NOTE]
+====
+一些备注内容
+====</code></pre>
+</div>
+</div>
+<div class="exampleblock">
+<div class="title">Example 38. result</div>
+<div class="content">
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+备注
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+提示
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+重要
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+警告
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock caution">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-caution" title="Caution"></i>
+</td>
+<td class="content">
+当心
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_代码块"><a class="anchor" href="#_代码块"></a><a class="link" href="#_代码块">2.14.6. 代码块</a></h4>
+<div class="paragraph">
+<p>在 <code>AsciiDoctor</code> 中, 使用代码高亮需要在文档头配置 <code>:source-highlighter: pygments</code>。</p>
+</div>
+<div class="paragraph">
+<p>你可以通过 <code>gem install pygments.rb</code> 指令安装 <code>pygments</code> 的 <code>Ruby</code> 实现。除 <code>pygments</code>, 还可以使用 <code>coderay</code>, <code>highlightjs</code>, <code>prettify</code> 等。</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code data-lang="asciidoc" class="language-asciidoc hljs">.index.html
+[source, html, subs="verbatim, attributes"]
+....
+&lt;div&gt; // &lt;1&gt;
+  &lt;p&gt;{author}&lt;/p&gt;
+&lt;/div&gt;
+....
+&lt;1&gt; 标注信息</code></pre>
+</div>
+</div>
+<div class="exampleblock">
+<div class="title">Example 39. result</div>
+<div class="content">
+<div class="listingblock">
+<div class="title">index.html</div>
+<div class="content">
+<pre class="highlightjs highlight"><code data-lang="html" class="language-html hljs">&lt;div&gt; <i class="conum" data-value="1"></i><b>(1)</b>
+  &lt;p&gt;Ezra&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>标注信息</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_markdown_风格"><a class="anchor" href="#_markdown_风格"></a><a class="link" href="#_markdown_风格">Markdown 风格</a></h5>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code data-lang="asciidoc" class="language-asciidoc hljs">```ruby
+def some()
+end
+```</code></pre>
+</div>
+</div>
+<div class="exampleblock">
+<div class="title">Example 40. result</div>
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code data-lang="ruby" class="language-ruby hljs">def some()
+end</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="exampleblock">
+<div class="title">Example 41. result</div>
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code data-lang="swift" class="language-swift hljs">import UIKit
+
+open class SomeClass {
+  open let name: String
+
+  public init(name) {
+    self.name = name
+  }
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_行内代码"><a class="anchor" href="#_行内代码"></a><a class="link" href="#_行内代码">2.15. 行内代码</a></h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code data-lang="asciidoc" class="language-asciidoc hljs">普通文字 `&lt;div&gt;` 普通文字</code></pre>
+</div>
+</div>
+<div class="exampleblock">
+<div class="title">Example 42. result</div>
+<div class="content">
+<div class="paragraph">
+<p>普通文字 <code>&lt;div&gt;</code> 普通文字</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_注释"><a class="anchor" href="#_注释"></a><a class="link" href="#_注释">2.16. 注释</a></h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code data-lang="asciidoc" class="language-asciidoc hljs">// 单行注释
+
+////
+多行注释
+
+多行注释
+////</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_键盘"><a class="anchor" href="#_键盘"></a><a class="link" href="#_键盘">2.17. 键盘</a></h3>
+<div class="paragraph">
+<p>通过 <code>kdb:[键位+键位+键位]</code> 的语法使用键盘符号特性。</p>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+在 <code>AsciiDoctor</code> 中, 你需要在文档前标记 <code>:experimental:</code> 才能使用键盘符号特性。
+</td>
+</tr>
+</table>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code data-lang="asciidoc" class="language-asciidoc hljs">kbd:[Ctrl+T]
+
+kbd:[Command+Options+Control+T]
+
+kbd:[⌘+N]</code></pre>
+</div>
+</div>
+<div class="exampleblock">
+<div class="title">Example 43. result</div>
+<div class="content">
+<div class="paragraph">
+<p><span class="keyseq"><kbd>Ctrl</kbd>+<kbd>T</kbd></span></p>
+</div>
+<div class="paragraph">
+<p><span class="keyseq"><kbd>Command</kbd>+<kbd>Options</kbd>+<kbd>Control</kbd>+<kbd>T</kbd></span></p>
+</div>
+<div class="paragraph">
+<p><span class="keyseq"><kbd>⌘</kbd>+<kbd>N</kbd></span></p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_导入"><a class="anchor" href="#_导入"></a><a class="link" href="#_导入">2.18. 导入</a></h3>
+<div class="paragraph">
+<p>通过 <code>include::文档路径[选项]</code> 语法来包含文件，其中选项可以为空</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code data-lang="asciidoc" class="language-asciidoc hljs">include::../somedir/somefile.txt[]
+
+include::../somedir/somefile.txt[tabsize=2]</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>在代码块中引用文件:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code data-lang="asciidoc" class="language-asciidoc hljs">.index.adoc
+[source, asciidoc]
+....
+include::./index.adoc[lines=1..5]
+....</code></pre>
+</div>
+</div>
+<div class="exampleblock">
+<div class="title">Example 44. result</div>
+<div class="content">
+<div class="listingblock">
+<div class="title">index.adoc</div>
+<div class="content">
+<pre class="highlightjs highlight"><code data-lang="asciidoc" class="language-asciidoc hljs">:article: AsciiDoc 指引
+:title: {article}
+:author: Ezra
+:mail: admin@meniny.cn
+:home: https://meniny.cn</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_脚注"><a class="anchor" href="#_脚注"></a><a class="link" href="#_脚注">2.19. 脚注</a></h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code data-lang="asciidoc" class="language-asciidoc hljs">一些文字。footnote:[示例脚注1.]
+
+一些文字。footnote:标记[示例脚注2.]
+
+一些文字。footnote:标记[]</code></pre>
+</div>
+</div>
+<div class="exampleblock">
+<div class="title">Example 45. result</div>
+<div class="content">
+<div class="paragraph">
+<p>一些文字。<sup class="footnote">[<a id="_footnoteref_1" class="footnote" href="#_footnotedef_1" title="View footnote.">1</a>]</sup></p>
+</div>
+<div class="paragraph">
+<p>一些文字。<sup class="footnote" id="_footnote_标记">[<a id="_footnoteref_2" class="footnote" href="#_footnotedef_2" title="View footnote.">2</a>]</sup></p>
+</div>
+<div class="paragraph">
+<p>一些文字。<sup class="footnoteref">[<a class="footnote" href="#_footnotedef_2" title="View footnote.">2</a>]</sup></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_工具"><a class="anchor" href="#_工具"></a><a class="link" href="#_工具">3. 工具</a></h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_asciidocfx"><a class="anchor" href="#_asciidocfx"></a><a class="link" href="#_asciidocfx">3.1. AsciidocFX</a></h3>
+<div class="paragraph">
+<p><a href="https://github.com/asciidocfx/AsciidocFX"><code>AsciidocFX</code></a> 是一款开源 GUI 编辑器。</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="https://github.com/asciidocfx/AsciidocFX/raw/master/images/asciidocfx.png" alt="asciidocfx">
+</div>
+<div class="title">Figure 2. AsciidocFX</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_atom"><a class="anchor" href="#_atom"></a><a class="link" href="#_atom">3.2. Atom</a></h3>
+<div class="paragraph">
+<p>来自 Github 的 <a href="https://atom.io/"><code>Atom</code></a>, 需要额外安装插件。</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="https://github-atom-io-herokuapp-com.global.ssl.fastly.net/assets/index-ide-screenshot-26fbe099e63e84c16a2a690e9de2b923.png" alt="index ide screenshot 26fbe099e63e84c16a2a690e9de2b923">
+</div>
+<div class="title">Figure 3. Atom</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_asciidoctor"><a class="anchor" href="#_asciidoctor"></a><a class="link" href="#_asciidoctor">3.3. AsciiDoctor</a></h3>
+<div class="paragraph">
+<p><a href="https://asciidoctor.org"><code>AsciiDocor</code></a> 是一个使用 <code>Ruby</code> 实现的 <code>AsciiDoc</code> 转换工具。你可以通过 <code>gem install asciidoctor</code> 进行安装。</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code data-lang="console" class="language-console hljs">asciidoctor MyDoc.adoc
+
+asciidoctor -a stylesheet golo.css -o MyHTML.html MyDoc.adoc</code></pre>
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="https://raw.githubusercontent.com/asciidoctor/asciidoctor/master/screenshot.png" alt="screenshot">
+</div>
+<div class="title">Figure 4. AsciiDoctor</div>
+</div>
+<div class="sect3">
+<h4 id="_stylesheets"><a class="anchor" href="#_stylesheets"></a><a class="link" href="#_stylesheets">3.3.1. Stylesheets</a></h4>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://meniny.cn/docs/asciidoc/stylesheets/asciidoctor.css">asciidoctor.css</a>: <a href="https://meniny.cn/docs/asciidoc/previews/asciidoctor.html">(预览)</a></p>
+</li>
+<li>
+<p><a href="https://meniny.cn/docs/asciidoc/stylesheets/colony.css">colony.css</a>: <a href="https://meniny.cn/docs/asciidoc/previews/colony.html">(预览)</a></p>
+</li>
+<li>
+<p><a href="https://meniny.cn/docs/asciidoc/stylesheets/foundation-lime.css">foundation-lime.css</a>: <a href="https://meniny.cn/docs/asciidoc/previews/foundation-lime.html">(预览)</a></p>
+</li>
+<li>
+<p><a href="https://meniny.cn/docs/asciidoc/stylesheets/foundation-potion.css">foundation-potion.css</a>: <a href="https://meniny.cn/docs/asciidoc/previews/foundation-potion.html">(预览)</a></p>
+</li>
+<li>
+<p><a href="https://meniny.cn/docs/asciidoc/stylesheets/foundation.css">foundation.css</a>: <a href="https://meniny.cn/docs/asciidoc/previews/foundation.html">(预览)</a></p>
+</li>
+<li>
+<p><a href="https://meniny.cn/docs/asciidoc/stylesheets/github.css">github.css</a>: <a href="https://meniny.cn/docs/asciidoc/previews/github.html">(预览)</a></p>
+</li>
+<li>
+<p><a href="https://meniny.cn/docs/asciidoc/stylesheets/golo.css">golo.css</a>: <a href="https://meniny.cn/docs/asciidoc/previews/golo.html">(预览)</a></p>
+</li>
+<li>
+<p><a href="https://meniny.cn/docs/asciidoc/stylesheets/iconic.css">iconic.css</a>: <a href="https://meniny.cn/docs/asciidoc/previews/iconic.html">(预览)</a></p>
+</li>
+<li>
+<p><a href="https://meniny.cn/docs/asciidoc/stylesheets/maker.css">maker.css</a>: <a href="https://meniny.cn/docs/asciidoc/previews/maker.html">(预览)</a></p>
+</li>
+<li>
+<p><a href="https://meniny.cn/docs/asciidoc/stylesheets/readthedocs.css">readthedocs.css</a>: <a href="https://meniny.cn/docs/asciidoc/previews/readthedocs.html">(预览)</a></p>
+</li>
+<li>
+<p><a href="https://meniny.cn/docs/asciidoc/stylesheets/riak.css">riak.css</a>: <a href="https://meniny.cn/docs/asciidoc/previews/riak.html">(预览)</a></p>
+</li>
+<li>
+<p><a href="https://meniny.cn/docs/asciidoc/stylesheets/rocket-panda.css">rocket-panda.css</a>: <a href="https://meniny.cn/docs/asciidoc/previews/rocket-panda.html">(预览)</a></p>
+</li>
+<li>
+<p><a href="https://meniny.cn/docs/asciidoc/stylesheets/rubygems.css">rubygems.css</a>: <a href="https://meniny.cn/docs/asciidoc/previews/rubygems.html">(预览)</a></p>
+</li>
+<li>
+<p><a href="https://meniny.cn/docs/asciidoc/stylesheets/boot-darkly.css">boot-darkly.css</a>: <a href="https://meniny.cn/docs/asciidoc/previews/boot-darkly.html">(预览)</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_关于"><a class="anchor" href="#_关于"></a><a class="link" href="#_关于">4. 关于</a></h2>
+<div class="sectionbody">
+<div class="sidebarblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p><strong>标题</strong>: <a href="https://meniny.cn/asciidoc">《AsciiDoc 指引》</a></p>
+</li>
+<li>
+<p><strong>作者</strong>: <a href="https://meniny.cn/about/">Ezra</a></p>
+</li>
+<li>
+<p><strong>版本</strong>: 1.0.1</p>
+</li>
+<li>
+<p><strong>链接</strong>: <a href="https://meniny.cn/asciidoc" class="bare">https://meniny.cn/asciidoc</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="footnotes">
+<hr>
+<div class="footnote" id="_footnotedef_1">
+<a href="#_footnoteref_1">1</a>. 示例脚注1.
+</div>
+<div class="footnote" id="_footnotedef_2">
+<a href="#_footnoteref_2">2</a>. 示例脚注2.
+</div>
+</div>
+<div id="footer">
+<div id="footer-text">
+ 1.0.0<br>
+Last updated 2020-11-18 20:06:49 +0800
+</div>
+</div>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/github.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js"></script>
+<script>hljs.initHighlighting()</script>
+</body>
+</html>

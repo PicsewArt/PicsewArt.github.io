@@ -1,0 +1,1177 @@
+:doctitle: AsciiDoc 指引
+:home: https://picsew.cn
+:assets: {home}/assets
+:image: {assets}/images
+:video: {assets}/videos
+:thispage: {home}/asciidoctor/syntax/
+:stylesheets: {home}/asciidoctor/syntax/stylesheets
+:stylesheets_previews: {home}/asciidoctor/syntax/previews
+:experimental:
+:icons: font
+// :source-highlighter: highlightjs
+:source-highlighter: pygments
+:doctype: book
+:page-layout!:
+:sectanchors:
+:sectlinks:
+:sectnums:
+:toc: left
+:toclevels: 6
+:toc-title: 索引
+
+= {doctitle}
+:author: Ezra
+:email: admin@picsew.cn
+:revnumber: 1.1.0
+:revdate: Nov. 17, 2018
+:revremark: The first incarnation of {doctitle}
+:version-label!:
+
+== 简介
+
+link:https://en.wikipedia.org/wiki/Lightweight_markup_language[轻量级的标记语言已经有很多]，例如我用来写博客的 `Markdown` 就是目前十分流行的一种轻量级标记语言，包括 `Github`、`StackOverflow` 等很多网站以及个人都在使用。
+
+=== Markdown 还不够吗
+
+`Markdown` 语法简洁，即便阅读未经渲染的源文件也有不错的可读性。但它对于较为复杂的格式例如表格的支持始终遭人诟病，许多网站使用各自不同的扩展语法来实现，也从而导致了各种方言的滋生。这也是为何会出现 link:https://blog.codinghorror.com/standard-flavored-markdown/[Standard Markdown] 项目的原因，虽然因为种种原因又更名为 link:https://blog.codinghorror.com/standard-flavored-markdown/[Common Markdown]，然而整个 `Markdown` 社区依然缺乏创建者的支持，`Common Markdown` 也很可能沦为另一个方言。
+
+image::{image}/posts/content/md_standards.png[title="Markdown Standards"]
+
+=== 为什么选择 AsciiDoc
+
+第一次接触到 AsciiDoc 是通过 `O'Reilly` 的图书，`Atlas` 的推荐语言就是 `AsciiDoc`。那么十多种标记语言中，为什么要选择 `AsciiDoc` 呢？其实在选择另一种标记语言时，我做过一些简单的研究:
+
+* **LaTex :** 大名鼎鼎的 `LaTex` 是除了 `Markdown` 之外我第一个投入精力学习的标记语言。不得不说 `LaTex` 十分强大，但与这份强大伴随而来则是复杂的语法，导致了写作过程的枯燥，也让我失去了对 `LaTex` 的兴趣。
+
+* **reStructuredText :** `REST` 也是一种松散的文本结构，功能也较为全面，但书写起来更像是在写 `Python。`
+
+* **Org mode :** 我想基本上只有 `Emacs` 社区的人在使用了吧。
+
+* **Texy!，BBCode，Creole，Textile... :** 事实上大部分轻量级的标记语言语法都较为类似，所以这场抉择很大程度上是使用范围、功能、兼容性、扩展性等多方面的比赛，这也是我为什么不选择这些语言的原因。
+
+=== AsciiDoc 与 Markdown
+
+`AsciiDoc` 的语法与 `Markdown` 十分类似，在学会 `Markdown` 的前提下很容易转向 `AsciiDoc` 阵营。
+
+在的功能方面，前面已经说过许多功能 `Markdown` 要通过扩展语法和 `HTML` 来实现，前者直接导致了通用性的缺失，后者提高了后期编撰的成本，而 AsciiDoc 的学习成本也远不及多学一门 `HTML` 甚至多种扩展语法。
+
+`AsciiDoc` 原生支持的特性就足以应付大多数电子文档的编撰需求，你可以使用标准的 `AsciiDoc` 语法为你的文档添加作者信息、版本信息、表格等特性，它还支持文档引入、自定义块语法等功能。
+
+== 语法
+
+=== 标题
+
+`AsciiDoc` 中的标题共分为六层，分别使用对应数量的 `=` 进行标识:
+
+[source, asciidoc, subs="verbatim"]
+....
+= 零级
+
+== 一级
+
+=== 二级
+
+==== 三级
+
+===== 四级
+
+====== 五级
+....
+
+.result
+====
+[float]
+= 零级
+
+[float]
+== 一级
+
+[float]
+=== 二级
+
+[float]
+==== 三级
+
+[float]
+===== 四级
+
+[float]
+====== 五级
+====
+
+==== 分离/浮动标题
+
+[source, asciidoc]
+....
+[discrete]
+=== 分离/浮动标题
+
+[float]
+=== 分离/浮动标题
+....
+
+.result
+====
+[discrete]
+=== 分离/浮动标题
+
+[float]
+=== 分离/浮动标题
+====
+
+=== 属性
+
+[source, asciidoc]
+....
+:doctitle: AsciiDoc 指引
+:home: https://meniny.cn
+:assets: {home}/assets
+:image: {assets}/images
+:video: {assets}/videos
+:stylesheets: {home}/docs/asciidoc/stylesheets
+:stylesheets_previews: {home}/docs/asciidoc/previews
+:experimental:
+:icons: font
+// :source-highlighter: highlightjs
+:source-highlighter: pygments
+:doctype: book
+:page-layout!:
+:sectanchors:
+:sectlinks:
+:sectnums:
+:toc: left
+:toclevels: 6
+:toc-title: 索引
+
+= {doctitle}
+:author: Ezra
+:email: admin@meniny.cn
+:revnumber: 1.1.0
+:revdate: Nov. 17, 2018
+:revremark: The first incarnation of {doctitle}
+:version-label!:
+....
+
+=== 目录
+
+[source, asciidoc]
+....
+:toc:
+
+:toc: right
+
+:toc: left
+....
+
+=== 样式
+
+==== 粗体
+
+[source, asciidoc]
+....
+普通文字 *粗体字* 普通文字
+....
+
+.result
+====
+普通文字 *粗体字* 普通文字
+====
+
+==== 斜体
+
+[source, asciidoc]
+....
+普通文字 _斜体字_ 普通文字
+....
+
+.result
+====
+普通文字 _斜体字_ 普通文字
+====
+
+[source, asciidoc]
+....
+*_粗体 & 斜体_*
+....
+
+.result
+====
+*_粗体 & 斜体_*
+====
+
+==== 高亮
+
+[source, asciidoc]
+....
+普通文字 #高亮内容# 普通文字
+....
+
+.result
+====
+普通文字 #高亮内容# 普通文字
+====
+
+==== 下划线
+
+[source, asciidoc]
+....
+普通文字 [.underline]#下划线文字# 普通文字
+....
+
+.result
+====
+普通文字 [.underline]#下划线文字# 普通文字
+====
+
+==== 删划线
+
+[source, asciidoc]
+....
+普通文字 [.line-through]#删划线文字# 普通文字
+....
+
+.result
+====
+普通文字 [.line-through]#删划线文字# 普通文字
+====
+
+==== 大小标记
+
+[source, asciidoc]
+....
+普通文字中含有 [.small]#示例小标记# 以及 [.big]##示例大标记##。
+....
+
+.result
+====
+普通文字中含有 [.small]#示例小标记# 以及 [.big]##示例大标记##。
+====
+
+==== 上标下标
+
+[source, asciidoc]
+....
+普通文字^上标^
+
+普通文字~下标~
+....
+
+.result
+====
+普通文字^上标^
+
+普通文字~下标~
+====
+
+=== 居中
+
+[source, asciidoc]
+....
+[.text-center]
+....
+
+=== 横线
+
+[source, asciidoc]
+....
+***
+....
+
+.result
+====
+***
+====
+
+=== 断行
+
+[source, asciidoc]
+....
+[%hardbreaks]
+....
+
+=== 分页
+
+[source, asciidoc]
+....
+<<<
+....
+
+=== 图片
+
+==== 行内图片
+
+[source, asciidoc]
+....
+An image image:{image}/avatar/oschina_200.jpg[some, 50] here.
+....
+
+.result
+====
+An image image:{image}/avatar/oschina_200.jpg[some, 50] here.
+====
+
+==== 块图片
+
+[source, asciidoc]
+....
+image::{image}/avatar/oschina_200.jpg[caption="Caption: ", title="Blocked Image", 100]
+....
+
+.result
+====
+image::{image}/avatar/oschina_200.jpg[caption="Caption: ", title="Blocked Image", 100]
+====
+
+=== 视频
+
+==== 普通视频
+
+[source, asciidoc]
+....
+video::video_file.mp4[]
+
+video::video_file.mp4[width=640, start=60, end=140, options=autoplay]
+....
+
+.result
+====
+video::{video}/wow.mp4[WOW, 200]
+====
+
+==== Youtube 视频
+
+[source, asciidoc]
+....
+video::rPQoq7ThGAU[youtube]
+....
+
+.result
+====
+video::rPQoq7ThGAU[youtube]
+====
+
+==== Vimeo 视频
+
+[source, asciidoc]
+....
+video::67480300[vimeo]
+....
+
+.result
+====
+video::67480300[vimeo]
+====
+
+=== 链接
+
+[source, asciidoc]
+....
+获取更多详情，请link:{home}[点击这里], 或者 {home}[像这样]
+....
+
+.result
+====
+获取更多详情，请link:{home}[点击这里], 或者 {home}[像这样]
+====
+
+=== 标记
+
+[source, asciidoc]
+....
+[#goals]
+* Goal 1
+* Goal 2
+
+Jump to link:#golas[Link with id].
+....
+
+.result
+====
+[#goals]
+* Goal 1
+* Goal 2
+
+Jump to link:#golas[Link with id].
+====
+
+[source, asciidoc]
+....
+这里有[[bookmark-a]]一个行内标签。
+
+跳转到<<bookmark-a,前面的标签>>。
+....
+
+.result
+====
+这里有[[bookmark-a]]一个行内标签。
+
+跳转到<<bookmark-a,前面的标签>>。
+====
+
+==== 自定义标题标签
+
+[source, asciidoc]
+....
+[[bookmark-title,cunstom-tag]]
+=== 一个标题带有自定义标签
+....
+
+.result
+====
+[float]
+[[bookmark-title,cunstom-tag]]
+=== 一个标题带有自定义标签
+====
+
+=== 列表
+
+==== 无序列表
+
+[source, asciidoc]
+....
+* level 1
+** level 2
+*** level 3
+**** level 4
+***** level 5
+* level 1
+....
+
+.result
+====
+* level 1
+** level 2
+*** level 3
+**** level 4
+***** level 5
+* level 1
+====
+
+==== 有序列表
+
+[source, asciidoc]
+....
+. level 1
+.. level 2
+... level 3
+.... level 4
+..... level 5
+. level 1
+....
+
+.result
+====
+. level 1
+.. level 2
+... level 3
+.... level 4
+..... level 5
+. level 1
+====
+
+==== 勾选列表
+[source, asciidoc]
+....
+* [x] 已选
+* [ ] 未选
+*     普通
+....
+
+.result
+====
+* [x] 已选
+* [ ] 未选
+*     普通
+====
+
+==== 标签列表
+
+[source, asciidoc]
+....
+Operating Systems::
+  Linux:::
+    . Fedora
+      * Desktop
+    . Ubuntu
+      * Desktop
+      * Server
+  BSD:::
+    . FreeBSD
+    . NetBSD
+
+Cloud Providers::
+  PaaS:::
+    . OpenShift
+    . CloudBees
+  IaaS:::
+    . Amazon EC2
+    . Rackspace
+....
+
+.result
+====
+Operating Systems::
+  Linux:::
+    . Fedora
+      * Desktop
+    . Ubuntu
+      * Desktop
+      * Server
+  BSD:::
+    . FreeBSD
+    . NetBSD
+
+Cloud Providers::
+  PaaS:::
+    . OpenShift
+    . CloudBees
+  IaaS:::
+    . Amazon EC2
+    . Rackspace
+====
+
+==== 问答列表
+
+[source, asciidoc]
+....
+What is this?:: You tell me!
+
+Why?:: I don't know.
+....
+
+.result
+====
+What is this?:: You tell me!
+
+Why?:: I don't know.
+====
+
+=== 表格
+
+==== 简单列表
+
+[source, asciidoc]
+....
+.表格标题
+|===
+|列标题 1 |列标题 2 |列标题 3
+
+|列1行1
+|列2行1
+|列3行1
+
+|列1行2
+|列2行2
+|列3行2
+|===
+....
+
+.result
+====
+.表格标题
+|===
+|列标题 1 |列标题 2 |列标题 3
+
+|列1行1
+|列2行1
+|列3行1
+
+|列1行2
+|列2行2
+|列3行2
+|===
+====
+
+[source, asciidoc]
+....
+[%header,cols=2*]
+|===
+|列标题 1
+|列标题 2
+
+|列1行1
+|列2行1
+
+|列1行2
+|列2行2
+|===
+....
+
+.result
+====
+[%header,cols=2*]
+|===
+|列标题 1
+|列标题 2
+
+|列1行1
+|列2行1
+
+|列1行2
+|列2行2
+|===
+====
+
+[source, asciidoc]
+....
+[%header%footer%autowidth,cols=2*]
+|===
+|列标题 1
+|列标题 2
+
+|列1行1
+|列2行1
+
+|列1行2
+|列2行2
+|===
+....
+
+.result
+[%header%footer%autowidth,cols=2*]
+|===
+|列标题 1
+|列标题 2
+
+|列1行1
+|列2行1
+
+|列1行2
+|列2行2
+|===
+
+==== 嵌套语法
+
+[source, asciidoc]
+....
+[cols="2,2,5a"]
+|===
+|Firefox
+|Browser
+|Mozilla Firefox is an open-source web browser.
+
+It's designed for:
+
+* standards compliance
+* performance
+* portability
+
+http://getfirefox.com[Get Firefox]!
+|===
+....
+
+.result
+====
+[cols="2,2,5a"]
+|===
+|Firefox
+|Browser
+|Mozilla Firefox is an open-source web browser.
+
+It's designed for:
+
+* standards compliance
+* performance
+* portability
+
+http://getfirefox.com[Get Firefox]!
+|===
+====
+
+==== 停靠位置
+
+在单元格分隔符 (`|`) 前使用 `^`、`<`、`>` 符号分别表示该单元格横向居中、左对齐、右对齐。
+
+在单元格分隔符 (`|`) 前使用 `.^` 符号表示该单元格纵向居中。
+
+[source, asciidoc]
+....
+|===
+^|居中
+<|左对齐
+>|右对齐
+|这是一个普通的单元格，使用默认的停靠规则
+|===
+....
+
+.result
+====
+|===
+^|居中
+<|左对齐
+>|右对齐
+|这是一个普通的单元格，使用默认的停靠规则
+|===
+====
+
+==== 合并单元格
+
+在单元格分隔符 (`|`) 前使用 `N\+` 表示该单元格横向占据 `N` 列。
+
+在单元格分隔符 (`|`) 前使用 `.N\+` 表示该单元格纵向占据 `N` 行。
+
+[source, asciidoc]
+....
+|===
+|列1|列2|列3
+2+|横向占据2个单元格|cell
+2.2+|横竖均占据2个单元格|cell
+|cell
+|===
+....
+
+.result
+====
+|===
+|列1|列2|列3
+2+|横向占据2个单元格|cell
+2.2+|横竖均占据2个单元格|cell
+|cell
+|===
+====
+
+[source, asciidoc]
+....
+|===
+|列1|列2|列3
+2+^|横向占据2个单元格，横向居中|cell
+2.2+^.^|横竖均占据2个单元格，横纵居中|cell
+|cell
+|===
+....
+
+.result
+====
+|===
+|列1|列2|列3
+2+^|横向占据2个单元格，横向居中|cell
+2.2+^.^|横竖均占据2个单元格，横纵居中|cell
+|cell
+|===
+====
+
+[source, asciidoc]
+....
+|===
+|cell .3+^.^|纵向占据三个单元格，横纵居中
+m|cell
+e|cell
+|===
+....
+
+.result
+====
+|===
+|cell .3+^.^|纵向占据三个单元格，横纵居中
+m|cell
+e|cell
+|===
+====
+
+==== 单元格与列的样式
+
+[cols="20,20,30m,50"]
+|===
+|样式名称 |Style Name |属性值 |说明
+
+|AsciiDoc
+|AsciiDoc
+|a
+|支持块级元素（段落，定界的块和块宏）。
+这种样式有效地创建了一个嵌套的独立AsciiDoc文档。
+隐式属性（例如来自父文档的doctitle）将被隐藏。
+自定义属性是继承的。
+
+|重点
+|Emphasis
+|e
+|文字是斜体的。
+
+|标头
+|Header
+|h
+|将应用标头属性。
+
+|字面
+|Literal
+|l
+|内容被视为位于文字块内。
+
+|等距
+|Monospaced
+|m
+|文本以等宽字体呈现。
+
+|无（默认样式）
+|None (default style)
+|d
+|文本的处理方式就像普通段落一样。
+支持段落中允许的所有标记（即，内联格式，内联宏）。
+
+|强文本
+|Strong
+|s
+|文字为粗体。
+
+|诗
+|Verse
+|v
+|列内容被视为在诗句块中。
+|===
+
+=== 区块
+
+==== 横栏块
+
+[source, asciidoc]
+....
+.横栏
+****
+这是一个**横栏块**
+****
+....
+
+.result
+====
+.横栏
+****
+这是一个**_横栏块_**
+****
+====
+
+==== 示例块
+
+[source, asciidoc]
+....
+.result
+====
+这是一个示例
+====
+....
+
+==== 透传块
+
+[source, asciidoc]
+....
+++++
+<a href="{home}">内嵌 HTML 代码</a>
+++++
+....
+
+.result
+====
+++++
+<a href="{home}">内嵌 HTML 代码</a>
+++++
+====
+
+==== 引用块
+
+[source, asciidoc]
+....
+[quote, 林肯, 第XX任美国总统]
+____
+Four score and seven years ago our fathers brought forth
+on this continent a new nation...
+____
+....
+
+[source, asciidoc]
+....
+[quote, 爱因斯坦]
+A person who never made a mistake never tried anything new.
+....
+
+[source, asciidoc]
+....
+____
+A person who never made a mistake never tried anything new.
+
+Contains a link:{home}[link].
+____
+....
+
+.result
+====
+[quote, 林肯, 第XX任美国总统]
+____
+Four score and seven years ago our fathers brought forth
+on this continent a new nation...
+____
+====
+
+.result
+====
+[quote, 爱因斯坦]
+A person who never made a mistake never tried anything new.
+====
+
+.result
+====
+____
+A person who never made a mistake never tried anything new.
+
+Contains a link:{home}[link].
+____
+====
+
+==== 警告块
+
+在 `AsciiDoctor` 中, 使用这些图标需要在文档头配置 `:icons: font`。
+
+[source, asciidoc]
+....
+NOTE: 备注
+
+TIP: 提示
+
+IMPORTANT: 重要
+
+WARNING: 警告
+
+CAUTION: 当心
+
+[NOTE]
+====
+一些备注内容
+====
+....
+
+.result
+====
+NOTE: 备注
+
+TIP: 提示
+
+IMPORTANT: 重要
+
+WARNING: 警告
+
+CAUTION: 当心
+====
+
+==== 代码块
+
+在 `AsciiDoctor` 中, 使用代码高亮需要在文档头配置 `:source-highlighter: pygments`。
+
+你可以通过 `gem install pygments.rb` 指令安装 `pygments` 的 `Ruby` 实现。除 `pygments`, 还可以使用 `coderay`, `highlightjs`, `prettify` 等。
+
+[source, asciidoc]
+----
+.index.html
+[source, html, subs="verbatim, attributes"]
+....
+<div> // \<1>
+  <p>{author}</p>
+</div>
+....
+<1> 标注信息
+----
+
+.result
+====
+.index.html
+[source, html, subs="verbatim, attributes"]
+....
+<div> // <1>
+  <p>{author}</p>
+</div>
+....
+<1> 标注信息
+====
+
+===== Markdown 风格
+
+[source, asciidoc]
+....
+```ruby
+def some()
+end
+```
+....
+
+.result
+====
+```ruby
+def some()
+end
+```
+====
+
+.result
+====
+[source, swift]
+....
+import UIKit
+
+open class SomeClass {
+  open let name: String
+
+  public init(name) {
+    self.name = name
+  }
+}
+....
+====
+
+=== 行内代码
+
+[source, asciidoc]
+....
+普通文字 `<div>` 普通文字
+....
+
+.result
+====
+普通文字 `<div>` 普通文字
+====
+
+=== 注释
+
+[source, asciidoc]
+....
+// 单行注释
+
+////
+多行注释
+
+多行注释
+////
+....
+
+=== 键盘
+
+通过 `kdb:[键位+键位+键位]` 的语法使用键盘符号特性。
+
+IMPORTANT: 在 `AsciiDoctor` 中, 你需要在文档前标记 `:experimental:` 才能使用键盘符号特性。
+
+[source, asciidoc]
+....
+kbd:[Ctrl+T]
+
+kbd:[Command+Options+Control+T]
+
+kbd:[⌘+N]
+....
+
+.result
+====
+kbd:[Ctrl+T]
+
+kbd:[Command+Options+Control+T]
+
+kbd:[⌘+N]
+====
+
+=== 导入
+
+通过 `include::文档路径[选项]` 语法来包含文件，其中选项可以为空
+
+[source, asciidoc]
+----
+\include::../somedir/somefile.txt[]
+
+\include::../somedir/somefile.txt[tabsize=2]
+----
+
+在代码块中引用文件:
+
+[source, asciidoc]
+----
+.index.adoc
+[source, asciidoc]
+....
+\include::./index.adoc[lines=1..5]
+....
+----
+
+.result
+====
+.index.adoc
+[source, asciidoc]
+....
+include::./index.adoc[lines=1..5]
+....
+====
+
+=== 脚注
+
+[source, asciidoc]
+....
+一些文字。footnote:[示例脚注1.]
+
+一些文字。footnote:标记[示例脚注2.]
+
+一些文字。footnote:标记[]
+....
+
+.result
+====
+一些文字。footnote:[示例脚注1.]
+
+一些文字。footnote:标记[示例脚注2.]
+
+一些文字。footnote:标记[]
+====
+
+== 工具
+
+=== AsciidocFX
+
+https://github.com/asciidocfx/AsciidocFX[`AsciidocFX`] 是一款开源 GUI 编辑器。
+
+image::https://github.com/asciidocfx/AsciidocFX/raw/master/images/asciidocfx.png[title="AsciidocFX"]
+
+=== Atom
+
+来自 Github 的 https://atom.io/[`Atom`], 需要额外安装插件。
+
+image::https://github-atom-io-herokuapp-com.global.ssl.fastly.net/assets/index-ide-screenshot-26fbe099e63e84c16a2a690e9de2b923.png[title="Atom"]
+
+=== AsciiDoctor
+
+link:https://asciidoctor.org[`AsciiDocor`] 是一个使用 `Ruby` 实现的 `AsciiDoc` 转换工具。你可以通过 `gem install asciidoctor` 进行安装。
+
+[source, console, subs="verbatim"]
+....
+asciidoctor MyDoc.adoc
+
+asciidoctor -a stylesheet golo.css -o MyHTML.html MyDoc.adoc
+....
+
+image::https://raw.githubusercontent.com/asciidoctor/asciidoctor/master/screenshot.png[title="AsciiDoctor"]
+
+=== AsciiDoctor.js Live Editor
+
+link:https://picsew.cn/asciidoctor/[AsciiDoctor.js Live Editor]
+
+=== AsciiDoc Live
+
+link:https://asciidoclive.com/[AsciiDoc Live]
+
+== Stylesheets
+
+* link:{stylesheets}/asciidoctor.css[asciidoctor.css]: link:{stylesheets_previews}/asciidoctor.html[(预览)]
+* link:{stylesheets}/colony.css[colony.css]: link:{stylesheets_previews}/colony.html[(预览)]
+* link:{stylesheets}/foundation-lime.css[foundation-lime.css]: link:{stylesheets_previews}/foundation-lime.html[(预览)]
+* link:{stylesheets}/foundation-potion.css[foundation-potion.css]: link:{stylesheets_previews}/foundation-potion.html[(预览)]
+* link:{stylesheets}/foundation.css[foundation.css]: link:{stylesheets_previews}/foundation.html[(预览)]
+* link:{stylesheets}/github.css[github.css]: link:{stylesheets_previews}/github.html[(预览)]
+* link:{stylesheets}/golo.css[golo.css]: link:{stylesheets_previews}/golo.html[(预览)]
+* link:{stylesheets}/iconic.css[iconic.css]: link:{stylesheets_previews}/iconic.html[(预览)]
+* link:{stylesheets}/maker.css[maker.css]: link:{stylesheets_previews}/maker.html[(预览)]
+* link:{stylesheets}/readthedocs.css[readthedocs.css]: link:{stylesheets_previews}/readthedocs.html[(预览)]
+* link:{stylesheets}/riak.css[riak.css]: link:{stylesheets_previews}/riak.html[(预览)]
+* link:{stylesheets}/rocket-panda.css[rocket-panda.css]: link:{stylesheets_previews}/rocket-panda.html[(预览)]
+* link:{stylesheets}/rubygems.css[rubygems.css]: link:{stylesheets_previews}/rubygems.html[(预览)]
+* link:{stylesheets}/boot-darkly.css[boot-darkly.css]: link:{stylesheets_previews}/boot-darkly.html[(预览)]
+
+== 关于
+
+****
+- **标题**: link:{thispage}[《{doctitle}》]
+- **作者**: link:{home}/about/[{author}]
+- **版本**: {revnumber}
+- **链接**: {thispage}
+- **更多**: link:{home}/asciidoctor/syntax/full.html[Full Documents]
+****
