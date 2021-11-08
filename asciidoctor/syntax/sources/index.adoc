@@ -17,7 +17,7 @@
 :sectnums:
 :toc: left
 :toclevels: 6
-:toc-title: 索引
+:toc-title: 索引 Table of Contents
 
 = {doctitle}
 :author: Ezra
@@ -119,17 +119,17 @@ image::{image}/posts/content/md_standards.png[title="Markdown Standards"]
 === 分离/浮动标题
 ====
 
-=== 属性 Properties
+=== 属性 Attributes
 
 [source, asciidoc]
 ....
-:doctitle: AsciiDoc 指引
-:home: https://meniny.cn
+:doctitle: AsciiDoc Guide
+:home: https://picsew.cn
 :assets: {home}/assets
 :image: {assets}/images
 :video: {assets}/videos
-:stylesheets: {home}/docs/asciidoc/stylesheets
-:stylesheets_previews: {home}/docs/asciidoc/previews
+:stylesheets: {home}/asciidoctor/syntax/stylesheets
+:stylesheets_previews: {home}/asciidoctor/syntax/previews
 :experimental:
 :icons: font
 // :source-highlighter: highlightjs
@@ -141,18 +141,18 @@ image::{image}/posts/content/md_standards.png[title="Markdown Standards"]
 :sectnums:
 :toc: left
 :toclevels: 6
-:toc-title: 索引
+:toc-title: 索引 Table of Contents
 
 = {doctitle}
 :author: Ezra
-:email: admin@meniny.cn
+:email: admin@picsew.cn
 :revnumber: 1.1.0
 :revdate: Nov. 17, 2018
 :revremark: The first incarnation of {doctitle}
 :version-label!:
 ....
 
-=== 目录 TableOfContents
+=== 目录 Table of Contents
 
 [source, asciidoc]
 ....
@@ -163,9 +163,9 @@ image::{image}/posts/content/md_standards.png[title="Markdown Standards"]
 :toc: left
 ....
 
-=== 样式 Styles
+=== 样式 Text Formatting
 
-==== 粗体
+==== 粗体 Bold
 
 [source, asciidoc]
 ....
@@ -177,7 +177,7 @@ image::{image}/posts/content/md_standards.png[title="Markdown Standards"]
 普通文字 *粗体字* 普通文字
 ====
 
-==== 斜体
+==== 斜体 Italic
 
 [source, asciidoc]
 ....
@@ -199,7 +199,7 @@ image::{image}/posts/content/md_standards.png[title="Markdown Standards"]
 *_粗体 & 斜体_*
 ====
 
-==== 高亮
+==== 高亮 Highlight
 
 [source, asciidoc]
 ....
@@ -211,7 +211,7 @@ image::{image}/posts/content/md_standards.png[title="Markdown Standards"]
 普通文字 #高亮内容# 普通文字
 ====
 
-==== 下划线
+==== 下划线 Underline
 
 [source, asciidoc]
 ....
@@ -223,7 +223,7 @@ image::{image}/posts/content/md_standards.png[title="Markdown Standards"]
 普通文字 [.underline]#下划线文字# 普通文字
 ====
 
-==== 删划线
+==== 删划线 Strikethrough
 
 [source, asciidoc]
 ....
@@ -235,7 +235,7 @@ image::{image}/posts/content/md_standards.png[title="Markdown Standards"]
 普通文字 [.line-through]#删划线文字# 普通文字
 ====
 
-==== 大小标记
+==== 大小标记 Big & Small
 
 [source, asciidoc]
 ....
@@ -247,7 +247,7 @@ image::{image}/posts/content/md_standards.png[title="Markdown Standards"]
 普通文字中含有 [.small]#示例小标记# 以及 [.big]##示例大标记##。
 ====
 
-==== 上标下标
+==== 上标下标 Superscript & Subscript
 
 [source, asciidoc]
 ....
@@ -263,11 +263,22 @@ image::{image}/posts/content/md_standards.png[title="Markdown Standards"]
 普通文字~下标~
 ====
 
-=== 居中 Centralized
+=== 位置 Positioning Roles
 
 [source, asciidoc]
 ....
+[.left]
+[.right]
+[.text-left]
+[.text-right]
 [.text-center]
+[.float-group]
+....
+
+[source, asciidoc]
+....
+[.right.text-center]
+image::{image}/avatar/oschina_200.jpg[OSChina,200,200]
 ....
 
 === 横线 Lines
@@ -282,14 +293,25 @@ image::{image}/posts/content/md_standards.png[title="Markdown Standards"]
 ***
 ====
 
-=== 断行 Breaks
+=== Thematic Breaks
 
 [source, asciidoc]
 ....
 [%hardbreaks]
 ....
 
-=== 分页 SeparatePages
+[source, asciidoc]
+....
+---
+
+- - -
+
+***
+
+* * *
+....
+
+=== 分页 Page Break
 
 [source, asciidoc]
 ....
@@ -298,7 +320,7 @@ image::{image}/posts/content/md_standards.png[title="Markdown Standards"]
 
 === 图片 Images
 
-==== 行内图片
+==== 行内图片 Inline Images
 
 [source, asciidoc]
 ....
@@ -310,7 +332,7 @@ An image image:{image}/avatar/oschina_200.jpg[some, 50] here.
 An image image:{image}/avatar/oschina_200.jpg[some, 50] here.
 ====
 
-==== 块图片
+==== 块图片 Block Images
 
 [source, asciidoc]
 ....
@@ -324,7 +346,7 @@ image::{image}/avatar/oschina_200.jpg[caption="Caption: ", title="Blocked Image"
 
 === 视频 Videos
 
-==== 普通视频
+==== 普通视频 Normal Videos
 
 [source, asciidoc]
 ....
@@ -374,7 +396,7 @@ video::67480300[vimeo]
 获取更多详情，请link:{home}[点击这里], 或者 {home}[像这样]
 ====
 
-=== 标记 Marks
+=== 标记 Anchors
 
 [source, asciidoc]
 ....
@@ -408,7 +430,7 @@ Jump to link:#golas[Link with id].
 跳转到<<bookmark-a,前面的标签>>。
 ====
 
-==== 自定义标题标签
+==== 自定义标题标签 Custom Anchors
 
 [source, asciidoc]
 ....
@@ -425,7 +447,7 @@ Jump to link:#golas[Link with id].
 
 === 列表 Lists
 
-==== 无序列表
+==== 无序列表 Unordered Lists
 
 [source, asciidoc]
 ....
@@ -447,7 +469,7 @@ Jump to link:#golas[Link with id].
 * level 1
 ====
 
-==== 有序列表
+==== 有序列表 Ordered Lists
 
 [source, asciidoc]
 ....
@@ -469,7 +491,7 @@ Jump to link:#golas[Link with id].
 . level 1
 ====
 
-==== 勾选列表
+==== 勾选列表 Checklists
 [source, asciidoc]
 ....
 * [x] 已选
@@ -484,7 +506,7 @@ Jump to link:#golas[Link with id].
 *     普通
 ====
 
-==== 标签列表
+==== 标签列表 Description Lists
 
 [source, asciidoc]
 ....
@@ -530,7 +552,7 @@ Cloud Providers::
     . Rackspace
 ====
 
-==== 问答列表
+==== 问答列表 Question and Answer Lists
 
 [source, asciidoc]
 ....
@@ -548,7 +570,7 @@ Why?:: I don't know.
 
 === 表格 Tables
 
-==== 简单列表
+==== 简单列表 Simple Tables
 
 [source, asciidoc]
 ....
@@ -640,7 +662,7 @@ Why?:: I don't know.
 |列2行2
 |===
 
-==== 嵌套语法
+==== 嵌套语法 Complex Tables
 
 [source, asciidoc]
 ....
@@ -678,7 +700,7 @@ http://getfirefox.com[Get Firefox]!
 |===
 ====
 
-==== 停靠位置
+==== 停靠位置 Aligned Cells
 
 在单元格分隔符 (`|`) 前使用 `^`、`<`、`>` 符号分别表示该单元格横向居中、左对齐、右对齐。
 
@@ -704,7 +726,7 @@ http://getfirefox.com[Get Firefox]!
 |===
 ====
 
-==== 合并单元格
+==== 合并单元格 Merged Cells
 
 在单元格分隔符 (`|`) 前使用 `N\+` 表示该单元格横向占据 `N` 列。
 
@@ -768,7 +790,7 @@ e|cell
 |===
 ====
 
-==== 单元格与列的样式
+==== 单元格与列的样式 Formatted Cells
 
 [cols="20,20,30m,50"]
 |===
@@ -821,7 +843,7 @@ e|cell
 
 === 区块 Blocks
 
-==== 横栏块
+==== 横栏块 Sidebar Blocks
 
 [source, asciidoc]
 ....
@@ -839,7 +861,7 @@ e|cell
 ****
 ====
 
-==== 示例块
+==== 示例块 Example Blocks
 
 [source, asciidoc]
 ....
@@ -849,7 +871,7 @@ e|cell
 ====
 ....
 
-==== 透传块
+==== 透传块 Passthrough Blocks
 
 [source, asciidoc]
 ....
@@ -865,7 +887,7 @@ e|cell
 ++++
 ====
 
-==== 引用块
+==== 引用块 Blockquotes
 
 [source, asciidoc]
 ....
@@ -915,7 +937,22 @@ Contains a link:{home}[link].
 ____
 ====
 
-==== 警告块
+==== 开放块 Open Blocks
+
+[source, asciidoc]
+....
+--
+An open block can be an anonymous container,
+or it can masquerade as any other block.
+--
+
+[source]
+--
+puts "I'm a source block!"
+--
+....
+
+==== 警告块 Admonitions
 
 在 `AsciiDoctor` 中, 使用这些图标需要在文档头配置 `:icons: font`。
 
@@ -950,7 +987,7 @@ WARNING: 警告
 CAUTION: 当心
 ====
 
-==== 代码块
+==== 代码块 Code Blocks
 
 在 `AsciiDoctor` 中, 使用代码高亮需要在文档头配置 `:source-highlighter: pygments`。
 
@@ -980,7 +1017,7 @@ CAUTION: 当心
 <1> 标注信息
 ====
 
-===== Markdown 风格
+===== Markdown-styled
 
 [source, asciidoc]
 ....
@@ -1014,7 +1051,7 @@ open class SomeClass {
 ....
 ====
 
-=== 行内代码 InlineCodes
+=== 行内代码 Inline Codes
 
 [source, asciidoc]
 ....
