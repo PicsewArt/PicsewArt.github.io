@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="generator" content="Asciidoctor 2.0.10">
+<meta name="generator" content="Asciidoctor 2.0.16">
 <meta name="author" content="Ezra">
 <title>AsciiDoc 指引</title>
 <style>
@@ -78,13 +78,89 @@ table {
 
 </style>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+pre { line-height: 125%; }
+td.linenos .normal { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
+span.linenos { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
+td.linenos .special { color: #000000; background-color: #ffffc0; padding-left: 5px; padding-right: 5px; }
+span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 5px; padding-right: 5px; }
+pre.pygments .hll { background-color: #ffffcc }
+pre.pygments { background: #f8f8f8; }
+pre.pygments .tok-c { color: #408080; font-style: italic } /* Comment */
+pre.pygments .tok-err { border: 1px solid #FF0000 } /* Error */
+pre.pygments .tok-k { color: #008000; font-weight: bold } /* Keyword */
+pre.pygments .tok-o { color: #666666 } /* Operator */
+pre.pygments .tok-ch { color: #408080; font-style: italic } /* Comment.Hashbang */
+pre.pygments .tok-cm { color: #408080; font-style: italic } /* Comment.Multiline */
+pre.pygments .tok-cp { color: #BC7A00 } /* Comment.Preproc */
+pre.pygments .tok-cpf { color: #408080; font-style: italic } /* Comment.PreprocFile */
+pre.pygments .tok-c1 { color: #408080; font-style: italic } /* Comment.Single */
+pre.pygments .tok-cs { color: #408080; font-style: italic } /* Comment.Special */
+pre.pygments .tok-gd { color: #A00000 } /* Generic.Deleted */
+pre.pygments .tok-ge { font-style: italic } /* Generic.Emph */
+pre.pygments .tok-gr { color: #FF0000 } /* Generic.Error */
+pre.pygments .tok-gh { color: #000080; font-weight: bold } /* Generic.Heading */
+pre.pygments .tok-gi { color: #00A000 } /* Generic.Inserted */
+pre.pygments .tok-go { color: #888888 } /* Generic.Output */
+pre.pygments .tok-gp { color: #000080; font-weight: bold } /* Generic.Prompt */
+pre.pygments .tok-gs { font-weight: bold } /* Generic.Strong */
+pre.pygments .tok-gu { color: #800080; font-weight: bold } /* Generic.Subheading */
+pre.pygments .tok-gt { color: #0044DD } /* Generic.Traceback */
+pre.pygments .tok-kc { color: #008000; font-weight: bold } /* Keyword.Constant */
+pre.pygments .tok-kd { color: #008000; font-weight: bold } /* Keyword.Declaration */
+pre.pygments .tok-kn { color: #008000; font-weight: bold } /* Keyword.Namespace */
+pre.pygments .tok-kp { color: #008000 } /* Keyword.Pseudo */
+pre.pygments .tok-kr { color: #008000; font-weight: bold } /* Keyword.Reserved */
+pre.pygments .tok-kt { color: #B00040 } /* Keyword.Type */
+pre.pygments .tok-m { color: #666666 } /* Literal.Number */
+pre.pygments .tok-s { color: #BA2121 } /* Literal.String */
+pre.pygments .tok-na { color: #7D9029 } /* Name.Attribute */
+pre.pygments .tok-nb { color: #008000 } /* Name.Builtin */
+pre.pygments .tok-nc { color: #0000FF; font-weight: bold } /* Name.Class */
+pre.pygments .tok-no { color: #880000 } /* Name.Constant */
+pre.pygments .tok-nd { color: #AA22FF } /* Name.Decorator */
+pre.pygments .tok-ni { color: #999999; font-weight: bold } /* Name.Entity */
+pre.pygments .tok-ne { color: #D2413A; font-weight: bold } /* Name.Exception */
+pre.pygments .tok-nf { color: #0000FF } /* Name.Function */
+pre.pygments .tok-nl { color: #A0A000 } /* Name.Label */
+pre.pygments .tok-nn { color: #0000FF; font-weight: bold } /* Name.Namespace */
+pre.pygments .tok-nt { color: #008000; font-weight: bold } /* Name.Tag */
+pre.pygments .tok-nv { color: #19177C } /* Name.Variable */
+pre.pygments .tok-ow { color: #AA22FF; font-weight: bold } /* Operator.Word */
+pre.pygments .tok-w { color: #bbbbbb } /* Text.Whitespace */
+pre.pygments .tok-mb { color: #666666 } /* Literal.Number.Bin */
+pre.pygments .tok-mf { color: #666666 } /* Literal.Number.Float */
+pre.pygments .tok-mh { color: #666666 } /* Literal.Number.Hex */
+pre.pygments .tok-mi { color: #666666 } /* Literal.Number.Integer */
+pre.pygments .tok-mo { color: #666666 } /* Literal.Number.Oct */
+pre.pygments .tok-sa { color: #BA2121 } /* Literal.String.Affix */
+pre.pygments .tok-sb { color: #BA2121 } /* Literal.String.Backtick */
+pre.pygments .tok-sc { color: #BA2121 } /* Literal.String.Char */
+pre.pygments .tok-dl { color: #BA2121 } /* Literal.String.Delimiter */
+pre.pygments .tok-sd { color: #BA2121; font-style: italic } /* Literal.String.Doc */
+pre.pygments .tok-s2 { color: #BA2121 } /* Literal.String.Double */
+pre.pygments .tok-se { color: #BB6622; font-weight: bold } /* Literal.String.Escape */
+pre.pygments .tok-sh { color: #BA2121 } /* Literal.String.Heredoc */
+pre.pygments .tok-si { color: #BB6688; font-weight: bold } /* Literal.String.Interpol */
+pre.pygments .tok-sx { color: #008000 } /* Literal.String.Other */
+pre.pygments .tok-sr { color: #BB6688 } /* Literal.String.Regex */
+pre.pygments .tok-s1 { color: #BA2121 } /* Literal.String.Single */
+pre.pygments .tok-ss { color: #19177C } /* Literal.String.Symbol */
+pre.pygments .tok-bp { color: #008000 } /* Name.Builtin.Pseudo */
+pre.pygments .tok-fm { color: #0000FF } /* Name.Function.Magic */
+pre.pygments .tok-vc { color: #19177C } /* Name.Variable.Class */
+pre.pygments .tok-vg { color: #19177C } /* Name.Variable.Global */
+pre.pygments .tok-vi { color: #19177C } /* Name.Variable.Instance */
+pre.pygments .tok-vm { color: #19177C } /* Name.Variable.Magic */
+pre.pygments .tok-il { color: #666666 } /* Literal.Number.Integer.Long */
+</style>
 </head>
 <body class="book toc2 toc-left">
 <div id="header">
 <h1>AsciiDoc 指引</h1>
 <div class="details">
 <span id="author" class="author">Ezra</span><br>
-<span id="email" class="email"><a href="mailto:admin@meniny.cn">admin@meniny.cn</a></span><br>
+<span id="email" class="email"><a href="mailto:admin@picsew.cn">admin@picsew.cn</a></span><br>
 <span id="revnumber"> 1.1.0,</span>
 <span id="revdate">Nov. 17, 2018</span>
 <br><span id="revremark">The first incarnation of AsciiDoc 指引</span>
@@ -200,16 +276,16 @@ table {
 <h2 id="_简介"><a class="anchor" href="#_简介"></a><a class="link" href="#_简介">1. 简介</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>轻量级的标记语言已经有很多(<a href="https://en.wikipedia.org/wiki/Lightweight_markup_language">Wikipedia</a>)，例如我用来写博客的 <code>Markdown</code> 就是目前十分流行的一种轻量级标记语言，包括 <code>Github</code>、<code>StackOverflow</code> 等很多网站以及个人都在使用。</p>
+<p><a href="https://en.wikipedia.org/wiki/Lightweight_markup_language">轻量级的标记语言已经有很多</a>，例如我用来写博客的 <code>Markdown</code> 就是目前十分流行的一种轻量级标记语言，包括 <code>Github</code>、<code>StackOverflow</code> 等很多网站以及个人都在使用。</p>
 </div>
 <div class="sect2">
 <h3 id="_markdown_还不够吗"><a class="anchor" href="#_markdown_还不够吗"></a><a class="link" href="#_markdown_还不够吗">1.1. Markdown 还不够吗</a></h3>
 <div class="paragraph">
-<p><code>Markdown</code> 语法简介，即便阅读未经渲染的源文件也有不错的可读性。但它对于较为复杂的格式例如表格的支持始终遭人诟病，许多网站使用各自不同的扩展语法来实现，也从而导致了各种方言的滋生。这也是为何会出现 <a href="https://blog.codinghorror.com/standard-flavored-markdown/">Standard Markdown</a> 项目的原因，虽然因为种种原因又更名为 <a href="https://blog.codinghorror.com/standard-flavored-markdown/">Common Markdown</a>，然而整个 <code>Markdown</code> 社区依然缺乏创建者的支持，<code>Common Markdown</code> 也很可能沦为另一个方言。</p>
+<p><code>Markdown</code> 语法简洁，即便阅读未经渲染的源文件也有不错的可读性。但它对于较为复杂的格式例如表格的支持始终遭人诟病，许多网站使用各自不同的扩展语法来实现，也从而导致了各种方言的滋生。这也是为何会出现 <a href="https://blog.codinghorror.com/standard-flavored-markdown/">Standard Markdown</a> 项目的原因，虽然因为种种原因又更名为 <a href="https://blog.codinghorror.com/standard-flavored-markdown/">Common Markdown</a>，然而整个 <code>Markdown</code> 社区依然缺乏创建者的支持，<code>Common Markdown</code> 也很可能沦为另一个方言。</p>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="https://meniny.cn/assets/images/posts/content/md_standards.png" alt="md standards">
+<img src="https://picsew.cn/assets/images/posts/content/md_standards.png" alt="md standards">
 </div>
 <div class="title">Figure 1. Markdown Standards</div>
 </div>
@@ -256,7 +332,7 @@ table {
 <div class="sect2">
 <h3 id="_标题"><a class="anchor" href="#_标题"></a><a class="link" href="#_标题">2.1. 标题</a></h3>
 <div class="paragraph">
-<p>{ascii} 中的标题共分为六层，分别使用对应数量的 <code>=</code> 进行标识:</p>
+<p><code>AsciiDoc</code> 中的标题共分为六层，分别使用对应数量的 <code>=</code> 进行标识:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -534,7 +610,7 @@ table {
 <div class="title">Example 12. result</div>
 <div class="content">
 <div class="paragraph">
-<p>An image <span class="image"><img src="https://meniny.cn/assets/images/avatar/oschina_200.jpg" alt="some" width="50"></span> here.</p>
+<p>An image <span class="image"><img src="https://picsew.cn/assets/images/avatar/oschina_200.jpg" alt="some" width="50"></span> here.</p>
 </div>
 </div>
 </div>
@@ -551,7 +627,7 @@ table {
 <div class="content">
 <div class="imageblock">
 <div class="content">
-<img src="https://meniny.cn/assets/images/avatar/oschina_200.jpg" alt="oschina 200" height="100">
+<img src="https://picsew.cn/assets/images/avatar/oschina_200.jpg" alt="oschina 200" height="100">
 </div>
 <div class="title">Caption: Blocked Image</div>
 </div>
@@ -575,7 +651,7 @@ video::video_file.mp4[width=640, start=60, end=140, options=autoplay]</code></pr
 <div class="content">
 <div class="videoblock">
 <div class="content">
-<video src="https://meniny.cn/assets/videos/wow.mp4" width="200" poster="WOW" controls>
+<video src="https://picsew.cn/assets/videos/wow.mp4" width="200" poster="WOW" controls>
 Your browser does not support the video tag.
 </video>
 </div>
@@ -631,7 +707,7 @@ Your browser does not support the video tag.
 <div class="title">Example 17. result</div>
 <div class="content">
 <div class="paragraph">
-<p>获取更多详情，请<a href="https://meniny.cn">点击这里</a>, 或者 <a href="https://meniny.cn">像这样</a></p>
+<p>获取更多详情，请<a href="https://picsew.cn">点击这里</a>, 或者 <a href="https://picsew.cn">像这样</a></p>
 </div>
 </div>
 </div>
@@ -1538,7 +1614,7 @@ A person who never made a mistake never tried anything new.
 <p>A person who never made a mistake never tried anything new.</p>
 </div>
 <div class="paragraph">
-<p>Contains a <a href="https://meniny.cn">link</a>.</p>
+<p>Contains a <a href="https://picsew.cn">link</a>.</p>
 </div>
 </blockquote>
 </div>
@@ -1819,7 +1895,7 @@ include::./index.adoc[lines=1..5]
 <div class="title">index.adoc</div>
 <div class="content">
 <pre class="pygments highlight"><code data-lang="asciidoc"><span></span>:doctitle: AsciiDoc 指引
-:home: https://meniny.cn
+:home: https://picsew.cn
 :assets: {home}/assets
 :image: {assets}/images
 :video: {assets}/videos</code></pre>
@@ -1922,46 +1998,46 @@ include::./index.adoc[lines=1..5]
 <div class="ulist">
 <ul>
 <li>
-<p><a href="https://meniny.cn/docs/asciidoc/stylesheets/asciidoctor.css">asciidoctor.css</a>: <a href="https://meniny.cn/docs/asciidoc/previews/asciidoctor.html">(预览)</a></p>
+<p><a href="https://picsew.cn/asciidoctor/syntax/stylesheets/asciidoctor.css">asciidoctor.css</a>: <a href="https://picsew.cn/asciidoctor/syntax/previews/asciidoctor.html">(预览)</a></p>
 </li>
 <li>
-<p><a href="https://meniny.cn/docs/asciidoc/stylesheets/colony.css">colony.css</a>: <a href="https://meniny.cn/docs/asciidoc/previews/colony.html">(预览)</a></p>
+<p><a href="https://picsew.cn/asciidoctor/syntax/stylesheets/colony.css">colony.css</a>: <a href="https://picsew.cn/asciidoctor/syntax/previews/colony.html">(预览)</a></p>
 </li>
 <li>
-<p><a href="https://meniny.cn/docs/asciidoc/stylesheets/foundation-lime.css">foundation-lime.css</a>: <a href="https://meniny.cn/docs/asciidoc/previews/foundation-lime.html">(预览)</a></p>
+<p><a href="https://picsew.cn/asciidoctor/syntax/stylesheets/foundation-lime.css">foundation-lime.css</a>: <a href="https://picsew.cn/asciidoctor/syntax/previews/foundation-lime.html">(预览)</a></p>
 </li>
 <li>
-<p><a href="https://meniny.cn/docs/asciidoc/stylesheets/foundation-potion.css">foundation-potion.css</a>: <a href="https://meniny.cn/docs/asciidoc/previews/foundation-potion.html">(预览)</a></p>
+<p><a href="https://picsew.cn/asciidoctor/syntax/stylesheets/foundation-potion.css">foundation-potion.css</a>: <a href="https://picsew.cn/asciidoctor/syntax/previews/foundation-potion.html">(预览)</a></p>
 </li>
 <li>
-<p><a href="https://meniny.cn/docs/asciidoc/stylesheets/foundation.css">foundation.css</a>: <a href="https://meniny.cn/docs/asciidoc/previews/foundation.html">(预览)</a></p>
+<p><a href="https://picsew.cn/asciidoctor/syntax/stylesheets/foundation.css">foundation.css</a>: <a href="https://picsew.cn/asciidoctor/syntax/previews/foundation.html">(预览)</a></p>
 </li>
 <li>
-<p><a href="https://meniny.cn/docs/asciidoc/stylesheets/github.css">github.css</a>: <a href="https://meniny.cn/docs/asciidoc/previews/github.html">(预览)</a></p>
+<p><a href="https://picsew.cn/asciidoctor/syntax/stylesheets/github.css">github.css</a>: <a href="https://picsew.cn/asciidoctor/syntax/previews/github.html">(预览)</a></p>
 </li>
 <li>
-<p><a href="https://meniny.cn/docs/asciidoc/stylesheets/golo.css">golo.css</a>: <a href="https://meniny.cn/docs/asciidoc/previews/golo.html">(预览)</a></p>
+<p><a href="https://picsew.cn/asciidoctor/syntax/stylesheets/golo.css">golo.css</a>: <a href="https://picsew.cn/asciidoctor/syntax/previews/golo.html">(预览)</a></p>
 </li>
 <li>
-<p><a href="https://meniny.cn/docs/asciidoc/stylesheets/iconic.css">iconic.css</a>: <a href="https://meniny.cn/docs/asciidoc/previews/iconic.html">(预览)</a></p>
+<p><a href="https://picsew.cn/asciidoctor/syntax/stylesheets/iconic.css">iconic.css</a>: <a href="https://picsew.cn/asciidoctor/syntax/previews/iconic.html">(预览)</a></p>
 </li>
 <li>
-<p><a href="https://meniny.cn/docs/asciidoc/stylesheets/maker.css">maker.css</a>: <a href="https://meniny.cn/docs/asciidoc/previews/maker.html">(预览)</a></p>
+<p><a href="https://picsew.cn/asciidoctor/syntax/stylesheets/maker.css">maker.css</a>: <a href="https://picsew.cn/asciidoctor/syntax/previews/maker.html">(预览)</a></p>
 </li>
 <li>
-<p><a href="https://meniny.cn/docs/asciidoc/stylesheets/readthedocs.css">readthedocs.css</a>: <a href="https://meniny.cn/docs/asciidoc/previews/readthedocs.html">(预览)</a></p>
+<p><a href="https://picsew.cn/asciidoctor/syntax/stylesheets/readthedocs.css">readthedocs.css</a>: <a href="https://picsew.cn/asciidoctor/syntax/previews/readthedocs.html">(预览)</a></p>
 </li>
 <li>
-<p><a href="https://meniny.cn/docs/asciidoc/stylesheets/riak.css">riak.css</a>: <a href="https://meniny.cn/docs/asciidoc/previews/riak.html">(预览)</a></p>
+<p><a href="https://picsew.cn/asciidoctor/syntax/stylesheets/riak.css">riak.css</a>: <a href="https://picsew.cn/asciidoctor/syntax/previews/riak.html">(预览)</a></p>
 </li>
 <li>
-<p><a href="https://meniny.cn/docs/asciidoc/stylesheets/rocket-panda.css">rocket-panda.css</a>: <a href="https://meniny.cn/docs/asciidoc/previews/rocket-panda.html">(预览)</a></p>
+<p><a href="https://picsew.cn/asciidoctor/syntax/stylesheets/rocket-panda.css">rocket-panda.css</a>: <a href="https://picsew.cn/asciidoctor/syntax/previews/rocket-panda.html">(预览)</a></p>
 </li>
 <li>
-<p><a href="https://meniny.cn/docs/asciidoc/stylesheets/rubygems.css">rubygems.css</a>: <a href="https://meniny.cn/docs/asciidoc/previews/rubygems.html">(预览)</a></p>
+<p><a href="https://picsew.cn/asciidoctor/syntax/stylesheets/rubygems.css">rubygems.css</a>: <a href="https://picsew.cn/asciidoctor/syntax/previews/rubygems.html">(预览)</a></p>
 </li>
 <li>
-<p><a href="https://meniny.cn/docs/asciidoc/stylesheets/boot-darkly.css">boot-darkly.css</a>: <a href="https://meniny.cn/docs/asciidoc/previews/boot-darkly.html">(预览)</a></p>
+<p><a href="https://picsew.cn/asciidoctor/syntax/stylesheets/boot-darkly.css">boot-darkly.css</a>: <a href="https://picsew.cn/asciidoctor/syntax/previews/boot-darkly.html">(预览)</a></p>
 </li>
 </ul>
 </div>
@@ -1975,19 +2051,19 @@ include::./index.adoc[lines=1..5]
 <div class="ulist">
 <ul>
 <li>
-<p><strong>标题</strong>: <a href="https://meniny.cn/asciidoc">《AsciiDoc 指引》</a></p>
+<p><strong>标题</strong>: <a href="https://picsew.cn/asciidoctor/syntax/">《AsciiDoc 指引》</a></p>
 </li>
 <li>
-<p><strong>作者</strong>: <a href="https://meniny.cn/about/">Ezra</a></p>
+<p><strong>作者</strong>: <a href="https://picsew.cn/about/">Ezra</a></p>
 </li>
 <li>
 <p><strong>版本</strong>: 1.1.0</p>
 </li>
 <li>
-<p><strong>链接</strong>: <a href="https://meniny.cn/asciidoc" class="bare">https://meniny.cn/asciidoc</a></p>
+<p><strong>链接</strong>: <a href="https://picsew.cn/asciidoctor/syntax/" class="bare">https://picsew.cn/asciidoctor/syntax/</a></p>
 </li>
 <li>
-<p><strong>更多</strong>: <a href="https://meniny.cn/docs/asciidoc/full.html">Full Documents</a></p>
+<p><strong>更多</strong>: <a href="https://picsew.cn/asciidoctor/syntax/full.html">Full Documents</a></p>
 </li>
 </ul>
 </div>
@@ -2008,79 +2084,8 @@ include::./index.adoc[lines=1..5]
 <div id="footer">
 <div id="footer-text">
  1.1.0<br>
-Last updated 2020-11-18 20:59:24 +0800
+Last updated 2021-11-08 14:15:27 +0800
 </div>
 </div>
-<style>
-pre.pygments .hll { background-color: #ffffcc }
-pre.pygments  { background: #f8f8f8; }
-pre.pygments .tok-c { color: #408080; font-style: italic } /* Comment */
-pre.pygments .tok-err { border: 1px solid #FF0000 } /* Error */
-pre.pygments .tok-k { color: #008000; font-weight: bold } /* Keyword */
-pre.pygments .tok-o { color: #666666 } /* Operator */
-pre.pygments .tok-ch { color: #408080; font-style: italic } /* Comment.Hashbang */
-pre.pygments .tok-cm { color: #408080; font-style: italic } /* Comment.Multiline */
-pre.pygments .tok-cp { color: #BC7A00 } /* Comment.Preproc */
-pre.pygments .tok-cpf { color: #408080; font-style: italic } /* Comment.PreprocFile */
-pre.pygments .tok-c1 { color: #408080; font-style: italic } /* Comment.Single */
-pre.pygments .tok-cs { color: #408080; font-style: italic } /* Comment.Special */
-pre.pygments .tok-gd { color: #A00000 } /* Generic.Deleted */
-pre.pygments .tok-ge { font-style: italic } /* Generic.Emph */
-pre.pygments .tok-gr { color: #FF0000 } /* Generic.Error */
-pre.pygments .tok-gh { color: #000080; font-weight: bold } /* Generic.Heading */
-pre.pygments .tok-gi { color: #00A000 } /* Generic.Inserted */
-pre.pygments .tok-go { color: #888888 } /* Generic.Output */
-pre.pygments .tok-gp { color: #000080; font-weight: bold } /* Generic.Prompt */
-pre.pygments .tok-gs { font-weight: bold } /* Generic.Strong */
-pre.pygments .tok-gu { color: #800080; font-weight: bold } /* Generic.Subheading */
-pre.pygments .tok-gt { color: #0044DD } /* Generic.Traceback */
-pre.pygments .tok-kc { color: #008000; font-weight: bold } /* Keyword.Constant */
-pre.pygments .tok-kd { color: #008000; font-weight: bold } /* Keyword.Declaration */
-pre.pygments .tok-kn { color: #008000; font-weight: bold } /* Keyword.Namespace */
-pre.pygments .tok-kp { color: #008000 } /* Keyword.Pseudo */
-pre.pygments .tok-kr { color: #008000; font-weight: bold } /* Keyword.Reserved */
-pre.pygments .tok-kt { color: #B00040 } /* Keyword.Type */
-pre.pygments .tok-m { color: #666666 } /* Literal.Number */
-pre.pygments .tok-s { color: #BA2121 } /* Literal.String */
-pre.pygments .tok-na { color: #7D9029 } /* Name.Attribute */
-pre.pygments .tok-nb { color: #008000 } /* Name.Builtin */
-pre.pygments .tok-nc { color: #0000FF; font-weight: bold } /* Name.Class */
-pre.pygments .tok-no { color: #880000 } /* Name.Constant */
-pre.pygments .tok-nd { color: #AA22FF } /* Name.Decorator */
-pre.pygments .tok-ni { color: #999999; font-weight: bold } /* Name.Entity */
-pre.pygments .tok-ne { color: #D2413A; font-weight: bold } /* Name.Exception */
-pre.pygments .tok-nf { color: #0000FF } /* Name.Function */
-pre.pygments .tok-nl { color: #A0A000 } /* Name.Label */
-pre.pygments .tok-nn { color: #0000FF; font-weight: bold } /* Name.Namespace */
-pre.pygments .tok-nt { color: #008000; font-weight: bold } /* Name.Tag */
-pre.pygments .tok-nv { color: #19177C } /* Name.Variable */
-pre.pygments .tok-ow { color: #AA22FF; font-weight: bold } /* Operator.Word */
-pre.pygments .tok-w { color: #bbbbbb } /* Text.Whitespace */
-pre.pygments .tok-mb { color: #666666 } /* Literal.Number.Bin */
-pre.pygments .tok-mf { color: #666666 } /* Literal.Number.Float */
-pre.pygments .tok-mh { color: #666666 } /* Literal.Number.Hex */
-pre.pygments .tok-mi { color: #666666 } /* Literal.Number.Integer */
-pre.pygments .tok-mo { color: #666666 } /* Literal.Number.Oct */
-pre.pygments .tok-sa { color: #BA2121 } /* Literal.String.Affix */
-pre.pygments .tok-sb { color: #BA2121 } /* Literal.String.Backtick */
-pre.pygments .tok-sc { color: #BA2121 } /* Literal.String.Char */
-pre.pygments .tok-dl { color: #BA2121 } /* Literal.String.Delimiter */
-pre.pygments .tok-sd { color: #BA2121; font-style: italic } /* Literal.String.Doc */
-pre.pygments .tok-s2 { color: #BA2121 } /* Literal.String.Double */
-pre.pygments .tok-se { color: #BB6622; font-weight: bold } /* Literal.String.Escape */
-pre.pygments .tok-sh { color: #BA2121 } /* Literal.String.Heredoc */
-pre.pygments .tok-si { color: #BB6688; font-weight: bold } /* Literal.String.Interpol */
-pre.pygments .tok-sx { color: #008000 } /* Literal.String.Other */
-pre.pygments .tok-sr { color: #BB6688 } /* Literal.String.Regex */
-pre.pygments .tok-s1 { color: #BA2121 } /* Literal.String.Single */
-pre.pygments .tok-ss { color: #19177C } /* Literal.String.Symbol */
-pre.pygments .tok-bp { color: #008000 } /* Name.Builtin.Pseudo */
-pre.pygments .tok-fm { color: #0000FF } /* Name.Function.Magic */
-pre.pygments .tok-vc { color: #19177C } /* Name.Variable.Class */
-pre.pygments .tok-vg { color: #19177C } /* Name.Variable.Global */
-pre.pygments .tok-vi { color: #19177C } /* Name.Variable.Instance */
-pre.pygments .tok-vm { color: #19177C } /* Name.Variable.Magic */
-pre.pygments .tok-il { color: #666666 } /* Literal.Number.Integer.Long */
-</style>
 </body>
 </html>
