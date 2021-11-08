@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 2.0.16">
 <meta name="author" content="Ezra">
-<title>AsciiDoc 指引</title>
+<title>AsciiDoc Guide</title>
 <style>
 /* Asciidoctor default stylesheet | MIT License | http://asciidoctor.org */
 
@@ -143,34 +143,34 @@ pre.pygments .tok-il { color: #666666 } /* Literal.Number.Integer.Long */
 </head>
 <body class="book toc2 toc-left">
 <div id="header">
-<h1>AsciiDoc 指引</h1>
+<h1>AsciiDoc Guide</h1>
 <div class="details">
 <span id="author" class="author">Ezra</span><br>
 <span id="email" class="email"><a href="mailto:admin@picsew.cn">admin@picsew.cn</a></span><br>
 <span id="revnumber"> 1.1.0,</span>
 <span id="revdate">Nov. 17, 2018</span>
-<br><span id="revremark">The first incarnation of AsciiDoc 指引</span>
+<br><span id="revremark">The first incarnation of AsciiDoc Guide</span>
 </div>
 <div id="toc" class="toc2">
 <div id="toctitle">索引</div>
 <ul class="sectlevel1">
-<li><a href="#_简介">1. 简介</a>
+<li><a href="#_intro">1. Intro.</a>
 <ul class="sectlevel2">
-<li><a href="#_markdown_还不够吗">1.1. Markdown 还不够吗</a></li>
-<li><a href="#_为什么选择_asciidoc">1.2. 为什么选择 AsciiDoc</a></li>
-<li><a href="#_asciidoc_与_markdown">1.3. AsciiDoc 与 Markdown</a></li>
+<li><a href="#_isnt_markdown_enough">1.1. Isn&#8217;t Markdown Enough?</a></li>
+<li><a href="#_why_asciidoc">1.2. Why AsciiDoc?</a></li>
+<li><a href="#_asciidoc_vs_markdown">1.3. AsciiDoc vs. Markdown</a></li>
 </ul>
 </li>
-<li><a href="#_语法">2. 语法</a>
+<li><a href="#_语法_syntax">2. 语法 Syntax</a>
 <ul class="sectlevel2">
-<li><a href="#_标题">2.1. 标题</a>
+<li><a href="#_标题_titles">2.1. 标题 Titles</a>
 <ul class="sectlevel3">
 <li><a href="#_分离浮动标题">2.1.1. 分离/浮动标题</a></li>
 </ul>
 </li>
-<li><a href="#_属性">2.2. 属性</a></li>
-<li><a href="#_目录">2.3. 目录</a></li>
-<li><a href="#_样式">2.4. 样式</a>
+<li><a href="#_属性_properties">2.2. 属性 Properties</a></li>
+<li><a href="#_目录_tableofcontents">2.3. 目录 TableOfContents</a></li>
+<li><a href="#_样式_styles">2.4. 样式 Styles</a>
 <ul class="sectlevel3">
 <li><a href="#_粗体">2.4.1. 粗体</a></li>
 <li><a href="#_斜体">2.4.2. 斜体</a></li>
@@ -181,30 +181,30 @@ pre.pygments .tok-il { color: #666666 } /* Literal.Number.Integer.Long */
 <li><a href="#_上标下标">2.4.7. 上标下标</a></li>
 </ul>
 </li>
-<li><a href="#_居中">2.5. 居中</a></li>
-<li><a href="#_横线">2.6. 横线</a></li>
-<li><a href="#_断行">2.7. 断行</a></li>
-<li><a href="#_分页">2.8. 分页</a></li>
-<li><a href="#_图片">2.9. 图片</a>
+<li><a href="#_居中_centralized">2.5. 居中 Centralized</a></li>
+<li><a href="#_横线_lines">2.6. 横线 Lines</a></li>
+<li><a href="#_断行_breaks">2.7. 断行 Breaks</a></li>
+<li><a href="#_分页_separatepages">2.8. 分页 SeparatePages</a></li>
+<li><a href="#_图片_images">2.9. 图片 Images</a>
 <ul class="sectlevel3">
 <li><a href="#_行内图片">2.9.1. 行内图片</a></li>
 <li><a href="#_块图片">2.9.2. 块图片</a></li>
 </ul>
 </li>
-<li><a href="#_视频">2.10. 视频</a>
+<li><a href="#_视频_videos">2.10. 视频 Videos</a>
 <ul class="sectlevel3">
 <li><a href="#_普通视频">2.10.1. 普通视频</a></li>
 <li><a href="#_youtube_视频">2.10.2. Youtube 视频</a></li>
 <li><a href="#_vimeo_视频">2.10.3. Vimeo 视频</a></li>
 </ul>
 </li>
-<li><a href="#_链接">2.11. 链接</a></li>
-<li><a href="#_标记">2.12. 标记</a>
+<li><a href="#_链接_links">2.11. 链接 Links</a></li>
+<li><a href="#_标记_marks">2.12. 标记 Marks</a>
 <ul class="sectlevel3">
 <li><a href="#_自定义标题标签">2.12.1. 自定义标题标签</a></li>
 </ul>
 </li>
-<li><a href="#_列表">2.13. 列表</a>
+<li><a href="#_列表_lists">2.13. 列表 Lists</a>
 <ul class="sectlevel3">
 <li><a href="#_无序列表">2.13.1. 无序列表</a></li>
 <li><a href="#_有序列表">2.13.2. 有序列表</a></li>
@@ -213,7 +213,7 @@ pre.pygments .tok-il { color: #666666 } /* Literal.Number.Integer.Long */
 <li><a href="#_问答列表">2.13.5. 问答列表</a></li>
 </ul>
 </li>
-<li><a href="#_表格">2.14. 表格</a>
+<li><a href="#_表格_tables">2.14. 表格 Tables</a>
 <ul class="sectlevel3">
 <li><a href="#_简单列表">2.14.1. 简单列表</a></li>
 <li><a href="#_嵌套语法">2.14.2. 嵌套语法</a></li>
@@ -222,7 +222,7 @@ pre.pygments .tok-il { color: #666666 } /* Literal.Number.Integer.Long */
 <li><a href="#_单元格与列的样式">2.14.5. 单元格与列的样式</a></li>
 </ul>
 </li>
-<li><a href="#_区块">2.15. 区块</a>
+<li><a href="#_区块_blocks">2.15. 区块 Blocks</a>
 <ul class="sectlevel3">
 <li><a href="#_横栏块">2.15.1. 横栏块</a></li>
 <li><a href="#_示例块">2.15.2. 示例块</a></li>
@@ -236,14 +236,14 @@ pre.pygments .tok-il { color: #666666 } /* Literal.Number.Integer.Long */
 </li>
 </ul>
 </li>
-<li><a href="#_行内代码">2.16. 行内代码</a></li>
-<li><a href="#_注释">2.17. 注释</a></li>
-<li><a href="#_键盘">2.18. 键盘</a></li>
-<li><a href="#_导入">2.19. 导入</a></li>
-<li><a href="#_脚注">2.20. 脚注</a></li>
+<li><a href="#_行内代码_inlinecodes">2.16. 行内代码 InlineCodes</a></li>
+<li><a href="#_注释_comments">2.17. 注释 Comments</a></li>
+<li><a href="#_键盘_keyboards">2.18. 键盘 Keyboards</a></li>
+<li><a href="#_导入_includes">2.19. 导入 Includes</a></li>
+<li><a href="#_脚注_footnotes">2.20. 脚注 Footnotes</a></li>
 </ul>
 </li>
-<li><a href="#_工具">3. 工具</a>
+<li><a href="#_工具_tools">3. 工具 Tools</a>
 <ul class="sectlevel2">
 <li><a href="#_asciidocfx">3.1. AsciidocFX</a></li>
 <li><a href="#_atom">3.2. Atom</a></li>
@@ -253,19 +253,19 @@ pre.pygments .tok-il { color: #666666 } /* Literal.Number.Integer.Long */
 </ul>
 </li>
 <li><a href="#_stylesheets">4. Stylesheets</a></li>
-<li><a href="#_关于">5. 关于</a></li>
+<li><a href="#_about">5. About</a></li>
 </ul>
 </div>
 </div>
 <div id="content">
 <div class="sect1">
-<h2 id="_简介"><a class="anchor" href="#_简介"></a><a class="link" href="#_简介">1. 简介</a></h2>
+<h2 id="_intro"><a class="anchor" href="#_intro"></a><a class="link" href="#_intro">1. Intro.</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p><a href="https://en.wikipedia.org/wiki/Lightweight_markup_language">轻量级的标记语言已经有很多</a>，例如我用来写博客的 <code>Markdown</code> 就是目前十分流行的一种轻量级标记语言，包括 <code>Github</code>、<code>StackOverflow</code> 等很多网站以及个人都在使用。</p>
 </div>
 <div class="sect2">
-<h3 id="_markdown_还不够吗"><a class="anchor" href="#_markdown_还不够吗"></a><a class="link" href="#_markdown_还不够吗">1.1. Markdown 还不够吗</a></h3>
+<h3 id="_isnt_markdown_enough"><a class="anchor" href="#_isnt_markdown_enough"></a><a class="link" href="#_isnt_markdown_enough">1.1. Isn&#8217;t Markdown Enough?</a></h3>
 <div class="paragraph">
 <p><code>Markdown</code> 语法简洁，即便阅读未经渲染的源文件也有不错的可读性。但它对于较为复杂的格式例如表格的支持始终遭人诟病，许多网站使用各自不同的扩展语法来实现，也从而导致了各种方言的滋生。这也是为何会出现 <a href="https://blog.codinghorror.com/standard-flavored-markdown/">Standard Markdown</a> 项目的原因，虽然因为种种原因又更名为 <a href="https://blog.codinghorror.com/standard-flavored-markdown/">Common Markdown</a>，然而整个 <code>Markdown</code> 社区依然缺乏创建者的支持，<code>Common Markdown</code> 也很可能沦为另一个方言。</p>
 </div>
@@ -277,7 +277,7 @@ pre.pygments .tok-il { color: #666666 } /* Literal.Number.Integer.Long */
 </div>
 </div>
 <div class="sect2">
-<h3 id="_为什么选择_asciidoc"><a class="anchor" href="#_为什么选择_asciidoc"></a><a class="link" href="#_为什么选择_asciidoc">1.2. 为什么选择 AsciiDoc</a></h3>
+<h3 id="_why_asciidoc"><a class="anchor" href="#_why_asciidoc"></a><a class="link" href="#_why_asciidoc">1.2. Why AsciiDoc?</a></h3>
 <div class="paragraph">
 <p>第一次接触到 AsciiDoc 是通过 <code>O&#8217;Reilly</code> 的图书，<code>Atlas</code> 的推荐语言就是 <code>AsciiDoc</code>。那么十多种标记语言中，为什么要选择 <code>AsciiDoc</code> 呢？其实在选择另一种标记语言时，我做过一些简单的研究:</p>
 </div>
@@ -299,7 +299,7 @@ pre.pygments .tok-il { color: #666666 } /* Literal.Number.Integer.Long */
 </div>
 </div>
 <div class="sect2">
-<h3 id="_asciidoc_与_markdown"><a class="anchor" href="#_asciidoc_与_markdown"></a><a class="link" href="#_asciidoc_与_markdown">1.3. AsciiDoc 与 Markdown</a></h3>
+<h3 id="_asciidoc_vs_markdown"><a class="anchor" href="#_asciidoc_vs_markdown"></a><a class="link" href="#_asciidoc_vs_markdown">1.3. AsciiDoc vs. Markdown</a></h3>
 <div class="paragraph">
 <p><code>AsciiDoc</code> 的语法与 <code>Markdown</code> 十分类似，在学会 <code>Markdown</code> 的前提下很容易转向 <code>AsciiDoc</code> 阵营。</p>
 </div>
@@ -313,10 +313,10 @@ pre.pygments .tok-il { color: #666666 } /* Literal.Number.Integer.Long */
 </div>
 </div>
 <div class="sect1">
-<h2 id="_语法"><a class="anchor" href="#_语法"></a><a class="link" href="#_语法">2. 语法</a></h2>
+<h2 id="_语法_syntax"><a class="anchor" href="#_语法_syntax"></a><a class="link" href="#_语法_syntax">2. 语法 Syntax</a></h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_标题"><a class="anchor" href="#_标题"></a><a class="link" href="#_标题">2.1. 标题</a></h3>
+<h3 id="_标题_titles"><a class="anchor" href="#_标题_titles"></a><a class="link" href="#_标题_titles">2.1. 标题 Titles</a></h3>
 <div class="paragraph">
 <p><code>AsciiDoc</code> 中的标题共分为六层，分别使用对应数量的 <code>=</code> 进行标识:</p>
 </div>
@@ -367,7 +367,7 @@ pre.pygments .tok-il { color: #666666 } /* Literal.Number.Integer.Long */
 </div>
 </div>
 <div class="sect2">
-<h3 id="_属性"><a class="anchor" href="#_属性"></a><a class="link" href="#_属性">2.2. 属性</a></h3>
+<h3 id="_属性_properties"><a class="anchor" href="#_属性_properties"></a><a class="link" href="#_属性_properties">2.2. 属性 Properties</a></h3>
 <div class="listingblock">
 <div class="content">
 <pre class="pygments highlight"><code data-lang="asciidoc"><span></span>:doctitle: AsciiDoc 指引
@@ -401,7 +401,7 @@ pre.pygments .tok-il { color: #666666 } /* Literal.Number.Integer.Long */
 </div>
 </div>
 <div class="sect2">
-<h3 id="_目录"><a class="anchor" href="#_目录"></a><a class="link" href="#_目录">2.3. 目录</a></h3>
+<h3 id="_目录_tableofcontents"><a class="anchor" href="#_目录_tableofcontents"></a><a class="link" href="#_目录_tableofcontents">2.3. 目录 TableOfContents</a></h3>
 <div class="listingblock">
 <div class="content">
 <pre class="pygments highlight"><code data-lang="asciidoc"><span></span>:toc:
@@ -413,7 +413,7 @@ pre.pygments .tok-il { color: #666666 } /* Literal.Number.Integer.Long */
 </div>
 </div>
 <div class="sect2">
-<h3 id="_样式"><a class="anchor" href="#_样式"></a><a class="link" href="#_样式">2.4. 样式</a></h3>
+<h3 id="_样式_styles"><a class="anchor" href="#_样式_styles"></a><a class="link" href="#_样式_styles">2.4. 样式 Styles</a></h3>
 <div class="sect3">
 <h4 id="_粗体"><a class="anchor" href="#_粗体"></a><a class="link" href="#_粗体">2.4.1. 粗体</a></h4>
 <div class="listingblock">
@@ -546,7 +546,7 @@ pre.pygments .tok-il { color: #666666 } /* Literal.Number.Integer.Long */
 </div>
 </div>
 <div class="sect2">
-<h3 id="_居中"><a class="anchor" href="#_居中"></a><a class="link" href="#_居中">2.5. 居中</a></h3>
+<h3 id="_居中_centralized"><a class="anchor" href="#_居中_centralized"></a><a class="link" href="#_居中_centralized">2.5. 居中 Centralized</a></h3>
 <div class="listingblock">
 <div class="content">
 <pre class="pygments highlight"><code data-lang="asciidoc"><span></span>[.text-center]</code></pre>
@@ -554,7 +554,7 @@ pre.pygments .tok-il { color: #666666 } /* Literal.Number.Integer.Long */
 </div>
 </div>
 <div class="sect2">
-<h3 id="_横线"><a class="anchor" href="#_横线"></a><a class="link" href="#_横线">2.6. 横线</a></h3>
+<h3 id="_横线_lines"><a class="anchor" href="#_横线_lines"></a><a class="link" href="#_横线_lines">2.6. 横线 Lines</a></h3>
 <div class="listingblock">
 <div class="content">
 <pre class="pygments highlight"><code data-lang="asciidoc"><span></span>***</code></pre>
@@ -568,7 +568,7 @@ pre.pygments .tok-il { color: #666666 } /* Literal.Number.Integer.Long */
 </div>
 </div>
 <div class="sect2">
-<h3 id="_断行"><a class="anchor" href="#_断行"></a><a class="link" href="#_断行">2.7. 断行</a></h3>
+<h3 id="_断行_breaks"><a class="anchor" href="#_断行_breaks"></a><a class="link" href="#_断行_breaks">2.7. 断行 Breaks</a></h3>
 <div class="listingblock">
 <div class="content">
 <pre class="pygments highlight"><code data-lang="asciidoc"><span></span>[%hardbreaks]</code></pre>
@@ -576,7 +576,7 @@ pre.pygments .tok-il { color: #666666 } /* Literal.Number.Integer.Long */
 </div>
 </div>
 <div class="sect2">
-<h3 id="_分页"><a class="anchor" href="#_分页"></a><a class="link" href="#_分页">2.8. 分页</a></h3>
+<h3 id="_分页_separatepages"><a class="anchor" href="#_分页_separatepages"></a><a class="link" href="#_分页_separatepages">2.8. 分页 SeparatePages</a></h3>
 <div class="listingblock">
 <div class="content">
 <pre class="pygments highlight"><code data-lang="asciidoc"><span></span>&lt;&lt;&lt;</code></pre>
@@ -584,7 +584,7 @@ pre.pygments .tok-il { color: #666666 } /* Literal.Number.Integer.Long */
 </div>
 </div>
 <div class="sect2">
-<h3 id="_图片"><a class="anchor" href="#_图片"></a><a class="link" href="#_图片">2.9. 图片</a></h3>
+<h3 id="_图片_images"><a class="anchor" href="#_图片_images"></a><a class="link" href="#_图片_images">2.9. 图片 Images</a></h3>
 <div class="sect3">
 <h4 id="_行内图片"><a class="anchor" href="#_行内图片"></a><a class="link" href="#_行内图片">2.9.1. 行内图片</a></h4>
 <div class="listingblock">
@@ -622,7 +622,7 @@ pre.pygments .tok-il { color: #666666 } /* Literal.Number.Integer.Long */
 </div>
 </div>
 <div class="sect2">
-<h3 id="_视频"><a class="anchor" href="#_视频"></a><a class="link" href="#_视频">2.10. 视频</a></h3>
+<h3 id="_视频_videos"><a class="anchor" href="#_视频_videos"></a><a class="link" href="#_视频_videos">2.10. 视频 Videos</a></h3>
 <div class="sect3">
 <h4 id="_普通视频"><a class="anchor" href="#_普通视频"></a><a class="link" href="#_普通视频">2.10.1. 普通视频</a></h4>
 <div class="listingblock">
@@ -683,7 +683,7 @@ Your browser does not support the video tag.
 </div>
 </div>
 <div class="sect2">
-<h3 id="_链接"><a class="anchor" href="#_链接"></a><a class="link" href="#_链接">2.11. 链接</a></h3>
+<h3 id="_链接_links"><a class="anchor" href="#_链接_links"></a><a class="link" href="#_链接_links">2.11. 链接 Links</a></h3>
 <div class="listingblock">
 <div class="content">
 <pre class="pygments highlight"><code data-lang="asciidoc"><span></span>获取更多详情，请link:{home}[点击这里], 或者 {home}[像这样]</code></pre>
@@ -699,7 +699,7 @@ Your browser does not support the video tag.
 </div>
 </div>
 <div class="sect2">
-<h3 id="_标记"><a class="anchor" href="#_标记"></a><a class="link" href="#_标记">2.12. 标记</a></h3>
+<h3 id="_标记_marks"><a class="anchor" href="#_标记_marks"></a><a class="link" href="#_标记_marks">2.12. 标记 Marks</a></h3>
 <div class="listingblock">
 <div class="content">
 <pre class="pygments highlight"><code data-lang="asciidoc"><span></span>[#goals]
@@ -762,7 +762,7 @@ Jump to link:#golas[Link with id].</code></pre>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_列表"><a class="anchor" href="#_列表"></a><a class="link" href="#_列表">2.13. 列表</a></h3>
+<h3 id="_列表_lists"><a class="anchor" href="#_列表_lists"></a><a class="link" href="#_列表_lists">2.13. 列表 Lists</a></h3>
 <div class="sect3">
 <h4 id="_无序列表"><a class="anchor" href="#_无序列表"></a><a class="link" href="#_无序列表">2.13.1. 无序列表</a></h4>
 <div class="listingblock">
@@ -1049,7 +1049,7 @@ Why?:: I don&#39;t know.</code></pre>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_表格"><a class="anchor" href="#_表格"></a><a class="link" href="#_表格">2.14. 表格</a></h3>
+<h3 id="_表格_tables"><a class="anchor" href="#_表格_tables"></a><a class="link" href="#_表格_tables">2.14. 表格 Tables</a></h3>
 <div class="sect3">
 <h4 id="_简单列表"><a class="anchor" href="#_简单列表"></a><a class="link" href="#_简单列表">2.14.1. 简单列表</a></h4>
 <div class="listingblock">
@@ -1483,7 +1483,7 @@ e|cell
 </div>
 </div>
 <div class="sect2">
-<h3 id="_区块"><a class="anchor" href="#_区块"></a><a class="link" href="#_区块">2.15. 区块</a></h3>
+<h3 id="_区块_blocks"><a class="anchor" href="#_区块_blocks"></a><a class="link" href="#_区块_blocks">2.15. 区块 Blocks</a></h3>
 <div class="sect3">
 <h4 id="_横栏块"><a class="anchor" href="#_横栏块"></a><a class="link" href="#_横栏块">2.15.1. 横栏块</a></h4>
 <div class="listingblock">
@@ -1780,7 +1780,7 @@ end
 </div>
 </div>
 <div class="sect2">
-<h3 id="_行内代码"><a class="anchor" href="#_行内代码"></a><a class="link" href="#_行内代码">2.16. 行内代码</a></h3>
+<h3 id="_行内代码_inlinecodes"><a class="anchor" href="#_行内代码_inlinecodes"></a><a class="link" href="#_行内代码_inlinecodes">2.16. 行内代码 InlineCodes</a></h3>
 <div class="listingblock">
 <div class="content">
 <pre class="pygments highlight"><code data-lang="asciidoc"><span></span>普通文字 `&lt;div&gt;` 普通文字</code></pre>
@@ -1796,7 +1796,7 @@ end
 </div>
 </div>
 <div class="sect2">
-<h3 id="_注释"><a class="anchor" href="#_注释"></a><a class="link" href="#_注释">2.17. 注释</a></h3>
+<h3 id="_注释_comments"><a class="anchor" href="#_注释_comments"></a><a class="link" href="#_注释_comments">2.17. 注释 Comments</a></h3>
 <div class="listingblock">
 <div class="content">
 <pre class="pygments highlight"><code data-lang="asciidoc"><span></span>// 单行注释
@@ -1810,7 +1810,7 @@ end
 </div>
 </div>
 <div class="sect2">
-<h3 id="_键盘"><a class="anchor" href="#_键盘"></a><a class="link" href="#_键盘">2.18. 键盘</a></h3>
+<h3 id="_键盘_keyboards"><a class="anchor" href="#_键盘_keyboards"></a><a class="link" href="#_键盘_keyboards">2.18. 键盘 Keyboards</a></h3>
 <div class="paragraph">
 <p>通过 <code>kdb:[键位+键位+键位]</code> 的语法使用键盘符号特性。</p>
 </div>
@@ -1851,7 +1851,7 @@ kbd:[⌘+N]</code></pre>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_导入"><a class="anchor" href="#_导入"></a><a class="link" href="#_导入">2.19. 导入</a></h3>
+<h3 id="_导入_includes"><a class="anchor" href="#_导入_includes"></a><a class="link" href="#_导入_includes">2.19. 导入 Includes</a></h3>
 <div class="paragraph">
 <p>通过 <code>include::文档路径[选项]</code> 语法来包含文件，其中选项可以为空</p>
 </div>
@@ -1880,7 +1880,7 @@ include::./index.adoc[lines=1..5]
 <div class="listingblock">
 <div class="title">index.adoc</div>
 <div class="content">
-<pre class="pygments highlight"><code data-lang="asciidoc"><span></span>:doctitle: AsciiDoc 指引
+<pre class="pygments highlight"><code data-lang="asciidoc"><span></span>:doctitle: AsciiDoc Guide
 :home: https://picsew.cn
 :assets: {home}/assets
 :image: {assets}/images
@@ -1891,7 +1891,7 @@ include::./index.adoc[lines=1..5]
 </div>
 </div>
 <div class="sect2">
-<h3 id="_脚注"><a class="anchor" href="#_脚注"></a><a class="link" href="#_脚注">2.20. 脚注</a></h3>
+<h3 id="_脚注_footnotes"><a class="anchor" href="#_脚注_footnotes"></a><a class="link" href="#_脚注_footnotes">2.20. 脚注 Footnotes</a></h3>
 <div class="listingblock">
 <div class="content">
 <pre class="pygments highlight"><code data-lang="asciidoc"><span></span>一些文字。footnote:[示例脚注1.]
@@ -1919,7 +1919,7 @@ include::./index.adoc[lines=1..5]
 </div>
 </div>
 <div class="sect1">
-<h2 id="_工具"><a class="anchor" href="#_工具"></a><a class="link" href="#_工具">3. 工具</a></h2>
+<h2 id="_工具_tools"><a class="anchor" href="#_工具_tools"></a><a class="link" href="#_工具_tools">3. 工具 Tools</a></h2>
 <div class="sectionbody">
 <div class="sect2">
 <h3 id="_asciidocfx"><a class="anchor" href="#_asciidocfx"></a><a class="link" href="#_asciidocfx">3.1. AsciidocFX</a></h3>
@@ -2030,14 +2030,14 @@ include::./index.adoc[lines=1..5]
 </div>
 </div>
 <div class="sect1">
-<h2 id="_关于"><a class="anchor" href="#_关于"></a><a class="link" href="#_关于">5. 关于</a></h2>
+<h2 id="_about"><a class="anchor" href="#_about"></a><a class="link" href="#_about">5. About</a></h2>
 <div class="sectionbody">
 <div class="sidebarblock">
 <div class="content">
 <div class="ulist">
 <ul>
 <li>
-<p><strong>标题</strong>: <a href="https://picsew.cn/asciidoctor/syntax/">《AsciiDoc 指引》</a></p>
+<p><strong>标题</strong>: <a href="https://picsew.cn/asciidoctor/syntax/">《AsciiDoc Guide》</a></p>
 </li>
 <li>
 <p><strong>作者</strong>: <a href="https://picsew.cn/about/">Ezra</a></p>
@@ -2070,7 +2070,7 @@ include::./index.adoc[lines=1..5]
 <div id="footer">
 <div id="footer-text">
  1.1.0<br>
-Last updated 2021-11-08 14:15:27 +0800
+Last updated 2021-11-08 14:56:33 +0800
 </div>
 </div>
 </body>

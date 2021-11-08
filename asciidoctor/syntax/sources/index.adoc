@@ -1,4 +1,4 @@
-:doctitle: AsciiDoc 指引
+:doctitle: AsciiDoc Guide
 :home: https://picsew.cn
 :assets: {home}/assets
 :image: {assets}/images
@@ -27,17 +27,17 @@
 :revremark: The first incarnation of {doctitle}
 :version-label!:
 
-== 简介
+== Intro.
 
 link:https://en.wikipedia.org/wiki/Lightweight_markup_language[轻量级的标记语言已经有很多]，例如我用来写博客的 `Markdown` 就是目前十分流行的一种轻量级标记语言，包括 `Github`、`StackOverflow` 等很多网站以及个人都在使用。
 
-=== Markdown 还不够吗
+=== Isn't Markdown Enough?
 
 `Markdown` 语法简洁，即便阅读未经渲染的源文件也有不错的可读性。但它对于较为复杂的格式例如表格的支持始终遭人诟病，许多网站使用各自不同的扩展语法来实现，也从而导致了各种方言的滋生。这也是为何会出现 link:https://blog.codinghorror.com/standard-flavored-markdown/[Standard Markdown] 项目的原因，虽然因为种种原因又更名为 link:https://blog.codinghorror.com/standard-flavored-markdown/[Common Markdown]，然而整个 `Markdown` 社区依然缺乏创建者的支持，`Common Markdown` 也很可能沦为另一个方言。
 
 image::{image}/posts/content/md_standards.png[title="Markdown Standards"]
 
-=== 为什么选择 AsciiDoc
+=== Why AsciiDoc?
 
 第一次接触到 AsciiDoc 是通过 `O'Reilly` 的图书，`Atlas` 的推荐语言就是 `AsciiDoc`。那么十多种标记语言中，为什么要选择 `AsciiDoc` 呢？其实在选择另一种标记语言时，我做过一些简单的研究:
 
@@ -49,7 +49,7 @@ image::{image}/posts/content/md_standards.png[title="Markdown Standards"]
 
 * **Texy!，BBCode，Creole，Textile... :** 事实上大部分轻量级的标记语言语法都较为类似，所以这场抉择很大程度上是使用范围、功能、兼容性、扩展性等多方面的比赛，这也是我为什么不选择这些语言的原因。
 
-=== AsciiDoc 与 Markdown
+=== AsciiDoc vs. Markdown
 
 `AsciiDoc` 的语法与 `Markdown` 十分类似，在学会 `Markdown` 的前提下很容易转向 `AsciiDoc` 阵营。
 
@@ -57,9 +57,9 @@ image::{image}/posts/content/md_standards.png[title="Markdown Standards"]
 
 `AsciiDoc` 原生支持的特性就足以应付大多数电子文档的编撰需求，你可以使用标准的 `AsciiDoc` 语法为你的文档添加作者信息、版本信息、表格等特性，它还支持文档引入、自定义块语法等功能。
 
-== 语法
+== 语法 Syntax
 
-=== 标题
+=== 标题 Titles
 
 `AsciiDoc` 中的标题共分为六层，分别使用对应数量的 `=` 进行标识:
 
@@ -119,7 +119,7 @@ image::{image}/posts/content/md_standards.png[title="Markdown Standards"]
 === 分离/浮动标题
 ====
 
-=== 属性
+=== 属性 Properties
 
 [source, asciidoc]
 ....
@@ -152,7 +152,7 @@ image::{image}/posts/content/md_standards.png[title="Markdown Standards"]
 :version-label!:
 ....
 
-=== 目录
+=== 目录 TableOfContents
 
 [source, asciidoc]
 ....
@@ -163,7 +163,7 @@ image::{image}/posts/content/md_standards.png[title="Markdown Standards"]
 :toc: left
 ....
 
-=== 样式
+=== 样式 Styles
 
 ==== 粗体
 
@@ -263,14 +263,14 @@ image::{image}/posts/content/md_standards.png[title="Markdown Standards"]
 普通文字~下标~
 ====
 
-=== 居中
+=== 居中 Centralized
 
 [source, asciidoc]
 ....
 [.text-center]
 ....
 
-=== 横线
+=== 横线 Lines
 
 [source, asciidoc]
 ....
@@ -282,21 +282,21 @@ image::{image}/posts/content/md_standards.png[title="Markdown Standards"]
 ***
 ====
 
-=== 断行
+=== 断行 Breaks
 
 [source, asciidoc]
 ....
 [%hardbreaks]
 ....
 
-=== 分页
+=== 分页 SeparatePages
 
 [source, asciidoc]
 ....
 <<<
 ....
 
-=== 图片
+=== 图片 Images
 
 ==== 行内图片
 
@@ -322,7 +322,7 @@ image::{image}/avatar/oschina_200.jpg[caption="Caption: ", title="Blocked Image"
 image::{image}/avatar/oschina_200.jpg[caption="Caption: ", title="Blocked Image", 100]
 ====
 
-=== 视频
+=== 视频 Videos
 
 ==== 普通视频
 
@@ -362,7 +362,7 @@ video::67480300[vimeo]
 video::67480300[vimeo]
 ====
 
-=== 链接
+=== 链接 Links
 
 [source, asciidoc]
 ....
@@ -374,7 +374,7 @@ video::67480300[vimeo]
 获取更多详情，请link:{home}[点击这里], 或者 {home}[像这样]
 ====
 
-=== 标记
+=== 标记 Marks
 
 [source, asciidoc]
 ....
@@ -423,7 +423,7 @@ Jump to link:#golas[Link with id].
 === 一个标题带有自定义标签
 ====
 
-=== 列表
+=== 列表 Lists
 
 ==== 无序列表
 
@@ -546,7 +546,7 @@ What is this?:: You tell me!
 Why?:: I don't know.
 ====
 
-=== 表格
+=== 表格 Tables
 
 ==== 简单列表
 
@@ -819,7 +819,7 @@ e|cell
 |列内容被视为在诗句块中。
 |===
 
-=== 区块
+=== 区块 Blocks
 
 ==== 横栏块
 
@@ -1014,7 +1014,7 @@ open class SomeClass {
 ....
 ====
 
-=== 行内代码
+=== 行内代码 InlineCodes
 
 [source, asciidoc]
 ....
@@ -1026,7 +1026,7 @@ open class SomeClass {
 普通文字 `<div>` 普通文字
 ====
 
-=== 注释
+=== 注释 Comments
 
 [source, asciidoc]
 ....
@@ -1039,7 +1039,7 @@ open class SomeClass {
 ////
 ....
 
-=== 键盘
+=== 键盘 Keyboards
 
 通过 `kdb:[键位+键位+键位]` 的语法使用键盘符号特性。
 
@@ -1063,7 +1063,7 @@ kbd:[Command+Options+Control+T]
 kbd:[⌘+N]
 ====
 
-=== 导入
+=== 导入 Includes
 
 通过 `include::文档路径[选项]` 语法来包含文件，其中选项可以为空
 
@@ -1094,7 +1094,7 @@ include::./index.adoc[lines=1..5]
 ....
 ====
 
-=== 脚注
+=== 脚注 Footnotes
 
 [source, asciidoc]
 ....
@@ -1114,7 +1114,7 @@ include::./index.adoc[lines=1..5]
 一些文字。footnote:标记[]
 ====
 
-== 工具
+== 工具 Tools
 
 === AsciidocFX
 
@@ -1166,7 +1166,7 @@ link:https://asciidoclive.com/[AsciiDoc Live]
 * link:{stylesheets}/rubygems.css[rubygems.css]: link:{stylesheets_previews}/rubygems.html[(预览)]
 * link:{stylesheets}/boot-darkly.css[boot-darkly.css]: link:{stylesheets_previews}/boot-darkly.html[(预览)]
 
-== 关于
+== About
 
 ****
 - **标题**: link:{thispage}[《{doctitle}》]
