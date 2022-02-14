@@ -3,7 +3,7 @@ name: "Picsew"
 alias: "A Developer's Faux Pas"
 author: "Ezra"
 #description: "The name is Ezra and this is my personal web site. I see myself as a relentless problem-solver, and I’m always looking for a new challenge."
-description: "Illustration artist. Trilingual. Conlanger.<br/>Former CTO, DPO & CO-FD of Jayne startup.<br/>26 y/o full-stack software developer on PC, Linux, Android, iOS and OS X platforms.<br/>Crafty. Blogger. Traveller.<br/>Big fan of Apple. Love of colour.<br/>Doggies are my fave."
+description: "Illustration artist. Trilingual. Conlanger.<br/>Former <!--CTO, -->PM, DPO & CO-FD of Jayne startup.<br/>27 y/o full-stack software developer on PC, Linux, Android, iOS and OS X platforms.<br/>Crafty. Blogger. Traveller.<br/>Big fan of Apple. Love of colour.<br/>Doggies are my fave."
 url: "https://picsew.cn"
 # url: '/Volumes/Shared/Common/Git/Picsew/_site'
 email: "picsew@126.com"
@@ -11,7 +11,7 @@ github_url: "https://github.com/PicsewArt/PicsewArt.github.io/"
 timezone: Asia/Shanghai
 range:
   start: 2007
-  end: 2021
+  end: 2022
 avatar:
   prefer: "/assets/images/avatar/avatar_color.png"
   round:
