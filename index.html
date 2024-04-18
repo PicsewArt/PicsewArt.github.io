@@ -1,64 +1,71 @@
----
-layout: default
-active_title: 'Home'
-has_about: false
-prelink_js: []
-prelink_css: ['/assets/gallery/sourcecode/css/blueimp-gallery.min.css', '/assets/gallery/sourcecode/css/blueimp-exception.css']
-afterlink_js: ['/assets/gallery/sourcecode/js/blueimp-gallery.min.js', '/assets/gallery/sourcecode/js/blueimp-binding.js']
-afterlink_css: []
-preload_js: []
-preload_css: []
-afterload_js: ['bindGalleryEventById("grid-list-srecent-meida-g1");']
-afterload_css: []
-on_load:
-  call: ""
-  def: ''
-limit: 6
-cols: 3
-posts_style: 'scroll'
----
-	{% assign recent_posts = '' | split: '/' %}
-	{% for post in site.posts limit: page.limit %}
-		{% assign recent_posts = recent_posts | push: post %}
-	{% endfor %}
-  {% if page.posts_style == 'scroll' %}
-    {% include grid_image_overlay_simple_scroll_posts_list.html sectionid="recent-posts" list=recent_posts cols=page.cols title='Recent Posts' title_url="/posts/index.html" desc='Writing on various topics including travel, finance and technology.' readmore_title="Read More" readmore='/posts/index.html' %}
-  {% elsif page.posts_style == 'detailed' %}
-  	{% include grid_card_post_detailed_posts_list.html sectionid="recent-posts" list=recent_posts cols=page.cols title='Recent Posts' title_url="/posts/index.html" desc='Writing on various topics including travel, finance and technology.' readmore_title="Read More" readmore='/posts/index.html' %}
-  {% endif %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta http-equiv="refresh" content="2;url=https://hotodogo.com/"> -->
+    <title>Redirecting...</title>
+    <style>
+        *,
+        *::before,
+        *::after {
+            outline: none;
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        html {
+            min-height: 100vh;
+        }
+        html,
+        body {
+            background: #1d1f20;
+            font-family: Arial, Verdana, Helvetica, Tahoma, Trebuchet MS,
+            Times New Roman, Georgia, Garamond, Courier New, Brush Script MT,
+            monospace, cursive, serif, sans-serif;
+            font-size: 20px;
+            font-weight: normal;
+            color: #fafafa;
+            line-height: 1.2;
+        }
+        body {
+            width: 100vw;
+            min-height: 100vh;
+            padding: 2rem;
+            font-size: 1rem;
+            background: linear-gradient(to right, #4e0086, #460077, #3d0169, #35015b, #2d014d, #280343, #220339, #1e0230, #1b0228, #170120, #110119, #09000f);
+            display: flex;
+            flex-flow: column nowrap;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+        }
+        p, a, h1 {
+            color: #fcfcfc;
+            font-size: 1rem;
+        }
+        svg {
+            width: 120px;
+            margin: 0 auto;
+        }
+        h1 {
+            font-size: 2rem;
+        }
+        div.pad {
+            width: 100%;
+            height: 3rem;
+        }
+        p {
+            padding: 2rem 3rem;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 6px;
+        }
+    </style>
+</head>
+<body>
+    <svg t="1713422503039" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg"><path d="M338.773333 362.666667H170.666667v298.666666h105.578666l45.013334 0.021334 17.258666 0.426666L682.666667 809.258667V214.890667L338.773333 362.666667z m-17.578666-85.333334L768 85.333333v853.333334l-448-191.978667L85.333333 746.666667V277.333333h235.861334zM170.666667 661.333333v85.333334h85.333333v-85.333334H170.666667zM853.333333 298.666667h85.333334v426.666666h-85.333334z" fill="#fcfcfc" p-id="10076"></path></svg>
+    <h1>Redirecting...</h1>
+    <div class="pad"></div>
+    <p>If you are not redirected automatically, <a href="https://hotodogo.com/">click here</a>.</p>
+</body>
+</html>
 
-	<!-- SEPARATOR -->
-  {% assign all_pics = '' | split: '/' %}
-  {% for album in site.gallery %}
-    {% if album.published %}
-      {% for pic in album.media %}
-        {% assign all_pics = all_pics | push: pic %}
-      {% endfor %}
-    {% endif %}
-  {% endfor %}
-  {% assign all_pics_sorted = all_pics | sort: "date" | reverse %}
-
-	{% assign recent_media = '' | split: '/' %}
-  {% for item in all_pics_sorted limit: page.limit %}
-		{% assign this_item = '' | split: '/' %}
-
-		{% comment %}{% assign media_url = site.url | append: '/gallery/detail/?album=' | append: page.unique | append: '&idx=' | append: forloop.index | append: "&type=" | append: item.type %}{% endcomment %}
-
-		{% capture this_media_url %}{% include gallery_media_url.html item=item %}{% endcapture %}
-		{% capture this_thumbnail_url %}{% include gallery_media_thumbnail_url.html item=item %}{% endcapture %}
-
-    {% assign date_formatted = item.date | date: "%b %d, %Y" %}
-    {% assign this_item = this_item | push: date_formatted %}
-		{% assign this_item = this_item | push: item.type %}
-    {% assign this_item = this_item | push: this_thumbnail_url %}
-    {% assign this_item = this_item | push: this_media_url %}
-    {% assign this_item = this_item | push: item.type %}
-		{% assign this_item = this_item | push: item.format %}
-
-		{% assign recent_media = recent_media | push: this_item %}
-	{% endfor %}
-	{% assign recent_media_container = '' | split: '/' %}
-	{% assign recent_media_container = recent_media_container | push: recent_media %}
-
-  {% include grid_image_overlay_camera_list.html sectionid="recent-meida" list=recent_media_container cols=page.cols title='Recent Media' title_url="/gallery/index.html" desc='Passionate about photography and enjoy taking pictures all around the world.' readmore_title="View More" readmore='/gallery/index.html' %}
-	{% include gallery_lightbox.html %}

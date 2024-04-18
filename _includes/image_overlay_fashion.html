@@ -1,9 +1,0 @@
-<figure class="overlay-image-fashion" style="{% if include.maxwidth.size > 0 %}max-width: {{ include.maxwidth }} !important;{% endif %}{% if include.maxheight.size > 0 %}max-height: {{ include.maxheight }} !important;{% endif %}">
-  <img src="{{ include.image }}"/>
-  <figcaption>
-    <h3 toc-skip="true" class="title1">{{ include.title }}</h3>
-    <h3 toc-skip="true" class="title2">{{ include.subtitle }}</h3>
-    <h3 toc-skip="true" class="title3">{{ include.desc }}</h3>
-  </figcaption>
-  {% if include.href.size > 0 %}<a href="{{ include.href }}"></a>{% endif %}
-</figure>

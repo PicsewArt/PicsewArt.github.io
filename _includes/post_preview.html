@@ -1,3 +1,0 @@
-{% capture post_html %}{{ include.html }}{% endcapture %}
-{% capture post_limit %}{{ include.limit }}{% endcapture %}
-{{ post_html | replace: '<br>', '&nbsp;' | replace: '<br/>', '&nbsp;' | replace: '<br />', '&nbsp;' | strip_html | strip_newlines | replace: '\n', ' ' | replace: '\n', ' '| slice: 0, post_limit }}...

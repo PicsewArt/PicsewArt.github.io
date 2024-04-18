@@ -1,1 +1,0 @@
-{% capture include_html_content %}{{ include.html }}{% endcapture %}{{ include_html_content | replace: '<h1 id=', '<h1 toc-skip="true" id=' | replace: '<h2 id=', '<h2 toc-skip="true" id=' | replace: '<h3 id=', '<h3 toc-skip="true" id=' | replace: '<h4 id=', '<h4 toc-skip="true" id=' | replace: '<h5 id=', '<h5 toc-skip="true" id=' | replace: '<h6 id=', '<h6 toc-skip="true" id=' }}

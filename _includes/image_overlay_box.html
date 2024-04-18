@@ -1,9 +1,0 @@
-<figure class="overlay-image-box" style="{% if include.maxwidth.size > 0 %}max-width: {{ include.maxwidth }} !important;{% endif %}{% if include.maxheight.size > 0 %}max-height: {{ include.maxheight }} !important;{% endif %}">
-  <img src="{{ include.image}}"/>
-  <figcaption{% if include.bgcolor.size > 0 %} style="background: {{ include.bgcolor }}!important;"{% endif %}>
-    <h3 toc-skip="true"{% if include.color.size > 0 %} style="color: {{ include.color }}!important;"{% endif %}>{{ include.title }}</h3>
-    <h5 toc-skip="true"{% if include.subcolor.size > 0 %} style="color: {{ include.subcolor }}!important;"{% endif %}>{{ include.subtitle }}</h5>
-    <p{% if include.color.size > 0 %} style="color: {{ include.color }}!important;"{% endif %}>{{ include.desc }}</p>
-  </figcaption>
-  {% if include.href.size > 0 %}<a href="{{ include.href }}"></a>{% endif %}
-</figure>

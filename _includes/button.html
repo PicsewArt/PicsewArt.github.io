@@ -1,1 +1,0 @@
-{% capture btn_title %}{{ include.title }}{% endcapture %}{% capture btn_href %}{{ include.href }}{% endcapture %}{% capture btn_onclick %}{{ include.onclick }}{% endcapture %}<a class="btn"{% if btn_href.size > 0 %} href="{{ btn_href }}"{% endif %}{% if btn_onclick.size > 0 %} onclick="{{ btn_onclick }}"{% endif %}>{{ btn_title }}</a>
