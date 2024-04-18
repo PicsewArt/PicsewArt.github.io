@@ -3,5 +3,4 @@
 <ul>
   <li><a href="https://github.com/Picsew/">Github</a></li>
   <li><a href="https://picsew.cn/">Home</a></li>
-  <li><a href="https://picsew.cn/feed.xml">RSS</li>
 </ul>
